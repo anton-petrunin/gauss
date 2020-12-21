@@ -29,3 +29,8 @@ Run `pdflatex`, `makeindex curves-and-surfaces` and `biber`:
 `makeindex curves-and-surfaces`<br/>
 `biber curves-and-surfaces`<br/>
 `pdflatex curves-and-surfaces.tex`<br/>
+
+To get arXiv.tar with all needed files do
+
+`tar -cvf arXiv.tar --files-from list-of-files.txt`
+
