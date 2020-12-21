@@ -1,0 +1,753 @@
+\addtocounter{chapter}{-1}
+\chapter{Preliminaries}
+
+This chapter should be used as a quick reference while reading the rest of the book;
+it also contains all necessary references with complete proof.
+
+The first section on metric spaces is an exception;
+we suggest to read in before going further.
+
+\section{Metric spaces}\label{sec:metric-spcaes}
+
+We assume that the reader is familiar with the notion of distance in the 
+Euclidean space.
+In this chapter we briefly discuss its generalization and fix notations that will be used further.
+
+The introductory part of the book by Dmitri Burago, Yuri Burago, and Sergei Ivanov \cite{burago-burago-ivanov} contains all the needed material.
+
+\subsection*{Definitions}
+
+\emph{Metric} is a function that returns a real value $\Dist(x,y)$ for any pair $x,y$ in a given nonempty set $\spc{X}$  and satisfies the following axioms for any triple $x,y,z$: \label{page:def:metric}
+\begin{enumerate}[(a)]
+\item\label{def:metric-space:a} Positiveness: 
+$$\Dist(x,y)\ge 0.$$
+\item\label{def:metric-space:b} $x=y$ if and only if 
+$$\Dist(x,y)=0.$$
+\item\label{def:metric-space:c} Symmetry: $$\Dist(x, y) = \Dist(y, x).$$
+\item\label{def:metric-space:d} Triangle inequality: 
+$$\Dist(x, z) \le \Dist(x, y) + \Dist(y, z).$$
+\end{enumerate}
+
+A set with a metric is called \index{metric space}\emph{metric space} and the elements of the set are called \index{point}\emph{points}.
+
+\subsection*{Shortcut for distance}
+Usually we consider only one metric on a set, therefore we can denote the metric space and its underlying set by the same letter, say $\spc{X}$.
+In this case we also use the shortcut notations $\dist{x}{y}{}$ or $\dist{x}{y}{\spc{X}}$  for the {}\emph{distance $\Dist(x,y)$ from $x$ to $y$ in $\spc{X}$}.\index{10aaa@$\dist{x}{y}{}$, $\dist{x}{y}{\spc{X}}$}
+For example, the triangle inequality can be written as 
+$$\dist{x}{z}{\spc{X}}\le \dist{x}{y}{\spc{X}}+\dist{y}{z}{\spc{X}}.$$
+
+The Euclidean space and plane as well as the real line will be the most important examples of metric spaces for us.
+In these examples the introduced notation $\dist{x}{y}{}$ for the distance from $x$ to $y$ has perfect sense as the norm of the vector $x-y$.
+However, in a general metric space the expression $x-y$ has no meaning, but we use expression $\dist{x}{y}{}$ for the distance anyway.
+
+\subsection*{More examples}
+
+Usually, if we say {}\emph{plane} or {}\emph{space} we mean the {}\emph{Euclidean} plane or space.
+However the plane (as well as the space) admits many other metrics, for example the so-called {}\emph{Manhattan metric} from the following exercise.
+
+\begin{thm}{Exercise}\label{ex:ell-infty}
+Consider the function
+$$\Dist(p,q)=|x_1-x_2|+|y_1-y_2|,$$
+where $p=(x_1,y_1)$ and $q=(x_2,y_2)$ are points in the coordinate plane $\mathbb{R}^2$.
+Show that $\Dist$ is a metric on $\mathbb{R}^2$.
+\end{thm}
+
+Another example: the {}\emph{discrete space} --- an arbitrary nonempty set $\spc{X}$ with the metric defined as $\dist{x}{y}{\spc{X}}=0$ if $x=y$ and $\dist{x}{y}{\spc{X}}=1$ otherwise.
+
+\subsection*{Subspaces}
+Any subset of a metric space is also a metric space, by restricting the original metric to the subset;
+the obtained metric space is called a {}\emph{subspace}.
+In particular, all subsets of the Euclidean space are metric spaces.
+
+\subsection*{Balls}
+Given a point $p$ in a metric space $\spc{X}$ and a real number $R\ge 0$, the set of points $x$ on the distance less then $R$ (at most $R$) from $p$ is called the \index{open!ball}\emph{open} (respectively \index{closed!ball}\emph{closed}) {}\emph{ball} of radius $R$ with center $p$.
+The {}\emph{open ball} is denoted as $B(p,R)$ or $B(p,R)_{\spc{X}}$;
+the second notation is used if we need to emphasize that the ball lies in the metric space $\spc{X}$.
+Formally speaking
+\[B(p,R)=B(p,R)_{\spc{X}}=\set{x\in \spc{X}}{\dist{x}{p}{\spc{X}}< R}.\]
+\index{10b@$B(p,R)_{\spc{X}}$, $\bar B[p,R]_{\spc{X}}$}
+Analogously, the {}\emph{closed ball} is denoted as $\bar B[p,R]$ or $\bar B[p,R]_{\spc{X}}$ and
+\[\bar B[p,R]=\bar B[p,R]_{\spc{X}}=\set{x\in \spc{X}}{\dist{x}{p}{\spc{X}}\le R}.\]
+
+\begin{thm}{Exercise}\label{ex:B2inB1}
+Let $\spc{X}$ be a metric space.
+
+\begin{subthm}{ex:B2inB1:a}
+Show that if $\bar B[p,2]\subset \bar B[q,1]$ for some points $p,q\in \spc{X}$, then $\bar B[p,2]\z=\bar B[q,1]$.
+\end{subthm}
+
+\begin{subthm}{ex:B2inB1:b} Construct a metric space $\spc{X}$ with two points $p$ and $q$ such that the strict inclusion
+$B(p,\tfrac32)\subset B(q,1)$ holds.
+\end{subthm}
+
+\end{thm}
+
+
+
+\subsection*{Continuity}
+
+\begin{thm}{Definition}
+ Let ${\spc{X}}$ be a metric space.
+A sequence of points $x_1, x_2, \ldots$ in ${\spc{X}}$ is called \index{convergence of points}\emph{convergent}
+if there is 
+$x_\infty\in {\spc{X}}$ such that $\dist{x_\infty}{x_n}{}\to 0$ as $n\to\infty$.  
+That is, for every $\epsilon > 0$, there is a natural number $N$ such that for all $n \ge N$, we have
+\[
+\dist{x_\infty}{x_n}{\spc{X}}
+<
+\epsilon.
+\]
+
+In this case we say that the sequence $(x_n)$ {}\emph{converges} to $x_\infty$, 
+or $x_\infty$ is the {}\emph{limit} of the sequence $(x_n)$.
+Notationally, we write $x_n\to x_\infty$ as $n\to\infty$
+or $x_\infty=\lim_{n\to\infty} x_n$.
+\end{thm}
+
+\begin{thm}{Definition}\label{def:continuous}
+Let $\spc{X}$ and $\spc{Y}$ be metric spaces.
+A map $f\:\spc{X}\to \spc{Y}$ is called \index{continuous}\emph{continuous} if for any convergent sequence $x_n\to x_\infty$ in ${\spc{X}}$,
+%the sequence $y_n\z=f(x_n)$ converges to $y_\infty=f(x_\infty)$ in $\spc{Y}$.
+we have $f(x_n) \to f(x_\infty)$ in $\spc{Y}$.
+
+Equivalently, $f\:\spc{X}\to \spc{Y}$ is continuous if for any $x\in {\spc{X}}$ and any $\epsilon>0$,
+there is $\delta>0$ such that 
+$$\dist{x}{y}{\spc{X}}<\delta\quad \text{ implies that }\quad \dist{f(x)}{f(y)}{\spc{Y}}<\epsilon.$$
+
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:shrt=>continuous}
+Let ${\spc{X}}$ and $\spc{Y}$ be metric spaces $f\:\spc{X}\to \spc{Y}$ is {}\emph{distance non-expanding map}; that is, 
+\[\dist{f(x)}{f(y)}{\spc{Y}}\le \dist{x}{y}{\spc{X}}\]
+for any $x,y\in \spc{X}$.
+Show that $f$ is continuous.
+\end{thm}
+
+\subsection*{Homeomorphisms}
+
+\begin{thm}{Definition}
+Let $\spc{X}$ and $\spc{Y}$ be metric spaces.
+A continuous bijection $f\:\spc{X}\to \spc{Y}$ 
+is called a \index{homeomorphism}\emph{homeomorphism} 
+if its inverse $f^{-1}\:\spc{Y}\z\to \spc{X}$ is also continuous.
+
+If there exists a homeomorphism $f\:\spc{X}\to \spc{Y}$,
+we say that ${\spc{X}}$ is {}\emph{homeomorphic} to $\spc{Y}$,
+or  $\spc{X}$ and $\spc{Y}$ are {}\emph{homeomorphic}.
+\end{thm}
+
+If a metric space $\spc{X}$ is homeomorphic to a known space, for example plane, sphere, disc, circle and so on,
+we may also say that $\spc{X}$ is a \index{topological}\emph{topological} plane, sphere, disc, circle and so on.
+
+\subsection*{Closed and open sets}
+
+\begin{thm}{Definition}
+A subset $C$ of a metric space $\spc{X}$ is called \index{closed!set}\emph{closed} if whenever a sequence $(x_n)$ of points from $C$ converges in $\spc{X}$, we have that $\lim_{n\to\infty} x_n \in C$.
+
+A set $\Omega \subset \spc{X}$ is called \index{open!set}\emph{open} if for any $z\in \Omega$, 
+there is $\epsilon>0$ such that $B(z,\epsilon)\subset\Omega$.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:close-open}
+Let $Q$ be a subset of a metric space $\spc{X}$.
+Show that $Q$ is closed if and only if its complement $\Omega=\spc{X}\backslash Q$ is open.
+\end{thm}
+
+An open set $\Omega$ that contains a given point $p$ is called a \index{neighborhood}\emph{neighborhood of~$p$}.
+A closed subset $C$ that contains $p$ together with its neighborhood is called a {}\emph{closed neighborhood of~$p$}
+
+\section{Elementary geometry}
+
+\subsection*{Internal angles}
+
+Polygon is defined as a compact set bounded by a closed polygonal line. 
+Recall that the internal angle of a polygon $P$ at a vertex $v$
+is defined as an angular measure of the intersection of $P$ with a small circle centered at $v$.
+
+\begin{thm}{Theorem}\label{thm:sum=(n-2)pi}
+The sum of all the internal angles of a simple $n$-gon is $(n-2)\cdot\pi$. 
+\end{thm}
+
+While this theorem is well known, it is not easy to find a reference with a proof without cheating.
+A clean proof was given by Gary Meisters \cite{meisters}.
+It uses induction on $n$ and is based on the following:
+
+\begin{thm}{Claim}
+Suppose $P$ is an $n$-gon with $n\ge 4$.
+Then a diagonal of $P$ lies completely in $P$.
+\end{thm}
+
+
+
+\subsection*{Angle monotonicity}
+
+The {}\emph{measure} of angle with sides $[p,x]$ and $[p,y]$ will be denoted by $\measuredangle\hinge pxy$\index{10aab@$\measuredangle\hinge yxz$};
+it takes a value in the interval $[0,\pi]$.
+
+The following lemma is very simple and very useful.
+It says that the angle of a triangle monotonically depends on the opposite side, assuming we keep the other two sides fixed.
+It follows directly from the cosine rule.
+
+\begin{thm}{Monotonicity lemma}\label{lem:angle-monotonicity}
+Let $x$, $y$, $z$, $x^{*}$, $y^{*}$ and $z^{*}$ be 6 points such that $\dist{x}{y}{}\z=|x^{*}-y^{*}|>0$ and $|y-z|=|y^{*}-z^{*}|>0$.
+Then 
+\[\measuredangle\hinge yxz
+\ge
+\measuredangle\hinge {y^{*}}{x^{*}}{z^{*}}
+\quad\text{if and only if}\quad
+|x-z|\ge |x^{*}-z^{*}|.\]
+\end{thm}
+
+%???+inversion
+
+\subsection*{Spherical triangle inequality}
+
+The following theorem says that the triangle inequality holds for angles between half-lines from a fixed point.
+In particular it implies that a sphere with the angle metric is a metric space.
+
+\begin{thm}{Theorem}\label{thm:spherical-triangle-inq}
+The following inequality holds for any three line segments $[o,a]$, $[o,b]$ and $[o,c]$ in the Euclidean space:
+\[\measuredangle\hinge oab
++
+\measuredangle\hinge obc
+\ge
+\measuredangle\hinge oac\]
+
+\end{thm}
+
+Most of authors use this theorem without mentioning, but the proof is not that simple.
+A short elementary proof can be found in the classical textbook in Euclidean geometry by Andrey Kiselyov \cite[\S 47]{kiselyov}.
+
+
+\subsection*{Area of spherical triangle}
+
+\begin{thm}{Lemma}\label{lem:area-spher-triangle}
+Let $\Delta$ be a spherical triangle;
+that is, $\Delta$ is the intersection of three closed half-spheres in the unit sphere $\mathbb{S}^2$.
+Then 
+\[\area\Delta=\alpha+\beta+\gamma-\pi,\eqlbl{eq:area(Delta)}\]
+where $\alpha$, $\beta$ and $\gamma$ are the angles of $\Delta$.
+\end{thm}
+
+The value $\alpha+\beta+\gamma-\pi$ is called \index{excess of triangle}\emph{excess of the triangle} $\Delta$,
+so the lemma says that the area of a spherical triangle equals its excess.
+
+This lemma appears in many texts.
+We give its proof here since it is very important in our intuitive proof of Gauss--Bonnet formula.
+
+\begin{wrapfigure}{r}{22 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-43}
+\vskip2mm
+\end{wrapfigure}
+
+\parit{Proof.}
+Recall that 
+\[\area\mathbb{S}^2=4\cdot\pi.\eqlbl{eq:area(S2)}\]
+
+Note that the area of a spherical slice $S_\alpha$ between two meridians meeting at angle $\alpha$ is proportional to $\alpha$.
+Since for $S_\pi$ is a half-sphere, from \ref{eq:area(S2)}, we get $\area S_\pi\z=2\cdot\pi$.
+Therefore the coefficient is 2; that is,
+\[\area S_\alpha=2\cdot \alpha.\eqlbl{eq:area(Sa)}\]
+
+Extending the sides of $\Delta$ we get 6 slices: two $S_\alpha$, two $S_\beta$ and two $S_\gamma$ which cover most of the sphere once,
+but the triangle $\Delta$ and its centrally symmetric copy $\Delta^{*}$ are covered 3 times.
+It follows that
+\[2\cdot \area S_\alpha+2\cdot \area S_\beta+2\cdot \area S_\gamma
+=\area\mathbb{S}^2+4\cdot\area\Delta.\]
+Substituting \ref{eq:area(S2)} and \ref{eq:area(Sa)} and simplifying, we get \ref{eq:area(Delta)}.
+\qeds
+
+
+
+
+
+\section{Convex geometry}
+
+A set $X$ in the Euclidean space is called \index{convex!set}\emph{convex} if for any two points $x,y\in X$, any point $z$ between $x$ and $y$ lies in $X$.
+It is called  {}\emph{strictly convex} if for any two points $x,y\in X$, any point $z$ between $x$ and $y$ lies in the interior of $X$.
+
+From the definition, it is easy to see that the intersection of an arbitrary family of convex sets is convex. 
+The intersection of all convex sets containing $X$ is called the \index{convex!hull}\emph{convex hull} of $X$;
+it is the minimal convex set containing the set $X$.
+
+We will use the following corollary of the so-called \index{hyperplane separation theorem}\emph{hyperplane separation theorem}:
+
+\begin{thm}{Lemma}\label{lem:separation}
+Let $K\subset \mathbb{R}^3$ be a closed convex set.
+Then for any point $p\notin K$ there is a plane $\Pi$ that separates $K$ from $p$;
+that is, $K$ and $p$ lie on opposite open half-spaces separated by $\Pi$.
+\end{thm}
+
+These definitions and hyperplane separation should appear on first few pages of any introductory text in convex geometry;
+see for example the book of Roger Webster \cite{webster}.
+
+\section{Linear algebra}
+
+The following theorem can be found in any textbook in linear algebra;
+the book of Sergei Treil \cite{treil} will do.
+
+\begin{thm}{Spectral theorem}\label{thm:spectral}
+Any symmetric matrix is diagonalizable  by an orthogonal matrix.
+\end{thm}
+
+We will use this theorem only for $2{\times}2$ matrices.
+In this case it can be restated as follows:
+Consider a function 
+\[f(x,y)=
+\begin{pmatrix}
+x&y
+\end{pmatrix}
+\cdot
+\begin{pmatrix}
+\ell&m
+\\
+m&n
+\end{pmatrix}
+\cdot
+\begin{pmatrix}
+x\\y
+\end{pmatrix}
+=\ell\cdot x^2+2\cdot m\cdot x\cdot y+n\cdot y^2,\]
+that is defined on a $(x,y)$-coordinate plane.
+Then after proper rotation of the coordinates, 
+the expression for $f$ in the new coordinates will be
+\[\bar f(x,y)=
+\begin{pmatrix}
+x&y
+\end{pmatrix}
+\cdot
+\begin{pmatrix}
+k_1&0
+\\
+0&k_2
+\end{pmatrix}
+\cdot
+\begin{pmatrix}
+x\\y
+\end{pmatrix}
+=k_1\cdot x^2+k_2\cdot y^2.\]
+
+\section{Analysis}\label{sec:analysis}
+
+The following material is discussed in any course of real analysis, the classical book of Walter Rudin \cite{rudin} is one of our favorites.
+
+%??? measure theory+Lebesgue integration
+
+\subsection*{Lipschitz condition}
+
+Recall that a function $f$ between metric spaces is called \index{Lipschitz function}\emph{Lipschitz} if there is a constant $L$ such that 
+\[\dist{f(x)}{f(y)}{}\le L\cdot\dist{x}{y}{}\]
+for all values $x$ and $y$ in the domain of definition of $f$.
+
+The following theorem makes it possible to extend a number of results about smooth functions to Lipschitz functions.
+Recall that {}\emph{almost all} means all values, with the possible exceptions in a set of zero {}\emph{Lebesgue measure}.
+
+\begin{thm}{Rademacher's theorem}\label{thm:rademacher}
+Let $f\:[a,b]\to\mathbb{R}$ be a Lipschitz function.
+Then the derivative $f'$ of $f$ is a bounded measurable function defined almost everywhere in $[a,b]$ and it satisfies the fundamental theorem of calculus; that is, the following identity 
+\[f(b)-f(a)=\int_a^b f'(x)\cdot dx,\]
+holds if the integral is understood in the sense of Lebesgue.
+\end{thm}
+
+The following theorem makes it possible to extend many statements about continuous function to measurable functions.
+
+\begin{thm}{Lusin's theorem}\label{thm:lusin}
+Let $\phi\:[a,b]\to \mathbb{R}$ be a measurable function.
+Then for any $\epsilon>0$, there is a continuous function $\psi_\epsilon\:[a,b]\to \mathbb{R}$ that coincides with $\phi$ outside of a set of measure at most $\epsilon$.
+Moreover, if $\phi$ is bounded above and/or below by some constants, then we may assume that so is $\psi_\epsilon$.  
+\end{thm}
+
+\subsection*{Uniform continuity and convergence}
+
+Let $f\:{\spc{X}}\to \spc{Y}$ be a map between metric spaces.
+If  for any $\epsilon>0$ there is $\delta>0$ such that 
+\[\dist{x_1}{x_2}{\spc{X}}<\delta\quad\Longrightarrow\quad \dist{f(x_1)}{f(x_2)}{\spc{Y}}<\epsilon,\]
+then $f$ is called \index{uniformly continuous}\emph{uniformly continuous}.
+
+Evidently every uniformly continuous function is continuous;
+the converse does not hold.
+For example, the function $f(x)=x^2$ is continuous, but not uniformly continuous.
+However the following statement holds true:
+
+\begin{thm}{Heine--Cantor theorem}
+Any continuous function defined on a compact metric space is uniformly continuous.
+\end{thm}
+
+If the condition above holds for any function $f_n$ in a sequence and $\delta$ depends solely on $\epsilon$,
+then the sequence $(f_n)$ is called \index{uniformly continuous}\emph{uniformly equicontinuous}.
+More precisely, 
+a sequence of functions $f_n:{\spc{X}}\to \spc{Y}$ is called {}\emph{uniformly equicontinuous} if 
+for any $\epsilon>0$ there is $\delta>0$ such that 
+\[\dist{x_1}{x_2}{\spc{X}}<\delta\quad\Longrightarrow\quad \dist{f_n(x_1)}{f_n(x_2)}{\spc{Y}}<\epsilon\]
+for any $n$.
+
+
+We say that a sequence of functions $f_i\: {\spc{X}} \to \spc{Y}$ \index{uniform convergence}\emph{converges uniformly} to a function $f_{\infty}\: {\spc{X}} \to \spc{Y}$ if for any 
+$\epsilon >0$, there is a natural number $N$ such that for all $n \ge N$, we have $\dist{f_{\infty}(x)}{f_n (x)}{}<\epsilon$
+for all $x  \in {\spc{X}}$.
+
+\begin{thm}{Arzel\'{a}--Ascoli theorem}\label{lem:equicontinuous}
+Suppose $\spc{X}$ and $\spc{Y}$ are compact metric spaces. 
+Then any uniformly equicontinuous sequence of function $f_n\:\spc{X}\z\to \spc{Y}$ has a subsequence that converges uniformly to a continuous function $f_\infty\:\spc{X}\to \spc{Y}$. 
+\end{thm}
+
+\subsection*{Cutoffs and mollifiers}
+
+Here we construct examples of smooth functions that mimic behavior of some model functions.
+These functions are used to smooth model objects keeping its shape nearly unchanged.
+
+For example, consider the following functions
+\begin{align*}
+h(t)&=
+\begin{cases}
+0&\text{if}\ t\le 0,
+\\
+t&\text{if}\ t> 0.
+\end{cases}
+&
+f(t)&=
+\begin{cases}
+0&\text{if}\ t\le 0,
+\\
+\frac{t}{e^{1\!/\!t}}&\text{if}\ t> 0.
+\end{cases}
+\end{align*}
+\begin{figure}[h]
+\begin{minipage}{.48\textwidth}
+\centering
+\includegraphics{mppics/pic-320}
+\end{minipage}\hfill
+\begin{minipage}{.48\textwidth}
+\centering
+\includegraphics{mppics/pic-321}
+\end{minipage}
+\end{figure}
+Note that $h$ and $f$ behave alike ---
+both vanish at $t\le 0$ and grow to infinity for positive $t$.
+The function $h$ is not smooth --- its derivative at $0$ is undefined.
+Unlike $h$, the function $f$ is smooth.
+Indeed, the existence of all derivatives $f^{(n)}(x)$ at $x\ne 0$ is evident and direct calculations show that $f^{(n)}(0)=0$ for all $n$.
+
+Other useful examples of that type are the so-called \index{bell function}\emph{bell function} --- a smooth function that is positive in an $\epsilon$-neighborhood of zero and vanishing outside this neighborhood.
+An example of such function can be constructed based using the function $f$ constructed above, say 
+\[b_\epsilon(t)=c\cdot f(\epsilon^2-t^2);\]
+typically one chooses the constant $c$ so that $\int b_\epsilon=1$.
+
+\begin{figure}[h!]
+\begin{minipage}{.48\textwidth}
+\centering
+\includegraphics{mppics/pic-325}
+\end{minipage}\hfill
+\begin{minipage}{.48\textwidth}
+\centering
+\includegraphics{mppics/pic-326}
+\end{minipage}
+\end{figure}
+
+Another useful example is a sigmoid --- nondecreasing function that vanishes for $t\le -\epsilon$ and takes value $1$ for any $t\ge \epsilon$.
+For example the following function \label{page:sigma-function}
+\[\sigma_\epsilon(t)
+=
+\int_{-\infty}^t b_\epsilon(x)\cdot dx.\]
+
+%???Borel sets
+
+
+\section{Multivariable calculus}
+
+The following material is discussed in any course of multivariable calculus, the classical book of Walter Rudin \cite{rudin} is one of our favorites.
+
+\subsection*{Regular value}
+
+A map $\bm{f}\:\mathbb{R}^m\to\mathbb{R}^n$ can be thaut of as an array of functions 
+\[f_1,\dots,f_n\:\mathbb{R}^m\to \mathbb{R}.\]
+The map $\bm{f}$ is called \index{smooth!map}\emph{smooth} if each function $f_i$ is smooth;
+that is, all partial derivatives of $f_i$ are defined in the domain of definition of $\bm{f}$.
+
+The Jacobian matrix of $\bm{f}$ at $\bm{x}\in\mathbb{R}^m$ is defined as
+\[\Jac_{\bm{x}}\bm{f}=
+\begin{pmatrix}
+\dfrac{\partial f_1}{\partial x_1} & \cdots & \dfrac{\partial f_1}{\partial x_m}\\
+\vdots & \ddots & \vdots\\
+\dfrac{\partial f_n}{\partial x_1} & \cdots & \dfrac{\partial f_n}{\partial x_m} \end{pmatrix};\]\index{10j@$\Jac$}
+we assume that the right hand side is evaluated at $\bm{x}=(x_1,\dots,x_m)$.
+
+If the Jacobian matrix defines a surjective linear map $\mathbb{R}^m\to\mathbb{R}^n$ (that is, if $\rank(\Jac_{\bm{x}}\bm{f})=n$) then we say that 
+$\bm{x}$ is a \index{regular!point}\emph{regular point} of~$\bm{f}$.
+
+If for some $\bm{y}\in \mathbb{R}^n$ each point $\bm{x}$ such that $\bm{f}(\bm{x})=\bm{y}$ is regular,
+then we say that $\bm{y}$ is a \index{regular!value}\emph{regular value} of $\bm{f}$.
+The following lemma states that {}\emph{most} values of a smooth map are regular.
+
+\begin{thm}{Sard's lemma}\label{lem:sard}
+Given a smooth map $\bm{f}\colon \Omega \z\to \mathbb{R}^n$ defined on an open set $\Omega\subset \mathbb{R}^m$, almost all values in $\mathbb{R}^n$ are regular.
+\end{thm}
+
+The words \index{almost all}\emph{almost all} mean all values, with the possible exceptions belonging to a set with vanishing {}\emph{Lebesgue measure}.
+In particular if one chooses a random value equidistributed in an arbitrarily small ball $B\z\subset \mathbb{R}^n$, then it is a regular value of $\bm{f}$ with probability 1.
+
+Note that if $m<n$, then any point $\bm{y}=\bm{f}(\bm{x})$ is not a regular value of $\bm{f}$.
+Therefore the only regular value of $\bm{f}$ are the points in the complement of the image $\Im \bm{f}$.
+In this case, the theorem states that almost all points in $\mathbb{R}^n$, do {}\emph{not} belong to $\Im \bm{f}$.
+
+
+\subsection*{Inverse function theorem}
+
+The \index{inverse function theorem}\emph{inverse function theorem} gives a sufficient condition for a smooth map $\bm{f}$ to be invertible in a neighborhood of a given point $\bm{x}$.
+The condition is formulated in terms of the Jacobian matrix of $\bm{f}$ at $\bm{x}$.
+
+The \index{implicit function theorem}\emph{implicit function theorem} is a close relative to the inverse function theorem;
+in fact it can be obtained as its corollary.
+It is used when we need to pass from parametric to implicit description of curves and surfaces.
+
+Both theorems reduce the existence of a map satisfying a certain equation to a question in linear algebra.
+We use these two theorems only for $n\le 3$.
+
+\begin{thm}{Inverse function theorem}\label{thm:inverse}
+Let $\bm{f}=(f_1,\dots,f_n)\:\Omega\to\mathbb{R}^n$ be a smooth map
+defined on an open set $\Omega\subset \mathbb{R}^n$.
+Assume that the Jacobian matrix
+$\Jac_{\bm{x}}\bm{f}$
+is invertible at some point $\bm{x}\in \Omega$.
+Then there is a smooth map $\bm{h}\:\Phi\to\mathbb{R}^n$ defined in an open neighborhood $\Phi$ of ${\bm{y}}\z=\bm{f}(\bm{x})$ that is a {}\emph{local inverse of $\bm{f}$ at $\bm{x}$};
+that is, there is a neighborhood $\Psi\ni \bm{x}$ such that
+$\bm{f}$ defines a bijection $\Psi\leftrightarrow \Phi$ and
+$\bm{h} \circ \bm{f}$ is an identity map on $\Psi$.
+
+Moreover if an $\Omega$ contains an $\epsilon$-neighborhood of $\bm{x}$, and the first and second partial derivatives $\tfrac{\partial f_i}{\partial x_j}$, $\tfrac{\partial^2 f_i}{\partial x_j\partial x_k}$ are bounded by a constant $C$ for all $i$, $j$, and $k$, then we can assume that $\Phi$ is a $\delta$-neighborhood of $\bm{y}$, for some $\delta>0$ that depends only on $\epsilon$ and $C$. 
+\end{thm}
+
+\begin{thm}{Implicit function theorem}\label{thm:imlicit}
+Let $\bm{f}=(f_1,\dots,f_n)\:\Omega\to\mathbb{R}^n$ be a smooth map, defined on a open subset $\Omega\subset\mathbb{R}^{n+m}$, where
+$m,n\z\ge 1$.
+Let us consider $\mathbb{R}^{n+m}$ as a product space $\mathbb{R}^n\times \mathbb{R}^m$ with coordinates 
+$x_1,\dots,x_n,y_1,\dots,y_m$.
+Consider the following matrix 
+\[
+M=\begin{pmatrix}
+\dfrac{\partial f_1}{\partial x_1} & \cdots & \dfrac{\partial f_1}{\partial x_n}\\
+\vdots & \ddots & \vdots\\
+\dfrac{\partial f_n}{\partial x_1} & \cdots & \dfrac{\partial f_n}{\partial x_n} \end{pmatrix}\]
+formed by the first $n$ columns of the Jacobian matrix.
+Assume $M$ is invertible at some point $\bm{x}=(x_1,\dots,x_n,y_1,\dots y_m)$ in the domain of definition of $\bm{f}$ and $\bm{f}(\bm{x})=0$.
+Then there is a neighborhood $\Psi\ni \bm{x}$
+and a smooth function $\bm{h}\:\mathbb{R}^m\to\mathbb{R}^n$ defined in a neighborhood $\Phi\ni 0$ such that
+for any $(x_1,\dots,x_n,y_1,\dots y_m)\in \Omega$, the equality
+\[\bm{f}(x_1,\dots,x_n,y_1,\dots y_m)=0\]
+holds if and only if 
+\[(x_1,\dots x_n)=\bm{h}(y_1,\dots y_m).\]
+
+\end{thm}
+
+\subsection*{Multiple integral}
+
+Let $\bm{f}\:\mathbb{R}^n\to\mathbb{R}^n$ is a smooth map (maybe partially defined).
+
+\[\jac_{\bm{x}}\bm{f}\df|\det[\Jac_{\bm{x}}\bm{f}]|;\index{10j@$\jac$}\]
+that is, $\jac_{\bm{x}}\bm{f}$ is the absolute value of the determinant of the Jacobian matrix of $\bm{f}$ at $\bm{x}$.
+
+The following theorem plays the role of a substitution rule for multiple variables.
+
+\index{Borel subsets}\emph{Borel subsets} are defined as the class of subsets that are generated from open sets by applying the following operations recursively: countable union, countable intersection, and complement.
+Since complement of a closed set is open and the other way around these sets can be also generated from all closed sets.
+This class of sets includes virtually all sets that naturally appear in geometry but does not include pathological examples that create problems with integration.
+
+
+
+\begin{thm}{Theorem}\label{thm:mult-substitution} %???do we need measure here???
+Let $h\:K\to\mathbb{R}$ be a continuous function on a Borel subset $K\subset \mathbb{R}^n$.
+Assume $\bm{f}\:K\to \mathbb{R}^n$ is an injective smooth map.
+Then 
+\[\idotsint_{\bm{x}\in K} h(\bm{x})\cdot \jac_{\bm{x}}\bm{f}
+=
+\idotsint_{\bm{y}\in \bm{f}(K)} h\circ \bm{f}^{-1}(\bm{y}).\]
+
+\end{thm}
+
+\subsection*{Convex functions}
+
+The following statements will be used only for $n\le 3$.
+
+Let $f\:\mathbb{R}^n\to \mathbb{R}$ be a smooth function (maybe partially defined).
+Choose a vector $\vec w\in \mathbb{R}^n$.
+Given a point $p\in\mathbb{R}^n$ consider the function $\phi(t)=f(p+t\cdot \vec w)$.
+Then the \index{directional derivative}\emph{directional derivative} $(D_{\vec w}f)(p)$ of $f$ at $p$ with respect to vector $\vec w$ is defined by
+\[(D_{\vec w}f)(p)=\phi'(0).\]
+
+Recall that a function $f$ is called \index{convex!function}\emph{convex} if 
+its epigraph $z\ge f(\bm{x})$ is a convex set in $\mathbb{R}^n\times \mathbb{R}$.
+
+\begin{thm}{Theorem}
+A smooth function $f\:K\to \mathbb{R}$ defined on a convex subset $K\subset\mathbb{R}^n$ is convex if and only if one of the following equivalent condition holds:
+
+\begin{subthm}{}
+The second directional derivative of $f$ at any point in the direction of any vector is nonnegative; that is,
+\[(D_{\vec w}^2f)(p)\ge 0\]
+for any $p\in K$ and $\vec w\in\mathbb{R}^n$.
+\end{subthm}
+
+\begin{subthm}{}
+The so-called \index{Jensen's inequality}\emph{Jensen's inequality}
+\[f \left ((1-t)\cdot x_0 + t\cdot x_1 \right ) \le (1-t)\cdot f(x_0)+ t\cdot f(x_1)\]
+holds for any $x_0,x_1\in K$ and $t\in[0,1]$.
+
+\end{subthm}
+
+\begin{subthm}{}
+For any $x_0,x_1\in K$, we have 
+\[f \left (\frac{x_0 + x_1}2 \right ) \le \frac{f(x_0) + f(x_1)}2.\]
+\end{subthm}
+
+\end{thm}
+
+
+
+
+\section{Ordinary differential equations}
+
+The following material is discussed at the very beginning of any course of ordinary differential equations; the classical book of Vladimir Arnold \cite{arnold} is one of our favorites.
+
+
+\subsection*{Systems of first order}
+
+The following theorem guarantees existence and uniqueness of solutions of an initial value problem
+for a system of ordinary first order differential equations
+\[
+\begin{cases}
+x_1'&=f_1(x_1,\dots,x_n,t),
+\\
+&\,\,\vdots
+\\
+x_n'&=f_n(x_1,\dots,x_n,t),
+\end{cases}
+\]
+where each $t\mapsto x_i=x_i(t)$ is a real valued function defined on a real interval $\mathbb{I}$
+and each $f_i$ is a smooth function defined on an open subset $\Omega\subset \mathbb{R}^n\times \mathbb{R}$.
+
+The array of functions $(f_1,\dots,f_n)$ can be packed into one vector-valued function 
+$\bm{f}\:\Omega\to \mathbb{R}^n$;
+the same way the array $(x_1,\dots,x_n)$ can be packed into a vector  $\bm{x}\in\mathbb{R}^n$.
+Therefore the system can be rewritten as one vector equation 
+\[\bm{x}'=\bm{f}(\bm{x}, t).\] 
+
+\begin{thm}{Theorem}\label{thm:ODE}
+Suppose $\mathbb{I}$ is a real interval and $\bm{f}\:\Omega\to \mathbb{R}^n$ is a smooth function defined on an open subset $\Omega\subset \mathbb{R}^n\times \mathbb{R}$.
+Then for any initial data $\bm{x}(t_0)=\bm{u}$ such that $(\bm{u},t)\in\Omega$ the differential equation 
+\[\bm{x}'=\bm{f}(\bm{x},t)\]
+has a unique solution $t\mapsto \bm{x}(t)$ defined at a maximal interval $\mathbb{J}$ that contains $t_0$.
+Moreover
+\begin{enumerate}[(a)]
+\item  if $\mathbb{J}\ne \mathbb{R}$ (that is, if an end $a$ of $\mathbb{J}$ is finite) then $\bm{x}(t)$ does not have a limit point in $\Omega$ as $t\to a$;
+\item  the function $(\bm{u},t_0,t)\mapsto \bm{x}(t)$ has open domain of definition in $\Omega\times \mathbb{R}$ and it is smooth in this domain.
+\end{enumerate}
+
+\end{thm}
+
+\subsection*{Higher order}
+
+Suppose we have an ordinary differential equation of order $k$
+\[\bm{x}^{(k)}=\bm{f}(\bm{x},\dots,\bm{x}^{(k-1)},t),\]
+where $\bm{x}=\bm{x}(t)$ is a function from a real interval to $\mathbb{R}^n$.
+
+This equation can be rewritten as $k$ first order equations as follows with $k-1$ new variables $\bm{y}_i=\bm{x}^{(i)}$:
+\[
+\begin{cases}
+\bm{x}'&=\bm{y}_1
+\\
+\bm{y}_1'&=\bm{y}_2
+\\
+&\,\,\vdots
+\\
+\bm{y}_{k-1}'(t)&=\bm{f}(\bm{x},\bm{y}_{1},\dots,\bm{y}_{k-1},t),
+\end{cases}
+\]
+
+Using this trick one can reduce a higher order ordinary differential equation to a first order equation. 
+In particular we get local existence and uniqueness for solutions of higher order equations as in Theorem \ref{thm:ODE}.
+
+
+
+\section{Topology}\label{sec:topology}
+
+The following material is covered in any introductory text to topology; 
+one of our favorites is a textbook of Czes Kosniowski \cite{kosniowski}.
+
+\subsection*{Compact sets}
+
+A subset $K$ of a metric space is called \index{compact}\emph{compact} if any sequence of points $(x_n)$ in $K$ has a subsequence that converges to a point $x_\infty$ in $K$.
+
+The following properties follow directly from the definition:
+
+\begin{itemize}
+\item A closed subset of a compact space is compact.
+\item A continuous image of a compact space is compact.
+\end{itemize}
+
+\begin{thm}{Heine--Borel theorem}\label{thm:Heine--Borel}
+A subset of Euclidean space is compact if and only if it is closed and bounded.
+\end{thm}
+
+
+\subsection*{Homeomorphisms and embedding}
+
+A bijection $f\:\spc{X}\to\spc{Y}$ between metric spaces is called \index{homeomorphism}\emph{homeomorphism} if $f$ and its inverse $f^{-1}$ are continuous.
+If $f\:\spc{X}\to\spc{Y}$ is a homeomorphism to its image $f(\spc{X})\subset \spc{Y}$, then it is called an \index{embedding}\emph{embedding}.
+
+The following theorem characterizes homeomorphisms between compact spaces.
+
+\begin{thm}{Theorem}\label{thm:Hausdorff-compact}
+A continuous bijection $f$ between compact metric spaces has a continuous inverse.
+In particular, we have the following:
+
+\begin{subthm}{}
+Any continuous bijection between compact metric spaces
+is a homeomorphism.
+\end{subthm}
+
+\begin{subthm}{}
+Any continuous injection from compact metric spaces to another metric space
+is an embedding.
+\end{subthm}
+
+
+\end{thm}
+
+\subsection*{Jordan's theorem}
+\index{Jordan's theorem}
+
+The first part of the following theorem was proved by Camille Jordan, the second part is due to Arthur Schoenflies:
+
+\begin{thm}{Theorem}\label{thm:jordan}
+The complement of any closed simple plane curve $\gamma$ has exactly two connected components. 
+
+Moreover, there is a homeomorphism $h\:\mathbb{R}^2\to \mathbb{R}^2$ that maps the unit circle to $\gamma$.
+In particular $\gamma$ bounds a topological disc.
+\end{thm}
+
+This theorem is known for its simple formulation and quite hard proof.
+By now many proofs of this theorem are known.
+For the first statement, a very short proof based on a somewhat developed technique is given by Patrick Doyle \cite{doyle},
+among elementary proofs, one of our favorites is the proof given by Aleksei Filippov \cite{filippov}.
+
+We use mostly the smooth case of this theorem which is much simpler.
+An amusing proof of this case was given by Gregory Chambers and Yevgeny Liokumovich \cite{chambers-liokumovich}.
+
+\subsection*{Connectedness}
+
+Recall that a continuous map $\alpha$ from the unit interval $[0,1]$ to a Euclidean space is called a \index{path}\emph{path}.
+If $p=\alpha (0)$ and $q = \alpha (1)$, then we say that $\alpha$ connects $p$ to $q$.
+
+
+A set $X$ in the Euclidean space is called \index{path-connected set}\emph{path-connected} if any two points $x,y\in X$ can be connected by a path lying in $X$.
+
+A set $X$ in the Euclidean space is called \index{connected set}\emph{connected} if one cannot cover $X$ with two disjoint open sets $V$ and $W$ such that both intersections $X\cap V$ and $X\cap W$ are nonempty.
+
+\begin{thm}{Proposition}
+Any path-connected set is connected.
+
+Moreover, any open connected set in the Euclidean space or plane is path-connected.
+\end{thm}
+
+Given a point $x\in X$, the maximal connected subset of $X$ containing $x$ is called the \index{connected component}\emph{connected component} of $x$ in $X$.

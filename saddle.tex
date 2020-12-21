@@ -1,0 +1,669 @@
+\chapter{Supporting surfaces}
+\label{chap:surface-support}
+
+\section{Definitions}
+
+Assume two surfaces $\Sigma_1$ and $\Sigma_2$ have a common point $p$.
+If there is a neighborhood $U$ of $p$ such that $\Sigma_1\cap U$ lies on one side from $\Sigma_2$ in $U$, then we say that $\Sigma_2$ \index{local!support}\emph{locally supports} $\Sigma_1$ at $p$.
+
+Let us describe $\Sigma_2$ locally at $p$ as a graph $z=f_2(x,y)$ in tangent-normal coordinates at $p$.
+If $\Sigma_2$ locally supports $\Sigma_1$ at $p$, then  all points of $\Sigma_1$ near $p$ lie either above or below the graph $z=f_2(x,y)$.
+
+In both cases the surfaces $\Sigma_1$ and $\Sigma_2$ have common tangent plane at $p$,
+so we can write both as graphs $z=f_1(x,y)$ and $z=f_2(x,y)$ in the common tangent-normal coordinates at $p$.
+Note that $\Sigma_2$ locally supports $\Sigma_1$ at $p$ if and only if 
+\[f_1(x,y)\ge f_2(x,y)
+\quad\text{or}\quad
+f_1(x,y)\le f_2(x,y)\]
+for all $(x,y)$ sufficiently close to the origin.
+
+If the surfaces are orientable, we can assume that they are \index{cooriented!surfaces}\emph{cooriented} at $p$;
+that is, they have a common unit normal vector at $p$ in the direction of the $z$-axis.
+If the normal vectors are opposite, we say that $\Sigma_1$ and $\Sigma_2$ are \index{controriented!surfaces}\emph{counteroriented} at $p$;
+in this case reverting the orientation of one of the surfaces makes them cooriented.
+
+If $\Sigma_2$ locally supports $\Sigma_1$ and they are cooriented at $p$,
+then we can say that $\Sigma_1$ supports $\Sigma_2$ \index{support from inside}\emph{from inside} or \index{support from outside}\emph{from outside},
+assuming that the normal vector points {}\emph{inside} the domain bounded by the surface $\Sigma_2$ in $U$.
+Using the above notations, $\Sigma_1$ locally supports $\Sigma_2$ from inside (from outside)  if $f_1(x,y)\ge f_2(x,y)$ (respectively $f_1(x,y)\le f_2(x,y)$) for $(x,y)$ in a sufficiently small neighborhood of the origin.
+
+\begin{thm}{Proposition}\label{prop:surf-support}
+Let $\Sigma_1$ and $\Sigma_2$ be oriented surfaces.
+Assume $\Sigma_1$ locally supports $\Sigma_2$ from inside at the point $p$ (equivalently $\Sigma_2$ locally supports $\Sigma_1$ from outside).
+Then 
+\[k_1(p)_{\Sigma_1}\ge k_1(p)_{\Sigma_2}\quad\text{and}\quad k_2(p)_{\Sigma_1}\z\ge k_2(p)_{\Sigma_2}.\]
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:surf-support}
+Give an example of two surfaces $\Sigma_1$ and $\Sigma_2$ that have a  common point $p$ with a common unit normal vector $\Norm_p$ such that 
+$k_1(p)_{\Sigma_1}\z> k_1(p)_{\Sigma_2}$ and $k_2(p)_{\Sigma_1}\z> k_2(p)_{\Sigma_2}$, but $\Sigma_1$ does not support $\Sigma_2$ locally at $p$.
+\end{thm}
+
+
+\parit{Proof.} We can assume that $\Sigma_1$ and $\Sigma_2$ are graphs $z=f_1(x,y)$  and $z=f_2(x,y)$ in common tangent-normal coordinates at $p$, so we have $f_1\ge f_2$.
+
+\begin{wrapfigure}{o}{40 mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-80}
+\vskip-0mm
+\end{wrapfigure}
+
+Fix a unit vector ${\vec w}\in \T_p\Sigma_1=\T_p\Sigma_2$.
+Consider the plane $\Pi$ passing thru $p$ and spanned by the normal vector $\Norm_p$ and ${\vec w}$.
+Let $\gamma_1$ and $\gamma_2$ be the curves of intersection of $\Sigma_1$ and $\Sigma_2$ with $\Pi$.
+
+Let us orient $\Pi$ so that the common normal vector $\Norm_p$ for both surfaces at $p$ points to the left from ${\vec w}$.
+Further, let us parametrize both curves so that they are running in the direction of ${\vec w}$ at $p$ and are therefore cooriented.
+Note that in this case the curve $\gamma_1$ supports the curve $\gamma_2$ from the right.
+
+
+By \ref{prop:supporting-circline}, we have the following inequality for the normal curvatures of $\Sigma_1$ and $\Sigma_2$ at $p$ in the direction of ${\vec w}$:
+\[k_{\vec w}(p)_{\Sigma_1}\ge k_{\vec w}(p)_{\Sigma_2}.\eqlbl{kw>=kw}\]
+
+According to \ref{obs:k1-k2},
+\[k_1(p)_{\Sigma_i}=\min\set{k_{\vec w}(p)_{\Sigma_i}}{{\vec w}\in\T_p, |{\vec w}|=1}\]
+for $i=1,2$.
+Choose ${\vec w}$ so that $k_1(p)_{\Sigma_1}=k_{\vec w}(p)_{\Sigma_1}$.
+Then by \ref{kw>=kw}, we have that
+\begin{align*}
+k_1(p)_{\Sigma_1}&=k_{\vec w}(p)_{\Sigma_1}\ge
+\\
+&\ge k_{\vec w}(p)_{\Sigma_2}\ge
+\\
+&\ge\min_{\vec v}\set{k_{\vec v}(p)_{\Sigma_2}}{}=
+\\
+&=k_1(p)_{\Sigma_2};
+\end{align*}
+here we assume that $\vec v\in\T_p$ and $|\vec v|=1$.
+That is, $k_1(p)_{\Sigma_1}\ge k_1(p)_{\Sigma_2}$.
+
+Similarly, by \ref{obs:k1-k2}, we have that
+\[k_2(p)_{\Sigma_i}=\max_{\vec w}\set{k_{\vec w}(p)_{\Sigma_i}}{}.\]
+Let us fix ${\vec w}$ so that $k_2(p)_{\Sigma_2}=k_{\vec w}(p)_{\Sigma_2}$.
+Then 
+\begin{align*}
+k_2(p)_{\Sigma_2}&=k_{\vec w}(p)_{\Sigma_2}\le
+\\
+&\le k_{\vec w}(p)_{\Sigma_1}\le
+\\
+&\le\max_{\vec v}\set{k_{\vec v}(p)_{\Sigma_1}}{}=
+\\
+&=k_2(p)_{\Sigma_1};
+\end{align*}
+that is, $k_2(p)_{\Sigma_1}\ge k_2(p)_{\Sigma_2}$.
+\qeds
+
+\begin{thm}{Corollary}\label{cor:surf-support}
+Let $\Sigma_1$ and $\Sigma_2$ be oriented surfaces.
+Assume $\Sigma_1$ locally supports $\Sigma_2$ from inside at the point $p$.
+Then
+
+\begin{subthm}{cor:surf-support:mean}$H(p)_{\Sigma_1}\ge H(p)_{\Sigma_2}$;
+\end{subthm}
+
+\begin{subthm}{cor:surf-support:gauss} If $k_1(p)_{\Sigma_2}\ge 0$, then $K(p)_{\Sigma_1}\ge K(p)_{\Sigma_2}$.
+\end{subthm}
+ 
+\end{thm}
+
+\parit{Proof; \ref{SHORT.cor:surf-support:mean}}
+The statement follows from  \ref{prop:surf-support} and the definition of mean curvature
+\[H(p)_{\Sigma_i}=k_1(p)_{\Sigma_i}+k_2(p)_{\Sigma_i}.\]
+
+
+\parit{\ref{SHORT.cor:surf-support:gauss}.} Since $k_2(p)_{\Sigma_i}\ge k_1(p)_{\Sigma_i}$ and $k_1(p)_{\Sigma_2}\ge 0$, we get that all the principal curvatures 
+$k_1(p)_{\Sigma_1}$, 
+$k_1(p)_{\Sigma_2}$, 
+$k_2(p)_{\Sigma_1}$, and 
+$k_2(p)_{\Sigma_2}$ are nonnegative.
+By \ref{prop:surf-support}, it implies that
+\begin{align*}
+K(p)_{\Sigma_1}&=k_1(p)_{\Sigma_1}\cdot k_2(p)_{\Sigma_1}\ge 
+\\
+&\ge k_1(p)_{\Sigma_2}\cdot k_2(p)_{\Sigma_2}=
+\\
+&=K(p)_{\Sigma_2}.
+\end{align*}
+\qedsf
+
+\begin{thm}{Exercise}\label{ex:positive-gauss-0}
+Show that any closed surface in a unit ball has a point with Gauss curvature at least 1.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:positive-gauss}
+Show that any closed surface that lies at distance at most 1 from a straight line has a point with Gauss curvature at least~1.
+\end{thm}
+
+\section{Convex surfaces}
+
+A proper surface without boundary that bounds a convex region is called \index{convex!surface}\emph{convex}.
+
+\begin{thm}{Exercise}\label{ex:convex-surf}
+Show that the Gauss curvature of any convex smooth surface is nonnegative at each point.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:convex-lagunov}
+Assume $R$ is a convex body in $\mathbb{R}^3$ bounded by a surface with principal curvatures at most 1.
+Show that $R$ contains a unit ball.
+\end{thm}
+
+Recall that a region $R$ in the Euclidean space is called  {}\emph{strictly convex} if for any two points $x,y\in R$, any point $z$ between $x$ and $y$ lies in the interior of $R$.
+
+Clearly any open convex set is strictly convex;
+the cube (as well as any convex polyhedron) gives an example of a non-strictly convex set.
+Recall that a closed convex region is strictly convex if and only if its boundary does not contain a line segment.
+
+\begin{thm}{Lemma}\label{lem:gauss+=>convexity}
+Let $z=f(x,y)$ be the local description of a smooth surface $\Sigma$ in tangent-normal coordinates at some point $p\in\Sigma$.
+Assume both principal curvatures of $\Sigma$ are positive at $p$.
+Then the function $f$ is strictly convex in a neighborhood of the origin and has a local minimum at the origin.
+
+In particular the tangent plane $\T_p$ locally supports $\Sigma$ from outside at $p$.
+\end{thm}
+
+\parit{Proof.}
+Since both principal curvatures are positive, by \ref{cor:Shape(ij)}, we have 
+\[D^2_{\vec w}f(0,0)=\langle \Shape_p({\vec w}),{\vec w}\rangle\ge k_1(p)>0\] 
+for any unit tangent vector ${\vec w}\in\T_p\Sigma$ (which is the $(x,y)$-plane).
+
+Since the set of unit vectors is compact, we have that 
+\[D^2_{\vec w}f(0,0)>\epsilon\]
+for some fixed $\epsilon>0$ and any unit tangent vector ${\vec w}\in\T_p\Sigma$.
+
+By continuity of the function $(x,y,{\vec w})\mapsto D^2_{\vec w}f(x,y)$,
+we have that $D^2_{\vec w}f(x,y)>0$ if $\vec w\ne 0$ and $(x,y)$ lies in a sufficiently small neighborhood of the origin.
+This property implies that $f$ is a strictly convex function in a neighborhood of the origin in the $(x,y)$-plane (see Section~\ref{sec:analysis}).
+
+Finally since $\nabla f(0,0)=0$ and $f$ is strictly convex in a neighborhood of the origin it has a strict local minimum at the origin.
+\qeds
+
+\begin{thm}{Exercise}\label{ex:section-of-convex}
+Let $\Sigma$ be a smooth surface (without boundary) with positive Gauss curvature.
+Show that any connected component of intersection of $\Sigma$ with a plane $\Pi$ is either a single point or a smooth regular plane curve whose signed curvature has constant sign.
+\end{thm}
+
+The following theorem gives a global description of surfaces with positive Gauss curvature.
+
+\begin{thm}{Theorem}\label{thm:convex-embedded}
+Suppose $\Sigma$ is a proper smooth surface with positive Gauss curvature.
+Then $\Sigma$ bounds a strictly convex region.
+\end{thm}
+
+In fact the statement holds for surfaces with possible self-intersections; it was stated and proved by James Stoker \cite{stoker} who attributed it to Jacques Hadamard, who proved a closely relevant statement in \cite[item 23]{hadamard}.
+
+Note that in the proof we have to use that the surface is a connected set;
+otherwise a pair of disjoint spheres which bound two disjoint balls would give a counterexample.
+
+\parit{Proof.}
+Since the Gauss curvature is positive, we can choose unit normal field $\Norm$ on $\Sigma$ so that the principal curvatures are positive at any point.
+Denote by $R$ the region bounded by $\Sigma$ that lies on the side of $\Norm$;
+that is, $\Norm$ points inside of $R$ at any point of $\Sigma$.
+(The region $R$ exists by \ref{clm:proper-divides}.)
+
+Let us show that $R$ is {}\emph{locally strictly convex};
+that is, for any point $p\in R$, the intersection of $R$ with a small ball centered at $p$ is strictly convex.
+
+Indeed, suppose that $z=f(x,y)$ is a local description of $\Sigma$ in the tangent-normal coordinates at $p$.
+By \ref{lem:gauss+=>convexity}, $f$ is strictly convex in a neighborhood of the origin.
+In particular the intersection of a small ball centered at $p$ with the epigraph $z\ge f(x,y)$ is strictly convex.
+
+Since $\Sigma$ is connected, so is $R$;
+moreover any two points in the interior of $R$ can be connected by a polygonal line in the interior of~$R$.
+
+\begin{wrapfigure}{o}{43 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-37}
+\vskip-0mm
+\end{wrapfigure}
+
+Assume the interior of $R$ is not convex; that is, there are points $x,y\in R$ and a point $z$ between $x$ and $y$ that does not lie in the interior of $R$.
+Consider a polygonal  line $\beta$ from $x$ to $y$ in the interior of $R$.
+Let $y_0$ be the first point on $\beta$ such that the chord $[x,y_0]$ touches $\Sigma$ at some point, say~$z_0$.
+
+Since $R$ is locally strictly convex, $R\z\cap B(z_0,\epsilon)$ is strictly convex for all sufficiently small $\epsilon>0$.
+On the other hand $z_0$ lies between two points in the intersection $[x,y_0]\cap B(z_0,\epsilon)$.
+Since $[x,y_0]\subset R$, we arrived to a contradiction.
+
+Therefore the interior of $R$ is a convex set.
+Note that the region $R$ is the closure of its interior, therefore $R$ is convex as well.
+
+Since $R$ is locally strictly convex, its boundary $\Sigma$ contains no line segments.
+Therefore $R$ is strictly convex.
+\qeds
+
+\parit{Remark.}
+We proved a more general statement.
+Namely, {}\emph{any closed connected locally convex region in the Euclidean space is convex}.
+
+\begin{thm}{Exercise}\label{ex:surrounds-disc}
+Assume that a closed convex surface $\Sigma$ surrounds a unit circle.
+Show that there is a point  $p \in \Sigma$ with $K(p)\le 1$. 
+\end{thm} 
+
+\begin{thm}{Exercise}\label{ex:small-gauss}
+Let $\Sigma$ be a closed convex smooth surface of diameter at least $\pi$;
+that is, there is a pair of points $p,q\in\Sigma$ such that $|p-q|\ge \pi$.
+Show that $\Sigma$ has a point with Gauss curvature at most 1.
+\end{thm}
+
+\begin{thm}{Theorem}\label{thm:convex-closed}
+Suppose $\Sigma$ is a closed smooth convex surface.
+Then it is a smooth sphere; that is, $\Sigma$ admits a smooth regular parametrization by $\mathbb{S}^2$.\end{thm}
+
+The following exercise will guide you thru the proof of the theorem.
+
+{
+
+\begin{wrapfigure}{r}{33 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-78}
+\end{wrapfigure}
+
+\begin{thm}{Exercise}\label{ex:convex-proper-sphere}
+Assume a convex compact region $R$ contains the origin in its interior and is bounded by a smooth surface $\Sigma$.
+
+\begin{subthm}{ex:convex-proper-sphere:single}
+Show that any half-line that starts at the origin intersects $\Sigma$ at a single point;
+that is, there is a positive function $\rho\:\mathbb{S}^2\z\to\mathbb{R}$ such that $\Sigma$ consists of the points $q\z=\rho(\xi)\cdot \xi$ for $\xi\in \mathbb{S}^2$.
+\end{subthm}
+
+\begin{subthm}{ex:convex-proper-sphere:smooth}
+Show that $\rho\:\mathbb{S}^2\to\mathbb{R}$ is a smooth function.
+\end{subthm}
+
+\begin{subthm}{ex:convex-proper-sphere:regular}
+Conclude that $\xi\mapsto \rho(\xi)\cdot \xi$ is a smooth regular parametrization $\mathbb{S}^2\z\to \Sigma$.
+\end{subthm}
+
+\end{thm}
+
+\begin{thm}{Theorem}\label{thm:convex-open}
+Suppose $\Sigma$ is an open smooth strictly convex surface.
+Then there is a coordinate system in which $\Sigma$ is the graph $z\z=f(x,y)$ of a convex function $f$ defined on a convex open region $\Omega$ of the $(x,y)$-plane.
+
+Moreover, $f(x_n,y_n)\to\infty$ if $(x_n,y_n)\in\Omega$ and $(x_n,y_n)\to(x_\infty,y_\infty)\z\in \partial\Omega$.
+
+\end{thm}
+
+\begin{wrapfigure}{r}{33 mm}
+\vskip-8mm
+\centering
+\includegraphics{mppics/pic-1181}
+\end{wrapfigure}
+
+
+\begin{thm}{Exercise}\label{ex:convex-proper-plane}
+Assume a strictly convex closed noncompact region $R$ contains the origin in its interior and is bounded by a smooth surface $\Sigma$.
+
+\begin{subthm}{ex:convex-proper-plane:a}
+Show that $R$ contains a half-line $\ell$.
+\end{subthm}
+
+\begin{subthm}{ex:convex-proper-plane:b}
+Show that any line $m$ parallel to $\ell$ intersects $\Sigma$ at most at one point.
+\end{subthm}
+
+
+\begin{subthm}{ex:convex-proper-plane:c}
+Consider an $(x,y,z)$-coordinate system such that the $z$-axis points in the direction of $\ell$.
+Show that the projection of $\Sigma$ to the $(x,y)$ plane is an open convex set; denote it by $\Omega$.
+\end{subthm}
+
+\begin{subthm}{ex:convex-proper-plane:d}
+Conclude that $\Sigma$ is a graph $z=f(x,y)$ of a convex function $f$ defined on $\Omega$.
+(It proves the main statement in \ref{thm:convex-open}.)
+\end{subthm}
+
+\begin{subthm}{ex:convex-proper-plane:e}
+Prove the last statement in \ref{thm:convex-open}.
+\end{subthm}
+
+
+\end{thm}
+
+
+
+}
+
+\begin{thm}{Exercise}\label{ex:open+convex=plane}
+Show that any open surface $\Sigma$ with positive Gauss curvature is a topological plane;
+that is, there is an embedding $\mathbb{R}^2\to\mathbb{R}^3$ with image $\Sigma$.
+
+Try to show that $\Sigma$ is a smooth plane; that is, the embedding $f$ can be made smooth and regular.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:circular-cone}
+Show that any open smooth surface $\Sigma$ with positive Gauss curvature
+lies inside an infinite circular cone. In other words, there is an $(x,y,z)$-coordinate system in which $\Sigma$ lies in the region $z \z\ge m \cdot\sqrt{x^2 + y^2}$ for some $m > 0$.
+\end{thm} 
+
+\begin{thm}{Exercise}\label{ex:intK}
+Assume $\Sigma$ is a smooth convex surface with positive Gauss curvature.
+Show that 
+
+\begin{subthm}{ex:intK:4pi}
+If $\Sigma$ is closed, then the spherical map $\Norm\:\Sigma\to \mathbb{S}^2$ is a bijection. Conclude that 
+\[\iint_\Sigma K=4\cdot\pi.\]
+\end{subthm}
+\begin{subthm}{ex:intK:2pi}
+If $\Sigma$ is open, then  the spherical map $\Norm\:\Sigma\to \mathbb{S}^2$
+maps $\Sigma$ bijectively into a subset of a hemisphere. Conclude that 
+\[\iint_\Sigma K\le 2\cdot\pi.\]
+\end{subthm}
+\end{thm}
+
+
+
+\section{Saddle surfaces}\label{sec:saddle}
+
+\begin{wrapfigure}{r}{43 mm}
+\vskip-8mm
+\centering
+\includegraphics{asy/saddle}
+\vskip0mm
+\end{wrapfigure}
+
+A surface is called \index{saddle surface}\emph{saddle} if its Gauss curvature at each point is nonpositive;
+in other words the principal curvatures at each point have opposite signs or at least one of them is zero.
+
+If the Gauss curvature is negative at each point,
+then the surface is said to be {}\emph{strictly saddle};
+equivalently, this means that the principal curvatures have opposite signs at each point.
+Note that in this case the tangent plane cannot support the surface even locally --- moving along the surface in the principal directions at a given point, one goes above and below the tangent plane at this point.  
+
+
+\begin{thm}{Exercise}\label{ex:convex-revolution}
+Let $f\:\mathbb{R}\to\mathbb{R}$ be a smooth positive function.
+Show that the surface of revolution of the graph $y\z=f(x)$ around the $x$-axis
+ is saddle if and only if $f$ is convex; that is, if $f''(x)\ge0$ for any $x$.
+\end{thm}
+
+A surface $\Sigma$ is called \index{ruled surface}\emph{ruled} if for every point $p\in \Sigma$ there is a line segment $\ell_p\subset \Sigma$ passing thru $p$ that is infinite or its endpoint(s) lie on the boundary line of $\Sigma$.
+
+\begin{thm}{Exercise}\label{ex:ruled=>saddle}
+Show that any ruled surface $\Sigma$ is saddle.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:saddle-convex}
+Let $\Sigma$ be an open strictly saddle surface and $f\:\mathbb{R}^3\z\to\mathbb{R}$ be a smooth convex function.
+Show that the restriction of $f$ to $\Sigma$ does not have a point of strict local maximum.
+\end{thm}
+
+A tangent direction on a smooth surface with vanishing normal curvature is called \index{asymptotic direction and line}\emph{asymptotic}.
+A smooth regular curve that always runs in an asymptotic direction is called an
+{}\emph{asymptotic line}.\label{page:asymptotic line}
+
+Recall that a set $R$ in the plane is called \index{star-shaped}\emph{star-shaped} if there is a point $p\in R$ such that for any $x\in R$ the line segment $[p,x]$ belongs to~$R$.
+
+The statement in the following exercise is due to Dmitri Panov \cite{panov-curves}.
+
+\begin{thm}{Advanced exercise}\label{ex:panov}
+Let $\gamma$ be a closed smooth asymptotic line
+in such graph $z\z=f(x,y)$ of a smooth function $f$. 
+Assume that the graph is strictly saddle in a neighborhood of $\gamma$.
+Show that the region in the $(x,y)$-plane bounded by the projection of $\gamma$ to such plane cannot be star-shaped. 
+\end{thm}
+
+\begin{thm}{Advanced exercise}\label{ex:crosss}
+Let $\Sigma$ be a smooth surface and $p\in \Sigma$.
+Assume $K(p)<0$.
+Show that there is a neighborhood $\Omega$ of $p$ in $\Sigma$
+such that the intersection of $\Omega$ with the tangent plane $\T_p$ is a union of two smooth curves  \index{transversality}\emph{intersecting transversally} at $p$.
+\end{thm}
+
+
+\section{Hats}
+
+Note that a closed surface cannot be saddle.
+Indeed, let $\Sigma$ be a closed surface and consider a smallest sphere that contains $\Sigma$ in its interior;
+it supports $\Sigma$ at some point $p$ and at this point the principal curvatures must have the same sign.
+The following more general statement  is proved using the same idea.
+
+{
+
+\begin{wrapfigure}[10]{r}{45 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-73}
+\vskip0mm
+\end{wrapfigure}
+
+\begin{thm}{Lemma}\label{lem:convex-saddle}
+Assume $\Sigma$ is a compact saddle surface and its boundary line lies in a closed convex  region $R$.
+Then the entire surface $\Sigma$ lies in~$R$.
+\end{thm}
+
+\parit{Remark.}
+Note that in the case when $\Sigma$ is strictly saddle, the follows from \ref{ex:saddle-convex}.
+
+\parit{Proof.}
+Arguing by contradiction,
+assume there is a point $p\in \Sigma$ that does not lie in $R$.
+Let $\Pi$ be a plane that separates $p$ from $R$; it exists by \ref{lem:separation}.
+Denote by $\Sigma'$ the part of $\Sigma$ that lies with $p$ on the same side of~$\Pi$.
+
+}
+
+Since $\Sigma$ is compact, it is surrounded by a sphere;
+let $\sigma$ be the circle of intersection of this sphere and $\Pi$.
+Consider the smallest spherical dome $\Sigma_0$ with boundary $\sigma$ that surrounds~$\Sigma'$.
+
+Note that $\Sigma_0$ supports $\Sigma$ at some point~$q$.
+Without loss of generality we may assume that $\Sigma_0$ and $\Sigma$ are cooriented at $q$ and $\Sigma_0$ has positive principal curvatures.
+In this case $\Sigma_0$ supports $\Delta$ from outside.
+By \ref{cor:surf-support}, we have $K(q)_\Sigma\z\ge K(q)_{\Sigma_0}>0$, a contradiction.
+\qeds
+
+\begin{thm}{Exercise}\label{ex:length-of-bry}
+Let $\Delta$ be a compact smooth regular saddle surface with boundary and $p\in \Delta$.
+Assume the boundary line of $\Delta$ lies in the unit sphere centered at~$p$.
+Show that if $\Delta$ is a disc, then $\length(\partial\Delta)\ge 2\cdot\pi$.
+
+\parit{Remark.}
+Show that the statement does not hold without assuming that $\Delta$ is a disc.
+\end{thm}
+
+If $\Delta$ is as in the exercise, then in fact $\area \Delta\ge \pi$.
+The proof of this statement can be obtained by applying the so-called \index{coarea fromula}\emph{coarea fromula} together with the inequality in the exercise. 
+
+\begin{thm}{Exercise}\label{ex:circular-cone-saddle}
+Show that an open saddle surface
+cannot lie inside of an infinite circular cone. 
+\end{thm}
+
+A disc $\Delta$ in a surface $\Sigma$ is called a \index{hat}\emph{hat} of $\Sigma$
+if its boundary line $\partial\Delta$ lies in a plane $\Pi$ and  $\Delta \backslash \partial \Delta $ lies on one side of $\Pi$.
+
+\begin{thm}{Proposition}\label{prop:hat}
+A smooth surface $\Sigma$ is saddle if and only if it has no hats.
+\end{thm}
+
+Note that a saddle surface can contain a closed plane curve.
+For example the hyperboloid $x^2+y^2-z^2=1$ contains the unit circle in the $(x,y)$-plane.
+However, according to the proposition (as well as the lemma), a plane curve cannot bound a disc (as well any compact set) in a saddle surface.
+
+\parit{Proof.}
+Since a plane is convex, the ``only if'' part follows from \ref{lem:convex-saddle};
+it remains to prove the ``if'' part.
+
+Assume $\Sigma$ is not saddle; that is, it has a point $p$ with strictly positive Gauss curvature;
+or equivalently, the principal curvatures $k_1(p)$ and $k_2(p)$ have the same sign.
+
+
+Let $z=f(x,y)$ be a graph representation of $\Sigma$ in tangent-normal coordinates at $p$.
+Consider the set $F_\epsilon$ in the $(x,y)$-plane defined by the inequality $f(x,y)\le \epsilon$.
+By \ref{lem:gauss+=>convexity}, $f$ is convex in a small neighborhood of $(0,0)$.
+Therefore $F_\epsilon$ is convex, for sufficiently small $\epsilon>0$.
+In particular, $F_\epsilon$ is a topological disc.
+
+Note that $(x,y)\mapsto (x,y,f(x,y))$ is a homeomorphism from $F_\epsilon$
+to
+\[\Delta_\epsilon=\set{(x,y,f(x,y))\in \mathbb{R}^3}{f(x,y)\le \epsilon};\]
+so $\Delta_\epsilon$ is a topological disc for any sufficiently small $\epsilon>0$.
+Note that the boundary line of $\Delta_\epsilon$ lies on the plane $z=\epsilon$ and the entire disc lies below it;
+that is, $\Delta_\epsilon$ is a hat of $\Sigma$.
+\qeds
+
+The following exercise shows that $\Delta_\epsilon$ is in fact a smooth disc.
+This can be used to prove a slightly stronger version of \ref{prop:hat};
+namely in the definition of hats one can assume that the disc is smooth.
+
+\begin{thm}{Exercise}\label{ex:disc-hat}
+Let $f\:\mathbb{R}^2\to\mathbb{R}$ be a smooth strictly convex function with minimum at the origin.
+Show that the set $F_\epsilon$ in the graph $z=f(x,y)$ defined by the inequality $f(x,y)\le \epsilon$ is a smooth disc for any $\epsilon>0$;
+that is, there is a diffeomorphism 
+$F_\epsilon$ to the unit disc $\Delta\z=\set{(x,y)\in\mathbb{R}^2}{x^2+y^2\le 1}$.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:saddle-linear}
+Let $L\:\mathbb{R}^3\to\mathbb{R}^3$ be an affine transformation; that is, $L$ is an invertible map $\mathbb{R}^3\to\mathbb{R}^3$ that sends any plane to a plane. 
+Show that for any saddle surface $\Sigma$ the image $L(\Sigma)$ is also a saddle surface.
+\end{thm}
+
+
+\section{Saddle graphs}
+
+The following theorem was proved by Sergei Bernstein \cite{bernstein}.
+\index{Bernstein theorem}
+
+\begin{thm}{Theorem}\label{thm:bernshtein}
+Let $f\:\mathbb{R}^2\to\mathbb{R}$ be a smooth function.
+Assume its graph $z=f(x,y)$ is a strictly saddle surface in $\mathbb{R}^3$.
+Then $f$ is not bounded;
+that is, there is no constant $C$ such that 
+$|f(x,y)|\le C$ for any $(x,y)\in\mathbb{R}^2$.
+\end{thm}
+
+The theorem states that a saddle graph cannot lie between two parallel horizontal planes;
+applying \ref{ex:saddle-linear} we get that saddle graphs cannot lie between two parallel planes,
+not necessarily horizontal.
+The following exercise shows that the theorem does not hold for saddle surfaces which are not graphs.
+
+
+\begin{thm}{Exercise}\label{ex:between-parallels}
+Construct an open strictly saddle surface that lies between two parallel planes.
+\end{thm}
+
+Since $\exp(x-y^2)>0$,
+the following exercise shows that there are strictly saddle graphs with functions bounded on one side; that is, both (upper and lower) bounds are needed in the proof of Bernshtein's theorem.
+
+\begin{thm}{Exercise}\label{ex:one-side-bernshtein}
+Show that the graph
+$z=\exp(x-y^2)$
+is strictly saddle.
+\end{thm}
+
+The following exercise gives a condition that guarantees that a saddle surface is a graph;
+it can be used in combination with Bernshtein's theorem.
+
+\begin{thm}{Advanced exercise}\label{ex:saddle-graph}
+Let $\Sigma$ be an open smooth strictly saddle disc in $\mathbb{R}^3$.
+Assume there is a compact subset $K\subset \Sigma$ such that the complement $\Sigma\backslash K$ is the graph $z=f(x,y)$ of a smooth function defined in an open domain of the $(x,y)$-plane.
+Show that the surface $\Sigma$ is a graph.
+\end{thm}
+
+Note that according to \ref{lem:convex-saddle}, there are no proper saddle surfaces inside  a parallelepiped with boundary line on one of its facets.
+The following lemma gives an analogous statement for a parallelepiped with an infinite side.
+
+\begin{thm}{Lemma}\label{lem:region}
+There is no proper strictly saddle smooth surface that has its boundary line in a plane $\Pi$ 
+and lies at a bounded distance from a line contained in $\Pi$.
+\end{thm}
+
+
+\parit{Proof.}
+Note that by \ref{ex:saddle-linear}, the statement can be reformulated in the following way:
+\emph{There is no proper strictly saddle smooth surface 
+with  boundary line in the $(x,y)$-plane
+and contained in a region of the form:}
+\[R=\set{(x,y,z)\in\mathbb{R}^3}{0\le z\le r, 0\le y\le r}.\]
+Let us prove this statement.
+
+Assume the contrary, let $\Sigma$ be such a surface.
+Consider the projection $\hat \Sigma$ of $\Sigma$ to the $(x,z)$-plane.
+It lies in the upper half-plane and below the line $z=r$.
+
+Consider the open upper half-plane $H=\set{(x,z)\in \mathbb{R}^2}{z> 0}$. 
+Let $\Theta$ be the connected component of the complement $H\backslash \hat \Sigma$ that contains all the points above the line $z=r$.
+
+Note that $\Theta$ is convex.
+If not, then there is a line segment $[p,q]$ for some $p,q\in \Theta$ that cuts from $\hat\Sigma$ a compact piece.
+\begin{figure}[h!]
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-74}
+\vskip0mm
+\end{figure}
+Consider the plane $\Pi$ thru $[p,q]$ that is perpendicular to the $(x,z)$-plane.
+Note that $\Pi$ cuts from $\Sigma$ a compact region $\Delta$.
+By a general position argument (see \ref{lem:reg-section}) 
+we can assume that $\Delta$ is a compact surface with boundary line in $\Pi$ and the remaining part of $\Delta$ lies on one side from $\Pi$.
+Since the plane $\Pi$ is convex, this statement contradicts \ref{lem:convex-saddle}.
+
+Summarizing, $\Theta$ is an open convex set of $H$ that contains all points above $z=r$.
+By convexity, together with any point $w$, the set $\Theta$ contains all points on the half-lines that start as $w$ and {}\emph{point up}; that is, in directions with positive $z$-coordinate. 
+In other words, with any point $w$,
+the set $\Theta$ contains all points with larger $z$-coordinates.
+\begin{figure}[h!]
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-75}
+\vskip0mm
+\end{figure}
+Since $\Theta$ is open it can be described by an inequality $z>r_0$.
+It follows that the plane $z=r_0$ supports $\Sigma$ at some point (in fact at many points).
+By \ref{prop:surf-support}, the latter is impossible --- a contradiction.
+\qeds
+
+\parit{Proof of \ref{thm:bernshtein}.}
+Denote by $\Sigma$ the graph $z=f(x,y)$.
+Assume the contrary; that is, $\Sigma$ lies between two planes $z=\pm C$.
+
+Note that the function $f$ cannot be constant.
+It follows that the tangent plane $\T_p$ at some point $p\in\Sigma$ is not horizontal.
+
+Denote by $\Sigma^+$ the part of $\Sigma$ that lies above $\T_p$.
+Note that it has at least two connected components which are approaching $p$ from both sides 
+in the principal direction with positive principal curvature.
+Indeed, if there was a curve that runs in $\Sigma^+$ and approaches $p$ from both sides, then it would cut a disc from $\Sigma$ with boundary line above $\T_p$ and some points below it;
+the latter would contradict \ref{lem:convex-saddle}.
+
+\begin{figure}[h!]
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-76}
+\caption*{The surface $\Sigma$ seeing from above.}
+\vskip0mm
+\end{figure}
+
+Summarizing, $\Sigma^+$ has at least two connected components, denote them by $\Sigma^+_0$ and $\Sigma^+_1$.
+Let $z=h(x,y)=a\cdot x+b\cdot y+c$ be the equation of $\T_p$.
+Note that $\Sigma^+$ contains all points in the region
+\[R_-=\set{(x,y,f(x,y))\in\Sigma}{h(x,y)< -C}\] 
+which is a connected set and no points in 
+\[R_+=\set{(x,y,f(x,y))\in\Sigma}{h(x,y)> C}\]
+Whence one of the connected components, say $\Sigma^+_0$, lies in 
+\[R_0=\set{(x,y,f(x,y))\in\Sigma}{|h(x,y)|\le  C}.\]
+This set lies on a bounded distance from the line of intersection of $\T_p$ with the $(x,y)$-plane.
+
+Let us move $\T_p$ slightly upward and cut from $\Sigma^+_0$ the piece above the obtained plane, say $\bar\Sigma^+_0$.
+By the general position argument (\ref{lem:reg-section}),
+we can assume that $\bar\Sigma^+_0$ is a surface with smooth boundary line;
+by construction the boundary line lies in the plane.
+Note that the obtained surface $\bar\Sigma^+_0$ still lies on a bounded distance to a line.
+The latter is impossible by \ref{lem:region}.
+\qeds
+
+\section*{Remarks}
+
+Note that Bernstein's theorem and the lemma in its proof do not hold for nonstrictly saddle surfaces;
+counterexamples can be found among infinite cylinders over smooth regular curves.
+In fact it can be shown that these are the only counterexamples;
+a proof is based on the same idea, but it is much more technical.
+
+By \ref{prop:hat}, saddle surfaces can be defined as smooth surfaces without hats.
+This definition can be used for arbitrary surfaces, not necessarily smooth.
+Some results, for example Bernshtein's characterization of saddle graphs can be extended to generalized saddle surfaces, but this class of surfaces is far from being understood; see \cite[Chapter 4]{alexander-kapovitch-petrunin2019} and the references therein.

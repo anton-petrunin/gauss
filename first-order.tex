@@ -1,0 +1,325 @@
+\chapter{First order structure}
+\label{chap:first-order}
+\section{Tangent plane}
+
+\begin{thm}{Definition}\label{def:tangent-vector}
+Let $\Sigma$ be a smooth surface.
+A vector $\vec w$ is a \index{tangent!vector}\emph{tangent vector} of $\Sigma$ at $p$ if and only if there is a curve $\gamma$ that runs in $\Sigma$ and has $\vec w$ as a velocity vector at $p$;
+that is, $p=\gamma(t)$ and $\vec w=\gamma'(t)$ for some $t$.
+\end{thm}
+
+\begin{thm}{Proposition-Definition}\label{def:tangent-plane}
+Let $\Sigma$ be a smooth surface and $p\in \Sigma$.
+Then the set of tangent vectors of $\Sigma$ at $p$ forms a plane;
+this plane is called the \index{tangent!plane}\emph{tangent plane} of $\Sigma$ at $p$.
+
+Moreover if $s\:U\to \Sigma$ is a local chart and $p=s(u_p,v_p)$, then 
+the tangent plane of $\Sigma$ at $p$ is spanned by vectors $s_u(u_p,v_p)$ and $s_v(u_p,v_p)$.
+\end{thm}
+
+The tangent plane to $\Sigma$ at $p$ is usually denoted by $\T_p$ or $\T_p\Sigma$.
+This plane $\T_p$ might be considered as a linear subspace of $\mathbb{R}^3$ or as a parallel plane passing thru $p$;
+the latter is sometimes called the \index{tangent!plane}\emph{affine tangent plane}.
+The affine tangent plane can be interpreted as the best approximation at~$p$ of the surface $\Sigma$ by a plane.
+More precisely, 
+it has \index{order of contact}\emph{first order of contact} with $\Sigma$ at $p$;
+that is, $\rho(q)\z=o(|p-q|)$, where $q\in \Sigma$ and $\rho(q)$ denotes the distance from $q$ to $\T_p$.
+
+\parit{Proof.}
+Fix a chart $s$ at $p$.
+Assume $\gamma$ is a smooth curve that starts at~$p$.
+Without loss of generality, we can assume that $\gamma$ is covered by the chart;
+in particular, there are smooth functions $u(t)$ and $v(t)$ such that 
+\[\gamma(t)=s(u(t),v(t)).\]
+Applying chain rule, we get
+\[\gamma'=s_u\cdot u'+ s_v\cdot v';\]
+that is, $\gamma'$ is a linear combination of $s_u$ and $s_v$.
+
+Since the smooth functions $u(t)$ and $v(t)$ can be chosen arbitrarily, any linear combination of $s_u$ and $s_v$ is a tangent vector at $p$. 
+\qeds
+
+
+\begin{thm}{Exercise}\label{ex:tangent-normal}
+Let $f:\mathbb{R}^3\to\mathbb{R}$ be a smooth function with $0$ as a regular value and $\Sigma$ be a surface described as a connected component of the set of solutions $f(x,y,z)=0$.
+Show that the tangent plane $\T_p\Sigma$ is perpendicular to the gradient $\nabla_pf$ at any point $p\in\Sigma$.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:vertical-tangent}
+Let $\Sigma$ be a smooth surface and $p\in\Sigma$.
+Choose $(x,y,z)$-coordinates.
+Show that a neighborhood of $p$ in $\Sigma$ is a graph $z=f(x,y)$ of a smooth function $f$ defined on an open subset in the $(x,y)$-plane if and only if the tangent plane $\T_p$ is not {}\emph{vertical}; that is, if $\T_p$ is not perpendicular to the $(x,y)$-plane.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:tangent-single-point}
+Show that if a smooth surface $\Sigma$ meets a plane $\Pi$ at a single point $p$, then $\Pi$ is tangent to $\Sigma$ at $p$.
+\end{thm}
+
+
+\section{Directional derivative}
+
+In this section we extend the definition of directional derivative to smooth functions defined on smooth surfaces.
+
+First let us recall the standard definition of directional derivative.
+
+Suppose $f$ is a function defined at a point $p$ in the space, and $\vec w$ a vector.
+Consider the function
+\[h(t)=f(p+t\cdot\vec w).\]
+Then the directional derivative of $f$ at $p$ along $\vec w$ is defined as 
+\[D_{\vec w}f(p)\df h'(0).\]
+\index{10d@$D_{\vec{w}}f$}
+
+\begin{thm}{Proposition-Definition}\label{def:directional-derivative}
+Let $\Sigma$ be a smooth regular surface and $f$ a smooth function defined on $\Sigma$. 
+Suppose $\gamma$ is a smooth curve in $\Sigma$ that starts at $p$ with velocity vector $\vec{w}\in \T_p$;
+that is, $\gamma(0)=p$ and $\gamma'(0)=\vec{w}$.
+Then the derivative $(f\circ\gamma)'(0)$
+depends only on $f$, $p$ and $\vec{w}$;
+it is called the \index{directional derivative}\emph{directional derivative of $f$ along $\vec{w}$ at $p$}
+and denoted by
+\[D_{\vec{w}}f,\quad D_{\vec{w}}f(p), \quad\text{or}\quad D_{\vec{w}}f(p)_\Sigma\] 
+--- we may omit $p$ and $\Sigma$ if it is clear from the context.
+
+Moreover, if $(u,v)\mapsto s(u,v)$ is a local chart at $p$, then 
+\[D_{\vec{w}}f=a\cdot f_u+b\cdot f_v,\]
+where $\vec{w}=a\cdot s_u +b\cdot s_v$. 
+\end{thm}
+
+Note that our definition agrees with the standard definition of directional derivative if $\Sigma$ is a plane.
+Indeed, in this case $\gamma(t)=p+\vec w\cdot t$ is a curve in $\Sigma$ that starts at $p$ with velocity vector $\vec{w}$.
+For a general surface the point $p+\vec w\cdot t$ might not lie on the surface; therefore the function $f$ might be undefined at this point; therefore the standard definition does not work.
+
+\parit{Proof.}
+Without loss of generality, we may assume that $\gamma$ is covered by the chart $s$;
+if not we can chop $\gamma$.
+In this case 
+\[\gamma(t)=s(u(t),v(t))\]
+for some smooth functions $u,v$ defined in a neighborhood of $0$ such that 
+$u(0)=u_p$ and $v(0)=v_p$.
+
+Applying the chain rule, we get that
+\begin{align*}
+\gamma'(0)&=u'(0)\cdot s_u+v'(0)\cdot s_v
+\end{align*}
+at $(u_p,v_p)$.
+Since $\vec{w}=\gamma'(0)$ and the vectors $s_u$, $s_v$ are linearly independent, we get that $a=u'(0)$ and $b=v'(0)$.
+
+Applying the chain rule again, we get that
+\[
+(f\circ\gamma)'(0)=a\cdot f_u+b\cdot f_v.
+\eqlbl{eq:f-gamma}
+\]
+at $(u_p,v_p)$.
+
+Notice that the left hand side in \ref{eq:f-gamma} does not depend on the choice of the chart $s$ and the right hand side depends only on $p$, $\vec w$, $f$, and $s$. 
+It follows that $(f\circ\gamma)'(0)$ depends only on $p$, $\vec w$ and $f$.
+
+The last statement follows from \ref{eq:f-gamma}.
+\qeds
+
+\section{Tangent vectors as functionals}
+
+In this section we introduce a more conceptual way to define tangent vectors.
+We will not use this approach in the sequel, but it is better to know about it.
+
+A tangent vector $\vec w\in \T_p$ to a smooth surface $\Sigma$ 
+defines a linear functional%
+\footnote{Term {}\emph{functional} is used for functions that take a function as an argument and return a number.} $D_{\vec w}$
+that swallows a smooth function $\phi$ defined in a neighborhood of $p$ in $\Sigma$ and spits its directional derivative $D_{\vec w}\phi$.
+It is straightforward to check that the functional $D$ obeys the product rule:
+\[D_{\vec w}(\phi\cdot\psi)=(D_{\vec w}\phi)\cdot \psi(p)+\phi(p)\cdot(D_{\vec w}\psi).
+\eqlbl{eq:tangent-functional}\]
+
+It is not hard to show that the tangent vector $\vec w$ is completely determined by the functional $D_{\vec w}$.
+Moreover tangent vectors at $p$ can be \emph{defined} as linear functionals on the space of smooth functions
+that satisfy the product rule \ref{eq:tangent-functional}.
+
+This definition grabs the key algebraic property of tangent vectors.
+It might be a less intuitive way to think about tangent vectors, but it is often convenient to use in the proofs. 
+For example \ref{def:directional-derivative} becomes a tautology.
+
+\section{Differential of map}
+
+Any smooth map $s$ from a surface $\Sigma$ to $\mathbb{R}^3$ can be described by its coordinate functions 
+$ s(p)=(x(p),y(p),z(p))$. 
+To take a directional derivative of the map we should take the  directional derivative of each of its coordinate functions.
+\[D_{\vec{w}} s\df(D_{\vec{w}}x,D_{\vec{w}}y,D_{\vec{w}}z).\]
+
+Assume $ s$ is a smooth map from one smooth surface $\Sigma_0$ to another $\Sigma_1$ and $p\in \Sigma_0$.
+Note that $D_{\vec w} s(p)\in \T_{s(p)}\Sigma_1$ for any $\vec w\in \T_p$.
+Indeed, choose a curve $\gamma_0$ in $\Sigma_0$ such that $\gamma_0(0)=p$ and $\gamma_0'(0)=\vec w$.
+Observe that $\gamma_1= s\circ \gamma_0$ is a smooth curve in $\Sigma_1$ and 
+by the definition of directional derivative, we have $D_{\vec w} s(p)=\gamma_1'(0)$.
+It remains to note that $\gamma_1(0)\z= s(p)$ and therefore its velocity $\gamma_1'(0)$ is in $\T_{ s(p)}\Sigma_1$.
+
+Recall that \ref{def:directional-derivative} implies that 
+$d_p s\:\vec w \mapsto D_{\vec w} s$ defines a linear map $d_p s\:\T_p\Sigma_0\to \T_{ s(p)}\Sigma_1$;
+that is,
+\[D_{c\cdot \vec w} s=c\cdot D_{\vec w} s(p)
+\quad\text{and}\quad D_{\vec v+ \vec w} s=D_{\vec v} s(p)+ D_{\vec w} s(p)\]
+for any $c\in\mathbb{R}$ and $\vec v, \vec w\in\T_p$.
+The map $d_p s$ is called the \index{differential}\emph{differential} of $s$ at $p$.
+
+The differential $d_p s$ can be described by a $2{\times}2$-matrix $M$ in orthonormal bases of $\T_p$ and $\T_{ s(p)}\Sigma_1$.
+Set $\jac_p s=|\det M|$; this value  
+does not depend on the choice of orthonormal bases in $\T_p$ and $\T_{ s(p)}\Sigma_1$. \label{page:|L|}\index{10d@$d_p s$}
+
+Let $ s_1\:\Sigma_1\to\Sigma_2$ be another smooth map between smooth surfaces $\Sigma_1$ and $\Sigma_2$.
+Suppose that ${p_1}= s(p)\in\Sigma_1$;
+observe that 
+\[d_p( s_1\circ s)=d_{p_1} s_1 \circ d_p s.\]
+It follows that
+\[\jac_p( s_1\circ s)
+=
+\jac_{p_1} s_1\cdot\jac_p s.\eqlbl{eq:jac-composition}\]
+
+
+If $\Sigma_0$ is a domain in the $(u,v)$-plane, then the value $\jac_p s$ can be found using the following formulas 
+\begin{align*}
+\jac s
+&=|s_v\times s_u|=
+\\
+&=\sqrt{\langle s_u, s_u\rangle\cdot\langle s_v, s_v\rangle -\langle s_u, s_v\rangle^2}=
+\\
+&=\sqrt{\det[\Jac^\top s\cdot \Jac s]}.
+\end{align*}
+where $\Jac s$ denotes the Jacobian matrix of $s$; it is a 2$\times$3 matrix with column vectors $s_u$ and $ s_v$.
+
+The value $\jac_p s$ has the following geometric meaning:
+if $P_0$ is a region in $\T_p$ and $P_1=(d_p s)(P_0)$, then
+\[\area P_1=\jac_p s\cdot \area P_0.\]
+This identity will become important in the definition of surface area.
+
+
+
+\section{Surface integral and area}
+
+Let $\Sigma$ be a smooth surface and $h\:\Sigma\to\mathbb{R}$ be a smooth function.
+Let us define the integral $\iint_R h$ of the function $h$ along a region $R\subset \Sigma$.
+The definition will be used mostly along surfaces with boundary, but the definition can be applied to any Borel set $R\subset \Sigma$.
+
+Recall that $\jac_ps$ is defined in the previous section.
+Assume that there is a chart $(u,v)\mapsto s(u,v)$ of $\Sigma$ defined on an open set $U\subset\mathbb{R}^2$ such that $R\subset s(U)$.
+In this case set
+\[\iint_R h\df \iint_{s^{-1}(R)} h\circ s(u,v)\cdot \jac_{(u,v)}s  \cdot du\cdot dv.\eqlbl{eq:area-def}\]
+
+
+By the substitution rule (\ref{thm:mult-substitution}), the right hand side in \ref{eq:area-def} does not depend on the choice of $s$.
+That is, if $s_1\:U_1\to \Sigma$ is another chart such that $s_1(U_1)\supset R$, then 
+\[\iint_{s^{-1}(R)} h\circ s(u,v)\cdot \jac_{(u,v)}s  \cdot du\cdot dv=\iint_{s_1^{-1}(R)} h\circ s_1(u,v)\cdot \jac_{(u,v)}s_1  \cdot du\cdot dv.\]
+In other words, the defining identity \ref{eq:area-def} makes sense.
+
+A general region $R$ can be subdivided into regions $R_1,R_2\dots$ such that each $R_i$ lies in the image of some chart.
+After that one could define the integral along $R$ as the sum
+\[\iint_Rh
+\df
+\iint_{R_1}h+\iint_{R_2}h+\dots\]
+It is straightforward to check that the value $\iint_Rh$ does not depend on the choice of such subdivision.
+
+The area of a region $R$ in a smooth surface $\Sigma$ is defined as the surface integral 
+\[\area R=\iint_R 1.\]
+
+The following proposition provides a substitution rule for surface integral.
+
+\begin{thm}{Area formula}\label{prop:surface-integral}
+Suppose $ s\:\Sigma_0\to \Sigma_1$ is a smooth parametrization of a smooth surface $\Sigma_1$ by  a smooth surface $\Sigma_0$.
+Then for any region $R\subset \Sigma_0$ and any smooth function $f\:\Sigma_1\to\mathbb{R}$ we have
+\[\iint_R (f\circ s)\cdot \jac  s=\int_{ s(R)}f.\]
+In particular, if $f\equiv 1$, we have
+\[\iint_R \jac  s=\area [ s(R)].\]
+
+\end{thm}
+
+\parit{Proof.}
+Follows from \ref{eq:jac-composition} and the definition of surface integral.
+\qeds
+
+\parbf{Remark.}
+The notion of area of a surface is closely related to the length of a curve.
+However, to define length we use a different idea --- it was defined as the least upper bound on the lengths of inscribed polygonal lines.
+It turns out that an analogous definition does not work even for very simple surfaces.
+The latter is shown by a classical example --- the so-called \emph{Schwarz's boot}.
+This example and different approaches to the notion of area are discussed in a popular article of Vladimir Dubrovsky \cite{dubrovsky}.
+
+\section{Normal vector and orientation}
+A unit vector that is normal to $\T_p$ is usually denoted by $\Norm(p)$;
+it is uniquely defined up to sign.\index{10nu@$\Norm$}
+
+A surface $\Sigma$ is called \index{oriented surface}\emph{oriented} if it is equipped with a unit normal vector field $\Norm$;
+that is, a continuous map $p\mapsto \Norm(p)$ such that $\Norm(p)\perp\T_p$ and $|\Norm(p)|=1$ for any $p$.
+The choice of the field $\Norm$ is called the {}\emph{orientation} of $\Sigma$.
+A surface $\Sigma$ is called {}\emph{orientable} if it can be oriented.
+Note that each orientable surface admits two orientations: $\Norm$ and $-\Norm$.
+
+Let $\Sigma$ be a smooth oriented surface with unit normal field $\Norm$.
+The map $\Norm\:\Sigma\to \mathbb{S}^2$ defined by $p\mapsto \Norm(p)$ is called the \index{spherical!map}\emph{spherical map} or \index{Gauss map}\emph{Gauss map}.
+
+For surfaces, the spherical map plays essentially the same role as the tangent indicatrix for curves.
+
+The M\"obius strip shown on the diagram gives an example of a nonorientable surface --- there is no choice of normal vector field that is continuous along the middle of the strip (it changes the sign if you try to go around).
+
+\begin{wrapfigure}{o}{42 mm}
+\vskip-0mm
+\centering
+\includegraphics{asy/moebius}
+\vskip0mm
+\end{wrapfigure}
+
+Note that each surface is locally orientable.
+In fact each chart $s(u,v)$ admits an orientation 
+\[\Norm=
+\frac{s_u\times s_v}
+{\left|s_u\times s_v\right|}.\]
+Indeed, the vectors $s_u$ and $s_v$ are tangent vectors at $p$; 
+since they are linearly independent, their vector product does not vanish and it is perpendicular to the tangent plane.
+Evidently $(u,v)\mapsto \Norm(u,v)$ is a continuous map.
+Therefore $\Norm$ is a unit normal field. 
+
+\begin{thm}{Exercise}\label{ex:implicit-orientable}
+Let $h:\mathbb{R}^3\to\mathbb{R}$ be a smooth function with $0$ as a regular value and $\Sigma$ a surface described as a connected component of the set of solutions $h(x,y,z)=0$.
+Show that $\Sigma$ is orientable.
+\end{thm}
+
+Recall that any proper surface without boundary in the Euclidean space divides it into two connected components (\ref{clm:proper-divides}).
+Therefore we can choose the unit normal field on any smooth proper surface that points into one of the components of the complement.
+Therefore we obtain the following observation. 
+
+\begin{thm}{Observation}
+Any smooth proper surface in the Euclidean space is oriented.
+\end{thm}
+
+In particular it follows that the M\"obius strip cannot be extended to a proper smooth surface without boundary.
+
+\section{Sections}
+
+\begin{thm}{Advanced exercise}\label{ex:plane-section}
+Let $\Pi$ be the $(x,y)$-plane and $A \subset \Pi$ be any closed subset. Show that there is an open smooth regular surface $\Sigma$ with $\Sigma \cap \Pi = A$.
+\end{thm}
+
+The exercise above says that plane sections of a smooth regular surface might look complicated.
+The following lemma makes it possible to perturb the plane so that the section becomes nice.
+
+\begin{thm}{Lemma}\label{lem:reg-section}
+Let $\Sigma$ be a smooth regular surface.
+Suppose $f\:\mathbb{R}^3\z\to\mathbb{R}$ is a smooth function.
+Then for any constant $r_0$ there is an arbitrarily close value $r$ such that 
+each connected component of the intersection of the level set $L_{r}=f^{-1}\{r\}$ with
+$\Sigma$ is a smooth regular curve.
+\end{thm}
+
+\parit{Proof.}
+The surface $\Sigma$ can be covered by a countable set of charts $s_i\:U_i\z\to \Sigma$.
+Note that the composition $f\circ s_i$ is a smooth function for any $i$.
+By Sard's lemma (\ref{lem:sard}), almost all real numbers $r$ are regular values for each $f\circ s_i$.
+
+Fix such a value $r$ sufficiently close to $r_0$ and consider the level set $L_r$ described by the equation $f(x,y,z)=r$.
+Any point in the intersection $\Sigma\cap L_r$ lies in the image of one of the charts.
+From above it admits a neighborhood which is a regular smooth curve;
+hence the result.\qeds
+
+\begin{thm}{Corollary}
+Let $\Sigma$ be a smooth surface.
+Then for any plane $\Pi$ there is a parallel plane $\Pi^{*}$ that lies arbitrary close to $\Pi$ and such that the intersection $\Sigma\cap\Pi^{*}$ is a union of disjoint smooth curves.
+\end{thm}
+
+
+

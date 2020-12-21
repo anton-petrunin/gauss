@@ -1,0 +1,950 @@
+\chapter{Comparison theorems}
+\label{chap:comparison}
+
+This chapter is based on material in the book by Stephanie Alexander, Vitali Kapovitch and the first author \cite{alexander-kapovitch-petrunin2027}.
+
+\section{Triangles and hinges}
+
+Recall that a shortest path between points $x$ and $y$ in a surface $\Sigma$ is denoted by $[x,y]$ or $[x,y]_\Sigma$, and
+$\dist{x}{y}\Sigma$ denotes the \index{intrinsic distance}\emph{intrinsic distance} from $x$ to $y$ in $\Sigma$.
+
+A \index{geodesic!triangle}\emph{geodesic triangle} in a surface $\Sigma$ is defined as a triple of points $x,y,z\z\in \Sigma$ with a choice of minimizing geodesics $[x,y]_\Sigma$, $[y,z]_\Sigma$ and $[z,x]_\Sigma$.
+The points $x,y,z$ are called the {}\emph{vertices} of the geodesic triangle,
+the minimizing geodesics $[x,y]$, $[y,z]$ and $[z,x]$ are called its {}\emph{sides};
+the triangle itself is denoted by $[xyz]$, or by $[xyz]_\Sigma$, if we need to emphasize that it lies in the surface $\Sigma$.\index{10aad@$[xyz]$, $[xyz]_\Sigma$}
+
+A triangle $[\tilde x\tilde y\tilde z]$ in the plane $\mathbb{R}^2$ is called a \index{model!triangle}\emph{model triangle} of the triangle $[xyz]$
+if its corresponding sides are equal;
+that is,
+\[\dist{\tilde x}{\tilde y}{\mathbb{R}^2}=\dist{x}{y}\Sigma,
+\quad
+\dist{\tilde y}{\tilde z}{\mathbb{R}^2}=\dist{y}{z}\Sigma,
+\quad
+\dist{\tilde z}{\tilde x}{\mathbb{R}^2}=\dist{z}{x}\Sigma.
+\]
+In this case we write $[\tilde x\tilde y\tilde z]=\tilde\triangle xyz$.
+\index{10aae@$\tilde\triangle$}
+
+A pair of minimizing geodesics $[x,y]$ and $[x,z]$ starting from one point $x$ is called a \index{hinge}\emph{hinge} and is denoted by $\hinge xyz$.\index{10aac@$\hinge yxz$}
+The angle between these geodesics at $x$ is denoted by $\measuredangle\hinge xyz$.
+The corresponding angle $\measuredangle\hinge {\tilde x}{\tilde y}{\tilde z}$ in a model triangle $[\tilde x\tilde y\tilde z]=\tilde\triangle xyz$ is denoted by $\modangle xyz$;
+\index{10aab@$\modangle xyz$}
+it is called \index{model angle}\emph{model angle} of the triangle $[xyz]$ at $x$.
+
+By side-side-side congruence condition,
+the model triangle $[\tilde x\tilde y\tilde z]$ is uniquely defined up to congruence.
+Therefore the model angle $\tilde\theta=\modangle xyz$ is uniquely defined as well.
+In fact by cosine rule, we get 
+\[\cos \tilde\theta=\frac{a^2+b^2-c^2}{2\cdot a \cdot b},\]
+where $a=\dist{x}{y}{\Sigma}$, $b=\dist{x}{z}{\Sigma}$, and $c=\dist{y}{z}{\Sigma}$.
+
+\begin{thm}{Exercise}\label{ex:wide-hinges}
+Let $[x_ny_nz_n]$ be a sequence of triangles in a smooth surface $\Sigma$.
+Set $a_n=\dist{x_n}{y_n}{\Sigma}$,
+$b_n=\dist{x_n}{z_n}{\Sigma}$,
+and $c_n=\dist{y_n}{z_n}{\Sigma}$, and $\tilde\theta_n=\modangle {x_n}{y_n}{z_n}$.
+Suppose that the sequences $a_n$ and $b_n$ are bounded away from zero;
+that is, $a_n>\epsilon$ and $b_n>\epsilon$ for a fixed $\epsilon>0$ and any $n$.
+Show that
+\[(a_n+b_n-c_n)\to 0\qquad\iff\qquad \tilde\theta_n\to \pi\]
+as $n\to\infty$
+\end{thm}
+
+\section{Formulations}
+
+Part \ref{SHORT.thm:comp:toponogov} of the following theorem is called the {}\emph{Toponogov comparison theorem} and sometimes the {}\emph{Alexandrov comparison theorem};
+it was proved by Paolo Pizzetti \cite{pizzetti} and rediscovered by Alexandr Alexandrov \cite{aleksandrov}; 
+generalizations were obtained by Victor Toponogov \cite{toponogov1957}, Mikhael Gromov, Yuri Burago and Grigory Perelman \cite{burago-gromov-perelman}.
+
+Part \ref{SHORT.thm:comp:cat} is called the {}\emph{Cartan--Hadamard theorem};
+it was proved by 
+Hans von Mangoldt \cite{mangoldt} and generalized by Elie Cartan \cite{cartan}, Jacques Hadamard \cite{hadamard},
+Herbert Busemann \cite{busemann},
+Willi Rinow \cite{rinow},
+Mikhael Gromov \cite[p.~119]{gromov-1987},
+Stephanie Alexander and Richard Bishop \cite{alexander-bishop1990}.
+
+Recall that a surface $\Sigma$ is called {}\emph{simply-connected} if any closed simple curve in $\Sigma$ bounds a disc.
+
+\begin{thm}{Comparison theorems}
+\label{thm:comp}
+\index{comparison theorem}
+Let $\Sigma$ be a proper smooth regular surface.
+
+\begin{subthm}{thm:comp:cat}
+If $\Sigma$ is simply-connected and has nonpositive Gauss curvature,
+ then 
+\[\measuredangle\hinge {x}{y}{z}\le\modangle xyz\]
+for any geodesic triangle $[xyz]$.
+\end{subthm}
+
+\begin{subthm}{thm:comp:toponogov}
+If $\Sigma$ has nonnegative Gauss curvature, then 
+ \[\measuredangle\hinge {x}{y}{z}\ge\modangle xyz\]
+for any geodesic triangle $[xyz]$.
+\end{subthm}
+
+\end{thm}
+
+The proof of part \ref{SHORT.thm:comp:cat} will be given at the end of Section~\ref{sec:nonpos-comp}.
+The proof of part \ref{SHORT.thm:comp:toponogov} will be finished in Section~\ref{sec:nonneg-comp}.
+
+Let us show that the statement \ref{SHORT.thm:comp:cat} does not hold without assuming that $\Sigma$ is simply-connected.
+Consider the hyperboloid
+\[\set{(x,y,z)\in\mathbb{R}^3}{x^2+y^2-z^2=1};\]
+it has negative Gauss curvature, but it is not simply-connected.
+The points $(1,0,0)$, $(-\tfrac{1}2, \tfrac{\sqrt{3} }2, 0)$, $(-\tfrac{1}2, -\tfrac{\sqrt{3} }2, 0)$
+form a triangle with all angles equal to $\pi$, but all model angles equal to $\tfrac{\pi}3$.
+
+Let us discuss the relationship between the Gauss--Bonnet formula and the comparison theorems.
+Suppose that a disc $\Delta$ is bounded by a geodesic triangle $[xyz]$ with internal angles $\alpha$, $\beta$ and $\gamma$.
+Then Gauss--Bonnet implies that 
+\[\alpha+\beta+\gamma-\pi=\iint_\Delta K;\]
+in particular both sides of the equation have the same sign.
+It follows that
+\begin{itemize}
+\item if $K_\Sigma\ge 0$ then $\alpha+\beta+\gamma\ge\pi$, and
+\item if $K_\Sigma\le 0$ then $\alpha+\beta+\gamma\le\pi$.
+\end{itemize}
+
+Now set 
+$\hat\alpha=\measuredangle\hinge {x}{y}{z}$,
+$\hat\beta=\measuredangle\hinge {y}{z}{x}$,
+and $\hat\gamma=\measuredangle\hinge {z}{x}{y}$.
+Since the angles of any plane triangle add up $\pi$, from the comparison theorems, we get that
+\begin{itemize}
+\item if $K_\Sigma\ge 0$ then $\hat\alpha+\hat\beta+\hat\gamma\ge\pi$, and
+\item if $K_\Sigma\le 0$ then $\hat\alpha+\hat\beta+\hat\gamma\le\pi$.
+\end{itemize}
+
+The triples of angles $\{ \alpha , \beta , \gamma \}$, $\{ \hat\alpha , \hat\beta , \hat\gamma \}$ are related by the identities:
+\begin{align*}
+\hat \alpha&=\min\{\,\alpha,2\cdot\pi-\alpha\,\},
+&
+\hat\beta &=\min\{\,\beta,2\cdot\pi-\beta\,\},
+&
+\hat\gamma&=\min\{\,\gamma,2\cdot\pi-\gamma\,\}.
+\end{align*}
+One can use them to see that despite the Gauss--Bonnet formula and the comparison theorems are closely related,
+this relationship is not straightforward.
+
+For example, suppose $K\ge 0$.
+Then the Gauss--Bonnet formula does not forbid the internal angles $\alpha$, $\beta$, and $\gamma$ to be simultaneously close to $2\cdot\pi$.
+But if $\alpha$, $\beta$, and $\gamma$ are each close to $2\cdot\pi$, then $\hat\alpha$, $\hat\beta$, and $\hat\gamma$ are close to $0$.
+The latter is impossible by the comparison theorem.
+
+The following exercise is a lemma from the note by Arseniy Akopyan and the first author \cite{akopyan-petrunin}.
+
+\begin{thm}{Exercise}\label{ex:diam-angle}
+Let $p$ and $q$ be points on a closed convex surface $\Sigma$ that lie at maximal intrinsic distance from each other;
+that is, $\dist{p}{q}\Sigma\z\ge\dist{x}{y}\Sigma$ for any $x,y\in \Sigma$.
+Show that 
+\[\measuredangle\hinge xpq\ge \tfrac\pi3\]
+for any point $x\in \Sigma\backslash\{p,q\}$.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:sum=<2pi}
+Let $\Sigma$ be a closed (or open) regular surface with nonnegative Gauss curvature.
+Show that 
+\[\modangle pxy+\modangle pyz+\modangle pzx\le2\cdot \pi.\]
+for any four distinct points $p,x,y,z$ in $\Sigma$.
+\end{thm}
+
+\section{Local comparisons}\label{sec:loc-comp}
+
+The following local version of the comparison theorem follows from the Rauch comparison (\ref{prop:rauch}).
+It will be used in the proof of the global version (\ref{thm:comp}).
+
+\begin{thm}{Theorem}\label{thm:loc-comp}
+The comparison theorem (\ref{thm:comp}) holds in a small neighborhood of any point.
+
+Moreover, let $\Sigma$ be a smooth regular surface without boundary. Then for any $p\in \Sigma$ there is $r>0$ such that if $\dist{p}{x}\Sigma<r$, then $\inj(x)_\Sigma>r$ and the following statements hold:
+
+
+\begin{subthm}{thm:loc-comp:cba}
+If $\Sigma$ has nonpositive Gauss curvature, then 
+\[\measuredangle\hinge {x}{y}{z}\le\modangle xyz\]
+for any geodesic triangle $[xyz]$ in $B(p,\tfrac r4)_\Sigma$.
+\end{subthm}
+
+\begin{subthm}{thm:loc-comp:cbb}
+If $\Sigma$ has nonnegative Gauss curvature, then 
+\[\measuredangle\hinge {x}{y}{z}\ge\modangle xyz\]
+for any geodesic triangle $[xyz]$ in $B(p,\tfrac r4)_\Sigma$.
+\end{subthm}
+
+\end{thm}
+
+\parit{Proof.}
+The existence of $r>0$ follows from \ref{prop:exp}.
+Let $[xyz]$ be a geodesic triangle in $B(p,\tfrac{r}4)$.
+
+Note that $y=\exp_x\vec v$ and $z=\exp_x\vec w$ for two vectors $\vec v,\vec w\in\T_x$ with
+\begin{align*}
+\measuredangle\hinge 0{\vec v}{\vec w}_{\T_x}&=\measuredangle\hinge xyz_\Sigma,
+\\
+|\vec v|_{\T_x}&=\dist{x}{y}\Sigma, 
+\\
+|\vec w|_{\T_x}&=\dist{x}{z}\Sigma;
+\end{align*}
+in particular, $|\vec v|, |\vec w|< \tfrac r2$.
+\parit{\ref{SHORT.thm:loc-comp:cbb}.}
+Consider the line segment $\tilde \gamma$ joining $\vec v$ to $\vec w$ in the tangent plane $\T_x$ and set $\gamma=\exp_x\circ\tilde \gamma$.
+By Rauch comparison (\ref{prop:rauch:K>=0}), we have
+\[\length\gamma\le \length \tilde \gamma.\]
+Since $\dist{\vec v}{\vec w}{\T_x}=\length\tilde \gamma$ and $\dist{y}{z}\Sigma\le \length\gamma$, we get 
+\[\dist{\vec v}{\vec w}{\T_x}\ge \dist{y}{z}\Sigma.\]
+By the angle monotonicity (\ref{lem:angle-monotonicity}), we obtain
+\[\modangle xzy\le\measuredangle\hinge 0{\vec v}{\vec w}_{\T_x},\]
+whence the result.
+
+\parit{\ref{SHORT.thm:loc-comp:cba}.}
+Consider a minimizing geodesic $\gamma$ joining $y$ to $z$ in $\Sigma$.
+Since $\dist{x}{y}{\Sigma},\dist{x}{z}{\Sigma}\z<\tfrac r2$, the triangle inequality implies that $\gamma$ lies in the $r$-neighborhood of $x$.
+In particular, $\log_x\circ\gamma$ is defined, and the curve
+$\tilde \gamma=\log_x\circ\gamma$ lies in a $r$-neighborhood of zero in $\T_x$ that corresponds to $\gamma$.
+Note that $\tilde\gamma$ connects $\vec v$ to $\vec w$ in $\T_x$.
+
+By Rauch comparison (\ref{prop:rauch:K=<0}), we have
+\[\length\gamma\ge \length \tilde \gamma.\]
+Since $\dist{\vec v}{\vec w}{\T_x}\le\length\tilde \gamma$ and $\dist{y}{z}{\Sigma}= \length\gamma$, we get 
+\[\dist{\vec v}{\vec w}{\T_x}\ge \dist{y}{z}\Sigma.\]
+By angle monotonicity (\ref{lem:angle-monotonicity}), we get
+\[\modangle xzy\ge\measuredangle\hinge 0{\vec v}{\vec w}_{\T_x}.\]
+whence the result.
+\qeds
+
+\section{Nonpositive curvature}\label{sec:nonpos-comp}
+
+\parit{Proof of \ref{thm:comp:cat}.}
+Sine $\Sigma$ is simply-connected, \ref{ex:unique-geod} implies that 
+\[\inj(p)_\Sigma=\infty\]
+for any $p\in\Sigma$.
+Therefore \ref{SHORT.thm:loc-comp:cba} implies \ref{thm:comp:cat}.
+\qeds
+
+\section{Nonnegative curvature}\label{sec:nonneg-comp}
+
+We will prove \ref{thm:comp:toponogov}, first assuming that $\Sigma$ is compact.
+The general case requires only minor modifications; they are indicated in Exercise \ref{ex:open-comparison} at the end of the section.
+The proof is taken from \cite{alexander-kapovitch-petrunin2027} and it is very close to the proof given by Urs Lang and Viktor Schroeder \cite{lang-schroeder}.
+
+\parit{Proof of \ref{thm:comp:toponogov} in the compact case.}\label{proof(thm:comp:toponogov)}
+Assume $\Sigma$ is compact. 
+From the local theorem (\ref{thm:loc-comp}), we get that there is $\epsilon>0$ such that the inequality 
+\[\measuredangle\hinge {x}{p}{q}\ge\modangle xpq.\]
+holds for any hinge $\hinge{x}{p}{q}$ with 
+$\dist{x}{p}\Sigma+\dist{x}{q}\Sigma<\epsilon$.
+The following lemma states that in this case the same holds true for any hinge $\hinge{x}{p}{q}$ such that $\dist{x}{p}\Sigma+\dist{x}{q}\Sigma<\tfrac32\cdot\epsilon$.
+Applying the key lemma (\ref{key-lem:globalization}) a few times we get that the comparison holds for an arbitrary hinge, which proves \mbox{\ref{thm:comp:toponogov}}.
+\qeds
+
+\begin{thm}{Key lemma}\label{key-lem:globalization} 
+Let $\Sigma$ be a proper smooth regular surface.
+Assume that the comparison
+\[\measuredangle\hinge x y z
+\ge\modangle x y z\eqlbl{eq:key-lem:globalization}\]
+holds for any hinge $\hinge x y z$ with 
+$\dist{x}{y}\Sigma+\dist{x}{z}\Sigma
+<
+\frac{2}{3}\cdot\ell$.
+Then the comparison \ref{eq:key-lem:globalization}
+holds for any hinge $\hinge x y z$ with $\dist{x}{y}\Sigma+\dist{x}{z}\Sigma<\ell$.
+\end{thm}
+
+\begin{wrapfigure}{r}{35mm}
+\centering
+\includegraphics{mppics/pic-2308}
+\end{wrapfigure}
+
+Given a hinge $\hinge x p q$ consider a triangle in the plane
+with angle $\measuredangle\hinge x p q$ and two adjacent sides $\dist{x}{p}\Sigma$ and $\dist{x}{q}\Sigma$.
+Let us denote by $\side \hinge x p q$ the third side of this triangle;
+it will be called the \index{model!side}\emph{model side} of the hinge.
+
+The next computational exercise plays a role in the following proof.
+
+\begin{thm}{Exercise}\label{ex:s-r}
+Suppose that hinges $\hinge xpq$ and $\hinge xpy$ have a common side $[x,p]$ and $[x,y]\subset [x,q]$.
+Show that 
+\[\frac{\dist{x}{p}{}+\dist{x}{q}{}-\side\hinge xpq}{\dist{x}{q}{}}
+\le
+\frac{\dist{x}{p}{}+\dist{x}{y}{}-\side\hinge xpy}{\dist{x}{y}{}}.\]
+\end{thm}
+
+\parit{Proof.} 
+By the angle monotonicity (\ref{lem:angle-monotonicity}), we have
+\[\measuredangle\hinge x p q\ge \modangle x p q\quad\iff\quad\side \hinge x p q
+\ge\dist{p}{q}\Sigma.\]
+Therefore it is sufficient to prove that
+\[\side \hinge x p q
+\ge\dist{p}{q}\Sigma.\eqlbl{eq:thm:=def-loc}\]
+for a given hinge $\hinge x p q$ with $\dist{x}{p}\Sigma+\dist{x}{q}\Sigma<\ell$.
+
+Let us describe a construction that produces a new hinge $\hinge{x'}p q$ for a given hinge $\hinge x p q$ such that 
+\[\tfrac{2}{3}\cdot\ell \le\dist{p}{x}\Sigma\z+\dist{x}{q}\Sigma< \ell.\]
+Assume $\dist{x}{q}\Sigma\ge\dist{x}{p}\Sigma$, otherwise switch the roles of $p$ and $q$ in the construction.
+Take $x'\in [x, q]$ such that 
+\[\dist{p}{x}\Sigma+3\cdot\dist{x}{x'}\Sigma
+=\tfrac{2}{3}\cdot\ell
+\eqlbl{3|xx'|}\]
+Choose a geodesic $[x', p]$ and consider the hinge $\hinge{x'}p q$ formed by $[x',p]$ and $[x',q]\subset [x,q]$.
+
+\begin{wrapfigure}{r}{32mm}
+\vskip0mm
+\centering
+\includegraphics{mppics/pic-2310}
+\end{wrapfigure}
+
+By the triangle inequality, we have 
+\[
+\dist{p}{x}\Sigma+\dist{x}{q}\Sigma\ge\dist{p}{x'}\Sigma+\dist{x'}{q}\Sigma.
+\eqlbl{eq:thm:=def-loc-fourstar}\]
+Let us show that
+\[\side \hinge x p q
+\ge\side \hinge{x'}p q
+\eqlbl{eq:thm:=def-loc-fivestar}\]
+
+By \ref{3|xx'|}, we have that 
+\[
+\begin{aligned}
+\dist{p}{x}{\Sigma}\z+\dist{x}{x'}{\Sigma}&<\tfrac{2}{3}\cdot\ell,
+\\
+\dist{p}{x'}{\Sigma}\z+\dist{x'}{x}{\Sigma}&<\tfrac{2}{3}\cdot\ell.
+\end{aligned}
+\]
+Therefore the assumption imply that 
+\[\begin{aligned}
+\measuredangle\hinge x p{x'}
+\ge\modangle x p{x'},
+\\
+\measuredangle\hinge {x'}p x
+\ge\modangle {x'}p x.
+  \end{aligned}
+\eqlbl{eq:thm:=def-loc-threestar}
+\]
+
+Consider the model triangle
+$[\tilde x\tilde x'\tilde p]\z=\modtrig xx'p$.
+Take $\tilde q$ on the extension of $[\tilde x,\tilde x']$ beyond $x'$ such that $\dist{\tilde x}{\tilde q}\Sigma=\dist{x}{q}\Sigma$ and therefore $\dist{\tilde x'}{\tilde q}\Sigma\z=\dist{x'}{q}\Sigma$.
+
+From \ref{eq:thm:=def-loc-threestar}, we get
+\[\measuredangle\hinge x p q
+=\measuredangle\hinge x p{x'}\ge\modangle x p{x'}.\]
+Therefore
+\[
+\side\hinge x q p
+\ge
+\dist{\tilde p}{\tilde q}{\mathbb{R}^2}.
+\]
+Further, since $\measuredangle\hinge{x'}p x+\measuredangle\hinge{x'}p q= \pi$,
+\ref{eq:thm:=def-loc-threestar} implies
+\[
+\pi
+-\modangle{x'}p x
+\ge
+\pi-\measuredangle\hinge{x'}p x
+\ge
+\measuredangle\hinge{x'}p q.
+\]
+Therefore
+\[\dist{\tilde p}{\tilde q}{\mathbb{R}^2}\ge\side \hinge{x'}q p \]
+and \ref{eq:thm:=def-loc-fivestar} follows.
+
+Set $x_0=x$; apply inductively the above construction to get a sequence of hinges $\hinge{x_n}p q$ with $x_{n+1}=x_n'$.
+By \ref{eq:thm:=def-loc-fivestar} and \ref{eq:thm:=def-loc-fourstar}, both sequences
+\[s_n=\side \hinge{x_n}pq\quad\text{and}\quad r_n=\dist{p}{x_n}\Sigma+\dist{x_n}{q}\Sigma\]
+are nonincreasing.
+
+The sequence $(x_n)$ might terminate at some $n$ only if $r_n< \tfrac{2}{3}\cdot\ell $.
+In this case, by the assumptions of the lemma, we have
+\[s_n=\side \hinge{x_n}p q\ge\dist{p}{q}\Sigma.\]
+Since the sequence $(s_n)$ is nonincreasing, we get
+\[\side \hinge{x}p q=s_0\ge s_n\ge\dist{p}{q}\Sigma;\]
+whence \ref{eq:thm:=def-loc} follows.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics{mppics/pic-2315}
+\end{figure}
+
+It remains to prove \ref{eq:thm:=def-loc} if the sequence $(x_n)$ does not terminate.
+By \ref{3|xx'|}, we have 
+\[
+\dist{x_n}{x_{n-1}}\Sigma
+\ge 
+\tfrac1{100}\cdot \ell.
+\eqlbl{eq:|x-x|><l}
+\]
+By \ref{eq:thm:=def-loc-fourstar}, $\dist{x_n}{p}{},\dist{x_n}{q}{}<
+\ell$ for any $n$.
+In case $x_{n+1}\in [x_n,q]$, apply \ref{ex:s-r} for the hinges $\hinge{x_n}pq$ and $\hinge{x_n}p{x_{n+1}}$.
+By \ref{eq:thm:=def-loc-threestar}, $\dist{p}{x_{n+1}}{}\le \side \hinge{x_n}{x_{n+1}}{p}$.
+Therefore
+\[r_n-s_n\le 100\cdot (r_n-r_{n+1})\eqlbl{eq:r-s<100(r-r)}\]
+In the case $x_{n+1}\in [x_n,p]$, inequality \ref{eq:r-s<100(r-r)} follows if one applies \ref{ex:s-r} for the hinges $\hinge{x_n}pq$ and $\hinge{x_n}{x_{n+1}}q$.
+
+The sequences $(r_n)$ and $(s_n)$ are nonincreasing and nonnegative.
+Therefore they have to converge.
+In particular $(r_n-r_{n+1})\to0$ as $n\to \infty$.
+Therefore \ref{eq:r-s<100(r-r)} implies that
+\[\lim_{n\to\infty}s_n=\lim_{n\to\infty}r_n.\]
+By the triangle inequality, $r_n\ge \dist{p}{q}\Sigma$ for any $n$.
+Since $s_n$ is nonincreasing, we get
+\[\side \hinge{x}p q=s_0\ge \lim_{n\to\infty}s_n=\lim_{n\to\infty}r_n\ge \dist{p}{q}\Sigma\]
+which proves \ref{eq:thm:=def-loc} in the remaining case.
+\qeds
+
+\begin{thm}{Exercise}\label{ex:open-comparison}
+Let $\Sigma$ be an open surface with nonnegative Gauss curvature.
+Given $p\in\Sigma$, denote by $R_p$ 
+(the {}\emph{comparison radius} at $p$) 
+the maximal value (possibly $\infty$) such that the comparison 
+\[\measuredangle\hinge x p y
+\ge\modangle x p y\]
+holds for any hinge $\hinge x p y$ with $\dist{p}{x}\Sigma+\dist{x}{y}\Sigma<R_p$.
+
+\begin{subthm}{ex:open-comparison:positive}
+Show that for any compact subset $K\subset \Sigma$, there is $\epsilon>0$ such that $R_p>\epsilon$ for any $p\in K$.
+\end{subthm}
+
+\begin{subthm}{ex:open-comparison:almost-min}
+Use part \ref{SHORT.ex:open-comparison:positive} to show that 
+there is a point $p\in\Sigma$ such that 
+\[R_q>(1-\tfrac1{100})\cdot R_p,\]
+for any $q\in B(p,100\cdot R_p)_\Sigma$.
+\end{subthm}
+
+\begin{subthm}{ex:open-comparison:proof}
+Use \ref{SHORT.ex:open-comparison:almost-min} to extend the proof of \ref{thm:comp:toponogov} (page \pageref{proof(thm:comp:toponogov)}) to open surfaces. 
+(Show that $R_p=\infty$ for any $p\in\Sigma$.) 
+\end{subthm}
+
+\end{thm}
+
+\begin{wrapfigure}{r}{30 mm}
+\vskip4mm
+\centering
+\includegraphics{mppics/pic-471}
+\end{wrapfigure}
+
+\begin{thm}{Advanced exercise}\label{ex:convex-polyhon+self-intersections}
+Let $\Sigma$ be a closed smooth regular surface with nonnegative Gauss curvature.
+The following sketch shows that a closed geodesic $\gamma$ on $\Sigma$ cannot have self-intersections as shown on the diagram;
+in other words, $\gamma$ cannot cut $\Sigma$ into 3 monogons, one quadrangle, and one pentagon. 
+
+Make a complete proof from it.
+
+Arguing by contradiction, suppose that such geodesic exists;
+assume that arcs and angles are labeled as on the left diagram.
+
+\begin{figure}[!ht]
+\begin{minipage}{.38\textwidth}
+\centering
+\includegraphics{mppics/pic-472}
+\end{minipage}\hfill
+\begin{minipage}{.58\textwidth}
+\centering
+\includegraphics{mppics/pic-473}
+\end{minipage}
+\end{figure}
+
+\begin{subthm}{ex:convex-polyhon+self-intersections:angles}
+Apply Gauss--Bonnet formula to show that
+\[2\cdot\alpha<\beta+\gamma\]
+and 
+\[2\cdot\beta+2\cdot \gamma<\pi+\alpha.\]
+Conclude that $\alpha <\tfrac \pi 3$.
+\end{subthm}
+
+\begin{subthm}{ex:convex-polyhon}
+Consider the part of the geodesic $\gamma$ without the arc~$a$.
+It cuts from $\Sigma$ a pentagon $\Delta$ with sides and angles as shown on the diagram. 
+Show that there is a plane pentagon with convex sides of the same length and angles at most as big as the corresponding angles of $\Delta$.
+\end{subthm}
+
+\begin{subthm}{ex:self-intersections-hard}
+Arrive to a contradiction using \ref{SHORT.ex:convex-polyhon+self-intersections:angles} and \ref{SHORT.ex:convex-polyhon}. 
+\end{subthm}
+
+\end{thm}
+
+\section{Alexandrov's lemma}
+\index{Alexandrov's lemma}
+
+A reformulation of the following lemma in plane geometry will be used in the next section to produce a few equivalent reformulations of the comparison theorems.
+
+\begin{thm}{Lemma}
+\label{lem:alex}
+Assume $[pxyz]$ and $[p'x'y'z']$ be two quadrilaterals in the plane with equal corresponding sides.
+Assume that the sides $[x',y']$ and $[y',z']$ extend each other; that is, $y'$ lies on the line segment $[x',z']$.
+Then the following expressions have the same signs:
+\begin{enumerate}[(i)]
+ \item $|p-y|-|p'-y'|$;
+ \item $\measuredangle\hinge xpy-\measuredangle\hinge {x'}{p'}{y'}$;
+ \item $\pi-\measuredangle\hinge ypx-\measuredangle\hinge ypz$;
+\end{enumerate}
+\end{thm}
+
+\parit{Proof.} 
+Take 
+a point $\bar z$ on the extension of 
+$[x,y]$ beyond $y$ so that $\dist{y}{\bar z}{}=\dist{y}{z}{}$ (and therefore $\dist{x}{\bar z}{}=\dist{x'}{z'}{}$). 
+ 
+\begin{figure}[!ht]
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-50}
+\vskip-0mm
+\end{figure}
+
+From angle monotonicity (\ref{lem:angle-monotonicity}), 
+the following expressions have the same sign:
+\begin{enumerate}[(i)]
+\item $|p-y|-|p'-y'|$;
+\item $\measuredangle\hinge{x}{y}{p}-\measuredangle\hinge{x'}{y'}{p'}=\measuredangle\hinge{x}{\bar z}{p}-\measuredangle\hinge{x'}{z'}{p'}$;
+\item $|p-\bar z|-|p'-z'| = | p - \bar z | - | p-z | $;
+\item $\measuredangle\hinge{y}{\bar z}{p}-\measuredangle\hinge{y}{z}{p}$;
+\end{enumerate}
+The statement follows since
+\[\measuredangle\hinge{y'}{z'}{p'}+\measuredangle\hinge{y'}{x'}{p'}=\pi\]
+and
+\[\measuredangle\hinge{y}{\bar z}{p}+\measuredangle\hinge{y}{x}{p}=\pi.\]
+\qedsf
+
+\section{Reformulations}
+
+In this section we formulate conditions equivalent to the conclusion of the comparison theorem (\ref{thm:comp}).
+
+For any triangle $[xyz]$ in a surface $\Sigma$, and its model trianle $[\tilde x \tilde y \tilde z]$, there is a natural map $p\mapsto \tilde p$ that isometrically sends the geodesics $[x,y]$, $[y,z]$, $[z,x]$ to the line segments $[\tilde x,\tilde y ]$, $[\tilde y , \tilde z]$, $[ \tilde z , \tilde x ]$, respectively.
+The triangle $[xyz]$ is called \index{fat triangle}\emph{fat} (\index{thin triangle}\emph{thin})
+if the inequality
+\[\dist{p}{q}{\Sigma}\ge |\tilde p- \tilde q|_{\mathbb{R}^2}\qquad \text{(or, respectively,}\quad \dist{p}{q}{\Sigma}\le |\tilde p- \tilde q|_{\mathbb{R}^2})\]
+holds for any two points $p$ and $q$ on the sides of $[xyz]$.
+
+\begin{thm}{Proposition}\label{prop:comp-reformulations}
+Let $\Sigma$ be a proper smooth regular surface.
+Then the following three conditions are equivalent:
+
+\begin{subthm}{mang>angk}
+For any geodesic triangle $[xyz]$ in $\Sigma$ we have
+ \[\measuredangle\hinge {x}{y}{z}\ge\modangle xyz.\]
+\end{subthm}
+
+\begin{subthm}{angk>angk} For any geodesic triangle $[pxz]$ in $\Sigma$ and $y$ on the side $[x,z]$ we have
+ \[\modangle xpy \ge \modangle xpz.\]
+ 
+\end{subthm}
+
+\begin{subthm}{fat}
+ Any geodesic triangle in $\Sigma$ is fat.
+\end{subthm}
+
+\medskip
+
+Similarly, following three conditions are equivalent:
+
+\begin{subthmA}{mang<angk}
+For any geodesic triangle $[xyz]$ in $\Sigma$ we have
+ \[\measuredangle\hinge {x}{y}{z}\le\modangle xyz.\]
+\end{subthmA}
+
+\begin{subthmA}{angk<angk} For any geodesic triangle $[pxz]$ in $\Sigma$ and $y$ on the side $[x,z]$ we have
+ \[\modangle xpy \le \modangle xpz.\]
+\end{subthmA}
+
+\begin{subthmA}{thin}
+Any geodesic triangle in $\Sigma$ is thin.
+\end{subthmA}
+
+\end{thm}
+
+In the proof we will use the following translation of the Alexandrov lemma to the language of comparison triangles and angles.
+
+\begin{wrapfigure}{r}{25mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-2305}
+\end{wrapfigure}
+
+\begin{thm}{Reformulation of Alexandrov lemma}\label{lem:alex-reformulation}\\
+Let $[pxz]$ be a triangle in a surface $\Sigma$ and 
+ $y$ a point on the side $[x,z]$.
+Consider its model triangle $[\tilde p\tilde x\tilde z]\z=\tilde\triangle pxz$ and let $\tilde y$ be the corresponding point on the side $[\tilde x,\tilde z]$.
+Then the following expressions have the same signs:
+\begin{enumerate}[(i)]
+ \item $\dist{p}{y}\Sigma-\dist{\tilde p}{\tilde y}{\mathbb{R}^2}$;
+ \item $\modangle xpy-\modangle {x}{p}{z}$;
+ \item $\pi-\modangle ypx-\modangle ypz$;
+\end{enumerate}
+\end{thm}
+
+\parit{Proof or \ref{prop:comp-reformulations}.}
+We will prove the implications \ref{SHORT.mang>angk}$\Rightarrow$\ref{SHORT.angk>angk}$\Rightarrow$\ref{SHORT.fat}$\Rightarrow$\ref{SHORT.mang>angk}.
+The implications \ref{SHORT.mang<angk}$\Rightarrow$\ref{SHORT.angk<angk}$\Rightarrow$\ref{SHORT.thin}$\Rightarrow$\ref{SHORT.mang<angk} can be proved in the same way, but with the reverse inequalities.
+
+\parit{\ref{SHORT.mang>angk}$\Rightarrow$\ref{SHORT.angk>angk}.}
+Note that $\measuredangle\hinge ypx+\measuredangle\hinge ypz=\pi$.
+By \ref{SHORT.mang>angk}, 
+\[\modangle ypx+\modangle ypz\le \pi.\]
+It remains to apply Alexandrov's lemma (\ref{lem:alex-reformulation}).
+
+\parit{\ref{SHORT.angk>angk}$\Rightarrow$\ref{SHORT.fat}.}
+Applying \ref{SHORT.angk>angk} twice, first for $y\in [x,z]$ and then for $w\in [p,x]$, we get that
+\[\modangle xwy \ge \modangle xpy \ge \modangle xpz\]
+and therefore
+\[\dist{w}{y}\Sigma\ge \dist{\tilde w}{\tilde y}{\mathbb{R}^2},\]
+where $\tilde w$ and $\tilde y$ are the points corresponding to $w$ and $y$ points on the sides of the model triangle. 
+
+\parit{\ref{SHORT.fat}$\Rightarrow$\ref{SHORT.mang>angk}.}
+Since the triangle is fat, we have 
+\[\modangle xwy \ge \modangle xpz\]
+for any $w\in \left]xp\right]$ and $y\in \left]xz\right]$.
+Note that $\modangle xwy\to \measuredangle\hinge xpz$ as $w,y\to x$.
+Whence the implication follows.
+\qeds
+
+\begin{thm}{Exercise}\label{ex:geod-convexity}
+Let $\Sigma$ be a proper smooth regular surface, 
+ $\gamma$ a unit-speed geodesic in $\Sigma$, and $p\in\Sigma$.
+
+Consider the function
+\[h(t)=\dist{p}{\gamma(t)}\Sigma^2-t^2.\]
+
+\begin{subthm}{}
+Show that if $\Sigma$ is simply-connected and the Gauss curvature of $\Sigma$ is nonpositive, then the function $h$ is convex.
+\end{subthm}
+
+\begin{subthm}{} Show that if the Gauss curvature of $\Sigma$ is nonnegative, then the function $h$ is concave.
+\end{subthm}
+
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:midpoints}
+Let $\bar x$ and $\bar y$ be the midpoints of minimizing geodesics $[p,x]$ and $[p,y]$ in an open smooth regular surface $\Sigma$.
+
+\begin{subthm}{}
+ Show that if $\Sigma$ is simply-connected and has nonpositive Gauss curvature, then 
+ \[2\cdot \dist{\bar x}{\bar y}\Sigma\le \dist{x}{y}\Sigma.\]
+ \end{subthm}
+ 
+\begin{subthm}{} Show that if the Gauss curvature of $\Sigma$ is nonnegative, then 
+ \[2\cdot \dist{\bar x}{\bar y}\Sigma\ge \dist{x}{y}\Sigma.\]
+\end{subthm}
+
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:convex-dist}
+Assume $\gamma_1$ and $\gamma_2$ are two geodesics in an open smooth regular simply-connected surface $\Sigma$ with nonpositive Gauss curvature.
+Show that the function
+\[h(t)=\dist{\gamma_1(t)}{\gamma_2(t)}\Sigma\]
+is convex.
+\end{thm}
+
+\begin{thm}{Advanced exercise}\label{ex:dist-to-bry}
+Suppose that a smooth curve $\delta$ bounds a convex disc $\Delta$ in a proper smooth surface $\Sigma$;
+that is, for any two points $x,y\in\Delta$, any shortest path $[x,y]_\Sigma$ lies in $\Delta$.
+
+Denote by $f\:\Sigma\to\mathbb{R}$ the intrinsic distance function to $\delta$;
+that is, 
+\[f(x)=\inf_{y\in\delta}\{\,\dist{x}{y}\Sigma\,\}.\]
+
+Show that
+
+\begin{subthm}{ex:dist-to-bry:-}
+If $\Sigma$ is simply-connected and $K_\Sigma\le 0$, then the restriction of $f$ to the complement of $\Delta$ is convex;
+that is, for any geodesic $\gamma$ in $\Sigma\backslash\Delta$ the function $t\mapsto f\circ\gamma(t)$ is convex.
+\end{subthm}
+
+\begin{subthm}{ex:dist-to-bry:+}
+If $K_\Sigma\ge 0$, then the restriction of $f$ to $\Delta$ is concave;
+that is, for any geodesic $\gamma$ in $\Delta$ the function $t\mapsto f\circ\gamma(t)$ is concave.
+\end{subthm}
+
+\end{thm}
+
+\section{Busemann functions} 
+
+A unit-speed geodesic $\lambda\:[0,\infty)\to \spc{X}$ is called a \index{half-line}\emph{half-line} if it is minimizing on each interval $[a,b]\subset [0,\infty)$.
+
+\begin{thm}{Proposition}\label{prop:busemann}
+Suppose that $\lambda\:[0,\infty)\to \Sigma$ is a half-line in a smooth regular surface $\Sigma$. 
+Then the function 
+\[\bus_\lambda(x)=\lim_{t\to\infty}\dist{\lambda(t)}{x}{\Sigma}- t\eqlbl{eq:def:busemann*}\]
+is defined.
+
+Moreover,
+
+\begin{subthm}{prop:busemann:all}
+$\bus_\lambda$ is a $1$-Lipschitz function and
+\[\bus_\lambda\circ\lambda(t)+t=0\] 
+for any $t$.
+\end{subthm}
+
+\begin{subthm}{prop:busemann-}
+If $\Sigma$ is an open simply-connected surface with nonpositive Gauss curvature, then $\bus_\lambda$ is convex;
+that is, for any geodesic $\alpha$ the real-to-real function 
+$t\mapsto \bus_\lambda\circ\alpha(t)$ is convex.
+\end{subthm}
+
+\begin{subthm}{prop:busemann+}
+If $\Sigma$ is an open surface with nonnegative Gauss curvature, then $\bus_\lambda$ is concave;
+that is, for any geodesic $\alpha$ the real-to-real function 
+$t\z\mapsto \bus_\lambda\circ\alpha(t)$ is concave.
+\end{subthm}
+
+\end{thm}
+
+The function $\bus_\lambda\:\Sigma\z\to \mathbb{R}$ as in the proposition is called the
+\index{Busemann function}\emph{Busemann function associated to $\lambda$}.
+Intuitively the function $\bus_\lambda$ can be described as a distance function to the ideal point at infinity at the end of the half-line $\lambda$.
+
+\parit{Proof.}
+By the triangle inequality, the function 
+\[t\mapsto\dist{\lambda(t)}{x}{}- t\] is nonincreasing in $t$. 
+Also by the triangle inequality,
+\[\dist{\lambda(t)}{x}{\Sigma}- t\ge-\dist{\lambda(0)}{x}{};\]
+that is, for each $x$, the values $\dist{\lambda(t)}{x}{\Sigma}- t$ are bounded below.
+Thus the limit in \ref{eq:def:busemann*} is defined.
+
+Observe that each function $x\mapsto \dist{\lambda(t)}{x}{\Sigma}- t$ is 1-Lipschitz.
+Therefore its limit $x\mapsto\bus_\lambda(x)$ is 1-Lipschitz as well.
+The second part of \ref{SHORT.prop:busemann:all} is evident, since for $s \geq t$, we have $| \gamma (s) - \gamma (t) |_{\Sigma} = s-t$.
+
+It remains to prove the last two statements.
+Choose a geodesic~$\alpha$.
+Given $t\ge 0$, consider the function 
+\[h_t(s)=\dist{\lambda(t)}{\alpha(s)}{\Sigma}^2-s^2.\]
+
+Observe that for any fixed $x\in\Sigma$, we have $\tfrac{\dist{\lambda(t)}{x}{}}t\to 1$ as $t\to\infty$.
+Therefore
+\begin{align*}
+\bus_\lambda\circ\alpha(s)
+&=
+\lim_{t\to\infty}\left(\frac{| \lambda (t) - \alpha (s) |_{\Sigma}^2 - s^2 }{t} -t\right)=
+\\
+&=
+\lim_{t\to\infty}\left(\frac{h_t(s)}{t} -t\right).
+\end{align*}
+According to \ref{ex:geod-convexity}, the function 
+$s\mapsto h_t(s)$ is convex or concave, assuming the conditions in \ref{SHORT.prop:busemann-} or \ref{SHORT.prop:busemann+} respectively.
+So is the function
+\[s \mapsto \frac{h_t(s)}{t} -t \]
+for every $t$. Since pointwise limits of convex or concave functions are respectively convex or concave, \ref{SHORT.prop:busemann-} and \ref{SHORT.prop:busemann+} follow.
+\qeds
+
+\begin{thm}{Exercise}\label{ex:half-line}
+Let $\Sigma$ be an open surface and $p\in\Sigma$.
+
+\begin{subthm}{ex:half-line:exist}
+Show that there is a half-line $\lambda$ in $\Sigma$ that starts at $p$.
+
+Moreover, if $K\ni p$ is a noncompact closed convex subset of $\Sigma$, then there is a half-line of $\Sigma$ that starts at $p$ and runs in $K$.
+\end{subthm}
+
+\begin{subthm}{ex:half-line:suplevel}
+Suppose $\Sigma$ has nonnegative Gauss curvature at any point.
+Consider the function
+\[f(x)=\inf_\lambda\bus_\lambda(x),\]
+where the greatest lower bound is taken among all half-lines $\lambda$ that start at $p$.
+Show that $f$ is a concave function and its suplevel sets 
+\[S_c=\set{x\in\Sigma}{f(x)\ge c}\] 
+are compact for any $c\in\mathbb{R}$.
+\end{subthm}
+
+\begin{subthm}{ex:half-line:soul}
+Let $s=\max\set{f(x)}{x\in\Sigma}$.
+Show that the set $S_s$ is either one-point, a geodesic arc or a closed geodesic.
+Show that all these possibilities can occur.
+\end{subthm}
+
+\end{thm}
+
+\section{Line splitting theorem}
+
+Let $\Sigma$ be a smooth regular surface.
+A unit-speed geodesic $\lambda\:\mathbb{R}\to\Sigma$ is called a \index{line}\emph{line} if it is length-minimizing on each interval $[a,b]\subset \mathbb{R}$.
+
+\begin{thm}{Line splitting theorem}\label{thm:splitting}
+Let $\Sigma$ be an open smooth regular surface with nonnegative Gauss curvature
+and $\lambda$ be a line in $\Sigma$. 
+Then $\Sigma$ admits an intrinsic isometry to the Euclidean plane or a circular cylinder $\set{(x,y,z)\in \mathbb{R}^2}{x^2+y^2=r^2}$ for some $r>0$.
+
+In particular, $\Sigma$ has zero Gauss curvature at every point.
+\end{thm}
+
+This theorem was proved by Stefan Cohn-Vossen \cite[Satz 5 in][]{convossen}
+and it has a sequence of variations in differential geometry:
+\begin{itemize}
+ \item Victor Toponogov \cite{toponogov-globalization+splitting} proved a version of the splitting theorem for Riemannian manifolds with nonnegative sectional curvature;
+ \item Jeff Cheeger and Detlef Gromoll \cite{cheeger-gromoll-split} generalized it further to Riemannian manifolds with nonnegative Ricci curvature;
+ \item Jost-Hinrich Eshenburg \cite{eshenburg-split} proved a splitting theorem for space-time with nonnegative Ricci curvature in timelike directions.
+\end{itemize}
+
+\parit{Proof.} 
+Consider two Busemann functions $\bus_+$ and $\bus_-$ associated with half-lines $\lambda:[0,\infty)\to \Sigma$ and $\lambda:(-\infty,0]\to \Sigma$; that is,
+\[
+\bus_\pm(x)
+=
+\lim_{t\to\infty}\dist{\lambda(\pm t)}{x}{\Sigma}- t.
+\]
+
+\parit{Step 1.}
+Let us show and use that
+\[
+\bus_+(x)+\bus_-(x)= 0
+\eqlbl{eq:bus+-=0}
+\]
+for any $x\in \Sigma$.
+
+Fix $x\in \Sigma$.
+Since $\lambda$ is a line, the triangle inequality implies that
+\begin{align*}
+\dist{\lambda(t)}{x}{\Sigma}+\dist{\lambda(- t)}{x}{\Sigma}
+&\ge \dist{\lambda(t)}{\lambda(-t)}{\Sigma}=
+\\
+&=2\cdot t.
+\end{align*}
+Passing to the limit as $t\to\infty$, we get
+\[\bus_+(x)+\bus_-(x)\ge0.\]
+
+On the other hand, by \ref{ex:geod-convexity}, the function 
+$h(t)=\dist{\lambda(t)}{x}\Sigma^2-t^2$ 
+is concave.
+In particular, 
+\[\dist{\lambda(t)}{x}\Sigma\le \sqrt{t^2+at+b}\]
+for some constants $a,b\in\mathbb{R}$. 
+Passing to the limit as $t\to\pm\infty$, we get \[\bus_+(x)+\bus_-(x)\le0;\]
+whence \ref{eq:bus+-=0} follows.
+
+\parit{Conclusions.}
+According to \ref{prop:busemann}, 
+both functions $\bus_\pm$ are concave and $\bus_\pm\circ\lambda(t)=\mp t$ for any~$t$.
+By \ref{eq:bus+-=0} both functions $\bus_\pm$ are affine;
+that is, they are convex and concave at the same time.
+It follows that the differential of $\bus_\pm$ is defined at any point $x\in\Sigma$;
+that is, there is a linear function $\T_x\to\mathbb{R}$ that is defined by
+$\vec v\mapsto D_{\vec v}\bus_\pm$
+for any tangent vector $\vec v \in \T_x$.
+
+Denote by $\vec u$ the gradient vector field of $\bus_-$;
+that is, $\vec u$ is a tangent vector field such that for any tangent field $\vec v$ the following identity holds
+\[\langle\vec u,\vec v\rangle=D_{\vec v}(\bus_-).\]
+
+\parit{Step 2.}
+Let us show that, the surface $\Sigma$ can be subdivided into lines that run in the direction of $\vec u$.
+
+Fix a point $x$.
+Given a real value $a$ choose a shortest path $[x,\lambda(a)]$;
+denote by $\vec w^a\in\T_x$ the unit vector in the direction of the geodesic $[x,\lambda(a)]$. 
+Since $|\vec w^a|=1$ and $\bus_-$ is affine, we get that 
+\begin{align*}
+|\vec u|&\ge \limsup_{a\to\infty}\langle\vec u,\vec w^a\rangle =
+\\
+&=\limsup_{a\to\infty} D_{\vec w^a}\bus_-=
+\\
+&=
+\limsup_{a\to\infty}\frac{\bus_-\circ\lambda(a)-\bus_-(x)}{\dist{x}{\lambda(a)}\Sigma}=
+\\
+&=\limsup_{a\to\infty} \frac{a-\bus_-(x)}{a}=
+\\
+&=1.
+\end{align*}
+On the other hand, since $\bus_-$ is $1$-Lipschitz, we have $|\vec u|\le 1$.
+Whence 
+\[|\vec u|\equiv 1
+\quad\text{and}\quad \lim_{a\to\infty}\langle\vec u,\vec w^a\rangle=1.\]
+It follows that
+\begin{align*}
+\lim_{a\to\infty}\measuredangle(\vec u,\vec w^a)&=0;
+\intertext{analogously, we get}
+\lim_{a\to-\infty}\measuredangle(\vec u,\vec w^a)&=\pi.
+\end{align*}
+
+Set $b=\bus_-(x)$.
+Consider a unit-speed geodesic $\zeta$
+such that $\zeta'(b)\z=\vec u(x)$.
+Since $\bus_-$ is affine, we have that $\bus_-\circ\zeta(t)=t$ for any $t$.
+Since $\zeta$ is a unit-speed geodesic and $\bus_-$ is 1-Lipschitz, we get
+\begin{align*}
+|t_1-t_0|&\ge\dist{\zeta(t_1)}{\zeta(t_0)}\Sigma\ge
+\\
+&\ge |\bus\circ\lambda(t_1)-\bus\circ\lambda(t_0)|=
+\\
+&=|t_1-t_0|.
+\end{align*}
+Whence $\zeta$ is a line for any $x$.
+Moreover $\zeta$ always runs in the direction of $\vec u$.
+
+\parit{Step 3.}
+Let us show that the distances between points on two lines in the direction of $\vec u$ behave the same way as the distances between parallel lines in the Euclidean plane; here is a precise formulation:
+
+\begin{clm}{}\label{clm:parallel}
+Let $\xi$ and $\zeta$ be two lines in $\Sigma$ that run in the direction of $\vec u$.
+Suppose that $\xi$ and $\zeta$ are parametrized so that $\bus_-\circ \xi(t)=\bus_-\circ \zeta(t)=t$ for any $t$;
+further set $x_0=\xi(0)$, $z_0=\zeta(0)$, $x_1=\xi(s)$, $z_1=\zeta(t)$ for some $s,t$. 
+Then
+\[\dist{x_1}{z_1}\Sigma^2=\dist{x_0}{z_0}\Sigma^2+(s-t)^2.\]
+\end{clm}
+
+Given $x\in \Sigma$, 
+let $t\to\delta^x_a(t)$ be the parametrization of $[x,\lambda(a)]$ by arc-length starting from $x$.
+Since $\measuredangle(\vec u,\vec w^a)\to 0$ as $a\to\infty$, we get that
+\[\delta^x_a(t)\to\zeta(b+t)\quad\text{as}\quad a\to\infty\]
+for any fixed $t\ge0$.
+
+Analogously, since $\measuredangle(\vec u,\vec w^a)\to \pi$ as $a\to-\infty$, and therefore 
+\[\delta^x_a(t)\to\zeta(b-t)\quad\text{as}\quad a\to-\infty\]
+for any fixed $t\ge0$.
+
+Assume that $s,t\ge 0$, then
+\begin{align*}
+x_1&=\lim_{a\to\infty}\delta^{x_0}_a(s),
+&
+z_1&=\lim_{a\to\infty}\delta^{z_0}_a(t).
+\end{align*}
+
+Recall that the triangle $[x_0\,\gamma(a)\,z_0]$ is fat (\ref{fat}).
+Therefore we get a lower bound for the distance
+$\dist{\delta^{x_0}_a(s)}{\delta^{z_0}_a(t)}\Sigma$.
+Note that if $a$ is large, then the two long sides of the triangle are close to $a$.
+Straightforward computations show that passing to the limit as $a\to \infty$, we get
+\[\dist{x_1}{z_1}\Sigma^2\ge\dist{x_0}{z_0}\Sigma^2+(s-t)^2.\]
+
+\begin{figure}
+\centering
+\includegraphics{mppics/pic-1775}
+\end{figure}
+
+Now let us swap ${x_0}$ with $x_1$ and ${z_0}$ with $z_1$,
+and repeat the argument above for $a\to-\infty$.
+Note that the two longer sides of the triangle are close to $s-a$ and $t-a$.
+Therefore we get the opposite inequality
+\[\dist{x_1}{z_1}\Sigma^2\le\dist{x_0}{z_0}\Sigma^2+(s-t)^2.\]
+
+Whence 
+\[\dist{x_1}{z_1}\Sigma^2=\dist{x_0}{z_0}\Sigma^2+(s-t)^2.\eqlbl{ex:|x-y|=|x-y|}\]
+if $s,t\ge0$.
+The same argument proves \ref{ex:|x-y|=|x-y|} if $s,t\le 0$.
+Applying it a couple of times for $s_1=t_1\ge 0$ and $s_2,t_2\le 0$, we get that \ref{ex:|x-y|=|x-y|} holds 
+for $s=s_1+s_2$ and $t=t_1+t_2$.
+Whence \ref{clm:parallel} follows for any pair $s$ and~$t$.
+
+\parit{Final step.}
+Note that since $\bus_-$ is affine, the level set 
+\[L=\set{x\in\Sigma}{\bus_-(x)=0}\]
+is closed \index{totally convex/geodesic}\emph{totally convex} and {}\emph{geodesic};
+that is, if a geodesic $\alpha$ has two common points with $L$, then $\alpha$ lies in $L$.
+It follows that $L$ is either closed or both-sides-infinite geodesic.
+
+Choose an arc-length parametrization $v\mapsto\gamma(v)$ of $L$ by a circle (or a line).
+Denote by $\lambda^v$ the line thru $\gamma(v)$ in the direction of $\vec u$ with the parametrization as above: that is, $\bus_-\circ\lambda^v(u)=u$ for any $u$ and $v$.
+According to \ref{clm:parallel}, $(u,v)\mapsto \lambda^v(u)$ is an intrinsic isometry from a circular cylinder (or, respectively, the Euclidean plane) to $\Sigma$.
+\qeds
+
+\begin{thm}{Exercise}\label{ex:line+half-line}
+Let $\Sigma$ be an open smooth surface with nonnegative Gauss curvature.
+Suppose that $\Sigma$ has a line and a half-line that meet at exactly one point.
+Show that $\Sigma$ admits an intrinsic isometry to the Euclidean plane.
+\end{thm}
+

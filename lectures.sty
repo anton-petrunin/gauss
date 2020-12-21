@@ -1,0 +1,264 @@
+\usepackage{amssymb, amsfonts, amsthm}
+\usepackage[intlimits]{amsmath}
+\usepackage{tabu}
+\usepackage{enumerate}
+\usepackage{bm}%bold math\bm
+\usepackage{gensymb}% provides \degree
+\usepackage{color}
+\usepackage{pifont}
+\usepackage[makeroom]{cancel}%crossing formulas with \cancel
+
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+
+
+\usepackage[colorlinks=true,
+citecolor=black,
+linkcolor=black,
+anchorcolor=black,
+filecolor=black,
+menucolor=black,
+urlcolor=black%
+]{hyperref}
+\usepackage{caption}%provides \caption*
+\usepackage[russian,german,english]{babel}
+\usepackage{epigraph}
+\usepackage{framed}
+\usepackage{geometry}%page/text size and 
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+
+\usepackage{epsfig,lpic,wrapfig}
+\usepackage{multicol}
+
+\usepackage{titling}
+\newcommand{\subtitle}[1]{%
+\posttitle{%
+\par\end{center}
+\begin{center}\large#1\end{center}
+\vskip0.5em}%
+}
+
+\usepackage[nottoc]{tocbibind}%adds index to ToC
+
+\csname @openrightfalse\endcsname %chapters can start from left page
+
+\usepackage[
+sorting=debug,
+bibencoding=auto,
+backend=biber,
+maxnames=10,
+%babel=other,
+%autolang=other,
+doi=false,
+url=false,
+style=numeric-comp,
+isbn=false]{biblatex}
+\usepackage{csquotes}
+
+\AtBeginDocument{%removes the last "and" in author field
+    \renewcommand*{\finalnamedelim}{,\space}
+}
+
+
+\AtEveryBibitem{\clearlist{language}}
+\AtEveryBibitem{\clearlist{note}}
+\renewbibmacro{in:}{}
+\renewcommand*{\bibfont}{\scriptsize}
+
+\addbibresource{library.bib}
+
+\DeclareFieldFormat{postnote}{#1}
+\DeclareFieldFormat{multipostnote}{#1}
+\DeclareFieldFormat{pages}{#1}
+%removes p. in the cites
+
+\usepackage{titletoc}% http://ctan.org/pkg/titletoc
+\titlecontents*{section}[.5em]
+  {\small}
+  {\thecontentslabel.~{}}
+  {}
+  { \textbf{\thecontentspage}}
+  [; ][.]
+
+% Fix latex
+\def\smallskip{\vskip\smallskipamount}
+\def\medskip{\vskip\medskipamount}
+\def\bigskip{\vskip\bigskipamount}
+
+%RUSSIAN STYLE
+\def\emptyset{\varnothing}
+\def\cosh{\operatorname{ch}}
+\def\sinh{\operatorname{sh}}
+\def\tanh{\operatorname{th}}
+\def\tg{\operatorname{tg}}
+\def\limsup{\varlimsup}
+\def\liminf{\varliminf}
+
+%MY STYLE
+\def\parit#1{\medskip\noindent{\it #1}}
+\def\parbf#1{\medskip\noindent{\bf #1}}
+\def\qeds{\qed\par\medskip}%END OF PROOF
+\def\qedsf{\vskip-6mm\qeds}%END OF PROOF BY FORMULA
+
+\def\epsilon{\varepsilon}
+\def\phi{\varphi}
+
+\def\ge{\geqslant}
+\def\le{\leqslant}
+\def\geq{\ge}
+\def\leq{\le}
+
+\def\df{\mathrel{:=}}
+
+\def\:{\colon}
+\newcommand*{\set}[2]%{\left\{\,{#1}\,:\,{#2}\,\right\}}
+{\ifthenelse{\equal{#2}{}}{\left\{\,{#1}\,\right\}}{\left\{\,{#1}\,:\,{#2}\,\right\}}}
+
+%THEOREM
+\newcounter{thm}[chapter]
+\renewcommand{\thethm}{\thechapter.\arabic{thm}}
+\newcommand\claim[2][{}]{\par\medskip\noindent\refstepcounter{thm}\hbox{\bf \thechapter.\arabic{thm}. #2.#1}
+\it\ %\ignorespaces
+}
+\def\endclaim{
+\par\medskip}
+\newenvironment{thm}{\claim}{\endclaim}
+
+%NOTATIONS
+
+\def\Dom{\mathop{\rm Dom}\nolimits}
+\def\length{\mathop{\rm length}\nolimits}
+\def\area{\mathop{\rm area}\nolimits}
+\def\flux{\mathop{\rm flux}\nolimits}
+\def\vol{\mathop{\rm vol}\nolimits}
+\def\bus{\mathop{\rm bus}\nolimits}
+\def\div{\mathop{\rm div}\nolimits}
+\def\inj{\mathop{\rm inj}\nolimits}
+\def\curl{\mathop{\rm curl}\nolimits}
+\def\perim{\mathop{\rm perim}\nolimits}
+\def\rot{\mathop{\rm rot}\nolimits}
+\def\diam{\mathop{\rm diam}\nolimits}
+\def\trace{\mathop{\rm trace}\nolimits}
+\def\proj{\mathop{\rm proj}\nolimits}
+
+\newcommand*{\tc}[1]{\ifthenelse{\equal{#1}{}}{\Phi}{\Phi({#1})}}%toatal curvature \tc\gamma produces \Phi(\gamma)
+\newcommand*{\tgc}[1]{\ifthenelse{\equal{#1}{}}{\Psi}{\Psi({#1})}}%toatal signed/geodesic curvature \tgc\gamma produces \Psi(\gamma)
+
+\newcommand*{\hinge}[3]{[#1\,{}^{#2}_{#3}]}%\hinge x y z is the hinge with vertex x
+\newcommand*{\modangle}[3]{\tilde\measuredangle(#1\,{}^{#2}_{#3}\hspace{-0.2ex})}%\modangle x y z --- model angle with vertex at x
+\def\side{\tilde\curlyvee}%model side of hinge
+\def\modtrig{\tilde\triangle}%model triangle
+\def\spc{\mathcal}%used for spaces
+\def\tor{\tau}%torsion
+\def\kur{\kappa}%absolute curvature
+\def\skur{k}%signed curvature
+
+\def\Dist{\mathop{\rm dist}\nolimits} 
+\newcommand*\dist[3]{|{#1}\z-{#2}|_{#3}} % notation fo distance from x to y in the space Z --- "\dist xyZ" produces |x-y|_Z 
+%\newcommand*\dist[3]{}
+
+\def\Conv{\mathop{\rm Conv}\nolimits}
+
+\def\GG{\mathbb{G}}%circle or line segment
+\def\T{\mathrm{T}}%tangent plane
+
+\def\Jac{\mathop{\rm Jac}\nolimits}%Jacobian matrix
+\def\jac{\mathop{\rm jac}\nolimits}%Jacobian determinant
+\def\GB{\mathop{\rm GB}\nolimits}%gauss-bonnet expression
+\def\Shape{\mathop{\rm Shape}\nolimits}%shape operator
+\def\rank{\mathop{\rm rank}\nolimits}
+
+\def\tan{\text{\sc{t}}}%tangent
+\def\norm{\text{\sc{n}}}%normal to curve
+\def\bi{\text{\sc{b}}}%binormal
+\renewcommand*\vec[1]{\text{\sc{#1}}}
+\def\Norm{\nu}%normal to surface
+
+\newcommand*{\z}[1]{#1\nobreak\discretionary{}%
+            {\hbox{$\mathsurround=0pt #1$}}{}}
+            
+\let\oldcdot\cdot
+\def\cdot{{\hskip0.5pt\z\oldcdot\hskip0.5pt}}%\cdot with smaller spaces
+
+\hyphenation{% 
+col-lin-e-ar 
+geo-de-sic  
+half-space
+Loba-chev-skian
+Py-thag-o-re-an
+re-pa-ra-met-ri-za-tion
+pa-ra-met-ri-zed
+semi-pe-ri-me-ter
+гео-мет-ри-чес-кий
+то-по-ло-ги-чес-кого}
+
+
+%LIST STILES
+\renewcommand{\@listI}{%
+\leftmargin=25pt
+\rightmargin=0pt
+\labelsep=5pt
+\labelwidth=20pt
+\itemindent=0pt
+\listparindent=0pt
+\topsep=0pt plus 1pt
+\partopsep=\topsep
+\parsep=\topsep
+\itemsep=\topsep}
+
+%ITEMIZE-first order sign
+\renewcommand{\labelitemi}{$\mathsurround=0pt \diamond$}
+\renewcommand{\labelitemii}{$\mathsurround=0pt \circ$}
+%chaptername
+%\renewcommand{\chaptername}{}
+
+%NUMBERONCIRC
+\newcommand*{\numform}[1]{\@numform{\@nameuse{c@#1}}}
+\newcommand*{\@numform}[1]%
+{\ifcase #1\or \ding{202}\or \ding{203}\or \ding{204}\or \ding{205}\or \ding{206}\or \ding{207}\or \ding{208}\or \ding{209}\or \ding{210}\or \ding{211}\or \ding{74}\or \ding{168} \or \ding{170}\or \ding{171}\or\ding{169}\else\@ctrerr \fi}
+
+%EQNUMBER
+\newcounter{eqtn}[section]
+\renewcommand{\@eqnnum}{\theeqtn}
+\renewcommand{\theeqtn}{\numform{eqtn}}
+\newcommand{\eqlbl}[1]{\refstepcounter{eqtn}\leqno\text{\numform{eqtn}\label{#1}}}
+\newcommand{\eqtag}[1]{\refstepcounter{eqtn}\tag*{\numform{eqtn}\label{#1}}}
+
+%CLAIM
+\def\clmclaim#1{\par\medskip\noindent\refstepcounter{eqtn}\hbox{\rm\numform{eqtn} #1}
+\it%\ignorespaces
+}
+\def\endclmclaim{\par
+\medskip}
+\newenvironment{clm}{\clmclaim}{\endclmclaim}
+
+%SUBTHEOREM 
+\newcounter{subthm}[thm]
+\renewcommand{\thesubthm}{\thethm\textit{\hskip-0.03em \alph{subthm}}}
+\newcounter{clone}[thm]
+\renewcommand{\theclone}{\textit{(\alph{subthm})}}
+\newenvironment{subthm}[1]{\ifthenelse{\equal{#1}{}}
+{\par\refstepcounter{subthm}\begin{itemize}\item[(\alph{subthm})]}{\par\refstepcounter{subthm}\label{#1}\setcounter{clone}{\value{subthm}} \addtocounter{clone}{-1}\refstepcounter{clone}\label{SHORT.#1}\begin{itemize}
+\item [(\alph{subthm})]}}{\end{itemize}}
+
+%SUBTHEOREM A
+\newcounter{subthmA}[thm]
+\renewcommand{\thesubthmA}{\thethm\textit{\hskip-0.05em \Alph{subthmA}}}
+\newcounter{cloneA}[thm]
+\renewcommand{\thecloneA}{\textit{(\Alph{subthmA})}}
+\newenvironment{subthmA}[1]{\ifthenelse{\equal{#1}{}}
+{\par\refstepcounter{subthmA}\begin{itemize}\item[(\Alph{subthmA})]}{\par\refstepcounter{subthmA}\label{#1}\setcounter{cloneA}{\value{subthmA}} \addtocounter{cloneA}{-1}\refstepcounter{cloneA}\label{SHORT.#1}\begin{itemize}
+\item [(\Alph{subthmA})]}}{\end{itemize}}
+%SUBTHEOREM 1
+\newcounter{subthmN}[thm]
+\renewcommand{\thesubthmN}{\thethm-\arabic{subthmN}}
+\newcounter{cloneN}[thm]
+\renewcommand{\thecloneN}{\arabic{subthmN}}
+\newenvironment{subthmN}[1]{\ifthenelse{\equal{#1}{}}
+{\par\refstepcounter{subthmN}\begin{itemize}\item[\arabic{subthmN})]}{\par\refstepcounter{subthmN}\label{#1}\setcounter{cloneN}{\value{subthmN}} \addtocounter{cloneN}{-1}\refstepcounter{cloneN}\label{SHORT.#1}\begin{itemize}
+\item [\arabic{subthmN})]}}{\end{itemize}}
+
+\makeatletter\renewcommand{\p@section}{\thechapter}\makeatother
+\renewcommand{\thesection}{\Alph{section}}
