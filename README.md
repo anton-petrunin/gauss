@@ -2,7 +2,7 @@
 
 The following command will create a local copy of the source code for you.
 
-`git clone https://github.com/anton-petrunin/comparison-geometry.git`
+`git clone https://github.com/anton-petrunin/gauss.git`
 
 ### MetaPost
 
