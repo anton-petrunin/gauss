@@ -9,7 +9,7 @@ If there is a neighborhood $U$ of $p$ such that $\Sigma_1\cap U$ lies on one sid
 Let us describe $\Sigma_2$ locally at $p$ as a graph $z=f_2(x,y)$ in tangent-normal coordinates at $p$.
 If $\Sigma_2$ locally supports $\Sigma_1$ at $p$, then  all points of $\Sigma_1$ near $p$ lie either above or below the graph $z=f_2(x,y)$.
 
-In both cases the surfaces $\Sigma_1$ and $\Sigma_2$ have common tangent plane at $p$,
+In both cases the surfaces $\Sigma_1$ and $\Sigma_2$ have a common tangent plane at $p$,
 so we can write both as graphs $z=f_1(x,y)$ and $z=f_2(x,y)$ in the common tangent-normal coordinates at $p$.
 Note that $\Sigma_2$ locally supports $\Sigma_1$ at $p$ if and only if 
 \[f_1(x,y)\ge f_2(x,y)
@@ -22,7 +22,7 @@ that is, they have a common unit normal vector at $p$ in the direction of the $z
 If the normal vectors are opposite, we say that $\Sigma_1$ and $\Sigma_2$ are \index{controriented!surfaces}\emph{counteroriented} at $p$;
 in this case reverting the orientation of one of the surfaces makes them cooriented.
 
-If $\Sigma_2$ locally supports $\Sigma_1$ and they are cooriented at $p$,
+If $\Sigma_2$ locally supports $\Sigma_1$, and they are cooriented at $p$,
 then we can say that $\Sigma_1$ supports $\Sigma_2$ \index{support from inside}\emph{from inside} or \index{support from outside}\emph{from outside},
 assuming that the normal vector points {}\emph{inside} the domain bounded by the surface $\Sigma_2$ in $U$.
 Using the above notations, $\Sigma_1$ locally supports $\Sigma_2$ from inside (from outside)  if $f_1(x,y)\ge f_2(x,y)$ (respectively $f_1(x,y)\le f_2(x,y)$) for $(x,y)$ in a sufficiently small neighborhood of the origin.
@@ -159,7 +159,7 @@ Let $z=f(x,y)$ be the local description of a smooth surface $\Sigma$ in tangent-
 Assume both principal curvatures of $\Sigma$ are positive at $p$.
 Then the function $f$ is strictly convex in a neighborhood of the origin and has a local minimum at the origin.
 
-In particular the tangent plane $\T_p$ locally supports $\Sigma$ from outside at $p$.
+In particular, the tangent plane $\T_p$ locally supports $\Sigma$ from outside at $p$.
 \end{thm}
 
 \parit{Proof.}
@@ -175,12 +175,12 @@ By continuity of the function $(x,y,{\vec w})\mapsto D^2_{\vec w}f(x,y)$,
 we have that $D^2_{\vec w}f(x,y)>0$ if $\vec w\ne 0$ and $(x,y)$ lies in a sufficiently small neighborhood of the origin.
 This property implies that $f$ is a strictly convex function in a neighborhood of the origin in the $(x,y)$-plane (see Section~\ref{sec:analysis}).
 
-Finally since $\nabla f(0,0)=0$ and $f$ is strictly convex in a neighborhood of the origin it has a strict local minimum at the origin.
+Finally, since $\nabla f(0,0)=0$ and $f$ is strictly convex in a neighborhood of the origin it has a strict local minimum at the origin.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:section-of-convex}
 Let $\Sigma$ be a smooth surface (without boundary) with positive Gauss curvature.
-Show that any connected component of intersection of $\Sigma$ with a plane $\Pi$ is either a single point or a smooth regular plane curve whose signed curvature has constant sign.
+Show that any connected component of the intersection of $\Sigma$ with a plane $\Pi$ is either a single point or a smooth regular plane curve whose signed curvature has constant sign.
 \end{thm}
 
 The following theorem gives a global description of surfaces with positive Gauss curvature.
@@ -196,9 +196,9 @@ Note that in the proof we have to use that the surface is a connected set;
 otherwise a pair of disjoint spheres which bound two disjoint balls would give a counterexample.
 
 \parit{Proof.}
-Since the Gauss curvature is positive, we can choose unit normal field $\Norm$ on $\Sigma$ so that the principal curvatures are positive at any point.
+Since the Gauss curvature is positive, we can choose a unit normal field $\Norm$ on $\Sigma$ so that the principal curvatures are positive at any point.
 Denote by $R$ the region bounded by $\Sigma$ that lies on the side of $\Norm$;
-that is, $\Norm$ points inside of $R$ at any point of $\Sigma$.
+that is, $\Norm$ points inside $R$ at any point of $\Sigma$.
 (The region $R$ exists by \ref{clm:proper-divides}.)
 
 Let us show that $R$ is {}\emph{locally strictly convex};
@@ -206,7 +206,7 @@ that is, for any point $p\in R$, the intersection of $R$ with a small ball cente
 
 Indeed, suppose that $z=f(x,y)$ is a local description of $\Sigma$ in the tangent-normal coordinates at $p$.
 By \ref{lem:gauss+=>convexity}, $f$ is strictly convex in a neighborhood of the origin.
-In particular the intersection of a small ball centered at $p$ with the epigraph $z\ge f(x,y)$ is strictly convex.
+In particular, the intersection of a small ball centered at $p$ with the epigraph $z\ge f(x,y)$ is strictly convex.
 
 Since $\Sigma$ is connected, so is $R$;
 moreover any two points in the interior of $R$ can be connected by a polygonal line in the interior of~$R$.
@@ -226,11 +226,11 @@ Since $R$ is locally strictly convex, $R\z\cap B(z_0,\epsilon)$ is strictly conv
 On the other hand $z_0$ lies between two points in the intersection $[x,y_0]\cap B(z_0,\epsilon)$.
 Since $[x,y_0]\subset R$, we arrived to a contradiction.
 
-Therefore the interior of $R$ is a convex set.
+Therefore, the interior of $R$ is a convex set.
 Note that the region $R$ is the closure of its interior, therefore $R$ is convex as well.
 
 Since $R$ is locally strictly convex, its boundary $\Sigma$ contains no line segments.
-Therefore $R$ is strictly convex.
+Therefore, $R$ is strictly convex.
 \qeds
 
 \parit{Remark.}
@@ -402,9 +402,9 @@ The statement in the following exercise is due to Dmitri Panov \cite{panov-curve
 
 \begin{thm}{Advanced exercise}\label{ex:panov}
 Let $\gamma$ be a closed smooth asymptotic line
-in such graph $z\z=f(x,y)$ of a smooth function $f$. 
+in the graph $z\z=f(x,y)$ of a smooth function $f$. 
 Assume that the graph is strictly saddle in a neighborhood of $\gamma$.
-Show that the region in the $(x,y)$-plane bounded by the projection of $\gamma$ to such plane cannot be star-shaped. 
+Show that the region in the $(x,y)$-plane bounded by the projection of $\gamma$ cannot be star-shaped. 
 \end{thm}
 
 \begin{thm}{Advanced exercise}\label{ex:crosss}
@@ -418,9 +418,10 @@ such that the intersection of $\Omega$ with the tangent plane $\T_p$ is a union 
 \section{Hats}
 
 Note that a closed surface cannot be saddle.
-Indeed, let $\Sigma$ be a closed surface and consider a smallest sphere that contains $\Sigma$ in its interior;
-it supports $\Sigma$ at some point $p$ and at this point the principal curvatures must have the same sign.
-The following more general statement  is proved using the same idea.
+Indeed, suppose $\Sigma$ is a closed surface.
+Consider the smallest sphere that surrounds $\Sigma$.
+The sphere supports $\Sigma$ at some point $p$ and at this point the principal curvatures must have the same sign.
+The following more general statement is proved using the same idea.
 
 {
 
@@ -467,11 +468,11 @@ Show that the statement does not hold without assuming that $\Delta$ is a disc.
 \end{thm}
 
 If $\Delta$ is as in the exercise, then in fact $\area \Delta\ge \pi$.
-The proof of this statement can be obtained by applying the so-called \index{coarea fromula}\emph{coarea fromula} together with the inequality in the exercise. 
+The proof of this statement can be obtained by applying the so-called \index{coarea formula}\emph{coarea formula} together with the inequality in the exercise. 
 
 \begin{thm}{Exercise}\label{ex:circular-cone-saddle}
 Show that an open saddle surface
-cannot lie inside of an infinite circular cone. 
+cannot lie inside an infinite circular cone. 
 \end{thm}
 
 A disc $\Delta$ in a surface $\Sigma$ is called a \index{hat}\emph{hat} of $\Sigma$
@@ -496,7 +497,7 @@ or equivalently, the principal curvatures $k_1(p)$ and $k_2(p)$ have the same si
 Let $z=f(x,y)$ be a graph representation of $\Sigma$ in tangent-normal coordinates at $p$.
 Consider the set $F_\epsilon$ in the $(x,y)$-plane defined by the inequality $f(x,y)\le \epsilon$.
 By \ref{lem:gauss+=>convexity}, $f$ is convex in a small neighborhood of $(0,0)$.
-Therefore $F_\epsilon$ is convex, for sufficiently small $\epsilon>0$.
+Therefore, $F_\epsilon$ is convex, for sufficiently small $\epsilon>0$.
 In particular, $F_\epsilon$ is a topological disc.
 
 Note that $(x,y)\mapsto (x,y,f(x,y))$ is a homeomorphism from $F_\epsilon$
@@ -565,7 +566,7 @@ Assume there is a compact subset $K\subset \Sigma$ such that the complement $\Si
 Show that the surface $\Sigma$ is a graph.
 \end{thm}
 
-Note that according to \ref{lem:convex-saddle}, there are no proper saddle surfaces inside  a parallelepiped with boundary line on one of its facets.
+Note that according to \ref{lem:convex-saddle}, there are no proper saddle surface inside a parallelepiped with the boundary line on one of its facets.
 The following lemma gives an analogous statement for a parallelepiped with an infinite side.
 
 \begin{thm}{Lemma}\label{lem:region}
@@ -599,8 +600,8 @@ If not, then there is a line segment $[p,q]$ for some $p,q\in \Theta$ that cuts 
 \end{figure}
 Consider the plane $\Pi$ thru $[p,q]$ that is perpendicular to the $(x,z)$-plane.
 Note that $\Pi$ cuts from $\Sigma$ a compact region $\Delta$.
-By a general position argument (see \ref{lem:reg-section}) 
-we can assume that $\Delta$ is a compact surface with boundary line in $\Pi$ and the remaining part of $\Delta$ lies on one side from $\Pi$.
+By a general position argument (see \ref{lem:reg-section}),
+we can assume that $\Delta$ is a compact surface with its boundary line in $\Pi$, and the remaining part of $\Delta$ lies on one side from $\Pi$.
 Since the plane $\Pi$ is convex, this statement contradicts \ref{lem:convex-saddle}.
 
 Summarizing, $\Theta$ is an open convex set of $H$ that contains all points above $z=r$.
@@ -628,7 +629,7 @@ It follows that the tangent plane $\T_p$ at some point $p\in\Sigma$ is not horiz
 Denote by $\Sigma^+$ the part of $\Sigma$ that lies above $\T_p$.
 Note that it has at least two connected components which are approaching $p$ from both sides 
 in the principal direction with positive principal curvature.
-Indeed, if there was a curve that runs in $\Sigma^+$ and approaches $p$ from both sides, then it would cut a disc from $\Sigma$ with boundary line above $\T_p$ and some points below it;
+Indeed, if there was a curve that runs in $\Sigma^+$ and approaches $p$ from both sides, then it would cut a disc from $\Sigma$ with the boundary line above $\T_p$ and some points below it;
 the latter would contradict \ref{lem:convex-saddle}.
 
 \begin{figure}[!ht]

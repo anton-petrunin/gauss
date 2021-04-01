@@ -20,7 +20,7 @@ That is, any limit of a sequence in $Q$ lies in $Q$;
 that is, by the definition, $Q$ is closed.
 
 Now suppose $\Omega=\spc{X}\backslash Q$ is not open.
-Show that there is a point $p\in \Omega$ and a sequence $q_n\in Q$ such that such that $\dist{p}{q_n}{\spc{X}}\z<\tfrac 1n$ for any $n$.
+Show that there is a point $p\in \Omega$ and a sequence $q_n\in Q$ such that $\dist{p}{q_n}{\spc{X}}\z<\tfrac 1n$ for any $n$.
 Conclude that $q_n\to p$ and $n\to \infty$;
 therefore $Q$ is not closed.
 
@@ -42,7 +42,7 @@ we can assume that $\alpha(t)\ne p,q$ for $t\ne0,1$.
 An open set $\Omega$ in $(0,1)$ will be called {}\emph{suitable}
 if for any connected component $(a,b)$ of $\Omega$ we have $\alpha(a)=\alpha(b)$.
 Show that the union of nested suitable sets is suitable.
-Therefore we can find a maximal suitable set $\hat \Omega$.
+Therefore, we can find a maximal suitable set $\hat \Omega$.
 
 Define $\beta(t)=\alpha(a)$ for any $t$ in a connected component $(a,b)\subset\hat \Omega$, and $\beta (t) = \alpha (t) $ for $t$ not in $\hat{\Omega}$.
 Note that for any $x\in [0,1]$ the set $\beta^{-1}\{\beta(x)\}$ is connected.
@@ -51,7 +51,7 @@ It remains to reparametrize $\beta$ to make it injective.
 In order to do that, we need to construct a non-decreasing surjective function $\tau\:[0,1]\z\to[0,1]$ such that 
 $\tau(t_1)=\tau(t_2)$ if and only if there is a connected component $(a,b)\subset\hat \Omega$ such that $t_1,t_2\z\in [a,b]$.
 
-The required function $\tau$ can be constructed in a similar way to the so-called {}\emph{devil's staircase} --- learn this construction and modify it.
+The required function $\tau$ can be constructed similarly to the so-called {}\emph{devil's staircase} --- learn this construction and modify it.
 
 The simple arc we are looking for is $\beta \circ \sigma$, where $\sigma\:  [0,1]\to [0,1]$ is any right inverse of $\tau$.
 
@@ -59,7 +59,7 @@ The simple arc we are looking for is $\beta \circ \sigma$, where $\sigma\:  [0,1
 Denote the union of two half-axis by $L$.
 
 Recall that the function $f$ is smooth; see Section~\ref{sec:analysis}.
-Therefore $t\mapsto \alpha(t)=(f(t),f(-t))$ is smooth as well.
+Therefore, $t\mapsto \alpha(t)=(f(t),f(-t))$ is smooth as well.
 
 Observe that $f(t)\to\infty$ as $t\to \infty$.
 Since $f(0)=0$, the intermediate value theorem implies that $f(t)$ takes all nonnegative values for $t\ge 0$.
@@ -129,7 +129,7 @@ Show that
 }
 
 Note that the linear independence of the gradients provides only a sufficient condition.
-Therefore the case $\ell=\pm1$ has to be checked by hand.
+Therefore, the case $\ell=\pm1$ has to be checked by hand.
 In this case a neighborhood of $(\pm1,0,0)$ does not admit a smooth regular parametrization --- try to prove it. 
 The case $\ell=1$ is shown on the diagram.
 
@@ -205,8 +205,8 @@ For \ref{SHORT.ex:integral-length<} consider a partition such that the velocity 
 \includegraphics{mppics/pic-226}
 \vskip0mm
 \end{figure}
-Look at the diagram and guess the parametrization of an arc of the snow flake by $[0,1]$.
-Extend it to the whole snow flake.
+Look at the diagram and guess the parametrization of an arc of the snowflake by $[0,1]$.
+Extend it to the whole snowflake.
 Show that it indeed describes an embedding of the circle in the plane.
 
 \parit{\ref{SHORT.ex:nonrectifiable-curve:b}.}
@@ -225,7 +225,7 @@ We have to assume that $a\ne 0$ or $b\ne0$;
 otherwise we get a constant curve.
 
 Show that the curve has constant velocity $|\gamma'(t)|\equiv \sqrt{a^2+b^2}$.
-Therefore $s=t/\sqrt{a^2+b^2}$ is an arc-length parameter.
+Therefore, $s=t/\sqrt{a^2+b^2}$ is an arc-length parameter.
 It remains to substitute $s\cdot \sqrt{a^2+b^2}$ for $t$.
 
 
@@ -239,7 +239,7 @@ Show that we may assume in addition that each point $p_i$ lies on $\alpha$.
 
 Observe that since $\alpha$ is simple, the points $p_1,\dots,p_n$ appear on $\alpha$ in the same cyclic order;
 that is, the polygonal line $p_1\dots p_n$ is also inscribed in $\alpha$.
-In particular 
+In particular,
 \[\length\alpha\ge \length (p_1\dots p_n).\]
 It follows that 
 \[\length\alpha>\length\beta-\epsilon.\]
@@ -305,16 +305,17 @@ in particular $\dist{x}{y}A\ne \dist{x}{y}{\mathbb{R}^3}$.
 
 \parbf{\ref{ex:antipodal}.}
 The spherical curve shown on the diagram does not have antipodal pairs of points.
-However it has three points $x,y,z$ on one of its sides and their antipodal points $-x,-y,-z$ on the other.
+However, it has three points $x,y,z$ on one of its sides and their antipodal points $-x,-y,-z$ on the other.
 Show that this property is sufficient to conclude that the curve does not lie in any hemisphere.
 
 \parbf{\ref{ex:bisection-of-S2}.}
 Assume contrary, then by the hemisphere lemma (\ref{lem:hemisphere}) $\gamma$ lies in an open hemisphere.
-In particular it cannot divide $\mathbb{S}^2$ into two regions of equal area --- a contradiction.
+In particular, it cannot divide $\mathbb{S}^2$ into two regions of equal area --- a contradiction.
 
 \parbf{\ref{ex:flaw}.}
-The very first sentence is wrong --- it is {}\emph{not} sufficient to show that diameter is at most 2.
-For example an equilateral triangle with circumradius slightly above $1$ may have diameter (which is defined as the maximal distance between its points) slightly bigger than $\sqrt3$, so it can be made smaller that $2$.
+The very first sentence is wrong --- it is {}\emph{not} sufficient to show that the diameter is at most 2.
+For example, if an equilateral triangle has circumradius slightly above $1$,
+then its diameter (which is defined as the maximal distance between its points) is slightly bigger than $\sqrt3$, so it is smaller than $2$.
 
 On the other hand, it is easy to modify the proof of the hemisphere lemma (\ref{lem:hemisphere}) to get a correct solution.
 That is, (1) choose two points $p$ and $q$ on $\gamma$ that divide it into two arcs of the same length;
@@ -330,10 +331,11 @@ For \ref{SHORT.adex:crofton:crofton}, modify the proof of the original Crofton f
 Assume $\length \gamma<2\cdot\pi$.
 By \ref{SHORT.adex:crofton:crofton},
 \[\overline{\length \gamma_{\vec u}}<2\cdot\pi.\]
-Therefore we can choose ${\vec u}$ so that 
+Therefore, we can choose ${\vec u}$ so that 
 \[\length \gamma_{\vec u}<2\cdot\pi.\]
 
-Observe that $\gamma_{\vec u}$ runs in a semicircle $h$ and therefore $\gamma$ lies in a hemisphere with $h$ as a diameter.
+Observe that $\gamma_{\vec u}$ runs in a semicircle $h$.
+Therefore $\gamma$ lies in a hemisphere with $h$ as a diameter.
 
 \stepcounter{section}
 \setcounter{eqtn}{0}
@@ -341,8 +343,8 @@ Observe that $\gamma_{\vec u}$ runs in a semicircle $h$ and therefore $\gamma$ l
 
 \parbf{\ref{ex:zero-curvature-curve}.}
 For a unit-speed parametrization $\gamma$, we have $\gamma''\equiv 0$.
-Therefore the velocity $\vec v=\gamma'$ is constant.
-Hence $\gamma(t)=p+(t-t_0)\cdot \vec v$, where $p=\gamma(t_0)$.
+Therefore, the velocity $\vec v=\gamma'$ is constant.
+Hence, $\gamma(t)=p+(t-t_0)\cdot \vec v$, where $p=\gamma(t_0)$.
 
 
 \parbf{\ref{ex:scaled-curvature}.} 
@@ -407,7 +409,7 @@ Observe that
 \text{and}
 \quad 
 \langle \gamma(s),\gamma(s)\rangle\le 1.\]
-Therefore
+Therefore,
 \[\begin{aligned}
 \langle\gamma''(s),\gamma(s)\rangle&\ge -|\gamma''(s)|\cdot|\gamma(s)|\ge-\kur(s)
 \end{aligned}\eqlbl{eq:<gamma'',gamma>>=-k}\]
@@ -415,7 +417,7 @@ for all $s$.
 
 \parit{\ref{SHORT.ex:DNA:int>=length-tc}.}
 Since $\gamma$ is unit-speed, we have $\ell=\length\gamma$.
-Therefore
+Therefore,
 \begin{align*}
 \int_0^\ell\langle\gamma(s),\gamma'(s)\rangle'\cdot ds
 &=
@@ -430,14 +432,14 @@ By the fundamental theorem of calculus, we have
 -
 \langle\gamma(0),\gamma'(0)\rangle.
 \end{align*}
-Since $\gamma(0)=\gamma(\ell)$ and $\gamma'(0)=\gamma'(\ell)$, the right hand side vanishes.
+Since $\gamma(0)=\gamma(\ell)$ and $\gamma'(0)=\gamma'(\ell)$, the right-hand side vanishes.
 
 
 Note that without loss of generality we can assume the curve in \ref{thm:DNA} is described by a loop $\gamma\:[0,\ell]\to\mathbb{R}^3$ parametrized by arc-length.
 We can also assume that the origin is the center of the ball; that is $|\gamma|\le 1$.
 Since $\gamma$ is a smooth closed curve, we have 
 $\gamma'(0)=\gamma'(\ell)$ and $\gamma(0)=\gamma(\ell)$.
-Therefore \ref{SHORT.ex:DNA:int>=length-tc} and \ref{SHORT.ex:DNA:end} imply \ref{thm:DNA}.
+Therefore, \ref{SHORT.ex:DNA:int>=length-tc} and \ref{SHORT.ex:DNA:end} imply \ref{thm:DNA}.
 
 \parbf{\ref{ex:chord-lemma-optimal}.} 
 Set $\alpha=\measuredangle(\vec w,\vec u)$ 
@@ -555,8 +557,8 @@ It remains to integrate this inequality and apply
 Observe that $\gamma'_a(t)=(1+a\cdot \cos t, -a\cdot \sin t)$;
 that is, $\gamma'_a$ runs clockwise along a circle with center at $(1,0)$ and radius $\vert a \vert$.
 
-\parit{Case $|a|>1$,} Note that $\tan_a(t)=\gamma'_a/|\gamma'_a|$ runs clockwise and makes a full turn in time $2\cdot\pi$.
-Therefore $\tgc{\gamma_a}=-2\cdot\pi$ and $\tc\gamma_a=|\tgc{\gamma_a}|=2\cdot\pi$.
+\parit{Case $|a|>1$.} Note that $\tan_a(t)=\gamma'_a/|\gamma'_a|$ runs clockwise and makes a full turn in time $2\cdot\pi$.
+Therefore, $\tgc{\gamma_a}=-2\cdot\pi$ and $\tc\gamma_a=|\tgc{\gamma_a}|=2\cdot\pi$.
 
 \parit{Case $|a|<1$.}
 Set $\theta_a=\arcsin a$.
@@ -612,7 +614,7 @@ Then
 \[
 |\gamma_\ell'(t)|=(1-\ell\cdot\skur(t)).
 \]
-Therefore
+Therefore,
 \begin{align*}
 L(\ell)
 &=
@@ -681,15 +683,16 @@ f'''
 \end{align*}
 
 Observe that $\norm'(0)\perp\gamma(0)$.
-Therefore $f'(0)=0$, $f''(0)=0$, and $f'''(0)\z=-2\cdot\kur'/\kur$.
-Since $f$ is a maximum or minimum at $0$, we get that $f'''(0)=0$ and therefore
+Therefore, $f'(0)=0$, $f''(0)=0$, and $f'''(0)\z=-2\cdot\kur'/\kur$.
+Since $f$ is a maximum or minimum at $0$, we get that $f'''(0)=0$.
+Therefore
 $\kur'=0$.
 
 \parbf{\ref{ex:support}.} Consider the coordinate system with $p$ as the origin and $x$-axis as the common tangent line to $\gamma_1$ and $\gamma_2$.
 We may assume that $\gamma_i$ are defined in $(-\epsilon,\epsilon)$ for some small $\epsilon>0$,
 so that they run almost horizontally to the right.
 
-Given $t\in[0,1]$ consider the curve $\gamma_t$ that is tangent and cooriented to the $x$ axis at  $\gamma_t(0)$ and has signed curvature defined by $\skur_t(s)=(1\z-t)\cdot\skur_0(s)+t\cdot\skur_1(s)$.
+Given $t\in[0,1]$ consider the curve $\gamma_t$ that is tangent and cooriented to the $x$-axis at  $\gamma_t(0)$ and has signed curvature defined by $\skur_t(s)=(1\z-t)\cdot\skur_0(s)+t\cdot\skur_1(s)$.
 It exists by \ref{thm:fund-curves-2D}.
 
 Choose $s\approx 0$.
@@ -730,7 +733,8 @@ To do the second part in \ref{ex:between-parallels-1}, use the shown family and 
 \end{wrapfigure}
 
 \parbf{\ref{ex:convex small}.}
-Note that we can assume that $\gamma$ bounds a convex figure $F$, otherwise by \ref{prop:convex} its curvature changes sign and therefore it has zero curvature at some point.
+Note that we can assume that $\gamma$ bounds a convex figure $F$, otherwise by \ref{prop:convex} its curvature changes sign.
+Therefore $\gamma$ has zero curvature at some point.
 
 Choose two points $x$ and $y$ surrounded by $\gamma$ such that $|x\z-y|\z>2$.
 Look at the maximal lens bounded by two arcs with a common chord $xy$ that lies in $F$.
@@ -830,7 +834,7 @@ Consider the ordinary differential equation $x'(t)=\vec u_t(x(t))$.
 Consider the map $\iota\:x(0)\mapsto x(1)$ where $t\mapsto x(t)$ is a solution of the equation.
 The map $\iota$ is called the \index{flow}\emph{flow} of the vector field $\vec u_t$ for the time interval $[0,1]$.
 Observe that according to \ref{thm:ODE} the map $\iota$ is smooth in its domain of definition.
-Moreover the same holds for its inverse $\iota^{-1}$;
+Moreover, the same holds for its inverse $\iota^{-1}$;
 indeed, $\iota^{-1}$ is the flow of the vector field $-\vec u_{1-t}$.
 That is, $\iota$ is a diffeomorphism from its domain of definition to its image. 
 
@@ -845,7 +849,7 @@ Choose smooth paths $\gamma_i\:[0,1]\z\to \mathbb{R}^2$ such that $\gamma_i(0)=p
 $\gamma_i(1)=q_i$, and $\gamma_i(t)\ne \gamma_j(t)$ if $i\ne j$.
 
 Choose a smooth vector field $\vec v_t$ such that $\vec v_t(\gamma_i(t))=\gamma'_i(t)$ for any $i$ and $t$.
-We can assume in addition that $\vec v_t$ vanishes outside of a sufficiently large disc; this can be arranged by  multiplying the vector field by a function 
+We can assume in addition that $\vec v_t$ vanishes outside a sufficiently large disc; this can be arranged by  multiplying the vector field by a function 
 $\sigma_1(R-|x|)$; see page \pageref{page:sigma-function}.
 
 It remains to apply the Moser trick to the constructed vector field. 
@@ -878,7 +882,7 @@ and apply the inverse function theorem to the map $(u,v)\z\mapsto(x(u,v),y(u,v))
 \parbf{\ref{ex:tangent-single-point}.}
 Choose $(x,y,z)$-coordinates so that $\Pi$ is the $(x,y)$-plane and $p$ is the origin.
 Let $(u,v)\mapsto s(u,v)$ be a small chart of $\Sigma$ such that $p=s(0,0)$.
-Denote by $\vec k$ the unit vector in the direction of the $z$ axis.
+Denote by $\vec k$ the unit vector in the direction of the $z$-axis.
 
 Show that we can assume that $\langle s(u,v),\vec k\rangle$ has constant sign in a punctured neighborhood of $0$.
 Conclude that $s_u\perp \vec k$ and $s_v\perp \vec k$ at
@@ -907,7 +911,7 @@ $\ell\cdot x^2+2\cdot m\cdot x\cdot y+n\cdot y^2$.
 In other words $m=0$, or equivalently, the $x$-axis points in a direction of curvature.
 
 \parbf{\ref{ex:gauss+orientable}.} Note that the principal curvatures have the same sign at each point.
-Therefore we can choose a unit normal $\Norm$ at each point so that both principal curvatures are positive.
+Therefore, we can choose a unit normal $\Norm$ at each point so that both principal curvatures are positive.
 Show that it defines a global field on the surface.
 
 \parbf{\ref{ex:self-adjoint}.}
@@ -935,8 +939,8 @@ in particular $\langle\Norm_1',\Norm_2\rangle=0$.
 
 By the assumption, $\langle \Norm_1(t),\Norm_2(t)\rangle$ is constant.
 By taking its derivative and applying the above identity, show that $\langle\Norm_1,\Norm_2'\rangle=0$.
-Conclude that $\Norm_2'$ is proportional to $\gamma'$
-and therefore $\gamma$ is a curvature line in~$\Sigma_2$.
+Conclude that $\Norm_2'$ is proportional to $\gamma'$.
+Therefore $\gamma$ is a curvature line in~$\Sigma_2$.
 
 \parbf{\ref{ex:equidistant}};
 \ref{SHORT.ex:equidistant:smooth}.
@@ -965,7 +969,7 @@ Use \ref{ex:line-of-curvature} and Meusnier's theorem (\ref{thm:meusnier}).
 \parbf{\ref{ex:helicoid-is-minimal}.} Apply Meusnier's theorem (\ref{thm:meusnier}) to show that the coordinate curves $\alpha_v\:u\mapsto s(u,v)$ and $\beta_u\:v\mapsto s(u,v)$ are asymptotic; that is, they have vanishing normal curvature.
 
 Observe that these two families are orthogonal to each other.
-Therefore the Hessian matrix in the frame $s_u/|s_u|$ and $s_v/|s_v|$ will have zeros on the diagonal.
+Therefore, the Hessian matrix in the frame $s_u/|s_u|$ and $s_v/|s_v|$ will have zeros on the diagonal.
 Use the fact that the mean curvature is the trace of the Hessian matrix.
 
 \parbf{\ref{ex:moon-revolution}.} Use \ref{ex:line-of-curvature} and \ref{thm:moon-orginal}.
@@ -977,11 +981,11 @@ Denote by $L$ the \index{cut locus}\emph{cut locus} of $V$;
 that is, $L$ is a closure of the set of points $x\in V$ such that there are at least two points on $\partial V$ that minimize the distance to $x$.
 
 Choose a connected component $\Sigma$ of the boundary $\partial V$.
-Show that $L$ is a smooth surface and the closest point projection $L\to \Sigma$ is a smooth regular parametrization of~$\Sigma$.
-In particular there is a unique point on $\Sigma$ that minimizes the distance to a given point $x\in L$.
+Show that $L$ is a smooth surface and the closest-point projection $L\to \Sigma$ is a smooth regular parametrization of~$\Sigma$.
+In particular, there is a unique point on $\Sigma$ that minimizes the distance to a given point $x\in L$.
 It follows that there is another component $\Sigma'$ with the same property.
 
-Finally show that $\partial V$ cannot be more than two components.
+Finally, show that $\partial V$ cannot be more than two components.
 
 \parbf{\ref{ex:PI-sphere}.}
 Read about Bing's two-room house.
@@ -1037,7 +1041,8 @@ that is, at each point $p \in \gamma$ the tangent plane $\T_p\Sigma$ is not para
 Apply the implicit function theorem to show that $\gamma$ is a smooth regular curve.
 
 Finally, observe that the curvature of $\gamma$ cannot be smaller than the normal curvature of $\Sigma$ in the same direction.
-Whence $\gamma$ has no points with vanishing curvature, and therefore its signed curvature has constant sign.
+Whence $\gamma$ has no points with vanishing curvature.
+Therefore its signed curvature has constant sign.
 
 
 \parbf{\ref{ex:surrounds-disc}.}
@@ -1103,7 +1108,7 @@ In the first case, show that the point $(x_\infty, y_\infty,z_\infty)$ does not 
 That is $\Sigma$ is not proper --- a contradiction.
 
 If $f(x_n,y_n)\to -\infty$, use the convexity of $f$ to show that $f(\tfrac{x_n}2 ,\tfrac{y_n}2)\z\to -\infty$.
-Note that origin belongs to $\Omega$;
+Note that the origin belongs to $\Omega$;
 use it to show that $(\tfrac{x_\infty}2, \tfrac{y_\infty}2)\in\Omega$.
 Arrive to a contradiction.
 
@@ -1169,7 +1174,7 @@ and the derivative changes sign if $w$ goes from one side of $\bar\ell_t$ to the
 
 Denote by $\bar\gamma$ the projection of $\gamma$ to the $(x, y)$-plane.
 If $\bar\gamma$ is star shaped with respect to a point $w$, then $w$ cannot cross $\bar\ell_t$.
-Therefore the function $t\mapsto h_t(w)$ is monotonic on $\mathbb{S}^1$.
+Therefore, the function $t\mapsto h_t(w)$ is monotonic on $\mathbb{S}^1$.
 Observe that this function cannot be constant, and arrive at a contradiction.
 
 \parbf{\ref{ex:crosss}.}
@@ -1208,7 +1213,7 @@ f(x,y)&=a(x)^2-b(x,y)^2=
 That is $f(x,y)=0$ if $a(x)\pm b(x,y) =0$.
 
 It remains to observe that the two functions $g_\pm(x,y)=a(x)\pm b(x,y)$ have distinct non-zero gradients at $0$.
-Therefore each equation $a(x)\pm b(x,y) =0$ defines a smooth regular curve in a neighborhood of $p$;
+Therefore, each equation $a(x)\pm b(x,y) =0$ defines a smooth regular curve in a neighborhood of $p$;
 see Section~\ref{sec:implicit-curves}.
 
 
@@ -1243,16 +1248,16 @@ Use \ref{ex:principal-revolution} in the proof.
 \parbf{\ref{ex:one-side-bernshtein}.} Look at the sections of the graph by planes parallel to the $(x,y)$-plane and to the $(x,z)$-plane, then apply Meusnier’s theorem (\ref{thm:meusnier}).
 
 \parbf{\ref{ex:saddle-graph}.}
-Suppose that orthogonal projection of $\Sigma$ to the $(x,y)$-plane is not injective.
+Suppose that the orthogonal projection of $\Sigma$ to the $(x,y)$-plane is not injective.
 Show that there is a point $p\in\Sigma$ with a vertical tangent plane;
 that is, $\T_p\Sigma$ is perpendicular to the $(x,y)$-plane.
 
 Let $\Gamma_p$ be the connected component of $p$ in the intersection of $\Sigma$ and the affine tangent plane $\T_p\Sigma$.
 Use \ref{ex:crosss} to show that $\Gamma_p$ is a union of smooth regular curves that can cross each other transversely.
-Moreover two of these curves pass thru $p$ and $\Gamma_p$ does not bound a compact region on $\Sigma$.
+Moreover, two of these curves pass thru $p$ and $\Gamma_p$ does not bound a compact region on $\Sigma$.
 
 Show that $\Gamma_p$ must have at least 4 ways to escape to infinity.
-On the other hand, since $\Sigma$ is a graph outside of compact set $K$, we have that $\Gamma_p\backslash K$ is a graph of a real-to-real function that has only two ways to escape to infinity --- a contradiction.
+On the other hand, since $\Sigma$ is a graph outside the compact set $K$, we have that $\Gamma_p\backslash K$ is a graph of a real-to-real function that has only two ways to escape to infinity --- a contradiction.
 
 \stepcounter{section}
 \setcounter{eqtn}{0}
@@ -1270,9 +1275,9 @@ unfold it on the plane (see the picture) and try to figure out what is the image
 
 \parbf{\ref{ex:length-dist-conv}.} 
 Note that by \ref{thm:convex-embedded}, $\Sigma$ bounds a strictly convex region.
-Therefore we can assume that $\Norm(p)\ne\Norm(q)$, otherwise $p=q$ and the inequality is evident.
+Therefore, we can assume that $\Norm(p)\ne\Norm(q)$, otherwise $p=q$ and the inequality is evident.
 
-Further, we can assume that $\Norm(p)+\Norm(q)\ne 0$, otherwise the right hand side is undefined.
+Further, we can assume that $\Norm(p)+\Norm(q)\ne 0$, otherwise the right-hand side is undefined.
 
 
 In the remaining case the tangent planes $\T_p$ and $\T_q$ intersect along a line, say $\ell$.
@@ -1289,7 +1294,7 @@ Finally, apply \ref{cor:shorts+convex} to show that
 
 \parbf{\ref{ex:hat-convex}.} Suppose there is a minimizing curve $\gamma\not\subset\Delta$ with endpoints $p$ and $q$ in $\Delta$.
 
-Without loss of generality, we may assume that only one arc of $\gamma$ lies outside of $\Delta$.
+Without loss of generality, we may assume that only one arc of $\gamma$ lies outside $\Delta$.
 Reflection of this arc  with respect to $\Pi$ together with the remaining part of $\gamma$ forms another curve $\hat\gamma$ from $p$ to $q$;
 it runs partly along $\Sigma$ 
 and partly outside $\Sigma$,
@@ -1298,7 +1303,7 @@ Note that
 \[\length\hat\gamma=\length\gamma.\]
 
 
-Denote by $\bar\gamma$ the closest point projection of $\hat\gamma$ on $\Sigma$.
+Denote by $\bar\gamma$ the closest-point projection of $\hat\gamma$ on $\Sigma$.
 Note that the curve $\bar\gamma$ lies in $\Sigma$, 
 it has the same ends as $\gamma$,
 and by \ref{cor:shorts+convex}
@@ -1307,7 +1312,7 @@ This means that $\gamma$ is not length minimizing,
 a contradiction.
 
 \parbf{\ref{ex:intrinsic-diameter}.} 
-Show that the closest point projection $\partial B \to \Sigma $ is surjective and apply \ref{lem:closest-point-projection}.
+Show that the closest-point projection $\partial B \to \Sigma $ is surjective and apply \ref{lem:closest-point-projection}.
 
 \stepcounter{section}
 \setcounter{eqtn}{0}
@@ -1320,8 +1325,8 @@ $\langle\gamma'\times \gamma,\vec i\rangle$
 is constant.
 
 Since $\gamma''(t)\perp\T_{\gamma(t)}$, the three vectors $\vec i$, $\gamma$, and $\gamma''$ lie in the same plane.
-In particular $\langle\gamma''\times \gamma,\vec i\rangle=0$.
-Therefore
+In particular, $\langle\gamma''\times \gamma,\vec i\rangle=0$.
+Therefore,
 $
 \langle\gamma'\times \gamma,\vec i\rangle'
 =
@@ -1333,7 +1338,7 @@ $.
 \parbf{\ref{ex:asymptotic-geodesic}.} By Lemma \ref{lem:constant-speed},
 we can assume that $\gamma$ is parametrized by arc-length.
 By the definition of geodesic, we have that $\gamma''(s)\perp\T_{\gamma(s)}$. 
-Therefore 
+Therefore, 
 \[\gamma''(s)=k_n(s)\cdot\Norm(\gamma(s)),\]
 where $k_n(s)$ is the normal curvature of $\gamma$ at time $s$.
 Since $\gamma$ is asymptotic, $k_n(s)\equiv 0$;
@@ -1350,7 +1355,7 @@ Since $\gamma$ is unit speed, \ref{prop:a'-pertp-a''} implies that $\gamma''\per
 Since $\Sigma$ is mirror symmetric with respect to the plane $\Pi$,
 the tangent plane $\T_{\gamma(t)}\Sigma$ is also mirror symmetric with respect to  $\Pi$ as well.
 It follows that $\T_{\gamma(t)}\Sigma$ is spanned by $\mu$ and $\gamma'(t)$.
-Hence $\gamma''\perp \mu$ and $\gamma''\perp\gamma'$ imply $\gamma''\perp\T_{\gamma(t)}\Sigma$;
+Hence, $\gamma''\perp \mu$ and $\gamma''\perp\gamma'$ imply $\gamma''\perp\T_{\gamma(t)}\Sigma$;
 that is, $\gamma$ is a geodesic.
 
 
@@ -1363,7 +1368,7 @@ In the case when $\gamma$ is tangent to a meridian at some point, then by the  u
  $\gamma$ runs along that meridian; in particular it is non-contractible.
 
 In the remaining case, $\gamma$ can intersect meridians only transversely.
-Therefore the longitude of $\gamma$ is monotonic.
+Therefore, the longitude of $\gamma$ is monotonic.
 Whence again $\gamma$ is non-contractible.
 
 
@@ -1413,17 +1418,17 @@ In this case there is an arc $\alpha_1$ of $\alpha$ that lies entirely on one si
 
 Let us remove the arc $\alpha_1$ from $\alpha$ and replace it with the reflection of $\alpha_1$ across $\Pi$.
 Note that the obtained curve, say $\beta$, lies in the surface; it has the same length as $\alpha$, and it connects the same pair of points, say $p$ and $q$.
-Therefore $\beta$ is another shortest path from $p$ to $q$ in $\Sigma$ that is distinct from $\alpha$.
+Therefore, $\beta$ is another shortest path from $p$ to $q$ in $\Sigma$ that is distinct from $\alpha$.
 
 By \ref{prop:gamma''}, $\alpha$ and $\beta$ are geodesics.
 Since $\alpha$ and $\beta$ have a common subarc, they share one point and velocity vector at this point;
 by \ref{prop:geod-existence} $\alpha$ coincides with $\beta$ --- a contradiction.
 
 
-\parbf{\ref{ex:milka}.} Let $W$ be the closed region outside of $\Sigma$. Show that the distance $\dist{p^t}{q}W$ is constant with respect to $t$. This implies that the concatenation of the line segment $[p^t,\gamma(t)]$ and the arc $\gamma|_{[t,\ell]}$ is a shortest path from $p^t$ to $q$  in $W$. Since $\Sigma$ is strictly convex, 
+\parbf{\ref{ex:milka}.} Let $W$ be the closed region outside $\Sigma$. Show that the distance $\dist{p^t}{q}W$ is constant with respect to $t$. This implies that the concatenation of the line segment $[p^t,\gamma(t)]$ and the arc $\gamma|_{[t,\ell]}$ is a shortest path from $p^t$ to $q$  in $W$. Since $\Sigma$ is strictly convex, 
 \[ \dist{\gamma (t)}{q}W > \dist{\gamma(t)}{q}{\mathbb{R}^3}  \]
-for all $t < \ell$. Hence 
-
+for all $t < \ell$.
+Hence,
 \[
 \begin{aligned}
  \dist{p^t}{q}W  &=  \dist{p^t}{\gamma(t)}W + \dist{\gamma (t)}{q}W   
@@ -1525,7 +1530,7 @@ Conclude that $\gamma$ has identical spherical images as a curve in $\Sigma_1$ a
 Apply \ref{obs:parallel=}.
 
 \parbf{\ref{ex:holonomy=not0}.}
-Consider the right angled spherical triangle that an octant of $\mathbb{R}^3$ cuts form the sphere.
+Consider the right-angled spherical triangle that an octant of $\mathbb{R}^3$ cuts form the sphere.
 Argue that parallel transport around it rotates the tangent plane by the angle $\tfrac\pi 2$. 
 
 \stepcounter{section}
@@ -1547,10 +1552,10 @@ For the last part, apply \ref{ex:bisection-of-S2}.
 
 For the second part, arguing by contradiction, assume that two closed geodesics $\gamma_1$ and $\gamma_2$ do not intersect. 
 This would imply that $\gamma_2$ lies in one of the regions, say $R_1$, that $\gamma_1$ cuts  from $\Sigma$.
-Similarly $\gamma_1$ lies in one of the regions, say $R_2$, that $\gamma_2$ cuts  from $\Sigma$.
+Similarly, $\gamma_1$ lies in one of the regions, say $R_2$, that $\gamma_2$ cuts  from $\Sigma$.
 
 Observe that $R_1$ and $R_2$ cover $\Sigma$ with overlap.
-Therefore the first part implies that the integral of the Gauss curvature over $\Sigma$ is less than $4\cdot\pi$.
+Therefore, the first part implies that the integral of the Gauss curvature over $\Sigma$ is less than $4\cdot\pi$.
 The latter contradicts \ref{ex:intK:4pi}.
 
 \parbf{\ref{ex:self-intersections}}; \textit{(easy)}.
@@ -1597,7 +1602,7 @@ Conclude that we can assume that $b(r,\theta)>0$ for small positive values $r$.
 
 Suppose $b(r_1,\theta_1)<0$ at some pair $(r_1,\theta_1)$ with $0<r_1<r_0$.
 Observe that if $\theta_2$ is sufficiency close to $\theta_1$ then the radial curves $r\mapsto b(r,\theta_1)$ and $r\mapsto b(r,\theta_2)$ defined on the interval $(0,r_1)$ intersect.
-Therefore $\exp_p$ is not injective in $B$ --- a contradiction.
+Therefore, $\exp_p$ is not injective in $B$ --- a contradiction.
 
 \parit{\ref{SHORT.ex:inj-rad:0}.}
 Suppose that $b(r_1,\theta_1)=0$.
@@ -1683,7 +1688,7 @@ we get
 \langle\vec v,\vec u_u\rangle
 &=0.
 \end{align*}
-Hence we get two more identities in \ref{eq:key-orthogonal/2}.
+Hence, we get two more identities in \ref{eq:key-orthogonal/2}.
 
 Since $\vec u, \vec v$ is an orthonormal frame, by \ref{thm:shape-chart} we have
 \[
@@ -1725,7 +1730,7 @@ Applying  \ref{eq:dv/du}, \ref{eq:shape-lmn}, and $s_v\perp\Norm$ we get
 \end{align*}
 that imply the last two equalities in \ref{eq:key-orthogonal/2}.
 
-Therefore the first two identities in \ref{SHORT.lem:K(orthogonal):uu-vv} are proved;
+Therefore, the first two identities in \ref{SHORT.lem:K(orthogonal):uu-vv} are proved;
 the remaining two identities can be proved along the same lines.
 
 \parit{\ref{SHORT.lem:K(orthogonal):K}.}
@@ -1738,7 +1743,7 @@ m&n
 )
 $;
 that is, $K=\ell\cdot n-m^2$.
-Therefore 
+Therefore, 
 \begin{align*}
 a\cdot b\cdot K
 &=
@@ -1826,10 +1831,11 @@ f(t_1)&=\dist{x}{p}{}+\dist{x}{q}{}-\side\hinge xpq
 
 Show and use that $f$ is concave and $f(0)=0$.
 
-\parbf{\ref{ex:open-comparison}}; \ref{SHORT.ex:open-comparison:positive}. Apply Rauch comparison \ref{prop:rauch} and the property of exponential map in \ref{prop:exp}.
+\parbf{\ref{ex:open-comparison}}; \ref{SHORT.ex:open-comparison:positive}.
+Apply Rauch comparison \ref{prop:rauch} and properties of the exponential map in \ref{prop:exp}.
 
-\parit{\ref{SHORT.ex:open-comparison:almost-min}.} Argue by contradiction;
-if the statement does not hold then for any $p\in\Sigma$ there is a point $q=q(p)\in \Sigma$ such that 
+\parit{\ref{SHORT.ex:open-comparison:almost-min}.} Argue by contradiction.
+If the statement does not hold, then for any $p\in\Sigma$ there is a point $q=q(p)\in \Sigma$ such that 
 $\dist{q}{p}\Sigma< 100\cdot R_p$
 and
 $R_q<(1-\tfrac1{100})\cdot R_p$.
@@ -1864,7 +1870,7 @@ Use the comparison to show that these plane triangles form a required polygon.
 It remains to show that the plane pentagon provided by \ref{SHORT.ex:convex-polyhon} cannot exist.
 Imagine that there is air pressure in the pentagon, it should not move it; so the total force should vanish.
 Use part \ref{SHORT.ex:convex-polyhon+self-intersections:angles} to show that this is not the case.
-(Equivalently, show that the sum of its side vectors oriented counterclocwise does not vanish.)
+(Equivalently, show that the sum of its side vectors oriented counterclockwise does not vanish.)
 
 \parbf{\ref{ex:geod-convexity}.} Apply \ref{angk>angk} and \ref{angk<angk}.
 
@@ -1949,7 +1955,7 @@ Chose small $t>0$ and set $x\z=\gamma(t)$.
 Consider a model triangle $[\tilde p\tilde q\tilde x]\z=\tilde\triangle(pqx)$.
 Let $\tilde\delta$ be the line thru $\tilde q$ perpendicular to $[\tilde p,\tilde q]$.
 Denote by $\tilde y$ the orthogonal projection of $\tilde x$ to $\tilde\delta$.
-By comparison we have that 
+By comparison, we have that 
 \begin{align*}
 \phi
 =\measuredangle\hinge qpx
@@ -1964,7 +1970,7 @@ By comparison we have that
 \end{align*}
 
 Since $t=\dist{\tilde p}{\tilde x}{\mathbb{R}^2}$ is small, so is the distances $\dist{\tilde q}{\tilde y}{\mathbb{R}^2}$.
-Therefore we can choose a point $y$ on $\delta$ such that $\dist{q}{y}\Sigma=\dist{\tilde q}{\tilde y}{\mathbb{R}^2}$.
+Therefore, we can choose a point $y$ on $\delta$ such that $\dist{q}{y}\Sigma=\dist{\tilde q}{\tilde y}{\mathbb{R}^2}$.
 Moreover, if we choose in on the {}\emph{right side}, then $\tfrac\pi2-\psi \ge \measuredangle\hinge qxy$.
 By construction and comparison, we have 
 \begin{align*}
@@ -1976,7 +1982,7 @@ By construction and comparison, we have
 \ge 
 \modangle q x y.
 \end{align*}
-Therefore $\dist{x}{y}\Sigma\le \dist{\tilde x}{\tilde y}{\mathbb{R}}$.
+Therefore, $\dist{x}{y}\Sigma\le \dist{\tilde x}{\tilde y}{\mathbb{R}}$.
 Since $\tilde\phi\le\phi$, we get that
 \begin{align*}
 f\circ\gamma(t)&\le \dist{x}{y}\Sigma\le 

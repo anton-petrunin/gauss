@@ -25,7 +25,9 @@ Note that reverting the parametrization of one of the curves, cooriented curves 
 
 \section{Supporting curves}
 
-Let $\gamma_1$ and $\gamma_2$ be two smooth regular plane curves that share a point \[p=\gamma_1(t_1)=\gamma_2(t_2)\] which is not an endpoint of any of the curves.
+Let $\gamma_1$ and $\gamma_2$ be two smooth regular plane curves that share a point 
+\[p=\gamma_1(t_1)=\gamma_2(t_2)\] 
+which is not an endpoint for both.
 Suppose that there is $\epsilon>0$ such that the arc $\gamma_2|_{[t_2-\epsilon, t_2+\epsilon]}$ lies in a closed plane region $R$ with the arc $\gamma_1|_{[t_1-\epsilon, t_1+\epsilon]}$ in its boundary,
 then we say that $\gamma_1$ \index{local!support}\emph{locally supports} $\gamma_2$ at the time parameters $t_1$ and $t_2$.
 If both curves are simple, then  without ambiguity we also could say that $\gamma_1$ {}\emph{locally supports} $\gamma_2$ at the point $p$.
@@ -80,7 +82,7 @@ Let $\gamma_1$ and $\gamma_2$ be two smooth regular plane curves.
 
 Suppose $\gamma_1$ locally supports $\gamma_2$ from the left (right) at the time parameters $t_1$ and $t_2$.
 Then 
-\[\skur_1(t_1)\le \skur_2(t_2)\quad(\text{respectively}\quad \skur_1(t_1)\ge \skur_2(t_2)).\]
+\[\skur_1(t_1)\le \skur_2(t_2)\quad(\text{respectively}\quad \skur_1(t_1)\ge \skur_2(t_2)),\]
 where $\skur_1$ and $\skur_2$ denote the signed curvature of $\gamma_1$ and $\gamma_2$ respectively.
 
 A partial converse also holds.
@@ -129,7 +131,7 @@ Try to prove the same for a smooth regular plane loop.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:in-triangle}
-Assume a closed smooth regular plane curve $\gamma$ runs inside of a triangle $\triangle$ with inradius 1; that is, the circle tangent to all three sides of $\triangle$ has radius 1. 
+Assume a closed smooth regular plane curve $\gamma$ runs inside a triangle $\triangle$ with inradius 1; that is, the circle tangent to all three sides of $\triangle$ has radius 1. 
 Show that there is a point on $\gamma$ with absolute curvature at least~$1$.
 \end{thm}
 
@@ -160,7 +162,7 @@ Recall that a plane curve is convex if it bounds a convex region.
 
 \begin{thm}{Proposition}\label{prop:convex}
 Suppose that a closed simple plane curve $\gamma$ bounds a figure $F$.
-Then $F$ is convex if and only if the signed curvature of $\gamma$ does not change sign.
+Then $F$ is convex if and only if the signed curvature of $\gamma$ does not change the sign.
 \end{thm}
 
 
@@ -241,7 +243,7 @@ Since a line has vanishing curvature, the supporting test (\ref{prop:supporting-
 \parit{``If'' part.}
 Denote by $K$ the convex hull of $F$.
 If $F$ is not convex, then $F$ is a proper subset of $K$.
-Therefore $\partial K$ contains a line segment that is not a part of $\partial F$.
+Therefore, $\partial K$ contains a line segment that is not a part of $\partial F$.
 In other words, there is a line that supports $\gamma$ at two points, say $x$ and $y$ that divide $\gamma$ in two arcs $\gamma_1$ and $\gamma_2$, both distinct from the line segment $[x,y]$.
 
 Note that one of the arcs $\gamma_1$ or $\gamma_2$ is parametrized from $x$ to $y$ and the other from $y$ to $x$.
@@ -291,7 +293,7 @@ Assume $\gamma$ is a simple smooth regular plane loop with absolute curvature bo
 Then it surrounds a unit disc.
 \end{thm}
 
-This theorem gives a simple but nontrivial example of the so-called \index{local!to global theorem}\emph{local to global theorems} --- based on some local data (in this case the curvature of a curve) we conclude a global property (in this case existence of a large disc surrounded by the curve).
+This theorem gives a simple but nontrivial example of the so-called \index{local!to global theorem}\emph{local to global theorems} --- based on some local data (in this case the curvature of a curve) we conclude a global property (in this case the existence of a large disc surrounded by the curve).
 
 {
 
@@ -309,7 +311,7 @@ However, as one may see from the spinner-like example on the diagram it does not
 
 \begin{thm}{Key lemma}\label{thm:moon}
 Assume $\gamma$ is a simple smooth regular plane loop.
-Then at one point of $\gamma$ (distinct from its base) its osculating circle $\sigma$ globally supports $\gamma$ from the inside.
+Then at one point of $\gamma$ (distinct from its base), its osculating circle $\sigma$ globally supports $\gamma$ from the inside.
 \end{thm}
 
 First let us show that the theorem follows from the lemma.
@@ -317,7 +319,7 @@ First let us show that the theorem follows from the lemma.
 \parit{Proof of \ref{thm:moon-orginal} modulo \ref{thm:moon}.}
 Since $\gamma$ has absolute curvature at most 1, each osculating circle has radius at least 1.
 According to the key lemma one of the osculating circles $\sigma$ globally supports $\gamma$ from inside.
-In particular $\sigma$ lies inside of $\gamma$, whence the result.
+In particular, $\sigma$ lies inside $\gamma$, whence the result.
 \qeds
 
 \parit{Proof of \ref{thm:moon}.}
@@ -341,7 +343,7 @@ Indeed, since $\sigma$ supports $\gamma$ from the left, by \ref{prop:supporting-
 The latter is impossible by our assumption.
 
 It follows that $\sigma$ has to touch $\gamma$ at another point.
-Otherwise we can increase $\sigma$ slightly while keeping it inside $F$.
+Otherwise, we can increase $\sigma$ slightly while keeping it inside $F$.
 
 Indeed, since $\skur_\sigma> \skur(p)_\gamma$, 
 by \ref{prop:supporting-circline} we can choose a neighborhood $U$ of $p$ such that after a slight increase of $\sigma$, the intersection $U\cap \sigma$ is still in $F$.
@@ -368,12 +370,13 @@ Denote by $\sigma_2$ the incircle at $p_2$.
 
 Note that $\sigma_2$ cannot intersect $\hat\sigma_1$.
 Otherwise, if $\sigma_2$ intersects $\hat\sigma_1$ at some point $s$, then $\sigma_2$ has to have two more common points with $\check\sigma_1$, say $x$ and $y$ --- one for each arc of $\sigma_2$ from $p_2$ to $s$.
-Therefore $\sigma_1\z=\sigma_2$ since these two circles have three common points: $s$, $x$, and $y$. 
+Therefore, $\sigma_1\z=\sigma_2$ since these two circles have three common points: $s$, $x$, and $y$. 
 On the other hand, by construction, $p_2\in \sigma_2$ and $p_2\notin \sigma_1$ --- a contradiction.
 
 
 Recall that $\sigma_2$ has to touch $\gamma$ at another point.
-From above it follows that it can only touch $\gamma_1$ and therefore we can choose an arc $\gamma_2\subset \gamma_1$ that runs from $p_2$ to a first point $q_2$ on $\sigma_2$.
+From above, it follows that $\sigma_2$ can only touch $\gamma_1$. 
+Therefore we can choose an arc $\gamma_2\subset \gamma_1$ that runs from $p_2$ to a first point $q_2$ on $\sigma_2$.
 Since $p_2$ is the midpoint of $\gamma_1$, we have that
 \[\length \gamma_2< \tfrac12\cdot\length\gamma_1.\eqlbl{eq:length<length/2}\]
 
@@ -381,7 +384,7 @@ Repeating this construction recursively,
 we get an infinite sequence of arcs $\gamma_1\supset \gamma_2\supset\dots$;
 by \ref{eq:length<length/2}, we also get that 
 \[\length\gamma_n\to0\quad\text{as}\quad n\to\infty.\] 
-Therefore the intersection 
+Therefore, the intersection 
 \[\bigcap_n\gamma_n\]
 contains a single point; denote it by $p_\infty$.
 
@@ -393,7 +396,7 @@ It follows that $q_\infty =p_\infty$ --- a contradiction.
 \begin{thm}{Exercise}\label{ex:moon-rad}
 Assume that a closed smooth regular curve $\gamma$ lies in a figure $F$ bounded by a closed simple plane curve.
 Suppose that $R$ is the maximal radius of discs that lie in $F$.
-Show that absolute curvature of $\gamma$ is at least $\tfrac1R$ at some parameter value.
+Show that the absolute curvature of $\gamma$ is at least $\tfrac1R$ at some parameter value.
 \end{thm}
 
 
@@ -425,7 +428,7 @@ the first curve has one self-intersection and exactly two vertices;
 the second curve has exactly four vertices and no self-intersections.
 
 The four-vertex theorem was first proved by Syamadas Mukhopadhyaya \cite{mukhopadhyaya} for convex curves.
-Many different proofs and generalizations are known.
+Many proofs and generalizations are known.
 One of our favorite proofs was given by Robert Osserman \cite{osserman}.
 We give a proof  of the following stronger statement  based on the key lemma in the previous section.
 
@@ -449,7 +452,8 @@ First note that if an osculating circline $\sigma$ at a point $p$ supports $\gam
 Indeed, if not, then a small arc around $p$ has monotonic curvature.
 
 Applying the spiral lemma (\ref{lem:spiral}) we get that the osculating circles at this arc are nested.
-In particular the curve $\gamma$ crosses $\sigma$ at $p$ and therefore $\sigma$ does not locally support $\gamma$ at $p$.
+In particular, the curve $\gamma$ crosses $\sigma$ at $p$. 
+Therefore $\sigma$ does not support $\gamma$ locally at $p$.
 \qeds
 
 }
@@ -457,17 +461,17 @@ In particular the curve $\gamma$ crosses $\sigma$ at $p$ and therefore $\sigma$ 
 \parit{Proof of \ref{thm:4-vert-supporting}.}
 According to the key lemma (\ref{thm:moon}), there is a point $p\in\gamma$ such that its osculating circle supports $\gamma$ from inside.
 The curve $\gamma$ can be considered as a loop with the base at $p$.
-Therefore the key lemma implies the existence of another point $q\in\gamma$ with the same property.
+Therefore, the key lemma implies the existence of another point $q\in\gamma$ with the same property.
 
 It shows the existence of two osculating circles that support $\gamma$ from inside;
-it remains to show existence of two osculating circles that support $\gamma$ from outside.
+it remains to show the existence of two osculating circles that support $\gamma$ from outside.
 
-In order to get the osculating circles supporting $\gamma$ from outside, one can repeat the proof of key lemma taking instead of incircle the circline of maximal signed curvature that supports the curve from outside, assuming that $\gamma$ is oriented so that the region on the left from it is bounded.%
+In order to get the osculating circles supporting $\gamma$ from outside, one can repeat the proof of the key lemma taking instead of incircle the circline of maximal signed curvature that supports the curve from outside, assuming that $\gamma$ is oriented so that the region on the left from it is bounded.%
 
 (Alternatively, if one applies to $\gamma$ an inversion with respect to a circle whose center lies inside~$\gamma$, then the obtained curve $\gamma_1$ also has  two osculating circles that support $\gamma_1$ from inside.
 According to \ref{ex:inverse}, these osculating circlines are inverses of the osculating circlines of $\gamma$.
-Note that the region lying inside of $\gamma$ is mapped to the region outside of $\gamma_1$ and the other way around.
-Therefore these two circlines correspond to the osculating circlines supporting $\gamma$ from outside.)
+Note that the region lying inside $\gamma$ is mapped to the region outside $\gamma_1$ and the other way around.
+Therefore, these two circlines correspond to the osculating circlines supporting $\gamma$ from outside.)
 \qeds
 
 \begin{wrapfigure}[5]{r}{25 mm}

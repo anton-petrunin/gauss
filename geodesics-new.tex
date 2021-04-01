@@ -77,7 +77,7 @@ Given a tangent vector ${\vec v}$ to $\Sigma$ at a point $p$,
 there is a unique geodesic $\gamma\:\mathbb{I}\to \Sigma$ defined on a maximal open interval $\mathbb{I}\ni 0$ that starts at $p$ with velocity vector ${\vec v}$;
 that is, $\gamma(0)=p$ and $\gamma'(0)={\vec v}$.
 
-Moreover
+Moreover,
 \begin{subthm}{prop:geod-existence:smooth} the map $(p,{\vec v},t)\mapsto \gamma(t)$ is smooth in its domain of definition.
 \end{subthm}
 
@@ -133,7 +133,7 @@ Now observe that the equation
 \[\gamma''(t)\perp\T_{\gamma(t)} \eqlbl{eq:def-def-geod} \] 
 means that 
 $\gamma''$ is perpendicular to the two basis vectors in $\T_{\gamma(t)}$.
-Therefore the vector equation \ref{eq:def-def-geod} can be rewritten as the following system of two real equations
+Therefore, the vector equation \ref{eq:def-def-geod} can be rewritten as the following system of two real equations
 \[
 \begin{cases}
 \langle \gamma'',s_x\rangle=0,
@@ -183,13 +183,13 @@ Without loss of generality, we may assume that $b=\sup\mathbb{I}<\infty$.
 (If not, switch the direction of $\gamma$.)
 
 By \ref{lem:constant-speed} $|\gamma'|$ is constant, in particular $t\mapsto \gamma(t)$ is a uniformly continuous function.
-Therefore the limit point,
+Therefore, the limit point
 $q=\lim_{t\to b}\gamma(t)$
 is defined.
 Since $\Sigma$ is a proper surface, $q\in \Sigma$. 
 
 Applying the argument above in a tangent-normal coordinate chart at $q$, we conclude that $\gamma$ can be extended as a geodesic beyond $q$.
-Therefore $\mathbb{I}$ is not a maximal interval --- a contradiction.
+Therefore, $\mathbb{I}$ is not a maximal interval --- a contradiction.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:round-torus}
@@ -244,12 +244,12 @@ Note also that \ref{prop:geod-existence:whole} implies that {}\emph{if $\Sigma$ 
 
 
 \begin{thm}{Proposition}\label{prop:exp}
-Let $p$ be a point on smooth surface $\Sigma$ (without boundary).
+Let $p$ be a point on a smooth surface $\Sigma$ (without boundary).
 Then there is $r_p>0$ such that
 the exponential map $\exp_p$ is defined on the open ball $B_p=B(0,r_p)_{\T_p}$
 and the restriction $\exp_p|_{B_p}$ is a smooth regular parametrization of a neighborhood of $p$ in $\Sigma$.
 
-Moreover we have a {}\emph{local control} on $r_p$;
+Moreover, we have a {}\emph{local control} on $r_p$;
 that is, for any $q\in \Sigma$ there is $\epsilon>0$ such that if $\dist{p}{q}\Sigma<\epsilon$, then $r_p\ge\epsilon$.
 \end{thm}
 
@@ -273,14 +273,14 @@ The second part of the inverse function theorem (\ref{thm:inverse})
 
 Given $p\in \Sigma$, the least upper bound on $r_p$ that satisfies \ref{prop:exp} is called the \index{injectivity radius}\emph{injectivity radius} of $\Sigma$ at $p$;
 it is denoted by $\inj(p)$.
-The proposition states that {}\emph{injectivity radius is positive and locally bounded away from zero}.
+The proposition states that the {}\emph{injectivity radius is positive and locally bounded away from zero}.
 In fact, the function {}\emph{$\inj\:\Sigma\to (0,\infty]$ is continuous};
 the latter was proved by Wilhelm Klingenberg \cite[5.4]{gromoll-klingenberg-meyer}. 
 
 The proof of the following statement will be indicated in \ref{ex:inj-rad}.
 
 \begin{thm}{Proposition}\label{prop:inj-rad}
-Let $p$ be a point on smooth surface $\Sigma$ (without boundary).
+Let $p$ be a point on a smooth surface $\Sigma$ (without boundary).
 If $\exp_p$ is injective in $B_p=B(0,r)_{\T_p}$, then the restriction $\exp_p|_{B_p}$ is a diffeomorphism between $B_p$ and its image in $\Sigma$.
 
 In other words, the injectivity radius at $p$ can be defined as the least upper bound on the $r$ such that $\exp_p$ is injective in the ball $B(0,r)_{\T_p}$.
@@ -297,7 +297,7 @@ A partial converse to the first statement also holds: a sufficiently short arc o
 More precisely, any point $p$ in $\Sigma$ has a neighborhood $U$ such that any geodesic that lies entirely in $U$ is a shortest path.
 \end{thm}
 
-As one can see from the following exercise, a geodesics might fail to be a shortest path.
+As one can see from the following exercise, geodesics might fail to be shortest paths.
 A geodesic that is also a shortest path is called a \index{minimizing geodesic}\emph{minimizing geodesic}.
 
 \begin{thm}{Exercise}\label{ex:helix=geodesic}
@@ -315,12 +315,12 @@ In fact, if one assumes that $\gamma$ is smooth, then it is easy to convert this
 Let us think about a shortest path $\gamma$ as a stable position of a stretched elastic thread that is forced to lie on a frictionless surface.
 Since it is frictionless, the force density $\vec n=\vec n(t)$ that keeps $\gamma$ in the surface must be proportional to the normal vector to the surface at~$\gamma(t)$.
 
-The tension in the thread has to be the same at all points (otherwise the thread would move back or forth and it would not be stable).
+The tension in the thread has to be the same at all points. (Otherwise the thread would move back or forth, and it would not be stable.)
 Denote the tension by $\tau$.
 
 We can assume that $\gamma$ has unit speed;
 in this case the net force from tension along the arc $\gamma_{[t_0,t_1]}$ is $\tau\cdot(\gamma'(t_1)-\gamma'(t_0))$.
-Hence the density of the net force from tension at $t_0$ is 
+Hence, the density of the net force from tension at $t_0$ is 
 \begin{align*}
 \vec f(t_0)&=\lim_{t_1\to t_0}\tau\cdot\frac{\gamma'(t_1)-\gamma'(t_0)}{t_1-t_0}=
 \\
@@ -414,7 +414,7 @@ Furthermore,
 \[\gamma''=k\cdot\Norm,\]
 where $k=k(t)$ is the normal curvature at $\gamma(t)$ in the direction of $\gamma'(t)$.
 
-Therefore
+Therefore,
 \[z''=k\cdot\cos\theta,
 \eqlbl{eq:z''}\]
 where $\theta=\theta(t)$ denotes the angle between $\Norm(t)$ and the $z$-axis.
@@ -424,7 +424,7 @@ Since $\Norm$ points up, we have $\theta(t)<\tfrac\pi2$, or equivalently
 
 Since $f$ is convex, we have that the tangent plane supports the graph from below at any point;
 in particular $k(t)\ge 0$ for any $t$.
-It follows that the right hand side in \ref{eq:z''} is nonnegative;
+It follows that the right-hand side in \ref{eq:z''} is nonnegative;
 whence the statement follows.
 \qeds
 
@@ -525,7 +525,7 @@ The following exercise will guide you thru the proof of the theorem.
 
 \begin{thm}{Exercise}\label{ex:bound-tc}
 Let $\Sigma$ be as in the theorem and $\gamma$ be a unit-speed shortest path in $\Sigma$.
-Denote by $\Norm_p$ the unit normal vector that points outside of $\Sigma$;
+Denote by $\Norm_p$ the unit normal vector that points outside $\Sigma$;
 denote by $\theta_p$ the angle between $\Norm_p$ and the direction from the origin to the point $p\in\Sigma$.
 Set $\rho(t)\z=|\gamma(t)|^2$; denote by $k(t)$ the curvature of $\gamma$ at $t$.
 

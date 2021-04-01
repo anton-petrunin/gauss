@@ -13,17 +13,17 @@ defined in Section~\ref{sec:frenet-frame};
 we will keep the name \index{Frenet frame}\emph{Frenet frame} for it.
 
 Recall that $\gamma''(s)\perp \gamma'(s)$ (see \ref{prop:a'-pertp-a''}).
-Therefore 
+Therefore, 
 \[\tan'(s)=\skur(s)\cdot \norm(s).\eqlbl{eq:tau'}\]\index{10k@$\skur$}
 for some real number $\skur(s)$;
 the value $\skur(s)$ is called \index{curvature}\index{signed curvature}\emph{signed curvature} of $\gamma$ at $s$.
-We may use notation $\skur(s)_\gamma$ if we need to specify the curve~$\gamma$.
+We may use the notation $\skur(s)_\gamma$ if we need to specify the curve~$\gamma$.
 
 Note that 
 \[\kur(s)=|\skur(s)|;\]
 that is, up to sign, the signed curvature $\skur(s)$ equals the curvature $\kur(s)$  of $\gamma$ at $s$ defined in Section~\ref{sec:curvature};
 the sign tells us in which direction $\gamma$ turns --- if $\gamma$ is turning left at time $s$, then $\skur (s)>0$.
-If we want to emphasise that we are working with the {}\emph{non-signed} curvature of the curve, 
+If we want to emphasize that we are working with the {}\emph{non-signed} curvature of the curve, 
 we call it \index{curvature}\index{absolute curvature}\emph{absolute curvature}.
 
 Note that if we reverse the parametrization of $\gamma$ or change the orientation of the plane, then
@@ -35,7 +35,7 @@ Since $\tan(s),\norm(s)$ is an orthonormal frame, we have
 &
 \langle\norm,\norm\rangle&=1, 
 &
-\langle\tan,\norm\rangle&=0,
+\langle\tan,\norm\rangle&=0.
 \end{align*}
 Differentiating these identities we get 
 \begin{align*}
@@ -45,8 +45,9 @@ Differentiating these identities we get
 &
 \langle\tan',\norm\rangle+\langle\tan,\norm'\rangle&=0,
 \end{align*}
-By \ref{eq:tau'}, $\langle\tan',\norm\rangle=\skur$ and therefore $\langle\tan,\norm'\rangle=-\skur$.
-Hence we get 
+By \ref{eq:tau'}, $\langle\tan',\norm\rangle=\skur$. 
+Therefore $\langle\tan,\norm'\rangle=-\skur$.
+Hence, we get 
 \[\norm'(s)=-\skur(s)\cdot \tan(s).\eqlbl{eq:nu'}\]
 The equations \ref{eq:tau'} and \ref{eq:nu'} are the Frenet formulas for plane curves. 
 They can be written in matrix form as:
@@ -79,13 +80,13 @@ Show that
 \end{thm}
 
 The curves $\gamma_0$ and $\gamma_1$ in the exercise above describe the tracks of an idealized bicycle with  distance 1 from the rear to the front wheel.
-Thus by the exercise, the front wheel must have a longer track.
+Thus, by the exercise, the front wheel must have a longer track.
 For more on the geometry of bicycle tracks, see the survey of Robert Foote, Mark Levi, and Serge Tabachnikov \cite{foote-levi-tabachnikov} and the references therein.
 
 \section{Fundamental theorem of plane curves}
 
 \begin{thm}{Theorem}\label{thm:fund-curves-2D}
-Let $\skur(s)$ be a smooth real valued function defined on a real interval $\mathbb{I}$.
+Let $\skur(s)$ be a smooth real-valued function defined on a real interval $\mathbb{I}$.
 Then there is a smooth unit-speed curve $\gamma\:\mathbb{I}\to\mathbb{R}^2$ with signed curvature $\skur(s)$.
 Moreover, $\gamma$ is uniquely defined up to a rigid motion of the plane.
 \end{thm}
@@ -183,7 +184,7 @@ Since $\left|\int \skur(s)\cdot ds\right|\le \int|\skur(s)|\cdot ds$, we have
 \[|\tgc\gamma|\le \tc\gamma\eqlbl{eq:tsc-tc}\] 
 for any smooth regular plane curve $\gamma$;
 that is, the total signed curvature $\tgc{}$ cannot exceed the total curvature $\tc{}$ in absolute value.
-Note that the equality holds if and only if the signed curvature does not change sign.
+Note that the equality holds if and only if the signed curvature does not change the sign.
 
 \begin{thm}{Exercise}\label{ex:trochoids}
 A trochoid is a curve traced out by a point fixed to a wheel as it rolls along a straight line.
@@ -212,7 +213,7 @@ A family of \index{trochoid}\emph{trochoids} $\gamma_a\:[0,2\cdot\pi]\to \mathbb
 Any closed simple smooth regular plane curve $\gamma$ has total signed curvature  $\pm2\cdot\pi$; it is $+2\cdot\pi$
 if the region bounded by $\gamma$ lies on the left from it and  $-2\cdot\pi$ otherwise.
 
-Moreover the same statement holds for any closed piecewise simple smooth regular plane curve $\gamma$ if its total signed curvature is defined.
+Moreover, the same statement holds for any closed piecewise simple smooth regular plane curve $\gamma$ if its total signed curvature is defined.
 \end{thm}
 
 This proposition is called sometimes {}\emph{Umlaufsatz}; it is a differential-geometric analog of the theorem about the sum of the internal angles of a polygon (\ref{thm:sum=(n-2)pi}) which we use in the proof.
@@ -233,7 +234,7 @@ so that the polygonal line is simple and each arc $\gamma_i$ from $p_i$ to $p_{i
 \vskip4mm
 \end{wrapfigure}
 
-As usual we use indexes modulo $n$, in particular $p_{n+1}\z=p_1$.
+As usual, we use indexes modulo $n$, in particular $p_{n+1}\z=p_1$.
 Assume $p_i=\gamma(t_i)$.
 Set 
 \begin{align*}
@@ -249,7 +250,7 @@ is a multiple of $2\cdot\pi$.
 Since $\tc{\gamma_i}<\pi$, by the chord lemma (\ref{lem:chord}), we also have that $|\alpha_i|\z+|\beta_i|<\pi$.
 By \ref{eq:tsc-tc}, we have that $|\tgc{\gamma_i}|\le\tc{\gamma_i}$;
 therefore the value in \ref{eq:Psi-alpha-beta} vanishes.
-In other word,for each $i$ we have
+In other words, for each $i$ we have
 \[\tgc{\gamma_i}=\alpha_i+\beta_{i+1}.\]
 
 Note that 
@@ -258,7 +259,7 @@ is the internal angle of $\beta$ at $p_i$;
 $\delta_i\in (0,2\cdot\pi)$ for each $i$.
 Recall that the sum of the internal angles of an $n$-gon is $(n-2)\cdot \pi$ (see \ref{thm:sum=(n-2)pi}); that is,
 \[\delta_1+\dots+\delta_n=(n-2)\cdot \pi.\]
-Therefore 
+Therefore, 
 \[
 \begin{aligned}
 \tgc\gamma&=\tgc\gamma_1+\dots+\tgc\gamma_n=
@@ -278,7 +279,7 @@ The case of piecewise smooth and regular curves is done the same way;
 we need to subdivide the arcs in the cyclic concatenation further to meet the requirement above and instead of equation \ref{eq:delta=pi-alpha-beta} we have 
 \[\delta_i=\pi-\alpha_i-\beta_i-\theta_i,\]
 where $\theta_i$ is the signed external angle of $\gamma$ at $p_i$; it vanishes if the curve $\gamma$ is smooth at $p_i$.
-Therefore instead of equation \ref{eq:delta=pi-alpha-beta-sum}, we have
+Therefore, instead of equation \ref{eq:delta=pi-alpha-beta-sum}, we have
 \begin{align*}
 \tgc\gamma&=\tgc{\gamma_1}+\dots+\tgc{\gamma_n}+\theta_1+\dots+\theta_n=
 \\
@@ -343,19 +344,20 @@ Moreover, if $\skur=0$, then it is a line $\sigma(s)=p+s\cdot \tan$;
 if $\skur\ne 0$, then $\sigma$ runs around a circle of radius $\tfrac1{|\skur|}$ with center at $p+\tfrac1\skur\cdot \norm$, where $\tan,\norm$ is an oriented orthonormal frame.
 \end{thm}
 
-Further we will use the term \index{circline}\emph{circline} for {}\emph{a circle or a line};
+Further, we will use the term \index{circline}\emph{circline} for {}\emph{a circle or a line};
 these are the only plane curves with constant signed curvature.
 
 \parit{Proof.}
 The proof is done by a calculation based on \ref{thm:fund-curves-2D} and \ref{cor:2D-angle}.
 
-Suppose $s_0=0$, choose a coordinate system such that $p$ is its origin and $\tan$ points in the direction of the $x$-axis. Therefore $\norm$ points in the direction of the $y$-axis.
+Suppose $s_0=0$, choose a coordinate system such that $p$ is its origin and $\tan$ points in the direction of the $x$-axis.
+Therefore, $\norm$ points in the direction of the $y$-axis.
 Then
 \begin{align*}\theta(s)&=\int_{0}^s\skur\cdot dt=
 \\
 &=\skur\cdot s.
 \end{align*}
-Therefore
+Therefore,
 \[\sigma'(s)=(\cos[\skur\cdot s],\sin[\skur\cdot s]).\]
 It remains to integrate the last identity.
 If $\skur=0$, we get 
@@ -364,8 +366,8 @@ which describes the line $\sigma(s)=p+s\cdot \tan$.
 
 If $\skur\ne 0$, we get
 \[\sigma(s)=(\tfrac1\skur\cdot\sin[\skur\cdot s],
-\tfrac1\skur\cdot(1-\cos[\skur\cdot s])).\]
-which is the circle of radius $r=\tfrac1{|\skur|}$ centered at $(0,\tfrac1\skur)=p+\tfrac1\skur\cdot\norm$.
+\tfrac1\skur\cdot(1-\cos[\skur\cdot s]));\]
+it is the circle of radius $r=\tfrac1{|\skur|}$ centered at $(0,\tfrac1\skur)=p+\tfrac1\skur\cdot\norm$.
 \qeds
 
 
@@ -433,7 +435,7 @@ By \ref{prop:circline},
 \end{wrapfigure}
 
 Since $\skur>0$, we have that $r(s)\cdot\skur(s)=1$.
-Therefore applying Frenet formula \ref{eq:nu'}, we get that
+Therefore, applying Frenet formula \ref{eq:nu'}, we get that
 \begin{align*}
 \omega'(s)&=\gamma'(s)+r'(s)\cdot \norm(s)+r(s)\cdot \norm'(s)=
 \\
@@ -447,7 +449,7 @@ It follows that $|\omega'(s)|= r'(s)$ and $\omega'(s)$ points in the direction o
 
 Since $\norm'(s)=-\skur(s)\cdot\tan(s)$, the direction of $\omega'(s)$ cannot have constant direction on a nontrivial interval;
 that is, the curve $s\mapsto \omega(s)$ contains no line segments.
-Therefore 
+Therefore, 
 \begin{align*}
 |\omega(s_1)-\omega(s_0)|&<\length(\omega|_{[s_0,s_1]})=
 \\
@@ -460,7 +462,7 @@ Therefore
 
 In other words, the distance between the centers of $\sigma_{s_1}$ and $\sigma_{s_0}$
 is strictly less than the difference between their radii.
-Therefore the osculating circle at $s_0$ lies inside the osculating circle at $s_1$ without touching it.
+Therefore, the osculating circle at $s_0$ lies inside the osculating circle at $s_1$ without touching it.
 \qeds
 
 {
@@ -502,7 +504,7 @@ The same statement holds true without assuming positivity of curvature; the proo
 \parit{Proof of \ref{thm:spiral}.}
 Note that $\gamma(s)$ lies on the osculating circle $\sigma_s$ of $\gamma$ at $s$.
 If $s_1\ne s_0$, then by lemma \ref{lem:spiral}, $\sigma_{s_0}$ does not intersect $\sigma_{s_1}$.
-Therefore $\gamma(s_1)\ne \gamma(s_0)$,
+Therefore, $\gamma(s_1)\ne \gamma(s_0)$,
 hence the result.\qeds
 
 \begin{thm}{Exercise}\label{ex:3D-spiral}

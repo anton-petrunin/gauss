@@ -13,7 +13,7 @@ Let $\Sigma$ be a smooth surface and $p\in \Sigma$.
 Then the set of tangent vectors of $\Sigma$ at $p$ forms a plane;
 this plane is called the \index{tangent!plane}\emph{tangent plane} of $\Sigma$ at $p$.
 
-Moreover if $s\:U\to \Sigma$ is a local chart and $p=s(u_p,v_p)$, then 
+Moreover, if $s\:U\to \Sigma$ is a local chart and $p=s(u_p,v_p)$, then 
 the tangent plane of $\Sigma$ at $p$ is spanned by vectors $s_u(u_p,v_p)$ and $s_v(u_p,v_p)$.
 \end{thm}
 
@@ -22,7 +22,7 @@ This plane $\T_p$ might be considered as a linear subspace of $\mathbb{R}^3$ or 
 the latter is sometimes called the \index{tangent!plane}\emph{affine tangent plane}.
 The affine tangent plane can be interpreted as the best approximation at~$p$ of the surface $\Sigma$ by a plane.
 More precisely, 
-it has \index{order of contact}\emph{first order of contact} with $\Sigma$ at $p$;
+it has \index{order of contact}\emph{first order of contact} with $\Sigma$ at $p$; %???the first order
 that is, $\rho(q)\z=o(|p-q|)$, where $q\in \Sigma$ and $\rho(q)$ denotes the distance from $q$ to $\T_p$.
 
 \parit{Proof.}
@@ -31,7 +31,7 @@ Assume $\gamma$ is a smooth curve that starts at~$p$.
 Without loss of generality, we can assume that $\gamma$ is covered by the chart;
 in particular, there are smooth functions $u(t)$ and $v(t)$ such that 
 \[\gamma(t)=s(u(t),v(t)).\]
-Applying chain rule, we get
+Applying the chain rule, we get
 \[\gamma'=s_u\cdot u'+ s_v\cdot v';\]
 that is, $\gamma'$ is a linear combination of $s_u$ and $s_v$.
 
@@ -110,7 +110,7 @@ Applying the chain rule again, we get that
 \]
 at $(u_p,v_p)$.
 
-Notice that the left hand side in \ref{eq:f-gamma} does not depend on the choice of the chart $s$ and the right hand side depends only on $p$, $\vec w$, $f$, and $s$. 
+Notice that the left-hand side in \ref{eq:f-gamma} does not depend on the choice of the chart $s$ and the right-hand side depends only on $p$, $\vec w$, $f$, and $s$. 
 It follows that $(f\circ\gamma)'(0)$ depends only on $p$, $\vec w$ and $f$.
 
 The last statement follows from \ref{eq:f-gamma}.
@@ -130,7 +130,7 @@ It is straightforward to check that the functional $D$ obeys the product rule:
 \eqlbl{eq:tangent-functional}\]
 
 It is not hard to show that the tangent vector $\vec w$ is completely determined by the functional $D_{\vec w}$.
-Moreover tangent vectors at $p$ can be \emph{defined} as linear functionals on the space of smooth functions
+Moreover, tangent vectors at $p$ can be \emph{defined} as linear functionals on the space of smooth functions
 that satisfy the product rule \ref{eq:tangent-functional}.
 
 This definition grabs the key algebraic property of tangent vectors.
@@ -149,7 +149,8 @@ Note that $D_{\vec w} s(p)\in \T_{s(p)}\Sigma_1$ for any $\vec w\in \T_p$.
 Indeed, choose a curve $\gamma_0$ in $\Sigma_0$ such that $\gamma_0(0)=p$ and $\gamma_0'(0)=\vec w$.
 Observe that $\gamma_1= s\circ \gamma_0$ is a smooth curve in $\Sigma_1$ and 
 by the definition of directional derivative, we have $D_{\vec w} s(p)=\gamma_1'(0)$.
-It remains to note that $\gamma_1(0)\z= s(p)$ and therefore its velocity $\gamma_1'(0)$ is in $\T_{ s(p)}\Sigma_1$.
+It remains to note that $\gamma_1(0)\z= s(p)$.
+Therefore its velocity $\gamma_1'(0)$ is in $\T_{ s(p)}\Sigma_1$.
 
 Recall that \ref{def:directional-derivative} implies that 
 $d_p s\:\vec w \mapsto D_{\vec w} s$ defines a linear map $d_p s\:\T_p\Sigma_0\to \T_{ s(p)}\Sigma_1$;
@@ -180,7 +181,7 @@ If $\Sigma_0$ is a domain in the $(u,v)$-plane, then the value $\jac_p s$ can be
 \\
 &=\sqrt{\langle s_u, s_u\rangle\cdot\langle s_v, s_v\rangle -\langle s_u, s_v\rangle^2}=
 \\
-&=\sqrt{\det[\Jac^\top s\cdot \Jac s]}.
+&=\sqrt{\det[\Jac^\top s\cdot \Jac s]},
 \end{align*}
 where $\Jac s$ denotes the Jacobian matrix of $s$; it is a 2$\times$3 matrix with column vectors $s_u$ and $ s_v$.
 
@@ -203,7 +204,7 @@ In this case set
 \[\iint_R h\df \iint_{s^{-1}(R)} h\circ s(u,v)\cdot \jac_{(u,v)}s  \cdot du\cdot dv.\eqlbl{eq:area-def}\]
 
 
-By the substitution rule (\ref{thm:mult-substitution}), the right hand side in \ref{eq:area-def} does not depend on the choice of $s$.
+By the substitution rule (\ref{thm:mult-substitution}), the right-hand side in \ref{eq:area-def} does not depend on the choice of $s$.
 That is, if $s_1\:U_1\to \Sigma$ is another chart such that $s_1(U_1)\supset R$, then 
 \[\iint_{s^{-1}(R)} h\circ s(u,v)\cdot \jac_{(u,v)}s  \cdot du\cdot dv=\iint_{s_1^{-1}(R)} h\circ s_1(u,v)\cdot \jac_{(u,v)}s_1  \cdot du\cdot dv.\]
 In other words, the defining identity \ref{eq:area-def} makes sense.
@@ -255,7 +256,7 @@ The map $\Norm\:\Sigma\to \mathbb{S}^2$ defined by $p\mapsto \Norm(p)$ is called
 
 For surfaces, the spherical map plays essentially the same role as the tangent indicatrix for curves.
 
-The M\"obius strip shown on the diagram gives an example of a nonorientable surface --- there is no choice of normal vector field that is continuous along the middle of the strip (it changes the sign if you try to go around).
+The M\"obius strip shown on the diagram gives an example of a nonorientable surface --- there is no choice of a normal vector field that is continuous along the middle of the strip (it changes the sign if you try to go around).
 
 \begin{wrapfigure}{o}{42 mm}
 \vskip-0mm
@@ -270,9 +271,9 @@ In fact each chart $s(u,v)$ admits an orientation
 \frac{s_u\times s_v}
 {\left|s_u\times s_v\right|}.\]
 Indeed, the vectors $s_u$ and $s_v$ are tangent vectors at $p$; 
-since they are linearly independent, their vector product does not vanish and it is perpendicular to the tangent plane.
+since they are linearly independent, their vector product does not vanish, and it is perpendicular to the tangent plane.
 Evidently $(u,v)\mapsto \Norm(u,v)$ is a continuous map.
-Therefore $\Norm$ is a unit normal field. 
+Therefore, $\Norm$ is a unit normal field. 
 
 \begin{thm}{Exercise}\label{ex:implicit-orientable}
 Let $h:\mathbb{R}^3\to\mathbb{R}$ be a smooth function with $0$ as a regular value and $\Sigma$ a surface described as a connected component of the set of solutions $h(x,y,z)=0$.
@@ -280,14 +281,14 @@ Show that $\Sigma$ is orientable.
 \end{thm}
 
 Recall that any proper surface without boundary in the Euclidean space divides it into two connected components (\ref{clm:proper-divides}).
-Therefore we can choose the unit normal field on any smooth proper surface that points into one of the components of the complement.
-Therefore we obtain the following observation. 
+Therefore, we can choose the unit normal field on any smooth proper surface that points into one of the components of the complement.
+Therefore, we obtain the following observation. 
 
 \begin{thm}{Observation}
 Any smooth proper surface in the Euclidean space is oriented.
 \end{thm}
 
-In particular it follows that the M\"obius strip cannot be extended to a proper smooth surface without boundary.
+In particular, it follows that the M\"obius strip cannot be extended to a proper smooth surface without boundary.
 
 \section{Sections}
 
@@ -313,7 +314,7 @@ By Sard's lemma (\ref{lem:sard}), almost all real numbers $r$ are regular values
 
 Fix such a value $r$ sufficiently close to $r_0$ and consider the level set $L_r$ described by the equation $f(x,y,z)=r$.
 Any point in the intersection $\Sigma\cap L_r$ lies in the image of one of the charts.
-From above it admits a neighborhood which is a regular smooth curve;
+From above, it admits a neighborhood which is a regular smooth curve;
 hence the result.\qeds
 
 \begin{thm}{Corollary}

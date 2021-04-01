@@ -9,8 +9,8 @@ Otherwise, if a definition of a property essentially uses the ambient space, the
 
 For instance, the mean curvature as well as the Gauss curvature are defined via principal curvatures, which are extrinsic.
 Later (\ref{thm:remarkable}) it will be shown that {}\emph{remarkably} the Gauss curvature is actually intrinsic --- it can be calculated via measurements inside the surface.
-The mean curvature is not intrinsic, for example, the intrinsic geometry of the $(x,y)$-plane is not distinguishable from the intrinsic geometry of the graph $z\z=(x+y)^2$. However,
-while the mean curvature of the former vanishes at all points, the mean curvature of the latter does not vanish, say at $p=(0,0,1)$.  
+The mean curvature is not intrinsic, for example, the intrinsic geometry of the $(x,y)$-plane is not distinguishable from the intrinsic geometry of the graph $z\z=(x+y)^2$.
+However, while the mean curvature of the former vanishes at all points, the mean curvature of the latter does not vanish, say at $p=(0,0,1)$.  
 
 The following exercise should help you get in the right mood;
 it might look like a tedious problem in calculus, but actually it is an easy problem in geometry.
@@ -102,7 +102,7 @@ there is a sequence of paths $\gamma_n$ from $p$ to $q$ in $\Sigma$ such that
 \[\length\gamma_n\to \ell\quad\text{as}\quad n\to \infty.\]
 
 Without loss of generality, we may assume that $\length\gamma_n<\ell+1$ for any $n$ and each $\gamma_n$ is parametrized proportional to its arc-length.
-In particular each path $\gamma_n\:[0,1]\to\Sigma$ is $(\ell+1)$-Lipschitz; 
+In particular, each path $\gamma_n\:[0,1]\to\Sigma$ is $(\ell+1)$-Lipschitz; 
 that is,
 \[|\gamma(t_0)-\gamma(t_1)|\le (\ell+1)\cdot|t_0-t_1|\]
 for any $t_0,t_1\in[0,1]$.
@@ -118,23 +118,23 @@ in particular
 Since $\Sigma$ is a closed set, $\gamma_\infty$ lies in $\Sigma$.
 Finally, since length is semicontinuous (\ref{thm:length-semicont}), we get that
 \[\length\gamma_\infty\le \ell.\]
-Therefore $\length\gamma_\infty= \ell$ or, equivalently, $\gamma_\infty$ is a shortest path from $p$ to $q$.
+Therefore, $\length\gamma_\infty= \ell$ or, equivalently, $\gamma_\infty$ is a shortest path from $p$ to $q$.
 \qeds
 
-\section{Closest point projection}\label{sec:closest-point-projection}
+\section{Closest-point projection}\label{sec:closest-point-projection}
 
 \begin{thm}{Lemma}\label{lem:closest-point-projection}
 Let $R$ be a closed convex set in $\mathbb{R}^3$.
 Then for every point $p\in\mathbb{R}^3$ there is a unique point $\bar p\in R$ that minimizes the distance to $R$;
 that is, $|p-\bar p|\le |p-x|$ for any point $x\in R$.
 
-Moreover the map $p\mapsto \bar p$ is short;
+Moreover, the map $p\mapsto \bar p$ is short;
 that is,
 \[|p-q|\ge|\bar p-\bar q| \eqlbl{eq:short-cpp}\]
 for any pair of points $p,q\in \mathbb{R}^3$.
 \end{thm}
 
-The map $p\mapsto \bar p$ is called the \label{closest point projection}\index{closest point projection}\emph{closest point projection};
+The map $p\mapsto \bar p$ is called the \label{closest-point projection}\index{closest-point projection}\emph{closest-point projection};
 it maps the Euclidean space to $R$.
 Note that if $p\in R$, then $\bar p=p$.
 
@@ -144,13 +144,13 @@ Fix a point $p$ and set
 Choose a sequence $x_n\in R$ such that $|p-x_n|\to \ell$ as $n\to\infty$.
 
 Without loss of generality, we can assume that all the points $x_n$ lie in a ball of radius $\ell+1$ centered at~$p$.
-Therefore we can pass to a \index{partial limit}\emph{partial limit} $\bar p$ of $x_n$; that is, $\bar p$ is a limit of a subsequence of $x_n$.
+Therefore, we can pass to a \index{partial limit}\emph{partial limit} $\bar p$ of $x_n$; that is, $\bar p$ is a limit of a subsequence of $x_n$.
 Since $R$ is closed, $\bar p\in R$.
 By construction 
 \begin{align*}
 |p-\bar p|&=\lim_{n\to\infty}|p-x_n|=\ell.
 \end{align*}
-Hence the existence follows.
+Hence, the existence follows.
 
 {
 
@@ -163,7 +163,8 @@ Hence the existence follows.
 
 Assume there are two distinct points $\bar p, \bar p'\in R$ that minimize the distance to $p$.
 Since $R$ is convex, their midpoint $m=\tfrac12\cdot (\bar p+\bar p')$ lies in~$R$.
-Note that $|p-\bar p|\z=|p-\bar p'|=\ell$; that is, the triangle $[p\bar p\bar p']$ is isosceles and therefore the triangle $[p\bar p m]$ is right with the right angle at~$m$.
+Note that $|p-\bar p|\z=|p-\bar p'|=\ell$;
+that is, the triangle $[p\bar p\bar p']$ is isosceles, and therefore the triangle $[p\bar p m]$ is right with the right angle at~$m$.
 Since a leg of a right triangle is shorter than its hypotenuse, we have $|p-m|<\ell$, a contradiction. 
 
 It remains to prove \ref{eq:short-cpp}.
@@ -182,11 +183,11 @@ the latter is impossible.
 \vskip-0mm
 \end{wrapfigure}
 
-Therefore $p=\bar p$ or $\measuredangle \hinge{\bar p}{p}{\bar q}\ge \tfrac\pi2$.
+Therefore, $p=\bar p$ or $\measuredangle \hinge{\bar p}{p}{\bar q}\ge \tfrac\pi2$.
 In both cases the orthogonal projection of $p$ to the line $\bar p\bar q$ lies behind $\bar p$, or coincides with $\bar p$.
 The same way we show that the orthogonal projection of $q$ to the line $\bar p\bar q$ lies behind $\bar q$, or coincides with $\bar q$.
 It implies that the orthogonal projection of the line segment $[p,q]$ to the line $\bar p\bar q$ contains the line segment $[\bar p,\bar q]$.
-In particular 
+In particular,
 \[|p-q|\ge |\bar p-\bar q|.\]
 \qedsf
 
@@ -196,12 +197,12 @@ Denote by $W$ the outer closed region of $\Sigma$; in other words $W$ is the uni
 Then 
 \[\length\gamma\ge \dist{p}{q}\Sigma\]
 for any path $\gamma$ in $W$ from $p$ to $q$.
-Moreover if  $\gamma$ does not lie in $\Sigma$, then the inequality is strict.
+Moreover, if  $\gamma$ does not lie in $\Sigma$, then the inequality is strict.
 \end{thm}
 
 \parit{Proof.}
 The first part of the corollary follows from the lemma and the definition of length.
-Indeed, consider the closest point projection $\bar\gamma$ of~$\gamma$.
+Indeed, consider the closest-point projection $\bar\gamma$ of~$\gamma$.
 Note that $\bar\gamma$ lies in $\Sigma$ and connects $p$ to $q$ therefore 
 \[\length\bar\gamma\ge \dist{p}{q}\Sigma.\]
 
@@ -212,7 +213,7 @@ Consider a polygonal line $\bar p_0\dots \bar p_n$ inscribed in $\bar\gamma$.
 Let $p_0\dots p_n$ be the corresponding polygonal line inscribed in $\gamma$;
 that is $p_i=\gamma(t_i)$ if $\bar p_i=\bar\gamma(t_i)$.
 By \ref{lem:closest-point-projection} $|p_i-p_{i-1}|\z\ge|\bar p_i-\bar p_{i-1}|$ for any $i$.
-Therefore 
+Therefore,
 \[\length p_0\dots p_n\ge \length \bar p_0\dots \bar p_n.\]
 Taking the least upper bound of each side of the inequality for all inscribed polygonal lines $p_0\dots p_n$ in $\gamma$, we get \ref{bar-gamma=<gamma}.\
 
@@ -237,7 +238,7 @@ denote the obtained curve by $\gamma_1$.
 From above, we have that
 \[\length\gamma>\length \gamma_1\]
 Note that $\gamma_1$ runs in $W$.
-Therefore by the first part of the corollary, we have
+Therefore, by the first part of the corollary, we have
 \[\length \gamma_1\ge \dist{p}{q}\Sigma.\]
 Whence the second statement follows.
 \qeds

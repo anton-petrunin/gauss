@@ -5,7 +5,7 @@ This chapter should be used as a quick reference while reading the rest of the b
 it also contains all necessary references with complete proof.
 
 The first section on metric spaces is an exception;
-we suggest to read in before going further.
+we suggest to read it before going further.
 
 \section{Metric spaces}\label{sec:metric-spcaes}
 
@@ -28,7 +28,7 @@ $$\Dist(x,y)=0.$$
 $$\Dist(x, z) \le \Dist(x, y) + \Dist(y, z).$$
 \end{enumerate}
 
-A set with a metric is called \index{metric space}\emph{metric space} and the elements of the set are called \index{point}\emph{points}.
+A set with a metric is called a \index{metric space}\emph{metric space} and the elements of the set are called \index{point}\emph{points}.
 
 \subsection*{Shortcut for distance}
 Usually we consider only one metric on a set, therefore we can denote the metric space and its underlying set by the same letter, say $\spc{X}$.
@@ -38,12 +38,12 @@ $$\dist{x}{z}{\spc{X}}\le \dist{x}{y}{\spc{X}}+\dist{y}{z}{\spc{X}}.$$
 
 The Euclidean space and plane as well as the real line will be the most important examples of metric spaces for us.
 In these examples the introduced notation $\dist{x}{y}{}$ for the distance from $x$ to $y$ has perfect sense as the norm of the vector $x-y$.
-However, in a general metric space the expression $x-y$ has no meaning, but we use expression $\dist{x}{y}{}$ for the distance anyway.
+However, in a general metric space the expression $x-y$ has no meaning, but we use the expression $\dist{x}{y}{}$ for the distance anyway.
 
 \subsection*{More examples}
 
 Usually, if we say {}\emph{plane} or {}\emph{space} we mean the {}\emph{Euclidean} plane or space.
-However the plane (as well as the space) admits many other metrics, for example the so-called {}\emph{Manhattan metric} from the following exercise.
+However, the plane (as well as the space) admits many other metrics, for example the so-called {}\emph{Manhattan metric} from the following exercise.
 
 \begin{thm}{Exercise}\label{ex:ell-infty}
 Consider the function
@@ -60,7 +60,7 @@ the obtained metric space is called a {}\emph{subspace}.
 In particular, all subsets of the Euclidean space are metric spaces.
 
 \subsection*{Balls}
-Given a point $p$ in a metric space $\spc{X}$ and a real number $R\ge 0$, the set of points $x$ on the distance less then $R$ (at most $R$) from $p$ is called the \index{open!ball}\emph{open} (respectively \index{closed!ball}\emph{closed}) {}\emph{ball} of radius $R$ with center $p$.
+Given a point $p$ in a metric space $\spc{X}$ and a real number $R\ge 0$, the set of points $x$ on the distance less than $R$ (at most $R$) from $p$ is called the \index{open!ball}\emph{open} (respectively \index{closed!ball}\emph{closed}) {}\emph{ball} of radius $R$ with center $p$.
 The {}\emph{open ball} is denoted as $B(p,R)$ or $B(p,R)_{\spc{X}}$;
 the second notation is used if we need to emphasize that the ball lies in the metric space $\spc{X}$.
 Formally speaking
@@ -117,7 +117,7 @@ $$\dist{x}{y}{\spc{X}}<\delta\quad \text{ implies that }\quad \dist{f(x)}{f(y)}{
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:shrt=>continuous}
-Let ${\spc{X}}$ and $\spc{Y}$ be metric spaces $f\:\spc{X}\to \spc{Y}$ is {}\emph{distance non-expanding map}; that is, 
+Let $f\:\spc{X}\to \spc{Y}$ be {}\emph{distance non-expanding map} between metric spaces; that is, 
 \[\dist{f(x)}{f(y)}{\spc{Y}}\le \dist{x}{y}{\spc{X}}\]
 for any $x,y\in \spc{X}$.
 Show that $f$ is continuous.
@@ -203,7 +203,7 @@ Then
 \subsection*{Spherical triangle inequality}
 
 The following theorem says that the triangle inequality holds for angles between half-lines from a fixed point.
-In particular it implies that a sphere with the angle metric is a metric space.
+In particular, it implies that a sphere with the angle metric is a metric space.
 
 \begin{thm}{Theorem}\label{thm:spherical-triangle-inq}
 The following inequality holds for any three line segments $[o,a]$, $[o,b]$ and $[o,c]$ in the Euclidean space:
@@ -248,7 +248,7 @@ Recall that
 
 Note that the area of a spherical slice $S_\alpha$ between two meridians meeting at angle $\alpha$ is proportional to $\alpha$.
 Since for $S_\pi$ is a half-sphere, from \ref{eq:area(S2)}, we get $\area S_\pi\z=2\cdot\pi$.
-Therefore the coefficient is 2; that is,
+Therefore, the coefficient is 2; that is,
 \[\area S_\alpha=2\cdot \alpha.\eqlbl{eq:area(Sa)}\]
 
 Extending the sides of $\Delta$ we get 6 slices: two $S_\alpha$, two $S_\beta$ and two $S_\gamma$ which cover most of the sphere once,
@@ -280,7 +280,7 @@ Then for any point $p\notin K$ there is a plane $\Pi$ that separates $K$ from $p
 that is, $K$ and $p$ lie on opposite open half-spaces separated by $\Pi$.
 \end{thm}
 
-These definitions and hyperplane separation should appear on first few pages of any introductory text in convex geometry;
+These definitions and hyperplane separation should appear on the first few pages of any introductory text in convex geometry;
 see for example the book of Roger Webster \cite{webster}.
 
 \section{Linear algebra}
@@ -351,11 +351,11 @@ Then the derivative $f'$ of $f$ is a bounded measurable function defined almost 
 holds if the integral is understood in the sense of Lebesgue.
 \end{thm}
 
-The following theorem makes it possible to extend many statements about continuous function to measurable functions.
+The following theorem makes it possible to extend many statements about continuous functions to measurable functions.
 
 \begin{thm}{Lusin's theorem}\label{thm:lusin}
 Let $\phi\:[a,b]\to \mathbb{R}$ be a measurable function.
-Then for any $\epsilon>0$, there is a continuous function $\psi_\epsilon\:[a,b]\to \mathbb{R}$ that coincides with $\phi$ outside of a set of measure at most $\epsilon$.
+Then for any $\epsilon>0$, there is a continuous function $\psi_\epsilon\:[a,b]\to \mathbb{R}$ that coincides with $\phi$ outside a set of measure at most $\epsilon$.
 Moreover, if $\phi$ is bounded above and/or below by some constants, then we may assume that so is $\psi_\epsilon$.  
 \end{thm}
 
@@ -369,7 +369,7 @@ then $f$ is called \index{uniformly continuous}\emph{uniformly continuous}.
 Evidently every uniformly continuous function is continuous;
 the converse does not hold.
 For example, the function $f(x)=x^2$ is continuous, but not uniformly continuous.
-However the following statement holds true:
+However, the following statement holds true:
 
 \begin{thm}{Heine--Cantor theorem}
 Any continuous function defined on a compact metric space is uniformly continuous.
@@ -431,7 +431,7 @@ Unlike $h$, the function $f$ is smooth.
 Indeed, the existence of all derivatives $f^{(n)}(x)$ at $x\ne 0$ is evident and direct calculations show that $f^{(n)}(0)=0$ for all $n$.
 
 Other useful examples of that type are the so-called \index{bell function}\emph{bell function} --- a smooth function that is positive in an $\epsilon$-neighborhood of zero and vanishing outside this neighborhood.
-An example of such function can be constructed based using the function $f$ constructed above, say 
+Such functions can be obtained from the function $f$ constructed above, say 
 \[b_\epsilon(t)=c\cdot f(\epsilon^2-t^2);\]
 typically one chooses the constant $c$ so that $\int b_\epsilon=1$.
 
@@ -472,7 +472,7 @@ The Jacobian matrix of $\bm{f}$ at $\bm{x}\in\mathbb{R}^m$ is defined as
 \dfrac{\partial f_1}{\partial x_1} & \cdots & \dfrac{\partial f_1}{\partial x_m}\\
 \vdots & \ddots & \vdots\\
 \dfrac{\partial f_n}{\partial x_1} & \cdots & \dfrac{\partial f_n}{\partial x_m} \end{pmatrix};\]\index{10j@$\Jac$}
-we assume that the right hand side is evaluated at $\bm{x}=(x_1,\dots,x_m)$.
+we assume that the right-hand side is evaluated at $\bm{x}=(x_1,\dots,x_m)$.
 
 If the Jacobian matrix defines a surjective linear map $\mathbb{R}^m\to\mathbb{R}^n$ (that is, if $\rank(\Jac_{\bm{x}}\bm{f})=n$) then we say that 
 $\bm{x}$ is a \index{regular!point}\emph{regular point} of~$\bm{f}$.
@@ -486,10 +486,10 @@ Given a smooth map $\bm{f}\colon \Omega \z\to \mathbb{R}^n$ defined on an open s
 \end{thm}
 
 The words \index{almost all}\emph{almost all} mean all values, with the possible exceptions belonging to a set with vanishing {}\emph{Lebesgue measure}.
-In particular if one chooses a random value equidistributed in an arbitrarily small ball $B\z\subset \mathbb{R}^n$, then it is a regular value of $\bm{f}$ with probability 1.
+In particular, if one chooses a random value equidistributed in an arbitrarily small ball $B\z\subset \mathbb{R}^n$, then it is a regular value of $\bm{f}$ with probability 1.
 
 Note that if $m<n$, then any point $\bm{y}=\bm{f}(\bm{x})$ is not a regular value of $\bm{f}$.
-Therefore the only regular value of $\bm{f}$ are the points in the complement of the image $\Im \bm{f}$.
+Therefore, the only regular value of $\bm{f}$ are the points in the complement of the image $\Im \bm{f}$.
 In this case, the theorem states that almost all points in $\mathbb{R}^n$, do {}\emph{not} belong to $\Im \bm{f}$.
 
 
@@ -516,7 +516,7 @@ that is, there is a neighborhood $\Psi\ni \bm{x}$ such that
 $\bm{f}$ defines a bijection $\Psi\leftrightarrow \Phi$ and
 $\bm{h} \circ \bm{f}$ is an identity map on $\Psi$.
 
-Moreover if an $\Omega$ contains an $\epsilon$-neighborhood of $\bm{x}$, and the first and second partial derivatives $\tfrac{\partial f_i}{\partial x_j}$, $\tfrac{\partial^2 f_i}{\partial x_j\partial x_k}$ are bounded by a constant $C$ for all $i$, $j$, and $k$, then we can assume that $\Phi$ is a $\delta$-neighborhood of $\bm{y}$, for some $\delta>0$ that depends only on $\epsilon$ and $C$. 
+Moreover, if an $\Omega$ contains an $\epsilon$-neighborhood of $\bm{x}$, and the first and second partial derivatives $\tfrac{\partial f_i}{\partial x_j}$, $\tfrac{\partial^2 f_i}{\partial x_j\partial x_k}$ are bounded by a constant $C$ for all $i$, $j$, and $k$, then we can assume that $\Phi$ is a $\delta$-neighborhood of $\bm{y}$, for some $\delta>0$ that depends only on $\epsilon$ and $C$. 
 \end{thm}
 
 \begin{thm}{Implicit function theorem}\label{thm:imlicit}
@@ -551,7 +551,7 @@ that is, $\jac_{\bm{x}}\bm{f}$ is the absolute value of the determinant of the J
 The following theorem plays the role of a substitution rule for multiple variables.
 
 \index{Borel subsets}\emph{Borel subsets} are defined as the class of subsets that are generated from open sets by applying the following operations recursively: countable union, countable intersection, and complement.
-Since complement of a closed set is open and the other way around these sets can be also generated from all closed sets.
+Since the complement of a closed set is open and the other way around these sets can be also generated from all closed sets.
 This class of sets includes virtually all sets that naturally appear in geometry but does not include pathological examples that create problems with integration.
 
 
@@ -623,13 +623,13 @@ x_1'&=f_1(x_1,\dots,x_n,t),
 x_n'&=f_n(x_1,\dots,x_n,t),
 \end{cases}
 \]
-where each $t\mapsto x_i=x_i(t)$ is a real valued function defined on a real interval $\mathbb{I}$
+where each $t\mapsto x_i=x_i(t)$ is a real-valued function defined on a real interval $\mathbb{I}$
 and each $f_i$ is a smooth function defined on an open subset $\Omega\subset \mathbb{R}^n\times \mathbb{R}$.
 
 The array of functions $(f_1,\dots,f_n)$ can be packed into one vector-valued function 
 $\bm{f}\:\Omega\to \mathbb{R}^n$;
 the same way the array $(x_1,\dots,x_n)$ can be packed into a vector  $\bm{x}\in\mathbb{R}^n$.
-Therefore the system can be rewritten as one vector equation 
+Therefore, the system can be rewritten as one vector equation 
 \[\bm{x}'=\bm{f}(\bm{x}, t).\] 
 
 \begin{thm}{Theorem}\label{thm:ODE}
@@ -637,7 +637,7 @@ Suppose $\mathbb{I}$ is a real interval and $\bm{f}\:\Omega\to \mathbb{R}^n$ is 
 Then for any initial data $\bm{x}(t_0)=\bm{u}$ such that $(\bm{u},t)\in\Omega$ the differential equation 
 \[\bm{x}'=\bm{f}(\bm{x},t)\]
 has a unique solution $t\mapsto \bm{x}(t)$ defined at a maximal interval $\mathbb{J}$ that contains $t_0$.
-Moreover
+Moreover,
 \begin{enumerate}[(a)]
 \item  if $\mathbb{J}\ne \mathbb{R}$ (that is, if an end $a$ of $\mathbb{J}$ is finite) then $\bm{x}(t)$ does not have a limit point in $\Omega$ as $t\to a$;
 \item  the function $(\bm{u},t_0,t)\mapsto \bm{x}(t)$ has open domain of definition in $\Omega\times \mathbb{R}$ and it is smooth in this domain.
@@ -654,18 +654,20 @@ where $\bm{x}=\bm{x}(t)$ is a function from a real interval to $\mathbb{R}^n$.
 This equation can be rewritten as $k$ first order equations as follows with $k-1$ new variables $\bm{y}_i=\bm{x}^{(i)}$:
 \[
 \begin{cases}
-\bm{x}'&=\bm{y}_1
+\bm{x}'&=\bm{y}_1,
 \\
-\bm{y}_1'&=\bm{y}_2
+\bm{y}_1'&=\bm{y}_2,
 \\
 &\,\,\vdots
 \\
-\bm{y}_{k-1}'(t)&=\bm{f}(\bm{x},\bm{y}_{1},\dots,\bm{y}_{k-1},t),
+\bm{y}_{k-2}'&=\bm{y}_{k-1},
+\\
+\bm{y}_{k-1}'(t)&=\bm{f}(\bm{x},\bm{y}_{1},\dots,\bm{y}_{k-1},t).
 \end{cases}
 \]
 
-Using this trick one can reduce a higher order ordinary differential equation to a first order equation. 
-In particular we get local existence and uniqueness for solutions of higher order equations as in Theorem \ref{thm:ODE}.
+Applying this trick one can reduce a higher order ordinary differential equation to a first order equation. 
+In particular, we get local existence and uniqueness for solutions of higher order equations as in Theorem \ref{thm:ODE}.
 
 
 
@@ -723,7 +725,7 @@ The first part of the following theorem was proved by Camille Jordan, the second
 The complement of any closed simple plane curve $\gamma$ has exactly two connected components. 
 
 Moreover, there is a homeomorphism $h\:\mathbb{R}^2\to \mathbb{R}^2$ that maps the unit circle to $\gamma$.
-In particular $\gamma$ bounds a topological disc.
+In particular, $\gamma$ bounds a topological disc.
 \end{thm}
 
 This theorem is known for its simple formulation and quite hard proof.

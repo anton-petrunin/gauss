@@ -76,7 +76,7 @@ For general parametrization $t\mapsto \gamma(t)$,
 we have instead
 \[ \kur(t)=\frac{|\tan'(t)|}{|\gamma'(t)|}.\eqlbl{eq:curvature}\]
 Indeed, for an arc-length reparametrization by $s(t)$, we have $s'(t)=|\gamma'(t)|$.
-Therefore
+Therefore,
 \begin{align*}
 \kur&=\left|\frac{d\tan}{ ds}\right|=
 \\
@@ -122,7 +122,7 @@ In other words, construct a sequence $\gamma_n\:\mathbb{I}\to\mathbb{R}^3$ of sm
 Let $\gamma$ be a smooth regular space curve and $\tan$ its tangent indicatrix.
 The line thru $\gamma(t)$ in the direction of $\tan(t)$ is called the \index{tangent!line}\emph{tangent line} of $\gamma$  at~$t$.
 
-The tangent line could be also defined as a unique line that has that has \index{order of contact}\emph{first order of contact} with $\gamma$ at $s$;
+The tangent line could be also defined as a unique line that has \index{order of contact}\emph{first order of contact} with $\gamma$ at $s$;
 that is, $\rho(\ell)=o(\ell)$, where $\rho(\ell)$ denotes the distance from $\gamma(s+\ell)$ to the line.
 
 We say that a smooth regular curve $\gamma_1$ at $s_1$ is \index{tangent!curves}\emph{tangent} to a smooth regular curve $\gamma_2$ at $s_2$
@@ -149,7 +149,7 @@ Find the curvature of the helix \[\gamma_{a,b}(t)=(a\cdot \cos t,a\cdot \sin t,b
 
 Note that for a unit-speed smooth curve,
 the speed of its tangent indicatrix equals its curvature.
-Therefore \ref{ex:integral-length} implies the following:
+Therefore, \ref{ex:integral-length} implies the following:
 
 \begin{thm}{Observation}\label{obs:tantrix}
 The total curvature of a smooth regular curve is the length of its tangent indicatrix.
@@ -172,7 +172,7 @@ Recall that $|\tan(s)|=1$ for any $s$; that is, $\tan$ is a closed spherical cur
 Let us show that $\tan$ cannot lie in a hemisphere.
 Assume the contrary; without loss of generality we can assume that it lies in the north hemisphere defined by the inequality $z>0$ in $(x,y,z)$-coordinates.
 In other words, if $\gamma(t)=(x(t), y(t), z(t))$, then $z'(t)>0$ for any $t$.
-Therefore 
+Therefore,
 \[z(b)-z(a)=\int_a^b z'(s)\cdot ds>0.\]
 In particular, $\gamma(a)\ne \gamma(b)$, a contradiction.
 
@@ -391,7 +391,7 @@ Use this statement to show that any closed polygonal line has curvature at least
 Assume a polygonal line $\beta=p_0\dots p_n$ is inscribed in a smooth regular curve $\gamma$.
 Then 
 \[\tc\gamma\ge \tc{\beta}.\]
-Moreover if $\gamma$ is closed we allow the inscribed polygonal line $\beta$ to be closed.
+Moreover, if $\gamma$ is closed we allow the inscribed polygonal line $\beta$ to be closed.
 
 \end{thm}
 
@@ -422,7 +422,7 @@ By triangle inequality for angles \ref{thm:spherical-triangle-inq}, we get that
 \[\theta_i\le \alpha_i+\beta_i.\]
 By the chord lemma, the total curvature of the arc of $\gamma$ from $p_i$ to $p_{i+1}$ is at least $\alpha_i+\beta_{i+1}$. 
 
-Therefore if $\gamma$ is a closed curve, we have
+Therefore, if $\gamma$ is a closed curve, we have
 \begin{align*}
 \tc{\beta}&=\theta_1+\dots+\theta_n\le 
 \\
@@ -453,8 +453,8 @@ where the least upper bound is taken over all polygonal lines~$\beta$ inscribed 
 (if $\gamma$ is closed we assume that so is $\beta$).
 \end{thm}
 
-This exercise can be used to generalize the notion of total curvature of arbitrary curve $\gamma$.
-Namely it can be defined as {}\emph{the least upper bound on the total curvatures of inscribed nondegenerate polygonal lines inscribed in $\gamma$.}
+This exercise can be used to define the total curvature of an arbitrary curve $\gamma$.
+Namely, it can be defined as {}\emph{the least upper bound on the total curvatures of inscribed nondegenerate polygonal lines inscribed in $\gamma$.}
 
 It is possible to generalize most of the statements in this chapter to the (nonsmooth) curves of finite total curvature.
 This theory was developed by Alexandr Alexandrov and Yuri Reshetnyak \cite{aleksandrov-reshetnyak};
@@ -534,13 +534,13 @@ The sum of angles in any triangle is $\pi$, so combining these inequalities, we 
 
 By \ref{prop:inscribed-total-curvature},
 \[\tc{abcd}\le \tc\gamma\le 2\cdot\pi.\]
-Therefore we have equalities in \ref{eq:spheric-triangle}.
+Therefore, we have equalities in \ref{eq:spheric-triangle}.
 It means that the point $d$ lies in the angle $abc$ 
 and the point $b$ lies in the angle $cda$.
 That is, $abcd$ is a convex plane quadrangle.
 
 It follows that any quadrangle inscribed in $\gamma$ is a convex plane quadrangle.
-Therefore all points of $\gamma$ lie in one plane defined by three points on $\gamma$.
+Therefore, all points of $\gamma$ lie in one plane defined by three points on $\gamma$.
 Further, since any quadrangle inscribed in $\gamma$ is a convex,
 we get that $\gamma$ is a convex plane curve. 
 \qeds
@@ -586,8 +586,7 @@ It is instructive to do this exercise before reading the proof of the lemma.
 {\sloppy 
 
 \begin{thm}{Exercise}\label{ex:anti-bow}
-Construct two simple smooth unit-speed plane curves $\gamma_1,\gamma_2\:[a,b]\to\mathbb{R}^2$ such that 
-that $\kur(s)_{\gamma_1}>\kur(s)_{\gamma_2}>0$ for any $s$ and
+Construct two simple smooth unit-speed plane curves $\gamma_1,\gamma_2\:[a,b]\to\mathbb{R}^2$ such that $\kur(s)_{\gamma_1}>\kur(s)_{\gamma_2}>0$ for any $s$ and
 \[|\gamma_1(b)-\gamma_1(a)|> |\gamma_2(b)-\gamma_2(a)|.\]
 \end{thm}
 
@@ -643,7 +642,7 @@ That is,
 \]
 if $s\ge s_0$.
 The same argument shows that \ref{<gamma',u} holds true for $s\ge s_0$.
-Therefore the inequality \ref{<gamma',u} holds for any $s$.
+Therefore, the inequality \ref{<gamma',u} holds for any $s$.
 
 }
 
@@ -655,7 +654,7 @@ for any $s$.
 
 Further, since $\vec u_1$ is a unit vector parallel to $\gamma_1(b)-\gamma_1(a)$, we have that
 \[|\gamma_1(b)-\gamma_1(a)|=\langle \vec u_1,\gamma_1(b)-\gamma_1(a)\rangle,\]
-and since $\vec u_2$ is a unit vector, we have that
+and, since $\vec u_2$ is a unit vector, we have that
 \[|\gamma_2(b)-\gamma_2(a)|\ge\langle \vec u_2,\gamma_2(b)-\gamma_2(a)\rangle.\]
 
 Integrating \ref{<gamma',u>}, we get 

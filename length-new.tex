@@ -165,8 +165,8 @@ Since $\gamma$ is regular, $s'(t)\ne0$ for any parameter value $t$.
 
 By the inverse function theorem (\ref{thm:inverse}) the inverse function $s^{-1}(t)$ is also smooth
 and $|(\gamma\circ s^{-1})'|\equiv1$.
-Therefore $\gamma\circ s^{-1}$ is a unit-speed reparametrization  of $\gamma$ by $s$.
-By construction, $\gamma\circ s^{-1}$ is smooth, and since $|(\gamma\circ s^{-1})'|\equiv1$, it is regular.
+Therefore, $\gamma\circ s^{-1}$ is a unit-speed reparametrization  of $\gamma$ by $s$.
+By construction, $\gamma\circ s^{-1}$ is smooth, and, since $|(\gamma\circ s^{-1})'|\equiv1$, it is regular.
 \qeds
 
 Most of the time we use $s$ for an arc-length parameter of a curve.
@@ -178,7 +178,7 @@ by its arc-length.
 \end{thm}
 
 We will be interested in the properties of curves that are invariant under a reparametrization.
-Therefore we can always assume that any given smooth regular curve comes with an arc-length parametrization.
+Therefore, we can always assume that any given smooth regular curve comes with an arc-length parametrization.
 A nice property of arc-length parametrizations is that they are almost canonical --- these parametrizations differ only by a sign and an additive constant.
 For that reason, it is easier to express parametrization-independent quantities using arc-length parametrizations.
 This observation will be used in the definition of curvature and torsion.
@@ -228,7 +228,7 @@ that is, a line segment in $Q$ that runs from boundary to boundary.
 Observe that there is an increasing sequence of polygons 
 $$P=P_0\subset P_1\subset\dots\subset P_n=Q$$
 such that $P_{i-1}$ obtained from $P_{i}$ by cutting along a chord.
-Therefore 
+Therefore, 
 \begin{align*}
 \perim P=\perim P_0&\le\perim P_1\le\dots
 \\
@@ -238,7 +238,7 @@ and the lemma follows.
 \qeds
 
 \parit{Comment.}
-Another proof of \ref{lem:perimeter} can be obtained using closest point projection; see Section~\ref{sec:closest-point-projection}.  
+Another proof of \ref{lem:perimeter} can be obtained using the closest-point projection; see Section~\ref{sec:closest-point-projection}.  
 
 \begin{thm}{Corollary}\label{cor:convex=>rectifiable}
 Any convex closed plane curve is rectifiable.  
@@ -252,8 +252,7 @@ This implies that the absolute values of both functions are bounded by some cons
 Therefore, $\alpha$ lies in the square defined by the inequalities $|x|\le C$ and $|y|\le C$.
 
 
-By Proposition~\ref{prop:convex-curve}, the length of the curve cannot exceed $8\cdot C$ --- the perimeter of the square. 
-Hence the result.
+By Proposition~\ref{prop:convex-curve}, the length of the curve cannot exceed $8\cdot C$ --- the perimeter of the square; hence the result.
 \qeds
 
 Recall that the convex hull of a set $X$ is the smallest convex set that contains $X$; equivalently, the convex hull of $X$ is the intersection of all convex sets containing $X$.
@@ -290,7 +289,7 @@ where $\gamma_{\vec u}$ is the curve defined as $\gamma_{\vec u}(t) \df (\gamma 
 Note that the magnitude of any plane vector ${\vec w}$ is proportional to the average magnitude of its projections; that is,
 \[|{\vec w}|=k\cdot \overline{|{\vec w}_{\vec u}|}\]
 for some $k \in \mathbb{R}$.
-The exact value of $k$ can be found by integration\footnote{It is the average value of $|\cos|$.}, but we will find it in a different way. 
+The exact value of $k$ can be found by integration\footnote{It is the average value of $|\cos|$.}, but we will find it differently. 
 Note that for a smooth plane curve $\gamma\:[a,b]\to\mathbb{R}^2$,
 \[\gamma_{\vec u}'(t) = (\gamma'(t))_{\vec u} \text{ and }     | \gamma'_{\vec u} (t) |  =  | \langle \vec u , \gamma' (t) \rangle |     \]
 for any $t \in [a,b]$. Then, according to Exercise~\ref{ex:integral-length},
@@ -310,7 +309,7 @@ Note that for any unit plane vector ${\vec u}$, the curve $\gamma_{\vec u}$ runs
 Then $\length\gamma_{\vec u}=4$ for any $\vec u$, and
 \[\overline{\length\gamma_{\vec u}} =4.\]
 It follows that $2\cdot \pi =k\cdot 4$.
-Therefore Crofton's formula holds for arbitrary smooth curves.
+Therefore, Crofton's formula holds for arbitrary smooth curves.
 
 Applying the same argument together with \ref{adex:integral-length}, we get that Crofton's formula holds for arbitrary rectifiable curves.
 
@@ -337,11 +336,11 @@ Use this statement to give another solution to Exercise~\ref{ex:convex-hull}.
 The following exercise gives analogous formulas in the Euclidean space.
 
 As before, we denote by $\vec w_{\vec u}$ the orthogonal projection of $\vec w$ to the line passing thru the origin with direction $\vec u$.
-Further let us denote by $\vec w_{\vec u}^\bot$ the projection of $\vec w$ to the plane orthogonal to $\vec u$;
+Further, let us denote by $\vec w_{\vec u}^\bot$ the projection of $\vec w$ to the plane orthogonal to $\vec u$;
 that is,
 \[\vec w_\vec u^\bot=\vec w - \vec w_{\vec u}.\]
 
-We will use notation 
+We will use the notation 
 $\overline{f(\vec u)}$ for the average value
 of a function $f$ defined on $\mathbb{S}^2$.
 
@@ -367,7 +366,7 @@ Recall that the lower limit
 of a sequence of real numbers $(x_n)$ is denoted by
 \[\liminf_{n\to\infty} x_n.\] 
 It is defined as the lowest partial limit; that is, the lowest possible limit of a subsequence of $(x_n)$.
-The lower limit is defined for any sequence of real numbers and it lies in the extended real line $[-\infty,\infty]$
+The lower limit is defined for any sequence of real numbers, and it lies in the extended real line $[-\infty,\infty]$
 
 
 \begin{thm}{Theorem}\label{thm:length-semicont}
@@ -402,14 +401,14 @@ Set
 Note that for each $i$ we have 
 \[\dist{\gamma_n(t_{i-1})}{\gamma_n(t_i)}{}
 \to
-\dist{\gamma_\infty(t_{i-1})}{\gamma_\infty(t_i)}{}\]
+\dist{\gamma_\infty(t_{i-1})}{\gamma_\infty(t_i)}{},\]
 and therefore
 \[\Sigma_n\to \Sigma_\infty\] 
 as $n\to\infty$.
 Note that 
 \[\Sigma_n\le\length\gamma_n\]
 for each $n$.
-Hence
+Hence,
 $$\liminf_{n\to\infty} \length\gamma_n \ge \Sigma_\infty.$$
 
   
@@ -441,14 +440,14 @@ Let $\spc{X}$ be a metric space.
 Given two points $x,y$ in $\spc{X}$, denote by $\ell(x,y)$ the greatest lower bound of lengths of all paths connecting $x$ to $y$; if there is no such path, then $\ell(x,y)=\infty$.
 
 It is straightforward to see that the function $\ell$ satisfies all the axioms of a metric except it might take infinite values.
-Therefore if any two points in $\spc{X}$ can be connected by a rectifiable curve, then $\ell$ defines a new metric on $\spc{X}$;
+Therefore, if any two points in $\spc{X}$ can be connected by a rectifiable curve, then $\ell$ defines a new metric on $\spc{X}$;
 in this case $\ell$ is called the \index{induced length-metric}\emph{induced length-metric}.
 
 Evidently $\ell(x,y)\ge \dist{x}{y}{}$ for any pair of points $x,y\in \spc{X}$.
 If the equality holds for all pairs, then the metric $\dist{{*}}{{*}}{}$ is said to be a \index{length-metric}\emph{length-metric} and the corresponding metric space is called a \index{}\emph{length-metric space}.
 
 Most of the time we consider length-metric spaces.
-In particular the Euclidean space is a length-metric space.
+In particular, the Euclidean space is a length-metric space.
 A subspace $A$ of a length-metric space $\spc{X}$ is not necessarily a length-metric space;
 the induced length distance between points $x$ and $y$ in the subspace $A$ will be denoted as $\dist{x}{y}A$;
 that is, $\dist{x}{y}A$ is the greatest lower bound of the lengths of paths in $A$ from $x$ to $y$.\index{10aaa@$\lvert x-y\rvert_A$}
@@ -478,7 +477,7 @@ For any $u,v\in \mathbb{S}^2$, we have
 
 \parit{Proof.}
 The short arc $\gamma$ of a great circle  from $u$ to $v$ in $\mathbb{S}^2$ has length $\measuredangle(u,v)$.
-Therefore
+Therefore,
 \[\dist{u}{v}{\mathbb{S}^2}\le\measuredangle(u,v).\]
 
 It remains to prove the opposite inequality.
@@ -489,7 +488,7 @@ $\beta_1=q_0\dots q_n$ inscribed in any given spherical path $\gamma_1$ connecti
 Define $q_i$ as the first point on $\gamma_1$ such that $|u-p_i|=|u-q_i|$, but set $q_n=v$.
 Clearly $\beta_1$ is inscribed in $\gamma_1$ and according to the triangle inequality for angles (\ref{thm:spherical-triangle-inq}), we have that 
 \[ \measuredangle(q_{i-1},q_i)\ge\measuredangle(p_{i-1},p_i).\]
-Therefore 
+Therefore, 
 \[ |q_{i-1}-q_i|\ge|p_{i-1}-p_i|\]
 and \ref{eq:length beta=<length beta} follows.
 \qeds
@@ -526,13 +525,13 @@ Note that
 
 Denote by $z$ be the midpoint between $p$ and $q$ in $\mathbb{S}^2$;
 that is, $z$ is the midpoint of the short arc of a great circle from $p$ to $q$ in $\mathbb{S}^2$. 
-We claim that $\gamma$ lies in the open north hemisphere with north pole at $z$.  
+We claim that $\gamma$ lies in the open north hemisphere with north pole at $z$. %???the north pole???
 If not, $\gamma$ intersects the equator in a point $r$.
 Without loss of generality we may assume that $r$ lies on~$\gamma_1$. 
 
 Rotate the arc $\gamma_1$ by the angle $\pi$ around the line thru $z$ and the center of the sphere.
 The obtained arc $\gamma_1^{*}$ together with $\gamma_1$ forms a closed curve of length $2\cdot \ell$ passing thru $r$ and its antipodal point $r^{*}$.
-Therefore
+Therefore,
 \[\tfrac12\cdot\length \gamma=\ell\ge \measuredangle(r,r^{*})=\pi,\] 
 a contradiction.
 \qeds
@@ -560,13 +559,13 @@ Suppose that a closed plane curve $\gamma$ has length at most 4.
 Show that $\gamma$ lies in a unit disc.
 
 \parit{Wrong solution.}
-Note that it is sufficient to show that diameter of $\gamma$ is at most 2;
+Note that it is sufficient to show that the diameter of $\gamma$ is at most 2;
 that is, 
 \[|p-q|\le 2\eqlbl{eq:|pq|=<2}\]
 for any two points $p$ and $q$ on $\gamma$.
 
 The length of $\gamma$ cannot be smaller than the closed inscribed polygonal line which goes from $p$ to $q$ and back to $p$.
-Therefore 
+Therefore, 
 \[2\cdot |p-q|\le\length \gamma\le 4;\]
 whence \ref{eq:|pq|=<2} follows.
 \qedsf

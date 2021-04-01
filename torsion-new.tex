@@ -18,7 +18,7 @@ Note that
 \[\tan'(s)=\gamma''(s)=\kur(s)\cdot\norm(s).\]\index{10tnb@$\tan$, $\norm$, $\bi$}
 
 According to \ref{prop:a'-pertp-a''}, $\norm(s)\perp \tan(s)$.
-Therefore the vector product 
+Therefore, the vector product 
 \[\bi(s)=\tan(s)\times \norm(s)\]
 is a unit vector;
 moreover the triple $\tan(s),\norm(s),\bi(s)$ an oriented orthonormal basis in $\mathbb{R}^3$;
@@ -58,9 +58,9 @@ is called the \index{torsion}\emph{torsion} of $\gamma$ at $s$.
 Note that the torsion $\tor(s_0)$ is defined if $\kur(s_0)\z\ne0$.
 Indeed, since the function $s\mapsto \kur(s)$ is continuous, 
 $\kur(s_0)\z\ne 0$ implies that $\kur(s)\z\ne 0$ for all $s$ near $s_0$.
-Therefore the Frenet frame is also defined in an open interval containing $s_0$.
+Therefore, the Frenet frame is also defined in an open interval containing $s_0$.
 Clearly $\tan(s)$, $\norm(s)$ and $\bi(s)$ depend smoothly on $s$ in their domains of definition.
-Therefore $\norm'(s_0)$ is defined and so is the torsion $\tor(s_0)=\langle \norm'(s_0),\bi(s_0)\rangle$.
+Therefore, $\norm'(s_0)$ is defined and so is the torsion $\tor(s_0)=\langle \norm'(s_0),\bi(s_0)\rangle$.
 
 
 \begin{thm}{Exercise}\label{ex:helix-torsion}
@@ -258,17 +258,17 @@ Now assume that $\gamma$ is a space curve that satisfies the identity in \ref{SH
 For a unit-speed curve $\gamma$ with nonzero curvature and torsion at $s$,
 the sphere $\Sigma_s$ with center
 \[p(s)=\gamma(s)+\tfrac1{\kur(s)}\cdot \norm(s)+\tfrac{\kur'(s)}{\kur^2(s)\cdot\tor(s)}\cdot\bi(s)\]
-and passing thru $\gamma(s)$ is called the \index{osculating!sphere}\emph{osculatingsphere} of $\gamma$ at $s$.
+and passing thru $\gamma(s)$ is called the \index{osculating!sphere}\emph{osculating sphere} of $\gamma$ at $s$.
 This is the unique sphere that has \index{order of contact}\emph{third order of contact} with $\gamma$ at $s$;
 that is, $\rho(\ell)=o(\ell^3)$, where $\rho(\ell)$ denotes the distance from $\gamma(s+\ell)$ to $\Sigma_s$.
  
 \section{Fundamental theorem of space curves}
 
 \begin{thm}{Theorem}\label{thm:fund-curves}
-Let $\kur(s)$ and $\tor(s)$ be two smooth real valued functions defined on a real interval $\mathbb{I}$.
+Let $\kur(s)$ and $\tor(s)$ be two smooth real-valued functions defined on a real interval $\mathbb{I}$.
 Suppose $\kur(s)>0$ for all $s$.
 Then there is a smooth unit-speed curve $\gamma\:\mathbb{I}\to\mathbb{R}^3$ with curvature $\kur(s)$ and torsion $\tor(s)$ for every $s$.
-Moreover $\gamma$ is uniquely defined up to a rigid motion of the space.
+Moreover, $\gamma$ is uniquely defined up to a rigid motion of the space.
 \end{thm}
 
 The proof is an application of the theorem on existence and uniqueness of solutions of ordinary differential equations (\ref{thm:ODE}).
@@ -373,18 +373,19 @@ $\langle\tan,\norm\rangle$,
 $\langle\tan,\norm\rangle$,
 $\langle\bi,\tan\rangle$
 are constant functions of $s$.
-Since we choose $\tan(s_0)$, $\norm(s_0)$, $\bi(s_0)$ to be an oriented orthonormal frame, we have that the triple $\tan(s)$, $\norm(s)$, $\bi(s)$ is an oriented orthonormal frame for any $s$. In particular, $|\gamma'(s)|=1$ for all $s$.
+Since we choose $\tan(s_0)$, $\norm(s_0)$, $\bi(s_0)$ to be an oriented orthonormal frame, we have that the triple $\tan(s)$, $\norm(s)$, $\bi(s)$ is an oriented orthonormal frame for any $s$.
+In particular, $|\gamma'(s)|=1$ for all $s$.
 
 Assume $\mathbb{J} \varsubsetneq \mathbb{I}$. Then an end of $\mathbb{J}$, say $a$, lies in the interior of $\mathbb{I}$.
 By Theorem~\ref{thm:ODE}, at least one of the values $\gamma(s)$, $\tan(s)$, $\norm(s)$, $\bi(s)$
 escapes to infinity as $s\to a$.
 But this is impossible since the vectors $\tan(s)$, $\norm(s)$, $\bi(s)$ remain unit and $|\gamma'(s)|=|\tan(s)|=1$ --- a contradiction.
-Hence $\mathbb{J}= \mathbb{I}$.
+Hence, $\mathbb{J}= \mathbb{I}$.
 
 Now assume there are two curves $\gamma_1$ and $\gamma_2$ with the given curvature and torsion functions.
 Applying a motion of the space we can assume that $\gamma_1(s_0)=\gamma_2(s_0)$ and the Frenet frames of the curves coincide at $s_0$.
 Then $\gamma_1=\gamma_2$ by the uniqueness of  solutions to the system (\ref{thm:ODE}).
-Hence the last statement follows.
+Hence, the last statement follows.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:cur+tor=helix}
