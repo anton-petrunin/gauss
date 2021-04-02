@@ -29,7 +29,7 @@ it can be described as the graph of the function $f(x,y)=0$.
 
 All other planes are smooth surfaces as well since one can choose a coordinate system so that it becomes the $(x,y)$-plane.
 We may also present a plane as a graph of a linear function 
-$f(x,y)=a\cdot x+b\cdot y+c$ for some constants $a$, $b$ and $c$
+$f(x,y)=a\cdot x+b\cdot y+c$ for some constants $a$, $b$, and $c$
 (assuming the plane is not perpendicular to the $(x,y)$-plane, in which case a different coordinate system is required to write the plane as the graph of a function).
 
 A more interesting example is the unit sphere 
@@ -116,7 +116,7 @@ describe a smooth regular surface.
 \section{Local parametrizations}
 \index{parametrization}
 
-Let $U$ be an open domain in $\mathbb{R}^2$ and $s\:U\to \mathbb{R}^3$ be a smooth map.
+Let $U$ be an open domain in $\mathbb{R}^2$, and $s\:U\to \mathbb{R}^3$ be a smooth map.
 We say that $s$ is regular if its Jacobian has maximal rank;
 in this case it means that the vectors $s_u$ and $s_v$ are linearly independent at any $(u,v)\in U$;
 equivalently $s_u\times s_v\ne 0$, where $\times$ denotes the vector product.
@@ -176,7 +176,7 @@ If $W$ is a graph $z=h(x,y)$ of a smooth function $h$, then the map
 Indeed, $s$ has an inverse $(u,v,h(u,v))\mapsto (u,v)$ which is continuous;
 that is, $s$ is an embedding.
 Further,
-$s_u=(1,0,h_u)$ and $s_v=(0,1,h_v)$. 
+$s_u=(1,0,h_u)$, and $s_v=(0,1,h_v)$. 
 Whence the partial derivatives $s_u$ and $s_v$ are linearly independent;
 that is, $s$ is a regular map.
 
@@ -243,14 +243,15 @@ Note that $\Sigma_{a,b,c}$ can be defined as the image of the map $s\:\mathbb{S}
 \[(x,y,z)\z\mapsto (a\cdot x, b\cdot y,c\cdot z).\]
 
 For a surface $\Sigma$, a map $s\: \Sigma \to \mathbb{R}^3$ is called a 
-\emph{smooth parametrized surface} if $s$ is injective and for any chart $f\:U\to \Sigma$ 
+\emph{smooth parametrized surface} if $s$ is injective, and, for any chart $f\:U\to \Sigma$,
 the composition $s\circ f$ is smooth and regular;
-that is, all partial derivatives $\frac{\partial^{m+n}}{\partial u^m\partial v^n}(s\circ f)$ exist and are continuous in the domain of definition and the two vectors 
+that is, all partial derivatives $\frac{\partial^{m+n}}{\partial u^m\partial v^n}(s\circ f)$ are defined and continuous in the domain of definition, and the two vectors 
 $\frac{\partial}{\partial u}(s\circ f)$ and $\frac{\partial}{\partial v}(s\circ f)$ are linearly independent.
 
 Note that in this case the image $\Sigma^{*}=s(\Sigma)$ is a smooth surface.
 The latter follows since for any chart $f\:U\to \Sigma$ the composition $s\circ f\:U\to \Sigma^{*}$ is a chart of $\Sigma^{*}$. 
-The map $s$ is called a \index{diffeomorphism}\emph{diffeomorphism} from $\Sigma$ to $\Sigma^{*}$; the surfaces $\Sigma$ and $\Sigma^{*}$ are said to be {}\emph{diffeomorphic} if there is a diffeomorphism $s\:\Sigma\to\Sigma^{*}$.
+The map $s$ is called a \index{diffeomorphism}\emph{diffeomorphism} from $\Sigma$ to $\Sigma^{*}$;
+the surfaces $\Sigma$ and $\Sigma^{*}$ are said to be {}\emph{diffeomorphic} if there is a diffeomorphism $s\:\Sigma\to\Sigma^{*}$.
 
 
 \begin{thm}{Advanced exercise}\label{ex:star-shaped-disc}

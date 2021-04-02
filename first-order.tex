@@ -23,24 +23,24 @@ the latter is sometimes called the \index{tangent!plane}\emph{affine tangent pla
 The affine tangent plane can be interpreted as the best approximation at~$p$ of the surface $\Sigma$ by a plane.
 More precisely, 
 it has \index{order of contact}\emph{first-order contact} with $\Sigma$ at $p$;
-that is, $\rho(q)\z=o(|p-q|)$, where $q\in \Sigma$ and $\rho(q)$ denotes the distance from $q$ to $\T_p$.
+that is, $\rho(q)\z=o(|p-q|)$, where $q\in \Sigma$, and $\rho(q)$ denotes the distance from $q$ to $\T_p$.
 
 \parit{Proof.}
 Fix a chart $s$ at $p$.
 Assume $\gamma$ is a smooth curve that starts at~$p$.
 Without loss of generality, we can assume that $\gamma$ is covered by the chart;
-in particular, there are smooth functions $u(t)$ and $v(t)$ such that 
+in particular, there are smooth functions $t\mapsto u(t)$ and $t\mapsto v(t)$ such that 
 \[\gamma(t)=s(u(t),v(t)).\]
 Applying the chain rule, we get
 \[\gamma'=s_u\cdot u'+ s_v\cdot v';\]
 that is, $\gamma'$ is a linear combination of $s_u$ and $s_v$.
 
-Since the smooth functions $u(t)$ and $v(t)$ can be chosen arbitrarily, any linear combination of $s_u$ and $s_v$ is a tangent vector at $p$. 
+Since the smooth functions $t\mapsto u(t)$ and $t\mapsto v(t)$ can be chosen arbitrarily, any linear combination of $s_u$ and $s_v$ is a tangent vector at $p$. 
 \qeds
 
 
 \begin{thm}{Exercise}\label{ex:tangent-normal}
-Let $f:\mathbb{R}^3\to\mathbb{R}$ be a smooth function with $0$ as a regular value and $\Sigma$ be a surface described as a connected component of the set of solutions $f(x,y,z)=0$.
+Let $f:\mathbb{R}^3\to\mathbb{R}$ be a smooth function with $0$ as a regular value, and $\Sigma$ be a surface described as a connected component of the set of solutions $f(x,y,z)=0$.
 Show that the tangent plane $\T_p\Sigma$ is perpendicular to the gradient $\nabla_pf$ at any point $p\in\Sigma$.
 \end{thm}
 
@@ -71,9 +71,9 @@ Then the directional derivative of $f$ at $p$ along $\vec w$ is defined as
 \begin{thm}{Proposition-Definition}\label{def:directional-derivative}
 Let $\Sigma$ be a smooth regular surface and $f$ a smooth function defined on $\Sigma$. 
 Suppose $\gamma$ is a smooth curve in $\Sigma$ that starts at $p$ with velocity vector $\vec{w}\in \T_p$;
-that is, $\gamma(0)=p$ and $\gamma'(0)=\vec{w}$.
+that is, $\gamma(0)=p$, and $\gamma'(0)=\vec{w}$.
 Then the derivative $(f\circ\gamma)'(0)$
-depends only on $f$, $p$ and $\vec{w}$;
+depends only on $f$, $p$, and $\vec{w}$;
 it is called the \index{directional derivative}\emph{directional derivative of $f$ along $\vec{w}$ at $p$}
 and denoted by
 \[D_{\vec{w}}f,\quad D_{\vec{w}}f(p), \quad\text{or}\quad D_{\vec{w}}f(p)_\Sigma\] 
@@ -110,8 +110,8 @@ Applying the chain rule again, we get that
 \]
 at $(u_p,v_p)$.
 
-Notice that the left-hand side in \ref{eq:f-gamma} does not depend on the choice of the chart $s$ and the right-hand side depends only on $p$, $\vec w$, $f$, and $s$. 
-It follows that $(f\circ\gamma)'(0)$ depends only on $p$, $\vec w$ and $f$.
+Notice that the left-hand side in \ref{eq:f-gamma} does not depend on the choice of the chart $s$, and the right-hand side depends only on $p$, $\vec w$, $f$, and $s$. 
+It follows that $(f\circ\gamma)'(0)$ depends only on $p$, $\vec w$, and $f$.
 
 The last statement follows from \ref{eq:f-gamma}.
 \qeds
@@ -123,8 +123,7 @@ We will not use this approach in the sequel, but it is better to know about it.
 
 A tangent vector $\vec w\in \T_p$ to a smooth surface $\Sigma$ 
 defines a linear functional%
-\footnote{Term {}\emph{functional} is used for functions that take a function as an argument and return a number.} $D_{\vec w}$
-that swallows a smooth function $\phi$ defined in a neighborhood of $p$ in $\Sigma$ and spits its directional derivative $D_{\vec w}\phi$.
+\footnote{Term {}\emph{functional} is used for functions that take a function as an argument and return a number.} $D_{\vec w}$ that swallows a smooth function $\phi$ defined in a neighborhood of $p$ in $\Sigma$ and spits its directional derivative $D_{\vec w}\phi$.
 It is straightforward to check that the functional $D$ obeys the product rule:
 \[D_{\vec w}(\phi\cdot\psi)=(D_{\vec w}\phi)\cdot \psi(p)+\phi(p)\cdot(D_{\vec w}\psi).
 \eqlbl{eq:tangent-functional}\]
@@ -144,10 +143,10 @@ $ s(p)=(x(p),y(p),z(p))$.
 To take a directional derivative of the map we should take the  directional derivative of each of its coordinate functions.
 \[D_{\vec{w}} s\df(D_{\vec{w}}x,D_{\vec{w}}y,D_{\vec{w}}z).\]
 
-Assume $ s$ is a smooth map from one smooth surface $\Sigma_0$ to another $\Sigma_1$ and $p\in \Sigma_0$.
+Assume $s$ is a smooth map from one smooth surface $\Sigma_0$ to another $\Sigma_1$ and $p\in \Sigma_0$.
 Note that $D_{\vec w} s(p)\in \T_{s(p)}\Sigma_1$ for any $\vec w\in \T_p$.
 Indeed, choose a curve $\gamma_0$ in $\Sigma_0$ such that $\gamma_0(0)=p$ and $\gamma_0'(0)=\vec w$.
-Observe that $\gamma_1= s\circ \gamma_0$ is a smooth curve in $\Sigma_1$ and 
+Observe that $\gamma_1= s\circ \gamma_0$ is a smooth curve in $\Sigma_1$, and, 
 by the definition of directional derivative, we have $D_{\vec w} s(p)=\gamma_1'(0)$.
 It remains to note that $\gamma_1(0)\z= s(p)$.
 Therefore its velocity $\gamma_1'(0)$ is in $\T_{ s(p)}\Sigma_1$.
@@ -160,7 +159,7 @@ that is,
 for any $c\in\mathbb{R}$ and $\vec v, \vec w\in\T_p$.
 The map $d_p s$ is called the \index{differential}\emph{differential} of $s$ at $p$.
 
-The differential $d_p s$ can be described by a $2{\times}2$-matrix $M$ in orthonormal bases of $\T_p$ and $\T_{ s(p)}\Sigma_1$.
+The differential $d_p s$ can be described by a $2{\times}2$-matrix $M$ in orthonormal bases of $\T_p$ and $\T_{s(p)}\Sigma_1$.
 Set $\jac_p s=|\det M|$; this value  
 does not depend on the choice of orthonormal bases in $\T_p$ and $\T_{ s(p)}\Sigma_1$. \label{page:|L|}\index{10d@$d_p s$}
 
@@ -183,7 +182,7 @@ If $\Sigma_0$ is a domain in the $(u,v)$-plane, then the value $\jac_p s$ can be
 \\
 &=\sqrt{\det[\Jac^\top s\cdot \Jac s]},
 \end{align*}
-where $\Jac s$ denotes the Jacobian matrix of $s$; it is a 2$\times$3 matrix with column vectors $s_u$ and $ s_v$.
+where $\Jac s$ denotes the Jacobian matrix of $s$; it is a $2{\times}3$ matrix with column vectors $s_u$ and $s_v$.
 
 The value $\jac_p s$ has the following geometric meaning:
 if $P_0$ is a region in $\T_p$ and $P_1=(d_p s)(P_0)$, then
@@ -194,7 +193,7 @@ This identity will become important in the definition of surface area.
 
 \section{Surface integral and area}
 
-Let $\Sigma$ be a smooth surface and $h\:\Sigma\to\mathbb{R}$ be a smooth function.
+Let $\Sigma$ be a smooth surface, and $h\:\Sigma\to\mathbb{R}$ be a smooth function.
 Let us define the integral $\iint_R h$ of the function $h$ along a region $R\subset \Sigma$.
 The definition will be used mostly along surfaces with boundary, but the definition can be applied to any Borel set $R\subset \Sigma$.
 
@@ -223,7 +222,7 @@ The following proposition provides a substitution rule for surface integral.
 
 \begin{thm}{Area formula}\label{prop:surface-integral}
 Suppose $ s\:\Sigma_0\to \Sigma_1$ is a smooth parametrization of a smooth surface $\Sigma_1$ by  a smooth surface $\Sigma_0$.
-Then for any region $R\subset \Sigma_0$ and any smooth function $f\:\Sigma_1\to\mathbb{R}$ we have
+Then, for any region $R\subset \Sigma_0$ and any smooth function $f\:\Sigma_1\to\mathbb{R}$, we have
 \[\iint_R (f\circ s)\cdot \jac  s=\int_{ s(R)}f.\]
 In particular, if $f\equiv 1$, we have
 \[\iint_R \jac  s=\area [ s(R)].\]
@@ -256,7 +255,7 @@ The map $\Norm\:\Sigma\to \mathbb{S}^2$ defined by $p\mapsto \Norm(p)$ is called
 
 For surfaces, the spherical map plays essentially the same role as the tangent indicatrix for curves.
 
-The M\"obius strip shown on the diagram gives an example of a nonorientable surface --- there is no choice of a normal vector field that is continuous along the middle of the strip (it changes the sign if you try to go around).
+The Möbius strip shown on the diagram gives an example of a nonorientable surface --- there is no choice of a normal vector field that is continuous along the middle of the strip (it changes the sign if you try to go around).
 
 \begin{wrapfigure}{o}{42 mm}
 \vskip-0mm
@@ -288,7 +287,7 @@ Therefore, we obtain the following observation.
 Any smooth proper surface in the Euclidean space is oriented.
 \end{thm}
 
-In particular, it follows that the M\"obius strip cannot be extended to a proper smooth surface without boundary.
+In particular, it follows that the Möbius strip cannot be extended to a proper smooth surface without boundary.
 
 \section{Sections}
 
@@ -312,7 +311,7 @@ The surface $\Sigma$ can be covered by a countable set of charts $s_i\:U_i\z\to 
 Note that the composition $f\circ s_i$ is a smooth function for any $i$.
 By Sard's lemma (\ref{lem:sard}), almost all real numbers $r$ are regular values for each $f\circ s_i$.
 
-Fix such a value $r$ sufficiently close to $r_0$ and consider the level set $L_r$ described by the equation $f(x,y,z)=r$.
+Fix such a value $r$ sufficiently close to $r_0$, and consider the level set $L_r$ described by the equation $f(x,y,z)=r$.
 Any point in the intersection $\Sigma\cap L_r$ lies in the image of one of the charts.
 From above, it admits a neighborhood which is a regular smooth curve;
 hence the result.\qeds

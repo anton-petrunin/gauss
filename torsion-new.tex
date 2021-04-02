@@ -39,7 +39,7 @@ in particular, we have that
 \eqlbl{eq:orthornomal}
 \]
 
-The orthonormal basis $\tan(s),\norm(s),\bi(s)$ is called the \index{Frenet frame}\emph{Frenet frame} at $s$; the vectors in the frame are called \index{tangent}\emph{tangent}, \index{normal}\emph{normal} and \index{binormal}\emph{binormal} respectively.
+The orthonormal basis $\tan(s),\norm(s),\bi(s)$ is called the \index{Frenet frame}\emph{Frenet frame} at $s$; the vectors in the frame are called \index{tangent}\emph{tangent}, \index{normal}\emph{normal}, and \index{binormal}\emph{binormal}, respectively.
 Note that the frame $\tan(s),\norm(s),\bi(s)$ is defined only if $\kur(s)\ne 0$.
 
 The plane $\Pi_s$ thru $\gamma(s)$ spanned by vectors $\tan(s)$ and $\norm(s)$ is called the \index{osculating!plane}\emph{osculating plane} at $s$;
@@ -59,8 +59,8 @@ Note that the torsion $\tor(s_0)$ is defined if $\kur(s_0)\z\ne0$.
 Indeed, since the function $s\mapsto \kur(s)$ is continuous, 
 $\kur(s_0)\z\ne 0$ implies that $\kur(s)\z\ne 0$ for all $s$ near $s_0$.
 Therefore, the Frenet frame is also defined in an open interval containing $s_0$.
-Clearly $\tan(s)$, $\norm(s)$ and $\bi(s)$ depend smoothly on $s$ in their domains of definition.
-Therefore, $\norm'(s_0)$ is defined and so is the torsion $\tor(s_0)=\langle \norm'(s_0),\bi(s_0)\rangle$.
+Clearly $\tan(s)$, $\norm(s)$, and $\bi(s)$ depend smoothly on $s$ in their domains of definition.
+Therefore, $\norm'(s_0)$ is defined, and so is the torsion $\tor(s_0)=\langle \norm'(s_0),\bi(s_0)\rangle$.
 
 
 \begin{thm}{Exercise}\label{ex:helix-torsion}
@@ -107,7 +107,7 @@ Taking further derivatives of the other identities with $\bi$ in \ref{eq:orthorn
 Since the frame $\tan,\norm,\bi$ is orthonormal, it follows that
 \[\bi'=-\tor\cdot\norm.\eqlbl{eq:frenet-beta}\]
 
-The equations \ref{eq:frenet-tau}, \ref{eq:frenet-nu} and \ref{eq:frenet-beta} are called \index{Frenet formulas}\emph{Frenet formulas}.
+The equations \ref{eq:frenet-tau}, \ref{eq:frenet-nu}, and \ref{eq:frenet-beta} are called \index{Frenet formulas}\emph{Frenet formulas}.
 All three can be written as one matrix identity:
 \[
 \begin{pmatrix}
@@ -153,8 +153,9 @@ Show that $\gamma$ lies in a plane if and only if its torsion vanishes.
 
 
 \begin{thm}{Exercise} \label{ex:frenet}
-Let $\gamma$ be a smooth regular space curve, $\kur$ and $\tor$ its curvature and torsion,
-and $\tan,\norm,\bi$ its Frenet frame.
+Suppose $\gamma$ is a smooth regular space curve.
+Let $\kur$ and $\tor$ be its curvature and torsion,
+and $\tan,\norm,\bi$ be its Frenet frame.
 Show that 
 \[\bi=\frac{\gamma'\times\gamma''}{|\gamma'\times\gamma''|}
 \quad\text{and}\quad
@@ -179,7 +180,7 @@ The following exercise will guide you thru the proof of the theorem.
 
 \begin{thm}{Exercise} \label{ex:lancret}
 Let $\gamma$ be a smooth regular space curve with nonvanishing curvature, $\tan,\norm,\bi$ 
-its Frenet frame and $\kur$, $\tor$ its curvature and torsion.
+its Frenet frame, and $\kur$, $\tor$ its curvature and torsion.
 
 
 \begin{subthm}{ex:lancret:a}
@@ -274,7 +275,7 @@ Moreover, $\gamma$ is uniquely defined up to a rigid motion of the space.
 The proof is an application of the theorem on existence and uniqueness of solutions of ordinary differential equations (\ref{thm:ODE}).
 
 \parit{Proof.}
-Fix a parameter value $s_0$, a point $\gamma(s_0)$ and an oriented orthonormal frame $\tan(s_0)$, $\norm(s_0)$, $\bi(s_0)$.
+Fix a parameter value $s_0$, a point $\gamma(s_0)$, and an oriented orthonormal frame $\tan(s_0)$, $\norm(s_0)$, $\bi(s_0)$.
 
 Consider the following system of differential equations
 \[
@@ -379,11 +380,11 @@ In particular, $|\gamma'(s)|=1$ for all $s$.
 Assume $\mathbb{J} \varsubsetneq \mathbb{I}$. Then an end of $\mathbb{J}$, say $a$, lies in the interior of $\mathbb{I}$.
 By Theorem~\ref{thm:ODE}, at least one of the values $\gamma(s)$, $\tan(s)$, $\norm(s)$, $\bi(s)$
 escapes to infinity as $s\to a$.
-But this is impossible since the vectors $\tan(s)$, $\norm(s)$, $\bi(s)$ remain unit and $|\gamma'(s)|=|\tan(s)|=1$ --- a contradiction.
+But this is impossible since the vectors $\tan(s)$, $\norm(s)$, $\bi(s)$ remain unit, and $|\gamma'(s)|=|\tan(s)|=1$ --- a contradiction.
 Hence, $\mathbb{J}= \mathbb{I}$.
 
 Now assume there are two curves $\gamma_1$ and $\gamma_2$ with the given curvature and torsion functions.
-Applying a motion of the space we can assume that $\gamma_1(s_0)=\gamma_2(s_0)$ and the Frenet frames of the curves coincide at $s_0$.
+Applying a motion of the space, we can assume that $\gamma_1(s_0)=\gamma_2(s_0)$, and the Frenet frames of the curves coincide at $s_0$.
 Then $\gamma_1=\gamma_2$ by the uniqueness of  solutions to the system (\ref{thm:ODE}).
 Hence, the last statement follows.
 \qeds

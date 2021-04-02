@@ -90,10 +90,10 @@ Conclude that
 \begin{subthm}{adex:integral-length:a}Show that the formula \ref{eq:length} holds for any Lipschitz curve $\gamma\:[a,b]\z\to\mathbb{R}^3$.
 \end{subthm}
 
-\begin{subthm}{adex:integral-length:b} Construct a non-constant curve $\gamma\:[a,b]\to\mathbb{R}^3$ such that $\gamma'(t)=0$ almost everywhere.
+\begin{subthm}{adex:integral-length:b}
+Construct a non-constant curve $\gamma\:[a,b]\to\mathbb{R}^3$ such that $\gamma'(t)=0$ almost everywhere.
 (In particular, the formula \ref{eq:length} does not hold for~$\gamma$ despite that both sides are defined.).
 \end{subthm}
-%I think constructing a "simple curve with derivative 0 a.e." is much harder than a "non-constant curve with derivative 0 a.e." and any of them work as counterexample.
 
 \end{thm}
 
@@ -103,7 +103,8 @@ Conclude that
 Let us describe the so-called \index{Koch snowflake}\emph{Koch snowflake} ---
 a classical example of a nonrectifiable curve.
 
-Start with an equilateral triangle. For each side, divide it into three segments of equal length and then add an equilateral triangle with the middle segment as its base.
+Start with an equilateral triangle.
+For each side, divide it into three segments of equal length, and then add an equilateral triangle with the middle segment as its base.
 Repeat this construction recursively with the obtained polygons.
 \begin{figure}[h!]
 \centering
@@ -247,7 +248,7 @@ Any convex closed plane curve is rectifiable.
 \parit{Proof.}
 Any closed curve is bounded.
 Indeed, the curve can be described as an image of a loop $\alpha\:[0,1]\to\mathbb{R}^2$, $\alpha(t)=(x(t),y(t))$.
-The coordinate functions $x(t)$ and $y(t)$ are continuous functions defined on $[0,1]$.
+The coordinate functions $t\mapsto x(t)$ and $t\mapsto y(t)$ are continuous functions defined on $[0,1]$.
 This implies that the absolute values of both functions are bounded by some constant $C$.
 Therefore, $\alpha$ lies in the square defined by the inequalities $|x|\le C$ and $|y|\le C$.
 
@@ -291,7 +292,9 @@ Note that the magnitude of any plane vector ${\vec w}$ is proportional to the av
 for some $k \in \mathbb{R}$.
 The exact value of $k$ can be found by integration\footnote{It is the average value of $|\cos|$.}, but we will find it differently. 
 Note that for a smooth plane curve $\gamma\:[a,b]\to\mathbb{R}^2$,
-\[\gamma_{\vec u}'(t) = (\gamma'(t))_{\vec u} \text{ and }     | \gamma'_{\vec u} (t) |  =  | \langle \vec u , \gamma' (t) \rangle |     \]
+\[\gamma_{\vec u}'(t)=(\gamma'(t))_{\vec u}
+\quad\text{and}\quad
+|\gamma'_{\vec u}(t)|=|\langle\vec u,\gamma'(t)\rangle|\]
 for any $t \in [a,b]$. Then, according to Exercise~\ref{ex:integral-length},
 \begin{align*}
 \length\gamma
@@ -444,7 +447,7 @@ Therefore, if any two points in $\spc{X}$ can be connected by a rectifiable curv
 in this case $\ell$ is called the \index{induced length-metric}\emph{induced length-metric}.
 
 Evidently $\ell(x,y)\ge \dist{x}{y}{}$ for any pair of points $x,y\in \spc{X}$.
-If the equality holds for all pairs, then the metric $\dist{{*}}{{*}}{}$ is said to be a \index{length-metric}\emph{length-metric} and the corresponding metric space is called a \index{}\emph{length-metric space}.
+If the equality holds for all pairs, then the metric $\dist{{*}}{{*}}{}$ is said to be a \index{length-metric}\emph{length-metric}, and the corresponding metric space is called a \index{}\emph{length-metric space}.
 
 Most of the time we consider length-metric spaces.
 In particular, the Euclidean space is a length-metric space.
@@ -486,7 +489,7 @@ $\beta_1=q_0\dots q_n$ inscribed in any given spherical path $\gamma_1$ connecti
 \[\length\beta_1\ge \length \beta.\eqlbl{eq:length beta=<length beta}\]
 
 Define $q_i$ as the first point on $\gamma_1$ such that $|u-p_i|=|u-q_i|$, but set $q_n=v$.
-Clearly $\beta_1$ is inscribed in $\gamma_1$ and according to the triangle inequality for angles (\ref{thm:spherical-triangle-inq}), we have that 
+Clearly $\beta_1$ is inscribed in $\gamma_1$, and, according to the triangle inequality for angles (\ref{thm:spherical-triangle-inq}), we have that 
 \[ \measuredangle(q_{i-1},q_i)\ge\measuredangle(p_{i-1},p_i).\]
 Therefore, 
 \[ |q_{i-1}-q_i|\ge|p_{i-1}-p_i|\]
@@ -512,7 +515,7 @@ Suppose $\ell<\pi$.
 \includegraphics{mppics/pic-52}
 \end{wrapfigure}
 
-Let us divide $\gamma$ into two arcs $\gamma_1$ and $\gamma_2$ of length $\ell$;
+Let us subdivide $\gamma$ into two arcs $\gamma_1$ and $\gamma_2$ of length $\ell$;
 denote their endpoints by $p$ and $q$. 
 Note that 
 \begin{align*}

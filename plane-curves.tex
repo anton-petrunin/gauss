@@ -91,7 +91,7 @@ Then there is a smooth unit-speed curve $\gamma\:\mathbb{I}\to\mathbb{R}^2$ with
 Moreover, $\gamma$ is uniquely defined up to a rigid motion of the plane.
 \end{thm}
 
-This is the fundamental theorem of plane curves; it is a direct analog of \ref{thm:fund-curves} and it can be proved along the same lines.
+This is the fundamental theorem of plane curves; it is a direct analog of \ref{thm:fund-curves}, and it can be proved along the same lines.
 We present a slightly simpler proof.
 \parit{Proof.} 
 Fix $s_0\in\mathbb{I}$.
@@ -102,11 +102,11 @@ Consider the function
 Note that by the fundamental theorem of calculus, we have $\theta'(s)\z=\skur(s)$ for all~$s$.
 
 Set 
-\[\tan(s)=(\cos[\theta(s)],\sin[\theta(s)])\] and let $\norm(s)$ be its counterclockwise rotation by angle $\tfrac\pi2$; so 
+\[\tan(s)=(\cos[\theta(s)],\sin[\theta(s)])\], and let $\norm(s)$ be its counterclockwise rotation by angle $\tfrac\pi2$; so 
 \[\norm(s)=(-\sin[\theta(s)],\cos[\theta(s)]).\]
 Consider the curve 
 \[\gamma(s)=\int_{s_0}^s\tan(s)\cdot ds.\]
-Since $|\gamma'|=|\tan|=1$, the curve $\gamma$ is unit-speed and $\tan,\norm$ is its Frenet frame. 
+Since $|\gamma'|=|\tan|=1$, the curve $\gamma$ is unit-speed, and $\tan,\norm$ is its Frenet frame. 
 
 Note that
 \begin{align*}
@@ -124,8 +124,8 @@ This proves the existence;
 it remains to prove the uniqueness.
 
 Assume $\gamma_1$ and $\gamma_2$ are two curves that satisfy the assumptions of the theorem.
-Applying a rigid motion, we can assume that $\gamma_1(s_0)\z=\gamma_2(s_0)\z=0$ and the Frenet frame of both curves at $s_0$ is formed by the coordinate frame $(1,0),(0,1)$.
-Let us denote by $\tan_1,\norm_1$ and $\tan_2,\norm_2$ the Frenet frames of $\gamma_1$ and $\gamma_2$ respectively.
+Applying a rigid motion, we can assume that $\gamma_1(s_0)\z=\gamma_2(s_0)\z=0$, and the Frenet frame of both curves at $s_0$ is formed by the coordinate frame $(1,0),(0,1)$.
+Let us denote by $\tan_1,\norm_1$ and $\tan_2,\norm_2$ the Frenet frames of $\gamma_1$ and $\gamma_2$, respectively.
 Both triples $\gamma_i,\tan_i,\norm_i$ satisfy the following system of ordinary differential equations 
 \[
 \begin{cases}
@@ -148,7 +148,7 @@ Note that from the proof of the theorem we obtain the following corollary:
 \begin{thm}{Corollary}\label{cor:2D-angle}
 Let $\gamma\:\mathbb{I}\to\mathbb{R}^2$ be a smooth unit-speed curve and $s_0\z\in \mathbb{I}$.
 Denote by $\skur$ the signed curvature of $\gamma$.
-Assume an oriented $(x,y)$-coordinate system is chosen in such a way that $\gamma(s_0)$ is the origin and $\gamma'(s_0)$ points in the direction of the $x$-axis.
+Assume an oriented $(x,y)$-coordinate system is chosen in such a way that $\gamma(s_0)$ is the origin, and $\gamma'(s_0)$ points in the direction of the $x$-axis.
 Then 
 \[\gamma'(s)=(\cos[\theta(s)],\sin[\theta(s)]) , \]
 for all $s$, where 
@@ -169,14 +169,14 @@ Note that if $\mathbb{I}=[a,b]$, then
 \[\tgc\gamma=\theta(b)-\theta(a),\eqlbl{eq:tsc-theta}\]
 where $\theta$ is as in \ref{cor:2D-angle}.
 
-If $\gamma$ is a piecewise smooth and regular plane curve, then we define its total signed curvature as the sum of the total signed curvatures of its arcs plus the sum of the {}\emph{signed} external angles at its joints;
+If $\gamma$ is a piecewise smooth regular plane curve, then we define its total signed curvature as the sum of the total signed curvatures of its arcs plus the sum of the {}\emph{signed} external angles at its joints;
 they are positive where $\gamma$ turns left, negative where $\gamma$ turns right, and 0 where $\gamma$ goes straight.
 It is undefined if it turns exactly backward;
 that is, if the curve has a cusp.
-That is, if $\gamma$ is a concatenation of smooth and regular arcs $\gamma_1,\dots,\gamma_n$, then 
+That is, if $\gamma$ is a concatenation of smooth regular arcs $\gamma_1,\dots,\gamma_n$, then 
 \[\tgc\gamma=\tgc{\gamma_1}+\dots+\tgc{\gamma_n}+\theta_1+\dots+\theta_{n-1}\]
 where $\theta_i$ is the signed external angle at the joint between $\gamma_i$ and $\gamma_{i+1}$.
-If $\gamma$ is closed, then the concatenation is cyclic and
+If $\gamma$ is closed, then the concatenation is cyclic, and
 \[\tgc\gamma=\tgc{\gamma_1}+\dots+\tgc{\gamma_n}+\theta_1+\dots+\theta_{n},\]
 where $\theta_n$ is the signed external angle at the joint between $\gamma_n$ and $\gamma_1$.
 
@@ -225,7 +225,7 @@ We can also assume that it is parametrized by arc-length.
 
 Consider a closed polygonal line $\beta=p_1\dots p_n$ inscribed in $\gamma$.
 We can assume that the arcs between the vertices are sufficiently small 
-so that the polygonal line is simple and each arc $\gamma_i$ from $p_i$ to $p_{i+1}$ has small total absolute curvature, say  $\tc{\gamma_i}<\pi$ for each $i$.
+so that the polygonal line is simple, and each arc $\gamma_i$ from $p_i$ to $p_{i+1}$ has small total absolute curvature, say  $\tc{\gamma_i}<\pi$ for each $i$.
 
 \begin{wrapfigure}[13]{o}{43 mm}
 \vskip4mm
@@ -275,8 +275,8 @@ Therefore,
 &=2\cdot\pi.
 \end{aligned}\eqlbl{eq:delta=pi-alpha-beta-sum}\]
 
-The case of piecewise smooth and regular curves is done the same way;
-we need to subdivide the arcs in the cyclic concatenation further to meet the requirement above and instead of equation \ref{eq:delta=pi-alpha-beta} we have 
+The case of piecewise smooth regular curves is done the same way;
+we need to subdivide the arcs in the cyclic concatenation further to meet the requirement above, and, instead of equation \ref{eq:delta=pi-alpha-beta}, we have 
 \[\delta_i=\pi-\alpha_i-\beta_i-\theta_i,\]
 where $\theta_i$ is the signed external angle of $\gamma$ at $p_i$; it vanishes if the curve $\gamma$ is smooth at $p_i$.
 Therefore, instead of equation \ref{eq:delta=pi-alpha-beta-sum}, we have
@@ -298,13 +298,16 @@ Therefore, instead of equation \ref{eq:delta=pi-alpha-beta-sum}, we have
 \begin{thm}{Exercise}\label{ex:zero-tsc}
 Draw a smooth regular closed plane curve $\gamma$ such that 
 
-\begin{subthm}{ex:zero-tsc:0}$\tgc\gamma=0$;
+\begin{subthm}{ex:zero-tsc:0}
+$\tgc\gamma=0$;
 \end{subthm}
  
-\begin{subthm}{ex:zero-tsc:5}$\tgc\gamma=\tc\gamma=10\cdot\pi$;
+\begin{subthm}{ex:zero-tsc:5}
+$\tgc\gamma=\tc\gamma=10\cdot\pi$;
 \end{subthm}
 
-\begin{subthm}{ex:zero-tsc:2-4}$\tgc\gamma=2\cdot \pi$ and $\tc\gamma=4\cdot\pi$.
+\begin{subthm}{ex:zero-tsc:2-4}
+$\tgc\gamma=2\cdot \pi$ and $\tc\gamma=4\cdot\pi$.
 \end{subthm}
 
 \end{thm}
@@ -350,7 +353,8 @@ these are the only plane curves with constant signed curvature.
 \parit{Proof.}
 The proof is done by a calculation based on \ref{thm:fund-curves-2D} and \ref{cor:2D-angle}.
 
-Suppose $s_0=0$, choose a coordinate system such that $p$ is its origin and $\tan$ points in the direction of the $x$-axis.
+Suppose $s_0=0$.
+Choose a coordinate system such that $p$ is its origin and $\tan$ points in the direction of the $x$-axis.
 Therefore, $\norm$ points in the direction of the $y$-axis.
 Then
 \begin{align*}\theta(s)&=\int_{0}^s\skur\cdot dt=
@@ -477,7 +481,7 @@ Therefore, the osculating circle at $s_0$ lies inside the osculating circle at $
 The curve $s\mapsto \omega(s)$ is called the \index{evolute}\emph{evolute} of $\gamma$; 
 it traces the centers of curvature of the curve. 
 The evolute of $\gamma$ can be written as 
-\[\omega(t)=\gamma(t)+\tfrac1{\skur(t)}\cdot \norm(t)\] and  
+\[\omega(t)=\gamma(t)+\tfrac1{\skur(t)}\cdot \norm(t);\] 
 in the proof we showed that $(\tfrac1{\skur})'\cdot\norm$ is its velocity vector.
 
 
@@ -495,7 +499,7 @@ then you will not be able to come back to the place you started.}
 }
 
 \begin{thm}{Theorem}\label{thm:spiral}
-Assume $\gamma$ is a smooth regular plane curve with positive and strictly monotonic signed curvature. 
+Assume $\gamma$ is a smooth regular plane curve with positive strictly monotonic signed curvature. 
 Then $\gamma$ is simple.
 \end{thm}
 

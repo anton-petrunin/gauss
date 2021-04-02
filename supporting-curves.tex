@@ -43,7 +43,7 @@ If the curves on the diagram are oriented according to the arrows, then $\gamma_
 
 Suppose $\gamma_1$ is a simple proper curve, so it divides the plane into two closed regions that lie on the left and right from $\gamma_1$.
 Then we say that $\gamma_1$ \index{global support}\emph{globally supports} $\gamma_2$ at $t_2$ 
-if $\gamma_2$ runs in one of these closed regions and 
+if $\gamma_2$ runs in one of these closed regions, and 
 $\gamma_2(t_2)$ lies on $\gamma$.
 
 Further, suppose $\gamma_2$ is closed, so it divides the plane into two regions.
@@ -59,7 +59,7 @@ Let $\gamma_1$ and $\gamma_2$ be two smooth regular plane curves.
 Suppose $\gamma_1$ locally supports $\gamma_2$ at time parameters $t_1$ and $t_2$.
 Then $\gamma_1$ is tangent to $\gamma_2$ at $t_1$ and $t_2$.
 
-In such a case, if the curves are cooriented and the region $R$ in the definition of supporting curves lies on the right (left) from the arc of $\gamma_1$, then we say that 
+In such a case, if the curves are cooriented, and the region $R$ in the definition of supporting curves lies on the right (left) from the arc of $\gamma_1$, then we say that 
 $\gamma_1$ supports $\gamma_2$ from the left (respectively right).
 \end{thm}
 
@@ -83,7 +83,7 @@ Let $\gamma_1$ and $\gamma_2$ be two smooth regular plane curves.
 Suppose $\gamma_1$ locally supports $\gamma_2$ from the left (right) at the time parameters $t_1$ and $t_2$.
 Then 
 \[\skur_1(t_1)\le \skur_2(t_2)\quad(\text{respectively}\quad \skur_1(t_1)\ge \skur_2(t_2)),\]
-where $\skur_1$ and $\skur_2$ denote the signed curvature of $\gamma_1$ and $\gamma_2$ respectively.
+where $\skur_1$ and $\skur_2$ denote the signed curvature of $\gamma_1$ and $\gamma_2$, respectively.
 
 A partial converse also holds.
 Namely, if $\gamma_1$ and $\gamma_2$ tangent and cooriented at the time parameters $t_1$ and $t_2$
@@ -93,11 +93,11 @@ if
 
 \end{thm}
 
-\parit{Proof.} Without loss of generality, we can assume that $t_1=t_2=0$, the shared point $\gamma_1(0)=\gamma_2(0)$ is the origin and the velocity vectors $\gamma'_1(0)$, $\gamma'_2(0)$ point in the direction of $x$-axis.
+\parit{Proof.} Without loss of generality, we can assume that $t_1=t_2=0$, the shared point $\gamma_1(0)=\gamma_2(0)$ is the origin, and the velocity vectors $\gamma'_1(0)$, $\gamma'_2(0)$ point in the direction of $x$-axis.
 
 Note that small arcs of $\gamma_1|_{[-\epsilon,+\epsilon]}$ and  $\gamma_2|_{[-\epsilon,+\epsilon]}$ can be described as a graph 
 $y=f_1(x)$ and $y=f_2(x)$ for smooth functions $f_1$ and $f_2$ such that $f_i(0)=0$ and $f_i'(0)=0$.
-Note that $f_1''(0)=\skur_1(0)$ and $f_2''(0)=\skur_2(0)$ (see \ref{ex:curvature-graph})
+Note that $f_1''(0)=\skur_1(0)$, and $f_2''(0)=\skur_2(0)$ (see \ref{ex:curvature-graph})
 
 Clearly, $\gamma_1$ supports $\gamma_2$ from the left (right) if 
 \[f_1(x)\le f_2(x)\quad(\text{respectively}\quad f_1(x)\ge f_2(x))\]
@@ -168,7 +168,7 @@ Then $F$ is convex if and only if the signed curvature of $\gamma$ does not chan
 
 \begin{thm}{Lens lemma}\label{lem:lens}
 Let $\gamma$ be a smooth regular simple plane curve that runs from $x$ to $y$.
-Assume that $\gamma$ runs on the right side (left side) of the oriented line $xy$ and only its endpoints $x$ and $y$ lie on the line.
+Assume that $\gamma$ runs on the right side (left side) of the oriented line $xy$, and only its endpoints $x$ and $y$ lie on the line.
 Then $\gamma$ has a point with positive (respectively negative) signed curvature.
 \end{thm}
 
@@ -202,7 +202,7 @@ Consider the smallest disc segment with chord $[p,q]$ that contains $\gamma$.
 Note that its arc $\sigma$ supports $\gamma$ at some point $w=\gamma(t_0)$.
 
 Let us parametrize $\sigma$ from $p$ to $q$.
-Note that the $\gamma$ and $\sigma$ are tangent and cooriented at $w$.
+Note that $\gamma$ and $\sigma$ are tangent and cooriented at $w$.
 If not, then the arc of $\gamma$ from $w$ to $y$ would be trapped in the curvilinear triangle $xwp$ bounded by the line segment $[p,x]$ and the arcs of $\sigma$, $\gamma$.
 But this is impossible since $y$ does not belong to this triangle.
 
@@ -244,7 +244,7 @@ Since a line has vanishing curvature, the supporting test (\ref{prop:supporting-
 Denote by $K$ the convex hull of $F$.
 If $F$ is not convex, then $F$ is a proper subset of $K$.
 Therefore, $\partial K$ contains a line segment that is not a part of $\partial F$.
-In other words, there is a line that supports $\gamma$ at two points, say $x$ and $y$ that divide $\gamma$ in two arcs $\gamma_1$ and $\gamma_2$, both distinct from the line segment $[x,y]$.
+In other words, there is a line that supports $\gamma$ at two points, say $x$ and $y$, that divide $\gamma$ in two arcs $\gamma_1$ and $\gamma_2$, both distinct from the line segment $[x,y]$.
 
 Note that one of the arcs $\gamma_1$ or $\gamma_2$ is parametrized from $x$ to $y$ and the other from $y$ to $x$.
 Passing to a smaller arc if necessary we can ensure that only its endpoints lie on the line. 
@@ -258,12 +258,14 @@ Show that $\gamma$ has a point with absolute curvature less than 1.
 
 \begin{thm}{Exercise}\label{ex:line-curve-intersections}
 Suppose $\gamma$ is a simple smooth regular plane curve with positive signed curvature.
-Assume $\gamma$ crosses a line $\ell$ at the points $p_1,p_2,\z\dots, p_n$ and these points appear on $\gamma$ in the same order.
+Assume $\gamma$ crosses a line $\ell$ at the points $p_1,p_2,\z\dots, p_n$, and these points appear on $\gamma$ in the same order.
 
-\begin{subthm}{ex:line-curve-intersections:a} Show that $p_2$ cannot lie between $p_1$ and $p_3$ on $\ell$.
+\begin{subthm}{ex:line-curve-intersections:a}
+Show that $p_2$ cannot lie between $p_1$ and $p_3$ on $\ell$.
 \end{subthm}
 
-\begin{subthm}{ex:line-curve-intersections:b} Show that if $p_3$ lies between $p_1$ and $p_2$ on $\ell$, then the points appear on $\ell$ in the following order:  
+\begin{subthm}{ex:line-curve-intersections:b}
+Show that if $p_3$ lies between $p_1$ and $p_2$ on $\ell$, then the points appear on $\ell$ in the following order:  
 \[p_1,p_3,\dots,p_4 ,p_2.\]
 
 \end{subthm}
@@ -470,7 +472,7 @@ In order to get the osculating circles supporting $\gamma$ from outside, one can
 
 (Alternatively, if one applies to $\gamma$ an inversion with respect to a circle whose center lies inside~$\gamma$, then the obtained curve $\gamma_1$ also has  two osculating circles that support $\gamma_1$ from inside.
 According to \ref{ex:inverse}, these osculating circlines are inverses of the osculating circlines of $\gamma$.
-Note that the region lying inside $\gamma$ is mapped to the region outside $\gamma_1$ and the other way around.
+Note that the region lying inside $\gamma$ is mapped to the region outside $\gamma_1$, and the other way around.
 Therefore, these two circlines correspond to the osculating circlines supporting $\gamma$ from outside.)
 \qeds
 
@@ -482,8 +484,8 @@ Therefore, these two circlines correspond to the osculating circlines supporting
 \end{wrapfigure}
 
 \begin{thm}{Advanced exercise}\label{ex:curve-crosses-circle}
-Suppose $\gamma$ is a closed simple smooth regular plane curve and $\sigma$ is a circle.
-Assume $\gamma$ crosses $\sigma$ at the points $p_1,\dots,p_{2{\cdot} n}$ and these points appear in the same cycle order on $\gamma$ and on $\sigma$.
+Suppose $\gamma$ is a closed simple smooth regular plane curve, and $\sigma$ is a circle.
+Assume $\gamma$ crosses $\sigma$ at the points $p_1,\dots,p_{2{\cdot} n}$, and these points appear in the same cycle order on $\gamma$ and on $\sigma$.
 Show that $\gamma$ has at least $2\cdot n$ vertices.
 
 Construct an example of a closed simple smooth regular plane curve $\gamma$ with only 4 vertices that crosses a given circle at arbitrarily many points. 

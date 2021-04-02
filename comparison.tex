@@ -1,7 +1,7 @@
 \chapter{Comparison theorems}
 \label{chap:comparison}
 
-This chapter is based on material in the book by Stephanie Alexander, Vitali Kapovitch and the first author \cite{alexander-kapovitch-petrunin2027}.
+This chapter is based on material in the book by Stephanie Alexander, Vitali Kapovitch, and the first author \cite{alexander-kapovitch-petrunin2027}.
 
 \section{Triangles and hinges}
 
@@ -10,7 +10,7 @@ $\dist{x}{y}\Sigma$ denotes the \index{intrinsic distance}\emph{intrinsic distan
 
 A \index{geodesic!triangle}\emph{geodesic triangle} in a surface $\Sigma$ is defined as a triple of points $x,y,z\z\in \Sigma$ with a choice of minimizing geodesics $[x,y]_\Sigma$, $[y,z]_\Sigma$ and $[z,x]_\Sigma$.
 The points $x,y,z$ are called the {}\emph{vertices} of the geodesic triangle,
-the minimizing geodesics $[x,y]$, $[y,z]$ and $[z,x]$ are called its {}\emph{sides};
+the minimizing geodesics $[x,y]$, $[y,z]$, and $[z,x]$ are called its {}\emph{sides};
 the triangle itself is denoted by $[xyz]$, or by $[xyz]_\Sigma$, if we need to emphasize that it lies in the surface $\Sigma$.\index{10aad@$[xyz]$, $[xyz]_\Sigma$}
 
 A triangle $[\tilde x\tilde y\tilde z]$ in the plane $\mathbb{R}^2$ is called a \index{model!triangle}\emph{model triangle} of the triangle $[xyz]$
@@ -58,7 +58,9 @@ generalizations were obtained by Victor Toponogov \cite{toponogov1957}, Mikhael 
 
 Part \ref{SHORT.thm:comp:cat} is called the {}\emph{Cartan--Hadamard theorem};
 it was proved by 
-Hans von Mangoldt \cite{mangoldt} and generalized by Elie Cartan \cite{cartan}, Jacques Hadamard \cite{hadamard},
+Hans von Mangoldt \cite{mangoldt} and generalized a number of times by 
+Elie Cartan \cite{cartan},
+Jacques Hadamard \cite{hadamard},
 Herbert Busemann \cite{busemann},
 Willi Rinow \cite{rinow},
 Mikhael Gromov \cite[p.~119]{gromov-1987},
@@ -97,14 +99,14 @@ The points $(1,0,0)$, $(-\tfrac{1}2, \tfrac{\sqrt{3} }2, 0)$, $(-\tfrac{1}2, -\t
 form a triangle with all angles equal to $\pi$, but all model angles equal to $\tfrac{\pi}3$.
 
 Let us discuss the relationship between the Gauss--Bonnet formula and the comparison theorems.
-Suppose that a disc $\Delta$ is bounded by a geodesic triangle $[xyz]$ with internal angles $\alpha$, $\beta$ and $\gamma$.
+Suppose that a disc $\Delta$ is bounded by a geodesic triangle $[xyz]$ with internal angles $\alpha$, $\beta$, and $\gamma$.
 Then Gauss--Bonnet implies that 
 \[\alpha+\beta+\gamma-\pi=\iint_\Delta K;\]
 in particular both sides of the equation have the same sign.
 It follows that
 \begin{itemize}
-\item if $K_\Sigma\ge 0$ then $\alpha+\beta+\gamma\ge\pi$, and
-\item if $K_\Sigma\le 0$ then $\alpha+\beta+\gamma\le\pi$.
+\item if $K_\Sigma\ge 0$, then $\alpha+\beta+\gamma\ge\pi$, and
+\item if $K_\Sigma\le 0$, then $\alpha+\beta+\gamma\le\pi$.
 \end{itemize}
 
 Now set 
@@ -113,8 +115,8 @@ $\hat\beta=\measuredangle\hinge {y}{z}{x}$,
 and $\hat\gamma=\measuredangle\hinge {z}{x}{y}$.
 Since the angles of any plane triangle add up $\pi$, from the comparison theorems, we get that
 \begin{itemize}
-\item if $K_\Sigma\ge 0$ then $\hat\alpha+\hat\beta+\hat\gamma\ge\pi$, and
-\item if $K_\Sigma\le 0$ then $\hat\alpha+\hat\beta+\hat\gamma\le\pi$.
+\item if $K_\Sigma\ge 0$, then $\hat\alpha+\hat\beta+\hat\gamma\ge\pi$, and
+\item if $K_\Sigma\le 0$, then $\hat\alpha+\hat\beta+\hat\gamma\le\pi$.
 \end{itemize}
 
 The triples of angles $\{ \alpha , \beta , \gamma \}$, $\{ \hat\alpha , \hat\beta , \hat\gamma \}$ are related by the identities:
@@ -158,8 +160,8 @@ It will be used in the proof of the global version (\ref{thm:comp}).
 \begin{thm}{Theorem}\label{thm:loc-comp}
 The comparison theorem (\ref{thm:comp}) holds in a small neighborhood of any point.
 
-Moreover, let $\Sigma$ be a smooth regular surface without boundary. Then for any $p\in \Sigma$ there is $r>0$ such that if $\dist{p}{x}\Sigma<r$, then $\inj(x)_\Sigma>r$ and the following statements hold:
-
+Moreover, let $\Sigma$ be a smooth regular surface without boundary.
+Then for any $p\in \Sigma$ there is $r>0$ such that if $\dist{p}{x}\Sigma<r$, then $\inj(x)_\Sigma>r$, and the following statements hold:
 
 \begin{subthm}{thm:loc-comp:cba}
 If $\Sigma$ has nonpositive Gauss curvature, then 
@@ -189,7 +191,7 @@ Note that $y=\exp_x\vec v$ and $z=\exp_x\vec w$ for two vectors $\vec v,\vec w\i
 \end{align*}
 in particular, $|\vec v|, |\vec w|< \tfrac r2$.
 \parit{\ref{SHORT.thm:loc-comp:cbb}.}
-Consider the line segment $\tilde \gamma$ joining $\vec v$ to $\vec w$ in the tangent plane $\T_x$ and set $\gamma=\exp_x\circ\tilde \gamma$.
+Consider the line segment $\tilde \gamma$ joining $\vec v$ to $\vec w$ in the tangent plane $\T_x$, and set $\gamma=\exp_x\circ\tilde \gamma$.
 By Rauch comparison (\ref{prop:rauch:K>=0}), we have
 \[\length\gamma\le \length \tilde \gamma.\]
 Since $\dist{\vec v}{\vec w}{\T_x}=\length\tilde \gamma$ and $\dist{y}{z}\Sigma\le \length\gamma$, we get 
@@ -227,7 +229,7 @@ Therefore, \ref{SHORT.thm:loc-comp:cba} implies \ref{thm:comp:cat}.
 
 We will prove \ref{thm:comp:toponogov}, first assuming that $\Sigma$ is compact.
 The general case requires only minor modifications; they are indicated in Exercise \ref{ex:open-comparison} at the end of the section.
-The proof is taken from \cite{alexander-kapovitch-petrunin2027} and it is very close to the proof given by Urs Lang and Viktor Schroeder \cite{lang-schroeder}.
+The proof is taken from \cite{alexander-kapovitch-petrunin2027}, and it is very close to the proof given by Urs Lang and Viktor Schroeder \cite{lang-schroeder}.
 
 \parit{Proof of \ref{thm:comp:toponogov} in the compact case.}\label{proof(thm:comp:toponogov)}
 Assume $\Sigma$ is compact. 
@@ -288,7 +290,7 @@ Take $x'\in [x, q]$ such that
 \[\dist{p}{x}\Sigma+3\cdot\dist{x}{x'}\Sigma
 =\tfrac{2}{3}\cdot\ell
 \eqlbl{3|xx'|}\]
-Choose a geodesic $[x', p]$ and consider the hinge $\hinge{x'}p q$ formed by $[x',p]$ and $[x',q]\subset [x,q]$.
+Choose a geodesic $[x', p]$, and consider the hinge $\hinge{x'}p q$ formed by $[x',p]$ and $[x',q]\subset [x,q]$.
 
 \begin{wrapfigure}{r}{32mm}
 \vskip0mm
@@ -476,7 +478,7 @@ A reformulation of the following lemma in plane geometry will be used in the nex
 
 \begin{thm}{Lemma}
 \label{lem:alex}
-Assume $[pxyz]$ and $[p'x'y'z']$ be two quadrilaterals in the plane with equal corresponding sides.
+Assume $[pxyz]$ and $[p'x'y'z']$ are two quadrangles in the plane with equal corresponding sides.
 Assume that the sides $[x',y']$ and $[y',z']$ extend each other; that is, $y'$ lies on the line segment $[x',z']$.
 Then the following expressions have the same signs:
 \begin{enumerate}[(i)]
@@ -568,9 +570,9 @@ In the proof we will use the following translation of the Alexandrov lemma to th
 \end{wrapfigure}
 
 \begin{thm}{Reformulation of Alexandrov lemma}\label{lem:alex-reformulation}\\
-Let $[pxz]$ be a triangle in a surface $\Sigma$ and 
- $y$ a point on the side $[x,z]$.
-Consider its model triangle $[\tilde p\tilde x\tilde z]\z=\tilde\triangle pxz$ and let $\tilde y$ be the corresponding point on the side $[\tilde x,\tilde z]$.
+Let $[pxz]$ be a triangle in a surface $\Sigma$
+and $y$ a point on the side $[x,z]$.
+Consider its model triangle $[\tilde p\tilde x\tilde z]\z=\tilde\triangle pxz$, and let $\tilde y$ be the corresponding point on the side $[\tilde x,\tilde z]$.
 Then the following expressions have the same signs:
 \begin{enumerate}[(i)]
  \item $\dist{p}{y}\Sigma-\dist{\tilde p}{\tilde y}{\mathbb{R}^2}$;
@@ -624,9 +626,9 @@ Show that if $\Sigma$ is simply-connected and the Gauss curvature of $\Sigma$ is
 Let $\bar x$ and $\bar y$ be the midpoints of minimizing geodesics $[p,x]$ and $[p,y]$ in an open smooth regular surface $\Sigma$.
 
 \begin{subthm}{}
- Show that if $\Sigma$ is simply-connected and has nonpositive Gauss curvature, then 
- \[2\cdot \dist{\bar x}{\bar y}\Sigma\le \dist{x}{y}\Sigma.\]
- \end{subthm}
+Show that if $\Sigma$ is simply-connected and has nonpositive Gauss curvature, then 
+\[2\cdot \dist{\bar x}{\bar y}\Sigma\le \dist{x}{y}\Sigma.\]
+\end{subthm}
  
 \begin{subthm}{} Show that if the Gauss curvature of $\Sigma$ is nonnegative, then 
  \[2\cdot \dist{\bar x}{\bar y}\Sigma\ge \dist{x}{y}\Sigma.\]
@@ -676,7 +678,7 @@ is defined.
 Moreover,
 
 \begin{subthm}{prop:busemann:all}
-$\bus_\lambda$ is a $1$-Lipschitz function and
+$\bus_\lambda$ is a $1$-Lipschitz function, and
 \[\bus_\lambda\circ\lambda(t)+t=0\] 
 for any $t$.
 \end{subthm}
@@ -727,10 +729,11 @@ Therefore,
 \lim_{t\to\infty}\left(\frac{h_t(s)}{t} -t\right).
 \end{align*}
 According to \ref{ex:geod-convexity}, the function 
-$s\mapsto h_t(s)$ is convex or concave, assuming the conditions in \ref{SHORT.prop:busemann-} or \ref{SHORT.prop:busemann+} respectively.
+$s\mapsto h_t(s)$ is convex or concave, assuming the conditions in \ref{SHORT.prop:busemann-} or \ref{SHORT.prop:busemann+}, respectively.
 So is the function
 \[s \mapsto \frac{h_t(s)}{t} -t \]
-for every $t$. Since pointwise limits of convex or concave functions are respectively convex or concave, \ref{SHORT.prop:busemann-} and \ref{SHORT.prop:busemann+} follow.
+for every $t$.
+Since pointwise limits of convex or concave functions are respectively convex or concave, \ref{SHORT.prop:busemann-} and \ref{SHORT.prop:busemann+} follow.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:half-line}
@@ -747,7 +750,7 @@ Suppose $\Sigma$ has nonnegative Gauss curvature at any point.
 Consider the function
 \[f(x)=\inf_\lambda\bus_\lambda(x),\]
 where the greatest lower bound is taken among all half-lines $\lambda$ that start at $p$.
-Show that $f$ is a concave function and its suplevel sets 
+Show that $f$ is a concave function, and its suplevel sets 
 \[S_c=\set{x\in\Sigma}{f(x)\ge c}\] 
 are compact for any $c\in\mathbb{R}$.
 \end{subthm}
@@ -819,7 +822,7 @@ whence \ref{eq:bus+-=0} follows.
 
 \parit{Conclusions.}
 According to \ref{prop:busemann}, 
-both functions $\bus_\pm$ are concave and $\bus_\pm\circ\lambda(t)=\mp t$ for any~$t$.
+both functions $\bus_\pm$ are concave, and $\bus_\pm\circ\lambda(t)=\mp t$ for any~$t$.
 By \ref{eq:bus+-=0} both functions $\bus_\pm$ are affine;
 that is, they are convex and concave at the same time.
 It follows that the differential of $\bus_\pm$ is defined at any point $x\in\Sigma$;
@@ -865,7 +868,7 @@ Set $b=\bus_-(x)$.
 Consider a unit-speed geodesic $\zeta$
 such that $\zeta'(b)\z=\vec u(x)$.
 Since $\bus_-$ is affine, we have that $\bus_-\circ\zeta(t)=t$ for any $t$.
-Since $\zeta$ is a unit-speed geodesic and $\bus_-$ is 1-Lipschitz, we get
+Since $\zeta$ is a unit-speed geodesic, and $\bus_-$ is 1-Lipschitz, we get
 \begin{align*}
 |t_1-t_0|&\ge\dist{\zeta(t_1)}{\zeta(t_0)}\Sigma\ge
 \\

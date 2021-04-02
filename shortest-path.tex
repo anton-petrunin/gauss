@@ -27,8 +27,6 @@ We learned this problem from Joel Fine, who attributed it so Frederic Bourgeois 
 А cowboy stands at the bottom of a frictionless ice-mountain formed by a cone with a circular base with  angle  of inclination~$\theta$.
 He wants to climb the mountain;
 he throws up his lasso which slips neatly over the tip of the cone, pulls it tight and starts to climb.
-%If the angle of inclination $\theta$ is large, there is no problem; the lasso grips tight and up he goes.
-%On the other hand if $\theta$ is small, the lasso slips off as soon as the cowboy pulls on it.
 
 What is the critical angle $\theta$ at which the cowboy can no longer climb the ice-mountain?
 \end{thm}
@@ -45,10 +43,10 @@ Since any such path is rectifiable, the value $\dist{p}{q}\Sigma$ is finite for 
 A path $\gamma$ from $p$ to $q$ in $\Sigma$ that minimizes the length is called a \index{shortest path}\emph{shortest path} from $p$ to $q$.
 
 The image of a shortest path between $p$ and $q$ in $\Sigma$ is usually denoted by $[p,q]$ or by $[p,q]_\Sigma$.\index{10aac@$[p,q]$, $[p,q]_\Sigma$}
-In general there might be no shortest path between two given points on a surface and there might be many of them;
+In general there might be no shortest path between two given points on a surface, and there might be many of them;
 this is shown in the following two examples.
 
-Usually, if we write $[p,q]_\Sigma$, we are assuming that such a shortest path exists and we have made a choice of one of them.
+Usually, if we write $[p,q]_\Sigma$, we are assuming that such a shortest path exists, and we have made a choice of one of them.
 
 {
 
@@ -78,7 +76,7 @@ There is no shortest path from $p$ to $q$ in $\Sigma$.
 \parit{Proof.}
 Note that $\dist{p}{q}\Sigma=2$. 
 Indeed, given $\epsilon\z>0$, consider the point $s_\epsilon=(0,\epsilon,0)$.
-Observe that the polygonal path $ps_\epsilon q$ lies in $\Sigma$ and its length $2\cdot\sqrt{1+\epsilon^2}$ approaches $2$ as $\epsilon\to0$.
+Observe that the polygonal path $ps_\epsilon q$ lies in $\Sigma$, and its length $2\cdot\sqrt{1+\epsilon^2}$ approaches $2$ as $\epsilon\to0$.
 It follows that $\dist{p}{q}\Sigma\le 2$.
 Since $\dist{p}{q}\Sigma\z\ge \dist{p}{q}{\mathbb{R}^3}=2$, we get $\dist{p}{q}\Sigma=2$.
 
@@ -101,7 +99,7 @@ By the definition of induced length-metric (Section~\ref{sec:Length metric}),
 there is a sequence of paths $\gamma_n$ from $p$ to $q$ in $\Sigma$ such that
 \[\length\gamma_n\to \ell\quad\text{as}\quad n\to \infty.\]
 
-Without loss of generality, we may assume that $\length\gamma_n<\ell+1$ for any $n$ and each $\gamma_n$ is parametrized proportional to its arc-length.
+Without loss of generality, we may assume that $\length\gamma_n<\ell+1$ for any $n$, and each $\gamma_n$ is parametrized proportional to its arc-length.
 In particular, each path $\gamma_n\:[0,1]\to\Sigma$ is $(\ell+1)$-Lipschitz; 
 that is,
 \[|\gamma(t_0)-\gamma(t_1)|\le (\ell+1)\cdot|t_0-t_1|\]
@@ -110,7 +108,7 @@ for any $t_0,t_1\in[0,1]$.
 Note that the image of $\gamma_n$ lies in the closed ball $\bar B[p,\ell+1]$ for any $n$.
 It follows that the coordinate functions of $\gamma_n$ are uniformly equicontinuous and uniformly bounded.
 By the Arzel\'{a}--Ascoli theorem (\ref{lem:equicontinuous})
- there is a convergent subsequence of $\gamma_n$ and its limit, say $\gamma_\infty\:[0,1]\to\mathbb{R}^3$, is continuous;
+ there is a convergent subsequence of $\gamma_n$, and its limit, say $\gamma_\infty\:[0,1]\to\mathbb{R}^3$, is continuous;
 that is, $\gamma_\infty$ is a path.
 Evidently $\gamma_\infty$ runs from $p$ to $q$;
 in particular
@@ -139,7 +137,7 @@ it maps the Euclidean space to $R$.
 Note that if $p\in R$, then $\bar p=p$.
 
 \parit{Proof.}
-Fix a point $p$ and set 
+Fix a point $p$, and set 
 \[\ell=\inf\set{|p-x|}{x\in R}.\]
 Choose a sequence $x_n\in R$ such that $|p-x_n|\to \ell$ as $n\to\infty$.
 
@@ -192,8 +190,9 @@ In particular,
 \qedsf
 
 \begin{thm}{Corollary}\label{cor:shorts+convex}
-Assume a surface $\Sigma$ bounds a closed convex region $R$ and  $p,q \in \Sigma$.
-Denote by $W$ the outer closed region of $\Sigma$; in other words $W$ is the union of $\Sigma$ and the complement of $R$.
+Assume a surface $\Sigma$ bounds a closed convex region $R$, and $p,q\in \Sigma$.
+Denote by $W$ the outer closed region of $\Sigma$;
+in other words $W$ is the union of $\Sigma$ and the complement of $R$.
 Then 
 \[\length\gamma\ge \dist{p}{q}\Sigma\]
 for any path $\gamma$ in $W$ from $p$ to $q$.
@@ -231,9 +230,9 @@ By the separation lemma (\ref{lem:separation}) there is a plane $\Pi$ that cuts 
 The curve $\gamma$ must intersect $\Pi$ at two points: one point before $t_1$ and one after.
 Let $a=\gamma(t_0)$ and $b=\gamma(t_2)$ be these points.
 Note that the arc of $\gamma$ from $a$ to $b$ is strictly longer that $|a-b|$;
-indeed its length is at least $|a-w|+|w-b|$ and $|a-w|+|w-b|>|a-b|$ since $w\notin[a,b]$.
+indeed its length is at least $|a-w|+|w-b|$, and $|a-w|+|w-b|>|a-b|$ since $w\notin[a,b]$.
 
-Remove from $\gamma$ the arc from $a$ to $b$ and replace it with the line segment $[a,b]$;
+Remove from $\gamma$ the arc from $a$ to $b$, and replace it with the line segment $[a,b]$;
 denote the obtained curve by $\gamma_1$. 
 From above, we have that
 \[\length\gamma>\length \gamma_1\]
@@ -244,7 +243,7 @@ Whence the second statement follows.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:length-dist-conv}
-Suppose $\Sigma$ is a proper smooth surface with positive Gauss curvature and $\Norm$ is the unit normal field on $\Sigma$.
+Suppose $\Sigma$ is a proper smooth surface with positive Gauss curvature, and $\Norm$ is the unit normal field on $\Sigma$.
 Show that for any two points $p,q\in \Sigma$ we have the following inequality:
 \[\dist{p}{q}\Sigma\le 2\cdot \frac{|p-q|}{|\Norm(p)+\Norm(q)|}.\]
 

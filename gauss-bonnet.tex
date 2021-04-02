@@ -10,7 +10,7 @@ A generalized formula (\ref{thm:GB-generalized}) was proved by Walther von Dyck.
 \index{Gauss--Bonnet formula}
 
 \begin{thm}{Theorem}\label{thm:gb}
-Let $\Delta$ be a topological disc in a smooth oriented surface $\Sigma$ bounded by a simple piecewise smooth and regular curve $\partial \Delta$.
+Let $\Delta$ be a topological disc in a smooth oriented surface $\Sigma$ bounded by a simple piecewise smooth regular curve $\partial\Delta$.
 Suppose that $\partial \Delta$ is oriented in such a way that $\Delta$ lies on its left.
 Then 
 \[\tgc{\partial\Delta}+\iint_\Delta K=2\cdot \pi,\eqlbl{eq:g-b}\]
@@ -114,7 +114,7 @@ In particular, $\Sigma$ is diffeomorphic to the plane.
 
 \section{Additivity}
 
-Let $\Delta$ be a topological disc in a smooth oriented surface $\Sigma$ bounded by a simple piecewise smooth and regular curve $\partial \Delta$.
+Let $\Delta$ be a topological disc in a smooth oriented surface $\Sigma$ bounded by a simple piecewise smooth regular curve $\partial \Delta$.
 As before we suppose that $\partial \Delta$ is oriented in such a way that $\Delta$ lies on its left.
 Set
 \[\GB(\Delta)=\tgc{\partial\Delta}+\iint_\Delta K-2\cdot \pi,
@@ -139,7 +139,7 @@ Then
 \end{wrapfigure}
 
 \parit{Proof.}
-Let us subdivide $\partial \Delta$ into two curves $\gamma_1$ and $\gamma_2$ that share  endpoints with $\delta$ so that
+Let us subdivide $\partial \Delta$ into two curves $\gamma_1$ and $\gamma_2$ that share endpoints with $\delta$, so that
  $\Delta_i$ is bounded by the arc $\gamma_i$  and~$\delta$ for $i=1,2.$
 
 Denote by $\phi_1$, $\phi_2$, $\psi_1$, and $\psi_2$ the angles between $\delta$ and $\gamma_i$ marked on the diagram.
@@ -186,7 +186,7 @@ According to \ref{lem:area-spher-triangle},
 \[\area\Delta=\alpha+\beta+\gamma-\pi.\]
 
 Recall that $\partial\Delta$ is oriented so that $\Delta$ lies on its left. 
-Then its oriented external angles are  $\pi-\alpha$, $\pi-\beta$ and $\pi-\gamma$.
+Then its oriented external angles are  $\pi-\alpha$, $\pi-\beta$, and $\pi-\gamma$.
 Therefore,
 \[\tgc{\partial\Delta}=3\cdot\pi-\alpha-\beta-\gamma.\]
 It follows that $\tgc{\partial\Delta}+\area \Delta=2\cdot\pi$ or, equivalently,
@@ -300,7 +300,7 @@ It follows that $\gamma$ contains only one simple loop.
 This loop cuts a disc from $\Sigma$ 
 and goes around it either clockwise or counterclockwise.
 This way we divide all the self-intersecting geodesics on $\Sigma$
-into two sets which we  call {}\emph{clockwise} and {}\emph{counterclockwise}.
+into two sets which we call {}\emph{clockwise} and {}\emph{counterclockwise}.
 
 Note that the geodesic $t\mapsto \gamma(t)$ is clockwise 
 if and only if the same geodesic traveled backwards
@@ -308,8 +308,7 @@ $t\mapsto \gamma(-t)$
 is counterclockwise.
 
 Let us shoot a unit-speed geodesic at each direction from a given point $p\z=\gamma(0)$.
-This gives a one-parameter family of geodesics $\gamma_s$ for $s\in[0,\pi]$ connecting the geodesic $t\mapsto \gamma(t)$ with
- $t\mapsto \gamma(-t)$; that is, $\gamma_0(t)\z=\gamma(t)$ and $\gamma_\pi(t)=\gamma(-t)$.
+This gives a one-parameter family of geodesics $\gamma_s$ for $s\in[0,\pi]$ connecting the geodesic $t\mapsto \gamma(t)$ with $t\mapsto \gamma(-t)$; that is, $\gamma_0(t)\z=\gamma(t)$, and $\gamma_\pi(t)=\gamma(-t)$.
 
 Observe that the subset of values $s\in [0,\pi]$ such that $\gamma_s$ is right (or left) is open.
 That is, if $\gamma_s$ is right, then so is $\gamma_t$ for all $t$ sufficiently close to $s$.
@@ -339,13 +338,13 @@ Show that there is a simple two-sided infinite geodesic $\gamma$ that is tangent
 \index{Gauss--Bonnet formula}
 
 \begin{thm}{Theorem}\label{thm:GB-generalized}
-Let $\Lambda$ be a compact domain bounded by a finite collection (possibly empty) of simple piecewise smooth and regular curves $\gamma_1,\dots,\gamma_n$ in a smooth surface $\Sigma$.
+Let $\Lambda$ be a compact domain bounded by a finite collection (possibly empty) of simple piecewise smooth regular curves $\gamma_1,\dots,\gamma_n$ in a smooth surface $\Sigma$.
 Suppose that each $\gamma_i$ 
 is oriented in such a way that $\Lambda$ lies on its left.
 Then \[\tgc{\gamma_1}+\dots+\tgc{\gamma_n}+\iint_\Lambda K=2\cdot \pi\cdot \chi\eqlbl{eq:g-b++}\]
 for an integer $\chi=\chi(\Lambda)$.
 
-Moreover, if $\Lambda$ can be subdivided into $f$ discs by an embedded graph with   $v$ vertices and $e$ edges then $\chi=v-e+f$.
+Moreover, if $\Lambda$ can be subdivided into $f$ discs by an embedded graph with $v$ vertices and $e$ edges, then $\chi=v-e+f$.
 \end{thm}
 
 The number $\chi=\chi(\Lambda)$ is called the \index{Euler characteristic}\emph{Euler characteristic} of $\Lambda$. 
@@ -353,8 +352,8 @@ Note that $\chi$ does not depend on the choice of the subdivision since the left
 
 \parit{Proof.}
 Suppose a graph with $v$ vertices and $e$ edges subdivides $\Lambda$ into $f$ discs.
-Apply Gauss--Bonnet formula for each disc and sum up the results.
-Observe that each disc and each vertex contributes $2\cdot\pi$ and each edge contributes $-2\cdot\pi$ to the total sum.
+Apply Gauss--Bonnet formula for each disc, and sum up the results.
+Observe that each disc and each vertex contributes $2\cdot\pi$, and each edge contributes $-2\cdot\pi$ to the total sum.
 Whence \ref{eq:g-b++} follows.
 \qeds
 

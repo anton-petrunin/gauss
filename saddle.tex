@@ -9,8 +9,8 @@ If there is a neighborhood $U$ of $p$ such that $\Sigma_1\cap U$ lies on one sid
 Let us describe $\Sigma_2$ locally at $p$ as a graph $z=f_2(x,y)$ in tangent-normal coordinates at $p$.
 If $\Sigma_2$ locally supports $\Sigma_1$ at $p$, then  all points of $\Sigma_1$ near $p$ lie either above or below the graph $z=f_2(x,y)$.
 
-In both cases the surfaces $\Sigma_1$ and $\Sigma_2$ have a common tangent plane at $p$,
-so we can write both as graphs $z=f_1(x,y)$ and $z=f_2(x,y)$ in the common tangent-normal coordinates at $p$.
+In both cases the surfaces $\Sigma_1$ and $\Sigma_2$ have a common tangent plane at $p$.
+So we can write both as graphs $z=f_1(x,y)$ and $z=f_2(x,y)$ in the common tangent-normal coordinates at $p$.
 Note that $\Sigma_2$ locally supports $\Sigma_1$ at $p$ if and only if 
 \[f_1(x,y)\ge f_2(x,y)
 \quad\text{or}\quad
@@ -40,7 +40,8 @@ $k_1(p)_{\Sigma_1}\z> k_1(p)_{\Sigma_2}$ and $k_2(p)_{\Sigma_1}\z> k_2(p)_{\Sigm
 \end{thm}
 
 
-\parit{Proof.} We can assume that $\Sigma_1$ and $\Sigma_2$ are graphs $z=f_1(x,y)$  and $z=f_2(x,y)$ in common tangent-normal coordinates at $p$, so we have $f_1\ge f_2$.
+\parit{Proof.}
+We can assume that $\Sigma_1$ and $\Sigma_2$ are graphs $z=f_1(x,y)$  and $z=f_2(x,y)$ in common tangent-normal coordinates at $p$, so we have $f_1\ge f_2$.
 
 \begin{wrapfigure}{o}{40 mm}
 \vskip-4mm
@@ -112,7 +113,7 @@ The statement follows from  \ref{prop:surf-support} and the definition of mean c
 \[H(p)_{\Sigma_i}=k_1(p)_{\Sigma_i}+k_2(p)_{\Sigma_i}.\]
 
 
-\parit{\ref{SHORT.cor:surf-support:gauss}.} Since $k_2(p)_{\Sigma_i}\ge k_1(p)_{\Sigma_i}$ and $k_1(p)_{\Sigma_2}\ge 0$, we get that all the principal curvatures 
+\parit{\ref{SHORT.cor:surf-support:gauss}.} Since $k_2(p)_{\Sigma_i}\ge k_1(p)_{\Sigma_i}$, and $k_1(p)_{\Sigma_2}\ge 0$, we get that all the principal curvatures 
 $k_1(p)_{\Sigma_1}$, 
 $k_1(p)_{\Sigma_2}$, 
 $k_2(p)_{\Sigma_1}$, and 
@@ -175,7 +176,7 @@ By continuity of the function $(x,y,{\vec w})\mapsto D^2_{\vec w}f(x,y)$,
 we have that $D^2_{\vec w}f(x,y)>0$ if $\vec w\ne 0$ and $(x,y)$ lies in a sufficiently small neighborhood of the origin.
 This property implies that $f$ is a strictly convex function in a neighborhood of the origin in the $(x,y)$-plane (see Section~\ref{sec:analysis}).
 
-Finally, since $\nabla f(0,0)=0$ and $f$ is strictly convex in a neighborhood of the origin it has a strict local minimum at the origin.
+Finally, since $\nabla f(0,0)=0$, and $f$ is strictly convex in a neighborhood of the origin, $f$ has a strict local minimum at the origin.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:section-of-convex}
@@ -332,7 +333,8 @@ Prove the last statement in \ref{thm:convex-open}.
 Show that any open surface $\Sigma$ with positive Gauss curvature is a topological plane;
 that is, there is an embedding $\mathbb{R}^2\to\mathbb{R}^3$ with image $\Sigma$.
 
-Try to show that $\Sigma$ is a smooth plane; that is, the embedding $f$ can be made smooth and regular.
+Try to show that $\Sigma$ is a smooth plane;
+that is, the embedding $f$ can be made smooth and regular.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:circular-cone}
@@ -420,7 +422,7 @@ such that the intersection of $\Omega$ with the tangent plane $\T_p$ is a union 
 Note that a closed surface cannot be saddle.
 Indeed, suppose $\Sigma$ is a closed surface.
 Consider the smallest sphere that surrounds $\Sigma$.
-The sphere supports $\Sigma$ at some point $p$ and at this point the principal curvatures must have the same sign.
+The sphere supports $\Sigma$ at some point $p$, and at this point the principal curvatures must have the same sign.
 The following more general statement is proved using the same idea.
 
 {
@@ -433,7 +435,7 @@ The following more general statement is proved using the same idea.
 \end{wrapfigure}
 
 \begin{thm}{Lemma}\label{lem:convex-saddle}
-Assume $\Sigma$ is a compact saddle surface and its boundary line lies in a closed convex  region $R$.
+Assume $\Sigma$ is a compact saddle surface, and its boundary line lies in a closed convex  region $R$.
 Then the entire surface $\Sigma$ lies in~$R$.
 \end{thm}
 
@@ -453,7 +455,7 @@ let $\sigma$ be the circle of intersection of this sphere and $\Pi$.
 Consider the smallest spherical dome $\Sigma_0$ with boundary $\sigma$ that surrounds~$\Sigma'$.
 
 Note that $\Sigma_0$ supports $\Sigma$ at some point~$q$.
-Without loss of generality we may assume that $\Sigma_0$ and $\Sigma$ are cooriented at $q$ and $\Sigma_0$ has positive principal curvatures.
+Without loss of generality we may assume that $\Sigma_0$ and $\Sigma$ are cooriented at $q$, and $\Sigma_0$ has positive principal curvatures.
 In this case $\Sigma_0$ supports $\Delta$ from outside.
 By \ref{cor:surf-support}, we have $K(q)_\Sigma\z\ge K(q)_{\Sigma_0}>0$, a contradiction.
 \qeds
@@ -476,7 +478,7 @@ cannot lie inside an infinite circular cone.
 \end{thm}
 
 A disc $\Delta$ in a surface $\Sigma$ is called a \index{hat}\emph{hat} of $\Sigma$
-if its boundary line $\partial\Delta$ lies in a plane $\Pi$ and  $\Delta \backslash \partial \Delta $ lies on one side of $\Pi$.
+if its boundary line $\partial\Delta$ lies in a plane $\Pi$ and $\Delta \backslash \partial \Delta$ lies on one side of $\Pi$.
 
 \begin{thm}{Proposition}\label{prop:hat}
 A smooth surface $\Sigma$ is saddle if and only if it has no hats.
@@ -504,7 +506,7 @@ Note that $(x,y)\mapsto (x,y,f(x,y))$ is a homeomorphism from $F_\epsilon$
 to
 \[\Delta_\epsilon=\set{(x,y,f(x,y))\in \mathbb{R}^3}{f(x,y)\le \epsilon};\]
 so $\Delta_\epsilon$ is a topological disc for any sufficiently small $\epsilon>0$.
-Note that the boundary line of $\Delta_\epsilon$ lies on the plane $z=\epsilon$ and the entire disc lies below it;
+Note that the boundary line of $\Delta_\epsilon$ lies on the plane $z=\epsilon$, and the entire disc lies below it;
 that is, $\Delta_\epsilon$ is a hat of $\Sigma$.
 \qeds
 
@@ -549,7 +551,8 @@ Construct an open strictly saddle surface that lies between two parallel planes.
 \end{thm}
 
 Since $\exp(x-y^2)>0$,
-the following exercise shows that there are strictly saddle graphs with functions bounded on one side; that is, both (upper and lower) bounds are needed in the proof of Bernshtein's theorem.
+the following exercise shows that there are strictly saddle graphs with functions bounded on one side;
+that is, both (upper and lower) bounds are needed in the proof of Bernshtein's theorem.
 
 \begin{thm}{Exercise}\label{ex:one-side-bernshtein}
 Show that the graph

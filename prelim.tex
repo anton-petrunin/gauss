@@ -28,7 +28,7 @@ $$\Dist(x,y)=0.$$
 $$\Dist(x, z) \le \Dist(x, y) + \Dist(y, z).$$
 \end{enumerate}
 
-A set with a metric is called a \index{metric space}\emph{metric space} and the elements of the set are called \index{point}\emph{points}.
+A set with a metric is called a \index{metric space}\emph{metric space}, and the elements of the set are called \index{point}\emph{points}.
 
 \subsection*{Shortcut for distance}
 Usually we consider only one metric on a set, therefore we can denote the metric space and its underlying set by the same letter, say $\spc{X}$.
@@ -117,7 +117,7 @@ $$\dist{x}{y}{\spc{X}}<\delta\quad \text{ implies that }\quad \dist{f(x)}{f(y)}{
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:shrt=>continuous}
-Let $f\:\spc{X}\to \spc{Y}$ be {}\emph{distance non-expanding map} between metric spaces; that is, 
+Let $f\:\spc{X}\to \spc{Y}$ be a {}\emph{distance non-expanding map} between metric spaces; that is, 
 \[\dist{f(x)}{f(y)}{\spc{Y}}\le \dist{x}{y}{\spc{X}}\]
 for any $x,y\in \spc{X}$.
 Show that $f$ is continuous.
@@ -133,11 +133,11 @@ if its inverse $f^{-1}\:\spc{Y}\z\to \spc{X}$ is also continuous.
 
 If there exists a homeomorphism $f\:\spc{X}\to \spc{Y}$,
 we say that ${\spc{X}}$ is {}\emph{homeomorphic} to $\spc{Y}$,
-or  $\spc{X}$ and $\spc{Y}$ are {}\emph{homeomorphic}.
+or $\spc{X}$ and $\spc{Y}$ are {}\emph{homeomorphic}.
 \end{thm}
 
-If a metric space $\spc{X}$ is homeomorphic to a known space, for example plane, sphere, disc, circle and so on,
-we may also say that $\spc{X}$ is a \index{topological}\emph{topological} plane, sphere, disc, circle and so on.
+If a metric space $\spc{X}$ is homeomorphic to a known space, for example plane, sphere, disc, circle, and so on,
+we may also say that $\spc{X}$ is a \index{topological}\emph{topological} plane, sphere, disc, circle, and so on.
 
 \subsection*{Closed and open sets}
 
@@ -189,7 +189,7 @@ It says that the angle of a triangle monotonically depends on the opposite side,
 It follows directly from the cosine rule.
 
 \begin{thm}{Monotonicity lemma}\label{lem:angle-monotonicity}
-Let $x$, $y$, $z$, $x^{*}$, $y^{*}$ and $z^{*}$ be 6 points such that $\dist{x}{y}{}\z=|x^{*}-y^{*}|>0$ and $|y-z|=|y^{*}-z^{*}|>0$.
+Let $x$, $y$, $z$, $x^{*}$, $y^{*}$, and $z^{*}$ be 6 points such that $\dist{x}{y}{}\z=|x^{*}-y^{*}|>0$ and $|y-z|=|y^{*}-z^{*}|>0$.
 Then 
 \[\measuredangle\hinge yxz
 \ge
@@ -206,7 +206,7 @@ The following theorem says that the triangle inequality holds for angles between
 In particular, it implies that a sphere with the angle metric is a metric space.
 
 \begin{thm}{Theorem}\label{thm:spherical-triangle-inq}
-The following inequality holds for any three line segments $[o,a]$, $[o,b]$ and $[o,c]$ in the Euclidean space:
+The following inequality holds for any three line segments $[o,a]$, $[o,b]$, and $[o,c]$ in the Euclidean space:
 \[\measuredangle\hinge oab
 +
 \measuredangle\hinge obc
@@ -226,7 +226,7 @@ Let $\Delta$ be a spherical triangle;
 that is, $\Delta$ is the intersection of three closed half-spheres in the unit sphere $\mathbb{S}^2$.
 Then 
 \[\area\Delta=\alpha+\beta+\gamma-\pi,\eqlbl{eq:area(Delta)}\]
-where $\alpha$, $\beta$ and $\gamma$ are the angles of $\Delta$.
+where $\alpha$, $\beta$, and $\gamma$ are the angles of $\Delta$.
 \end{thm}
 
 The value $\alpha+\beta+\gamma-\pi$ is called \index{excess of triangle}\emph{excess of the triangle} $\Delta$,
@@ -256,7 +256,7 @@ but the triangle $\Delta$ and its centrally symmetric copy $\Delta^{*}$ are cove
 It follows that
 \[2\cdot \area S_\alpha+2\cdot \area S_\beta+2\cdot \area S_\gamma
 =\area\mathbb{S}^2+4\cdot\area\Delta.\]
-Substituting \ref{eq:area(S2)} and \ref{eq:area(Sa)} and simplifying, we get \ref{eq:area(Delta)}.
+It remains to apply \ref{eq:area(S2)} and \ref{eq:area(Sa)}.
 \qeds
 
 
@@ -346,7 +346,7 @@ Recall that {}\emph{almost all} means all values, with the possible exceptions i
 
 \begin{thm}{Rademacher's theorem}\label{thm:rademacher}
 Let $f\:[a,b]\to\mathbb{R}$ be a Lipschitz function.
-Then the derivative $f'$ of $f$ is a bounded measurable function defined almost everywhere in $[a,b]$ and it satisfies the fundamental theorem of calculus; that is, the following identity 
+Then the derivative $f'$ of $f$ is a bounded measurable function defined almost everywhere in $[a,b]$, and it satisfies the fundamental theorem of calculus; that is, the following identity 
 \[f(b)-f(a)=\int_a^b f'(x)\cdot dx,\]
 holds if the integral is understood in the sense of Lebesgue.
 \end{thm}
@@ -375,7 +375,7 @@ However, the following statement holds true:
 Any continuous function defined on a compact metric space is uniformly continuous.
 \end{thm}
 
-If the condition above holds for any function $f_n$ in a sequence and $\delta$ depends solely on $\epsilon$,
+If the condition above holds for any function $f_n$ in a sequence, and $\delta$ depends solely on $\epsilon$,
 then the sequence $(f_n)$ is called \index{uniformly continuous}\emph{uniformly equicontinuous}.
 More precisely, 
 a sequence of functions $f_n:{\spc{X}}\to \spc{Y}$ is called {}\emph{uniformly equicontinuous} if 
@@ -428,7 +428,7 @@ Note that $h$ and $f$ behave alike ---
 both vanish at $t\le 0$ and grow to infinity for positive $t$.
 The function $h$ is not smooth --- its derivative at $0$ is undefined.
 Unlike $h$, the function $f$ is smooth.
-Indeed, the existence of all derivatives $f^{(n)}(x)$ at $x\ne 0$ is evident and direct calculations show that $f^{(n)}(0)=0$ for all $n$.
+Indeed, the existence of all derivatives $f^{(n)}(x)$ at $x\ne 0$ is evident, and direct calculations show that $f^{(n)}(0)=0$ for all $n$.
 
 Other useful examples of that type are the so-called \index{bell function}\emph{bell function} --- a smooth function that is positive in an $\epsilon$-neighborhood of zero and vanishing outside this neighborhood.
 Such functions can be obtained from the function $f$ constructed above, say 
@@ -510,7 +510,7 @@ $\Jac_{\bm{x}}\bm{f}$
 is invertible at some point $\bm{x}\in \Omega$.
 Then there is a smooth map $\bm{h}\:\Phi\to\mathbb{R}^n$ defined in an open neighborhood $\Phi$ of ${\bm{y}}\z=\bm{f}(\bm{x})$ that is a {}\emph{local inverse of $\bm{f}$ at $\bm{x}$};
 that is, there is a neighborhood $\Psi\ni \bm{x}$ such that
-$\bm{f}$ defines a bijection $\Psi\leftrightarrow \Phi$ and
+$\bm{f}$ defines a bijection $\Psi\leftrightarrow \Phi$, and
 $\bm{h} \circ \bm{f}$ is an identity map on $\Psi$.
 
 Moreover, if an $\Omega$ contains an $\epsilon$-neighborhood of $\bm{x}$, and the first and second partial derivatives $\tfrac{\partial f_i}{\partial x_j}$, $\tfrac{\partial^2 f_i}{\partial x_j\partial x_k}$ are bounded by a constant $C$ for all $i$, $j$, and $k$, then we can assume that $\Phi$ is a $\delta$-neighborhood of $\bm{y}$, for some $\delta>0$ that depends only on $\epsilon$ and $C$. 
@@ -528,7 +528,7 @@ M=\begin{pmatrix}
 \vdots & \ddots & \vdots\\
 \dfrac{\partial f_n}{\partial x_1} & \cdots & \dfrac{\partial f_n}{\partial x_n} \end{pmatrix}\]
 formed by the first $n$ columns of the Jacobian matrix.
-Assume $M$ is invertible at some point $\bm{x}=(x_1,\dots,x_n,y_1,\dots y_m)$ in the domain of definition of $\bm{f}$ and $\bm{f}(\bm{x})=0$.
+Assume $M$ is invertible at some point $\bm{x}=(x_1,\dots,x_n,y_1,\dots y_m)$ in the domain of definition of $\bm{f}$, and $\bm{f}(\bm{x})=0$.
 Then there is a neighborhood $\Psi\ni \bm{x}$
 and a smooth function $\bm{h}\:\mathbb{R}^m\to\mathbb{R}^n$ defined in a neighborhood $\Phi\ni 0$ such that
 for any $(x_1,\dots,x_n,y_1,\dots y_m)\in \Omega$, the equality
@@ -548,7 +548,7 @@ that is, $\jac_{\bm{x}}\bm{f}$ is the absolute value of the determinant of the J
 The following theorem plays the role of a substitution rule for multiple variables.
 
 \index{Borel subsets}\emph{Borel subsets} are defined as the class of subsets that are generated from open sets by applying the following operations recursively: countable union, countable intersection, and complement.
-Since the complement of a closed set is open and the other way around these sets can be also generated from all closed sets.
+Since the complement of a closed set is open and the other way around, these sets can be also generated from all closed sets.
 This class of sets includes virtually all sets that naturally appear in geometry but does not include pathological examples that create problems with integration.
 
 \begin{thm}{Theorem}\label{thm:mult-substitution} %???do we need measure here???
@@ -628,14 +628,14 @@ Therefore, the system can be rewritten as one vector equation
 \[\bm{x}'=\bm{f}(\bm{x}, t).\] 
 
 \begin{thm}{Theorem}\label{thm:ODE}
-Suppose $\mathbb{I}$ is a real interval and $\bm{f}\:\Omega\to \mathbb{R}^n$ is a smooth function defined on an open subset $\Omega\subset \mathbb{R}^n\times \mathbb{R}$.
+Suppose $\mathbb{I}$ is a real interval, and $\bm{f}\:\Omega\to \mathbb{R}^n$ is a smooth function defined on an open subset $\Omega\subset \mathbb{R}^n\times \mathbb{R}$.
 Then for any initial data $\bm{x}(t_0)=\bm{u}$ such that $(\bm{u},t)\in\Omega$ the differential equation 
 \[\bm{x}'=\bm{f}(\bm{x},t)\]
 has a unique solution $t\mapsto \bm{x}(t)$ defined at a maximal interval $\mathbb{J}$ that contains $t_0$.
 Moreover,
 \begin{enumerate}[(a)]
 \item  if $\mathbb{J}\ne \mathbb{R}$ (that is, if an end $a$ of $\mathbb{J}$ is finite) then $\bm{x}(t)$ does not have a limit point in $\Omega$ as $t\to a$;
-\item  the function $(\bm{u},t_0,t)\mapsto \bm{x}(t)$ has open domain of definition in $\Omega\times \mathbb{R}$ and it is smooth in this domain.
+\item  the function $(\bm{u},t_0,t)\mapsto \bm{x}(t)$ has open domain of definition in $\Omega\times \mathbb{R}$, and it is smooth in this domain.
 \end{enumerate}
 
 \end{thm}

@@ -4,7 +4,7 @@
 \section{Acceleration of a unit-speed curve}
 
 Recall that any regular smooth curve can be reparametrized by its arc-length (\ref{prop:arc-length-smooth}).
-The obtained parametrized curve, say $\gamma$, remains to be smooth and it has unit speed; 
+The obtained parametrized curve, say $\gamma$, remains to be smooth, and it has unit speed; 
 that is, $|\gamma'(s)|=1$ for all $s$.
 The following proposition states that in this case
 the acceleration vector stays perpendicular to the velocity vector.
@@ -30,7 +30,7 @@ whence $\gamma''\perp\gamma'$.
 
 For a unit-speed smooth space curve $\gamma$ the magnitude $|\gamma''(s)|$ of its acceleration is called its \index{curvature}\emph{curvature} at  time $s$.
 If $\gamma$ is simple, then we can say that $|\gamma''(s)|$ is the curvature at the point $p=\gamma(s)$ without ambiguity.
-The curvature is usually denoted by $\kur(s)$ or $\kur(s)_\gamma$ and in the case of simple curves it might be also denoted by $\kur(p)$ or $\kur(p)_\gamma$.
+The curvature is usually denoted by $\kur(s)$ or $\kur(s)_\gamma$, and, in the case of simple curves, it might be also denoted by $\kur(p)$ or $\kur(p)_\gamma$.
 
 The curvature measures how fast the curve turns;
 if you drive along a plane curve, then the curvature describes the position of your steering wheel at the given point.
@@ -45,7 +45,7 @@ Show that a regular simple space curve has 0 curvature at each point if and only
 %This contrasts with the fact that a surface with 0 curvature is not necessarily an (extrinsic) plane.
 
 \begin{thm}{Exercise}\label{ex:scaled-curvature}
-Let $\gamma$ be a smooth simple space curve and let $\gamma_{\lambda}$ be a scaled copy of $\gamma$ with factor $\lambda >0$;
+Let $\gamma$ be a smooth simple space curve, and let $\gamma_{\lambda}$ be a scaled copy of $\gamma$ with factor $\lambda >0$;
 that is, $\gamma_{\lambda}(t)=\lambda \cdot\gamma(t)$ for any $t$.
 Show that 
 \[\kur(\lambda \cdot p )_{\gamma_{\lambda}}
@@ -144,7 +144,9 @@ Rewriting the above integral using a change of variables produce a formula for a
 
 
 \begin{thm}{Exercise}\label{ex:helix-curvature}
-Find the curvature of the helix \[\gamma_{a,b}(t)=(a\cdot \cos t,a\cdot \sin t,b\cdot t),\] its tangent indicatrix and the total curvature of its arc $\gamma_{a,b}|_{[0,2\cdot\pi]}$.
+Find the curvature of the helix 
+\[\gamma_{a,b}(t)=(a\cdot \cos t,a\cdot \sin t,b\cdot t),\]
+its tangent indicatrix, and the total curvature of its arc $\gamma_{a,b}|_{[0,2\cdot\pi]}$.
 \end{thm}
 
 Note that for a unit-speed smooth curve,
@@ -258,7 +260,7 @@ Note that these two curves can be combined into one $\gamma\:[a,c]\z\to \mathbb{
 \end{cases}
 \]
 The obtained curve $\gamma$ is called the 
-\emph{concatenation} of $\alpha$ and $\beta$. %briefly $\gamma=\alpha{*}\beta$.
+\emph{concatenation} of $\alpha$ and $\beta$.
 (The condition $\alpha(b)=\beta(b)$ ensures that the map $t\mapsto\gamma(t)$ is continuous.)
 
 The same definition of concatenation can be applied if $\alpha$ and/or $\beta$ are defined on semiopen intervals 
@@ -323,7 +325,7 @@ The same argument as in the proof of Fenchel's theorem, shows that the curves $\
 
 Note that the spherical distance from the endpoint of $\tan_i$ to the starting point of $\tan_{i+1}$ is equal to the external angle $\theta_i$ (we enumerate the arcs modulo $n$, so $\gamma_{n+1}=\gamma_1$).
 Let us connect the endpoint of $\tan_i$ to the starting point of $\tan_{i+1}$ by a short arc of a great circle in the sphere.
-This way we get a closed spherical curve that is $\theta_1+\dots+\theta_n$ longer then the total length of $\tan_1,\dots,\tan_n$.
+This way we get a closed spherical curve that is $\theta_1+\dots+\theta_n$ longer than the total length of $\tan_1,\dots,\tan_n$.
 
 Applying the hemisphere lemma (\ref{lem:hemisphere}) to the obtained closed curve, we get that
 \[\length\tan_1+\dots+\length\tan_n+\theta_1+\dots+\theta_n\ge 2\cdot\pi.\]
@@ -342,8 +344,6 @@ Then
 \[\tc\gamma\ge \alpha+\beta.\eqlbl{tc>a+b}\] 
 
 \end{thm}
-
-%This lemms is due to Alexandr Alexandrov and Yurii Reshetnyak \cite{aleksandrov-reshetnyak}.
 
 \parit{Proof.}
 Let us parametrize the chord $\ell$ from $\gamma(b)$ to $\gamma(a)$ and consider the cyclic concatenation $\bar\gamma$ of $\gamma$ and $\ell$.
@@ -378,7 +378,7 @@ each arc in its concatenation is a line segment.
 Since the curvature of a line segment vanishes, the total curvature of a polygonal line is the sum of its external angles.
 
 \begin{thm}{Exercise}\label{ex:monotonic-tc}
-Let $a,b,c,d$ and $x$ be distinct points in $\mathbb{R}^3$.
+Let $a$, $b$, $c$, $d$, and $x$ be distinct points in $\mathbb{R}^3$.
 Show that the total curvature of the polygonal line $abcd$ cannot exceed the total curvature of $abxcd$; that is, 
 \[\tc {abcd} \le \tc {abxcd}.\]
 
@@ -462,7 +462,8 @@ a good survey on the subject is written by John Sullivan \cite{sullivan-curves}.
 
 \begin{thm}{Exercise}\label{ex:sef-intersection}
 
-\begin{subthm}{ex:sef-intersection:<2pi}Draw a smooth regular plane curve $\gamma$ that has a self-intersection and such that $\tc\gamma<2\cdot\pi$.
+\begin{subthm}{ex:sef-intersection:<2pi}
+Draw a smooth regular plane curve $\gamma$ that has a self-intersection and such that $\tc\gamma<2\cdot\pi$.
 \end{subthm}
 
 \begin{subthm}{ex:sef-intersection:>pi} Show that if a smooth regular curve $\gamma\:[a,b]\to\mathbb{R}^3$ has a self-intersection, then $\tc\gamma>\pi$.
@@ -553,7 +554,7 @@ we get that $\gamma$ is a convex plane curve.
 \end{wrapfigure}
 
 \begin{thm}{Exercise}\label{ex:quadrisecant}
-Suppose that a closed curve $\gamma$ crosses a line at four points $a$, $b$, $c$ and $d$.
+Suppose that a closed curve $\gamma$ crosses a line at four points $a$, $b$, $c$, and $d$.
 Assume that these points appear on the line in the order $a$, $b$, $c$, $d$
 and they appear on the curve $\gamma$ in the order $a$, $c$, $b$, $d$.
 Show that 
@@ -693,7 +694,8 @@ The statement in the following exercise is generally attributed to Hermann Schwa
 
 \begin{thm}{Exercise}\label{ex:schwartz}
 Let $p$ and $q$ be points in a unit circle dividing it in two arcs with lengths $\ell_1<\ell_2$.
-Suppose a space curve $\gamma$ connects $p$ to $q$ and has curvature at most 1. Show that either
+Suppose a space curve $\gamma$ connects $p$ to $q$ and has curvature at most $1$.
+Show that either
 \[\length \gamma\le \ell_1
 \quad\text{or}\quad
 \length \gamma\ge \ell_2.

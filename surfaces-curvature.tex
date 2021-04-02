@@ -5,7 +5,7 @@
 \index{tangent-normal coordinates}
 
 Fix a point $p$ in a smooth oriented surface $\Sigma$.
-Consider a coordinate system $(x,y,z)$ with origin at $p$ such that the $(x,y)$-plane coincides with $\T_p$ and the $z$-axis points in the direction of the normal vector $\Norm(p)$.
+Consider a coordinate system $(x,y,z)$ with origin at $p$ such that the $(x,y)$-plane coincides with $\T_p$, and the $z$-axis points in the direction of the normal vector $\Norm(p)$.
 By \ref{ex:vertical-tangent}, we can present $\Sigma$ locally at $p$ as a graph $z=f(x,y)$ of a smooth function. 
 Note that 
 \begin{align*}
@@ -15,7 +15,7 @@ f_x(0,0)&=0,
 &
 f_y(0,0)&=0.
 \end{align*}
-The first equality holds since $p=(0,0,0)$ lies on the graph and the other two equalities mean that the tangent plane at $p$ is horizontal.
+The first equality holds since $p=(0,0,0)$ lies on the graph, and the other two equalities mean that the tangent plane at $p$ is horizontal.
 
 
 \begin{wrapfigure}[7]{o}{42 mm}
@@ -88,7 +88,8 @@ Note that if $x=f(x,y)$ is a local graph representation of $\Sigma$ in these coo
 
 The principal curvatures can be also defined as the eigenvalues of the Hessian matrix $M_p$.
 The eigendirections of $M_p$ are called the {}\emph{principal directions} of $\Sigma$ at~$p$.
-Note that if $k_1(p)\ne k_2(p)$, then $p$ has exactly two principal directions, which are perpendicular to each other; if $k_1(p)\z= k_2(p)$ then all tangent directions at $p$ are principal.
+Note that if $k_1(p)\ne k_2(p)$, then $p$ has exactly two principal directions, which are perpendicular to each other;
+if $k_1(p)\z= k_2(p)$, then all tangent directions at $p$ are principal.
 
 Note that if we revert the orientation of $\Sigma$, then the principal curvatures switch their signs and indexes.
 
@@ -173,7 +174,7 @@ The following bilinear forms on a tangent plane
 &
 \mathrm{III}(\vec v,\vec w)&=\langle\Shape\vec v,\Shape\vec w\rangle
 \end{align*}
-are called the \index{fundamental form}\emph{first, second, and third fundamental forms} respectively.
+are called the \index{fundamental form}\emph{first, second, and third fundamental forms}, respectively.
 These forms were introduced before the shape operator, but we will not touch them in the sequel.
 }
 
@@ -384,7 +385,7 @@ Without loss of generality we may assume that $\gamma$ is unit-speed;
 in this case $\tan(s)=\gamma'(s)$ is its tangent indicatrix.
 Let us use the shortcut notation $\Norm(s)\z=\Norm(\gamma(s))$.
 Note that the unit vectors $\tan(s)$ and $\Norm(s)$ are orthogonal.
-Тherefore there is a unique unit vector $\mu(s)$\index{10tmn@$\tan$, $\mu$, $\Norm$} such that 
+Therefore there is a unique unit vector $\mu(s)$\index{10tmn@$\tan$, $\mu$, $\Norm$} such that 
 $\tan(s),\mu(s),\Norm(s)$ is an oriented orthonormal basis;
 it is called the \index{Darboux frame}\emph{Darboux frame} of $\gamma$ in $\Sigma$.
 Since $\T_{\gamma (s)}\z\perp\Norm(s)$, the vector $\mu(s)$ is tangent to $\Sigma$ at $\gamma(s)$.
@@ -425,7 +426,7 @@ Assume $\gamma$ is a smooth unit-speed curve in a smooth surface $\Sigma$.
 Let $p=\gamma(s_0)$ and $\vec v=\gamma'(s_0)$.
 Then 
 \[k_n(s_0)=\langle \Shape_p(\vec v),\vec v\rangle,\]
-where $k_n$ denotes the normal curvature of $\gamma$ at $s_0$ and $\Shape_p$ is the shape operator at $p$.
+where $k_n$ denotes the normal curvature of $\gamma$ at $s_0$, and $\Shape_p$ is the shape operator at $p$.
 \end{thm}
 
 Note that according to the proposition, the normal curvature of a regular smooth curve in $\Sigma$ is completely determined by the velocity vector $\vec v$ at the point $p$.
@@ -495,7 +496,7 @@ k_{n}(t_0)&=\langle\gamma'',\Norm\rangle=
 The theorem above, as well as the statement in the following exercise were proved by Jean Baptiste Meusnier \cite{meusnier}.
 
 \begin{thm}{Exercise}\label{ex:meusnier}
-Let $\Sigma$ be a smooth surface, $p\in\Sigma$ and ${\vec v}\in \T_p\Sigma$ a unit vector.
+Let $\Sigma$ be a smooth surface, $p\in\Sigma$, and ${\vec v}\in \T_p\Sigma$ a unit vector.
 Assume that $k_{\vec v}(p)\ne 0$; that is, the normal curvature of $\Sigma$ at $p$ in the direction of ${\vec v}$ does not vanish.
 
 Show that the osculating circles at $p$ of smooth regular curves in $\Sigma$ that run in the direction ${\vec v}$ sweep out a sphere $S$ with center $p+\tfrac1{k_{\vec v}}\cdot\Norm$ and radius $r=\tfrac1{|k_{\vec v}|}$.
@@ -518,7 +519,7 @@ Show that
 \quad
 \frac{-y''(s)}{|x'(s)|}
 \]
-are the principal curvatures of $\Sigma$ at $(x(s),y(s),0)$ in the direction of the corresponding parallel and meridian respectively.
+are the principal curvatures of $\Sigma$ at $(x(s),y(s),0)$ in the direction of the corresponding parallel and meridian, respectively.
 \end{subthm}
 
 \begin{subthm}{}
@@ -630,7 +631,7 @@ that is, it can be parametrized by a sphere with two handles.
 
 Indeed, the boundary of $V_1$ consists of three smooth spheres.
 
-When we drill a hole, we make one hole in two spheres and two holes in one sphere.
+When we drill, we make four holes --- two spheres get one hole in each, and one sphere gets two holes.
 We reconnect two spheres with a tube and obtain one sphere.
 By connecting the two holes of the other sphere with a tube we get a torus;
 it is on the right side in the picture of $V_2$.
