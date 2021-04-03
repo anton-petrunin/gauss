@@ -4,17 +4,17 @@
 \section{Intrinsic geometry}
 
 We begin to study the \index{intrinsic geometry}\emph{intrinsic geometry} of surfaces.
-A property is called \index{intrinsic property}\emph{intrinsic} if it can be checked by measuring things inside the surface, for example lengths of curves or angles between the curves that lie in the surface.
-Otherwise, if a definition of a property essentially uses the ambient space, then it is called \index{extrinsic property}\emph{extrinsic}.
+A property is called \index{intrinsic property}\emph{intrinsic} if it can be checked by measuring things inside the surface; for example, lengths of curves or angles between the curves that lie in the surface.
+Otherwise, if its definition essentially uses the ambient space, then it is called \index{extrinsic property}\emph{extrinsic}.
 
-For instance, the mean curvature as well as the Gauss curvature are defined via principal curvatures, which are extrinsic.
+For instance, the mean curvature, as well as the Gauss curvature, are defined via principal curvatures, which are extrinsic.
 Later (\ref{thm:remarkable}) it will be shown that {}\emph{remarkably} the Gauss curvature is actually intrinsic --- it can be calculated via measurements inside the surface.
-The mean curvature is not intrinsic, for example, the intrinsic geometry of the $(x,y)$-plane is not distinguishable from the intrinsic geometry of the graph $z\z=(x+y)^2$.
+The mean curvature is not intrinsic; for example, the intrinsic geometry of the $(x,y)$-plane is not distinguishable from the intrinsic geometry of the graph $z\z=(x+y)^2$.
 However, while the mean curvature of the former vanishes at all points, the mean curvature of the latter does not vanish, say at $p=(0,0,1)$.  
 
 The following exercise should help you get in the right mood;
-it might look like a tedious problem in calculus, but actually it is an easy problem in geometry.
-We learned this problem from Joel Fine, who attributed it so Frederic Bourgeois \cite{fine}.
+it might look like a tedious problem in calculus, but actually, it is an easy problem in geometry.
+We learned this problem from Joel Fine, who attributed it to Frederic Bourgeois \cite{fine}.
 
 \begin{wrapfigure}[6]{r}{33 mm}
 \vskip-6mm
@@ -43,10 +43,10 @@ Since any such path is rectifiable, the value $\dist{p}{q}\Sigma$ is finite for 
 A path $\gamma$ from $p$ to $q$ in $\Sigma$ that minimizes the length is called a \index{shortest path}\emph{shortest path} from $p$ to $q$.
 
 The image of a shortest path between $p$ and $q$ in $\Sigma$ is usually denoted by $[p,q]$ or by $[p,q]_\Sigma$.\index{10aac@$[p,q]$, $[p,q]_\Sigma$}
-In general there might be no shortest path between two given points on a surface, and there might be many of them;
+In general, there might be no shortest path between two given points on a surface, and there might be many of them;
 this is shown in the following two examples.
 
-Usually, if we write $[p,q]_\Sigma$, we are assuming that such a shortest path exists, and we have made a choice of one of them.
+Usually, if we write $[p,q]_\Sigma$, we are assuming that such a shortest path exists, and we have chosen one of them.
 
 {
 
@@ -82,8 +82,8 @@ Since $\dist{p}{q}\Sigma\z\ge \dist{p}{q}{\mathbb{R}^3}=2$, we get $\dist{p}{q}\
 
 
 It follows that a shortest path from $p$ to $q$, if it exists, must have length 2.
-By the triangle inequality any curve of length 2 from $p$ to $q$ must run along the line segment $[p,q]$;
-in particular it must pass thru the origin.
+By the triangle inequality, any curve of length 2 from $p$ to $q$ must run along the line segment $[p,q]$;
+in particular, it must pass thru the origin.
 Since the origin does not lie in $\Sigma$, there is no shortest from $p$ to $q$ in $\Sigma$ 
 \qeds
 
@@ -92,7 +92,7 @@ Any two points in a proper smooth surface can be joined by a shortest path.
 \end{thm}
 
 \parit{Proof.}
-Fix a proper smooth surface $\Sigma$ and two points $p$ and $q$.
+Choose two points $p$ and $q$ in a proper smooth surface $\Sigma$.
 Set $\ell=\dist{p}{q}\Sigma$.
 
 By the definition of induced length-metric (Section~\ref{sec:Length metric}),
@@ -110,7 +110,7 @@ It follows that the coordinate functions of $\gamma_n$ are uniformly equicontinu
 By the Arzel\'{a}--Ascoli theorem (\ref{lem:equicontinuous})
  there is a convergent subsequence of $\gamma_n$, and its limit, say $\gamma_\infty\:[0,1]\to\mathbb{R}^3$, is continuous;
 that is, $\gamma_\infty$ is a path.
-Evidently $\gamma_\infty$ runs from $p$ to $q$;
+Evidently, $\gamma_\infty$ runs from $p$ to $q$;
 in particular
 \[\length\gamma_\infty\ge \ell.\]
 Since $\Sigma$ is a closed set, $\gamma_\infty$ lies in $\Sigma$.
@@ -166,7 +166,7 @@ that is, the triangle $[p\bar p\bar p']$ is isosceles, and therefore the triangl
 Since a leg of a right triangle is shorter than its hypotenuse, we have $|p-m|<\ell$, a contradiction. 
 
 It remains to prove \ref{eq:short-cpp}.
-We can assume that $\bar p\ne\bar q$, otherwise there is nothing to prove.
+We can assume that $\bar p\ne\bar q$; otherwise, there is nothing to prove.
 
 }
 
@@ -182,7 +182,7 @@ the latter is impossible.
 \end{wrapfigure}
 
 Therefore, $p=\bar p$ or $\measuredangle \hinge{\bar p}{p}{\bar q}\ge \tfrac\pi2$.
-In both cases the orthogonal projection of $p$ to the line $\bar p\bar q$ lies behind $\bar p$, or coincides with $\bar p$.
+In both cases, the orthogonal projection of $p$ to the line $\bar p\bar q$ lies behind $\bar p$, or coincides with $\bar p$.
 The same way we show that the orthogonal projection of $q$ to the line $\bar p\bar q$ lies behind $\bar q$, or coincides with $\bar q$.
 It implies that the orthogonal projection of the line segment $[p,q]$ to the line $\bar p\bar q$ contains the line segment $[\bar p,\bar q]$.
 In particular,
@@ -192,7 +192,7 @@ In particular,
 \begin{thm}{Corollary}\label{cor:shorts+convex}
 Assume a surface $\Sigma$ bounds a closed convex region $R$, and $p,q\in \Sigma$.
 Denote by $W$ the outer closed region of $\Sigma$;
-in other words $W$ is the union of $\Sigma$ and the complement of $R$.
+in other words, $W$ is the union of $\Sigma$ and the complement of $R$.
 Then 
 \[\length\gamma\ge \dist{p}{q}\Sigma\]
 for any path $\gamma$ in $W$ from $p$ to $q$.
@@ -226,7 +226,7 @@ Taking the least upper bound of each side of the inequality for all inscribed po
 It remains to prove the second statement.
 Suppose there is a point $w\z=\gamma(t_1)\notin\Sigma$;
 note that $w\notin R$.
-By the separation lemma (\ref{lem:separation}) there is a plane $\Pi$ that cuts $w$ from $\Sigma$.
+By the separation lemma (\ref{lem:separation}), there is a plane $\Pi$ that cuts $w$ from $\Sigma$.
 The curve $\gamma$ must intersect $\Pi$ at two points: one point before $t_1$ and one after.
 Let $a=\gamma(t_0)$ and $b=\gamma(t_2)$ be these points.
 Note that the arc of $\gamma$ from $a$ to $b$ is strictly longer that $|a-b|$;
@@ -275,7 +275,6 @@ Let us define the \index{intrinsic diameter}\emph{intrinsic diameter} of a close
 Assume a closed smooth surface $\Sigma$ with positive Gauss curvature lies in a unit ball $B$.
 
 \begin{subthm}{} Show that the intrinsic diameter of $\Sigma$ cannot exceed $\pi$.
- 
 \end{subthm}
 
 \begin{subthm}{}

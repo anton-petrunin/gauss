@@ -82,7 +82,7 @@ $\langle  s_\theta, s_r\rangle$ does not depend on $r$.
 Note that $s(0,\theta)=p$ for any $\theta$.
 Therefore,
 $s_\theta(0,\theta)=0$
-and in particular 
+and, in particular,
 \[\langle s_\theta, s_r\rangle=0\]
 for $r=0$.
 By \ref{eq:<s',s'>'=0} the same holds for any $r$.
@@ -140,7 +140,7 @@ But according to \ref{prop:exp}, the exponential map $\T_p \to \Sigma$ is inject
 \section{Gauss curvature}
 
 Let $s$ be a smooth map from a (possibly unbounded) coordinate rectangle in the $(u,v)$-plane to a smooth surface $\Sigma$.
-The map $s$ is called \index{semigeodesic}\emph{semigeodesic} if for any fixed $v$ the map $u\mapsto s(u,v)$ is a unit-speed geodesic and $s_u\perp s_v$ for any $(u,v)$.
+The map $s$ is called \index{semigeodesic}\emph{semigeodesic} if, for any fixed $v$, the map $u\mapsto s(u,v)$ is a unit-speed geodesic and $s_u\perp s_v$ for any $(u,v)$.
 
 Note that according to the Gauss lemma (\ref{lem:palar-perp}), the polar coordinates on $\Sigma$ are described by a semigeodesic map.
 
@@ -334,7 +334,7 @@ It remains to plug these four expressions in \ref{eq:uu-vv:3+4}.
 \qeds
 
 A chart $(u,v)\mapsto s(u,v)$ is called \index{semigeodesic}\emph{semigeodesic} if the map $(u,v)\z\mapsto s(u,v)$ is semigeodesic.
-Note that the function $b=b(u,v)$ for a semigeodesic chart $s$ has constant sign.
+Note that the function $b=b(u,v)$ for a semigeodesic chart $s$ has a constant sign.
 Therefore, by changing the sign of $\Norm$, we can (and always will) assume that $b>0$;
 in other words, $b=|s_v|$.
 
@@ -436,7 +436,7 @@ Show that
 \begin{thm}{Exercise}\label{ex:conformal}
 Suppose that $(u,v)\mapsto s(u,v)$ is a \index{conformal chart}\emph{conformal chart};
 that is, $s_u\perp s_v$ and $b=|s_u|=|s_v|$ for any $(u,v)$;
-in this case the function $(u,v)\mapsto b(u,v)$ is called a \index{conformal factor}\emph{conformal factor} of $s$.
+in this case, the function $(u,v)\mapsto b(u,v)$ is called a \index{conformal factor}\emph{conformal factor} of $s$.
 
 Use \ref{lem:K(orthogonal)} to show that the Gauss curvature can be expressed as 
 \[K=-\frac{\triangle (\ln b)}{b^2},\]
@@ -448,14 +448,14 @@ where $\triangle$ denotes the \index{Laplacian}\emph{Laplacian}; that is, $\tria
 
 Let $\Sigma$ be a smooth oriented surface and $\gamma$ a simple closed path in~$\Sigma$.
 Suppose that $\vec u$ is a field of unit tangent vectors to $\Sigma$ defined in a neighborhood of $\gamma$.
-Denote by $\vec v$ the field obtained from $\vec u$ by a counterclockwise rotation by $\tfrac{\pi}2$ of the tangent plane at each point; it could also be defined as $\vec v=\Norm\times\vec u$.
+Denote by $\vec v$ the field obtained from $\vec u$ by a counterclockwise rotation by $\tfrac{\pi}2$ of the tangent plane at each point; it could also be defined by $\vec v\df\Norm\times\vec u$.
 Then the \index{rotation}\emph{rotation} of $\vec u$ around $\gamma$ is defined as the integral
 \[\rot_\gamma\vec u
 \df
 \int_0^1\langle\vec u'(t),\vec v(t)\rangle\cdot dt.\]
 
 \begin{thm}{Lemma}\label{lem:rotation-parallel}
-Suppose that $\gamma$ is a loop based at a point $p$ in a smooth oriented surface $\Sigma$, and $\vec u$ is a field of tangent unit vectors to $\Sigma$ defined in a neighborhood of $\gamma$.
+Suppose that $\gamma$ is a loop with the base at a point $p$ in a smooth oriented surface $\Sigma$, and $\vec u$ is a field of tangent unit vectors to $\Sigma$ defined in a neighborhood of $\gamma$.
 Then the parallel transport $\iota_\gamma\:\T_p\to\T_p$ is a {}\emph{clockwise} rotation by the angle $\rot_\gamma\vec u$.
 
 In particular, rotations of different vector fields around $\gamma$ may only differ by a multiple of $2\cdot\pi$.
@@ -465,7 +465,7 @@ In particular, rotations of different vector fields around $\gamma$ may only dif
 As above, set $\vec v=\Norm\times\vec u$. 
 Denote by $\vec u(t)$ and $\vec v(t)$ the vectors at $\gamma(t)$ of the fields $\vec u$ and $\vec v$, respectively.
 
-Let $t\mapsto \vec x(t)\in \T_{\gamma(t)}$ be the parallel vector field along $\gamma$ with  $\vec x(0)=\vec u(0)$.
+Let $t\mapsto \vec x(t)\in \T_{\gamma(t)}$ be the parallel vector field along $\gamma$ with  $\vec x(0)\z=\vec u(0)$.
 Set $\vec y=\Norm\times\vec x$.
 
 Note that there is a continuous function $t\mapsto \phi(t)$ such that 
@@ -559,7 +559,7 @@ where we assume that $\partial \Delta$ is oriented in such a way that $\Delta$ l
 So the Gauss--Bonnet formula can be written as $\GB(\Delta)=0$.
 
 \parit{Proof of the Gauss--Bonnet formula (\ref{thm:gb}).}
-First assume that $\Delta$ is covered by a semigeodesic chart.
+First, assume that $\Delta$ is covered by a semigeodesic chart.
 Note that the following weaker formula follows from \ref{prop:pt+tgc},
 \ref{lem:rotation-parallel},
 and \ref{lem:rotation-semigeoesic}:
@@ -646,8 +646,8 @@ b(r,\theta)\ge r\quad\text{if}\quad K&\le 0.
 \eqlbl{eq:b-K}
 \]
 
-Without loss of generality we may assume that $\tilde\gamma\:[a,b]\to \T_p$ is parametrized by arc-length;
-in particular it is a Lipschitz curve.
+Without loss of generality, we may assume that $\tilde\gamma\:[a,b]\to \T_p$ is parametrized by arc-length;
+in particular, it is a Lipschitz curve.
 Note that
 \begin{align*}
 \length\tilde\gamma&=\int_a^b\sqrt{r'(t)^2+r(t)^2\cdot\theta'(t)^2}.
@@ -660,7 +660,7 @@ Both statements follow from \ref{eq:b-K}.
 \section{Intrinsic isometries}
 
 Let $\Sigma$ and $\Sigma^{*}$ be two smooth regular surfaces in the Euclidean space.
-A map $f\:\Sigma\to \Sigma^{*}$ is called  \index{length-preserving}\emph{length-preserving} if for any curve $\gamma$ in $\Sigma$ the curve $\gamma^{*}=f\circ\gamma$ in $\Sigma^{*}$ has the same length. 
+A map $f\:\Sigma\to \Sigma^{*}$ is called \index{length-preserving}\emph{length-preserving} if, for any curve $\gamma$ in $\Sigma$, the curve $\gamma^{*}=f\circ\gamma$ in $\Sigma^{*}$ has the same length. 
 If in addition $f$ is smooth and bijective, then it is called an  \index{intrinsic isometry}\emph{intrinsic isometry}. 
 
 \begin{thm}{Exercise}\label{ex:K=0}
@@ -670,7 +670,7 @@ that is, a neighborhood of any point in $\Sigma$ admits an intrinsic isometry to
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:K=1}
-Suppose that a smooth surface $\Sigma$ has unit Gauss curvature at every point.
+Suppose that a smooth surface $\Sigma$ has a unit Gauss curvature at every point.
 Show that a neighborhood of any point in $\Sigma$ admits an intrinsic isometry to an open domain in the unit sphere.
 \end{thm}
 
@@ -696,10 +696,10 @@ Let $\Sigma_a$ be the surface of revolution of $\gamma$ around the $x$-axis.
 \end{lpic}
 \vskip-0mm
 \end{figure}
-Show that the surface $\Sigma_a$ has unit Gauss curvature at each point.
+Show that the surface $\Sigma_a$ has a unit Gauss curvature at each point.
 
 Use \ref{ex:K=1} to conclude that any small round disc $\Delta$ in $\mathbb{S}^2$ admits a smooth length-preserving deformation;
-that is, there is one-parameter family of surfaces with boundary $\Delta_t$, such that $\Delta_0=\Delta$ and $\Delta_t$ is not congruent to $\Delta_0$ for $t\ne0$.%
+that is, there is a one-parameter family of surfaces with boundary $\Delta_t$, such that $\Delta_0=\Delta$ and $\Delta_t$ is not congruent to $\Delta_0$ for $t\ne0$.%
 \footnote{In fact any disc in $\mathbb{S}^2$ admits a smooth length preserving deformation.
 However, if the disc is larger than half-sphere, then the proof requires more;
 it can be obtained as a corollary of two deep results of Alexandr Alexandrov: the gluing theorem and the theorem on the existence of a convex surface with an abstractly given metric \cite[p. 44]{pogorelov}.
@@ -725,10 +725,10 @@ by measuring the lengths of curves in the surface.
 For example, the Gauss curvature $K(p)$ appears in the following formula for the circumference $c(r)$ of a geodesic circle centered at $p$ in a surface: 
 \[c(r)=2\cdot\pi\cdot r-\tfrac\pi3\cdot K(p)\cdot r^3+o(r^3).\]
 
-The theorem implies for example that there is no smooth length-preserving map that sends an open region in the unit sphere to the plane.%
+The theorem implies, for example, that there is no smooth length-preserving map that sends an open region in the unit sphere to the plane.%
 \footnote{There are plenty of non-smooth length-preserving maps from the sphere to the plane; see \cite{petrunin-yashinski} and the references therein.}
 This follows since the Gauss curvature of the plane is zero and the unit sphere has Gauss curvature 1. 
-In other words, there is no map of any region on Earth without distortion.
+In other words, there is no geographic map of any region on Earth without distortion.
 
 \parit{Proof.}
 Choose a chart $(u,v)\mapsto s(u,v)$ on $\Sigma$, and set

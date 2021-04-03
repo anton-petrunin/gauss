@@ -164,7 +164,7 @@ Moreover, the arc-length parameter $s$ of $\gamma$ can be written as an integral
 Furthermore, by the fundamental theorem of calculus, $s'(t)=|\gamma'(t)|$.
 Since $\gamma$ is regular, $s'(t)\ne0$ for any parameter value $t$.
 
-By the inverse function theorem (\ref{thm:inverse}) the inverse function $s^{-1}(t)$ is also smooth
+By the inverse function theorem (\ref{thm:inverse}), the inverse function $s^{-1}(t)$ is also smooth
 and $|(\gamma\circ s^{-1})'|\equiv1$.
 Therefore, $\gamma\circ s^{-1}$ is a unit-speed reparametrization  of $\gamma$ by $s$.
 By construction, $\gamma\circ s^{-1}$ is smooth, and, since $|(\gamma\circ s^{-1})'|\equiv1$, it is regular.
@@ -198,7 +198,7 @@ Then
 \[\length\alpha\le \length\beta.\]
 \end{thm}
 
-Note that in order to prove Proposition \ref{prop:convex-curve} it is sufficient to show that for any polygon  $P$ inscribed in $\alpha$ there is a polygon $Q$ inscribed in $\beta$ with equal or larger perimeter. Since any polygon $P$ inscribed in $\alpha$ is convex, it is sufficient to prove the following lemma.
+Note that to prove Proposition \ref{prop:convex-curve} it is sufficient to show that for any polygon  $P$ inscribed in $\alpha$ there is a polygon $Q$ inscribed in $\beta$ with equal or larger perimeter. Since any polygon $P$ inscribed in $\alpha$ is convex, it is sufficient to prove the following lemma.
 
 
 \begin{thm}{Lemma}\label{lem:perimeter}
@@ -264,7 +264,7 @@ Denote by $K$ the convex hull of $\alpha$; let $\beta$ be the boundary curve of 
 Show that 
 \[\length \alpha\ge \length \beta.\]
 
-Try to show that the statement holds for arbitrary closed plane curves $\alpha$, assuming only that $K$ has nonempty interior.
+Try to show that the statement holds for arbitrary closed plane curves $\alpha$, assuming only that $K$ has a nonempty interior.
 \end{thm}
 
 
@@ -273,7 +273,7 @@ Try to show that the statement holds for arbitrary closed plane curves $\alpha$,
 \index{Crofton's formula}
 
 For a function $f\: \mathbb{S}^1 \to \mathbb{R}$, we will denote its average value as $\overline{f(\vec u)}$.
-For a vector $\vec w$, and a unit vector $\vec u$, we will denote by $\vec w_{\vec u}$ the orthogonal projection of $\vec w$ to the line in the direction of  $\vec u$;
+For a vector $\vec w$ and a unit vector $\vec u$, we will denote by $\vec w_{\vec u}$ the orthogonal projection of $\vec w$ to the line in the direction of  $\vec u$;
 that is,
 \[\vec w_{\vec u}=\langle\vec u,\vec w\rangle\cdot\vec u.\] 
 
@@ -283,7 +283,7 @@ For any plane curve $\gamma$ we have
 \length\gamma
 =\tfrac\pi2\cdot \overline{\length\gamma_{\vec u}},
 \]
-where $\gamma_{\vec u}$ is the curve defined as $\gamma_{\vec u}(t) \df (\gamma (t))_{\vec u}$.
+where $\gamma_{\vec u}$ is the curve defined by $\gamma_{\vec u}(t) \df (\gamma (t))_{\vec u}$.
 \end{thm}
 
 \parit{Proof.}
@@ -306,7 +306,7 @@ for any $t \in [a,b]$. Then, according to Exercise~\ref{ex:integral-length},
 \end{align*}
 
 Since $k$ is a universal constant, we can compute it by taking $\gamma$ to be the unit circle.
-In this case
+In this case,
 \[\length \gamma=2\cdot\pi.\]
 Note that for any unit plane vector ${\vec u}$, the curve $\gamma_{\vec u}$ runs back and forth along an interval of length 2.
 Then $\length\gamma_{\vec u}=4$ for any $\vec u$, and
@@ -351,13 +351,11 @@ of a function $f$ defined on $\mathbb{S}^2$.
 Show that the length of a space curve is proportional to 
 \begin{subthm}{}
 the average length of its projections to all lines; that is,
-\[    \length\gamma
-= k \cdot \overline{\length\gamma_{\vec u}}   \]
+\[\length\gamma=k\cdot\overline{\length\gamma_{\vec u}}\]
 for some $k \in \mathbb{R}$.
 \end{subthm}
 \begin{subthm}{}the average length of its projections to all planes; that is,
-\[    \length\gamma
-= k \cdot \overline{\length\gamma_{\vec u}^\bot}   \]
+\[\length\gamma=k\cdot\overline{\length\gamma_{\vec u}^\bot}\]
 for some $k \in \mathbb{R}$.
 \end{subthm}
 Find the value of $k$ in each case.
@@ -430,7 +428,7 @@ The inequality \ref{eq:semicont-length} might be strict.
 For example, the diagonal $\gamma_\infty$ of the unit square 
 can be approximated by stairs-like polygonal curves $\gamma_n$
 with sides parallel to the sides of the square ($\gamma_6$ is in the picture).
-In this case
+In this case,
 \[\length\gamma_\infty=\sqrt{2}\quad
 \text{and}\quad \length\gamma_n=2\]
 for any $n$.
@@ -444,9 +442,9 @@ Given two points $x,y$ in $\spc{X}$, denote by $\ell(x,y)$ the greatest lower bo
 
 It is straightforward to see that the function $\ell$ satisfies all the axioms of a metric except it might take infinite values.
 Therefore, if any two points in $\spc{X}$ can be connected by a rectifiable curve, then $\ell$ defines a new metric on $\spc{X}$;
-in this case $\ell$ is called the \index{induced length-metric}\emph{induced length-metric}.
+in this case, $\ell$ is called the \index{induced length-metric}\emph{induced length-metric}.
 
-Evidently $\ell(x,y)\ge \dist{x}{y}{}$ for any pair of points $x,y\in \spc{X}$.
+Evidently, $\ell(x,y)\ge \dist{x}{y}{}$ for any pair of points $x,y\in \spc{X}$.
 If the equality holds for all pairs, then the metric $\dist{{*}}{{*}}{}$ is said to be a \index{length-metric}\emph{length-metric}, and the corresponding metric space is called a \index{}\emph{length-metric space}.
 
 Most of the time we consider length-metric spaces.
@@ -489,7 +487,7 @@ $\beta_1=q_0\dots q_n$ inscribed in any given spherical path $\gamma_1$ connecti
 \[\length\beta_1\ge \length \beta.\eqlbl{eq:length beta=<length beta}\]
 
 Define $q_i$ as the first point on $\gamma_1$ such that $|u-p_i|=|u-q_i|$, but set $q_n=v$.
-Clearly $\beta_1$ is inscribed in $\gamma_1$, and, according to the triangle inequality for angles (\ref{thm:spherical-triangle-inq}), we have that 
+Clearly, $\beta_1$ is inscribed in $\gamma_1$, and, according to the triangle inequality for angles (\ref{thm:spherical-triangle-inq}), we have that 
 \[ \measuredangle(q_{i-1},q_i)\ge\measuredangle(p_{i-1},p_i).\]
 Therefore, 
 \[ |q_{i-1}-q_i|\ge|p_{i-1}-p_i|\]
@@ -528,9 +526,9 @@ Note that
 
 Denote by $z$ be the midpoint between $p$ and $q$ in $\mathbb{S}^2$;
 that is, $z$ is the midpoint of the short arc of a great circle from $p$ to $q$ in $\mathbb{S}^2$. 
-We claim that $\gamma$ lies in the open north hemisphere with the north pole at $z$.
+We claim that $\gamma$ lies in the open northern hemisphere with the north pole at $z$.
 If not, $\gamma$ intersects the equator in a point $r$.
-Without loss of generality we may assume that $r$ lies on~$\gamma_1$. 
+Without loss of generality, we may assume that $r$ lies on~$\gamma_1$. 
 
 Rotate the arc $\gamma_1$ by the angle $\pi$ around the line thru $z$ and the center of the sphere.
 The obtained arc $\gamma_1^{*}$ together with $\gamma_1$ forms a closed curve of length $2\cdot \ell$ passing thru $r$ and its antipodal point $r^{*}$.
@@ -574,7 +572,7 @@ whence \ref{eq:|pq|=<2} follows.
 \qedsf
 
 \begin{thm}{Advanced exercises} \label{adex:crofton}
-Given unit vectors ${\vec u},{\vec w}\in\mathbb{S}^2$, denote by ${\vec w}_{\vec u}$ the closest point to ${\vec w}$ on the equator with pole at ${\vec u}$;
+Given unit vectors ${\vec u},{\vec w}\in\mathbb{S}^2$, denote by ${\vec w}_{\vec u}$ the closest point to ${\vec w}$ on the equator with the pole at ${\vec u}$;
 in other words, if ${\vec w}^\perp$ is the projection of ${\vec w}$ to the plane perpendicular to ${\vec u}$, then ${\vec w}_{\vec u}$ is the unit vector in the direction of ${\vec w}^\perp$.
 The vector ${\vec w}_{\vec u}$ is defined if ${\vec w}\ne\pm {\vec u}$.
 

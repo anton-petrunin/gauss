@@ -3,7 +3,7 @@
 
 \section{Definition}
 
-A smooth curve $\gamma$ in a smooth surface $\Sigma$ is called a \index{geodesic}\emph{geodesic} if for any~$t$, the acceleration $\gamma''(t)$ is perpendicular to the tangent plane $\T_{\gamma(t)}$.
+A smooth curve $\gamma$ in a smooth surface $\Sigma$ is called a \index{geodesic}\emph{geodesic} if, for any~$t$, the acceleration $\gamma''(t)$ is perpendicular to the tangent plane $\T_{\gamma(t)}$.
 
 Physically, geodesics can be understood as the trajectories of particles that slide on $\Sigma$ without friction.
 Indeed, since there is no friction, the force that keeps the particle on $\Sigma$ must be perpendicular to $\Sigma$.
@@ -19,7 +19,7 @@ Then $|\gamma'|$ is constant.
 
 Moreover, for any $\lambda\in\mathbb{R}$, the curve 
 $\gamma_{\lambda}\df \gamma (\lambda\cdot t)$ is a geodesic as well. 
-In other words, any geodesic has constant speed, and multiplying its parameter by a constant yields another geodesic.
+In other words, any geodesic has a constant speed, and multiplying its parameter by a constant yields another geodesic.
 \end{thm}
 
 
@@ -32,7 +32,7 @@ Whence
 \end{align*}
 That is, $|\gamma'|^2=\langle\gamma',\gamma'\rangle$ is constant.
 
-The second part, follows since 
+The second part follows since 
 $\gamma_{\lambda}''(t) =\lambda^2\cdot \gamma''(\lambda t)$.
 \qeds
 
@@ -53,12 +53,12 @@ Recall that an asymptotic line is a curve in the surface with vanishing normal c
 
 \begin{thm}{Exercise}\label{ex:asymptotic-geodesic}
 Assume a curve $\gamma$ is a geodesic and, at the same time, is an asymptotic line of a smooth surface $\Sigma$.
-Show that $\gamma$ is a straight line segment.
+Show that $\gamma$ is a straight-line segment.
 \end{thm}
 
 
 \begin{thm}{Exercise}\label{ex:reflection-geodesic}
-Assume a smooth surface $\Sigma$ is mirror symmetric with respect to a plane $\Pi$.
+Assume a smooth surface $\Sigma$ is mirror-symmetric with respect to a plane $\Pi$.
 Suppose that $\Sigma$ and $\Pi$ intersect along a smooth regular curve $\gamma$.
 Show that $\gamma$, parametrized by arc-length, is a geodesic on~$\Sigma$.
 \end{thm}
@@ -107,11 +107,11 @@ y''=h(x,y,x',y'),
 where $g$ and $h$ are smooth functions of four variables determined by $f$.
 \end{thm}
 
-The proof of the lemma is done by means of direct calculations.
+The proof of the lemma is done by direct calculations.
 
 \parit{Proof.} In the following calculations, we often omit the arguments --- we may write $x$ instead of $x(t)$ and $f$ instead of $f(x,y)$ or $f(x(t),y(t))$ and so on.
 
-First let us calculate $z''(t)$ in terms of $f$, $x(t)$, and $y(t)$.
+First, let us express $z''(t)$ in terms of $f$, $x(t)$, and $y(t)$.
 \[
 \begin{aligned}
 z''&=f(x,y)''=
@@ -162,8 +162,8 @@ It remains use expression \ref{eq:z''} for $z''$, combine similar terms, and sim
 
 \parit{Proof of \ref{prop:geod-existence}.}
 Let $z=f(x,y)$ be a description of $\Sigma$ in tangent-normal coordinates at $p$.
-By Lemma \ref{lem:geodesic=2nd-order}, the condition $\gamma''(t)\perp\T_{\gamma(t)}$ can be written as a second order differential equation.
-Applying the existence and uniqueness of the initial value problem (\ref{thm:ODE}) we get existence and uniqueness of a geodesic $\gamma$ in a small interval $(-\epsilon,\epsilon)$ for some $\epsilon>0$.
+By Lemma \ref{lem:geodesic=2nd-order}, the condition $\gamma''(t)\perp\T_{\gamma(t)}$ can be written as a second-order differential equation.
+Applying the existence and uniqueness of the initial value problem (\ref{thm:ODE}) we get the existence and uniqueness of a geodesic $\gamma$ in a small interval $(-\epsilon,\epsilon)$ for some $\epsilon>0$.
 
 Let us extend $\gamma$ to a maximal open interval $\mathbb{I}$.
 Suppose there is another geodesic $\gamma_1$ with the same initial data that is defined on a maximal open interval $\mathbb{I}_1$.
@@ -183,7 +183,7 @@ that is, the maximal interval $\mathbb{I}$ is a proper subset of the real line $
 Without loss of generality, we may assume that $b=\sup\mathbb{I}<\infty$.
 (If not, switch the direction of $\gamma$.)
 
-By \ref{lem:constant-speed} $|\gamma'|$ is constant, in particular $t\mapsto \gamma(t)$ is a uniformly continuous function.
+By \ref{lem:constant-speed} $|\gamma'|$ is constant; in particular, $t\mapsto \gamma(t)$ is a uniformly continuous function.
 Therefore, the limit point
 $q=\lim_{t\to b}\gamma(t)$
 is defined.
@@ -228,7 +228,8 @@ Summarizing, we get the following statement:
 
 \begin{thm}{Observation}\label{obs:d(exp)=1}
 Let $\Sigma$ be a smooth surface and $p\in \Sigma$.
-Then 
+Then:
+
 \begin{subthm}{}
 $\exp_p$ is a smooth map, and its domain contains a neighborhood of the origin in $\T_p$, 
 \end{subthm}
@@ -247,7 +248,7 @@ Note also that \ref{prop:geod-existence:whole} implies that {}\emph{if $\Sigma$ 
 \begin{thm}{Proposition}\label{prop:exp}
 Let $p$ be a point on a smooth surface $\Sigma$ (without boundary).
 Then there is $r_p>0$ such that
-the exponential map $\exp_p$ is defined on the open ball $B_p=B(0,r_p)_{\T_p}$
+the exponential map $\exp_p$ is defined on the open ball $B_p\df B(0,r_p)_{\T_p}$
 and the restriction $\exp_p|_{B_p}$ is a smooth regular parametrization of a neighborhood of $p$ in $\Sigma$.
 
 Moreover, we have a {}\emph{local control} on $r_p$;
@@ -303,7 +304,7 @@ A geodesic that is also a shortest path is called a \index{minimizing geodesic}\
 
 \begin{thm}{Exercise}\label{ex:helix=geodesic}
 Let $\Sigma$ be the cylindrical surface described by the equation $x^2\z+y^2=1$.
-Show that the helix $\gamma\:[0,2\cdot\pi]\to \Sigma$ defined by $\gamma(t)\z=(\cos t,\sin t, t)$
+Show that the helix $\gamma\:[0,2\cdot\pi]\to \Sigma$ defined by $\gamma(t)\z\df(\cos t,\sin t, t)$
 is a geodesic, but not a shortest path on $\Sigma$.
 \end{thm}
 
@@ -316,11 +317,11 @@ In fact, if one assumes that $\gamma$ is smooth, then it is easy to convert this
 Let us think about a shortest path $\gamma$ as a stable position of a stretched elastic thread that is forced to lie on a frictionless surface.
 Since it is frictionless, the force density $\vec n=\vec n(t)$ that keeps $\gamma$ in the surface must be proportional to the normal vector to the surface at~$\gamma(t)$.
 
-The tension in the thread has to be the same at all points. (Otherwise the thread would move back or forth, and it would not be stable.)
+The tension in the thread has to be the same at all points. (Otherwise, the thread would move back or forth, and it would not be stable.)
 Denote the tension by $\tau$.
 
 We can assume that $\gamma$ has unit speed;
-in this case the net force from tension along the arc $\gamma_{[t_0,t_1]}$ is $\tau\cdot(\gamma'(t_1)-\gamma'(t_0))$.
+in this case, the net force from tension along the arc $\gamma_{[t_0,t_1]}$ is $\tau\cdot(\gamma'(t_1)-\gamma'(t_0))$.
 Hence, the density of the net force from tension at $t_0$ is 
 \begin{align*}
 \vec f(t_0)&=\lim_{t_1\to t_0}\tau\cdot\frac{\gamma'(t_1)-\gamma'(t_0)}{t_1-t_0}=
@@ -340,7 +341,7 @@ Then the exponential map $\exp_p$ is a diffeomorphism from $B(0,r)_{\T_p}$ to $B
 \parit{Proof.}
 By \ref{prop:inj-rad}, the restriction of $\exp_p$ to $B_p={B(0,r)_{\T_p}}$ is a diffeomorphism to its image $\exp_p(B_p)\subset \Sigma$.
 
-Evidently $B(p,r)_\Sigma\supset\exp_p(B_p)$.
+Evidently, $B(p,r)_\Sigma\supset\exp_p(B_p)$.
 By \ref{prop:gamma''}, $B(p,r)_\Sigma\subset\exp_p(B_p)$, hence the result.
 \qeds
 
@@ -359,7 +360,7 @@ Show by an example that nonoverlapping geodesics can cross each other an arbitra
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:min-geod+plane}
-Assume that a smooth regular surface $\Sigma$ is mirror symmetric with respect to a plane $\Pi$.
+Assume that a smooth regular surface $\Sigma$ is mirror-symmetric with respect to a plane $\Pi$.
 Show that no shortest path $\alpha$ in $\Sigma$ can {}\emph{cross} $\Pi$ more than once.
 
 
@@ -369,7 +370,7 @@ In other words, if you travel along $\alpha$, then you go from one side of $\Pi$
 {
 
 \begin{wrapfigure}{r}{40 mm}
-\vskip-8mm
+\vskip-10mm
 \centering
 \includegraphics{mppics/pic-250}
 \vskip-0mm
@@ -406,7 +407,7 @@ Then $t\mapsto z(t)$ is a convex function; that is, $z''(t)\ge 0$ for any $t$.
 
 \parit{Proof.}
 Choose the orientation on the graph so that the unit normal vector $\Norm$ always points up;
-that is, $\Norm$ has positive $z$-coordinate.
+that is, $\Norm$ has a positive $z$-coordinate at each point.
 Let us use the shortcut $\Norm(t)$ for $\Norm(\gamma(t))$.
 
 Since $\gamma$ is a geodesic, we have $\gamma''(t)\perp\T_{\gamma(t)}$,
@@ -424,7 +425,7 @@ Since $\Norm$ points up, we have $\theta(t)<\tfrac\pi2$, or equivalently
 \[\cos\theta>0.\]
 
 Since $f$ is convex, we have that the tangent plane supports the graph from below at any point;
-in particular $k(t)\ge 0$ for any $t$.
+in particular, $k(t)\ge 0$ for any $t$.
 It follows that the right-hand side in \ref{eq:z''} is nonnegative;
 whence the statement follows.
 \qeds
@@ -474,7 +475,7 @@ If $\gamma$ is defined on the interval $[a,b]$, then
 \eqlbl{eq:intz''}
 \]
 
-Also note that $z''$ is the projection of $\gamma''$ to the $z$-axis.
+Also, note that $z''$ is the projection of $\gamma''$ to the $z$-axis.
 Since $f$ is $\ell$-Lipschitz, the tangent plane $\T_{\gamma (t)} \Sigma$ cannot have a slope greater than $\ell$ for any $t$.
 Because $\gamma ''$ is perpendicular to that plane, we have that
 \[|\gamma'' (t)| \le z''(t)\cdot\sqrt{1+ \ell ^2}.\]

@@ -68,7 +68,7 @@ the matrix $M_p$ in the new basis.
 
 Since the Hessian matrix $M_p$ is symmetric, by the spectral theorem (\ref{thm:spectral}) it is diagonalizable by orthogonal matrices.
 That is, by rotating the $(x,y)$-plane we can assume that $m=0$ in \ref{eq:hessian}; see \ref{thm:spectral}.
-In this case
+In this case,
 \[M_p=\begin{pmatrix}
  k_1
  &0
@@ -91,12 +91,12 @@ The eigendirections of $M_p$ are called the {}\emph{principal directions} of $\S
 Note that if $k_1(p)\ne k_2(p)$, then $p$ has exactly two principal directions, which are perpendicular to each other;
 if $k_1(p)\z= k_2(p)$, then all tangent directions at $p$ are principal.
 
-Note that if we revert the orientation of $\Sigma$, then the principal curvatures switch their signs and indexes.
+Note that if we reverse the orientation of $\Sigma$, then the principal curvatures switch their signs and indexes.
 
 A smooth regular curve on a surface $\Sigma$ that always runs in the principal directions is called a \index{line of curvature}\emph{line of curvature} of $\Sigma$. 
 
 \begin{thm}{Exercise}\label{ex:line-of-curvature}
-Assume that a smooth surface $\Sigma$ is mirror symmetric with respect to a plane $\Pi$.
+Assume that a smooth surface $\Sigma$ is mirror-symmetric with respect to a plane $\Pi$.
 Suppose that $\Sigma$ and $\Pi$ intersect along a smooth regular curve~$\gamma$.
 Show that $\gamma$ is a line of curvature of $\Sigma$.
 \end{thm}
@@ -142,12 +142,12 @@ that is,
 
 A surface with vanishing mean curvature is called \index{minimal surface}\emph{minimal}.
 
-Note that reverting the orientation of $\Sigma$ does not change the Gauss curvature, but changes the sign of the mean curvature.
-In particular, the Gauss curvature is well-defined for a nonoriented surfaces.
+Note that reversing the orientation of $\Sigma$ does not change the Gauss curvature, but changes the sign of the mean curvature.
+In particular, the Gauss curvature is well-defined for nonoriented surfaces.
 
 \section{Shape operator}
 
-In the following definitions we use the notion of directional derivative defined in \ref{def:directional-derivative}.
+In the following definitions, we use the notion of directional derivative defined in \ref{def:directional-derivative}.
 
 Let $p$ be a point on a smooth surface $\Sigma$ with orientation defined by the unit normal field $\Norm$.
 Given $\vec w\in \T_p$,
@@ -161,8 +161,8 @@ Recall that $d_p\Norm$ is a linear map $\T_p\Sigma\to \T_{\Norm(p)}\mathbb{S}^2$
 Note that $\T_p\Sigma$ coincides with $\T_{\Norm(p)}\mathbb{S}^2$ --- both of them are normal subspaces to $\Norm(p)$.
 Therefore, $\Shape_p$ is indeed a linear operator $\T_p\to \T_p$ (the latter also follows from \ref{thm:shape-chart}).
 
-For a point $p\in \Sigma$ the shape operator of a tangent vector $\vec w\in \T_p$ will be denoted by $\Shape\vec w$ if it is clear from the context which base point $p$ and which surface we are working with;
-otherwise we may use the notations 
+For a point $p\in \Sigma$, the shape operator of a tangent vector $\vec w\in \T_p$ will be denoted by $\Shape\vec w$ if it is clear from the context which base point $p$ and which surface we are working with;
+otherwise, we may use the notations 
 \[\Shape_p(\vec w)\quad\text{or}\quad \Shape_p(\vec w)_\Sigma\]
 as the situation requires.
 \footnote{
@@ -381,8 +381,8 @@ where $H$ denotes mean curvature of $\Sigma$.
 Suppose $\gamma$ is a regular smooth curve in a smooth oriented surface $\Sigma$.
 As usual, we denote by $\Norm$ the unit normal field on~$\Sigma$.
 
-Without loss of generality we may assume that $\gamma$ is unit-speed;
-in this case $\tan(s)=\gamma'(s)$ is its tangent indicatrix.
+Without loss of generality, we may assume that $\gamma$ is unit-speed;
+in this case, $\tan(s)=\gamma'(s)$ is its tangent indicatrix.
 Let us use the shortcut notation $\Norm(s)\z=\Norm(\gamma(s))$.
 Note that the unit vectors $\tan(s)$ and $\Norm(s)$ are orthogonal.
 Therefore there is a unique unit vector $\mu(s)$\index{10tmn@$\tan$, $\mu$, $\Norm$} such that 
@@ -390,7 +390,7 @@ $\tan(s),\mu(s),\Norm(s)$ is an oriented orthonormal basis;
 it is called the \index{Darboux frame}\emph{Darboux frame} of $\gamma$ in $\Sigma$.
 Since $\T_{\gamma (s)}\z\perp\Norm(s)$, the vector $\mu(s)$ is tangent to $\Sigma$ at $\gamma(s)$.
 In fact $\mu(s)$ is a counterclockwise rotation of $\tan(s)$ by the angle $\tfrac\pi2$ in the tangent plane $\T_{\gamma(s)}$.
-This vector can also be defined as the vector product $\mu(s)=\Norm(s)\times \tan(s)$.
+This vector can also be defined as the vector product $\mu(s)\df\Norm(s)\times \tan(s)$.
 
 Since $\gamma$ is unit-speed, we have that $\gamma''\perp \gamma'$ (see \ref{prop:a'-pertp-a''}).
 Therefore, the acceleration of $\gamma$ can be written as a linear combination of $\mu$ and $\Norm$;
@@ -430,7 +430,7 @@ where $k_n$ denotes the normal curvature of $\gamma$ at $s_0$, and $\Shape_p$ is
 \end{thm}
 
 Note that according to the proposition, the normal curvature of a regular smooth curve in $\Sigma$ is completely determined by the velocity vector $\vec v$ at the point $p$.
-By that reason the normal curvature is also denoted by $k_{\vec v}$;\index{10k@$k_{\vec v}$}
+For that reason, the normal curvature is also denoted by $k_{\vec v}$;\index{10k@$k_{\vec v}$}
 according to the proposition,
 \[k_{\vec v}=\langle \Shape_p(\vec v),\vec v\rangle\]
 for any unit vector $\vec v$ in $\T_p$.
@@ -493,7 +493,7 @@ k_{n}(t_0)&=\langle\gamma'',\Norm\rangle=
 \end{align*}
 \qedsf
 
-The theorem above, as well as the statement in the following exercise were proved by Jean Baptiste Meusnier \cite{meusnier}.
+The theorem above, as well as the statement in the following exercise, were proved by Jean Baptiste Meusnier \cite{meusnier}.
 
 \begin{thm}{Exercise}\label{ex:meusnier}
 Let $\Sigma$ be a smooth surface, $p\in\Sigma$, and ${\vec v}\in \T_p\Sigma$ a unit vector.
@@ -505,7 +505,6 @@ Show that the osculating circles at $p$ of smooth regular curves in $\Sigma$ tha
 \begin{thm}{Exercise}\label{ex:principal-revolution}
 Let $\gamma(s)=(x(s),y(s))$ be a smooth unit-speed simple plane curve in the upper half-plane,
 and $\Sigma$ be the surface of revolution around the $x$-axis with generatrix $\gamma$.
-
 
 \begin{subthm}{}
 Show that the parallels and meridians are lines of curvature on $\Sigma$.
@@ -620,7 +619,7 @@ Assuming that the holes are large, its boundary can be made so that its principa
 
 \section*{Remarks}
 
-Note that the surface of $V_3$ in the Lagunov's example has genus 2;
+Note that the surface of $V_3$ in Lagunov's example has genus 2;
 that is, it can be parametrized by a sphere with two handles.
 
 \begin{figure}[h!]
@@ -654,10 +653,10 @@ Question \ref{quest:lagunov} can be asked differently: what is the maximal radiu
 \end{wrapfigure}
 
 One may also consider bodies bounded by more than one smooth surface.
-In this case the example of a region between two large concentric spheres with almost equal radii shows that in the general case there is no bound.
+In this case, the example of a region between two large concentric spheres with almost equal radii shows that in the general case there is no bound.
 Indeed, this region can be made arbitrarily thin while the curvature of the boundary can be made arbitrarily close to zero.
 
-Recall that the Lagunov example shows that $r\le r_2$,
+Recall that Lagunov's example shows that $r\le r_2$,
 where $r_2$ is the radius of the smallest circle tangent to three unit circles that are tangent to each other,
 so 
 \[r_2=\tfrac2{\sqrt{3}}-1< \tfrac16.\]

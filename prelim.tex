@@ -5,7 +5,7 @@ This chapter should be used as a quick reference while reading the rest of the b
 it also contains all necessary references with complete proof.
 
 The first section on metric spaces is an exception;
-we suggest to read it before going further.
+we suggest reading it before going further.
 
 \section{Metric spaces}\label{sec:metric-spcaes}
 
@@ -31,19 +31,19 @@ $$\Dist(x, z) \le \Dist(x, y) + \Dist(y, z).$$
 A set with a metric is called a \index{metric space}\emph{metric space}, and the elements of the set are called \index{point}\emph{points}.
 
 \subsection*{Shortcut for distance}
-Usually we consider only one metric on a set, therefore we can denote the metric space and its underlying set by the same letter, say $\spc{X}$.
-In this case we also use the shortcut notations $\dist{x}{y}{}$ or $\dist{x}{y}{\spc{X}}$  for the {}\emph{distance $\Dist(x,y)$ from $x$ to $y$ in $\spc{X}$}.\index{10aaa@$\dist{x}{y}{}$, $\dist{x}{y}{\spc{X}}$}
+Usually, we consider only one metric on a set, therefore we can denote the metric space and its underlying set by the same letter, say $\spc{X}$.
+In this case, we also use the shortcut notations $\dist{x}{y}{}$ or $\dist{x}{y}{\spc{X}}$  for the {}\emph{distance $\Dist(x,y)$ from $x$ to $y$ in $\spc{X}$}.\index{10aaa@$\dist{x}{y}{}$, $\dist{x}{y}{\spc{X}}$}
 For example, the triangle inequality can be written as 
 $$\dist{x}{z}{\spc{X}}\le \dist{x}{y}{\spc{X}}+\dist{y}{z}{\spc{X}}.$$
 
-The Euclidean space and plane as well as the real line will be the most important examples of metric spaces for us.
-In these examples the introduced notation $\dist{x}{y}{}$ for the distance from $x$ to $y$ has perfect sense as the norm of the vector $x-y$.
+The Euclidean space and plane, as well as the real line, will be the most important examples of metric spaces for us.
+In these examples, the introduced notation $\dist{x}{y}{}$ for the distance from $x$ to $y$ has perfect sense as the norm of the vector $x-y$.
 However, in a general metric space the expression $x-y$ has no meaning, but we use the expression $\dist{x}{y}{}$ for the distance anyway.
 
 \subsection*{More examples}
 
 Usually, if we say {}\emph{plane} or {}\emph{space} we mean the {}\emph{Euclidean} plane or space.
-However, the plane (as well as the space) admits many other metrics, for example the so-called {}\emph{Manhattan metric} from the following exercise.
+However, the plane (as well as the space) admits many other metrics; for example, the so-called {}\emph{Manhattan metric} from the following exercise.
 
 \begin{thm}{Exercise}\label{ex:ell-infty}
 Consider the function
@@ -98,7 +98,7 @@ That is, for every $\epsilon > 0$, there is a natural number $N$ such that for a
 \epsilon.
 \]
 
-In this case we say that the sequence $(x_n)$ {}\emph{converges} to $x_\infty$, 
+In this case, we say that the sequence $(x_n)$ {}\emph{converges} to $x_\infty$, 
 or $x_\infty$ is the {}\emph{limit} of the sequence $(x_n)$.
 Notationally, we write $x_n\to x_\infty$ as $n\to\infty$
 or $x_\infty=\lim_{n\to\infty} x_n$.
@@ -106,11 +106,11 @@ or $x_\infty=\lim_{n\to\infty} x_n$.
 
 \begin{thm}{Definition}\label{def:continuous}
 Let $\spc{X}$ and $\spc{Y}$ be metric spaces.
-A map $f\:\spc{X}\to \spc{Y}$ is called \index{continuous}\emph{continuous} if for any convergent sequence $x_n\to x_\infty$ in ${\spc{X}}$,
+A map $f\:\spc{X}\to \spc{Y}$ is called \index{continuous}\emph{continuous} if, for any convergent sequence $x_n\to x_\infty$ in ${\spc{X}}$,
 %the sequence $y_n\z=f(x_n)$ converges to $y_\infty=f(x_\infty)$ in $\spc{Y}$.
 we have $f(x_n) \to f(x_\infty)$ in $\spc{Y}$.
 
-Equivalently, $f\:\spc{X}\to \spc{Y}$ is continuous if for any $x\in {\spc{X}}$ and any $\epsilon>0$,
+Equivalently, $f\:\spc{X}\to \spc{Y}$ is continuous if, for any $x\in {\spc{X}}$ and any $\epsilon>0$,
 there is $\delta>0$ such that 
 $$\dist{x}{y}{\spc{X}}<\delta\quad \text{ implies that }\quad \dist{f(x)}{f(y)}{\spc{Y}}<\epsilon.$$
 
@@ -136,15 +136,15 @@ we say that ${\spc{X}}$ is {}\emph{homeomorphic} to $\spc{Y}$,
 or $\spc{X}$ and $\spc{Y}$ are {}\emph{homeomorphic}.
 \end{thm}
 
-If a metric space $\spc{X}$ is homeomorphic to a known space, for example plane, sphere, disc, circle, and so on,
-we may also say that $\spc{X}$ is a \index{topological}\emph{topological} plane, sphere, disc, circle, and so on.
+If a metric space $\spc{X}$ is homeomorphic to a known space, for example, plane, sphere, disc, circle, and so on,
+then we may also say that $\spc{X}$ is a \index{topological}\emph{topological} plane, sphere, disc, circle, and so on.
 
 \subsection*{Closed and open sets}
 
 \begin{thm}{Definition}
 A subset $C$ of a metric space $\spc{X}$ is called \index{closed!set}\emph{closed} if whenever a sequence $(x_n)$ of points from $C$ converges in $\spc{X}$, we have that $\lim_{n\to\infty} x_n \in C$.
 
-A set $\Omega \subset \spc{X}$ is called \index{open!set}\emph{open} if for any $z\in \Omega$, 
+A set $\Omega \subset \spc{X}$ is called \index{open!set}\emph{open} if, for any $z\in \Omega$, 
 there is $\epsilon>0$ such that $B(z,\epsilon)\subset\Omega$.
 \end{thm}
 
@@ -168,7 +168,7 @@ is defined as an angular measure of the intersection of $P$ with a small circle 
 The sum of all the internal angles of a simple $n$-gon is $(n-2)\cdot\pi$. 
 \end{thm}
 
-While this theorem is well known, it is not easy to find a reference with a proof without cheating.
+While this theorem is well known, it is not easy to find a proof without cheating.
 A clean proof was given by Gary Meisters \cite{meisters}.
 It uses induction on $n$ and is based on the following:
 
@@ -265,8 +265,8 @@ It remains to apply \ref{eq:area(S2)} and \ref{eq:area(Sa)}.
 
 \section{Convex geometry}
 
-A set $X$ in the Euclidean space is called \index{convex!set}\emph{convex} if for any two points $x,y\in X$, any point $z$ between $x$ and $y$ lies in $X$.
-It is called  {}\emph{strictly convex} if for any two points $x,y\in X$, any point $z$ between $x$ and $y$ lies in the interior of $X$.
+A set $X$ in the Euclidean space is called \index{convex!set}\emph{convex} if, for any two points $x,y\in X$, any point $z$ between $x$ and $y$ lies in $X$.
+It is called  {}\emph{strictly convex} if, for any two points $x,y\in X$, any point $z$ between $x$ and $y$ lies in the interior of $X$.
 
 From the definition, it is easy to see that the intersection of an arbitrary family of convex sets is convex. 
 The intersection of all convex sets containing $X$ is called the \index{convex!hull}\emph{convex hull} of $X$;
@@ -293,7 +293,7 @@ Any symmetric matrix is diagonalizable  by an orthogonal matrix.
 \end{thm}
 
 We will use this theorem only for $2{\times}2$ matrices.
-In this case it can be restated as follows:
+In this case, it can be restated as follows:
 Consider a function 
 \[f(x,y)=
 \begin{pmatrix}
@@ -366,7 +366,7 @@ If  for any $\epsilon>0$ there is $\delta>0$ such that
 \[\dist{x_1}{x_2}{\spc{X}}<\delta\quad\Longrightarrow\quad \dist{f(x_1)}{f(x_2)}{\spc{Y}}<\epsilon,\]
 then $f$ is called \index{uniformly continuous}\emph{uniformly continuous}.
 
-Evidently every uniformly continuous function is continuous;
+Evidently, every uniformly continuous function is continuous;
 the converse does not hold.
 For example, the function $f(x)=x^2$ is continuous, but not uniformly continuous.
 However, the following statement holds true:
@@ -384,8 +384,8 @@ for any $\epsilon>0$ there is $\delta>0$ such that
 for any $n$.
 
 
-We say that a sequence of functions $f_i\: {\spc{X}} \to \spc{Y}$ \index{uniform convergence}\emph{converges uniformly} to a function $f_{\infty}\: {\spc{X}} \to \spc{Y}$ if for any 
-$\epsilon >0$, there is a natural number $N$ such that for all $n \ge N$, we have $\dist{f_{\infty}(x)}{f_n (x)}{}<\epsilon$
+We say that a sequence of functions $f_i\: {\spc{X}} \to \spc{Y}$ \index{uniform convergence}\emph{converges uniformly} to a function $f_{\infty}\: {\spc{X}} \to \spc{Y}$ if, for any 
+$\epsilon>0$, there is a natural number $N$ such that for all $n \ge N$, we have $\dist{f_{\infty}(x)}{f_n (x)}{}<\epsilon$
 for all $x  \in {\spc{X}}$.
 
 \begin{thm}{Arzel\'{a}--Ascoli theorem}\label{lem:equicontinuous}
@@ -395,7 +395,7 @@ Then any uniformly equicontinuous sequence of function $f_n\:\spc{X}\z\to \spc{Y
 
 \subsection*{Cutoffs and mollifiers}
 
-Here we construct examples of smooth functions that mimic behavior of some model functions.
+Here we construct examples of smooth functions that mimic the behavior of some model functions.
 These functions are used to smooth model objects keeping its shape nearly unchanged.
 
 For example, consider the following functions
@@ -447,7 +447,7 @@ typically one chooses the constant $c$ so that $\int b_\epsilon=1$.
 \end{figure}
 
 Another useful example is a sigmoid --- nondecreasing function that vanishes for $t\le -\epsilon$ and takes value $1$ for any $t\ge \epsilon$.
-For example the following function \label{page:sigma-function}
+For example, the following function \label{page:sigma-function}
 \[\sigma_\epsilon(t)
 =
 \int_{-\infty}^t b_\epsilon(x)\cdot dx.\]
@@ -474,7 +474,7 @@ we assume that the right-hand side is evaluated at $\bm{x}=(x_1,\dots,x_m)$.
 If the Jacobian matrix defines a surjective linear map $\mathbb{R}^m\to\mathbb{R}^n$ (that is, if $\rank(\Jac_{\bm{x}}\bm{f})=n$) then we say that 
 $\bm{x}$ is a \index{regular!point}\emph{regular point} of~$\bm{f}$.
 
-If for some $\bm{y}\in \mathbb{R}^n$ each point $\bm{x}$ such that $\bm{f}(\bm{x})=\bm{y}$ is regular,
+If, for some $\bm{y}\in \mathbb{R}^n$, each point $\bm{x}$ such that $\bm{f}(\bm{x})=\bm{y}$ is regular,
 then we say that $\bm{y}$ is a \index{regular!value}\emph{regular value} of $\bm{f}$.
 The following lemma states that {}\emph{most} values of a smooth map are regular.
 
@@ -486,7 +486,7 @@ The words \index{almost all}\emph{almost all} mean all values, with the possible
 In particular, if one chooses a random value equidistributed in an arbitrarily small ball $B\z\subset \mathbb{R}^n$, then it is a regular value of $\bm{f}$ with probability 1.
 
 Note that if $m<n$, then any point $\bm{y}=\bm{f}(\bm{x})$ is not a regular value of $\bm{f}$.
-Therefore, the only regular value of $\bm{f}$ are the points in the complement of the image $\Im \bm{f}$.
+Therefore, the only regular values of $\bm{f}$ are the points in the complement of the image $\Im \bm{f}$.
 In this case, the theorem states that almost all points in $\mathbb{R}^n$, do {}\emph{not} belong to $\Im \bm{f}$.
 
 
@@ -496,8 +496,8 @@ The \index{inverse function theorem}\emph{inverse function theorem} gives a suff
 The condition is formulated in terms of the Jacobian matrix of $\bm{f}$ at $\bm{x}$.
 
 The \index{implicit function theorem}\emph{implicit function theorem} is a close relative to the inverse function theorem;
-in fact it can be obtained as its corollary.
-It is used when we need to pass from parametric to implicit description of curves and surfaces.
+it can be obtained as its corollary.
+It is used when we need to pass from parametric to implicit descriptions of curves and surfaces.
 
 Both theorems reduce the existence of a map satisfying a certain equation to a question in linear algebra.
 We use these two theorems only for $n\le 3$.
@@ -661,7 +661,7 @@ This equation can be rewritten as $k$ first-order equations as follows with $k-1
 \end{cases}
 \]
 
-Applying this trick one can reduce a higher order ordinary differential equation to a first-order equation. 
+Applying this trick one can reduce a higher-order ordinary differential equation to a first-order equation. 
 In particular, we get local existence and uniqueness for solutions of higher-order equations as in Theorem \ref{thm:ODE}.
 
 

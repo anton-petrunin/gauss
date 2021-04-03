@@ -54,12 +54,12 @@ curves is called a \index{surface!with boundary}\emph{surface with boundary}; su
 
 When we say {}\emph{surface} we usually mean a {}\emph{smooth regular surface without boundary};
 we may use the term {}\emph{surface without boundary} if we need to emphasize it;
-otherwise we may use the term {}\emph{surface with possibly nonempty boundary}.
+otherwise, we may use the term {}\emph{surface with possibly nonempty boundary}.
 
 \section{Proper, closed and open surfaces}
 If the surface $\Sigma$ is formed by a closed set, then it is called \index{proper!surface}\emph{proper}.
 For example, for any smooth function $f$ defined on the whole plane, its graph $z=f(x,y)$ is a proper surface.
-The sphere $\mathbb{S}^2$ gives another example of proper surface.
+The sphere $\mathbb{S}^2$ gives another example of a proper surface.
 
 On the other hand, the open disc 
 \[\set{(x,y,z)\in\mathbb{R}^3}{x^2+y^2<1,\  z=0}\]
@@ -98,10 +98,10 @@ Fix $p\in\Sigma$.
 Since $\nabla_p f\ne 0$ we have 
 \[f_x(p)\ne 0,\quad f_y(p)\ne 0,\quad \text{or}\quad f_z(p)\ne 0.\]
 We may assume that $f_z(p)\ne 0$;
-otherwise permute the coordinates $x,y,z$.
+otherwise, permute the coordinates $x,y,z$.
 
 The implicit function theorem (\ref{thm:imlicit}) implies that a neighborhood of $p$ in $\Sigma$ is the graph $z=h(x,y)$ of a smooth function $h$ defined on an open domain in $\mathbb{R}^2$.
-It remains to apply the definition of smooth surface (Section~\ref{sec:def-smooth-surface}).
+It remains to apply the definition of smooth surfaces (Section~\ref{sec:def-smooth-surface}).
 \qeds
 
 \begin{thm}{Exercise}\label{ex:hyperboloinds}
@@ -118,7 +118,7 @@ describe a smooth regular surface.
 
 Let $U$ be an open domain in $\mathbb{R}^2$, and $s\:U\to \mathbb{R}^3$ be a smooth map.
 We say that $s$ is regular if its Jacobian has maximal rank;
-in this case it means that the vectors $s_u$ and $s_v$ are linearly independent at any $(u,v)\in U$;
+in this case, it means that the vectors $s_u$ and $s_v$ are linearly independent at any $(u,v)\in U$;
 equivalently $s_u\times s_v\ne 0$, where $\times$ denotes the vector product.
 
 \begin{thm}{Proposition}\label{prop:graph-chart}
@@ -157,17 +157,17 @@ The inverse function theorem (\ref{thm:inverse}) implies that there is a smooth 
 $w\:(x,y)\mapsto (u,v)$ defined on an open set $W\ni 0$ in the $(x,y)$-plane
 such that $w(0,0)=(0,0)$ and  $s\circ w(x,y)=(x,y,f(x,y))$ for some smooth function~$f$.
 That is, the graph $z=f(x,y)$ for $(x,y)\z\in W$ is a subset in $\Sigma$.
-By the inverse function theorem this graph is open in $\Sigma$.
+By the inverse function theorem, this graph is open in $\Sigma$.
 
 Since $p$ is arbitrary, we get that $\Sigma$ is a surface.
 \qeds
 
 If we have $s$ and $\Sigma$ as in the proposition, then we say that $s$ is a \index{smooth!parametrization}\emph{smooth parametrization} of the surface $\Sigma$. 
 
-Not all the smooth surfaces can be described by such a parametrization;
-for example the sphere $\mathbb{S}^2$ cannot.
+Not all smooth surfaces can be described by such a parametrization;
+for example, the sphere $\mathbb{S}^2$ cannot.
 However, any smooth surface $\Sigma$ admits a local parametrization; that is, any point $p\in\Sigma$ admits an open neighborhood $W\subset \Sigma$ with a smooth regular parametrization~$s$.
-In this case any point in $W$ can be described by two parameters, usually denoted by $u$ and $v$, 
+In this case, any point in $W$ can be described by two parameters, usually denoted by $u$ and $v$, 
 which are called \index{local!coordinates}\emph{local coordinates} at $p$.
 The map $s$ is called a \index{chart}\emph{chart} of $\Sigma$.
 
@@ -248,7 +248,7 @@ the composition $s\circ f$ is smooth and regular;
 that is, all partial derivatives $\frac{\partial^{m+n}}{\partial u^m\partial v^n}(s\circ f)$ are defined and continuous in the domain of definition, and the two vectors 
 $\frac{\partial}{\partial u}(s\circ f)$ and $\frac{\partial}{\partial v}(s\circ f)$ are linearly independent.
 
-Note that in this case the image $\Sigma^{*}=s(\Sigma)$ is a smooth surface.
+Note that in this case, the image $\Sigma^{*}=s(\Sigma)$ is a smooth surface.
 The latter follows since for any chart $f\:U\to \Sigma$ the composition $s\circ f\:U\to \Sigma^{*}$ is a chart of $\Sigma^{*}$. 
 The map $s$ is called a \index{diffeomorphism}\emph{diffeomorphism} from $\Sigma$ to $\Sigma^{*}$;
 the surfaces $\Sigma$ and $\Sigma^{*}$ are said to be {}\emph{diffeomorphic} if there is a diffeomorphism $s\:\Sigma\to\Sigma^{*}$.

@@ -28,7 +28,7 @@ whence $\gamma''\perp\gamma'$.
 
 \section{Curvature}\label{sec:curvature}
 
-For a unit-speed smooth space curve $\gamma$ the magnitude $|\gamma''(s)|$ of its acceleration is called its \index{curvature}\emph{curvature} at  time $s$.
+For a unit-speed smooth space curve $\gamma$, the magnitude $|\gamma''(s)|$ of its acceleration is called its \index{curvature}\emph{curvature} at  time $s$.
 If $\gamma$ is simple, then we can say that $|\gamma''(s)|$ is the curvature at the point $p=\gamma(s)$ without ambiguity.
 The curvature is usually denoted by $\kur(s)$ or $\kur(s)_\gamma$, and, in the case of simple curves, it might be also denoted by $\kur(p)$ or $\kur(p)_\gamma$.
 
@@ -69,7 +69,7 @@ that is, $\tan$ is a spherical curve.
 
 
 If $s\mapsto \gamma(s)$ is a unit-speed parametrization, then $\tan(s)=\gamma'(s)$.
-In this case we have the following expression for curvature: 
+In this case, we have the following expression for curvature: 
 \[\kur(s)\z=|\tan'(s)|\z=|\gamma''(s)|.\]\index{10k@$\kur$}
 
 For general parametrization $t\mapsto \gamma(t)$,
@@ -166,13 +166,13 @@ The total curvature of any closed regular space curve is at least $2\cdot\pi$.
 \parit{Proof.}
 Fix a closed regular space curve $\gamma$.
 We can assume that $\gamma$ is described by a unit-speed loop $\gamma\:[a,b]\to \mathbb{R}^3$;
-in this case $\gamma(a)=\gamma(b)$ and $\gamma'(a)=\gamma'(b)$.
+in this case, $\gamma(a)=\gamma(b)$ and $\gamma'(a)=\gamma'(b)$.
 
 Consider its tangent indicatrix $\tan=\gamma'$.
 Recall that $|\tan(s)|=1$ for any $s$; that is, $\tan$ is a closed spherical curve.
 
 Let us show that $\tan$ cannot lie in a hemisphere.
-Assume the contrary; without loss of generality we can assume that it lies in the north hemisphere defined by the inequality $z>0$ in $(x,y,z)$-coordinates.
+Assume the contrary; without loss of generality, we can assume that it lies in the northern hemisphere defined by the inequality $z>0$ in $(x,y,z)$-coordinates.
 In other words, if $\gamma(t)=(x(t), y(t), z(t))$, then $z'(t)>0$ for any $t$.
 Therefore,
 \[z(b)-z(a)=\int_a^b z'(s)\cdot ds>0.\]
@@ -192,7 +192,7 @@ that is,
 
 \begin{thm}{Advanced exercise}\label{ex:gamma/|gamma|}
 Suppose that $\gamma$ is a smooth regular space curve that does not pass thru the origin.
-Consider the spherical curve defined as $\sigma(t)=\frac{\gamma(t)}{|\gamma(t)|}$ for any $t$.
+Consider the spherical curve $\sigma$ defined by $\sigma(t)\df\frac{\gamma(t)}{|\gamma(t)|}$.
 Show that 
 \[\length \sigma< \tc\gamma+\pi.\]
 Moreover, if $\gamma$ is closed, then
@@ -200,8 +200,8 @@ Moreover, if $\gamma$ is closed, then
 \end{thm}
 
 Note that the last inequality gives an alternative proof of Fenchel's theorem.
-Indeed, without loss of generality we can assume that the origin lies on a chord of $\gamma$.
-In this case the closed spherical curve $\sigma$ goes from a point to its antipode and comes back; 
+Indeed, without loss of generality, we can assume that the origin lies on a chord of $\gamma$.
+In this case, the closed spherical curve $\sigma$ goes from a point to its antipode and comes back; 
 it takes length $\pi$ each way, 
 whence 
 \[\length\sigma\ge 2\cdot\pi.\]
@@ -321,7 +321,7 @@ We need to show that
 Consider the tangent indicatrix $\tan_i$ for each arc $\gamma_i$;
 these are smooth spherical arcs.
 
-The same argument as in the proof of Fenchel's theorem, shows that the curves $\tan_1,\dots,\tan_n$ cannot lie in an open hemisphere.
+The same argument as in the proof of Fenchel's theorem shows that the curves $\tan_1,\dots,\tan_n$ cannot lie in an open hemisphere.
 
 Note that the spherical distance from the endpoint of $\tan_i$ to the starting point of $\tan_{i+1}$ is equal to the external angle $\theta_i$ (we enumerate the arcs modulo $n$, so $\gamma_{n+1}=\gamma_1$).
 Let us connect the endpoint of $\tan_i$ to the starting point of $\tan_{i+1}$ by a short arc of a great circle in the sphere.
@@ -414,8 +414,8 @@ Set
 \\
 \alpha_i&=\measuredangle(\vec w_i,\vec v_i),&\beta_i&=\measuredangle(\vec w_{i-1},\vec v_i).
 \end{align*}
-In the case of a closed curve we use indexes modulo $n$;
-so in this case we have $p_{n+1}\z=p_1$.
+In the case of a closed curve, we use indexes modulo $n$;
+so in this case, we have $p_{n+1}\z=p_1$.
 
 Note that $\theta_i=\measuredangle(\vec w_{i-1},\vec w_i)$.
 By triangle inequality for angles \ref{thm:spherical-triangle-inq}, we get that
@@ -542,7 +542,7 @@ That is, $abcd$ is a convex plane quadrangle.
 
 It follows that any quadrangle inscribed in $\gamma$ is a convex plane quadrangle.
 Therefore, all points of $\gamma$ lie in one plane defined by three points on $\gamma$.
-Further, since any quadrangle inscribed in $\gamma$ is a convex,
+Further, since any quadrangle inscribed in $\gamma$ is convex,
 we get that $\gamma$ is a convex plane curve. 
 \qeds
 
@@ -564,7 +564,7 @@ Show that
 
 Lines crossing a curve at four points as in the exercise are called \index{alternating quadrisecants}\emph{alternating quadrisecants}.
 It turns out that any {}\emph{nontrivial knot} admits an alternating quadrisecant \cite{denne};
-according to the exercise the latter implies the so-called \index{F\'ary--Milnor theorem}\emph{F\'ary--Milnor theorem} --- the total curvature of any knot exceeds~$4\cdot \pi$.
+according to the exercise, the latter implies the so-called \index{F\'ary--Milnor theorem}\emph{F\'ary--Milnor theorem} --- the total curvature of any knot exceeds~$4\cdot \pi$.
 
 \section{Bow lemma}
 

@@ -50,7 +50,7 @@ Therefore $\langle\tan,\norm'\rangle=-\skur$.
 Hence, we get 
 \[\norm'(s)=-\skur(s)\cdot \tan(s).\eqlbl{eq:nu'}\]
 The equations \ref{eq:tau'} and \ref{eq:nu'} are the Frenet formulas for plane curves. 
-They can be written in matrix form as:
+They can be written in a matrix form as:
 \[
 \begin{pmatrix}
 \tan'
@@ -73,7 +73,7 @@ They can be written in matrix form as:
 
 \begin{thm}{Exercise}\label{ex:bike}
 Let $\gamma_0\:[a,b]\to\mathbb{R}^2$ be a smooth regular curve and $\tan$ its tangent indicatrix.
-Consider another curve $\gamma_1\:[a,b]\to\mathbb{R}^2$ defined by $\gamma_1(t)=\gamma_0(t)+\tan(t)$.
+Consider another curve $\gamma_1\:[a,b]\to\mathbb{R}^2$ defined by $\gamma_1(t)\df\gamma_0(t)+\tan(t)$.
 Show that
 \[\length\gamma_0\le \length\gamma_1.\]
 
@@ -148,7 +148,7 @@ Note that from the proof of the theorem we obtain the following corollary:
 \begin{thm}{Corollary}\label{cor:2D-angle}
 Let $\gamma\:\mathbb{I}\to\mathbb{R}^2$ be a smooth unit-speed curve and $s_0\z\in \mathbb{I}$.
 Denote by $\skur$ the signed curvature of $\gamma$.
-Assume an oriented $(x,y)$-coordinate system is chosen in such a way that $\gamma(s_0)$ is the origin, and $\gamma'(s_0)$ points in the direction of the $x$-axis.
+Assume an oriented $(x,y)$-coordinate system is chosen in such a way that $\gamma(s_0)$ is the origin and $\gamma'(s_0)$ points in the direction of the $x$-axis.
 Then 
 \[\gamma'(s)=(\cos[\theta(s)],\sin[\theta(s)]) , \]
 for all $s$, where 
@@ -220,7 +220,7 @@ This proposition is called sometimes {}\emph{Umlaufsatz}; it is a differential-g
 A more conceptual proof was given by Heinz Hopf \cite{hopf1935}, \cite[p. 42]{hopf1989}.
 
 \parit{Proof.}
-Without loss of generality we may assume that $\gamma$ is oriented in such a way that the region bounded by $\gamma$ lies on the left from it.
+Without loss of generality, we may assume that $\gamma$ is oriented in such a way that the region bounded by $\gamma$ lies on the left from it.
 We can also assume that it is parametrized by arc-length.
 
 Consider a closed polygonal line $\beta=p_1\dots p_n$ inscribed in $\gamma$.
@@ -234,7 +234,7 @@ so that the polygonal line is simple, and each arc $\gamma_i$ from $p_i$ to $p_{
 \vskip4mm
 \end{wrapfigure}
 
-As usual, we use indexes modulo $n$, in particular $p_{n+1}\z=p_1$.
+As usual, we use indexes modulo $n$; in particular, $p_{n+1}\z=p_1$.
 Assume $p_i=\gamma(t_i)$.
 Set 
 \begin{align*}
@@ -341,7 +341,7 @@ Describe an example showing that formula \ref{eq:length(parallel-curve)} does no
 Given a point $p$,
 a unit vector $\tan$ 
 and a real number $\skur$, there is a unique smooth unit-speed curve $\sigma\:\mathbb{R}\to\mathbb{R}^2$ 
-that starts at $p$ in the direction of $\tan$ and has constant signed curvature $\skur$.
+that starts at $p$ in the direction of $\tan$ and signed curvature $\skur$.
 
 Moreover, if $\skur=0$, then it is a line $\sigma(s)=p+s\cdot \tan$;
 if $\skur\ne 0$, then $\sigma$ runs around a circle of radius $\tfrac1{|\skur|}$ with center at $p+\tfrac1\skur\cdot \norm$, where $\tan,\norm$ is an oriented orthonormal frame.
@@ -421,7 +421,7 @@ then $\sigma_{s_0}$ lies in the open disc bounded by $\sigma_{s_1}$ for any $s_0
 \end{thm}
 
 It turns out that the osculating circles of the curve $\gamma$ give a peculiar foliation of an annulus by circles; it has the following property: if a smooth function is constant on each osculating circle, then it must be constant in the annulus \cite[see][Lecture 10]{fuchs-tabachnikov}.
-Also note that the curve $\gamma$ is tangent to a circle of the foliation at each of its points.
+Also, note that the curve $\gamma$ is tangent to a circle of the foliation at each of its points.
 However, it does not run along any of those circles.
 
 \parit{Proof.}

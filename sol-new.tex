@@ -42,7 +42,7 @@ Passing to an arc of $\alpha$ if necessary,
 we can assume that $\alpha(t)\ne p,q$ for $t\ne0,1$.
 
 An open set $\Omega$ in $(0,1)$ will be called {}\emph{suitable}
-if for any connected component $(a,b)$ of $\Omega$ we have $\alpha(a)=\alpha(b)$.
+if, for any connected component $(a,b)$ of $\Omega$, we have $\alpha(a)=\alpha(b)$.
 Show that the union of nested suitable sets is suitable.
 Therefore, we can find a maximal suitable set $\hat \Omega$.
 
@@ -80,7 +80,7 @@ Use this to show that the map $t\mapsto \alpha(t)$ is injective.
 Summarizing, we get that $\alpha$ is a smooth parametrization of $L$. 
 
 Now suppose $\beta\:t\mapsto (x(t),y(t))$ is a smooth parametrization of~$L$.
-Without loss of generality we may assume that $x(0)=y(0)=0$.
+Without loss of generality, we may assume that $x(0)=y(0)=0$.
 Note that $x(t)\ge 0$ for any $t$ therefore $x'(0)=0$.
 The same way we get that $y'(0)=0$.
 That is, $\beta'(0)=0$;
@@ -132,7 +132,7 @@ Show that
 
 Note that the linear independence of the gradients provides only a sufficient condition.
 Therefore, the case $\ell=\pm1$ has to be checked by hand.
-In this case a neighborhood of $(\pm1,0,0)$ does not admit a smooth regular parametrization --- try to prove it. 
+In this case, a neighborhood of $(\pm1,0,0)$ does not admit a smooth regular parametrization --- try to prove it. 
 The case $\ell=1$ is shown on the diagram.
 
 \parit{Remark.}
@@ -151,7 +151,7 @@ Conclude that $\gamma$ is not proper.
 Show and use that a set $C\subset \mathbb{R}^3$ is closed if and only if the intersection $K\cap C$ is compact for any compact $K\subset \mathbb{R}^3$.
 
 \parbf{\ref{ex:proper-curve}.}
-Without loss of generality we may assume that the origin does not lie on the curve.
+Without loss of generality, we may assume that the origin does not lie on the curve.
 
 Show that inversion of the plane $(x,y)\mapsto (\tfrac{x}{x^2+y^2},\tfrac{y}{x^2+y^2})$ maps our curve to a closed curve with the origin removed.
 Apply Jordan's theorem for the obtained curve, and use the inversion again.
@@ -164,7 +164,7 @@ Show that the least upper bound in \ref{def:length} can be taken for all sequenc
 $a=t_0\le t_1\le\z\dots\le t_k=b$.
 
 Suppose that $\gamma_2$ is reparametrization of $\gamma_1$ by $\tau\:[a_1,b_1]\to [a_2,b_2]$;
-without loss of generality we may assume that $\tau$ is nondecreasing.
+without loss of generality, we may assume that $\tau$ is nondecreasing.
 Set $\theta_i=\tau(t_i)$.
 Observe that $a_2=\theta_0\z\le\theta_1\le \z\dots\le\theta_k=b_2$ if and only if 
 $a_1=t_0\le t_1\le\z\dots\le t_k=b_1$.
@@ -219,13 +219,14 @@ Show that
 Now suppose the arc $\gamma$ of the Koch snowflake shown on the diagram is rectifiable; denote its length by $\ell$.
 Observe that $\gamma$ can be divided into 4 arcs such that each one is a scaled copy of $\gamma$ with factor $\tfrac13$.
 It follows that $\ell=\tfrac43\cdot\ell$.
-Evidently $\ell>0$ --- a contradiction.
+Evidently, $\ell>0$ --- a contradiction.
 
 \parbf{\ref{ex:arc-length-helix}.} 
 We have to assume that $a\ne 0$ or $b\ne0$;
-otherwise we get a constant curve.
+otherwise, we get a constant curve.
 
-Show that the curve has constant velocity $|\gamma'(t)|\equiv \sqrt{a^2+b^2}$.
+Show that $|\gamma'(t)|\equiv \sqrt{a^2+b^2}$;
+in particular, the velocity is constant.
 Therefore, $s=t/\sqrt{a^2+b^2}$ is an arc-length parameter.
 It remains to substitute $s\cdot \sqrt{a^2+b^2}$ for $t$.
 
@@ -294,8 +295,8 @@ Since $A$ is closed, its complement is open.
 That is, the ball $B(z,\epsilon)$ does not intersect $A$ for some $\epsilon>0$.
 
 Show that there is $\delta>0$ such that any path of length at most $\dist{x}{y}{\mathbb{R}^3}+\delta$ passes thru $B(z,\epsilon)$.
-It follows that $\dist{x}{y}A\ge \dist{x}{y}{\mathbb{R}^3}+\delta$, 
-in particular $\dist{x}{y}A\ne \dist{x}{y}{\mathbb{R}^3}$.
+It follows that $\dist{x}{y}A\ge \dist{x}{y}{\mathbb{R}^3}+\delta$; 
+in particular, $\dist{x}{y}A\ne \dist{x}{y}{\mathbb{R}^3}$.
 
 \begin{wrapfigure}{r}{30 mm}
 \vskip-4mm
@@ -368,7 +369,7 @@ Prove and use the following identities:
 Apply \ref{ex:curvature-formulas:a} for the parametrization $t\mapsto (t,f(t))$.
 
 \parbf{\ref{ex:approximation-const-curvature}.}
-Without loss of generality we may assume that $\gamma$ has a unit-speed parametrization.
+Without loss of generality, we may assume that $\gamma$ has a unit-speed parametrization.
 
 Consider the tangent indicatrix $\tan(s)=\gamma'(s)$.
 Note that $\tan$ is a spherical curve and $|\tan'|\le 1$.
@@ -436,7 +437,7 @@ By the fundamental theorem of calculus, we have
 Since $\gamma(0)=\gamma(\ell)$ and $\gamma'(0)=\gamma'(\ell)$, the right-hand side vanishes.
 
 
-Note that without loss of generality we can assume the curve in \ref{thm:DNA} is described by a loop $\gamma\:[0,\ell]\to\mathbb{R}^3$ parametrized by arc-length.
+Note that without loss of generality, we can assume the curve in \ref{thm:DNA} is described by a loop $\gamma\:[0,\ell]\to\mathbb{R}^3$ parametrized by arc-length.
 We can also assume that the origin is the center of the ball; that is $|\gamma|\le 1$.
 Since $\gamma$ is a smooth closed curve, we have 
 $\gamma'(0)=\gamma'(\ell)$ and $\gamma(0)=\gamma(\ell)$.
@@ -457,7 +458,7 @@ Try to guess the example from the diagram.
 The shown curve is divided into three arcs: I, II, and III. 
 Arc I turns from $\vec v$ to $\vec u$;
 it has total curvature $\alpha$.
-Similarly, the arc III turns from $\vec u$ to $\vec w$  and has total curvature $\beta$. 
+Similarly, arc III turns from $\vec u$ to $\vec w$  and has total curvature $\beta$. 
 Arc II goes very close and almost parallel to the chord $pq$, and its total curvature can be made arbitrarily small.
 
 
@@ -572,7 +573,7 @@ $\tgc{\gamma_a}=0$ and $\tc{\gamma_a}=4\cdot\theta_a$.
 \parit{Case $a=-1$.}
 The velocity $\gamma'_{-1}(t)$ vanishes at $t=0$ and $2\cdot\pi$.
 Nevertheless, the curve admits a smooth regular parametrization --- find it.
-In this case $\tgc{\gamma_{-1}}=-\pi$ and $\tc{\gamma_{-1}}=\pi$.
+In this case, $\tgc{\gamma_{-1}}=-\pi$ and $\tc{\gamma_{-1}}=\pi$.
 
 \parit{Case $a=1$.}
 The velocity $\gamma'_1(t)$ vanishes at $t=\pi$.
@@ -695,7 +696,7 @@ $\kur'=0$.
 We may assume that $\gamma_i$ are defined in $(-\epsilon,\epsilon)$ for some small $\epsilon>0$,
 so that they run almost horizontally to the right.
 
-Given $t\in[0,1]$ consider the curve $\gamma_t$ that is tangent and cooriented to the $x$-axis at  $\gamma_t(0)$ and has signed curvature defined by $\skur_t(s)=(1\z-t)\cdot\skur_0(s)+t\cdot\skur_1(s)$.
+Given $t\in[0,1]$ consider the curve $\gamma_t$ that is tangent and cooriented to the $x$-axis at  $\gamma_t(0)$ and has signed curvature defined by $\skur_t(s)\df(1\z-t)\cdot\skur_0(s)+t\cdot\skur_1(s)$.
 It exists by \ref{thm:fund-curves-2D}.
 
 Choose $s\approx 0$.
@@ -736,7 +737,7 @@ To do the second part in \ref{ex:between-parallels-1}, use the shown family and 
 \end{wrapfigure}
 
 \parbf{\ref{ex:convex small}.}
-Note that we can assume that $\gamma$ bounds a convex figure $F$, otherwise by \ref{prop:convex} its curvature changes sign.
+Note that we can assume that $\gamma$ bounds a convex figure $F$; otherwise, by \ref{prop:convex} its curvature changes sign.
 Therefore $\gamma$ has zero curvature at some point.
 
 Choose two points $x$ and $y$ surrounded by $\gamma$ such that $|x\z-y|\z>2$.
@@ -752,8 +753,8 @@ and so on.
 
 \parit{\ref{SHORT.ex:line-curve-intersections:c}.}
 According to \ref{SHORT.ex:line-curve-intersections:a}, the point $p_3$ might lie between $p_1$ and $p_2$, and then further order is determined uniquely, or $p_1$ lies between $p_2$ and $p_3$.
-In the latter case we have two choices, either $p_4$ lies between $p_2$ and $p_3$, and then further order is determined uniquely, or $p_2$ lies between $p_3$ and $p_4$.
-In the latter case we get a choice again.
+In the latter case, we have two choices, either $p_4$ lies between $p_2$ and $p_3$, and then further order is determined uniquely, or $p_2$ lies between $p_3$ and $p_4$.
+In the latter case, we get a choice again.
 
 {
 
@@ -765,7 +766,7 @@ In the latter case we get a choice again.
 \end{wrapfigure}
 
 Assume we make the first choice on the step number $k$.
-Without loss of generality we may assume that $p_k$ lies to the right from $p_{k-2}$.
+Without loss of generality, we may assume that $p_k$ lies to the right from $p_{k-2}$.
 Then we have the following order:
 \[
 p_{k-2},p_{p-4},\dots,p_{p-5},p_{k-3},p_k,p_{k+2},\dots,p_{k+1},p_{k-1}.
@@ -806,7 +807,7 @@ Show that any neighborhood of origin in $\Sigma_0$ cannot be described by a grap
 so by the definition (Section~\ref{sec:def-smooth-surface}) $\Sigma_0$ is not a smooth surface.
 
 \parbf{\ref{ex:inversion-chart}.} 
-First check that the image of $s$ lies in the unit sphere centered at $(0,0,1)$;
+First, check that the image of $s$ lies in the unit sphere centered at $(0,0,1)$;
 that is, show that 
 \[\left(\tfrac{2\cdot u}{1+u^2+v^2}\right)^2
 +
@@ -826,7 +827,8 @@ $s\:(t,\theta)\mapsto (x(t), y(t)\cdot\cos\theta,y(t)\cdot\sin\theta)$.
 Show that $s$ is regular; that is, $s_t$ and $s_\theta$ are linearly independent.
 (It might help to observe that $s_t\perp s_\theta$).
 
-Show that $s$ is a embedding; that is, any $(t_0,\theta_0)$ admits a neighborhood $U$ in the $(t,\theta)$-plane such that the restriction $s|_U$ has a continuous inverse.
+Show that $s$ is an embedding;
+that is, any $(t_0,\theta_0)$ admits a neighborhood $U$ in the $(t,\theta)$-plane such that the restriction $s|_U$ has a continuous inverse.
 It remains to apply \ref{cor:reg-parmeterization}.
 
 \parbf{\ref{ex:star-shaped-disc}.} 
@@ -842,7 +844,7 @@ indeed, $\iota^{-1}$ is the flow of the vector field $-\vec u_{1-t}$.
 That is, $\iota$ is a diffeomorphism from its domain of definition to its image. 
 
 
-Therefore, in order to construct a diffeomorphism from one open subset of the plane to another it is sufficient to construct a smooth vector field such that its flow maps one set to the other;
+Therefore, to construct a diffeomorphism from one open subset of the plane to another, it is sufficient to construct a smooth vector field such that its flow maps one set to the other;
 such a map is automatically a diffeomorphism.
 
 
@@ -858,7 +860,7 @@ $\sigma_1(R-|x|)$; see page \pageref{page:sigma-function}.
 It remains to apply the Moser trick to the constructed vector field. 
 
 \parit{\ref{SHORT.ex:star-shaped-disc:smooth}--\ref{SHORT.ex:star-shaped-disc:star-shaped}.}
-Without loss of generality we can assume that the origin belongs to both $\Sigma$ and~$\Theta$.
+Without loss of generality, we can assume that the origin belongs to both $\Sigma$ and~$\Theta$.
 
 In each case show that there is a vector field $\vec v$ defined on $\mathbb{R}^2\backslash\{0\}$ that flows $\Sigma$ to $\Theta$.
 In fact one can choose radial fields of that type,
@@ -874,7 +876,7 @@ Differentiate this identity, and apply the definition of tangent vector (\ref{de
 
 \parbf{\ref{ex:vertical-tangent}.}
 Assume a neighborhood of $p$ in $\Sigma$ is a graph $z=f(x,y)$.
-In this case $s\:(u,v)\z\mapsto (u,v,f(u,v))$ is a smooth chart at $p$.
+In this case, $s\:(u,v)\z\mapsto (u,v,f(u,v))$ is a smooth chart at $p$.
 Show that the plane spanned by $s_u$ and $s_v$ is not vertical;
 together with \ref{def:tangent-plane}, this proves the if part.
 
@@ -887,7 +889,7 @@ Choose $(x,y,z)$-coordinates so that $\Pi$ is the $(x,y)$-plane and $p$ is the o
 Let $(u,v)\mapsto s(u,v)$ be a small chart of $\Sigma$ such that $p=s(0,0)$.
 Denote by $\vec k$ the unit vector in the direction of the $z$-axis.
 
-Show that we can assume that $\langle s(u,v),\vec k\rangle$ has constant sign in a punctured neighborhood of $0$.
+Show that we can assume that $\langle s(u,v),\vec k\rangle$ has a constant sign in a punctured neighborhood of $0$.
 Conclude that $s_u\perp \vec k$ and $s_v\perp \vec k$ at
 $0$, hence the result.
 
@@ -902,13 +904,13 @@ Observe that the graph $z=f(x,y)$ describes the required surface.
 
 \parbf{\ref{ex:line-of-curvature}.}
 Fix a point $p$ on $\gamma$.
-Since $\Sigma$ is mirror symmetric with respect to $\Pi$,
+Since $\Sigma$ is mirror-symmetric with respect to $\Pi$,
 so is the tangent plane $\T_p$.
 
 Choose $(x,y)$-coordinates on $\T_p$ so that the $x$-axis is the intersection $\Pi\cap  \T_p$.
 Suppose that the osculating paraboloid is described by the graph 
 $z=\tfrac12\cdot(\ell\cdot x^2+2\cdot m\cdot x\cdot y+n\cdot y^2)$.
-Since $\Sigma$ is mirror symmetric, so is the paraboloid;
+Since $\Sigma$ is mirror-symmetric, so is the paraboloid;
 that is, changing $y$ to $(-y)$ does not change the value 
 $\ell\cdot x^2+2\cdot m\cdot x\cdot y+n\cdot y^2$.
 In other words $m=0$, or equivalently, the $x$-axis points in a direction of curvature.
@@ -938,7 +940,7 @@ We can assume that $\gamma$ is parametrized by  arc-length.
 Denote by $\Norm_1(s)$ and $\Norm_2(s)$ the unit normal vectors to $\Sigma_1$ and $\Sigma_2$ at $\gamma(s)$.
 Since $\gamma$ is a curvature line in $\Sigma_1$,  
 $\Norm_1'$ is proportional to $\gamma'$;
-in particular $\langle\Norm_1',\Norm_2\rangle=0$.
+in particular, $\langle\Norm_1',\Norm_2\rangle=0$.
 
 By the assumption, $\langle \Norm_1(t),\Norm_2(t)\rangle$ is constant.
 By taking its derivative and applying the above identity, show that $\langle\Norm_1,\Norm_2'\rangle=0$.
@@ -1010,7 +1012,8 @@ Finally, arrive at a contradiction by showing that if $V$ is bounded by a smooth
 Choose curvatures such that 
 $k_2(p)_{\Sigma_1}\z>k_2(p)_{\Sigma_2}> k_1(p)_{\Sigma_1}> k_1(p)_{\Sigma_2}$, and suppose that the first principal direction of $\Sigma_1$ coincides with the second principal direction of $\Sigma_2$ and vice-versa.
 
-\parbf{\ref{ex:positive-gauss-0} + \ref{ex:positive-gauss}.} Apply the same reasoning as in the problems \ref{ex:between-parallels-1}--\ref{ex:lens}, but use families of spheres instead.
+\parbf{\ref{ex:positive-gauss-0} + \ref{ex:positive-gauss}.}
+Apply the same reasoning as in \ref{ex:between-parallels-1}--\ref{ex:lens}, but use families of spheres instead.
 
 
 \parbf{\ref{ex:convex-surf}.}
@@ -1048,14 +1051,14 @@ Apply the implicit function theorem to show that $\gamma$ is a smooth regular cu
 
 Finally, observe that the curvature of $\gamma$ cannot be smaller than the normal curvature of $\Sigma$ in the same direction.
 Whence $\gamma$ has no points with vanishing curvature.
-Therefore its signed curvature has constant sign.
+Therefore its signed curvature has a constant sign.
 
 
 \parbf{\ref{ex:surrounds-disc}.}
 Look for a supporting spherical dome with the unit circle as the boundary.
 
 \parbf{\ref{ex:small-gauss}.}
-Note that we can assume that the surface has positive Gauss curvature, otherwise the statement is evident.
+Note that we can assume that the Gauss curvature of the surface is positive; otherwise, the statement is evident.
 By \ref{thm:convex-embedded}, the surface bounds a convex region that contains a line segment of length~$\pi$.
 
 \begin{figure}[!ht]
@@ -1123,9 +1126,9 @@ By \ref{ex:convex-proper-plane:d}, $\Sigma$ is parametrized by an open convex pl
 It remains to show that $\Omega$ can parametrize the whole plane.
 
 We may assume that the origin of the plane lies in $\Omega$.
-Show that in this case the boundary of $\Omega$ can be written in polar coordinates as $(\theta,f(\theta))$ where $f\:\mathbb{S}^1\to\mathbb{R}$ is a positive continuous function.
+Show that in this case, the boundary of $\Omega$ can be written in polar coordinates as $(\theta,f(\theta))$ where $f\:\mathbb{S}^1\to\mathbb{R}$ is a positive continuous function.
 Then homeomorphism to the plane can be described in polar coordinates by changing only the radial coordinate;
-for example as 
+for example, as 
 $(\theta,r)\z\mapsto (\theta,
 \tfrac{r}{1-r/f(\theta)})$.
 
@@ -1155,7 +1158,7 @@ Applying \ref{cor:intK}, we get that the integral is $4\cdot\pi=\area\mathbb{S}^
 
 \parit{\ref{SHORT.ex:intK:2pi}.} Choose an $(x,y,z)$-coordinate system provided by \ref{ex:convex-proper-plane:d}.
 Observe that for any $p$ the normal vector $\Norm(p)$ forms an obtuse angle with the $z$-axis.
-It follows that the image $\Norm(\Sigma)$ lies in the south hemisphere.
+It follows that the image $\Norm(\Sigma)$ lies in the southern hemisphere.
 
 Applying \ref{cor:intK}, we get that the integral is $2\cdot\pi=\tfrac12\cdot\area\mathbb{S}^2$.
 
@@ -1178,7 +1181,7 @@ Show that the derivative $\tfrac{d}{dt}h_t(w)$ vanishes at the point $w$ if and 
 and the derivative changes sign if $w$ goes from one side of $\bar\ell_t$ to the other.
 
 Denote by $\bar\gamma$ the projection of $\gamma$ to the $(x, y)$-plane.
-If $\bar\gamma$ is star shaped with respect to a point $w$, then $w$ cannot cross $\bar\ell_t$.
+If $\bar\gamma$ is star-shaped with respect to a point $w$, then $w$ cannot cross $\bar\ell_t$.
 Therefore, the function $t\mapsto h_t(w)$ is monotonic on $\mathbb{S}^1$.
 Observe that this function cannot be constant, and arrive at a contradiction.
 
@@ -1198,9 +1201,9 @@ Prove the following claim:
 \item Suppose that  $x\mapsto h(x)$ is a smooth function defined in an open interval $\mathbb{I}\ni0$ such that $h(0)=h'(0)=0$ and $h''(0)>0$.
 Then, for a smaller interval $\mathbb{J}\ni0$ there is a unique smooth function $a\:\mathbb{J}\to\mathbb{R}$ such that $h=a^2$, $a(0)=0$ and $a'(0)> 0$.
 \end{itemize}
-Note that by passing to a small rectangular domain $|x|,|y|<\epsilon$, we can assume that $f_{xx}>\epsilon$ and $f_{yy}<-\epsilon$. 
+Note that passing to a small rectangular domain $|x|,|y|<\epsilon$, we can assume that $f_{xx}>\epsilon$ and $f_{yy}<-\epsilon$. 
 Show that if $\epsilon$ is small, then for every $x$ there is unique $y(x)$ such that $f_x(x,y(x))=0$; 
-moreover the function $x\mapsto y(x)$ is smooth.
+moreover, the function $x\mapsto y(x)$ is smooth.
 
 Set $h(x)=f(x,y(x))$.
 Note that $h(0)=h'(0)=0$ and $h''>0$.
@@ -1237,7 +1240,7 @@ Apply \ref{lem:convex-saddle}.
 Consider the radial projection of $F_\epsilon$ to the sphere $\Sigma$ with center at $p=(0,0,\epsilon)$;
 that is, a point $q\in F_\epsilon$ is mapped to a point $s(q)$ on the sphere that lies on the ray $pq$.
 
-Show that $s$ is a diffeomorphism from $F_\epsilon$ to the south hemisphere of~$\Sigma$.
+Show that $s$ is a diffeomorphism from $F_\epsilon$ to the southern hemisphere of~$\Sigma$.
 It remains to observe that the  unit disc is diffeomorphic to the hemisphere.
 
 \parbf{\ref{ex:saddle-linear}.} Apply \ref{prop:hat}.
@@ -1276,12 +1279,11 @@ unfold it on the plane (see the picture) and try to figure out what is the image
 
 \parbf{\ref{ex:length-dist-conv}.} 
 Note that by \ref{thm:convex-embedded}, $\Sigma$ bounds a strictly convex region.
-Therefore, we can assume that $\Norm(p)\ne\Norm(q)$, otherwise $p=q$ and the inequality is evident.
+Therefore, we can assume that $\Norm(p)\ne\Norm(q)$; otherwise, $p=q$, and the inequality is evident.
 
-Further, we can assume that $\Norm(p)+\Norm(q)\ne 0$, otherwise the right-hand side is undefined.
+Further, we can assume that $\Norm(p)+\Norm(q)\ne 0$; otherwise, the right-hand side is undefined.
 
-
-In the remaining case the tangent planes $\T_p$ and $\T_q$ intersect along a line, say $\ell$.
+In the remaining case, the tangent planes $\T_p$ and $\T_q$ intersect along a line, say $\ell$.
 Set $\alpha=\tfrac12\cdot\measuredangle(\Norm(p),\Norm(q))$;
 observe that $2\cdot\cos\alpha= |\Norm(p)+\Norm(q)|$.
 Let $x\in \ell$ be the point that minimizes the sum $|p-x|\z+|x-q|$.
@@ -1354,8 +1356,8 @@ Denote by $\mu$ a unit vector perpendicular to $\Pi$.
 Since $\gamma$ lies in $\Pi$, we have that $\gamma''$ is parallel to $\Pi$, or equivalently $\gamma''\perp \mu$.
 Since $\gamma$ is unit speed, \ref{prop:a'-pertp-a''} implies that $\gamma''\perp\gamma'$.
 
-Since $\Sigma$ is mirror symmetric with respect to the plane $\Pi$,
-the tangent plane $\T_{\gamma(t)}\Sigma$ is also mirror symmetric with respect to  $\Pi$ as well.
+Since $\Sigma$ is mirror-symmetric with respect to the plane $\Pi$,
+the tangent plane $\T_{\gamma(t)}\Sigma$ is also mirror-symmetric with respect to $\Pi$.
 It follows that $\T_{\gamma(t)}\Sigma$ is spanned by $\mu$ and $\gamma'(t)$.
 Hence, $\gamma''\perp \mu$ and $\gamma''\perp\gamma'$ imply $\gamma''\perp\T_{\gamma(t)}\Sigma$;
 that is, $\gamma$ is a geodesic.
@@ -1366,8 +1368,8 @@ that is, $\gamma$ is a geodesic.
 By \ref{ex:reflection-geodesic}, any meridian of $\Sigma$ is a closed geodesic.
 Consider an arbitrary closed geodesic $\gamma$.
 
-In the case when $\gamma$ is tangent to a meridian at some point, then by the  uniqueness part of Proposition \ref{prop:geod-existence},
- $\gamma$ runs along that meridian; in particular it is non-contractible.
+If $\gamma$ is tangent to a meridian at some point, then by the uniqueness part of Proposition \ref{prop:geod-existence}, $\gamma$ runs along that meridian;
+in particular, it is non-contractible.
 
 In the remaining case, $\gamma$ can intersect meridians only transversely.
 Therefore, the longitude of $\gamma$ is monotonic.
@@ -1388,7 +1390,7 @@ Denote by $\alpha_1$ and $\beta_1$ the arcs of $\alpha$ and $\beta$ from $p$ to 
 Suppose that $\alpha_1$ is distinct from $\beta_1$.
 
 Note that $\alpha_1$ and $\beta_1$ are shortest paths with the same endpoints;
-in particular they have the same length.
+in particular, they have the same length.
 Exchanging $\alpha_1$ in $\alpha$ to $\beta_1$ produces a shortest path, say $\hat\alpha$, that is distinct from $\alpha$.
 By \ref{prop:gamma''}, $\hat\alpha$ is a geodesic.
 
@@ -1415,7 +1417,7 @@ in the cylinder $x^2 + y^2 =1$.
 
 \parbf{\ref{ex:min-geod+plane}.}
 Assume a shortest path $\alpha$ crosses $\Pi$ at least twice.
-In this case there is an arc $\alpha_1$ of $\alpha$ that lies entirely on one side
+In this case, there is an arc $\alpha_1$ of $\alpha$ that lies entirely on one side
  on $\Pi$,  has ends on $\Pi$, and these ends are distinct from the ends of $\alpha$.
 
 Let us remove the arc $\alpha_1$ from $\alpha$ and replace it with the reflection of $\alpha_1$ across $\Pi$.
@@ -1543,7 +1545,7 @@ Argue that parallel transport around it rotates the tangent plane by the angle $
 
 \parbf{\ref{ex:1=geodesic-curvature}.}
 By \ref{ex:convex-proper-sphere}, $\Sigma$ is a smooth sphere.
-By Jordan theorem (\ref{thm:jordan}) the curve $\gamma$ divides $\Sigma$  in two discs.
+By Jordan theorem (\ref{thm:jordan}) the curve $\gamma$ divides $\Sigma$ into two discs.
 Let us denote by $\Delta$ the disc that lies on the left from $\gamma$.
 
 Observe that $\tgc\gamma=\length\gamma$, and apply the Gauss--Bonnet formula (\ref{thm:gb}) for $\Delta$.
@@ -1576,7 +1578,7 @@ Apply the Gauss--Bonnet formula to the triangular region to show that $\alpha+\b
 Use \ref{ex:intK:4pi} to get at a contradiction.
 
 \parbf{\ref{ex:sqrt(3)}.} Note that it is sufficient to show that the surface has no geodesic loops.
-Estimate the integral of the Gauss curvature over the entire surface and over a disc surrounded by a geodesic loop.
+Estimate the integrals of the Gauss curvature over the entire surface and a disc surrounded by a geodesic loop.
 
 \parbf{\ref{ex:unique-geod}}; \ref{SHORT.ex:unique-geod:unique}.
 By \ref{prop:shortest-paths-exist} and \ref{prop:gamma''}, any two points in $\Sigma$ can be connected by a geodesic.
@@ -1848,7 +1850,7 @@ $\dist{q}{p}\Sigma< 100\cdot R_p$
 and
 $R_q<(1-\tfrac1{100})\cdot R_p$.
 
-Start with any point $p_0$, and consider a sequence $p_n$ defined by $p_{n+1}\z=q(p_n)$.
+Start with any point $p_0$, and consider a sequence $p_n$ defined by $p_{n+1}\z\df q(p_n)$.
 Show that $p_n$ converges, and $R_{p_n}\to 0$ as $n\to\infty$.
 Arrive to a contradiction using  \ref{SHORT.ex:open-comparison:positive}.
 
@@ -1876,7 +1878,7 @@ Use the comparison to show that these plane triangles form a required polygon.
 
 \parit{\ref{SHORT.ex:self-intersections-hard}}.
 It remains to show that the plane pentagon provided by \ref{SHORT.ex:convex-polyhon} cannot exist.
-Imagine that there is air pressure in the pentagon, it should not move it; so the total force should vanish.
+Imagine that there is some air pressure in the pentagon, it should not move it; so the total force should vanish.
 Use part \ref{SHORT.ex:convex-polyhon+self-intersections:angles} to show that this is not the case.
 (Equivalently, show that the sum of its side vectors oriented counterclockwise does not vanish.)
 
@@ -1941,7 +1943,7 @@ f(y)&\le \dist{y}{\bar y}\Sigma
 =
 \tfrac12\cdot(f(x)+f(z)).
 \end{align*}
-Observe that this inequality implies convexity of $f$.
+Observe that this inequality implies the convexity of $f$.
 
 \parit{\ref{SHORT.ex:dist-to-bry:+}.}
 Suppose $\gamma$ is a unit-speed geodesic in $\Delta$, and $\gamma(0)=p$. 
@@ -2028,7 +2030,7 @@ for any $x\in S_c$.
 Conclude that $S_s$ has no interior points.
 Since $S_s$ is convex, the first part follows.
 
-In the Euclidean plane $S_s$ is a single point.
+In the Euclidean plane, $S_s$ is a single point.
 In the cylinder, $S_s$ is a circle.
 The surface of $r$-neighborhood of an infinite rectangle provides an example with a line segment as $S_s$; this example is not smooth, but it can be smoothed keeping this property.
 One can use the cutoffs and mollifiers to do this (Section~\ref{sec:analysis}).

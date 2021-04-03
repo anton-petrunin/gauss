@@ -59,7 +59,7 @@ Show that if a smooth surface $\Sigma$ meets a plane $\Pi$ at a single point $p$
 
 In this section we extend the definition of directional derivative to smooth functions defined on smooth surfaces.
 
-First let us recall the standard definition of directional derivative.
+First, let us recall the standard definition of directional derivative.
 
 Suppose $f$ is a function defined at a point $p$ in the space, and $\vec w$ a vector.
 Consider the function
@@ -85,13 +85,13 @@ where $\vec{w}=a\cdot s_u +b\cdot s_v$.
 \end{thm}
 
 Note that our definition agrees with the standard definition of directional derivative if $\Sigma$ is a plane.
-Indeed, in this case $\gamma(t)=p+\vec w\cdot t$ is a curve in $\Sigma$ that starts at $p$ with velocity vector $\vec{w}$.
-For a general surface the point $p+\vec w\cdot t$ might not lie on the surface; therefore the function $f$ might be undefined at this point; therefore the standard definition does not work.
+Indeed, in this case, $\gamma(t)=p+\vec w\cdot t$ is a curve in $\Sigma$ that starts at $p$ with velocity vector $\vec{w}$.
+For a general surface, the point $p+\vec w\cdot t$ might not lie on the surface; therefore the function $f$ might be undefined at this point; therefore the standard definition does not work.
 
 \parit{Proof.}
 Without loss of generality, we may assume that $\gamma$ is covered by the chart $s$;
 if not we can chop $\gamma$.
-In this case 
+In this case, 
 \[\gamma(t)=s(u(t),v(t))\]
 for some smooth functions $u,v$ defined in a neighborhood of $0$ such that 
 $u(0)=u_p$ and $v(0)=v_p$.
@@ -134,7 +134,7 @@ that satisfy the product rule \ref{eq:tangent-functional}.
 
 This definition grabs the key algebraic property of tangent vectors.
 It might be a less intuitive way to think about tangent vectors, but it is often convenient to use in the proofs. 
-For example \ref{def:directional-derivative} becomes a tautology.
+For example, \ref{def:directional-derivative} becomes a tautology.
 
 \section{Differential of map}
 
@@ -199,7 +199,7 @@ The definition will be used mostly along surfaces with boundary, but the definit
 
 Recall that $\jac_ps$ is defined in the previous section.
 Assume that there is a chart $(u,v)\mapsto s(u,v)$ of $\Sigma$ defined on an open set $U\subset\mathbb{R}^2$ such that $R\subset s(U)$.
-In this case set
+In this case, set
 \[\iint_R h\df \iint_{s^{-1}(R)} h\circ s(u,v)\cdot \jac_{(u,v)}s  \cdot du\cdot dv.\eqlbl{eq:area-def}\]
 
 
@@ -238,7 +238,7 @@ The notion of area of a surface is closely related to the length of a curve.
 However, to define length we use a different idea --- it was defined as the least upper bound on the lengths of inscribed polygonal lines.
 It turns out that an analogous definition does not work even for very simple surfaces.
 The latter is shown by a classical example --- the so-called \emph{Schwarz's boot}.
-This example and different approaches to the notion of area are discussed in a popular article of Vladimir Dubrovsky \cite{dubrovsky}.
+This example and different approaches to the notion of area are discussed in a popular article by Vladimir Dubrovsky \cite{dubrovsky}.
 
 \section{Normal vector and orientation}
 A unit vector that is normal to $\T_p$ is usually denoted by $\Norm(p)$;
@@ -271,7 +271,7 @@ In fact each chart $s(u,v)$ admits an orientation
 {\left|s_u\times s_v\right|}.\]
 Indeed, the vectors $s_u$ and $s_v$ are tangent vectors at $p$; 
 since they are linearly independent, their vector product does not vanish, and it is perpendicular to the tangent plane.
-Evidently $(u,v)\mapsto \Norm(u,v)$ is a continuous map.
+Evidently, $(u,v)\mapsto \Norm(u,v)$ is a continuous map.
 Therefore, $\Norm$ is a unit normal field. 
 
 \begin{thm}{Exercise}\label{ex:implicit-orientable}

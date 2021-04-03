@@ -1,7 +1,7 @@
 \chapter{Definitions}
 \label{chap:curves-def}
 
-In most of the cases, by looking at tire tracks of a bicycle,
+In most cases, by looking at tire tracks of a bicycle,
 it is possible to say which direction it traveled and to distinguish the trails made by the front and rear wheels;
 plus one can find the distance between the wheels.
 
@@ -34,7 +34,7 @@ To learn more about this problem check the reference given after Exercise~\ref{e
 
 \section{Simple curves}
 
-In the following definition we use the notion of {}\emph{metric space} which is discussed in Section~\ref{sec:metric-spcaes}.
+In the following definition, we use the notion of {}\emph{metric space} which is discussed in Section~\ref{sec:metric-spcaes}.
 The Euclidean plane and space are the main examples of metric spaces that one should keep in mind.
 
 Recall that a \index{real interval}\emph{real interval} is a connected subset of the real numbers.
@@ -45,17 +45,17 @@ Recall that a bijective continuous map $f\:X\to Y$ between subsets of some metri
 A connected subset $\gamma$ in a metric space is called a \index{simple curve}\emph{simple curve} if it is {}\emph{locally} homeomorphic to a real interval.
 \end{thm}
 
-It turns out that any simple curve $\gamma$ can be \index{parametrization}\emph{parametrized} by a real interval or the circle.
+It turns out that any simple curve $\gamma$ can be \index{parametrization}\emph{parametrized} by a real interval or circle.
 That is, there is a homeomorphism $\GG\to\gamma$ 
-where $\GG$ is a real interval (open, closed or semi-open) or the circle
+where $\GG$ is a real interval (open, closed, or semi-open) or the circle
 \[\mathbb{S}^1=\set{(x,y)\in\mathbb{R}^2}{x^2+y^2=1}.\] 
 A complete proof of the latter statement is given by David Gale \cite{gale}.
 The proof is not hard, but it would take us away from the main subject.
 A~finicky reader may add this property in the definition of curves.
 
-If $\GG$ is an open interval or a circle, we say that $\gamma$ is a \index{endpoint}\emph{curve without endpoints}, otherwise it is 
+If $\GG$ is an open interval or a circle, we say that $\gamma$ is a \index{endpoint}\emph{curve without endpoints}; otherwise, it is 
 called a {}\emph{curve with endpoints}.
-In the case when $\GG$ is a circle we say that the curve is \index{closed!curve}\emph{closed}. 
+In the case when $\GG$ is a circle, we say that the curve is \index{closed!curve}\emph{closed}. 
 When $\GG$ is a closed interval, $\gamma$ is called a {}\emph{simple arc}.
 
 
@@ -79,8 +79,8 @@ Find a continuous injective map $\gamma\:(0,1)\to\mathbb{R}^2$ such that its ima
 
 \section{Parametrized curves}
 
-A \index{parametrized curve}\emph{parametrized curve} is defined as a continuous map $\gamma\:\GG\to\spc{X}$ from a circle or a real interval (open, closed or semi-open) $\GG$ to a metric space $\spc{X}$. 
-For a parametrized curve we do not assume that $\gamma$ is injective; in other words, a parametrized curve might have \index{self-intersections}\emph{self-intersections}.
+A \index{parametrized curve}\emph{parametrized curve} is defined as a continuous map $\gamma\:\GG\to\spc{X}$ from a circle or a real interval (open, closed, or semi-open) $\GG$ to a metric space $\spc{X}$. 
+For a parametrized curve, we do not assume that $\gamma$ is injective; in other words, a parametrized curve might have \index{self-intersections}\emph{self-intersections}.
 
 \begin{wrapfigure}{o}{15 mm}
 \vskip-3mm
@@ -93,10 +93,10 @@ If we use the term \index{curve}\emph{curve}, then it means that we do not want 
 If the domain of a parametrized curve is a closed interval $[a,b]$, then the curve is called an \index{arc}\emph{arc}.
 Further, if it is the unit interval $[0,1]$, then it is also called a \index{path}\emph{path}.
 If in addition $p=\gamma(0)=\gamma(1)$, then $\gamma$ is called a \index{loop}\emph{loop};
-in this case the point $p$ is called the \index{base of loop}\emph{base} of the loop.
+in this case, the point $p$ is called the \index{base of loop}\emph{base} of the loop.
 
 Suppose $\GG_1$ and $\GG_2$ are either real intervals or circles.
-A continuous onto map $\tau\:\GG_1\to\GG_2$ is called \index{monotone map}\emph{monotone} if for any $t\in \GG_2$ the set $\tau^{-1}\{t\}$ is connected.
+A continuous onto map $\tau\:\GG_1\to\GG_2$ is called \index{monotone map}\emph{monotone} if, for any $t\in \GG_2$, the set $\tau^{-1}\{t\}$ is connected.
 Note that if $\GG_1$ and $\GG_2$ are intervals, then, by the intermediate value theorem, a monotone map is either nondecreasing or nonincreasing;
 that is, our definition agrees with the standard one when $\GG_1$ and $\GG_2$ are intervals.
 
@@ -105,8 +105,8 @@ $\gamma_1=\gamma_2\circ\tau$ for a monotone map $\tau\:\GG_1\to\GG_2$.
 Then we say that $\gamma_2$ is \index{reparametrization}\emph{reparametrization}%
 \footnote{Note that in general, $\gamma_1$ is {}\emph{not} a reparametrization of $\gamma_2$.
 In other words, according to our definition, the described relation {}\emph{being a reparametrization} is not symmetric;
-in particular it is not an equivalence relation.
-Usually it is fixed by extending it to the minimal equivalence relation that includes ours \cite[2.5.1]{burago-burago-ivanov}.
+in particular, it is not an equivalence relation.
+Usually, it is fixed by extending it to the minimal equivalence relation that includes ours \cite[2.5.1]{burago-burago-ivanov}.
 But we will stick to our version.}
 of $\gamma_1$ by $\tau$.
 
@@ -193,7 +193,7 @@ For example, the unit circle in the plane can be described by the $2{\cdot}\pi$-
 \end{wrapfigure}
 
 Any smooth regular closed curve can be also described by a smooth regular loop.
-But in general the closed curve described by a smooth regular loop might fail to be regular at its base; an example is shown on the diagram.
+But in general, the closed curve described by a smooth regular loop might fail to be regular at its base; an example is shown on the diagram.
 
 }
 
@@ -204,7 +204,7 @@ that is, all its partial derivatives are defined everywhere.
 Let $\gamma\subset \mathbb{R}^2$ be the set of solutions of the equation $f(x,y)=0$.
 
 Assume $\gamma$ is connected.
-According to the implicit function theorem (\ref{thm:imlicit}), the set $\gamma$ is a smooth regular simple curve if $0$ is a \index{regular!value}\emph{regular!value} of~$f$; that is, the gradient $\nabla_p f$ does not vanish at any point $p\in \gamma$.
+According to the implicit function theorem (\ref{thm:imlicit}), the set $\gamma$ is a smooth regular simple curve if $0$ is a \index{regular!value}\emph{regular value} of~$f$; that is, the gradient $\nabla_p f$ does not vanish at any point $p\in \gamma$.
 In other words, if $f(p)=0$, then   
 $f_x(p)\ne 0$ or $f_y(p)\ne 0$.%
 \footnote{Here $f_x$ is a shortcut notation for the partial derivative
@@ -261,7 +261,7 @@ describes a smooth regular curve.
 
 \section{Proper curves}\label{sec:proper-curves}
 
-A parametrized curve $\gamma$ in a metric space $\spc{X}$ is called \index{proper!curve}\emph{proper} if for any compact set $K \subset \spc{X}$, the inverse image $\gamma^{-1}(K)$ is compact.
+A parametrized curve $\gamma$ in a metric space $\spc{X}$ is called \index{proper!curve}\emph{proper} if, for any compact set $K \subset \spc{X}$, the inverse image $\gamma^{-1}(K)$ is compact.
 
 For example, the curve $\gamma(t)=(e^t,0,0)$ defined on the real line is not proper.
 Indeed, the half-line $(-\infty,0]$ is not compact, but it is the inverse image of the closed unit ball around the origin.
@@ -288,7 +288,7 @@ A proper simple plane curve without endpoints is called \index{open!curve}\emph{
 The terms {}\emph{open curve} and {}\emph{closed curve} have nothing to do with open and closed sets.
 
 \begin{thm}{Exercise}\label{ex:proper-curve}
-Use the Jordan's theorem (\ref{thm:jordan}) to show that any simple open plane curve divides the plane in two connected components.  
+Use Jordan's theorem (\ref{thm:jordan}) to show that any simple open plane curve divides the plane in two connected components.  
 \end{thm}
 
 

@@ -1,7 +1,7 @@
 \chapter{Torsion}
 \label{chap:torsion}
 
-This chapter provides mostly a practice in computations.
+This chapter provides mostly practice in computations.
 Except for the definitions in Section \ref{sec:frenet-frame},
 it will not be used in the sequel.
 \section{Frenet frame}\label{sec:frenet-frame}
@@ -21,7 +21,7 @@ According to \ref{prop:a'-pertp-a''}, $\norm(s)\perp \tan(s)$.
 Therefore, the vector product 
 \[\bi(s)=\tan(s)\times \norm(s)\]
 is a unit vector;
-moreover the triple $\tan(s),\norm(s),\bi(s)$ an oriented orthonormal basis in $\mathbb{R}^3$;
+moreover, the triple $\tan(s),\norm(s),\bi(s)$ an oriented orthonormal basis in $\mathbb{R}^3$;
 in particular, we have that
 \[\begin{aligned}
 \langle\tan,\tan\rangle&=1,
@@ -40,7 +40,7 @@ in particular, we have that
 \]
 
 The orthonormal basis $\tan(s),\norm(s),\bi(s)$ is called the \index{Frenet frame}\emph{Frenet frame} at $s$; the vectors in the frame are called \index{tangent}\emph{tangent}, \index{normal}\emph{normal}, and \index{binormal}\emph{binormal}, respectively.
-Note that the frame $\tan(s),\norm(s),\bi(s)$ is defined only if $\kur(s)\ne 0$.
+Note that the frame $\tan(s),\norm(s),\bi(s)$ is defined only if $\kur(s)\z\ne 0$.
 
 The plane $\Pi_s$ thru $\gamma(s)$ spanned by vectors $\tan(s)$ and $\norm(s)$ is called the \index{osculating!plane}\emph{osculating plane} at $s$;
 equivalently it can be defined as a plane thru $\gamma(s)$ that is perpendicular to the binormal vector $\bi(s)$.
@@ -59,7 +59,7 @@ Note that the torsion $\tor(s_0)$ is defined if $\kur(s_0)\z\ne0$.
 Indeed, since the function $s\mapsto \kur(s)$ is continuous, 
 $\kur(s_0)\z\ne 0$ implies that $\kur(s)\z\ne 0$ for all $s$ near $s_0$.
 Therefore, the Frenet frame is also defined in an open interval containing $s_0$.
-Clearly $\tan(s)$, $\norm(s)$, and $\bi(s)$ depend smoothly on $s$ in their domains of definition.
+Clearly, $\tan(s)$, $\norm(s)$, and $\bi(s)$ depend smoothly on $s$ in their domains of definition.
 Therefore, $\norm'(s_0)$ is defined, and so is the torsion $\tor(s_0)=\langle \norm'(s_0),\bi(s_0)\rangle$.
 
 
@@ -79,7 +79,7 @@ Recall that
 \eqlbl{eq:frenet-tau}\]
 Let us find the remaining derivatives $\norm'$ and $\bi'$ in the frame $\tan,\norm,\bi$.
 
-First let us show that
+First, let us show that
 \[\norm'=-\kur\cdot\tan+\tor\cdot\bi.\eqlbl{eq:frenet-nu}\]
 
 Since the frame $\tan,\norm,\bi$ is orthonormal, the above formula is equivalent to the following three identities:
@@ -173,7 +173,7 @@ The following theorem was proved by Michel Ange Lancret~\cite{lancret} more than
 Let $\gamma$ be a smooth regular curve;
 denote by $\kur$ and $\tor$ its curvature and torsion.
 Suppose $\kur(s)>0$ for all $s$.
-Then $\gamma$ has constant slope if and only if the ratio $\tfrac\tor\kur$ is constant.
+Then $\gamma$ has a constant slope if and only if the ratio $\tfrac\tor\kur$ is constant.
 \end{thm}
 
 The following exercise will guide you thru the proof of the theorem. 
@@ -194,7 +194,7 @@ this proves the ``only if'' part of the theorem.
 \end{subthm}
 
 \begin{subthm}{ex:lancret:b} Assume $\tfrac\tor\kur$ is constant, show that the vector $\vec w=\tfrac\tor\kur\cdot \tan+\bi$ is constant.
-Conclude that $\gamma$ has constant slope; this proves the ``if'' part of the theorem.
+Conclude that $\gamma$ has a constant slope; this proves the ``if'' part of the theorem.
 \end{subthm}
 
 \end{thm}
@@ -390,7 +390,7 @@ Hence, the last statement follows.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:cur+tor=helix}
-Assume a curve $\gamma\:\mathbb{R}\to\mathbb{R}^3$ has constant curvature and torsion.
+Assume a curve $\gamma\:\mathbb{R}\to\mathbb{R}^3$ has a constant curvature and torsion.
 Show that $\gamma$ is a helix, possibly degenerate to a circle;
 that is, in a suitable coordinate system we have
 \[\gamma(t)=(a\cdot \cos t,a\cdot\sin t, b\cdot t)\]
