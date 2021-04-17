@@ -1033,6 +1033,9 @@ beginfig(33);
 save u;
 u:=.35cm;
 
+picture pic;
+
+pic = image(
 x.shift=9*u;
 x.width=.2*u;
 x.size=2*u;
@@ -1237,10 +1240,12 @@ draw (z.c3--z.d11) rotated 180 shifted (2*x.right,0) penhair;
 draw (-2.3*x.size,0)--(2.3*x.size,0)  dashed linedot penhair;
 draw ((-.3*x.size,-(-x.shift+x.gap))--(2.3*x.size,-(-x.shift+x.gap))) shifted (x.right,0)  dashed linedot penhair;
 
-label.bot(btex $V_1$ etex, (0,-x.shift-2*u));
-label.bot(btex $V_2$ etex, (x.right,-x.shift-2*u));
-label.bot(btex $V_3$ etex, (2*x.right,-x.shift-2*u));
+label.bot(btex $V_1$ etex rotated 90, (0,-x.shift-2*u));
+label.bot(btex $V_2$ etex rotated 90, (x.right,-x.shift-2*u));
+label.bot(btex $V_3$ etex rotated 90, (2*x.right,-x.shift-2*u));
+);
 
+draw pic rotated -90;
 endfig;
 
 beginfig(34);
@@ -2900,7 +2905,7 @@ drawarrow z.p--z.nu;
 
 dOt origin,z.p;
 
-label.llft(btex $p$ etex, z.p);
+label.llft(btex $\gamma(t)$ etex, z.p+(3,0));
 label.urt(btex $\Norm$ etex, z.nu);
 label.top(btex $\Sigma$ etex, z.Sigma);
 endfig;

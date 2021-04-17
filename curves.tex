@@ -6,7 +6,6 @@ it is possible to say which direction it traveled and to distinguish the trails 
 plus one can find the distance between the wheels.
 
 Try to figure out how to do this.
-(We suppose that the trails are two proper simple curves on the plane; the definitions are given below.)
 This question might motivate the reader to reinvent a considerable part of the differential geometry of curves.
 To learn more about this problem check the reference given after Exercise~\ref{ex:bike}.
 
@@ -38,11 +37,11 @@ In the following definition, we use the notion of {}\emph{metric space} which is
 The Euclidean plane and space are the main examples of metric spaces that one should keep in mind.
 
 Recall that a \index{real interval}\emph{real interval} is a connected subset of the real numbers.
-
-Recall that a bijective continuous map $f\:X\to Y$ between subsets of some metric spaces is called a {}\emph{homeomorphism} if its inverse $f^{-1}\:Y\z\to X$ is continuous.  
+A bijective continuous map $f\:X\to Y$ between subsets of some metric spaces is called a {}\emph{homeomorphism} if its inverse $f^{-1}\:Y\z\to X$ is continuous.  
 
 \begin{thm}{Definition} 
-A connected subset $\gamma$ in a metric space is called a \index{simple curve}\emph{simple curve} if it is {}\emph{locally} homeomorphic to a real interval.
+A connected subset $\gamma$ in a metric space is called a \index{simple curve}\emph{simple curve} if it is \index{locally homeomorphic}\emph{locally} homeomorphic to a real interval;
+that is, any point in $\gamma$ has a neighborhood in $\gamma$ that is homeomorphic to a real interval.
 \end{thm}
 
 It turns out that any simple curve $\gamma$ can be \index{parametrization}\emph{parametrized} by a real interval or circle.
@@ -71,7 +70,7 @@ Show that the image of any continuous injective map $\gamma\:[0,1]\to\mathbb{R}^
 \end{subthm}
 
 \begin{subthm}{ex:9:9}
-Find a continuous injective map $\gamma\:(0,1)\to\mathbb{R}^2$ such that its image is not a simple curve.
+Find a continuous injective map $\gamma\:(0,1)\to\mathbb{R}^2$ such that its image is \emph{not} a simple curve.
 \end{subthm}
 
 \end{thm}
@@ -113,8 +112,8 @@ of $\gamma_1$ by $\tau$.
 
 \begin{thm}{Advanced exercise}\label{aex:simple-curve}
 Let $X$ be a subset of the plane.
-Suppose that two distinct points $p,q\in X$ can be connected by a path in $X$.
-Show that there is a simple arc in~$X$ connecting $p$ to $q$.
+Suppose that two distinct points $p,q\in X$ can be connected by a path in~$X$.
+Show that there is a simple arc in~$X$ connecting $p$ to~$q$.
 \end{thm}
 
 \section{Smooth curves}
@@ -130,7 +129,7 @@ If each of the coordinate functions $x(t), y(t)$, and $z(t)$ of a space curve $\
 
 If the \index{velocity vector}\emph{velocity vector} 
 \[\gamma'(t)=(x'(t),y'(t),z'(t))\] 
-does not vanish at any point, then the parametrized curve $\gamma$ is called \index{regular!curve}\emph{regular}.
+does not vanish at any point, then the parametrized curve $\gamma$ is called \index{regular!curve}\emph{regular}.\label{page:regular curve}
 
 A simple space curve is called \index{smooth!curve}\emph{smooth} (respectively, {}\emph{regular}) if it admits a smooth (respectively, regular) parametrization.
 Regular smooth curves are among the main objects in differential geometry;
@@ -181,7 +180,7 @@ simple.
 \section{Periodic parametrizations}
 
 Any smooth regular closed curve can be described by a {}\emph{periodic} parametrized curve $\gamma\: \mathbb{R}\to \spc{X}$;
-that is, a curve such that $\gamma(t+\ell)=\gamma(t)$ for a fixed period $\ell>0$ and all $t$.
+that is, a curve such that $\gamma(t+\ell)=\gamma(t)$ for a fixed period $\ell>0$ and all~$t$.
 For example, the unit circle in the plane can be described by the $2{\cdot}\pi$-periodic parametrization $\gamma(t)=(\cos t,\sin t)$.
 
 {
@@ -201,7 +200,7 @@ But in general, the closed curve described by a smooth regular loop might fail t
 
 Suppose $f\:\mathbb{R}^2\to \mathbb{R}$ is a smooth function; 
 that is, all its partial derivatives are defined everywhere.
-Let $\gamma\subset \mathbb{R}^2$ be the set of solutions of the equation $f(x,y)=0$.
+Let $\gamma\subset \mathbb{R}^2$ be its level set described by  the equation $f(x,y)=0$.
 
 Assume $\gamma$ is connected.
 According to the implicit function theorem (\ref{thm:imlicit}), the set $\gamma$ is a smooth regular simple curve if $0$ is a \index{regular!value}\emph{regular value} of~$f$; that is, the gradient $\nabla_p f$ does not vanish at any point $p\in \gamma$.
@@ -211,10 +210,10 @@ $f_x(p)\ne 0$ or $f_y(p)\ne 0$.%
 $\tfrac{\partial f}{\partial x}$.\index{10f@$f_x$}}
 
 The described condition is sufficient but {}\emph{not necessary}.
-For example, zero is not a regular value the function $f(x,y)=y^2$, but the equation $f(x,y)=0$ describes a smooth regular curve --- the $x$-axis.
+For example, zero is \emph{not} a regular value the function $f(x,y)=y^2$, but the equation $f(x,y)=0$ describes a smooth regular curve --- the $x$-axis.
 
 
-Similarly, assume $f,h$ is a pair of smooth functions defined in $\mathbb{R}^3$.
+Similarly, assume that $(f,h)$ is a pair of smooth functions defined in $\mathbb{R}^3$.
 The system of equations
 \[\begin{cases}
    f(x,y,z)=0,
@@ -236,7 +235,6 @@ for the map $F\:\mathbb{R}^3\to\mathbb{R}^2$ has rank 2 at any point $p \in \gam
 
 If a curve $\gamma$ is described in such a way,
 then we say that it is \index{implicitly defined curve}\emph{implicitly defined}.
-If a curve is defined by its parametrization, we say that it is \index{explicitly defined curve}\emph{explicitly defined}.
 
 The implicit function theorem guarantees the existence of regular smooth parametrizations for any implicitly defined curve.
 However, when it comes to calculations, it is usually easier to work directly with implicit representations. 
@@ -274,8 +272,8 @@ Show that  $|\gamma(t)|\z\to\infty$ as $t\to\pm\infty$.
 
 Recall that a closed interval is compact (\ref{thm:Heine--Borel}) and closed subsets of a compact set are compact;
 see Section~\ref{sec:topology}.
-It follows that closed curves and arcs are automatically proper;
-indeed, their parameter sets are compact.
+Since circles and closed intervals are compact,
+it follows that closed curves and arcs are proper.
 
 A simple curve is called proper if it admits a proper parametrization.
 

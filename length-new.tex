@@ -3,7 +3,7 @@
 
 \section{Definitions}
 
-Recall that a sequence 
+A sequence 
 \[a=t_0 < t_1 < \cdots < t_k=b.\]
 is called a \index{partition}\emph{partition} of the interval $[a,b]$.
 
@@ -18,7 +18,7 @@ The \index{length of curve}\emph{length} of $\gamma$ is defined as
 +\dots+
 \dist{\gamma(t_{k-1})}{\gamma(t_k)}{\spc{X}}}{},
 \end{align*}\index{10length@$\length \gamma$}
-where the least upper bound is taken over all partitions $(t_i)$ of $[a,b]$.
+where the least upper bound is taken over all partitions $t_0,\dots,t_k$ of $[a,b]$.
 
 The length of $\gamma$ is a nonnegative real number or infinity;
 the curve $\gamma$ is called \index{rectifiable curve}\emph{rectifiable} if its length is finite. 
@@ -30,6 +30,7 @@ If a curve is parametrized by an open or semi-open interval, then its length is 
 
 \begin{thm}{Exercise}\label{ex:integral-length-0}
 Suppose that curve $\gamma_1\:[a_1,b_1] \to\mathbb{R}^3$ is a reparametrization of $\gamma_2\:[a_2,b_2] \to\mathbb{R}^3$. 
+Show that
 \[\length \gamma_1 = \length \gamma_2.\]
 
 \end{thm}
@@ -52,10 +53,10 @@ Show that
 
 Suppose $\gamma\:[a,b]\to \mathbb{R}^3$ is a parametrized space curve.
 For a partition $a=t_0 < t_1 < \z\cdots < t_k=b$, set $p_i=\gamma(t_i)$.
-Then the polygonal line $p_0\dots p_k$ is said to be \index{inscribed polygonal line}\emph{inscribed} in $\gamma$.
+Then the polygonal line $p_0\dots p_k$ is said to be \index{inscribed polygonal line}\emph{inscribed} in~$\gamma$.
 If $\gamma$ is closed, then $p_0=p_k$, so the inscribed polygonal line is also closed.
 
-Note that the length of a space curve $\gamma$ can be defined as the least upper bound of the lengths of polygonal lines $p_0\dots p_k$ inscribed in $\gamma$.
+Note that the length of a space curve $\gamma$ can be defined as the least upper bound of the lengths of polygonal lines $p_0\dots p_k$ inscribed in~$\gamma$.
 
 
 \begin{thm}{Exercise}\label{ex:integral-length}
@@ -138,10 +139,10 @@ Note that a smooth space curve $\gamma(t)=(x(t),y(t),z(t))$ is an arc-length par
 that is, 
 \[|\gamma'(t)|=\sqrt{x'(t)^2+y'(t)^2+z'(t)^2}=1\]
 for all $t$; by that reason smooth curves equipped with an arc-length parametrization are also called \index{unit-speed curve}\emph{unit-speed curves}.
-Observe that smooth unit-speed curves are automatically regular.
+Observe that smooth unit-speed curves are automatically regular (see definition on page~\pageref{page:regular curve}).
 
 Note that any rectifiable curve $\gamma$ can be reparametrized by its arc-length.
-Indeed, for a fixed value $t_0$, 
+Indeed, by \ref{ex:nonrectifiable-curve:a}, for a fixed value $t_0$, 
 \[s(t)=
 \left\{
 \begin{tabu}{rcr}
@@ -151,7 +152,7 @@ Indeed, for a fixed value $t_0$,
 \end{tabu}
 \right.
 \]
-defines an arc-length parameter of the curve $\gamma$.
+defines an arc-length parameter of the curve~$\gamma$.
 
 \begin{thm}{Proposition}\label{prop:arc-length-smooth}
 If $t\mapsto \gamma(t)$ is a smooth regular curve, 
@@ -162,11 +163,11 @@ Moreover, the arc-length parameter $s$ of $\gamma$ can be written as an integral
 
 \parit{Proof.} The function $t\mapsto s(t)$ defined by \ref{s(t)} is a smooth increasing function.
 Furthermore, by the fundamental theorem of calculus, $s'(t)=|\gamma'(t)|$.
-Since $\gamma$ is regular, $s'(t)\ne0$ for any parameter value $t$.
+Since $\gamma$ is regular, $s'(t)\ne0$ for any parameter value~$t$.
 
 By the inverse function theorem (\ref{thm:inverse}), the inverse function $s^{-1}(t)$ is also smooth
 and $|(\gamma\circ s^{-1})'|\equiv1$.
-Therefore, $\gamma\circ s^{-1}$ is a unit-speed reparametrization  of $\gamma$ by $s$.
+Therefore, $\gamma\circ s^{-1}$ is a unit-speed reparametrization  of $\gamma$ by~$s$.
 By construction, $\gamma\circ s^{-1}$ is smooth, and, since $|(\gamma\circ s^{-1})'|\equiv1$, it is regular.
 \qeds
 
@@ -178,11 +179,11 @@ Reparametrize the helix
 by its arc-length.
 \end{thm}
 
-We will be interested in the properties of curves that are invariant under a reparametrization.
+We will be interested in the properties of curves that are invariant under reparametrizations.
 Therefore, we can always assume that any given smooth regular curve comes with an arc-length parametrization.
 A nice property of arc-length parametrizations is that they are almost canonical --- these parametrizations differ only by a sign and an additive constant.
-For that reason, it is easier to express parametrization-independent quantities using arc-length parametrizations.
-This observation will be used in the definition of curvature and torsion.
+For that reason, it is easier to express parametrization-independent quantities.
+This observation will be used in the definitions of curvature and torsion.
 
 On the other hand, it is usually impossible to find an explicit arc-length parametrization, which makes it hard to perform calculations;
 therefore it is often convenient to use the original parametrization.
@@ -206,7 +207,7 @@ Let $P$ and $Q$ be polygons.
 Assume $P$ is convex and $Q\supset P$.
 Then 
 \[\perim P\le \perim Q,\]
-where $\perim P$ denotes the perimeter of $P$.
+where $\perim P$ denotes the perimeter of~$P$.
 \end{thm}
 
 
@@ -231,9 +232,7 @@ $$P=P_0\subset P_1\subset\dots\subset P_n=Q$$
 such that $P_{i-1}$ obtained from $P_{i}$ by cutting along a chord.
 Therefore, 
 \begin{align*}
-\perim P=\perim P_0&\le\perim P_1\le\dots
-\\
-\dots&\le\perim P_n=\perim Q
+\perim P=\perim P_0&\le\perim P_1\le\dots\le\perim P_n=\perim Q
 \end{align*}
 and the lemma follows.
 \qeds
@@ -249,18 +248,18 @@ Any convex closed plane curve is rectifiable.
 Any closed curve is bounded.
 Indeed, the curve can be described as an image of a loop $\alpha\:[0,1]\to\mathbb{R}^2$, $\alpha(t)=(x(t),y(t))$.
 The coordinate functions $t\mapsto x(t)$ and $t\mapsto y(t)$ are continuous functions defined on $[0,1]$.
-This implies that the absolute values of both functions are bounded by some constant $C$.
+This implies that the absolute values of both functions are bounded by some constant~$C$.
 Therefore, $\alpha$ lies in the square defined by the inequalities $|x|\le C$ and $|y|\le C$.
 
 
-By Proposition~\ref{prop:convex-curve}, the length of the curve cannot exceed $8\cdot C$ --- the perimeter of the square; hence the result.
+By Proposition~\ref{prop:convex-curve}, the length of the curve cannot exceed the perimeter of the square; hence the result.
 \qeds
 
-Recall that the convex hull of a set $X$ is the smallest convex set that contains $X$; equivalently, the convex hull of $X$ is the intersection of all convex sets containing $X$.
+Recall that the convex hull of a set $X$ is the smallest convex set that contains $X$; equivalently, the convex hull of $X$ is the intersection of all convex sets containing~$X$.
 
 \begin{thm}{Exercise}\label{ex:convex-hull}
 Let $\alpha$ be a simple closed plane curve.
-Denote by $K$ the convex hull of $\alpha$; let $\beta$ be the boundary curve of $K$.
+Denote by $K$ the convex hull of $\alpha$; let $\beta$ be the boundary curve of~$K$.
 Show that 
 \[\length \alpha\ge \length \beta.\]
 
@@ -308,8 +307,8 @@ for any $t \in [a,b]$. Then, according to Exercise~\ref{ex:integral-length},
 Since $k$ is a universal constant, we can compute it by taking $\gamma$ to be the unit circle.
 In this case,
 \[\length \gamma=2\cdot\pi.\]
-Note that for any unit plane vector ${\vec u}$, the curve $\gamma_{\vec u}$ runs back and forth along an interval of length 2.
-Then $\length\gamma_{\vec u}=4$ for any $\vec u$, and
+Note that for any unit plane vector ${\vec u}$, the curve $\gamma_{\vec u}$ runs back and forth along an interval of length~2.
+Hence $\length\gamma_{\vec u}=4$ for any $\vec u$, and 
 \[\overline{\length\gamma_{\vec u}} =4.\]
 It follows that $2\cdot \pi =k\cdot 4$.
 Therefore, Crofton's formula holds for arbitrary smooth curves.
@@ -363,11 +362,10 @@ Find the value of $k$ in each case.
 
 \section{Semicontinuity of length}
 
-Recall that the lower limit 
-of a sequence of real numbers $(x_n)$ is denoted by
+The lower limit  of a sequence of real numbers $(x_n)$ will be denoted by
 \[\liminf_{n\to\infty} x_n.\] 
 It is defined as the lowest partial limit; that is, the lowest possible limit of a subsequence of $(x_n)$.
-The lower limit is defined for any sequence of real numbers, and it lies in the extended real line $[-\infty,\infty]$
+The lower limit is defined for any sequence of real numbers, and it lies in the {}\emph{extended real line} $[-\infty,\infty]$
 
 
 \begin{thm}{Theorem}\label{thm:length-semicont}
@@ -408,7 +406,7 @@ and therefore
 as $n\to\infty$.
 Note that 
 \[\Sigma_n\le\length\gamma_n\]
-for each $n$.
+for each~$n$.
 Hence,
 $$\liminf_{n\to\infty} \length\gamma_n \ge \Sigma_\infty.$$
 
@@ -431,7 +429,7 @@ with sides parallel to the sides of the square ($\gamma_6$ is in the picture).
 In this case,
 \[\length\gamma_\infty=\sqrt{2}\quad
 \text{and}\quad \length\gamma_n=2\]
-for any $n$.
+for any~$n$.
 
 
 
@@ -451,7 +449,7 @@ Most of the time we consider length-metric spaces.
 In particular, the Euclidean space is a length-metric space.
 A subspace $A$ of a length-metric space $\spc{X}$ is not necessarily a length-metric space;
 the induced length distance between points $x$ and $y$ in the subspace $A$ will be denoted as $\dist{x}{y}A$;
-that is, $\dist{x}{y}A$ is the greatest lower bound of the lengths of paths in $A$ from $x$ to $y$.\index{10aaa@$\lvert x-y\rvert_A$}
+that is, $\dist{x}{y}A$ is the greatest lower bound of the lengths of paths in $A$ from $x$ to~$y$.\index{10aaa@$\lvert x-y\rvert_A$}
 
 \begin{thm}{Exercise}\label{ex:intrinsic-convex}
 Let $A\subset \mathbb{R}^3$ be a closed subset.
@@ -466,9 +464,9 @@ for any $x,y\in A$
 Let us denote by $\mathbb{S}^2$ the unit sphere in the space; that is,
 \[\mathbb{S}^2=\set{(x,y,z)\in\mathbb{R}^3}{x^2+y^2+z^2=1}.\]
 A space curve $\gamma$ is called \index{spherical!curve}\emph{spherical} if it runs in the unit sphere;
-that is, $|\gamma(t)|=1$, or equivalently, $\gamma(t)\in\mathbb{S}^2$  for any $t$.
+that is, $|\gamma(t)|=1$, or equivalently, $\gamma(t)\in\mathbb{S}^2$  for any~$t$.
 
-Recall that $\measuredangle(u,v)$ denotes the angle between two vectors $u$ and $v$.
+Recall that $\measuredangle(u,v)$ denotes the angle between two vectors $u$ and~$v$.
 
 \begin{thm}{Observation}
 For any $u,v\in \mathbb{S}^2$, we have
@@ -489,8 +487,8 @@ $\beta_1=q_0\dots q_n$ inscribed in any given spherical path $\gamma_1$ connecti
 Define $q_i$ as the first point on $\gamma_1$ such that $|u-p_i|=|u-q_i|$, but set $q_n=v$.
 Clearly, $\beta_1$ is inscribed in $\gamma_1$, and, according to the triangle inequality for angles (\ref{thm:spherical-triangle-inq}), we have that 
 \[ \measuredangle(q_{i-1},q_i)\ge\measuredangle(p_{i-1},p_i).\]
-Therefore, 
-\[ |q_{i-1}-q_i|\ge|p_{i-1}-p_i|\]
+By the angle monotonicity (\ref{lem:angle-monotonicity}),
+\[|q_{i-1}-q_i|\ge|p_{i-1}-p_i|\]
 and \ref{eq:length beta=<length beta} follows.
 \qeds
 
@@ -498,8 +496,8 @@ and \ref{eq:length beta=<length beta} follows.
 Any closed spherical curve of length less than $2\cdot \pi$ lies in an open hemisphere. 
 \end{thm}
 
-This lemma is a keystone in the proof of Fenchel's theorem that will be proven in the next chapter; see \ref{thm:fenchel}.
-The lemma is not as simple as you might think --- try to prove it yourself before reading the proof.
+This lemma will play a key role in the proof of Fenchel's theorem (\ref{thm:fenchel}).
+The proof is not as simple as one may think --- try to prove it  before reading the proof.
 The following proof is due to Stephanie Alexander.
 
 \parit{Proof.}
@@ -514,7 +512,7 @@ Suppose $\ell<\pi$.
 \end{wrapfigure}
 
 Let us subdivide $\gamma$ into two arcs $\gamma_1$ and $\gamma_2$ of length $\ell$;
-denote their endpoints by $p$ and $q$. 
+denote their endpoints by $p$ and~$q$. 
 Note that 
 \begin{align*}
 \measuredangle(p,q)&\le \length \gamma_1=
@@ -526,8 +524,8 @@ Note that
 
 Denote by $z$ be the midpoint between $p$ and $q$ in $\mathbb{S}^2$;
 that is, $z$ is the midpoint of the short arc of a great circle from $p$ to $q$ in $\mathbb{S}^2$. 
-We claim that $\gamma$ lies in the open northern hemisphere with the north pole at $z$.
-If not, $\gamma$ intersects the equator in a point $r$.
+We claim that $\gamma$ lies in the open northern hemisphere with the north pole at~$z$.
+If not, $\gamma$ intersects the equator in a point~$r$.
 Without loss of generality, we may assume that $r$ lies on~$\gamma_1$. 
 
 Rotate the arc $\gamma_1$ by the angle $\pi$ around the line thru $z$ and the center of the sphere.
@@ -563,23 +561,23 @@ Show that $\gamma$ lies in a unit disc.
 Note that it is sufficient to show that the diameter of $\gamma$ is at most 2;
 that is, 
 \[|p-q|\le 2\eqlbl{eq:|pq|=<2}\]
-for any two points $p$ and $q$ on $\gamma$.
+for any two points $p$ and $q$ on~$\gamma$.
 
-The length of $\gamma$ cannot be smaller than the closed inscribed polygonal line which goes from $p$ to $q$ and back to $p$.
+The length of $\gamma$ cannot be smaller than the closed inscribed polygonal line which goes from $p$ to $q$ and back to~$p$.
 Therefore, 
 \[2\cdot |p-q|\le\length \gamma\le 4;\]
 whence \ref{eq:|pq|=<2} follows.
 \qedsf
 
 \begin{thm}{Advanced exercises} \label{adex:crofton}
-Given unit vectors ${\vec u},{\vec w}\in\mathbb{S}^2$, denote by ${\vec w}_{\vec u}$ the closest point to ${\vec w}$ on the equator with the pole at ${\vec u}$;
-in other words, if ${\vec w}^\perp$ is the projection of ${\vec w}$ to the plane perpendicular to ${\vec u}$, then ${\vec w}_{\vec u}$ is the unit vector in the direction of ${\vec w}^\perp$.
-The vector ${\vec w}_{\vec u}$ is defined if ${\vec w}\ne\pm {\vec u}$.
+Given unit vectors ${\vec u},{\vec w}\in\mathbb{S}^2$, denote by ${\vec w}^*_{\vec u}$ the closest point to ${\vec w}$ on the equator with the pole at ${\vec u}$;
+in other words, if ${\vec w}^\perp_{\vec u}$ is the projection of ${\vec w}$ to the plane perpendicular to ${\vec u}$, then ${\vec w}^*_{\vec u}$ is the unit vector in the direction of ${\vec w}^\perp$.
+The vector ${\vec w}^*_{\vec u}$ is defined if ${\vec w}\ne\pm {\vec u}$.
 
 \begin{subthm}{adex:crofton:crofton}
 Show that for any spherical curve $\gamma$ we have
-\[\length\gamma=\overline{\length\gamma_{\vec u}},\]
-where $\overline{\length\gamma_{\vec u}}$ denotes the average length of $\gamma_{\vec u}$ with ${\vec u}$ varying in $\mathbb{S}^2$.
+\[\length\gamma=\overline{\length\gamma^*_{\vec u}},\]
+where $\overline{\length\gamma^*_{\vec u}}$ denotes the average length of $\gamma^*_{\vec u}$ with ${\vec u}$ varying in $\mathbb{S}^2$.
 (This is a spherical analog of Crofton's formula.)
 \end{subthm}
 

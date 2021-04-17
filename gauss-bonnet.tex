@@ -6,7 +6,6 @@ The following theorem was proved by Carl Friedrich Gauss \cite{gauss}
 for geodesic triangles;
 Pierre Bonnet and Jacques Binet independently 
 generalized the statement for arbitrary curves.
-A generalized formula (\ref{thm:GB-generalized}) was proved by Walther von Dyck.
 \index{Gauss--Bonnet formula}
 
 \begin{thm}{Theorem}\label{thm:gb}
@@ -14,10 +13,11 @@ Let $\Delta$ be a topological disc in a smooth oriented surface $\Sigma$ bounded
 Suppose that $\partial \Delta$ is oriented in such a way that $\Delta$ lies on its left.
 Then 
 \[\tgc{\partial\Delta}+\iint_\Delta K=2\cdot \pi,\eqlbl{eq:g-b}\]
-where $K$ denotes the Gauss curvature of $\Sigma$.
+where $K$ denotes the Gauss curvature of~$\Sigma$.
 \end{thm}
 
-We will give an informal proof of this formula in a leading special case.
+In this chapter,
+we give an informal proof of this formula in a leading special case.
 A formal computational proof will be given in Section~\ref{sec:gauss--bonnet:formal}.
 
 Before going into the proofs, we suggest solving the following exercises using the Gauss--Bonnet formula.
@@ -29,17 +29,16 @@ Before going into the proofs, we suggest solving the following exercises using t
 that is, the length of $\gamma$ cannot exceed the length of the unit circle in the plane.  
 \end{thm}
 
-
 \begin{thm}{Exercise}\label{ex:geodesic-half}
 Let $\gamma$ be a simple closed geodesic on a smooth closed surface $\Sigma$ with positive Gauss curvature.
-Assume $\Norm\:\Sigma\to\mathbb{S}^2$ is a Gauss map.
+Denote by $\Norm$ the spherical map on $\Sigma$.
 Show that the curve $\alpha=\Norm\circ\gamma$ divides the sphere into two regions of equal area.
 Conclude that $\length \alpha\ge 2\cdot\pi.$
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:closed-geodesic}
-Let $\gamma$ be a closed geodesic on a smooth closed surface $\Sigma$ with positive Gauss curvature.
-Suppose that $R$ is one of the regions that $\gamma$ cuts from $\Sigma$.
+Let $\gamma$ be a closed geodesic (possibly with self-intersections) on a smooth closed surface $\Sigma$ with positive Gauss curvature.
+Suppose that $R$ is one of the regions that $\gamma$ cuts from~$\Sigma$.
 Show that 
 \[\iint_R K\le 2\cdot\pi.\]
 
@@ -109,7 +108,7 @@ Show that any two points in $\Sigma$ are connected by a unique geodesic.
 
 \begin{subthm}{ex:unique-geod:diffeomorphism}
 Conclude that for any point $p\in \Sigma$,
-the exponential map $\exp_p$ is a diffeomorphism from the tangent plane $\T_p$ to $\Sigma$.
+the exponential map $\exp_p$ is a diffeomorphism from the tangent plane $\T_p$ to~$\Sigma$.
 In particular, $\Sigma$ is diffeomorphic to the plane.
 \end{subthm}
 
@@ -119,10 +118,10 @@ In particular, $\Sigma$ is diffeomorphic to the plane.
 
 Let $\Delta$ be a topological disc in a smooth oriented surface $\Sigma$ bounded by a simple piecewise smooth regular curve $\partial \Delta$.
 As before we suppose that $\partial \Delta$ is oriented in such a way that $\Delta$ lies on its left.
-Set
+Set \index{10gb@$\GB$}
 \[\GB(\Delta)=\tgc{\partial\Delta}+\iint_\Delta K-2\cdot \pi,
-\eqlbl{eq:GB}\]\index{10gb@$\GB$}
-where $K$ denotes the Gauss curvature of $\Sigma$.
+\eqlbl{eq:GB}\]
+where $K$ denotes the Gauss curvature of~$\Sigma$.
 Here $\GB$ stands for Gauss--Bonnet formula;
  our goal is to show that
 \[\GB(\Delta)=0.\]
@@ -184,7 +183,7 @@ This proposition will be used in the informal proof given below.
 
 \parit{Sketch of proof.}
 Suppose that a spherical triangle $\Delta$ has angles 
-$\alpha$, $\beta$, and $\gamma$.
+$\alpha$, $\beta$, and~$\gamma$.
 According to \ref{lem:area-spher-triangle},
 \[\area\Delta=\alpha+\beta+\gamma-\pi.\]
 
@@ -198,7 +197,7 @@ It follows that $\tgc{\partial\Delta}+\area \Delta=2\cdot\pi$ or, equivalently,
 Note that we can subdivide a given spherical polygon $P$ into triangles by dividing a polygon in two on each step.
 By the additivity lemma (\ref{lem:GB-sum}), we get
 \[\GB(P)=0\]
-for any spherical polygon $P$.
+for any spherical polygon~$P$.
 
 The second statement can be proved by approximation. One has to show that
 one could approximate the total geodesic curvature of  
@@ -211,7 +210,7 @@ but it goes along the same lines as \ref{ex:total-curvature=}.
 
 \begin{thm}{Exercise}\label{ex:half-sphere-total-curvature}
 Assume $\gamma$ is a simple piecewise smooth loop on $\mathbb{S}^2$ that divides its area in two equal parts.
-Denote by $p$ the base point of $\gamma$.
+Denote by $p$ the base point of~$\gamma$.
 Show that the parallel transport $\iota_\gamma\:\T_p\mathbb{S}^2\to\T_p\mathbb{S}^2$ is the identity map.
 \end{thm}
 
@@ -250,7 +249,7 @@ Therefore,
 &=2\cdot n \cdot \pi
 \end{aligned}
 \eqlbl{eq:sum=2pin}\]
-for some integer $n$.
+for some integer~$n$.
 
 It remains to show that $n=0$.
 By \ref{prop:total-signed-curvature}, this is so for a topological disc in a plane.
@@ -261,15 +260,14 @@ whence $n=0$ for the result of the deformation.
 
 \section{Simple geodesic}
 
-The following theorem provides an interesting application of the Gauss--Bonnet formula 
- proved by Stephan Cohn-Vossen \cite[Satz 9 in][]{convossen}.
+The following theorem provides an interesting application of the Gauss--Bonnet formula; it is proved by Stephan Cohn-Vossen \cite[Satz 9 in][]{convossen}.
 
 \begin{thm}{Theorem}\label{thm:cohn-vossen}
-Any open smooth regular surface with positive Gauss curvature has a simple two-sided infinite geodesic.
+Any open smooth surface with positive Gauss curvature has a simple two-sided infinite geodesic.
 \end{thm}
 
 \parit{Proof.}
-Let $\Sigma$ be an open surface with positive Gauss curvature and $\gamma$ a two-sided infinite geodesic in $\Sigma$.
+Let $\Sigma$ be an open surface with positive Gauss curvature and $\gamma$ a two-sided infinite geodesic in~$\Sigma$.
 
 If $\gamma$ has a self-intersection, then it contains a simple loop;
 that is, a restriction $\ell=\gamma|_{[a,b]}$ is a simple loop for some closed interval $[a,b]$.
@@ -296,7 +294,7 @@ It follows that after leaving $\Delta_1$, the geodesic $\gamma$ has to enter it 
 \end{figure}
 Consider the moment when $\gamma$ enters $\Delta_1$ again;
 two possible scenarios are shown in the picture.
-On the left picture, we get two nonoverlapping discs which, as we know, is an impossible scenario.
+On the left picture, we get two nonoverlapping discs which, as we know, is impossible.
 The right picture is impossible as well --- in this case, we get a concave simple loop.
 
 It follows that $\gamma$ contains only one simple loop.
@@ -314,11 +312,12 @@ Let us shoot a unit-speed geodesic at each direction from a given point $p\z=\ga
 This gives a one-parameter family of geodesics $\gamma_s$ for $s\in[0,\pi]$ connecting the geodesic $t\mapsto \gamma(t)$ with $t\mapsto \gamma(-t)$; that is, $\gamma_0(t)\z=\gamma(t)$, and $\gamma_\pi(t)=\gamma(-t)$.
 
 Observe that the subset of values $s\in [0,\pi]$ such that $\gamma_s$ is right (or left) is open.
-That is, if $\gamma_s$ is right, then so is $\gamma_t$ for all $t$ sufficiently close to $s$.
+That is, if $\gamma_s$ is right, then so is $\gamma_t$ for all $t$ sufficiently close to~$s$.
 Indeed, denote by $\phi_s$ the angle of the simple loop of $\gamma_s$.
 From above, we have $0<\phi_s<\pi$.
 Therefore, the self-intersection at the base of the loop of $\gamma_s$ is transverse.
-It follows that the self-intersection survives in $\gamma_t$ for all $t$ sufficiently close to $s$.
+Since geodesic depends smoothly on the initial data 
+(\ref{prop:geod-existence}), the self-intersection survives in $\gamma_t$ for all $t$ sufficiently close to~$s$.
 
 Since $[0,\pi]$ is connected, it cannot be subdivided into two nonempty open sets.
 It follows that for some $s$, the geodesic $\gamma_s$ is neither  clockwise nor counterclockwise;
@@ -332,7 +331,7 @@ that is, $\gamma_s$ has no self-intersections.
 \end{wrapfigure}
 
 \begin{thm}{Exercise}\label{ex:cohn-vossen}
-Let $\Sigma$ be an open smooth regular surface with positive Gauss curvature.
+Let $\Sigma$ be an open smooth surface with positive Gauss curvature.
 Suppose $\alpha\:[0,1]\z\to \Sigma$ is a smooth regular loop such that $\alpha'(0)+\alpha'(1)=0$.
 Show that there is a simple two-sided infinite geodesic $\gamma$ that is tangent to $\alpha$ at some point.
 \end{thm}
@@ -340,8 +339,10 @@ Show that there is a simple two-sided infinite geodesic $\gamma$ that is tangent
 \section{General domains}
 \index{Gauss--Bonnet formula}
 
+The following generalization of Gauss--Bonnet formula was given by Walther von Dyck \cite{dyck}.
+
 \begin{thm}{Theorem}\label{thm:GB-generalized}
-Let $\Lambda$ be a compact domain bounded by a finite collection (possibly empty) of simple piecewise smooth regular curves $\gamma_1,\dots,\gamma_n$ in a smooth surface $\Sigma$.
+Let $\Lambda$ be a compact domain bounded by a finite collection (possibly empty) of simple piecewise smooth regular curves $\gamma_1,\dots,\gamma_n$ in a smooth surface~$\Sigma$.
 Suppose that each $\gamma_i$ 
 is oriented in such a way that $\Lambda$ lies on its left.
 Then \[\tgc{\gamma_1}+\dots+\tgc{\gamma_n}+\iint_\Lambda K=2\cdot \pi\cdot \chi\eqlbl{eq:g-b++}\]

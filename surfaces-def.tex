@@ -2,21 +2,22 @@
 \label{chap:surfaces-def}
 \section{Topological surfaces}
 
-We will be mostly interested in smooth regular surfaces defined in the following section.
+We will be mostly interested in smooth surfaces defined in the following section.
 However, we will sometimes use the following general definition.
 
 A connected subset $\Sigma$ in the Euclidean space $\mathbb{R}^3$
 is called a \index{surface}\index{topological!surface}\emph{topological surface} (more precisely an {}\emph{embedded surface without boundary}) 
 if any point of $p\in \Sigma$ admits a neighborhood $W$ in $\Sigma$ 
 that can be parametrized by an open subset in the Euclidean plane; 
-that is, there is an injective continuous map $U\to W$ from an open set $U\subset \mathbb{R}^2$ such that its inverse $W\to U$ is also continuous.
+that is, a homeomorphism $U\to W$ from an open set $U\subset \mathbb{R}^2$.
 
 
 \section{Smooth surfaces}\label{sec:def-smooth-surface}
 
-Recall that a function $f$ of two variables $x$ and $y$ is called \index{smooth!function}\emph{smooth} if all its partial derivatives $\frac{\partial^{m+n}}{\partial x^m\partial y^n}f$ are defined and are continuous in the domain of definition of $f$. 
+Recall that a function $f$ of two variables $x$ and $y$ is called \index{smooth!function}\emph{smooth} if all its partial derivatives $\frac{\partial^{m+n}}{\partial x^m\partial y^n}f$ are defined and are continuous in the domain of definition of~$f$. 
 
-A connected set $\Sigma \subset \mathbb{R}^3$ is called a \index{surface}\index{smooth!surface}\emph{smooth surface} (we use it as a shortcut for the more precise term {}\emph{smooth regular embedded surface}) if it can be described locally as a graph of a smooth function in an appropriate coordinate system.
+A connected set $\Sigma \subset \mathbb{R}^3$ is called a \index{surface}\index{smooth!surface}\emph{smooth surface}%
+\footnote{We use it as a shortcut for the more precise term {}\emph{smooth regular embedded surface}.} if it can be described locally as a graph of a smooth function in an appropriate coordinate system.
 
 More precisely, for any point $p\in \Sigma$ one can choose a coordinate system $(x,y,z)$ and a neighborhood $U\ni p$ such that
 the intersection $W=U\cap \Sigma$ is a graph $z=f(x,y)$ of a smooth function $f$ defined in an open domain of the $(x,y)$-plane.
@@ -30,7 +31,7 @@ it can be described as the graph of the function $f(x,y)=0$.
 All other planes are smooth surfaces as well since one can choose a coordinate system so that it becomes the $(x,y)$-plane.
 We may also present a plane as a graph of a linear function 
 $f(x,y)=a\cdot x+b\cdot y+c$ for some constants $a$, $b$, and $c$
-(assuming the plane is not perpendicular to the $(x,y)$-plane, in which case a different coordinate system is required to write the plane as the graph of a function).
+(assuming the plane is not perpendicular to the $(x,y)$-plane, in which case a different coordinate system is required to write the plane as a graph).
 
 A more interesting example is the unit sphere 
 \[\mathbb{S}^2=\set{(x,y,z)\in\mathbb{R}^3}{x^2+y^2+z^2=1}.\]
@@ -63,12 +64,12 @@ The sphere $\mathbb{S}^2$ gives another example of a proper surface.
 
 On the other hand, the open disc 
 \[\set{(x,y,z)\in\mathbb{R}^3}{x^2+y^2<1,\  z=0}\]
-is not proper; this set is neither open nor closed.
+is not proper; this set is neither open nor closed in $\mathbb{R}^3$.
 
 A compact surface without boundary is called \index{closed!surface}\emph{closed}
-(it is closely related to the term {}\emph{closed curve}, but has nothing to do with {}\emph{closed set}).
+(this term is closely related to the {}\emph{closed curve}, but has nothing to do with {}\emph{closed set}).
 
-A proper noncompact surface without boundary is called \index{open!surface}\emph{open} (again the term {}\emph{open set} is not relevant).
+A proper noncompact surface without boundary is called \index{open!surface}\emph{open} (again, the term {}\emph{open curve} is relevant, but {}\emph{open set} is not).
 
 For example, the paraboloid $z=x^2+y^2$
 is an open surface; the 
@@ -77,7 +78,7 @@ sphere $\mathbb{S}^2$ is a closed surface.
 Note that any proper surface without boundary is either closed or open.
 
 The following claim is a three-dimensional analog of the plane separation theorem (\ref{ex:proper-curve}).
-Despite it might look obvious, its proof is not trivial at all; a standard proof uses the so-called {}\emph{Alexander's duality} which is a classical technique in algebraic topology \cite[see][]{hatcher}.
+It might look obvious, but the proof is nontrivial; it uses the so-called {}\emph{Alexander's duality} which is a classical technique in algebraic topology \cite[see][]{hatcher}.
 We omit its proof since it would take us far away from the main subject.
 
 \begin{thm}{Claim}\label{clm:proper-divides}
@@ -90,7 +91,7 @@ The complement of any proper topological surface without boundary (or, equivalen
 Let $f\:\mathbb{R}^3\to \mathbb{R}$ be a smooth function.
 Suppose that $0$ is a regular value of $f$;
 that is, $\nabla_p f\ne 0$ at any point $p$ such that $f(p)=0$.
-Then any connected component $\Sigma$ of the set of solutions of the equation $f(x,y,z)=0$ is a smooth surface.
+Then any connected component $\Sigma$ of the level set  $f(x,y,z)=0$ is a smooth surface.
 \end{thm}
 
 \parit{Proof.}
@@ -106,11 +107,11 @@ It remains to apply the definition of smooth surfaces (Section~\ref{sec:def-smoo
 
 \begin{thm}{Exercise}\label{ex:hyperboloinds}
 For which constants $\ell$ 
-does the following equation
+the level set
 \begin{align*}
 x^2+y^2-z^2&=\ell
 \end{align*}
-describe a smooth regular surface.
+is a smooth surface?
 \end{thm}
 
 \section{Local parametrizations}
@@ -156,20 +157,20 @@ Note that this is the Jacobian matrix of the map
 The inverse function theorem (\ref{thm:inverse}) implies that there is a smooth regular map
 $w\:(x,y)\mapsto (u,v)$ defined on an open set $W\ni 0$ in the $(x,y)$-plane
 such that $w(0,0)=(0,0)$ and  $s\circ w(x,y)=(x,y,f(x,y))$ for some smooth function~$f$.
-That is, the graph $z=f(x,y)$ for $(x,y)\z\in W$ is a subset in $\Sigma$.
-By the inverse function theorem, this graph is open in $\Sigma$.
+That is, the graph $z=f(x,y)$ for $(x,y)\z\in W$ is a subset in~$\Sigma$.
+By the inverse function theorem, this graph is open in~$\Sigma$.
 
 Since $p$ is arbitrary, we get that $\Sigma$ is a surface.
 \qeds
 
-If we have $s$ and $\Sigma$ as in the proposition, then we say that $s$ is a \index{smooth!parametrization}\emph{smooth parametrization} of the surface $\Sigma$. 
+If we have $s$ and $\Sigma$ as in the proposition, then we say that $s$ is a \index{smooth!parametrization}\emph{smooth parametrization} of the surface~$\Sigma$. 
 
 Not all smooth surfaces can be described by such a parametrization;
 for example, the sphere $\mathbb{S}^2$ cannot.
 However, any smooth surface $\Sigma$ admits a local parametrization; that is, any point $p\in\Sigma$ admits an open neighborhood $W\subset \Sigma$ with a smooth regular parametrization~$s$.
 In this case, any point in $W$ can be described by two parameters, usually denoted by $u$ and $v$, 
-which are called \index{local!coordinates}\emph{local coordinates} at $p$.
-The map $s$ is called a \index{chart}\emph{chart} of $\Sigma$.
+which are called \index{local!coordinates}\emph{local coordinates} at~$p$.
+The map $s$ is called a \index{chart}\emph{chart} of~$\Sigma$.
 
 If $W$ is a graph $z=h(x,y)$ of a smooth function $h$, then the map 
 \[s\:(u,v)\mapsto (u,v,h(u,v))\] is a chart.
@@ -183,14 +184,14 @@ that is, $s$ is a regular map.
 Note that from \ref{prop:graph-chart}, we obtain the following corollary.
 
 \begin{thm}{Corollary}\label{cor:reg-parmeterization}
-A connected set $\Sigma\subset \mathbb{R}^3$ is a smooth regular surface if and only if a neighborhood of any point in $\Sigma$ can be covered by a chart.
+A connected set $\Sigma\subset \mathbb{R}^3$ is a smooth surface if and only if a neighborhood of any point in $\Sigma$ can be covered by a chart.
 \end{thm}
 
 
 \begin{thm}{Exercise}\label{ex:inversion-chart}
 Consider the following map 
 \[s(u,v)=(\tfrac{2\cdot u}{1+u^2+v^2},\tfrac{2\cdot v}{1+u^2+v^2},\tfrac{2}{1+u^2+v^2}).\]
-Show that $s$ is a chart of the unit sphere centered at $(0,0,1)$; describe the image of $s$.
+Show that $s$ is a chart of the unit sphere centered at $(0,0,1)$; describe the image of~$s$.
 \end{thm}
 
 \begin{wrapfigure}{o}{31 mm}
@@ -221,7 +222,7 @@ The curve $\gamma$ is called the \index{generatrix}\emph{generatrix} of the surf
 
 \begin{thm}{Exercise}\label{ex:revolution}
 Assume $\gamma$ is a closed simple smooth regular plane curve that does not intersect the $x$-axis.
-Show that the surface of revolution around the $x$-axis with generatrix $\gamma$ is a smooth regular surface.
+Show that the surface of revolution around the $x$-axis with generatrix $\gamma$ is a smooth surface.
 \end{thm}
 
 
@@ -232,18 +233,18 @@ A surface can be described by an embedding from a known surface to the space.
 
 For example, consider the ellipsoid
 \[\Sigma_{a,b,c}=\set{(x,y,z)\in\mathbb{R}^3}{\tfrac{x^2}{a^2}+\tfrac{y^2}{b^2}+\tfrac{z^2}{c^2}=1}\]
-for some positive numbers $a$, $b$, and $c$.
-Note that by \ref{prop:implicit-surface}, $\Sigma_{a,b,c}$ is a smooth regular surface.
+for some positive numbers $a$, $b$, and~$c$.
+By \ref{prop:implicit-surface}, $\Sigma_{a,b,c}$ is a smooth surface.
 Indeed, set $f(x,y,z)=\tfrac{x^2}{a^2}+\tfrac{y^2}{b^2}+\tfrac{z^2}{c^2}$,
 then
 \[\nabla f(x,y,z)=(\tfrac{2}{a^2}\cdot x,\tfrac{2}{b^2}\cdot y,\tfrac{2}{c^2}\cdot z).\]
-Therefore, $\nabla f\ne0$ if $f=1$; that is, $1$ is a regular value of $f$.
+Therefore, $\nabla f\ne0$ if $f=1$; that is, $1$ is a regular value of~$f$.
 
 Note that $\Sigma_{a,b,c}$ can be defined as the image of the map $s\:\mathbb{S}^2\to\mathbb{R}^3$, defined as the restriction of the following map to the unit sphere $\mathbb{S}^2$:
 \[(x,y,z)\z\mapsto (a\cdot x, b\cdot y,c\cdot z).\]
 
 For a surface $\Sigma$, a map $s\: \Sigma \to \mathbb{R}^3$ is called a 
-\emph{smooth parametrized surface} if $s$ is injective, and, for any chart $f\:U\to \Sigma$,
+\emph{smooth parametrized surface} if $s$ is an embedding, and, for any chart $f\:U\to \Sigma$,
 the composition $s\circ f$ is smooth and regular;
 that is, all partial derivatives $\frac{\partial^{m+n}}{\partial u^m\partial v^n}(s\circ f)$ are defined and continuous in the domain of definition, and the two vectors 
 $\frac{\partial}{\partial u}(s\circ f)$ and $\frac{\partial}{\partial v}(s\circ f)$ are linearly independent.

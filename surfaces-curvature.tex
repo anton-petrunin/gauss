@@ -4,7 +4,7 @@
 \section{Tangent-normal coordinates} \label{sec:lmn}
 \index{tangent-normal coordinates}
 
-Fix a point $p$ in a smooth oriented surface $\Sigma$.
+Fix a point $p$ in a smooth oriented surface~$\Sigma$.
 Consider a coordinate system $(x,y,z)$ with origin at $p$ such that the $(x,y)$-plane coincides with $\T_p$, and the $z$-axis points in the direction of the normal vector $\Norm(p)$.
 By \ref{ex:vertical-tangent}, we can present $\Sigma$ locally at $p$ as a graph $z=f(x,y)$ of a smooth function. 
 Note that 
@@ -15,7 +15,7 @@ f_x(0,0)&=0,
 &
 f_y(0,0)&=0.
 \end{align*}
-The first equality holds since $p=(0,0,0)$ lies on the graph, and the other two equalities mean that the tangent plane at $p$ is horizontal.
+The first equality holds since $p=(0,0,0)$ lies on the graph, and the other two mean that the tangent plane at $p$ is horizontal.
 
 
 \begin{wrapfigure}[7]{o}{42 mm}
@@ -39,7 +39,7 @@ for $f$ at $(0,0)$ up to the second-order term can be then written as
 Note that values $\ell$, $m$, and $n$ are completely determined by this equation.\index{10lmn@$\ell$, $m$, $n$}
 The so-called \index{osculating!paraboloid}\emph{osculating paraboloid}
 \[z=\tfrac12\cdot(\ell\cdot x^2+2\cdot m\cdot x\cdot y+n\cdot y^2)\]
-has \index{order of contact}\emph{second-order contact} with $\Sigma$ at $p$.
+has \index{order of contact}\emph{second-order contact} with $\Sigma$ at~$p$.
 
 Note that 
 \[\ell\cdot x^2+2\cdot m\cdot x\cdot y+n\cdot y^2=\langle M_p\cdot (\begin{smallmatrix}
@@ -67,7 +67,7 @@ Rotating the $(x,y)$-plane results in rewriting
 the matrix $M_p$ in the new basis.
 
 Since the Hessian matrix $M_p$ is symmetric, by the spectral theorem (\ref{thm:spectral}) it is diagonalizable by orthogonal matrices.
-That is, by rotating the $(x,y)$-plane we can assume that $m=0$ in \ref{eq:hessian}; see \ref{thm:spectral}.
+That is, by rotating the $(x,y)$-plane we can assume that $m=0$ in \ref{eq:hessian}.
 In this case,
 \[M_p=\begin{pmatrix}
  k_1
@@ -79,7 +79,7 @@ In this case,
 \]
 the diagonal components $k_1$ and $k_2$ of $M_p$ are called the \index{principal curvatures and directions}\emph{principal curvatures} of $\Sigma$ at $p$;\index{10k@$k_1$, $k_2$}
 they might also be denoted as $k_1(p)$ and $k_2(p)$, or $k_1(p)_\Sigma$ and $k_2(p)_\Sigma$;
-if we need to emphasize that we compute them at the point $p$ for the surface $\Sigma$.
+if we need to emphasize that we compute them at the point $p$ for the surface~$\Sigma$.
 We will always assume that $k_1\le k_2$.
 
 
@@ -93,22 +93,23 @@ if $k_1(p)\z= k_2(p)$, then all tangent directions at $p$ are principal.
 
 Note that if we reverse the orientation of $\Sigma$, then the principal curvatures switch their signs and indexes.
 
-A smooth regular curve on a surface $\Sigma$ that always runs in the principal directions is called a \index{line of curvature}\emph{line of curvature} of $\Sigma$. 
+A smooth regular curve on a surface $\Sigma$ that always runs in the principal directions is called a \index{line of curvature}\emph{line of curvature} of~$\Sigma$. 
 
 \begin{thm}{Exercise}\label{ex:line-of-curvature}
 Assume that a smooth surface $\Sigma$ is mirror-symmetric with respect to a plane $\Pi$.
 Suppose that $\Sigma$ and $\Pi$ intersect along a smooth regular curve~$\gamma$.
-Show that $\gamma$ is a line of curvature of $\Sigma$.
+Show that $\gamma$ is a line of curvature of~$\Sigma$.
 \end{thm}
 
 \section{More curvatures}\label{sec:More curvatures}
 
-Let $p$ be a point on an oriented smooth surface $\Sigma$.
+Let $p$ be a point on an oriented smooth surface~$\Sigma$.
+Recall that $k_1(p)$ and $k_2(p)$ denote the principal curvatures at~$p$.
 
 The product 
 \[K(p)=k_1(p)\cdot k_2(p)\]
-is called the \index{10k@$K$}\index{Gauss curvature}\emph{Gauss curvature} at $p$.
-We may denote it by $K$, $K(p)$, or $K(p)_\Sigma$ if we need to specify the point $p$ and the surface $\Sigma$.
+is called the \index{10k@$K$}\index{Gauss curvature}\emph{Gauss curvature} at~$p$.
+We may denote it by $K$, $K(p)$, or $K(p)_\Sigma$ if we need to specify the point $p$ and the surface~$\Sigma$.
 
 Since the determinant is equal to the product of the eigenvalues, we get
 \[K=\ell\cdot n-m^2,\]
@@ -128,7 +129,9 @@ Show that any surface with positive Gauss curvature is orientable.
 
 The sum \index{10h@$H$}
 \[H(p)=k_1(p)+ k_2(p)\] 
-is called the \index{curvature}\index{mean curvature}\emph{mean curvature}\footnote{Some authors define the mean curvature as $\tfrac12\cdot(k_1(p)+ k_2(p))$ --- the mean value of the principal curvatures. It suits the name better, but it is not as convenient when it comes to calculations.} at $p$.
+is called the \index{curvature}\index{mean curvature}\emph{mean curvature}%
+\footnote{Some authors define it as $\tfrac12\cdot(k_1(p)+ k_2(p))$ --- the mean value of the principal curvatures. It suits the name better, but it is not as convenient when it comes to calculations.}
+at~$p$.
 We may also denote it by $H(p)_\Sigma$.
 The mean curvature can be also interpreted as the trace of the Hessian matrix $M_p\z=
 (\begin{smallmatrix}
@@ -147,11 +150,11 @@ In particular, the Gauss curvature is well-defined for nonoriented surfaces.
 
 \section{Shape operator}
 
-In the following definitions, we use the notion of directional derivative defined in \ref{def:directional-derivative}.
+In the following definitions, we use the notion of directional derivative and differential defined in \ref{sec:dirder} and \ref{sec:differential}.
 
 Let $p$ be a point on a smooth surface $\Sigma$ with orientation defined by the unit normal field $\Norm$.
 Given $\vec w\in \T_p$,
-its \index{shape operator}\emph{shape operator} is defined by
+the \index{shape operator}\emph{shape operator} of $\vec w$ is defined by
 \[\Shape_p\vec w=-D_{\vec w}\Norm.\]
 Equivalently, the shape operator can be defined by
 \[\Shape=-d\Norm,\eqlbl{eq:shape=-L}\] 
@@ -159,12 +162,12 @@ where $d\Norm$ denotes the differential of the spherical map $\Norm\:\Sigma\to\m
 
 Recall that $d_p\Norm$ is a linear map $\T_p\Sigma\to \T_{\Norm(p)}\mathbb{S}^2$.
 Note that $\T_p\Sigma$ coincides with $\T_{\Norm(p)}\mathbb{S}^2$ --- both of them are normal subspaces to $\Norm(p)$.
-Therefore, $\Shape_p$ is indeed a linear operator $\T_p\to \T_p$ (the latter also follows from \ref{thm:shape-chart}).
+Therefore, $\Shape_p$ is indeed a linear operator $\T_p\to \T_p$ (the latter also will follow from \ref{thm:shape-chart}).
 
 For a point $p\in \Sigma$, the shape operator of a tangent vector $\vec w\in \T_p$ will be denoted by $\Shape\vec w$ if it is clear from the context which base point $p$ and which surface we are working with;
 otherwise, we may use the notations 
 \[\Shape_p(\vec w)\quad\text{or}\quad \Shape_p(\vec w)_\Sigma\]
-as the situation requires.
+as the situation requires.%
 \footnote{
 The following bilinear forms on a tangent plane  
 \begin{align*}
@@ -252,8 +255,8 @@ Let us denote by $\vec i$, $\vec j$ and $\vec k$ the standard basis in the $\mat
 Recall that the components $\ell$, $m$, and $n$ of the Hessian matrix are defined in Section~\ref{sec:lmn}.
 
 \begin{thm}{Corollary}\label{cor:Shape(ij)}
-Let $z=f(x,y)$ be a local representation of a smooth surface $\Sigma$ in the tangent-normal coordinates at $p$.
-Suppose that its the Hessian matrix at $p$ is $(\begin{smallmatrix}
+Let $z=f(x,y)$ be a local representation of a smooth surface $\Sigma$ in the tangent-normal coordinates at~$p$.
+Suppose that its Hessian matrix at $p$ is $(\begin{smallmatrix}
 \ell&m\\ m&n
 \end{smallmatrix})$.
 Then 
@@ -270,7 +273,7 @@ In particular, the principal curvatures of $\Sigma$ at $p$ are the eigenvalues o
 Since the Hessian matrix is symmetric, the corollary also implies that $\Shape$ is self-adjoint which gives another way to solve \ref{ex:self-adjoint}.
 
 \parit{Proof.}
-Note that $s\:(u,v)\mapsto (u,v,f(u,v))$ is a chart of $\Sigma$ that covers $p$.
+Note that $s\:(u,v)\mapsto (u,v,f(u,v))$ is a chart of $\Sigma$ that covers~$p$.
 Further, note that 
 \begin{align*}
 s_u(0,0)&=\vec i,
@@ -330,35 +333,36 @@ Suppose that $\Sigma$ has unit principal curvatures at any point.
 \end{subthm}
 
 \begin{subthm}{ex:normal-curvature=const:b}Show that $p+\Norm(p)$ is constant; that is, the point $c=p+\Norm(p)$ does not depend on $p\in\Sigma$.
-Conclude that $\Sigma$ is a subset of the unit sphere centered at $c$.
+Conclude that $\Sigma$ is a subset of the unit sphere centered at~$c$.
 \end{subthm}
 
 \end{thm}
 
-We define the {}\emph{angle} between two oriented surfaces at a point of their intersection $p$ as the angle between their normal vectors at $p$.
+We define the {}\emph{angle} between two oriented surfaces at a point of their intersection $p$ as the angle between their normal vectors at~$p$.
 The following exercise is a result by Ferdinand Joachimsthal \cite{joachimsthal} generalized by Ossian Bonnet \cite{bonnet}.
 
 \begin{thm}{Exercise}\label{ex:shape-curvature-line}
-Assume that two smooth oriented surfaces $\Sigma_1$ and $\Sigma_2$ intersect at constant angle along a smooth regular curve $\gamma$.
+Assume that two smooth oriented surfaces $\Sigma_1$ and $\Sigma_2$ intersect at constant angle along a smooth regular curve~$\gamma$.
 Show that if $\gamma$ is a curvature line in $\Sigma_1$, then it is also a curvature line in $\Sigma_2$.
 
-Conclude that if a smooth surface $\Sigma$ intersects a plane or sphere at constant angle along a smooth regular curve $\gamma$,
+Conclude that if a smooth surface $\Sigma$ intersects a plane or sphere along a smooth regular curve $\gamma$ at a constant angle,
 then $\gamma$ is a curvature line of~$\Sigma$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:equidistant}
 Let $\Sigma$ be a closed smooth surface with orientation defined by a unit normal field $\Norm$.
-Assume $t$ is sufficiently close to zero.
 
 \begin{subthm}{ex:equidistant:smooth}
-Show that the set of points of the form $p+t\cdot \Norm(p)$ with $p\in\Sigma$ forms a smooth surface; denote it by $\Sigma_t$.
+Show that if $t$ is sufficiently close to zero, then the set 
+\[\Sigma_t=\set{p+t\cdot \Norm(p)}{p\in\Sigma}\] 
+is a smooth surface.
 \end{subthm}
 
 \begin{subthm}{ex:equidistant:area}
 Let $a(t)$ be the area of $\Sigma_t$.
 Show that 
 \[a'(0)=-\iint_\Sigma H,\]
-where $H$ denotes mean curvature of $\Sigma$.
+where $H$ denotes mean curvature of~$\Sigma$.
 \end{subthm}
 
 
@@ -378,7 +382,7 @@ where $H$ denotes mean curvature of $\Sigma$.
 \vskip-0mm
 \end{wrapfigure}
 
-Suppose $\gamma$ is a regular smooth curve in a smooth oriented surface $\Sigma$.
+Suppose $\gamma$ is a regular smooth curve in a smooth oriented surface~$\Sigma$.
 As usual, we denote by $\Norm$ the unit normal field on~$\Sigma$.
 
 Without loss of generality, we may assume that $\gamma$ is unit-speed;
@@ -387,15 +391,16 @@ Let us use the shortcut notation $\Norm(s)\z=\Norm(\gamma(s))$.
 Note that the unit vectors $\tan(s)$ and $\Norm(s)$ are orthogonal.
 Therefore there is a unique unit vector $\mu(s)$\index{10tmn@$\tan$, $\mu$, $\Norm$} such that 
 $\tan(s),\mu(s),\Norm(s)$ is an oriented orthonormal basis;
-it is called the \index{Darboux frame}\emph{Darboux frame} of $\gamma$ in $\Sigma$.
+it is called the \index{Darboux frame}\emph{Darboux frame} of $\gamma$ in~$\Sigma$.
+
 Since $\T_{\gamma (s)}\z\perp\Norm(s)$, the vector $\mu(s)$ is tangent to $\Sigma$ at $\gamma(s)$.
 In fact $\mu(s)$ is a counterclockwise rotation of $\tan(s)$ by the angle $\tfrac\pi2$ in the tangent plane $\T_{\gamma(s)}$.
 This vector can also be defined as the vector product $\mu(s)\df\Norm(s)\times \tan(s)$.
 
 Since $\gamma$ is unit-speed, we have that $\gamma''\perp \gamma'$ (see \ref{prop:a'-pertp-a''}).
 Therefore, the acceleration of $\gamma$ can be written as a linear combination of $\mu$ and $\Norm$;
-that is,
-\[\gamma''(s)=k_g(s)\cdot \mu(s)+k_n(s)\cdot\Norm(s).\]\index{10k@$k_g$, $k_n$}
+that is, \index{10k@$k_g$, $k_n$}
+\[\gamma''(s)=k_g(s)\cdot \mu(s)+k_n(s)\cdot\Norm(s).\]
 The values $k_g(s)$ and $k_n(s)$ are called \index{curvature}\index{geodesic!curvature}\emph{geodesic} and \index{normal!curvature}\emph{normal curvatures} of $\gamma$ at $s$, respectively.
 Since the frame $\tan(s),\mu(s),\Norm(s)$ is orthonormal, these curvatures can be also written as the following scalar products:
 \begin{align*}
@@ -412,7 +417,7 @@ k_n(s)&=\langle \gamma''(s),\Norm(s)\rangle=
 Since $0=\langle \tan(s),\Norm(s)\rangle$ we have 
 that 
 \begin{align*}
-0&=\langle \tan(s),\Norm(s)\rangle=
+0&=\langle \tan(s),\Norm(s)\rangle'=
 \\
 &=\langle \tan'(s),\Norm(s)\rangle+\langle \tan(s),\Norm'(s)\rangle=
 \\
@@ -422,20 +427,20 @@ Applying the definition of shape operator,
 we get the following:
 
 \begin{thm}{Proposition}\label{prop:normal-shape}
-Assume $\gamma$ is a smooth unit-speed curve in a smooth surface $\Sigma$.
+Assume $\gamma$ is a smooth unit-speed curve in a smooth surface~$\Sigma$.
 Let $p=\gamma(s_0)$ and $\vec v=\gamma'(s_0)$.
 Then 
 \[k_n(s_0)=\langle \Shape_p(\vec v),\vec v\rangle,\]
-where $k_n$ denotes the normal curvature of $\gamma$ at $s_0$, and $\Shape_p$ is the shape operator at $p$.
+where $k_n$ denotes the normal curvature of $\gamma$ at $s_0$, and $\Shape_p$ is the shape operator at~$p$.
 \end{thm}
 
-Note that according to the proposition, the normal curvature of a regular smooth curve in $\Sigma$ is completely determined by the velocity vector $\vec v$ at the point $p$.
+Note that according to the proposition, the normal curvature of a regular smooth curve in $\Sigma$ is completely determined by the velocity vector $\vec v$ at the point~$p$.
 For that reason, the normal curvature is also denoted by $k_{\vec v}$;\index{10k@$k_{\vec v}$}
 according to the proposition,
 \[k_{\vec v}=\langle \Shape_p(\vec v),\vec v\rangle\]
 for any unit vector $\vec v$ in $\T_p$.
 
-Let $p$ be a point on a smooth surface $\Sigma$.
+Let $p$ be a point on a smooth surface~$\Sigma$.
 Assume we choose tangent-normal coordinates at $p$ so that the Hessian matrix is diagonalized, then we have
 \[M_p=\begin{pmatrix}
  k_1(p)
@@ -455,7 +460,7 @@ If ${\vec w}$ is unit, then $a^2+b^2=1$ which implies the following:
 
 \begin{thm}{Observation}\label{obs:k1-k2}
 For any point $p$ on an oriented smooth surface $\Sigma$,
-the principal curvatures $k_1(p)$ and $k_2(p)$ are respectively the minimum and maximum of the normal curvatures at $p$.
+the principal curvatures $k_1(p)$ and $k_2(p)$ are respectively the minimum and maximum of the normal curvatures at~$p$.
 Moreover, if $\theta$ is the angle between a unit vector ${\vec w}\in\T_p$ and the first principal direction at $p$, then 
 \[k_{\vec w}(p)=k_1(p)\cdot(\cos\theta)^2+k_2(p)\cdot(\sin\theta)^2.\]
 
@@ -465,7 +470,7 @@ The last identity is called \index{Euler's formula}\emph{Euler's formula}.
 
 \begin{thm}{Exercise}\label{ex:mean-curvature}
 Let $\Sigma$ be a smooth surface.
-Show that the sum of the normal curvatures for any pair of orthogonal directions, at a point $p\in\Sigma$ equals $H(p)$ --- the mean curvature at $p$. 
+Show that the sum of the normal curvatures for any pair of orthogonal directions, at a point $p\in\Sigma$ equals $H(p)$ --- the mean curvature at~$p$. 
 \end{thm}
 
 
@@ -474,10 +479,10 @@ Show that the sum of the normal curvatures for any pair of orthogonal directions
 \begin{thm}{Meusnier's theorem}
 \label{thm:meusnier}
 \index{Meusnier's theorem}
-Let $\gamma$ be a regular smooth curve that runs along a smooth oriented surface $\Sigma$.
+Let $\gamma$ be a regular smooth curve that runs along a smooth oriented surface~$\Sigma$.
 Let $p=\gamma(t_0)$, ${\vec v}\z=\gamma'(t_0)$, and $\alpha\z=\measuredangle(\Norm(p),\norm(t_0))$;
 that is, $\alpha$ is the angle between the unit normal to $\Sigma$ at $p$ and the unit normal vector in the Frenet frame of $\gamma$ at~$t_0$.
-Then the following identity holds true 
+Then the following identity holds true: 
 \[\kur(t_0)\cdot\cos\alpha=k_{n}(t_0);\]
 here $\kur(t_0)$ and $k_n(t_0)$ are the curvature and the normal curvature of $\gamma$ at $t_0$, respectively. 
 \end{thm}
@@ -504,10 +509,10 @@ Show that the osculating circles at $p$ of smooth regular curves in $\Sigma$ tha
 
 \begin{thm}{Exercise}\label{ex:principal-revolution}
 Let $\gamma(s)=(x(s),y(s))$ be a smooth unit-speed simple plane curve in the upper half-plane,
-and $\Sigma$ be the surface of revolution around the $x$-axis with generatrix $\gamma$.
+and $\Sigma$ be the surface of revolution around the $x$-axis with generatrix~$\gamma$.
 
 \begin{subthm}{}
-Show that the parallels and meridians are lines of curvature on $\Sigma$.
+Show that the parallels and meridians are lines of curvature on~$\Sigma$.
 \end{subthm}
 
 \begin{subthm}{ex:principal-revolution:formula}
@@ -550,41 +555,38 @@ is a minimal surface.
 \section{Lagunov's example}
 \index{Lagunov's example}
 
-\begin{thm}{Exercise}\label{ex:moon-revolution}
-Assume $V$ is a body in $\mathbb{R}^3$ bounded by a smooth surface of revolution with principal curvatures at most 1 in absolute value.
-Show that $V$ contains a unit ball.
-\end{thm}
-
 The following question is a 3-dimensional analog of the moon in a puddle problem (\ref{thm:moon}).
 
 \begin{thm}{Question}\label{quest:lagunov}
 Assume a set $V\subset \mathbb{R}^3$ is bounded by a closed connected surface $\Sigma$ with 
 principal curvatures bounded in absolute value by 1.
-Is it true that $V$ contains a ball of radius 1?
+Is it true that $V$ contains a ball of radius~1?
 \end{thm}
 
-According to \ref{ex:moon-revolution}, the answer is ``yes'' for surfaces of revolution.
+\begin{thm}{Exercise}\label{ex:moon-revolution}
+Show that Question \ref{quest:lagunov} has an affirmative answer if $V$ is a body of revolution.
+\end{thm}
+
+According to the, the answer is ``yes'' for surfaces of revolution.
 Later (see \ref{ex:convex-lagunov})
 we will show that the answer is ``yes'' for convex surfaces.
 Now we are going to show by an example that the answer is ``no'' in the general case;
 this example was constructed by Vladimir Lagunov \cite{lagunov-1961}.
 
-
 \parit{Construction.}
 Let us start with a body of revolution $V_1$ whose cross-section is shown on the diagram below.
-The boundary curve of the cross-section consists of 6 long vertical line segments included into 3 closed simple smooth curves.
+The boundary curve of the cross-section consists of 6 long horizontal line segments included into 3 closed simple smooth curves.
 (To make the curves smooth, one has to use cutoffs and mollifiers from Section~\ref{sec:analysis}.)
 The boundary of $V_1$ has 3 components, each of which is a smooth sphere.
 
-\begin{wrapfigure}{o}{20 mm}
-\vskip-6mm
+\begin{figure}[h!]
 \centering
-\includegraphics{mppics/pic-910}
+\includegraphics{mppics/pic-33}
 \vskip0mm
-\end{wrapfigure}
+\end{figure}
 
 We assume that the curves have curvature at most~1.
-Moreover, except for the almost vertical parts, the curve has absolute curvature close to 1 all the time.
+Moreover, except for the almost horizontal parts, the curve has absolute curvature close to 1 all the time.
 The only thick part in $V$ is the place where all three boundary components come close together;
 the remaining part of $V$ is assumed to be very thin.
 It could be arranged that the radius $r$ of the maximal ball in $V$ is just a bit above 
@@ -593,11 +595,12 @@ $r_2=\tfrac2{\sqrt{3}}-1$.
 assuming that the three big circles are unit.)
 In particular, we may assume that $r<\tfrac16$.
 
-\begin{figure}[h!]
+\begin{wrapfigure}{o}{21 mm}
+\vskip-1mm
 \centering
-\includegraphics{mppics/pic-33}
+\includegraphics{mppics/pic-910}
 \vskip0mm
-\end{figure}
+\end{wrapfigure}
 
 Exercise \ref{ex:principal-revolution} gives formulas for the principal curvatures of the boundary of $V$;
 which imply that both principal curvatures are at most 1 in absolute value. 
@@ -637,13 +640,13 @@ it is on the right side in the picture of $V_2$.
 That is, the boundary of $V_2$ is formed by one sphere and one torus.
 
 To construct $V_3$ from $V_2$, we make a torus from the remaining sphere and connect it to the other torus by a tube.
-This way we get a sphere with two handles; that is, it has genus 2.
+This way we get a sphere with two handles.
 
 \begin{thm}{Exercise}\label{ex:lagunov-genus4}
 Modify Lagunov's construction to make the boundary surface a sphere with 4 handles.
 \end{thm}
 
-Question \ref{quest:lagunov} can be asked differently: what is the maximal radius $r$ of the ball that has to be included in any body bounded by a smooth surface with principal curvatures bounded in absolute value by 1.
+Question \ref{quest:lagunov} can be asked differently: what is the maximal radius $r$ of the ball that has to be included in any body bounded by a smooth surface with principal curvatures bounded in absolute value by~1.
 
 \begin{wrapfigure}{o}{25 mm}
 \vskip-0mm
@@ -664,7 +667,7 @@ The statement in the following exercise is due to Vladimir Lagunov \cite{lagunov
 it implies that this bound is optimal.
 
 \begin{thm}{Advanced exercise}\label{ex:thin}
-Suppose a connected body $V\subset \mathbb{R}^3$ is bounded by a finite number of closed smooth surfaces with principal curvatures bounded in absolute value by 1.
+Suppose a connected body $V\subset \mathbb{R}^3$ is bounded by a finite number of closed smooth surfaces with principal curvatures bounded in absolute value by~1.
 Assume that $V$ does not contain a ball of radius $r_2$.
 Show that its boundary has two diffeomorphic connected components. 
 \end{thm}
@@ -679,8 +682,8 @@ In particular, $r_3>r_2$.
 The statement in the following exercise is a special case of a theorem by Vladimir Lagunov and Abram Fet \cite{lagunov-fet-1963, lagunov-fet-1965}.
 
 \begin{thm}{Very advanced exercise}\label{ex:PI-sphere}
-Suppose a body $V\subset \mathbb{R}^3$ is bounded by a smooth sphere with principal curvatures bounded in absolute value by 1.
+Suppose a body $V\subset \mathbb{R}^3$ is bounded by a smooth sphere with principal curvatures bounded in absolute value by~1.
 Show that $V$ contains a ball of radius~$r_3$.
 
-Show that this bound is sharp; that is, show that for every $\epsilon >0$, there are examples of $V$ as above not containing a ball of radius $r_3+\epsilon$.
+Show that this bound is sharp; that is, for every $\epsilon >0$, there are examples of $V$ as above not containing a ball of radius $r_3+\epsilon$.
 \end{thm}

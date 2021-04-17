@@ -4,7 +4,7 @@
 \section{Definitions}\label{sec:def(skur)}
 
 Suppose $\gamma$ is a smooth unit-speed plane curve,
-so $\tan(s)=\gamma'(s)$ is its unit tangent vector for any $s$.
+so $\tan(s)=\gamma'(s)$ is its unit tangent vector for any~$s$.
 
 Let us rotate $\tan(s)$ by the angle $\tfrac\pi 2$ counterclockwise; 
 denote the obtained vector by $\norm(s)$.
@@ -13,16 +13,16 @@ defined in Section~\ref{sec:frenet-frame};
 we will keep the name \index{Frenet frame}\emph{Frenet frame} for it.
 
 Recall that $\gamma''(s)\perp \gamma'(s)$ (see \ref{prop:a'-pertp-a''}).
-Therefore, 
-\[\tan'(s)=\skur(s)\cdot \norm(s).\eqlbl{eq:tau'}\]\index{10k@$\skur$}
+Therefore, \index{10k@$\skur$}
+\[\tan'(s)=\skur(s)\cdot \norm(s).\eqlbl{eq:tau'}\]
 for some real number $\skur(s)$;
-the value $\skur(s)$ is called \index{curvature}\index{signed curvature}\emph{signed curvature} of $\gamma$ at $s$.
+the value $\skur(s)$ is called \index{curvature}\index{signed curvature}\emph{signed curvature} of $\gamma$ at~$s$.
 We may use the notation $\skur(s)_\gamma$ if we need to specify the curve~$\gamma$.
 
 Note that 
 \[\kur(s)=|\skur(s)|;\]
 that is, up to sign, the signed curvature $\skur(s)$ equals the curvature $\kur(s)$  of $\gamma$ at $s$ defined in Section~\ref{sec:curvature};
-the sign tells us in which direction $\gamma$ turns --- if $\gamma$ is turning left at time $s$, then $\skur (s)>0$.
+the sign prescribes the direction of turn --- if $\gamma$ turns left at time $s$, then $\skur (s)>0$.
 If we want to emphasize that we are working with the {}\emph{non-signed} curvature of the curve, 
 we call it \index{curvature}\index{absolute curvature}\emph{absolute curvature}.
 
@@ -102,7 +102,8 @@ Consider the function
 Note that by the fundamental theorem of calculus, we have $\theta'(s)\z=\skur(s)$ for all~$s$.
 
 Set 
-\[\tan(s)=(\cos[\theta(s)],\sin[\theta(s)])\], and let $\norm(s)$ be its counterclockwise rotation by angle $\tfrac\pi2$; so 
+\[\tan(s)=(\cos[\theta(s)],\sin[\theta(s)]),\]
+and let $\norm(s)$ be its counterclockwise rotation by angle $\tfrac\pi2$; so 
 \[\norm(s)=(-\sin[\theta(s)],\cos[\theta(s)]).\]
 Consider the curve 
 \[\gamma(s)=\int_{s_0}^s\tan(s)\cdot ds.\]
@@ -118,7 +119,7 @@ Note that
 \\
 &=\skur(s)\cdot \norm(s).
 \end{align*}
-So $\skur(s)$ is the signed curvature of $\gamma$ at $s$. 
+So $\skur(s)$ is the signed curvature of $\gamma$ at~$s$. 
 
 This proves the existence;
 it remains to prove the uniqueness.
@@ -147,7 +148,7 @@ Note that from the proof of the theorem we obtain the following corollary:
 
 \begin{thm}{Corollary}\label{cor:2D-angle}
 Let $\gamma\:\mathbb{I}\to\mathbb{R}^2$ be a smooth unit-speed curve and $s_0\z\in \mathbb{I}$.
-Denote by $\skur$ the signed curvature of $\gamma$.
+Denote by $\skur$ the signed curvature of~$\gamma$.
 Assume an oriented $(x,y)$-coordinate system is chosen in such a way that $\gamma(s_0)$ is the origin and $\gamma'(s_0)$ points in the direction of the $x$-axis.
 Then 
 \[\gamma'(s)=(\cos[\theta(s)],\sin[\theta(s)]) , \]
@@ -159,11 +160,11 @@ for all $s$, where
 \section{Total signed curvature}
 
 Let $\gamma\:\mathbb{I}\to\mathbb{R}^2$ be a smooth unit-speed plane curve.
-The \index{curvature}\index{total!signed curvature}\emph{total signed curvature} of $\gamma$, denoted by $\tgc\gamma$, is defined as the integral
+The \index{curvature}\index{total!signed curvature}\emph{total signed curvature} of $\gamma$, denoted by $\tgc\gamma$, is defined as the integral \index{10psi@$\tgc\gamma$}
 \[\tgc\gamma
 =
-\int_\mathbb{I} \skur(s)\cdot ds,\eqlbl{eq:tsc-k}\]\index{10psi@$\tgc\gamma$}
-where $\skur$ denotes the signed curvature of $\gamma$.
+\int_\mathbb{I} \skur(s)\cdot ds,\eqlbl{eq:tsc-k}\]
+where $\skur$ denotes the signed curvature of~$\gamma$.
 
 Note that if $\mathbb{I}=[a,b]$, then 
 \[\tgc\gamma=\theta(b)-\theta(a),\eqlbl{eq:tsc-theta}\]
@@ -171,9 +172,10 @@ where $\theta$ is as in \ref{cor:2D-angle}.
 
 If $\gamma$ is a piecewise smooth regular plane curve, then we define its total signed curvature as the sum of the total signed curvatures of its arcs plus the sum of the {}\emph{signed} external angles at its joints;
 they are positive where $\gamma$ turns left, negative where $\gamma$ turns right, and 0 where $\gamma$ goes straight.
-It is undefined if it turns exactly backward;
-that is, if the curve has a cusp.
-That is, if $\gamma$ is a concatenation of smooth regular arcs $\gamma_1,\dots,\gamma_n$, then 
+It is undefined if $\gamma$ turns exactly backward;
+that is, if it has a cusp.
+
+In other words, if $\gamma$ is a concatenation of smooth regular arcs $\gamma_1,\dots,\gamma_n$, then 
 \[\tgc\gamma=\tgc{\gamma_1}+\dots+\tgc{\gamma_n}+\theta_1+\dots+\theta_{n-1}\]
 where $\theta_i$ is the signed external angle at the joint between $\gamma_i$ and $\gamma_{i+1}$.
 If $\gamma$ is closed, then the concatenation is cyclic, and
@@ -213,7 +215,7 @@ A family of \index{trochoid}\emph{trochoids} $\gamma_a\:[0,2\cdot\pi]\to \mathbb
 Any closed simple smooth regular plane curve $\gamma$ has total signed curvature  $\pm2\cdot\pi$; it is $+2\cdot\pi$
 if the region bounded by $\gamma$ lies on the left from it and  $-2\cdot\pi$ otherwise.
 
-Moreover, the same statement holds for any closed piecewise simple smooth regular plane curve $\gamma$ if its total signed curvature is defined.
+Moreover, the same statement holds for any simple closed piecewise smooth regular plane curve $\gamma$ if its total signed curvature is defined.
 \end{thm}
 
 This proposition is called sometimes {}\emph{Umlaufsatz}; it is a differential-geometric analog of the theorem about the sum of the internal angles of a polygon (\ref{thm:sum=(n-2)pi}) which we use in the proof.
@@ -223,9 +225,9 @@ A more conceptual proof was given by Heinz Hopf \cite{hopf1935}, \cite[p. 42]{ho
 Without loss of generality, we may assume that $\gamma$ is oriented in such a way that the region bounded by $\gamma$ lies on the left from it.
 We can also assume that it is parametrized by arc-length.
 
-Consider a closed polygonal line $\beta=p_1\dots p_n$ inscribed in $\gamma$.
+Consider a closed polygonal line $\beta=p_1\dots p_n$ inscribed in~$\gamma$.
 We can assume that the arcs between the vertices are sufficiently small 
-so that the polygonal line is simple, and each arc $\gamma_i$ from $p_i$ to $p_{i+1}$ has small total absolute curvature, say  $\tc{\gamma_i}<\pi$ for each $i$.
+so that the polygonal line is simple, and each arc $\gamma_i$ from $p_i$ to $p_{i+1}$ has small total absolute curvature, say  $\tc{\gamma_i}<\pi$ for each~$i$.
 
 \begin{wrapfigure}[13]{o}{43 mm}
 \vskip4mm
@@ -242,12 +244,12 @@ Set
 \\
 \alpha_i&=\measuredangle(\vec v_i,\vec w_i),&\beta_i&=\measuredangle(\vec w_{i-1},\vec v_i),
 \end{align*}
-where $\alpha_i,\beta_i\in(-\pi,\pi]$ are signed angles --- $\alpha_i$ is positive if $\vec w_i$ points to the left from $\vec v_i$.
+where $\alpha_i,\beta_i\in(-\pi,\pi)$ are signed angles --- $\alpha_i$ is positive if $\vec w_i$ points to the left from $\vec v_i$.
 
 By \ref{eq:tsc-theta}, the value
 \[\tgc{\gamma_i}-\alpha_i-\beta_{i+1}\eqlbl{eq:Psi-alpha-beta}\]
 is a multiple of $2\cdot\pi$.
-Since $\tc{\gamma_i}<\pi$, by the chord lemma (\ref{lem:chord}), we also have that $|\alpha_i|\z+|\beta_i|<\pi$.
+Since $\tc{\gamma_i}<\pi$,the chord lemma (\ref{lem:chord}) implies that $|\alpha_i|\z+|\beta_i|<\pi$.
 By \ref{eq:tsc-tc}, we have that $|\tgc{\gamma_i}|\le\tc{\gamma_i}$;
 therefore the value in \ref{eq:Psi-alpha-beta} vanishes.
 In other words, for each $i$ we have
@@ -256,7 +258,7 @@ In other words, for each $i$ we have
 Note that 
 \[\delta_i=\pi-\alpha_i-\beta_i\eqlbl{eq:delta=pi-alpha-beta}\] 
 is the internal angle of $\beta$ at $p_i$;
-$\delta_i\in (0,2\cdot\pi)$ for each $i$.
+$\delta_i\in (0,2\cdot\pi)$ for each~$i$.
 Recall that the sum of the internal angles of an $n$-gon is $(n-2)\cdot \pi$ (see \ref{thm:sum=(n-2)pi}); that is,
 \[\delta_1+\dots+\delta_n=(n-2)\cdot \pi.\]
 Therefore, 
@@ -318,7 +320,7 @@ Given a real parameter $\ell$, consider
 the curve $\gamma_\ell(t)\z=\gamma(t)+\ell\cdot\norm(t)$; it is called a {}\emph{parallel curve of $\gamma$ at signed distance~$\ell$}.
 
 \begin{subthm}{ex:length':reg}
-Show that $\gamma_\ell$ is a regular curve if $\ell\cdot \skur(t)\ne 1$ for all $t$, where $\skur(t)$ denotes the signed curvature of $\gamma$.
+Show that $\gamma_\ell$ is a regular curve if $\ell\cdot \skur(t)\ne 1$ for all $t$, where $\skur(t)$ denotes the signed curvature of~$\gamma$.
 \end{subthm}
  
 \begin{subthm}{ex:length':formula}
@@ -384,7 +386,7 @@ it is the circle of radius $r=\tfrac1{|\skur|}$ centered at $(0,\tfrac1\skur)=p+
 
 \begin{thm}{Definition}
 Let $\gamma$ be a smooth unit-speed plane curve;
-denote by $\skur(s)$ the signed curvature of $\gamma$ at $s$.
+denote by $\skur(s)$ the signed curvature of $\gamma$ at~$s$.
 
 The unit-speed curve $\sigma$ of constant signed curvature $\skur(s)$ that starts at $\gamma(s)$ in the direction $\gamma'(s)$ is called the \index{osculating!circline}\emph{osculating circline} of $\gamma$ at~$s$.
 
@@ -398,8 +400,8 @@ The following exercise is recommended to the reader familiar with the notion of 
 
 \begin{thm}{Advanced exercise}\label{ex:inverse}
 Suppose $\gamma$ is a smooth regular plane curve that does not pass thru the origin.
-Let $\hat \gamma$ be the inversion of $\gamma$ with respect to the unit circle centered at the origin.
-Show that the osculating circline of $\hat\gamma$ at $s$ is the inversion of the osculating circline of $\gamma$ at $s$.
+Let $\hat \gamma$ be the inversion of $\gamma$ with respect to a circle centered at the origin.
+Show that the osculating circline of $\hat\gamma$ at $s$ is the inversion of the osculating circline of $\gamma$ at~$s$.
 \end{thm}
 
 \section{Spiral lemma}
@@ -408,6 +410,8 @@ Show that the osculating circline of $\hat\gamma$ at $s$ is the inversion of the
 
 The following lemma was proved by Peter Tait \cite{tait}
 and later rediscovered by Adolf Kneser \cite{kneser}.
+
+{
 
 \begin{wrapfigure}{r}{31 mm}
 \vskip-4mm
@@ -424,12 +428,16 @@ It turns out that the osculating circles of the curve $\gamma$ give a peculiar f
 Also, note that the curve $\gamma$ is tangent to a circle of the foliation at each of its points.
 However, it does not run along any of those circles.
 
+}
+
 \parit{Proof.}
 Let $\tan(s),\norm(s)$ be the Frenet frame,
 $\omega(s)$, $r(s)$
-the center and radius of curvature of $\gamma$.
-By \ref{prop:circline},
+the center and radius of curvature of~$\gamma$.
+By \ref{prop:circline},  we have
 \[\omega(s)=\gamma(s)+r(s)\cdot \norm(s).\]
+
+{
 
 \begin{wrapfigure}{o}{35 mm}
 \vskip-0mm
@@ -450,6 +458,8 @@ Therefore, applying Frenet formula \ref{eq:nu'}, we get that
 Since $\skur(s)$ is decreasing, $r(s)$ is increasing;
 therefore $r'\ge 0$.
 It follows that $|\omega'(s)|= r'(s)$ and $\omega'(s)$ points in the direction of $\norm(s)$.
+
+}
 
 Since $\norm'(s)=-\skur(s)\cdot\tan(s)$, the direction of $\omega'(s)$ cannot have constant direction on a nontrivial interval;
 that is, the curve $s\mapsto \omega(s)$ contains no line segments.
@@ -488,7 +498,7 @@ in the proof we showed that $(\tfrac1{\skur})'\cdot\norm$ is its velocity vector
 \begin{thm}{Exercise}\label{ex:evolute-of-ellipse}
 Show that the stretched astroid 
 \[\omega(t)=(\tfrac{a^2-b^2}{a}\cdot \cos^3 t,  \tfrac{b^2-a^2}{b}\cdot\sin^3 t)\]
-is an evolute of the ellipse defined by
+is an evolute of the ellipse
 \[\gamma(t)= (a\cdot \cos t, b\cdot\sin t).\]
 \end{thm}
 
@@ -506,7 +516,7 @@ Then $\gamma$ is simple.
 The same statement holds true without assuming positivity of curvature; the proof requires only minor modifications.
 
 \parit{Proof of \ref{thm:spiral}.}
-Note that $\gamma(s)$ lies on the osculating circle $\sigma_s$ of $\gamma$ at $s$.
+Note that $\gamma(s)$ lies on the osculating circle $\sigma_s$ of $\gamma$ at~$s$.
 If $s_1\ne s_0$, then by lemma \ref{lem:spiral}, $\sigma_{s_0}$ does not intersect $\sigma_{s_1}$.
 Therefore, $\gamma(s_1)\ne \gamma(s_0)$,
 hence the result.\qeds

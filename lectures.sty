@@ -224,7 +224,7 @@ semi-pe-ri-me-ter
 {\ifcase #1\or \ding{202}\or \ding{203}\or \ding{204}\or \ding{205}\or \ding{206}\or \ding{207}\or \ding{208}\or \ding{209}\or \ding{210}\or \ding{211}\or \ding{74}\or \ding{168} \or \ding{170}\or \ding{171}\or\ding{169}\else\@ctrerr \fi}
 
 %EQNUMBER
-\newcounter{eqtn}[section]
+\newcounter{eqtn}[chapter]
 \renewcommand{\@eqnnum}{\theeqtn}
 \renewcommand{\theeqtn}{\numform{eqtn}}
 \newcommand{\eqlbl}[1]{\refstepcounter{eqtn}\leqno\text{\numform{eqtn}\label{#1}}}

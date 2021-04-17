@@ -8,7 +8,7 @@ A property is called \index{intrinsic property}\emph{intrinsic} if it can be che
 Otherwise, if its definition essentially uses the ambient space, then it is called \index{extrinsic property}\emph{extrinsic}.
 
 For instance, the mean curvature, as well as the Gauss curvature, are defined via principal curvatures, which are extrinsic.
-Later (\ref{thm:remarkable}) it will be shown that {}\emph{remarkably} the Gauss curvature is actually intrinsic --- it can be calculated via measurements inside the surface.
+Later (\ref{thm:remarkable}) it will be shown that {}\emph{remarkably} the Gauss curvature is intrinsic --- it can be calculated via measurements inside the surface.
 The mean curvature is not intrinsic; for example, the intrinsic geometry of the $(x,y)$-plane is not distinguishable from the intrinsic geometry of the graph $z\z=(x+y)^2$.
 However, while the mean curvature of the former vanishes at all points, the mean curvature of the latter does not vanish, say at $p=(0,0,1)$.  
 
@@ -25,25 +25,24 @@ We learned this problem from Joel Fine, who attributed it to Frederic Bourgeois 
 
 \begin{thm}{Exercise}\label{ex:lasso}
 А cowboy stands at the bottom of a frictionless ice-mountain formed by a cone with a circular base with  angle  of inclination~$\theta$.
-He wants to climb the mountain;
-he throws up his lasso which slips neatly over the tip of the cone, pulls it tight and starts to climb.
+Hee throws up his lasso which slips neatly over the tip of the cone, pulls it tight and tries to climb.
 
-What is the critical angle $\theta$ at which the cowboy can no longer climb the ice-mountain?
+What is the critical angle $\theta$ at which the cowboy can not climb the ice-mountain?
 \end{thm}
 
 \section{Definition}
 
-Let $p$ and $q$ be two points on a surface $\Sigma$.
-Recall that $\dist{p}{q}\Sigma$ denotes the induced length distance from $p$ to $q$;
-that is, the greatest lower bound of the lengths of paths in $\Sigma$ from $p$ to $q$.
+Let $p$ and $q$ be two points on a surface~$\Sigma$.
+Recall that $\dist{p}{q}\Sigma$ denotes the induced length distance from $p$ to~$q$;
+that is, the greatest lower bound of the lengths of paths in $\Sigma$ from $p$ to~$q$.
 
 Note that if $\Sigma$ is smooth, then any two points in $\Sigma$ can be joined by a piecewise smooth path.
 Since any such path is rectifiable, the value $\dist{p}{q}\Sigma$ is finite for any pair $p,q\in\Sigma$.
 
-A path $\gamma$ from $p$ to $q$ in $\Sigma$ that minimizes the length is called a \index{shortest path}\emph{shortest path} from $p$ to $q$.
+A path $\gamma$ from $p$ to $q$ in $\Sigma$ that minimizes the length is called a \index{shortest path}\emph{shortest path} from $p$ to~$q$.
 
 The image of a shortest path between $p$ and $q$ in $\Sigma$ is usually denoted by $[p,q]$ or by $[p,q]_\Sigma$.\index{10aac@$[p,q]$, $[p,q]_\Sigma$}
-In general, there might be no shortest path between two given points on a surface, and there might be many of them;
+In general, there might be no shortest path between two given points, and there might be many of them;
 this is shown in the following two examples.
 
 Usually, if we write $[p,q]_\Sigma$, we are assuming that such a shortest path exists, and we have chosen one of them.
@@ -59,12 +58,12 @@ Usually, if we write $[p,q]_\Sigma$, we are assuming that such a shortest path e
 \parbf{Nonuniqueness.} There are plenty of shortest paths between the poles of a round sphere --- each meridian is a shortest path.
 
 \parbf{Nonexistence.} Let $\Sigma$ be the $(x,y)$-plane with the origin removed.
-Consider two points $p=(1,0,0)$ and $q=(-1,0,0)$ in $\Sigma$.
+Consider two points $p=(1,0,0)$ and $q=(-1,0,0)$ in~$\Sigma$.
 
 }
 
 \begin{thm}{Claim}
-There is no shortest path from $p$ to $q$ in $\Sigma$.
+There is no shortest path from $p$ to $q$ in~$\Sigma$.
 \end{thm}
 
 \begin{wrapfigure}{r}{28 mm}
@@ -81,7 +80,7 @@ It follows that $\dist{p}{q}\Sigma\le 2$.
 Since $\dist{p}{q}\Sigma\z\ge \dist{p}{q}{\mathbb{R}^3}=2$, we get $\dist{p}{q}\Sigma=2$.
 
 
-It follows that a shortest path from $p$ to $q$, if it exists, must have length 2.
+It follows that a shortest path from $p$ to $q$, if it exists, must have length~2.
 By the triangle inequality, any curve of length 2 from $p$ to $q$ must run along the line segment $[p,q]$;
 in particular, it must pass thru the origin.
 Since the origin does not lie in $\Sigma$, there is no shortest from $p$ to $q$ in $\Sigma$ 
@@ -92,7 +91,7 @@ Any two points in a proper smooth surface can be joined by a shortest path.
 \end{thm}
 
 \parit{Proof.}
-Choose two points $p$ and $q$ in a proper smooth surface $\Sigma$.
+Choose two points $p$ and $q$ in a proper smooth surface~$\Sigma$.
 Set $\ell=\dist{p}{q}\Sigma$.
 
 By the definition of induced length-metric (Section~\ref{sec:Length metric}),
@@ -105,7 +104,7 @@ that is,
 \[|\gamma(t_0)-\gamma(t_1)|\le (\ell+1)\cdot|t_0-t_1|\]
 for any $t_0,t_1\in[0,1]$.
 
-Note that the image of $\gamma_n$ lies in the closed ball $\bar B[p,\ell+1]$ for any $n$.
+Note that the image of $\gamma_n$ lies in the closed ball $\bar B[p,\ell+1]$ for any~$n$.
 It follows that the coordinate functions of $\gamma_n$ are uniformly equicontinuous and uniformly bounded.
 By the Arzel\'{a}--Ascoli theorem (\ref{lem:equicontinuous})
  there is a convergent subsequence of $\gamma_n$, and its limit, say $\gamma_\infty\:[0,1]\to\mathbb{R}^3$, is continuous;
@@ -113,10 +112,10 @@ that is, $\gamma_\infty$ is a path.
 Evidently, $\gamma_\infty$ runs from $p$ to $q$;
 in particular
 \[\length\gamma_\infty\ge \ell.\]
-Since $\Sigma$ is a closed set, $\gamma_\infty$ lies in $\Sigma$.
+Since $\Sigma$ is a closed set, $\gamma_\infty$ lies in~$\Sigma$.
 Finally, since length is semicontinuous (\ref{thm:length-semicont}), we get that
 \[\length\gamma_\infty\le \ell.\]
-Therefore, $\length\gamma_\infty= \ell$ or, equivalently, $\gamma_\infty$ is a shortest path from $p$ to $q$.
+Therefore, $\length\gamma_\infty= \ell$ or, equivalently, $\gamma_\infty$ is a shortest path from $p$ to~$q$.
 \qeds
 
 \section{Closest-point projection}\label{sec:closest-point-projection}
@@ -133,7 +132,7 @@ for any pair of points $p,q\in \mathbb{R}^3$.
 \end{thm}
 
 The map $p\mapsto \bar p$ is called the \label{closest-point projection}\index{closest-point projection}\emph{closest-point projection};
-it maps the Euclidean space to $R$.
+it maps the Euclidean space to~$R$.
 Note that if $p\in R$, then $\bar p=p$.
 
 \parit{Proof.}
@@ -159,7 +158,7 @@ Hence, the existence follows.
 \vskip-0mm
 \end{wrapfigure}
 
-Assume there are two distinct points $\bar p, \bar p'\in R$ that minimize the distance to $p$.
+Assume there are two distinct points $\bar p, \bar p'\in R$ that minimize the distance to~$p$.
 Since $R$ is convex, their midpoint $m=\tfrac12\cdot (\bar p+\bar p')$ lies in~$R$.
 Note that $|p-\bar p|\z=|p-\bar p'|=\ell$;
 that is, the triangle $[p\bar p\bar p']$ is isosceles, and therefore the triangle $[p\bar p m]$ is right with the right angle at~$m$.
@@ -183,7 +182,7 @@ the latter is impossible.
 
 Therefore, $p=\bar p$ or $\measuredangle \hinge{\bar p}{p}{\bar q}\ge \tfrac\pi2$.
 In both cases, the orthogonal projection of $p$ to the line $\bar p\bar q$ lies behind $\bar p$, or coincides with $\bar p$.
-The same way we show that the orthogonal projection of $q$ to the line $\bar p\bar q$ lies behind $\bar q$, or coincides with $\bar q$.
+The same way we show that the orthogonal projection of $q$ to the line $\bar p\bar q$ lies behind $\bar q$, or coincides with~$\bar q$.
 It implies that the orthogonal projection of the line segment $[p,q]$ to the line $\bar p\bar q$ contains the line segment $[\bar p,\bar q]$.
 In particular,
 \[|p-q|\ge |\bar p-\bar q|.\]
@@ -192,17 +191,17 @@ In particular,
 \begin{thm}{Corollary}\label{cor:shorts+convex}
 Assume a surface $\Sigma$ bounds a closed convex region $R$, and $p,q\in \Sigma$.
 Denote by $W$ the outer closed region of $\Sigma$;
-in other words, $W$ is the union of $\Sigma$ and the complement of $R$.
+in other words, $W$ is the union of $\Sigma$ and the complement of~$R$.
 Then 
 \[\length\gamma\ge \dist{p}{q}\Sigma\]
-for any path $\gamma$ in $W$ from $p$ to $q$.
+for any path $\gamma$ in $W$ from $p$ to~$q$.
 Moreover, if  $\gamma$ does not lie in $\Sigma$, then the inequality is strict.
 \end{thm}
 
 \parit{Proof.}
 The first part of the corollary follows from the lemma and the definition of length.
 Indeed, consider the closest-point projection $\bar\gamma$ of~$\gamma$.
-Note that $\bar\gamma$ lies in $\Sigma$ and connects $p$ to $q$ therefore 
+Note that $\bar\gamma$ lies in $\Sigma$ and connects $p$ to $q$; therefore, 
 \[\length\bar\gamma\ge \dist{p}{q}\Sigma.\]
 
 To prove the first statement, it remains to show that 
@@ -211,10 +210,10 @@ To prove the first statement, it remains to show that
 Consider a polygonal line $\bar p_0\dots \bar p_n$ inscribed in $\bar\gamma$.
 Let $p_0\dots p_n$ be the corresponding polygonal line inscribed in $\gamma$;
 that is $p_i=\gamma(t_i)$ if $\bar p_i=\bar\gamma(t_i)$.
-By \ref{lem:closest-point-projection} $|p_i-p_{i-1}|\z\ge|\bar p_i-\bar p_{i-1}|$ for any $i$.
+By \ref{lem:closest-point-projection} $|p_i-p_{i-1}|\z\ge|\bar p_i-\bar p_{i-1}|$ for any~$i$.
 Therefore,
 \[\length p_0\dots p_n\ge \length \bar p_0\dots \bar p_n.\]
-Taking the least upper bound of each side of the inequality for all inscribed polygonal lines $p_0\dots p_n$ in $\gamma$, we get \ref{bar-gamma=<gamma}.\
+Passing to the least upper bound of each side of the inequality for all inscribed polygonal lines $p_0\dots p_n$ in $\gamma$, we get \ref{bar-gamma=<gamma}.\
 
 \begin{wrapfigure}{o}{37 mm}
 \vskip-0mm
@@ -226,7 +225,8 @@ Taking the least upper bound of each side of the inequality for all inscribed po
 It remains to prove the second statement.
 Suppose there is a point $w\z=\gamma(t_1)\notin\Sigma$;
 note that $w\notin R$.
-By the separation lemma (\ref{lem:separation}), there is a plane $\Pi$ that cuts $w$ from $\Sigma$.
+By the separation lemma (\ref{lem:separation}), there is a plane $\Pi$ that cuts $w$ from~$\Sigma$.
+
 The curve $\gamma$ must intersect $\Pi$ at two points: one point before $t_1$ and one after.
 Let $a=\gamma(t_0)$ and $b=\gamma(t_2)$ be these points.
 Note that the arc of $\gamma$ from $a$ to $b$ is strictly longer that $|a-b|$;
@@ -236,16 +236,17 @@ Remove from $\gamma$ the arc from $a$ to $b$, and replace it with the line segme
 denote the obtained curve by $\gamma_1$. 
 From above, we have that
 \[\length\gamma>\length \gamma_1\]
-Note that $\gamma_1$ runs in $W$.
+Note that $\gamma_1$ runs in~$W$.
 Therefore, by the first part of the corollary, we have
 \[\length \gamma_1\ge \dist{p}{q}\Sigma.\]
 Whence the second statement follows.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:length-dist-conv}
-Suppose $\Sigma$ is a proper smooth surface with positive Gauss curvature, and $\Norm$ is the unit normal field on $\Sigma$.
-Show that for any two points $p,q\in \Sigma$ we have the following inequality:
-\[\dist{p}{q}\Sigma\le 2\cdot \frac{|p-q|}{|\Norm(p)+\Norm(q)|}.\]
+Suppose $\Sigma$ is a proper smooth surface with positive Gauss curvature, and $\Norm$ is the unit normal field on~$\Sigma$.
+Show that 
+\[\dist{p}{q}\Sigma\le 2\cdot \frac{|p-q|}{|\Norm(p)+\Norm(q)|}\]
+for any two points $p,q\in \Sigma$.
 
 \end{thm}
 
@@ -259,11 +260,11 @@ Show that for any two points $p,q\in \Sigma$ we have the following inequality:
 \begin{thm}{Exercise}\label{ex:hat-convex}
 Suppose $\Sigma$ is a closed smooth surface that bounds a convex region $R$ 
 in $\mathbb{R}^3$
-and $\Pi$ is a plane that cuts a hat $\Delta$ from $\Sigma$.
-Assume that the reflection of the interior of $\Delta$ across $\Pi$ lies in the interior of $R$.
+and $\Pi$ is a plane that cuts a hat $\Delta$ from~$\Sigma$.
+Assume that the reflection of the interior of $\Delta$ across $\Pi$ lies in the interior of~$R$.
 Show that $\Delta$ is \index{convex!set}\emph{convex} with respect to the intrinsic metric  of $\Sigma$;
 that is, 
-if both ends of a shortest path in $\Sigma$ 
+if both endpoints of a shortest path in $\Sigma$ 
 lie in $\Delta$,
 then the entire path lies in $\Delta$.
 \end{thm}
@@ -272,7 +273,7 @@ then the entire path lies in $\Delta$.
 Let us define the \index{intrinsic diameter}\emph{intrinsic diameter} of a closed surface $\Sigma$ as the least upper bound of the lengths of shortest paths in the surface.
 
 \begin{thm}{Exercise}\label{ex:intrinsic-diameter}
-Assume a closed smooth surface $\Sigma$ with positive Gauss curvature lies in a unit ball $B$.
+Assume that a closed smooth surface $\Sigma$ with positive Gauss curvature lies in a unit ball~$B$.
 
 \begin{subthm}{} Show that the intrinsic diameter of $\Sigma$ cannot exceed $\pi$.
 \end{subthm}

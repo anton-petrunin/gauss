@@ -5,7 +5,7 @@
 
 Let $\Sigma$ be a smooth surface in the Euclidean space and $\gamma\:[a,b]\z\to \Sigma$ be a smooth curve.
 A smooth vector-valued function $t\mapsto {\vec v}(t) \in \mathbb{R}^3$ is called a \index{tangent!field}\emph{tangent field} along $\gamma$ if
-the vector ${\vec v}(t)$ lies in the tangent plane $\T_{\gamma(t)}\Sigma$ for each $t$.
+the vector ${\vec v}(t)$ lies in the tangent plane $\T_{\gamma(t)}\Sigma$ for each~$t$.
 
 A tangent field ${\vec v}(t)$ on $\gamma$ is called \index{parallel!field}\emph{parallel} if ${\vec v}'(t)\perp\T_{\gamma(t)}$ for any~$t$.
 
@@ -13,12 +13,12 @@ In general, the family of tangent planes $\T_{\gamma(t)}\Sigma$ is not parallel.
 Therefore, one cannot expect to have a {}\emph{truly} parallel family ${\vec v}(t)$ with ${\vec v}'\equiv 0$.
 The condition ${\vec v}'(t)\perp\T_{\gamma(t)}$ means that the family is as parallel as possible --- it rotates together with the tangent plane, but does not rotate inside the plane.
 
-Note that by the definition of geodesic, the velocity field ${\vec v}(t)\z=\gamma'(t)$ of any geodesic $\gamma$ is parallel on $\gamma$.
+Note that by the definition of geodesic, the velocity field ${\vec v}(t)\z=\gamma'(t)$ of any geodesic $\gamma$ is parallel on~$\gamma$.
 
 \begin{thm}{Exercise}\label{ex:parallel}
-Let $\Sigma$ be a smooth regular surface in the Euclidean space, 
+Let $\Sigma$ be a smooth surface in the Euclidean space, 
 $\gamma\:[a,b]\to \Sigma$ a smooth curve.
-Suppose that ${\vec v}(t)$, $\vec w(t)$ are parallel vector fields along $\gamma$.
+Suppose that ${\vec v}(t)$, $\vec w(t)$ are parallel vector fields along~$\gamma$.
 
 \begin{subthm}{ex:parallel:a} Show that $|{\vec v}(t)|$ is constant.
 \end{subthm}
@@ -36,10 +36,10 @@ Assume $p=\gamma(a)$ and $q=\gamma(b)$.
 Given a tangent vector ${\vec v}\in\T_p$ there is a unique parallel field ${\vec v}(t)$ along $\gamma$ such that ${\vec v}(a)={\vec v}$.
 The latter follows from \ref{thm:ODE}; the uniqueness also follows from Exercise~\ref{ex:parallel}.
 
-The vector $\vec w={\vec v}(b)\in\T_q$ is called the \index{parallel!transport}\emph{parallel transport} of ${\vec v}$ along~$\gamma$ in $\Sigma$.
+The vector $\vec w={\vec v}(b)\in\T_q$ is called the \index{parallel!transport}\emph{parallel transport} of ${\vec v}$ along~$\gamma$ in~$\Sigma$.
 
 The parallel transport along $\gamma$ will be denoted by $\iota_\gamma$;
-so we can write $\vec w=\iota_\gamma({\vec v})$ or  $\vec w=\iota_\gamma({\vec v})_\Sigma$ if we need to emphasize that $\gamma$ lies in the surface $\Sigma$.
+so we can write $\vec w=\iota_\gamma({\vec v})$ or  $\vec w=\iota_\gamma({\vec v})_\Sigma$ if we need to emphasize that $\gamma$ lies in the surface~$\Sigma$.
 From  Exercise~\ref{ex:parallel}, it follows that parallel transport $\iota_\gamma\:\T_p\z\to\T_q$ is an isometry.
 In general, the parallel transport $\iota_\gamma\:\T_p\z\to\T_q$ depends on the choice of $\gamma$; that is, for another curve $\gamma_1$ connecting $p$ to $q$ in $\Sigma$, the parallel transports $\iota_{\gamma_1}$ and $\iota_{\gamma}$ might be different.
 
@@ -47,18 +47,18 @@ Suppose that $\gamma_1$ and $\gamma_2$ are two smooth curves in two smooth surfa
 Denote by $\Norm_i\:\Sigma_i\to\mathbb{S}^2$ the Gauss maps of $\Sigma_1$ and $\Sigma_2$.
 If $\Norm_1\circ\gamma_1(t)= \Norm_2\circ\gamma_2(t)$ for any $t$, then we say that the curves $\gamma_1$ and $\gamma_2$ have {}\emph{identical spherical images} in $\Sigma_1$ and $\Sigma_2$, respectively.
 
-In this case, the tangent plane $\T_{\gamma_1(t)}\Sigma_1$ is parallel to $\T_{\gamma_2(t)}\Sigma_2$ for any $t$.
+In this case, the tangent plane $\T_{\gamma_1(t)}\Sigma_1$ is parallel to $\T_{\gamma_2(t)}\Sigma_2$ for any~$t$.
 Therefore we can identify $\T_{\gamma_1(t)}\Sigma_1$ with $\T_{\gamma_2(t)}\Sigma_2$.
 In particular, if $\vec v(t)$ is a tangent vector field along $\gamma_1$,
 then it is also a tangent vector field along $\gamma_2$.
-Moreover, $\vec v'(t)\perp \T_{\gamma_1(t)}\Sigma_1$ is equivalent to $\vec v'(t)\perp \T_{\gamma_2(t)}\Sigma_2$; that is, if $\vec v(t)$ is a parallel vector field along $\gamma_1$,
-then it is also a parallel vector field along $\gamma_2$.
+Moreover, $\vec v'(t)\perp \T_{\gamma_1(t)}\Sigma_1$ is equivalent to $\vec v'(t)\perp \T_{\gamma_2(t)}\Sigma_2$; that is, if $\vec v(t)$ is parallel along $\gamma_1$,
+then it is also parallel along $\gamma_2$.
 
 The discussion above leads to the following observation that will play a key role in the sequel.
 
 \begin{thm}{Observation}\label{obs:parallel=}
 Let $\gamma_1$ and $\gamma_2$ be two smooth curves in two smooth surfaces $\Sigma_1$ and $\Sigma_2$.
-Suppose that $\gamma_1$ and $\gamma_2$ have identical spherical images in $\Sigma_1$ and $\Sigma_2$, respectively.
+Suppose that $\gamma_1$ and $\gamma_2$ have identical spherical images (as the curves in $\Sigma_1$ and $\Sigma_2$, respectively).
 Then the parallel transports $\iota_{\gamma_1}$ and $\iota_{\gamma_2}$ are identical. 
 \end{thm}
 
@@ -73,16 +73,17 @@ coincides with the parallel translation along $\gamma$ in $\Sigma_2$.
 
 In this section we describe two interpretations of parallel transport;
 they might help to build the right intuition, but will not help in writing rigorous proofs.
-The first interpretation, the {}\emph{bike wheel}, comes from physics; it was suggested by Mark Levi \cite{levi}.
-The second one is via orthogonal projections of tangent planes.
+The first is a thaut experiment with {}\emph{bike wheel} suggested by Mark Levi \cite{levi}.
+The second one uses orthogonal projections of tangent planes.
 
+Suppose that $\Sigma$ is a smooth surface, and $\gamma$ is a smooth arc.
 Think of walking along $\gamma$ and carrying a perfectly balanced horizontal bike wheel.
 Imagine that you keep its axis normal to $\Sigma$ and touch only the tips of the axis.
-By Newton's first law of motion, if the wheel is not spinning at the starting point $p$, then it will not be spinning after stopping at $q$.
+By Newton's first law of motion, if the wheel is not spinning at the starting point $p$, then it will not be spinning after stopping at~$q$.
 (Indeed, by pushing the axis one cannot produce torque to spin the wheel.)
 The map that sends the initial position of the wheel to the final position is  the parallel transport~$\iota_\gamma$.
 
-The observation above essentially states that {}\emph{moving the axis of the wheel without changing its direction does not change the direction of the wheel's spokes.}
+Observation \ref{obs:parallel=} essentially states that {}\emph{moving the axis of the wheel without changing its direction does not change the direction of the wheel's spokes.}
 
 On a more formal level, one can choose a partition $a=t_0<\dots\z<t_n=b$ of $[a,b]$
 and consider the sequence of orthogonal projections $\phi_i\:\T_{\gamma(t_{i-1})}\to\T_{\gamma(t_i)}$.
@@ -90,29 +91,30 @@ For a fine partition, the composition
 \[\phi_n\circ\dots\circ\phi_1\:\T_p\z\to\T_q\]
 gives an approximation of $\iota_\gamma$.
 
-(Note that each $\phi_i$ does not increase the magnitude of a vector and neither the composition.
-It is straightforward to see that if the partition is sufficiently fine, then the above composition is almost an isometry; in particular, it almost preserves the magnitudes of tangent vectors.)
+Note that each $\phi_i$ does not increase the magnitude of a vector and neither the composition.
+It is straightforward to see that if the partition is sufficiently fine, then the above composition is almost an isometry; in particular, it almost preserves the magnitudes of tangent vectors.
 
 \begin{thm}{Exercise}\label{ex:holonomy=not0}
-Construct a loop $\gamma$ in $\mathbb{S}^2$ with its base at $p$ such that the parallel transport $\iota_\gamma\:\T_p\to\T_p$ is not the identity map.
+Construct a loop $\gamma$ in $\mathbb{S}^2$ such that the parallel transport $\iota_\gamma$ is not the identity map.
 \end{thm}
 
 \section{Total geodesic curvature}
 
-Recall that geodesic curvature is defined in Section~\ref{sec:Darboux}.
-It measures how much a given curve $\gamma$ diverges from being a geodesic;
+Recall that geodesic curvature is denoted by $k_g$;
+it is defined in Section~\ref{sec:Darboux}.
+Geodesic curvature measures how much a given curve $\gamma$ diverges from being a geodesic in a given oriented surface;
 it is positive where $\gamma$ turns left and negative when $\gamma$ turns right.
-In particular, by the following exercise, geodesics have vanishing geodesic curvature.
+In particular, geodesics have vanishing geodesic curvature.
 
-The total geodesic curvature is defined as the integral 
+Suppose that $\Sigma$ is a smooth surface, and $\gamma\:\mathbb{I}\to \Sigma$ is a smooth unit-speed curve.
+The total geodesic curvature of $\gamma$ is defined by the integral 
 \[\tgc\gamma
 \df
-\int_{\mathbb{I}} k_g(t)\cdot dt,\]
-assuming that $\gamma$ is a smooth unit-speed curve defined on the real interval~$\mathbb{I}$.
+\int_{\mathbb{I}} k_g(t)\cdot dt.\]
 
 Note that if $\Sigma$ is a plane, and $\gamma$ lies in $\Sigma$, then the geodesic curvature of $\gamma$ coincides
 with its signed curvature. 
-Therefore its total geodesic curvature is equal to its total signed curvature.
+In particular, its total geodesic curvature is equal to its total signed curvature.
 For that reason, we use the same notation $\tgc\gamma$ as for total signed curvature; if we need to emphasize that we consider $\gamma$ as a curve in $\Sigma$, we write $\tgc\gamma_\Sigma$.
 
 If $\gamma$ is a piecewise smooth regular curve in $\Sigma$, then
@@ -126,20 +128,20 @@ If $\gamma$ is closed, then
 where $\theta_n$ is the signed external angle at the joint $\gamma_n$ and $\gamma_1$.
 
 If each arc $\gamma_i$ in the concatenation is a minimizing geodesic, then $\gamma$ is called a \index{broken geodesic}\emph{broken geodesic}.
-In this case, $\tgc{\gamma_i}=0$ for each $i$.
+In this case, $\tgc{\gamma_i}=0$ for each~$i$.
 Therefore the total geodesic curvature of $\gamma$ is the sum of its signed external angles.
 
 \begin{thm}{Proposition}\label{prop:pt+tgc}
-Assume $\gamma$ is a closed broken geodesic in a smooth oriented surface $\Sigma$ that starts and ends at the point $p$.
-Then the parallel transport $\iota_\gamma\:\T_p\to\T_p$ is a clockwise rotation of the plane $\T_p$  by the angle $\tgc\gamma$.
+Assume $\gamma$ is a closed broken geodesic in a smooth oriented surface $\Sigma$ that starts and ends at the point~$p$.
+Then the parallel transport $\iota_\gamma\:\T_p\to\T_p$ is a clockwise rotation of the plane $\T_p$  by the angle~$\tgc\gamma$.
 
 Moreover, the same statement holds true for smooth closed curves and piecewise smooth curves.
 \end{thm}
 
 \parit{Proof.}
 Assume $\gamma$ is a cyclic concatenation of geodesics $\gamma_1,\dots,\gamma_n$.
-Fix a tangent vector ${\vec v}$ at $p$, and extend it to a parallel vector field along $\gamma$.
-Since $\tan_i(t)=\gamma_i'(t)$ is parallel along $\gamma_i$, the angle $\phi_i$ from $\tan_i$ to ${\vec v}$ stays constant along each $\gamma_i$.
+Fix a tangent vector ${\vec v}$ at $p$, and extend it to a parallel vector field along~$\gamma$.
+Since $\tan_i(t)=\gamma_i'(t)$ is parallel along $\gamma_i$, the angle $\phi_i$ from $\tan_i$ to ${\vec v}$ stays constant along each~$\gamma_i$.
 
 \begin{wrapfigure}{o}{22 mm}
 \vskip-0mm
@@ -148,7 +150,8 @@ Since $\tan_i(t)=\gamma_i'(t)$ is parallel along $\gamma_i$, the angle $\phi_i$ 
 \vskip-0mm
 \end{wrapfigure}
 
-If $\theta_i$ denotes the external angle at the vertex in which we switch from $\gamma_{i}$ to $\gamma_{i+1}$, we have that 
+Suppose that $\theta_i$ denotes the external angle at the joint between $\gamma_{i}$ and $\gamma_{i+1}$.
+Then  
 \[\phi_{i+1}=\phi_i-\theta_i \pmod{2\cdot\pi}.\]
 Therefore, after going over all vertices we get that 
 \[\phi_{n+1}-\phi_1=-\theta_1-\dots-\theta_n=-\tgc\gamma.\]
@@ -174,9 +177,11 @@ It follows that
 \begin{align*}
 k_g&=\langle\tan',\mu\rangle=
 \\
-&=-(\sin^2\phi+\cos^2\phi)\cdot \phi'.
+&=-(\sin^2\phi+\cos^2\phi)\cdot \phi'
+\\
+&=\phi.
 \end{align*}
-Whence \ref{eq:phi'+kg} follows.
+It proves \ref{eq:phi'+kg}.
 
 By \ref{eq:phi'+kg} we get that 
 \begin{align*}

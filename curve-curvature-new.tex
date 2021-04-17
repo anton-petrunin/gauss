@@ -5,13 +5,13 @@
 
 Recall that any regular smooth curve can be reparametrized by its arc-length (\ref{prop:arc-length-smooth}).
 The obtained parametrized curve, say $\gamma$, remains to be smooth, and it has unit speed; 
-that is, $|\gamma'(s)|=1$ for all $s$.
+that is, $|\gamma'(s)|=1$ for all~$s$.
 The following proposition states that in this case
 the acceleration vector stays perpendicular to the velocity vector.
 
 \begin{thm}{Proposition}\label{prop:a'-pertp-a''}
 Assume $\gamma$ is a smooth unit-speed space curve.
-Then $\gamma'(s)\perp \gamma''(s)$ for any $s$.
+Then $\gamma'(s)\perp \gamma''(s)$ for any~$s$.
 \end{thm}
 
 The scalar product (also known as dot product) of two vectors $\vec v$ and $\vec w$ will be denoted by $\langle \vec v,\vec w\rangle$.
@@ -28,7 +28,7 @@ whence $\gamma''\perp\gamma'$.
 
 \section{Curvature}\label{sec:curvature}
 
-For a unit-speed smooth space curve $\gamma$, the magnitude $|\gamma''(s)|$ of its acceleration is called its \index{curvature}\emph{curvature} at  time $s$.
+For a unit-speed smooth space curve $\gamma$, the magnitude $|\gamma''(s)|$ of its acceleration is called its \index{curvature}\emph{curvature} at  time~$s$.
 If $\gamma$ is simple, then we can say that $|\gamma''(s)|$ is the curvature at the point $p=\gamma(s)$ without ambiguity.
 The curvature is usually denoted by $\kur(s)$ or $\kur(s)_\gamma$, and, in the case of simple curves, it might be also denoted by $\kur(p)$ or $\kur(p)_\gamma$.
 
@@ -46,7 +46,7 @@ Show that a regular simple space curve has 0 curvature at each point if and only
 
 \begin{thm}{Exercise}\label{ex:scaled-curvature}
 Let $\gamma$ be a smooth simple space curve, and let $\gamma_{\lambda}$ be a scaled copy of $\gamma$ with factor $\lambda >0$;
-that is, $\gamma_{\lambda}(t)=\lambda \cdot\gamma(t)$ for any $t$.
+that is, $\gamma_{\lambda}(t)=\lambda \cdot\gamma(t)$ for any~$t$.
 Show that 
 \[\kur(\lambda \cdot p )_{\gamma_{\lambda}}
 = \frac{\kur(p)_{\gamma}}\lambda\]
@@ -63,14 +63,14 @@ Let $\gamma$ be a regular smooth space curve.
 The curve 
 \[\tan(t)=\tfrac{\gamma'(t)}{|\gamma'(t)|};
 \eqlbl{eq:tantrix}\] 
-it is called a \index{tangent!indicatrix}\emph{tangent indicatrix} of $\gamma$.
+it is called a \index{tangent!indicatrix}\emph{tangent indicatrix} of~$\gamma$.
 Note that $|\tan(t)|=1$ for any $t$;
 that is, $\tan$ is a spherical curve.
 
 
 If $s\mapsto \gamma(s)$ is a unit-speed parametrization, then $\tan(s)=\gamma'(s)$.
-In this case, we have the following expression for curvature: 
-\[\kur(s)\z=|\tan'(s)|\z=|\gamma''(s)|.\]\index{10k@$\kur$}
+In this case, we have the following expression for curvature: \index{10k@$\kur$}
+\[\kur(s)\z=|\tan'(s)|\z=|\gamma''(s)|.\]
 
 For general parametrization $t\mapsto \gamma(t)$,
 we have instead
@@ -111,7 +111,7 @@ at the point $p=(x,f(x))$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:approximation-const-curvature}
-Show that any smooth regular curve $\gamma\:\mathbb{I}\to\mathbb{R}^3$ with curvature at most 1 can be approximated by smooth curves with constant curvature 1.
+Show that any smooth regular curve $\gamma\:\mathbb{I}\to\mathbb{R}^3$ with curvature at most 1 can be approximated by smooth curves with constant curvature~1.
 
 In other words, construct a sequence $\gamma_n\:\mathbb{I}\to\mathbb{R}^3$ of smooth regular curves  with constant curvature 1 such that $\gamma_n(t)\to \gamma(t)$ for any $t$ as $n\to\infty$.
 \end{thm}
@@ -164,7 +164,7 @@ The total curvature of any closed regular space curve is at least $2\cdot\pi$.
 \end{thm}
 
 \parit{Proof.}
-Fix a closed regular space curve $\gamma$.
+Fix a closed regular space curve~$\gamma$.
 We can assume that $\gamma$ is described by a unit-speed loop $\gamma\:[a,b]\to \mathbb{R}^3$;
 in this case, $\gamma(a)=\gamma(b)$ and $\gamma'(a)=\gamma'(b)$.
 
@@ -173,7 +173,7 @@ Recall that $|\tan(s)|=1$ for any $s$; that is, $\tan$ is a closed spherical cur
 
 Let us show that $\tan$ cannot lie in a hemisphere.
 Assume the contrary; without loss of generality, we can assume that it lies in the northern hemisphere defined by the inequality $z>0$ in $(x,y,z)$-coordinates.
-In other words, if $\gamma(t)=(x(t), y(t), z(t))$, then $z'(t)>0$ for any $t$.
+In other words, if $\gamma(t)=(x(t), y(t), z(t))$, then $z'(t)>0$ for any~$t$.
 Therefore,
 \[z(b)-z(a)=\int_a^b z'(s)\cdot ds>0.\]
 In particular, $\gamma(a)\ne \gamma(b)$, a contradiction.
@@ -200,7 +200,7 @@ Moreover, if $\gamma$ is closed, then
 \end{thm}
 
 Note that the last inequality gives an alternative proof of Fenchel's theorem.
-Indeed, without loss of generality, we can assume that the origin lies on a chord of $\gamma$.
+Indeed, without loss of generality, we can assume that the origin lies on a chord of~$\gamma$.
 In this case, the closed spherical curve $\sigma$ goes from a point to its antipode and comes back; 
 it takes length $\pi$ each way, 
 whence 
@@ -230,7 +230,7 @@ Let $\gamma\:[0,\ell]\to\mathbb{R}^3$ be a smooth unit-speed closed curve that l
 \begin{subthm}{ex:DNA:c''c>=k}
 Show that 
 \[\langle\gamma''(s),\gamma(s)\rangle\ge-\kur(s)\]
-for any $s$.
+for any~$s$.
 \end{subthm}
 
 \begin{subthm}{ex:DNA:int>=length-tc}
@@ -267,7 +267,7 @@ The same definition of concatenation can be applied if $\alpha$ and/or $\beta$ a
 $(a,b]$ and/or $[b,c)$.
 
 \begin{wrapfigure}{o}{25 mm}
-\vskip-6mm
+\vskip-3mm
 \centering
 \includegraphics{mppics/pic-54}
 \end{wrapfigure}
@@ -278,16 +278,17 @@ If this is the case, then the time intervals of both curves can be shifted so th
 If in addition $\beta(c)=\alpha(a)$, then we can do cyclic concatenation of these curves;
 this way we obtain a closed curve.
 
-If $\alpha'(b)$ and $\beta'(b)$ are defined, then the angle $\theta\z=\measuredangle(\alpha'(b),\beta'(b))$ is called the \index{external angle}\emph{external angle} of $\gamma$ at time $b$.
-If $\theta=\pi$, then we say that $\gamma$ has a \index{cusp}\emph{cusp} at  time $b$.
+If $\alpha'(b)$ and $\beta'(b)$ are defined, then the angle $\theta\z=\measuredangle(\alpha'(b),\beta'(b))$ is called the \index{external angle}\emph{external angle} of $\gamma$ at time~$b$.
+If $\theta=\pi$, then we say that $\gamma$ has a \index{cusp}\emph{cusp} at  time~$b$.
 
 A space curve $\gamma$ is called \index{piecewise smooth regular curve}\emph{piecewise smooth and regular} if it can be presented as an iterated concatenation of a finite number of smooth regular curves; if $\gamma$ is closed, then the  concatenation is assumed to be cyclic.
 
 If $\gamma$ is a concatenation of smooth regular arcs $\gamma_1,\dots,\gamma_n$, then the total curvature of $\gamma$ is defined as a sum of the total curvatures of $\gamma_i$ and the external angles;
 that is, 
 \[\tc\gamma=\tc{\gamma_1}+\dots+\tc{\gamma_n}+\theta_1+\dots+\theta_{n-1}\]
-where $\theta_i$ is the external angle at the joint between $\gamma_i$ and $\gamma_{i+1}$;
-if $\gamma$ is closed, then 
+where $\theta_i$ is the external angle at the joint between $\gamma_i$ and $\gamma_{i+1}$.
+
+If $\gamma$ is closed, then the total curvature of $\gamma$ is defined by
 \[\tc\gamma=\tc{\gamma_1}+\dots+\tc{\gamma_n}+\theta_1+\dots+\theta_{n},\]
 where $\theta_n$ is the external angle at the joint between $\gamma_n$ and $\gamma_1$.
 
@@ -315,8 +316,8 @@ Then
 \parit{Proof.}
 Suppose $\gamma$ is a cyclic concatenation of $n$ smooth regular arcs $\gamma_1,\dots,\gamma_n$.
 Denote by $\theta_1,\dots,\theta_n$ its external angles.
-We need to show that
-\[\tc{\gamma_1}+\dots+\tc{\gamma_n}+\theta_1+\dots+\theta_n\ge2\cdot\pi.\eqlbl{eq:gen-fenchel}\]\index{10phi@$\tc{\gamma}$}
+We need to show that \index{10phi@$\tc{\gamma}$}
+\[\tc{\gamma_1}+\dots+\tc{\gamma_n}+\theta_1+\dots+\theta_n\ge2\cdot\pi.\eqlbl{eq:gen-fenchel}\]
 
 Consider the tangent indicatrix $\tan_i$ for each arc $\gamma_i$;
 these are smooth spherical arcs.
@@ -365,8 +366,8 @@ hence \ref{tc>a+b} follows.
 
 \begin{thm}{Exercise}\label{ex:chord-lemma-optimal}
 Show that the estimate in the chord lemma is optimal.
-That is, given two points $p, q$ and two unit vectors $u,v$ in $\mathbb{R}^3$,
-show that there is a smooth regular curve $\gamma$ that starts at $p$ in the direction $\vec u$ and ends at $q$ in the direction $\vec v$ such that 
+That is, given two points $p, q$ and two unit vectors $\vec u,\vec v$ in $\mathbb{R}^3$,
+construct a smooth regular curve $\gamma$ that starts at $p$ in the direction $\vec u$ and ends at $q$ in the direction $\vec v$ such that 
 $\tc\gamma$ is arbitrarily close to $\measuredangle(\vec w,\vec u)+\measuredangle(\vec w,\vec v)$, where $\vec w=q-p$.
 
 \end{thm}
@@ -388,36 +389,36 @@ Use this statement to show that any closed polygonal line has curvature at least
 
 
 \begin{thm}{Proposition}\label{prop:inscribed-total-curvature}
-Assume a polygonal line $\beta=p_0\dots p_n$ is inscribed in a smooth regular curve $\gamma$.
+Assume a polygonal line $\beta=p_0\dots p_n$ is inscribed in a smooth regular curve~$\gamma$.
 Then 
 \[\tc\gamma\ge \tc{\beta}.\]
 Moreover, if $\gamma$ is closed we allow the inscribed polygonal line $\beta$ to be closed.
 
 \end{thm}
 
-\parit{Proof.}
-Since the curvature of line segments vanishes, 
-the total curvature of the polygonal line is the sum of external angles $\theta_i=\pi-
-\measuredangle\hinge {p_i}{p_{i-1}}{p_{i+1}}$.
-
-\begin{wrapfigure}{o}{40 mm}
-\vskip-0mm
+\begin{wrapfigure}[7]{o}{40 mm}
+\vskip-4mm
 \centering
 \includegraphics{mppics/pic-55}
 \vskip0mm
 \end{wrapfigure}
 
+\parit{Proof.}
 Assume $p_i=\gamma(t_i)$.
 Set 
 \begin{align*}
 \vec w_i&=p_{i+1}-p_i,& \vec v_i&=\gamma'(t_i),
 \\
-\alpha_i&=\measuredangle(\vec w_i,\vec v_i),&\beta_i&=\measuredangle(\vec w_{i-1},\vec v_i).
+\alpha_i&=\measuredangle(\vec w_i,\vec v_i),&\beta_i&=\measuredangle(\vec w_{i-1},\vec v_i),
+\\
+\theta_i&=\measuredangle(\vec w_{i-1},\vec w_i).
 \end{align*}
 In the case of a closed curve, we use indexes modulo $n$;
 so in this case, we have $p_{n+1}\z=p_1$.
 
-Note that $\theta_i=\measuredangle(\vec w_{i-1},\vec w_i)$.
+Since the curvature of line segments vanishes, 
+the total curvature of the polygonal line is the sum of external angles $\theta_i$.
+
 By triangle inequality for angles \ref{thm:spherical-triangle-inq}, we get that
 \[\theta_i\le \alpha_i+\beta_i.\]
 By the chord lemma, the total curvature of the arc of $\gamma$ from $p_i$ to $p_{i+1}$ is at least $\alpha_i+\beta_{i+1}$. 
@@ -447,14 +448,14 @@ If $\gamma$ is an arc, the argument is analogous:
 The following exercise states that the inequality in \ref{prop:inscribed-total-curvature} is optimal.
 
 \begin{thm}{Exercise}\label{ex:total-curvature=}
-Show that for any regular smooth space curve $\gamma$ we have that 
+Show that for any regular smooth space curve $\gamma$ we have 
 \[\tc\gamma=\sup\{\tc\beta\},\]
 where the least upper bound is taken over all polygonal lines~$\beta$ inscribed in $\gamma$
 (if $\gamma$ is closed we assume that so is $\beta$).
 \end{thm}
 
-This exercise can be used to define the total curvature of an arbitrary curve $\gamma$.
-Namely, it can be defined as {}\emph{the least upper bound on the total curvatures of inscribed nondegenerate polygonal lines inscribed in $\gamma$.}
+This exercise can be used to define the total curvature of an arbitrary curve~$\gamma$.
+Namely, it can be defined as {}\emph{the least upper bound on the total curvatures of inscribed nondegenerate polygonal lines inscribed in~$\gamma$.}
 
 It is possible to generalize most of the statements in this chapter to the (nonsmooth) curves of finite total curvature.
 This theory was developed by Alexandr Alexandrov and Yuri Reshetnyak \cite{aleksandrov-reshetnyak};
@@ -479,7 +480,7 @@ that is, if the total curvature of a smooth regular space curve $\gamma$ equals 
 The proof is an application of Proposition~\ref{prop:inscribed-total-curvature}.
 
 \parit{Proof.}
-Consider an inscribed quadrangle $abcd$ in $\gamma$.
+Consider an inscribed quadrangle $abcd$ in~$\gamma$.
 By the definition of total curvature, we have that
 \begin{align*}
 \tc{abcd}&=(\pi-
@@ -541,7 +542,7 @@ and the point $b$ lies in the angle $cda$.
 That is, $abcd$ is a convex plane quadrangle.
 
 It follows that any quadrangle inscribed in $\gamma$ is a convex plane quadrangle.
-Therefore, all points of $\gamma$ lie in one plane defined by three points on $\gamma$.
+Therefore, all points of $\gamma$ lie in one plane defined by three points on~$\gamma$.
 Further, since any quadrangle inscribed in $\gamma$ is convex,
 we get that $\gamma$ is a convex plane curve. 
 \qeds
@@ -554,9 +555,9 @@ we get that $\gamma$ is a convex plane curve.
 \end{wrapfigure}
 
 \begin{thm}{Exercise}\label{ex:quadrisecant}
-Suppose that a closed curve $\gamma$ crosses a line at four points $a$, $b$, $c$, and $d$.
+Suppose that a closed curve $\gamma$ crosses a line at four points $a$, $b$, $c$, and~$d$.
 Assume that these points appear on the line in the order $a$, $b$, $c$, $d$
-and they appear on the curve $\gamma$ in the order $a$, $c$, $b$, $d$.
+and they appear on the curve $\gamma$ in the order $a$, $c$, $b$,~$d$.
 Show that 
 \[\tc\gamma\ge 4\cdot\pi.\]
 
@@ -576,7 +577,7 @@ Let $\gamma_1\:[a,b]\to\mathbb{R}^2$ and $\gamma_2\:[a,b] \to\mathbb{R}^3$ be tw
 Suppose that $\kur(s)_{\gamma_1}\ge\kur(s)_{\gamma_2}$ for any $s$ 
 and the curve
 $\gamma_1$ is an arc of a convex curve; that is, it runs in the boundary of a convex plane figure.
-Then the distance between the ends of $\gamma_1$ cannot exceed the  distance between the ends of $\gamma_2$; that is,
+Then the distance between the endpoints of $\gamma_1$ cannot exceed the  distance between the endpoints of $\gamma_2$; that is,
 \[|\gamma_1(b)-\gamma_1(a)|\le |\gamma_2(b)-\gamma_2(a)|.\]
 
 \end{thm}
@@ -643,7 +644,7 @@ That is,
 \]
 if $s\ge s_0$.
 The same argument shows that \ref{<gamma',u} holds true for $s\ge s_0$.
-Therefore, the inequality \ref{<gamma',u} holds for any $s$.
+Therefore, the inequality \ref{<gamma',u} holds for any~$s$.
 
 }
 
@@ -651,7 +652,7 @@ Since
 \[1=|\gamma_1'(s)|=|\gamma_2'(s)|=|\vec u_1|=|\vec u_2|,\] 
 the inequality \ref{<gamma',u} implies that 
 \[\langle\gamma'_1(s),\vec u_1\rangle\le \langle\gamma'_2(s),\vec u_2\rangle\eqlbl{<gamma',u>}\]
-for any $s$.
+for any~$s$.
 
 Further, since $\vec u_1$ is a unit vector parallel to $\gamma_1(b)-\gamma_1(a)$, we have that
 \[|\gamma_1(b)-\gamma_1(a)|=\langle \vec u_1,\gamma_1(b)-\gamma_1(a)\rangle,\]
@@ -693,7 +694,7 @@ $\theta$ there is a smooth regular curve $\gamma$ such that $\frac{|\gamma(b)-\g
 The statement in the following exercise is generally attributed to Hermann Schwarz \cite{shur}.
 
 \begin{thm}{Exercise}\label{ex:schwartz}
-Let $p$ and $q$ be points in a unit circle dividing it in two arcs with lengths $\ell_1<\ell_2$.
+Let $p$ and $q$ be points on a unit circle dividing it in two arcs with lengths $\ell_1<\ell_2$.
 Suppose a space curve $\gamma$ connects $p$ to $q$ and has curvature at most $1$.
 Show that either
 \[\length \gamma\le \ell_1
@@ -705,7 +706,7 @@ Show that either
 The following exercise generalizes \ref{ex:length>=2pi}.
 
 \begin{thm}{Exercise}\label{ex:loop}
-Suppose $\gamma\:[a,b]\to \mathbb{R}^3$ is a smooth regular loop with curvature at most 1.
+Suppose $\gamma\:[a,b]\to \mathbb{R}^3$ is a smooth regular loop with curvature at most~1.
 Show that 
 \[\length\gamma\ge2\cdot\pi.\]
 
