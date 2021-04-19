@@ -1043,7 +1043,7 @@ then $p$ is an isolated point of the intersection $\Pi\cap\Sigma$.
 
 It follows that if $\gamma$ is a connected component of the intersection $\Pi\cap\Sigma$ that is not an isolated point,
 then $\Pi$ \index{transversality}\emph{intersects $\Sigma$ transversally} along $\gamma$;
-that is, at each point $p \in \gamma$ the tangent plane $\T_p\Sigma$ is not parallel to $\Pi$.
+that is, $\T_p\Sigma\ne\Pi$ for any point $p \in \gamma$.
 Apply the implicit function theorem to show that $\gamma$ is a smooth regular curve.
 
 Finally, observe that the curvature of $\gamma$ cannot be smaller than the normal curvature of $\Sigma$ in the same direction.
@@ -1052,7 +1052,8 @@ Therefore its signed curvature has a constant sign.
 
 
 \parbf{\ref{ex:surrounds-disc}.}
-Look for a supporting spherical dome with the unit circle as the boundary.
+Show that there is a supporting spherical dome with the unit circle as the boundary.
+Make a conclusion.
 
 \parbf{\ref{ex:small-gauss}.}
 Note that we can assume that the Gauss curvature of the surface is positive; otherwise, the statement is evident.
@@ -1070,10 +1071,10 @@ Try to support the surface $\Sigma$ from inside by a surface of revolution of th
 (Compare to \ref{ex:convex small}.)
 
 \parit{Remark.}
-The exercise can be reduced to the following deeper result: {}\emph{if the Gauss curvature of $\Sigma$ is at least $1$,
+The exercise can be deduced from the following deeper result: {}\emph{if the Gauss curvature of $\Sigma$ is at least $1$,
 then
 the intrinsic diameter of $\Sigma$ cannot exceed $\pi$}.
-The latter means that any two points in $\Sigma$ can be connected by a path that lies in $\Sigma$ and has length at most~$\pi$.
+The latter means that any two points in $\Sigma$ can be connected by a path in $\Sigma$ that has length at most~$\pi$.
 This theorem was proved by Heinz Hopf and Willi Rinow \cite{hopf-rinow} and 
 named after Sumner Myers who generalized it \cite{myers}.
 
@@ -1093,11 +1094,11 @@ We can assume that the origin lies on~$\Sigma$.
 Consider a sequence of points $x_n\in \Sigma$ such that $|x_n|\z\to \infty$ as $n\to \infty$.
 Denote by $\vec u_n$ the unit vector in the direction of $x_n$; that is $\vec u_n=\tfrac{x_n}{|x_n|}$.
 
-Since the unit sphere is compact, we can pass to a subsequence of $(x_n)$ such that $\vec u_n$ converges to a unit vector $\vec u$.
+Since the unit sphere is compact, we can pass to a subsequence of $(x_n)$ such that $\vec u_n$ converges to a unit vector, say $\vec u$.
 Show that the half-line from the origin in the direction of $\vec u$ can be taken as $\ell$.
 
 
-\parit{\ref{SHORT.ex:convex-proper-plane:b} + \ref{SHORT.ex:convex-proper-plane:c} + \ref{SHORT.ex:convex-proper-plane:d}.}
+\parit{\ref{SHORT.ex:convex-proper-plane:b} $+$ \ref{SHORT.ex:convex-proper-plane:c} $+$ \ref{SHORT.ex:convex-proper-plane:d}.}
 Since $R$ is convex, so is its projection $\Omega$.
 
 Note and use that for any $q\in \Sigma$, the directions $\vec v_n=\tfrac{x_n-q}{|x_n-q|}$ converge to $\vec u$ as well.
@@ -1116,7 +1117,7 @@ That is $\Sigma$ is not proper --- a contradiction.
 If $f(x_n,y_n)\to -\infty$, use the convexity of $f$ to show that $f(\tfrac{x_n}2 ,\tfrac{y_n}2)\z\to -\infty$.
 Note that the origin belongs to $\Omega$;
 use it to show that $(\tfrac{x_\infty}2, \tfrac{y_\infty}2)\in\Omega$.
-Arrive to a contradiction.
+Arrive at a contradiction.
 
 \parbf{\ref{ex:open+convex=plane}.}
 By \ref{ex:convex-proper-plane:d}, $\Sigma$ is parametrized by an open convex plane domain $\Omega$.
@@ -1133,11 +1134,12 @@ To do the second part, one may apply \ref{ex:star-shaped-disc:nonsmooth}.
 
 
 \parbf{\ref{ex:circular-cone}.}
-Choose a coordinate system so that the $(x,y)$-plane supports $\Sigma$ at the origin, so $\Sigma$ lies in the upper half-space.
+Choose a coordinate system so that the $(x,y)$-plane supports $\Sigma$ at the origin, so $\Sigma$ lies in the upper half-space. %???+PIC
 
 Show that there is $\epsilon>0$ such that any line starting from the origin with slope at most $\epsilon$ may intersect $\Sigma$ only in the unit ball centered at the origin;
 we may assume that $\epsilon$ is small, say $\epsilon<1$.
-Consider the cone formed by the half-lines from the origin with slope $\epsilon$ shifted down by $1$, and observe that the entire surface lies inside this cone.
+Consider the cone formed by the half-lines from the origin with slope $\epsilon$ shifted down by $1$.
+Observe that the entire surface lies inside this cone.
 
 \parbf{\ref{ex:intK}}.
 Choose distinct points $p,q\in\Sigma$.
@@ -1163,21 +1165,21 @@ Applying \ref{cor:intK}, we get that the integral is $2\cdot\pi=\tfrac12\cdot\ar
 Apply \ref{ex:principal-revolution}.
 
 \parbf{\ref{ex:ruled=>saddle}.}
-Prove and use that each point $p\in\Sigma$ has a direction with vanishing normal curvature.
+Prove and use that each point on the surface has a direction with vanishing normal curvature.
 
-\parbf{\ref{ex:saddle-convex}.} Suppose $p\in \Sigma$ is a point of strict  local maximum of~$f$.
-Arrive to a contradiction by showing that $\Sigma$ is supported by its tangent plane at~$p$.
+\parbf{\ref{ex:saddle-convex}.} Suppose $p\in \Sigma$ is a point of local maximum of~$f$.
+Show that $\Sigma$ is supported by its tangent plane at~$p$.
+Arrive at a contradiction.
 
 
 \parbf{\ref{ex:panov}.}
-Denote by $\Pi_t$ the tangent plane to $\Sigma$ at $\gamma(t)$ and by $\ell_t$ the tangent line to $\gamma$ at time~$t$.
+Denote by $\Pi_t$ the affine tangent plane to $\Sigma$ at $\gamma(t)$ and by $\ell_t$ the tangent line to $\gamma$ at time~$t$.
 
 Note that $\Pi_t$ is the graph of a linear function, say $h_t$, defined on the $(x, y)$-plane.
 Denote by $\bar\ell_t$ the projection of $\ell_t$ to the $(x, y)$-plane.
 Show that the derivative $\tfrac{d}{dt}h_t(w)$ vanishes at the point $w$ if and only if $w\in \bar\ell_t$ 
 and the derivative changes sign if $w$ goes from one side of $\bar\ell_t$ to the other.
 
-Denote by $\bar\gamma$ the projection of $\gamma$ to the $(x, y)$-plane.
 If $\bar\gamma$ is star-shaped with respect to a point $w$, then $w$ cannot cross $\bar\ell_t$.
 Therefore, the function $t\mapsto h_t(w)$ is monotonic on $\mathbb{S}^1$.
 Observe that this function cannot be constant, and arrive at a contradiction.
@@ -1185,7 +1187,7 @@ Observe that this function cannot be constant, and arrive at a contradiction.
 \parbf{\ref{ex:crosss}.}
 This problem follows easily from the so-called \index{Morse lemma}\emph{Morse lemma}.
 The following sketch is a slightly stripped version of it.
-A more conceptual proof can be built on the Moser's trick \cite{palais}.
+A more conceptual proof \cite{palais} can be built on the Moser's trick; ses the solution of \ref{ex:star-shaped-disc}.
 
 \medskip
 
@@ -1223,11 +1225,12 @@ see Section~\ref{sec:implicit-curves}.
 
 \parbf{\ref{ex:length-of-bry}.}
 Use \ref{lem:convex-saddle} and the hemisphere lemma (\ref{lem:hemisphere}).
+For the second part, consider a thin cylindrical tube bounded by two closed spherical curves.
 
 \parbf{\ref{ex:circular-cone-saddle}.}
 Assume $\Sigma$ is an open saddle surface that lies in a cone~$K$.
 Show that there is a plane $\Pi$ that cuts $\Sigma$ and cuts from $K$ a compact region.
-Conclude that $\Pi$ cuts from $\Sigma$ a compact region as well.
+Conclude that $\Pi$ cuts from $\Sigma$ a compact region as well. %???+PIC
 
 By \ref{lem:reg-section} one can move the plane $\Pi$ slightly so that it cuts from $\Sigma$ a compact surface with boundary.
 Apply \ref{lem:convex-saddle}.
@@ -1235,7 +1238,7 @@ Apply \ref{lem:convex-saddle}.
 
 \parbf{\ref{ex:disc-hat}.} 
 Consider the radial projection of $F_\epsilon$ to the sphere $\Sigma$ with center at $p=(0,0,\epsilon)$;
-that is, a point $q\in F_\epsilon$ is mapped to a point $s(q)$ on the sphere that lies on the ray $pq$.
+that is, a point $q\in F_\epsilon$ is mapped to a point $s(q)$ on the sphere that lies on the half-line $pq$.
 
 Show that $s$ is a diffeomorphism from $F_\epsilon$ to the southern hemisphere of~$\Sigma$.
 It remains to observe that the  unit disc is diffeomorphic to the hemisphere.
@@ -1243,8 +1246,8 @@ It remains to observe that the  unit disc is diffeomorphic to the hemisphere.
 \parbf{\ref{ex:saddle-linear}.} Apply \ref{prop:hat}.
 
 \parbf{\ref{ex:between-parallels}.}
-Find an example among the surfaces of revolution.
-Use \ref{ex:principal-revolution} in the proof.
+Find an example among the surfaces of revolution;
+use \ref{ex:principal-revolution}.
 
 \parbf{\ref{ex:one-side-bernshtein}.} Look at the sections of the graph by planes parallel to the $(x,y)$-plane and to the $(x,z)$-plane, then apply Meusnier’s theorem (\ref{thm:meusnier}).
 
@@ -1263,16 +1266,16 @@ On the other hand, since $\Sigma$ is a graph outside the compact set $K$, we hav
 \stepcounter{chapter}
 \setcounter{eqtn}{0}
 
-\begin{wrapfigure}[5]{r}{24 mm}
-\vskip-0mm
+\begin{wrapfigure}[4]{r}{24 mm}
+\vskip-6mm
 \centering
 \includegraphics{mppics/pic-1250}
 \vskip-0mm
 \end{wrapfigure}
 
 \parbf{\ref{ex:lasso}.}
-Cut the lateral surface of the ice-mountain by a line from the cowboy to the tip;
-unfold it on the plane (see the picture) and try to figure out what is the image of the strained lasso.
+Cut the lateral surface of the ice-mountain by a line from the cowboy to the tip.
+Unfold it on the plane (see the picture) and try to figure out what is the image of the strained lasso.
 
 \parbf{\ref{ex:length-dist-conv}.} 
 Note that by \ref{thm:convex-embedded}, $\Sigma$ bounds a strictly convex region.
@@ -1281,15 +1284,14 @@ Therefore, we can assume that $\Norm(p)\ne\Norm(q)$; otherwise, $p=q$, and the i
 Further, we can assume that $\Norm(p)+\Norm(q)\ne 0$; otherwise, the right-hand side is undefined.
 
 In the remaining case, the tangent planes $\T_p$ and $\T_q$ intersect along a line, say $\ell$.
-Set $\alpha=\tfrac12\cdot\measuredangle(\Norm(p),\Norm(q))$;
-observe that $2\cdot\cos\alpha= |\Norm(p)+\Norm(q)|$.
+Set $\alpha=\tfrac12\cdot\measuredangle(\Norm(p),\Norm(q))$.
+Show that $2\cdot\cos\alpha= |\Norm(p)+\Norm(q)|$.
 Let $x\in \ell$ be the point that minimizes the sum $|p-x|\z+|x-q|$.
 Show that $\measuredangle\hinge xpq\ge \pi-2\cdot\alpha$.
 Conclude that 
 \[|p-x|+|x-q|\le \frac{|p-q|}{\cos\alpha}.\]
-
-Finally, apply \ref{cor:shorts+convex} to show that
-\[\dist{p}{q}\Sigma\le |p-x|+|x-q|.\]
+Apply \ref{cor:shorts+convex} to show that
+$\dist{p}{q}\Sigma\le |p-x|+|x-q|$.
 
 
 \parbf{\ref{ex:hat-convex}.}
@@ -1299,17 +1301,17 @@ Without loss of generality, we may assume that only one arc of $\gamma$ lies out
 Reflection of this arc  with respect to $\Pi$ together with the remaining part of $\gamma$ forms another curve $\hat\gamma$ from $p$ to $q$;
 it runs partly along $\Sigma$ 
 and partly outside $\Sigma$,
-but does not get inside~$\Sigma$.
+but does not get inside.
 Note that
 \[\length\hat\gamma=\length\gamma.\]
 
 
 Denote by $\bar\gamma$ the closest-point projection of $\hat\gamma$ on~$\Sigma$.
-Note that the curve $\bar\gamma$ lies in $\Sigma$, 
+The curve $\bar\gamma$ lies in $\Sigma$, 
 it has the same endpoints as $\gamma$,
 and by \ref{cor:shorts+convex}
 \[\length\bar\gamma<\length\gamma.\]
-This means that $\gamma$ is not length minimizing, 
+This means that $\gamma$ is not length minimizing --- 
 a contradiction.
 
 \parbf{\ref{ex:intrinsic-diameter}.} 
@@ -1391,6 +1393,14 @@ in particular, they have the same length.
 Exchanging $\alpha_1$ in $\alpha$ to $\beta_1$ produces a shortest path, say $\hat\alpha$, that is distinct from $\alpha$.
 By \ref{prop:gamma''}, $\hat\alpha$ is a geodesic.
 
+Suppose $\alpha_1$ is a proper subarc of $\alpha$;
+that is, $\alpha_1\ne\alpha$, or equivalently, either $p$ or $q$ is not an endpoint of $\alpha$.
+Then $\alpha$ and $\hat\alpha$ share one point and velocity vector at this point.
+By \ref{prop:geod-existence} $\alpha$ coincides with $\hat\alpha$ --- a contradiction.
+
+It follows that $p$ and $q$ are the endpoints of $\alpha$.
+Analogously, $p$ and $q$ are the endpoints of $\beta$.
+
 \begin{wrapfigure}[11]{r}{38 mm}
 \vskip-5mm
 \centering
@@ -1399,14 +1409,6 @@ By \ref{prop:gamma''}, $\hat\alpha$ is a geodesic.
 \includegraphics{mppics/pic-310}
 \vskip0mm
 \end{wrapfigure}
-
-Suppose $\alpha_1$ is a proper subarc of $\alpha$;
-that is, $\alpha_1\ne\alpha$, or equivalently, either $p$ or $q$ is not an endpoint of $\alpha$.
-Then $\alpha$ and $\hat\alpha$ share one point and velocity vector at this point.
-By \ref{prop:geod-existence} $\alpha$ coincides with $\hat\alpha$ --- a contradiction.
-
-It follows that $p$ and $q$ are the endpoints of $\alpha$.
-Analogously, $p$ and $q$ are the endpoints of $\beta$.
 
 For the second part, one could consider two distinct curves of the form 
 \[ \gamma_b(t) = ( \cos t , \sin t , bt  )  , t \in \mathbb{R}  \]
@@ -1422,6 +1424,7 @@ Note that the obtained curve, say $\beta$, lies in the surface;
 it has the same length as $\alpha$, and it connects the same pair of points, say $p$ and~$q$.
 Therefore, $\beta$ is another shortest path from $p$ to $q$ in $\Sigma$ that is distinct from~$\alpha$.
 
+We may assume that both $\alpha$ and $\beta$ have arc-length parametrization.
 By \ref{prop:gamma''}, $\alpha$ and $\beta$ are geodesics.
 Since $\alpha$ and $\beta$ have a common subarc, they share one point and velocity vector at this point;
 by \ref{prop:geod-existence} $\alpha$ coincides with $\beta$ --- a contradiction.
@@ -1429,6 +1432,7 @@ by \ref{prop:geod-existence} $\alpha$ coincides with $\beta$ --- a contradiction
 \parbf{\ref{ex:milka}.} Let $W$ be the closed region outside~$\Sigma$.
 Show that the distance $\dist{p^t}{q}W$ is constant with respect to~$t$.
 This implies that the concatenation of the line segment $[p^t,\gamma(t)]$ and the arc $\gamma|_{[t,\ell]}$ is a shortest path from $p^t$ to $q$ in~$W$.
+
 Since $\Sigma$ is strictly convex, 
 \[ \dist{\gamma (t)}{q}W > \dist{\gamma(t)}{q}{\mathbb{R}^3}  \]
 for all $t < \ell$.
@@ -1452,10 +1456,7 @@ Equip $\Sigma$ with unit normal field $\Norm$ that points inside.
 Denote by $k(t)$ the normal curvature of $\Sigma$ at $\gamma(t)$ in the direction of $\gamma'(t)$.
 Since $\Sigma$ is convex, $k(t)\ge 0$ for any~$t$.
 
-Since $\gamma$ is a geodesic, we have $\gamma''(t)=k(t)\cdot\Norm(\gamma(t))$.
-
-Since $\gamma$ has unit speed, $\langle\gamma'(t),\gamma'(t)\rangle=1$ for any~$t$.
-
+Since $\gamma$ is a unit-speed geodesic, we have $\gamma''(t)=k(t)\cdot\Norm(\gamma(t))$ and $\langle\gamma'(t),\gamma'(t)\rangle=1$ for any~$t$.
 Without loss of generality, we can assume that $p$ is the origin of~$\mathbb{R}^3$.
 Since $p$ is inside $\Sigma$, we have that $\langle\gamma(t),\Norm(\gamma(t))\rangle\le 0$ for any~$t$.
 It follows that 
@@ -1472,18 +1473,22 @@ Applying the above estimates, we get
 
 
 \parbf{\ref{ex:tc-spherical-image}.}
-We can assume $\gamma$ is parametrized by arc-length. If we write $\nu (t) = \nu ( \gamma (t)) $, then  $\langle \gamma'(t) , \nu (t) \rangle \equiv 0$. Also, since $\gamma$ is a geodesic, we have that $\gamma''(t) \parallel \nu (t)$. Then
+We can assume $\gamma$ is unit-speed.
+Set $\nu (t) = \nu ( \gamma (t)) $. 
+Then  $\langle \gamma'(t) , \nu (t) \rangle \equiv 0$. Also, since $\gamma$ is a geodesic, we have that $\gamma''(t) \parallel \nu (t)$.
+Therefore,
 \[
 \begin{aligned}
- | \gamma''(t) |  &=  | \langle \gamma '' (t) , \nu (t) \rangle |   
+|\gamma''(t)|
+&=|\langle\gamma''(t),\nu(t)\rangle|=
 \\
-&=   | \langle \gamma ' (t) , \nu (t) \rangle ' - \langle \gamma '(t) , \nu ' (t) \rangle |   
+&=|\langle\gamma'(t),\nu(t)\rangle'-\langle\gamma'(t),\nu'(t)\rangle|=
 \\
-&=   | \langle \gamma '(t) , \nu ' (t) \rangle |
+&=|\langle\gamma'(t),\nu'(t)\rangle|\le
 \\
-& \leq |\gamma ' (t) | |\nu ' (t)|
+&\le|\gamma'(t)||\nu'(t)|=
 \\
-& = |\nu ' (t)|.    
+&=|\nu'(t)|.
 \end{aligned}
 \]
 
@@ -1522,7 +1527,7 @@ Show and use that $\langle\vec v(t),\vec v'(t)\rangle=0$.
 Show that $|\vec v(t)|$, $|\vec w(t)|$, and
 $\langle\vec v(t),\vec w(t)\rangle=0$,
 are constants; it can be done the same way as \ref{SHORT.ex:parallel:a}.
-Then use the formula 
+Then use that 
 $\langle\vec v(t),\vec w(t)\rangle=|\vec v(t)|\cdot|\vec w(t)|\cdot\cos\theta$.
 
 \stepcounter{chapter}
@@ -1534,7 +1539,8 @@ Conclude that $\gamma$ has identical spherical images as a curve in $\Sigma_1$ a
 Apply \ref{obs:parallel=}.
 
 \parbf{\ref{ex:holonomy=not0}.}
-Consider the right-angled spherical triangle that an octant of $\mathbb{R}^3$ cuts form the sphere.
+Nearly any loop solves the problem.
+For example, consider the right-angled spherical triangle that an octant of $\mathbb{R}^3$ cuts form the sphere.
 Argue that parallel transport around it rotates the tangent plane by the angle $\tfrac\pi 2$. 
 
 \stepcounter{chapter}
@@ -1549,7 +1555,6 @@ Observe that $\tgc\gamma=\length\gamma$, and apply the Gauss--Bonnet formula (\r
 
 \parbf{\ref{ex:geodesic-half}.}
 Apply \ref{cor:intK}, \ref{ex:intK:4pi}, and the Gauss--Bonnet formula (\ref{thm:gb}).
-
 For the last part, apply \ref{ex:bisection-of-S2}.
 
 \parbf{\ref{ex:closed-geodesic}.} For the first part apply the Gauss--Bonnet formula (\ref{thm:gb}).
@@ -1580,7 +1585,7 @@ Estimate the integrals of the Gauss curvature over the entire surface and a disc
 \parbf{\ref{ex:unique-geod}}; \ref{SHORT.ex:unique-geod:unique}.
 By \ref{prop:shortest-paths-exist} and \ref{prop:gamma''}, any two points in $\Sigma$ can be connected by a geodesic.
 Suppose points $p$ and $q$ can be connected by two distinct geodesics $\gamma_1$ and $\gamma_2$.
-By \ref{ex:two-min-geod}, $\gamma_1$ and $\gamma_2$ share only their endpoints.
+Passing to their subarcs, we may assume that $\gamma_1$ and $\gamma_2$ share only their endpoints.
 Since the surface is simply-connected, $\gamma_1$ and $\gamma_2$ together bound a disc, say $\Delta\subset\Sigma$.
 It remains to apply Gauss--Bonnet formula to $\Delta$ and make a conclusion.
  
@@ -1603,7 +1608,7 @@ By \ref{prop:exp}, any $q$ sufficiently close to $p$ does the job.
 
 \parbf{\ref{ex:inj-rad}}; \ref{SHORT.ex:inj-rad:sign}.
 Show that we can choose an orientation on $\Sigma$ so that $b_r(0,\theta)\z=1$ for any $\theta$.
-Conclude that we can assume that $b(r,\theta)>0$ for small positive values~$r$.
+Conclude that we can assume that $b(r,\theta)>0$ for all small $r>0$.
 
 Suppose $b(r_1,\theta_1)<0$ at some pair $(r_1,\theta_1)$ with $0<r_1<r_0$.
 Observe that if $\theta_2$ is sufficiency close to $\theta_1$, then the radial curves $r\mapsto b(r,\theta_1)$ and $r\mapsto b(r,\theta_2)$ defined on the interval $(0,r_1)$ intersect.
@@ -1812,12 +1817,12 @@ to show that $\cos\tilde\theta_n\to -1$ as $n\to\infty$;
 conclude that $\theta_n\to \pi$.
 
 \parbf{\ref{ex:diam-angle}.}
-Observe that $\dist{p}{x}\Sigma\le \dist{p}{q}\Sigma$ and $\dist{q}{x}\Sigma\le \dist{p}{q}\Sigma$.
+Show that $\dist{p}{x}\Sigma\le \dist{p}{q}\Sigma$ and $\dist{q}{x}\Sigma\le \dist{p}{q}\Sigma$.
 Conclude that $\modangle xpq\ge \tfrac\pi3$.
 Apply \ref{thm:comp:toponogov}.
 
 \parbf{\ref{ex:sum=<2pi}.}
-Observe that 
+Show that 
 $\measuredangle\hinge pxy+\measuredangle\hinge pyz+\measuredangle\hinge pzx\le2\cdot \pi$.
 Apply \ref{thm:comp:toponogov}.
 
@@ -1825,8 +1830,7 @@ Apply \ref{thm:comp:toponogov}.
 Choose vectors $\vec u$, and $\vec w$ 
 such that $|\vec w|=\dist{p}{x}{}$, $|\vec u|=1$, and $\measuredangle(\vec u,\vec w)=\measuredangle\hinge xpq$.
 Consider the function
-\[f\:t\mapsto t+|\vec w|-|\vec w-t\cdot \vec u|\]
-is concave.
+\[f\:t\mapsto t+|\vec w|-|\vec w-t\cdot \vec u|.\]
 
 Set $t_0=\dist{x}{y}{}$ and $t_1=\dist{x}{q}{}$.
 Observe that 
@@ -1849,7 +1853,7 @@ $R_q<(1-\tfrac1{100})\cdot R_p$.
 
 Start with any point $p_0$, and consider a sequence $p_n$ defined by $p_{n+1}\z\df q(p_n)$.
 Show that $p_n$ converges, and $R_{p_n}\to 0$ as $n\to\infty$.
-Arrive to a contradiction using  \ref{SHORT.ex:open-comparison:positive}.
+Arrive at a contradiction using  \ref{SHORT.ex:open-comparison:positive}.
 
 \parit{\ref{SHORT.ex:open-comparison:proof}.} Repeat the proof assuming that $p$ is provided by \ref{SHORT.ex:open-comparison:almost-min}.
 
@@ -1868,14 +1872,15 @@ Consider the pentagon $\Delta$ with induced length-metric.
 Note that all its angles cannot exceed $\pi$.
 Repeat the proof of \ref{thm:comp:toponogov} to show that the comparison holds in $\Delta$.
 
-Choose a vertex $v$ of $\Delta$, subdivide its sides so that each arc of the subdivision is a minimizing geodesic, so the boundary of $\Delta$ is a broken geodesic.
+Choose a vertex $v$ of $\Delta$. 
+Subdivide the sides of $\Delta$ so that each arc of the subdivision is a minimizing geodesic, so the boundary of $\Delta$ is a broken geodesic.
 Divide $\Delta$ into triangles by joining $v$ to other vertices of the broken geodesic.
 Take a model triangle for each so that they shared sides as in $\Delta$.
 Use the comparison to show that these plane triangles form a required polygon.
 
 \parit{\ref{SHORT.ex:self-intersections-hard}}.
 It remains to show that the plane pentagon provided by \ref{SHORT.ex:convex-polyhon} cannot exist.
-Imagine that there is some air pressure in the pentagon, it should not move it; so the total force should vanish.
+Imagine that there is some air pressure in the pentagon, it should not move it; so the net force should vanish.
 Use part \ref{SHORT.ex:convex-polyhon+self-intersections:angles} to show that this is not the case.
 (Equivalently, show that the sum of its side vectors oriented counterclockwise does not vanish.)
 

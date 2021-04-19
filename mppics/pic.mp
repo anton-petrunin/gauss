@@ -4255,17 +4255,17 @@ z.shift=(-4,0)*u;
 p0=z.b{right}..z.a..z.b{1,-1}..z.c{1,1}..{-1,0}z.a;
 p1=(subpath (0,2) of p0 ..tension 1.5 .. z.d..(point 1.6 of p0){1,0}) shifted z.shift;
 
-hatchfill (subpath (0,2) of p0)--cycle  withcolor (87, 1.4mm, -.5bp);
+hatchfill (subpath (0,2) of p0)--cycle  withcolor (87, 2mm, -.5bp);
 
 draw subpath (0,2) of p0;
 drawarrow subpath (2,4) of p0;
 
-hatchfill (subpath (0,2) of p1)--cycle  withcolor (87, 1.4mm, -.5bp);
+hatchfill (subpath (0,2) of p1)--cycle  withcolor (87, 2mm, -.5bp);
 draw subpath (0,2) of p1;
 drawarrow subpath (2,4) of p1;
 
-whitelabel (btex $\Delta_1$ etex, .5[z.a,z.b]+(0,2));
-whitelabel (btex $\Delta_1$ etex, .5[z.a,z.b]+(0,2) shifted z.shift);
+whitelabel (btex $\Delta_1$ etex, .5[z.a,z.b]+(-2,2));
+whitelabel (btex $\Delta_1$ etex, .5[z.a,z.b]+(-2,2) shifted z.shift);
 label.top (btex $\gamma$ etex, point 2.5 of p0);
 label.top (btex $\gamma$ etex, point 2.5 of p1);
 endfig;
