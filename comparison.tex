@@ -43,7 +43,7 @@ Let $[x_ny_nz_n]$ be a sequence of triangles in a smooth surface~$\Sigma$.
 Set $a_n=\dist{x_n}{y_n}{\Sigma}$,
 $b_n=\dist{x_n}{z_n}{\Sigma}$,
 and $c_n=\dist{y_n}{z_n}{\Sigma}$, and $\tilde\theta_n=\modangle {x_n}{y_n}{z_n}$.
-Suppose that the sequences $a_n$ and $b_n$ are bounded away from zero;
+Suppose the sequences $a_n$ and $b_n$ are bounded away from zero;
 that is, $a_n>\epsilon$ and $b_n>\epsilon$ for a fixed $\epsilon>0$ and any~$n$.
 Show that
 \[(a_n+b_n-c_n)\to 0\qquad\iff\qquad \tilde\theta_n\to \pi\]
@@ -98,7 +98,7 @@ The points $(1,0,0)$, $(-\tfrac{1}2, \tfrac{\sqrt{3} }2, 0)$, $(-\tfrac{1}2, -\t
 form a triangle with all angles equal to $\pi$, but all model angles equal to $\tfrac{\pi}3$.
 
 Let us discuss the relationship between the Gauss--Bonnet formula and the comparison theorems.
-Suppose that a disc $\Delta$ is bounded by a geodesic triangle $[xyz]$ with internal angles $\alpha$, $\beta$, and~$\gamma$.
+Suppose a disc $\Delta$ is bounded by a geodesic triangle $[xyz]$ with internal angles $\alpha$, $\beta$, and~$\gamma$.
 Then Gauss--Bonnet implies that 
 \[\alpha+\beta+\gamma-\pi=\iint_\Delta K;\]
 in particular, both sides of the equation have the same sign.
@@ -241,7 +241,7 @@ Applying the key lemma (\ref{key-lem:globalization}) a few times we get that the
 
 \begin{thm}{Key lemma}\label{key-lem:globalization} 
 Let $\Sigma$ be a proper smooth surface.
-Assume that the comparison
+Assume the comparison
 \[\measuredangle\hinge x y z
 \ge\modangle x y z\eqlbl{eq:key-lem:globalization}\]
 holds for any hinge $\hinge x y z$ with 
@@ -265,7 +265,7 @@ it will be called the \index{model!side}\emph{model side} of the hinge.
 The next computational exercise plays a role in the following proof.
 
 \begin{thm}{Exercise}\label{ex:s-r}
-Suppose that hinges $\hinge xpq$ and $\hinge xpy$ have a common side $[x,p]$ and $[x,y]\subset [x,q]$.
+Suppose hinges $\hinge xpq$ and $\hinge xpy$ have a common side $[x,p]$ and $[x,y]\subset [x,q]$.
 Show that 
 \[\frac{\dist{x}{p}{}+\dist{x}{q}{}-\side\hinge xpq}{\dist{x}{q}{}}
 \le
@@ -476,7 +476,7 @@ A reformulation of the following lemma in plane geometry will be used in the nex
 \begin{thm}{Lemma}
 \label{lem:alex}
 Assume $[pxyz]$ and $[p'x'y'z']$ are two quadrangles in the plane with equal corresponding sides.
-Assume that the sides $[x',y']$ and $[y',z']$ extend each other; that is, $y'$ lies on the line segment $[x',z']$.
+Assume the sides $[x',y']$ and $[y',z']$ extend each other; that is, $y'$ lies on the line segment $[x',z']$.
 Then the following expressions have the same signs:
 \begin{enumerate}[(i)]
  \item $|p-y|-|p'-y'|$;
@@ -641,7 +641,7 @@ is convex.
 \end{thm}
 
 \begin{thm}{Advanced exercise}\label{ex:dist-to-bry}
-Suppose that a smooth curve $\delta$ bounds a convex disc $\Delta$ in a proper smooth surface $\Sigma$;
+Suppose a smooth curve $\delta$ bounds a convex disc $\Delta$ in a proper smooth surface $\Sigma$;
 that is, for any two points $x,y\in\Delta$, any shortest path $[x,y]_\Sigma$ lies in $\Delta$.
 
 Denote by $f\:\Sigma\to\mathbb{R}$ the intrinsic distance function to $\delta$;
@@ -665,7 +665,7 @@ that is, for any geodesic $\gamma$ in $\Delta$ the function $t\mapsto f\circ\gam
 A unit-speed geodesic $\lambda\:[0,\infty)\to \spc{X}$ is called a \index{half-line}\emph{half-line} if it is minimizing on each interval $[a,b]\subset [0,\infty)$.
 
 \begin{thm}{Proposition}\label{prop:busemann}
-Suppose that $\lambda\:[0,\infty)\to \Sigma$ is a half-line in a smooth surface~$\Sigma$. 
+Suppose $\lambda\:[0,\infty)\to \Sigma$ is a half-line in a smooth surface~$\Sigma$. 
 Then the function 
 \[\bus_\lambda(x)=\lim_{t\to\infty}\dist{\lambda(t)}{x}{\Sigma}- t\eqlbl{eq:def:busemann*}\]
 is defined.
@@ -881,7 +881,7 @@ Let us show that the distances between points on two lines in the direction of $
 
 \begin{clm}{}\label{clm:parallel}
 Let $\xi$ and $\zeta$ be two lines in $\Sigma$ that run in the direction of $\vec u$.
-Suppose that $\xi$ and $\zeta$ are parametrized so that $\bus_-\circ \xi(t)=\bus_-\circ \zeta(t)=t$ for any $t$;
+Suppose $\xi$ and $\zeta$ are parametrized so that $\bus_-\circ \xi(t)=\bus_-\circ \zeta(t)=t$ for any $t$;
 further set $x_0=\xi(0)$, $z_0=\zeta(0)$, $x_1=\xi(s)$, $z_1=\zeta(t)$ for some $s,t$. 
 Then
 \[\dist{x_1}{z_1}\Sigma^2=\dist{x_0}{z_0}\Sigma^2+(s-t)^2.\]
@@ -897,7 +897,7 @@ Analogously, since $\measuredangle(\vec u,\vec w^a)\to \pi$ as $a\to-\infty$, we
 \[\delta^x_a(t)\to\zeta(b-t)\quad\text{as}\quad a\to-\infty\]
 for any fixed $t\ge0$.
 
-Assume that $s,t\ge 0$, then
+Assume $s,t\ge 0$, then
 \begin{align*}
 x_1&=\lim_{a\to\infty}\delta^{x_0}_a(s),
 &
@@ -944,7 +944,7 @@ According to \ref{clm:parallel}, $(u,v)\mapsto \lambda^v(u)$ is an intrinsic iso
 
 \begin{thm}{Exercise}\label{ex:line+half-line}
 Let $\Sigma$ be an open smooth surface with nonnegative Gauss curvature.
-Suppose that $\Sigma$ has a line and a half-line that meet at exactly one point.
+Suppose $\Sigma$ has a line and a half-line that meet at exactly one point.
 Show that $\Sigma$ admits an intrinsic isometry to the Euclidean plane.
 \end{thm}
 

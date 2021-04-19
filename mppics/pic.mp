@@ -3435,8 +3435,7 @@ draw subpath (3.3,4) of p1;
 
 dOt z0,z4;
 
-label.bot (btex $\gamma_1(a)$ etex, z0);
-label.top (btex $\gamma_1(b)$ etex, z4);
+label.top (btex $\gamma_1$ etex, z2);
 endfig;
 
 beginfig(260)
@@ -3627,9 +3626,9 @@ draw z.p0--z.p2--z.p4--z.p1--z.p3--cycle pensemibold;
 
 dOt z.p0,z.p1,z.p2,z.p3,z.p4;
 
-label.llft (btex $p_1$ etex, z.p0);
-label.lrt (btex $p_2$ etex, z.p1);
-label.lft (btex $p_n$ etex, z.p4);
+label.llft (btex $p_{i_1}$ etex, z.p0);
+label.lrt (btex $p_{i_2}$ etex, z.p1);
+label.lft (btex $p_{i_n}$ etex, z.p4);
 label (btex $\dots$ etex rotated angle (z.p3-z.p2), .5[z.p2,z.p3]+(2,3));
 endfig;
 
@@ -3751,12 +3750,12 @@ u:=1cm;
 z[0]=(0,1)*u;
 z.k=(1-.01,.07);
 
-for i=1 step 1 until 1000:
+for i=1 step 1 until 301:
 z[i]=z[i-1] zscaled z.k;
 endfor
 
 p0=
-for i=0 step 1 until 1000:
+for i=0 step 1 until 301:
 z[i]..
 endfor
 origin;
@@ -4147,7 +4146,7 @@ hatchfill p1  withcolor (87, 1.4mm, -.5bp);
 
 dOt z.o,z.p,z.q;
 
-whitelabel.lft (btex $R$ etex, z.o+(-4,0));
+whitelabel.lft (btex $S$ etex, z.o+(-4,0));
 label.urt (btex $p$ etex, z.p);
 label.lrt (btex $q$ etex, z.q);
 endfig;

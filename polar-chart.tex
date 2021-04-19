@@ -173,7 +173,7 @@ Moreover,
 The proof is lengthy but straightforward.
 
 \parit{Proof.}
-Suppose that $\ell=\ell(u,v)$, $m=m(u,v)$, and $n=n(u,v)$ be the components of the matrix describing the shape operator in the frame $\vec u, \vec v$;
+Suppose $\ell=\ell(u,v)$, $m=m(u,v)$, and $n=n(u,v)$ be the components of the matrix describing the shape operator in the frame $\vec u, \vec v$;
 that is,
 \[
 \begin{aligned}
@@ -200,7 +200,7 @@ The following four identities are the key to the proof:
 \eqlbl{eq:uu-vv}
 \]
 
-Suppose that the identities in \ref{eq:uu-vv} are proved already.
+Suppose the identities in \ref{eq:uu-vv} are proved already.
 Then the proposition can be proved via the following calculations:
 \begin{align*}
 b\cdot K&=b\cdot (\ell\cdot n-m^2)=
@@ -344,7 +344,7 @@ Show that any point $p$ in a smooth surface $\Sigma$ can be covered by a semigeo
 
 \begin{thm}{Exercise}\label{ex:inj-rad}
 Let $p$ be a point on a smooth surface~$\Sigma$.
-Assume that $\exp_p$ is injective in the ball $B=B(0,r_0)_{\T_p}$.
+Assume $\exp_p$ is injective in the ball $B=B(0,r_0)_{\T_p}$.
 Suppose the semigeodesic map $(r,\theta)\mapsto s(r,\theta)$ describes polar coordinates with respect to $p$, and the function $(r,\theta)\mapsto b(r,\theta)$ is as above.
 
 Prove the following statements:
@@ -434,7 +434,7 @@ Show that
 
 
 \begin{thm}{Exercise}\label{ex:conformal}
-Suppose that $(u,v)\mapsto s(u,v)$ is a \index{conformal chart}\emph{conformal chart};
+Suppose $(u,v)\mapsto s(u,v)$ is a \index{conformal chart}\emph{conformal chart};
 that is, there is a function $(u,v)\mapsto b(u,v)$ such that $b=|s_u|=|s_v|$ and $s_u\perp s_v$ for any $(u,v)$.
 (The function $b$ is called a \index{conformal factor}\emph{conformal factor} of~$s$.)
 
@@ -447,7 +447,7 @@ where $\triangle$ denotes the \index{Laplacian}\emph{Laplacian}; that is, $\tria
 \section{Rotation of a vector field}
 
 Let $\Sigma$ be a smooth oriented surface and $\gamma$ a simple closed path in~$\Sigma$.
-Suppose that $\vec u$ is a field of unit tangent vectors on $\Sigma$ defined in a neighborhood of~$\gamma$.
+Suppose $\vec u$ is a field of unit tangent vectors on $\Sigma$ defined in a neighborhood of~$\gamma$.
 Denote by $\vec v$ the field obtained from $\vec u$ by a counterclockwise rotation by $\tfrac{\pi}2$ of the tangent plane at each point; it could also be defined by $\vec v\df\Norm\times\vec u$.
 Then the \index{rotation}\emph{rotation} of $\vec u$ around $\gamma$ is defined as the integral
 \[\rot_\gamma\vec u
@@ -455,7 +455,7 @@ Then the \index{rotation}\emph{rotation} of $\vec u$ around $\gamma$ is defined 
 \int_0^1\langle\vec u'(t),\vec v(t)\rangle\cdot dt.\]
 
 \begin{thm}{Lemma}\label{lem:rotation-parallel}
-Suppose that $\gamma$ is a loop with the base at a point $p$ in a smooth oriented surface $\Sigma$, and $\vec u$ is a field of tangent unit vectors to $\Sigma$ defined in a neighborhood of~$\gamma$.
+Suppose $\gamma$ is a loop with the base at a point $p$ in a smooth oriented surface $\Sigma$, and $\vec u$ is a field of tangent unit vectors to $\Sigma$ defined in a neighborhood of~$\gamma$.
 Then the parallel transport $\iota_\gamma\:\T_p\to\T_p$ is a {}\emph{clockwise} rotation by the angle $\rot_\gamma\vec u$.
 
 In particular, rotations of different vector fields around $\gamma$ may only differ by a multiple of $2\cdot\pi$.
@@ -512,7 +512,7 @@ The following lemma will play a key role in the proof of the Gauss--Bonnet formu
 
 \begin{thm}{Lemma}\label{lem:rotation-semigeoesic}
 Let $(u,v)\mapsto s(u,v)$ be a semigeodesic chart on a smooth surface~$\Sigma$.
-Suppose that a simple loop $\gamma$ bounds a disc $\Delta$ that is covered completely by~$s$.
+Suppose a simple loop $\gamma$ bounds a disc $\Delta$ that is covered completely by~$s$.
 Then 
 \[\rot_\gamma\vec u+\iint_\Delta K=0,\]
 where $\vec u=s_u$, and $K$ denotes the Gauss curvature of~$\Sigma$.
@@ -521,7 +521,7 @@ where $\vec u=s_u$, and $K$ denotes the Gauss curvature of~$\Sigma$.
 The proof is done by a calculation using the so-called \index{Green formula}\emph{Green formula} which can be formulated the following way:
 
 Let $D$ be a compact region in the $(u,v)$-coordinate plane that is bounded by a piecewise smooth simple closed curve $\alpha$.
-Suppose that $\alpha$ is oriented in such a way that $D$ lies on its left.
+Suppose $\alpha$ is oriented in such a way that $D$ lies on its left.
 Then for any two smooth functions $P$ and $Q$ defined on $D$ we have
 \[\iint_D (Q_u- P_v)\cdot du\cdot dv=\int_\alpha (P\cdot du+Q\cdot dv).\]
 
@@ -569,7 +569,7 @@ By \ref{ex:semigeodesc-chart}, any point can be covered by a semigeodesic chart.
 Therefore, applying \ref{lem:GB-sum} finite number of times, we get that 
 \ref{eq:gb(n)} holds for any disc $\Delta$ in~$\Sigma$.
 
-Assume that $\Delta$ lies in a local graph realization $z=f(x,y)$ of~$\Sigma$.
+Assume $\Delta$ lies in a local graph realization $z=f(x,y)$ of~$\Sigma$.
 Consider the one-parameter family $\Sigma_t$ of graphs $z=t\cdot f(x,y)$ and denote by $\Delta_t$ the corresponding disc in $\Sigma_t$, so $\Delta_1=\Delta$ and $\Delta_0$ is its projection to the $(x,y)$-plane.
 Note that the function $f\:t\mapsto \GB(\Delta_t)$ is continuous.
 From above, $f(t)$ is a multiple of $2\cdot\pi$ for any~$t$.
@@ -597,7 +597,7 @@ Since  any point of $\Sigma$ has a neighborhood that can be covered by such a gr
 The following proposition is a special case of the so-called \index{Rauch comparison theorem}\emph{Rauch comparison theorem}.
 
 \begin{thm}{Proposition}\label{prop:rauch}
-Suppose that $p$ is a point on a smooth surface $\Sigma$ and $r\le \inj(p)$.
+Suppose $p$ is a point on a smooth surface $\Sigma$ and $r\le \inj(p)$.
 Given a curve $\tilde\gamma$ in the $r$-neighborhood of $0$ in $\T_p$, set 
 \[\gamma=\exp_p\circ\tilde\gamma
 \quad
@@ -662,13 +662,13 @@ A map $f\:\Sigma\to \Sigma^{*}$ is called \index{length-preserving}\emph{length-
 If in addition $f$ is smooth and bijective, then it is called an  \index{intrinsic isometry}\emph{intrinsic isometry}. 
 
 \begin{thm}{Exercise}\label{ex:K=0}
-Suppose that the Gauss curvature of a smooth surface $\Sigma$ vanishes.
+Suppose the Gauss curvature of a smooth surface $\Sigma$ vanishes.
 Show that $\Sigma$ is \index{locally flat surface}\emph{locally flat};
 that is, a neighborhood of any point in $\Sigma$ admits an intrinsic isometry to an open domain in the Euclidean plane.  
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:K=1}
-Suppose that a smooth surface $\Sigma$ has a unit Gauss curvature at every point.
+Suppose a smooth surface $\Sigma$ has a unit Gauss curvature at every point.
 Show that a neighborhood of any point in $\Sigma$ admits an intrinsic isometry to an open domain in the unit sphere.
 \end{thm}
 
