@@ -1134,7 +1134,7 @@ To do the second part, one may apply \ref{ex:star-shaped-disc:nonsmooth}.
 
 
 \parbf{\ref{ex:circular-cone}.}
-Choose a coordinate system so that the $(x,y)$-plane supports $\Sigma$ at the origin, so $\Sigma$ lies in the upper half-space. %???+PIC
+Choose a coordinate system so that the $(x,y)$-plane supports $\Sigma$ at the origin, so $\Sigma$ lies in the upper half-space. 
 
 Show that there is $\epsilon>0$ such that any line starting from the origin with slope at most $\epsilon$ may intersect $\Sigma$ only in the unit ball centered at the origin;
 we may assume that $\epsilon$ is small, say $\epsilon<1$.
@@ -1230,7 +1230,7 @@ For the second part, consider a thin cylindrical tube bounded by two closed sphe
 \parbf{\ref{ex:circular-cone-saddle}.}
 Assume $\Sigma$ is an open saddle surface that lies in a cone~$K$.
 Show that there is a plane $\Pi$ that cuts $\Sigma$ and cuts from $K$ a compact region.
-Conclude that $\Pi$ cuts from $\Sigma$ a compact region as well. %???+PIC
+Conclude that $\Pi$ cuts from $\Sigma$ a compact region as well. 
 
 By \ref{lem:reg-section} one can move the plane $\Pi$ slightly so that it cuts from $\Sigma$ a compact surface with boundary.
 Apply \ref{lem:convex-saddle}.
@@ -1437,15 +1437,10 @@ Since $\Sigma$ is strictly convex,
 \[ \dist{\gamma (t)}{q}W > \dist{\gamma(t)}{q}{\mathbb{R}^3}  \]
 for all $t < \ell$.
 Hence,
-\[
-\begin{aligned}
- \dist{p^t}{q}W  &=  \dist{p^t}{\gamma(t)}W + \dist{\gamma (t)}{q}W   
-\\
-&> \dist{p^t}{\gamma(t)}{\mathbb{R}^3} + \dist{ \gamma (t)}{q}{\mathbb{R}^3}   
-\\
-&\geq  \dist{p^t}{q}{\mathbb{R}^3}.   
-\end{aligned}
-\]
+\begin{align*}
+\dist{p^t}{q}W&=\dist{p^t}{\gamma(t)}W+\dist{\gamma (t)}{q}W   
+> \dist{p^t}{\gamma(t)}{\mathbb{R}^3} + \dist{ \gamma (t)}{q}{\mathbb{R}^3} \geq  \dist{p^t}{q}{\mathbb{R}^3}.   
+\end{align*}
 If the segment $[p^t , q ]$ was entirely contained in $W$ for some $t< \ell $, then $ \dist{p^t}{q}W = \dist{p^t}{q}{\mathbb{R}^3} $, which would be a contradiction.
 
 
@@ -1480,15 +1475,9 @@ Therefore,
 \[
 \begin{aligned}
 |\gamma''(t)|
-&=|\langle\gamma''(t),\nu(t)\rangle|=
+&=|\langle\gamma''(t),\nu(t)\rangle|=|\langle\gamma'(t),\nu(t)\rangle'-\langle\gamma'(t),\nu'(t)\rangle|=|\langle\gamma'(t),\nu'(t)\rangle|\le
 \\
-&=|\langle\gamma'(t),\nu(t)\rangle'-\langle\gamma'(t),\nu'(t)\rangle|=
-\\
-&=|\langle\gamma'(t),\nu'(t)\rangle|\le
-\\
-&\le|\gamma'(t)||\nu'(t)|=
-\\
-&=|\nu'(t)|.
+&\le|\gamma'(t)||\nu'(t)|=|\nu'(t)|.
 \end{aligned}
 \]
 
@@ -1761,7 +1750,7 @@ a\cdot b\cdot(\ell\cdot n-m^2)
 =
 \langle\vec u_u,\vec v_v\rangle 
 -
-\langle\vec u_v,\vec v_u\rangle
+\langle\vec u_v,\vec v_u\rangle= 
 \\
 &= 
 \left(
@@ -1835,9 +1824,9 @@ Consider the function
 Set $t_0=\dist{x}{y}{}$ and $t_1=\dist{x}{q}{}$.
 Observe that 
 \begin{align*}
-f(t_0)&=\dist{x}{p}{}+\dist{x}{y}{}-\side\hinge xpy
-\\
-f(t_1)&=\dist{x}{p}{}+\dist{x}{q}{}-\side\hinge xpq
+f(t_0)&=\dist{x}{p}{}+\dist{x}{y}{}-\side\hinge xpy,
+&
+f(t_1)&=\dist{x}{p}{}+\dist{x}{q}{}-\side\hinge xpq.
 \end{align*}
 
 Show and use that $f$ is concave and $f(0)=0$.
@@ -1999,8 +1988,6 @@ Since $\tilde\phi\le\phi$, we get that
 \begin{align*}
 f\circ\gamma(t)&\le \dist{x}{y}\Sigma\le 
 \dist{\tilde x}{\tilde y}{\mathbb{R}}=
-\\
-&=
 \dist{p}{q}\Sigma+t\cdot\cos\tilde\phi
 \le
 \dist{p}{q}\Sigma+t\cdot\cos\phi.
@@ -2011,9 +1998,10 @@ The case $t<0$ can be done along the same lines.
 \parbf{\ref{ex:busemann}}; \ref{SHORT.ex:busemann:all}.
 Choose $x\in\Sigma$.
 By the triangle inequality, the function 
-\[t\mapsto\dist{\lambda(t)}{x}{}- t\] is nonincreasing in~$t$. 
-Also, by the triangle inequality,
-\[\dist{\lambda(t)}{x}{\Sigma}- t\ge-\dist{\lambda(0)}{x}{};\]
+\[t\mapsto\dist{\lambda(t)}{x}{}- t\]
+is nonincreasing in~$t$. 
+Also, by the triangle inequality, we have
+$\dist{\lambda(t)}{x}{\Sigma}- t\ge-\dist{\lambda(0)}{x}{}$;
 that is, for each $x$, the values $\dist{\lambda(t)}{x}{\Sigma}- t$ are bounded below.
 Thus the limit
 \[\bus_\lambda(x)=\lim_{t\to\infty}\dist{\lambda(t)}{x}{\Sigma}- t\]
@@ -2034,8 +2022,6 @@ Therefore,
 \bus_\lambda\circ\alpha(s)
 &=
 \lim_{t\to\infty}\left(\frac{| \lambda (t) - \alpha (s) |_{\Sigma}^2 - s^2 }{t} -t\right)=
-\\
-&=
 \lim_{t\to\infty}\left(\frac{h_t(s)}{t} -t\right).
 \end{align*}
 According to \ref{ex:geod-convexity}, the function 
