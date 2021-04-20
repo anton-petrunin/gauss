@@ -3626,9 +3626,9 @@ draw z.p0--z.p2--z.p4--z.p1--z.p3--cycle pensemibold;
 
 dOt z.p0,z.p1,z.p2,z.p3,z.p4;
 
-label.llft (btex $p_{i_1}$ etex, z.p0);
-label.lrt (btex $p_{i_2}$ etex, z.p1);
-label.lft (btex $p_{i_n}$ etex, z.p4);
+label.llft (btex $p_{1}$ etex, z.p0);
+label.lrt (btex $p_{2}$ etex, z.p1);
+label.lft (btex $p_{n}$ etex, z.p4);
 label (btex $\dots$ etex rotated angle (z.p3-z.p2), .5[z.p2,z.p3]+(2,3));
 endfig;
 
