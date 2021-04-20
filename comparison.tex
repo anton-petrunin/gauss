@@ -660,291 +660,53 @@ that is, for any geodesic $\gamma$ in $\Delta$ the function $t\mapsto f\circ\gam
 
 \end{thm}
 
-\section{Busemann functions} 
-
 A unit-speed geodesic $\lambda\:[0,\infty)\to \spc{X}$ is called a \index{half-line}\emph{half-line} if it is minimizing on each interval $[a,b]\subset [0,\infty)$.
+In the following exercise we introduce the so-called
+{}\emph{Busemann function};
+it describes the distance to an ideal point at infinity.
 
-\begin{thm}{Proposition}\label{prop:busemann}
-Suppose $\lambda\:[0,\infty)\to \Sigma$ is a half-line in a smooth surface~$\Sigma$. 
-Then the function 
-\[\bus_\lambda(x)=\lim_{t\to\infty}\dist{\lambda(t)}{x}{\Sigma}- t\eqlbl{eq:def:busemann*}\]
+\begin{thm}{Advanced exercise}\label{ex:busemann}
+Suppose $\lambda\:[0,\infty)\to \Sigma$ is a half-line in a smooth surface~$\Sigma$.
+
+\begin{subthm}{ex:busemann:all}
+Show that the function 
+\[\bus_\lambda(x)=\lim_{t\to\infty}\dist{\lambda(t)}{x}{\Sigma}- t\]
 is defined.
-
-Moreover,
-
-\begin{subthm}{prop:busemann:all}
+Moreover, 
 $\bus_\lambda$ is a $1$-Lipschitz function, and
 \[\bus_\lambda\circ\lambda(t)+t=0\] 
 for any~$t$.
+The function $\bus_\lambda$ is called \index{Busemann function}\emph{Busemann function associated to $\lambda$}.
 \end{subthm}
 
-\begin{subthm}{prop:busemann-}
-If $\Sigma$ is an open simply-connected surface with nonpositive Gauss curvature, then $\bus_\lambda$ is convex;
+\begin{subthm}{ex:busemann-}
+Show that if $\Sigma$ is an open simply-connected surface with nonpositive Gauss curvature, then $\bus_\lambda$ is convex;
 that is, for any geodesic $\alpha$ the real-to-real function 
 $t\mapsto \bus_\lambda\circ\alpha(t)$ is convex.
 \end{subthm}
 
-\begin{subthm}{prop:busemann+}
-If $\Sigma$ is an open surface with nonnegative Gauss curvature, then $\bus_\lambda$ is concave;
+\begin{subthm}{ex:busemann+}
+Show that if $\Sigma$ is an open surface with nonnegative Gauss curvature, then $\bus_\lambda$ is concave;
 that is, for any geodesic $\alpha$ the real-to-real function 
 $t\z\mapsto \bus_\lambda\circ\alpha(t)$ is concave.
 \end{subthm}
 
 \end{thm}
 
-The function $\bus_\lambda\:\Sigma\z\to \mathbb{R}$ as in the proposition is called the
-\index{Busemann function}\emph{Busemann function associated to $\lambda$}.
-Intuitively the function $\bus_\lambda$ can be described as a distance function to an ideal point at infinity.
-
-\parit{Proof.}
-Choose $x\in\Sigma$.
-By the triangle inequality, the function 
-\[t\mapsto\dist{\lambda(t)}{x}{}- t\] is nonincreasing in~$t$. 
-Also, by the triangle inequality,
-\[\dist{\lambda(t)}{x}{\Sigma}- t\ge-\dist{\lambda(0)}{x}{};\]
-that is, for each $x$, the values $\dist{\lambda(t)}{x}{\Sigma}- t$ are bounded below.
-Thus the limit in \ref{eq:def:busemann*} is defined.
-
-Observe that each function $x\mapsto \dist{\lambda(t)}{x}{\Sigma}- t$ is 1-Lipschitz.
-Therefore, its limit $x\mapsto\bus_\lambda(x)$ is 1-Lipschitz as well.
-The second part of \ref{SHORT.prop:busemann:all} is evident, since for $s \geq t$, we have $| \gamma (s) - \gamma (t) |_{\Sigma} = s-t$.
-
-It remains to prove the last two statements.
-Choose a geodesic~$\alpha$.
-Given $t\ge 0$, consider the function 
-\[h_t(s)=\dist{\lambda(t)}{\alpha(s)}{\Sigma}^2-s^2.\]
-
-Observe that for any fixed $x\in\Sigma$, we have $\tfrac{\dist{\lambda(t)}{x}{}}t\to 1$ as $t\to\infty$.
-Therefore,
-\begin{align*}
-\bus_\lambda\circ\alpha(s)
-&=
-\lim_{t\to\infty}\left(\frac{| \lambda (t) - \alpha (s) |_{\Sigma}^2 - s^2 }{t} -t\right)=
-\\
-&=
-\lim_{t\to\infty}\left(\frac{h_t(s)}{t} -t\right).
-\end{align*}
-According to \ref{ex:geod-convexity}, the function 
-$s\mapsto h_t(s)$ is convex or concave, assuming the conditions in \ref{SHORT.prop:busemann-} or \ref{SHORT.prop:busemann+}, respectively.
-Therefore, so is the function
-\[s \mapsto \frac{h_t(s)}{t} -t \]
-for every~$t$.
-Since pointwise limits of convex or concave functions are respectively convex or concave, \ref{SHORT.prop:busemann-} and \ref{SHORT.prop:busemann+} follow.
-\qeds
-
-\begin{thm}{Exercise}\label{ex:half-line}
-Let $\Sigma$ be an open surface and $p\in\Sigma$.
-
-\begin{subthm}{ex:half-line:exist}
-Show that there is a half-line $\lambda$ in $\Sigma$ that starts at~$p$.
-
-Moreover, if $K\ni p$ is a noncompact closed convex subset of $\Sigma$, then there is a half-line of $\Sigma$ that starts at $p$ and runs in~$K$.
-\end{subthm}
-
-\begin{subthm}{ex:half-line:suplevel}
-Suppose $\Sigma$ has nonnegative Gauss curvature at any point.
-Consider the function
-\[f(x)=\inf_\lambda\bus_\lambda(x),\]
-where the greatest lower bound is taken among all half-lines $\lambda$ that start at~$p$.
-Show that $f$ is a concave function, and its suplevel sets 
-\[S_c=\set{x\in\Sigma}{f(x)\ge c}\] 
-are compact for any $c\in\mathbb{R}$.
-\end{subthm}
-
-\begin{subthm}{ex:half-line:soul}
-Let $s=\max\set{f(x)}{x\in\Sigma}$.
-Show that the set $S_s$ is either a single point, a geodesic arc, or a closed geodesic.
-Show that all these possibilities can occur.
-\end{subthm}
-
-\end{thm}
-
-\section{Line splitting theorem}
-
 Let $\Sigma$ be a smooth surface.
 A unit-speed geodesic $\lambda\:\mathbb{R}\to\Sigma$ is called a \index{line}\emph{line} if it is length-minimizing on each interval $[a,b]\subset \mathbb{R}$.
 
-\begin{thm}{Line splitting theorem}\label{thm:splitting}
-Let $\Sigma$ be an open smooth surface with nonnegative Gauss curvature
+\begin{thm}{Very advanced exercise}\label{thm:splitting}
+Let $\Sigma$ be an open smooth simply-connected surface with nonnegative Gauss curvature
 and $\lambda$ be a line in~$\Sigma$. 
-Then $\Sigma$ admits an intrinsic isometry to 
-a circular cylinder $\set{(x,y,z)\in \mathbb{R}^2}{x^2+y^2=r^2}$ for some $r>0$ or
+Show that $\Sigma$ admits an intrinsic isometry to 
 the Euclidean plane.
-
-In particular, $\Sigma$ has zero Gauss curvature at every point.
 \end{thm}
 
-This theorem was proved by Stefan Cohn-Vossen \cite[Satz 5 in][]{convossen}
-and it has a sequence of variations:
+The last statement is a partial case of the so called line splitting theorem. 
+It was proved by Stefan Cohn-Vossen \cite[Satz 5 in][]{convossen} and has a sequence of variations:
 \begin{itemize}
  \item Victor Toponogov \cite{toponogov-globalization+splitting} proved a version of the splitting theorem for Riemannian manifolds with nonnegative sectional curvature;
  \item Jeff Cheeger and Detlef Gromoll \cite{cheeger-gromoll-split} generalized it further to Riemannian manifolds with nonnegative Ricci curvature;
  \item Jost-Hinrich Eshenburg \cite{eshenburg-split} proved a splitting theorem for a space-time with nonnegative Ricci curvature in timelike directions.
 \end{itemize}
-
-\parit{Proof.} 
-Consider two Busemann functions $\bus_+$ and $\bus_-$ associated with half-lines $\lambda:[0,\infty)\to \Sigma$ and $\lambda:(-\infty,0]\to \Sigma$; that is,
-\[
-\bus_\pm(x)
-=
-\lim_{t\to\infty}\dist{\lambda(\pm t)}{x}{\Sigma}- t.
-\]
-
-\parit{Step 1.}
-Let us show and use that
-\[
-\bus_+(x)+\bus_-(x)= 0
-\eqlbl{eq:bus+-=0}
-\]
-for any $x\in \Sigma$.
-
-Fix $x\in \Sigma$.
-Since $\lambda$ is a line, the triangle inequality implies that
-\begin{align*}
-\dist{\lambda(t)}{x}{\Sigma}+\dist{\lambda(- t)}{x}{\Sigma}
-&\ge \dist{\lambda(t)}{\lambda(-t)}{\Sigma}=
-\\
-&=2\cdot t.
-\end{align*}
-Passing to the limit as $t\to\infty$, we get
-\[\bus_+(x)+\bus_-(x)\ge0.\]
-
-On the other hand, by \ref{ex:geod-convexity}, the function 
-$h(t)=\dist{\lambda(t)}{x}\Sigma^2-t^2$ 
-is concave.
-In particular, 
-\[\dist{\lambda(t)}{x}\Sigma\le \sqrt{t^2+at+b}\]
-for some constants $a,b\in\mathbb{R}$. 
-Passing to the limit as $t\to\pm\infty$, we get \[\bus_+(x)+\bus_-(x)\le0;\]
-whence \ref{eq:bus+-=0} follows.
-
-According to \ref{prop:busemann}, 
-both functions $\bus_\pm$ are concave, and $\bus_\pm\circ\lambda(t)=\mp t$ for any~$t$.
-By \ref{eq:bus+-=0} both functions $\bus_\pm$ are affine;
-that is, they are convex and concave at the same time.
-It follows that the differential of $\bus_\pm$ is defined at any point $x\in\Sigma$;
-that is, there is a linear function $\T_x\to\mathbb{R}$ that is defined by
-$\vec v\mapsto D_{\vec v}\bus_\pm$
-for any tangent vector $\vec v \in \T_x$.
-
-Denote by $\vec u$ the gradient vector field of $\bus_-$;
-that is, $\vec u$ is a tangent vector field such that for any tangent field $\vec v$ the following identity holds
-\[\langle\vec u,\vec v\rangle=D_{\vec v}(\bus_-).\]
-
-\parit{Step 2.}
-Let us show that, the surface $\Sigma$ can be subdivided into lines that run in the direction of $\vec u$.
-
-Fix a point~$x$.
-Given a real value $a$, choose a shortest path $[x,\lambda(a)]$;
-denote by $\vec w^a\in\T_x$ the unit vector in the direction of the geodesic $[x,\lambda(a)]$. 
-Since $|\vec w^a|=1$ and $\bus_-$ is affine, we get that 
-\begin{align*}
-|\vec u|&\ge \limsup_{a\to\infty}\langle\vec u,\vec w^a\rangle =
-\\
-&=\limsup_{a\to\infty} D_{\vec w^a}\bus_-=
-\\
-&=
-\limsup_{a\to\infty}\frac{\bus_-\circ\lambda(a)-\bus_-(x)}{\dist{x}{\lambda(a)}\Sigma}=
-\\
-&=\limsup_{a\to\infty} \frac{a-\bus_-(x)}{a}=
-\\
-&=1.
-\end{align*}
-On the other hand, since $\bus_-$ is $1$-Lipschitz, we have $|\vec u|\le 1$.
-Whence 
-\[|\vec u|\equiv 1
-\quad\text{and}\quad \lim_{a\to\infty}\langle\vec u,\vec w^a\rangle=1.\]
-It follows that
-\begin{align*}
-\lim_{a\to\infty}\measuredangle(\vec u,\vec w^a)&=0;
-\intertext{analogously, we get}
-\lim_{a\to-\infty}\measuredangle(\vec u,\vec w^a)&=\pi.
-\end{align*}
-
-Set $b=\bus_-(x)$.
-Consider a unit-speed geodesic $\zeta$
-such that $\zeta'(b)\z=\vec u(x)$.
-Since $\bus_-$ is affine, we have that $\bus_-\circ\zeta(t)=t$ for any~$t$.
-Since $\zeta$ is a unit-speed geodesic, and $\bus_-$ is 1-Lipschitz, we get
-\begin{align*}
-|t_1-t_0|&\ge\dist{\zeta(t_1)}{\zeta(t_0)}\Sigma\ge
-\\
-&\ge |\bus\circ\lambda(t_1)-\bus\circ\lambda(t_0)|=
-\\
-&=|t_1-t_0|.
-\end{align*}
-Whence $\zeta$ is a line for any~$x$.
-Moreover, $\zeta$ always runs in the direction of~$\vec u$.
-
-\parit{Step 3.}
-Let us show that the distances between points on two lines in the direction of $\vec u$ behave the same way as the distances between parallel lines in the Euclidean plane; here is a precise formulation:
-
-\begin{clm}{}\label{clm:parallel}
-Let $\xi$ and $\zeta$ be two lines in $\Sigma$ that run in the direction of $\vec u$.
-Suppose $\xi$ and $\zeta$ are parametrized so that $\bus_-\circ \xi(t)=\bus_-\circ \zeta(t)=t$ for any $t$;
-further set $x_0=\xi(0)$, $z_0=\zeta(0)$, $x_1=\xi(s)$, $z_1=\zeta(t)$ for some $s,t$. 
-Then
-\[\dist{x_1}{z_1}\Sigma^2=\dist{x_0}{z_0}\Sigma^2+(s-t)^2.\]
-\end{clm}
-
-Given $x\in \Sigma$, 
-let $t\to\delta^x_a(t)$ be the parametrization of $[x,\lambda(a)]$ by arc-length starting from~$x$.
-Since $\measuredangle(\vec u,\vec w^a)\to 0$ as $a\to\infty$, we get that
-\[\delta^x_a(t)\to\zeta(b+t)\quad\text{as}\quad a\to\infty\]
-for any fixed $t\ge0$.
-
-Analogously, since $\measuredangle(\vec u,\vec w^a)\to \pi$ as $a\to-\infty$, we get 
-\[\delta^x_a(t)\to\zeta(b-t)\quad\text{as}\quad a\to-\infty\]
-for any fixed $t\ge0$.
-
-Assume $s,t\ge 0$, then
-\begin{align*}
-x_1&=\lim_{a\to\infty}\delta^{x_0}_a(s),
-&
-z_1&=\lim_{a\to\infty}\delta^{z_0}_a(t).
-\end{align*}
-
-Recall that the triangle $[x_0\,\gamma(a)\,z_0]$ is fat (\ref{fat}).
-Therefore, we get a lower bound for the distance
-$\dist{\delta^{x_0}_a(s)}{\delta^{z_0}_a(t)}\Sigma$.
-Note that if $a$ is large, then the two long sides of the triangle are close to~$a$.
-Straightforward computations show that passing to the limit as $a\to \infty$, we get
-\[\dist{x_1}{z_1}\Sigma^2\ge\dist{x_0}{z_0}\Sigma^2+(s-t)^2.\]
-
-\begin{figure}
-\centering
-\includegraphics{mppics/pic-1775}
-\end{figure}
-
-Now let us swap ${x_0}$ with $x_1$ and ${z_0}$ with $z_1$,
-and repeat the argument above for $a\to-\infty$.
-Note that the two longer sides of the triangle are close to $s-a$ and $t-a$.
-Therefore, we get the opposite inequality
-\[\dist{x_1}{z_1}\Sigma^2\le\dist{x_0}{z_0}\Sigma^2+(s-t)^2.\]
-
-Whence 
-\[\dist{x_1}{z_1}\Sigma^2=\dist{x_0}{z_0}\Sigma^2+(s-t)^2.\eqlbl{ex:|x-y|=|x-y|}\]
-if $s,t\ge0$.
-The same argument proves \ref{ex:|x-y|=|x-y|} if $s,t\le 0$.
-Applying it a couple of times for $s_1=t_1\ge 0$ and $s_2,t_2\le 0$, we get that \ref{ex:|x-y|=|x-y|} holds 
-for $s=s_1+s_2$ and $t=t_1+t_2$.
-Whence \ref{clm:parallel} follows for any pair $s$ and~$t$.
-
-\parit{Final step.}
-Note that since $\bus_-$ is affine, the level set 
-\[L=\set{x\in\Sigma}{\bus_-(x)=0}\]
-is closed \index{totally convex/geodesic}\emph{totally convex} and {}\emph{geodesic};
-that is, if a geodesic $\alpha$ has two common points with $L$, then $\alpha$ lies in~$L$.
-It follows that $L$ is either closed or both-sides-infinite geodesic.
-
-Choose an arc-length parametrization $v\mapsto\gamma(v)$ of $L$ by a circle (or a line).
-Denote by $\lambda^v$ the line thru $\gamma(v)$ in the direction of $\vec u$ with the parametrization as above: that is, $\bus_-\circ\lambda^v(u)=u$ for any $u$ and~$v$.
-According to \ref{clm:parallel}, $(u,v)\mapsto \lambda^v(u)$ is an intrinsic isometry from a circular cylinder (or, respectively, the Euclidean plane) to~$\Sigma$.
-\qeds
-
-\begin{thm}{Exercise}\label{ex:line+half-line}
-Let $\Sigma$ be an open smooth surface with nonnegative Gauss curvature.
-Suppose $\Sigma$ has a line and a half-line that meet at exactly one point.
-Show that $\Sigma$ admits an intrinsic isometry to the Euclidean plane.
-\end{thm}
-

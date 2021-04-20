@@ -2008,38 +2008,92 @@ f\circ\gamma(t)&\le \dist{x}{y}\Sigma\le
 That is, we proved \ref{eq:dist<cosphi} for small $t>0$.
 The case $t<0$ can be done along the same lines. 
 
+\parbf{\ref{ex:busemann}}; \ref{SHORT.ex:busemann:all}.
+Choose $x\in\Sigma$.
+By the triangle inequality, the function 
+\[t\mapsto\dist{\lambda(t)}{x}{}- t\] is nonincreasing in~$t$. 
+Also, by the triangle inequality,
+\[\dist{\lambda(t)}{x}{\Sigma}- t\ge-\dist{\lambda(0)}{x}{};\]
+that is, for each $x$, the values $\dist{\lambda(t)}{x}{\Sigma}- t$ are bounded below.
+Thus the limit
+\[\bus_\lambda(x)=\lim_{t\to\infty}\dist{\lambda(t)}{x}{\Sigma}- t\]
+is defined for any $x$.
+
+Observe that each function $x\mapsto \dist{\lambda(t)}{x}{\Sigma}- t$ is 1-Lipschitz.
+Therefore, its limit $x\mapsto\bus_\lambda(x)$ is 1-Lipschitz as well.
+The second part of \ref{SHORT.ex:busemann:all} is evident, since for $s \geq t$, we have $| \gamma (s) - \gamma (t) |_{\Sigma} = s-t$.
+
+\parit{\ref{SHORT.ex:busemann-} $+$ \ref{SHORT.ex:busemann+}}.
+Choose a geodesic~$\alpha$.
+Given $t\ge 0$, consider the function 
+\[h_t(s)=\dist{\lambda(t)}{\alpha(s)}{\Sigma}^2-s^2.\]
+
+Observe that for any fixed $x\in\Sigma$, we have $\tfrac{\dist{\lambda(t)}{x}{}}t\to 1$ as $t\to\infty$.
+Therefore,
+\begin{align*}
+\bus_\lambda\circ\alpha(s)
+&=
+\lim_{t\to\infty}\left(\frac{| \lambda (t) - \alpha (s) |_{\Sigma}^2 - s^2 }{t} -t\right)=
+\\
+&=
+\lim_{t\to\infty}\left(\frac{h_t(s)}{t} -t\right).
+\end{align*}
+According to \ref{ex:geod-convexity}, the function 
+$s\mapsto h_t(s)$ is convex or concave, assuming the conditions in \ref{SHORT.ex:busemann-} or \ref{SHORT.ex:busemann+}, respectively.
+Therefore, so is the function
+\[s \mapsto \frac{h_t(s)}{t} -t \]
+for every~$t$.
+Since pointwise limits of convex or concave functions are respectively convex or concave, \ref{SHORT.ex:busemann-} and \ref{SHORT.ex:busemann+} follow.
+
+\parbf{\ref{thm:splitting}.}
+Consider two Busemann functions $\bus_+$ and $\bus_-$ associated with half-lines $\lambda:[0,\infty)\to \Sigma$ and $\lambda:(-\infty,0]\to \Sigma$; that is,
+\[
+\bus_\pm(x)
+=
+\lim_{t\to\infty}\dist{\lambda(\pm t)}{x}{\Sigma}- t.
+\]
+Use the triangle inequality to show that $\bus_+(x)+\bus_-(x)\ge 0$.
+Use the comparison theorem to show that $\bus_+(x)+\bus_-(x)\le 0$.
+Conclude that
+\[
+\bus_+(x)+\bus_-(x)= 0
+\eqlbl{eq:bus+-=0}
+\]
+for any $x\in \Sigma$.
+
+According to \ref{ex:busemann}, 
+both functions $\bus_\pm$ are concave, and $\bus_\pm\circ\lambda(t)=\mp t$ for any~$t$.
+By \ref{eq:bus+-=0} both functions $\bus_\pm$ are affine;
+that is, they are convex and concave at the same time.
+It follows that the differential of $\bus_\pm$ is defined at any point $x\in\Sigma$;
+that is, there is a linear function $\T_x\to\mathbb{R}$ that is defined by
+$\vec v\mapsto D_{\vec v}\bus_\pm$
+for any tangent vector $\vec v \in \T_x$.
+
+Denote by $\vec u$ the gradient vector field of $\bus_-$;
+that is, $\vec u$ is a tangent vector field such that for any tangent field $\vec v$ the following identity holds
+\[\langle\vec u,\vec v\rangle=D_{\vec v}(\bus_-).\]
+
+Show that, the surface $\Sigma$ can be subdivided into lines that run in the direction of $\vec u$.
+
+Use the comparison theorem to show that the distances between points on two lines in the direction of $\vec u$ behave the same way as the distances between parallel lines in the Euclidean plane; here is a precise formulation:
+
+\begin{clm}{}\label{clm:parallel}
+Let $\xi$ and $\zeta$ be two lines in $\Sigma$ that run in the direction of $\vec u$.
+Suppose $\xi$ and $\zeta$ are parametrized so that $\bus_-\circ \xi(t)=\bus_-\circ \zeta(t)=t$ for any $t$;
+further set $x_0=\xi(0)$, $z_0=\zeta(0)$, $x_1=\xi(s)$, $z_1=\zeta(t)$ for some $s,t$. 
+Then
+\[\dist{x_1}{z_1}\Sigma^2=\dist{x_0}{z_0}\Sigma^2+(s-t)^2.\]
+\end{clm}
+
+Use that $\Sigma$ is simply connected to show that 
+\[L=\set{x\in\Sigma}{\bus_-(x)=0}\]
+is a line.
+
+Choose an arc-length parametrization $v\mapsto\gamma(v)$ of $L$.
+Denote by $\lambda^v$ the line thru $\gamma(v)$ in the direction of $\vec u$ with the parametrization as above: that is, $\bus_-\circ\lambda^v(u)=u$ for any $u$ and~$v$.
+According to \ref{clm:parallel}, $(u,v)\mapsto \lambda^v(u)$ is an intrinsic isometry from the Euclidean plane to~$\Sigma$.
 
 
-\parbf{\ref{ex:half-line}}; \ref{SHORT.ex:half-line:exist}.
-Choose a sequence of points $x_n\in K$ that escapes to infinity; that is, such that $\dist{p}{x_n}{\Sigma}\to\infty$ as $n\to\infty$.
-Denote by $\vec u_n\in\T_p$ the unit vector in the direction of $[p,x_n]_\Sigma$.
-Let $\vec u_\infty$ be a partial limit of $\vec u_n$.
-
-Show that the geodesic that starts from $p$ in the direction of $\vec u_\infty$ is a half-line that runs in~$K$.
-
-\parit{\ref{SHORT.ex:half-line:suplevel}.} The concavity of $f$ follows from \ref{prop:busemann+}.
-Whence the convexity of $S_c$ follows.
-
-Suppose $S_c$ is not compact.
-Note that we can assume that $p\in S_c$.
-Then by \ref{SHORT.ex:half-line:exist} there is a half-line $\lambda$ that starts at $p$ and runs in $S_c$ for some~$c$.
-It remains to observe that $f\circ\lambda(t)+t=0$ and use it to arrive at a contradiction.
-
-\parit{\ref{SHORT.ex:half-line:soul}.}
-Show that 
-$f(x)-c=\Dist_{\partial S_c}x$
-for any $x\in S_c$.
-Conclude that $S_s$ has no interior points.
-Since $S_s$ is convex, the first part follows.
-
-In the Euclidean plane, $S_s$ is a single point.
-In the cylinder, $S_s$ is a circle.
-The surface of $r$-neighborhood of an infinite rectangle provides an example with a line segment as $S_s$; this example is not smooth, but it can be smoothed keeping this property.
-One can use the cutoffs and mollifiers to do this (Section~\ref{sec:analysis}).
-
-
-\parbf{\ref{ex:line+half-line}.}
-Show that a cylinder does not contain a line and half-line that meet at exactly one point.
-It remains to apply the line splitting theorem (\ref{thm:splitting}).
 
 
