@@ -133,7 +133,7 @@ The case $\ell=1$ is shown on the diagram.
 \parit{Remark.}
 In the case $\ell=\pm1$, the curve is called \index{Viviani's curve}\emph{Viviani's curve}.
 It admits the following smooth regular parametrization with a self-intersection:
-\[t\mapsto(\pm(\cos t)^2,\cos t\cdot\sin t,\sin t).\]
+$t\mapsto(\pm(\cos t)^2,\cos t\cdot\sin t,\sin t)$.
 
 \parbf{\ref{ex:open-curve}.}
 Assume the contrary, then there is a sequence of real numbers $t_n\to \pm \infty$ such that $\gamma(t_n)$ converges;
@@ -401,9 +401,9 @@ It remains to integrate this inequality and show that the set with $\theta\ne0$ 
 
 \parbf{\ref{ex:DNA}}; \ref{SHORT.ex:DNA:c''c>=k}.
 Since $|\gamma(s)|\le 1$, we have
-\[\begin{aligned}
+\begin{align*}
 \langle\gamma''(s),\gamma(s)\rangle&\ge -|\gamma''(s)|\cdot|\gamma(s)|\ge-\kur(s)
-\end{aligned}\eqlbl{eq:<gamma'',gamma>>=-k}\]
+\end{align*}
 for all~$s$.
 
 \parit{\ref{SHORT.ex:DNA:int>=length-tc}.}
@@ -796,7 +796,7 @@ An example for the second part can be guessed from the diagram.
 \stepcounter{chapter}
 \setcounter{eqtn}{0}
 
-\parbf{\ref{ex:hyperboloinds}.} 
+\parbf{\ref{ex:hyperboloids}.} 
 Denote the level set by $\Sigma_\ell$.
 
 Show that $\nabla_p f=0$ if and only if $p=(0,0,0)$.
@@ -1812,6 +1812,10 @@ Use the last statement together with the cosine rule
 to show that $\cos\tilde\theta_n\to -1$ as $n\to\infty$;
 conclude that $\theta_n\to \pi$.
 
+\parbf{\ref{ex:thm:comp:cat:nsc}.}
+Consider the triangle on the hyperboloid with vertices $(1,0,0)$, $(-\tfrac{1}2, \tfrac{\sqrt{3} }2, 0)$, and $(-\tfrac{1}2, -\tfrac{\sqrt{3} }2, 0)$.
+Note that all its angles equal to $\pi$, but all model angles equal to $\tfrac{\pi}3$.
+
 \parbf{\ref{ex:diam-angle}.}
 Show that $\dist{p}{x}\Sigma\le \dist{p}{q}\Sigma$ and $\dist{q}{x}\Sigma\le \dist{p}{q}\Sigma$.
 Conclude that $\modangle xpq\ge \tfrac\pi3$.
@@ -1826,8 +1830,7 @@ Apply \ref{thm:comp:toponogov}.
 Choose vectors $\vec u$, and $\vec w$ 
 such that $|\vec w|=\dist{p}{x}{}$, $|\vec u|=1$, and $\measuredangle(\vec u,\vec w)=\measuredangle\hinge xpq$.
 Consider the function
-\[f\:t\mapsto t+|\vec w|-|\vec w-t\cdot \vec u|.\]
-
+$f\:t\mapsto t+|\vec w|-|\vec w-t\cdot \vec u|$.
 Set $t_0=\dist{x}{y}{}$ and $t_1=\dist{x}{q}{}$.
 Observe that 
 \begin{align*}
@@ -2080,7 +2083,7 @@ Then
 \end{clm}
 
 Use that $\Sigma$ is simply connected to show that 
-\[L=\set{x\in\Sigma}{\bus_-(x)=0}\]
+$L=\set{x\in\Sigma}{\bus_-(x)=0}$
 is a line.
 
 Choose an arc-length parametrization $v\mapsto\gamma(v)$ of $L$.
