@@ -27,3 +27,4 @@ lib/*
 *.zip
 *.eps
 *eps-converted-to.pdf
+*~
