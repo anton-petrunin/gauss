@@ -10,8 +10,8 @@ markcolor=black]{bookcover}
 
 \newbookcoverpart{pfront}{
 \setpartposx{\marklength+\bleedwidth+\spinewidth+\coverwidth+6mm}
-\setpartposy{\marklength+\bleedwidth+5mm}\setpartheight{\coverheight-5mm}
-\setpartwidth{\coverwidth-13mm}
+\setpartposy{\marklength+\bleedwidth+6mm}\setpartheight{\coverheight-12mm}
+\setpartwidth{\coverwidth-12mm}
 \settrimmedpart{0mm}{0mm}{0pt}{0pt}
 }
 
@@ -26,26 +26,22 @@ markcolor=black]{bookcover}
 
 \begin{bookcover}
 
-\definecolor{mycolor}{HTML}{89bace}
-\bookcovercomponent{color}{bg whole}{mycolor}
+\definecolor{textcolor}{HTML}{FFFFFF}
 
-\definecolor{textcolor}{HTML}{0b4d66}
-
-\bookcovercomponent{center}{front}{
-\vskip-.1in
-\includegraphics[trim=125 145 155 145, clip,width=\textwidth]{fish}
+\bookcovercomponent{center}{bg whole}{
+\includegraphics[width=.35cm+\textwidth]{drawing}
 \vfill
 }
 
 \bookcovercomponent{center}{spine}
 {\rotatebox[origin=c]{-90}{
 \color{textcolor}
-\fontsize{18}{25}\usefont{OT1}{lmtt}{b}{n}
+\fontsize{20}{25}\usefont{OT1}{lmtt}{b}{n}
        WHAT IS DIFFERENTIAL GEOMETRY: CURVES AND SURFACES}}
 
 \bookcovercomponent{center}{pfront}{
 \begin{center}
-{\color{white}\fontsize{24}{28}\usefont{OT1}{lmtt}{b}{n}
+{\color{textcolor}\fontsize{24}{28}\usefont{OT1}{lmtt}{b}{n}
 WHAT IS DIFFERENTIAL GEOMETRY\\[5mm]
 }
 {\color{white}{\color{white}\fontsize{37}{28}\usefont{OT1}{lmtt}{b}{n}CURVES AND SURFACES}\hskip-1mm
@@ -53,8 +49,8 @@ WHAT IS DIFFERENTIAL GEOMETRY\\[5mm]
 \end{center}
 \vfill
 \begin{center}
-{\color{textcolor}\ttfamily\LARGE{Anton Petrunin and
-Sergio Zamora Barrera}
+{\color{textcolor}\fontsize{18}{28}\usefont{OT1}{lmtt}{b}{n}Anton Petrunin and
+Sergio Zamora Barrera
 }
 \end{center}
 }
@@ -62,12 +58,12 @@ Sergio Zamora Barrera}
 \bookcovercomponent{center}{pback}{
 \begin{flushleft}
 \parbox{.8\textwidth}{
-\ttfamily\large\color{textcolor}
-Please send all misprints, comments, suggestions to \texttt{petrunin@math.psu.edu}}
+\color{textcolor}\fontsize{16}{28}\usefont{OT1}{lmtt}{b}{n}
+Preliminary edition for friends only.}
 \end{flushleft}
 \vfill
 \begin{flushleft}
-{\color{textcolor}\ttfamily\large github.com/anton-petrunin/gauss}
+{\color{textcolor}\fontsize{15}{28}\usefont{OT1}{lmtt}{b}{n} github.com/anton-petrunin/gauss}
 \end{flushleft}
 }
 \end{bookcover}
