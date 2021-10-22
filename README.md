@@ -6,15 +6,15 @@ The following command will create a local copy of the source code for you.
 
 ### MetaPost
 
-Go into subfolder `comparison-geometry/mppics/`, run `mpost pic`, come back to `comparison-geometry/`:
+Go into subfolder `mppics/`, run `mpost pic`, come back:
 
-`cd comparison-geometry/mppics/`<br/>
+`cd mppics/`<br/>
 `mpost pic`<br/>
 `cd ..`<br/>
 
 ### Asymptote
 
-Go into subfolder `asy/`, run `asy` for each `.asy`-file, come back to `comparison-geometry/`:
+Go into subfolder `asy/`, run `asy` for each `.asy`-file, come back:
 
 `cd asy`<br/>
 `asy deformation.asy`<br/>
