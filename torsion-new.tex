@@ -296,28 +296,30 @@ with the initial condition $\gamma(s_0)$ and an oriented orthonormal frame $\tan
 By \ref{thm:ODE}, this system has a unique solution which is defined in a maximal subinterval $\mathbb{J}\subset \mathbb{I}$ containing $s_0$.
 Let us show that actually $\mathbb{J}=\mathbb{I}$.
 
-Observe that 
-\[\langle\tan,\tan\rangle'
-=
-\langle\norm,\norm\rangle'
-=
-\langle\bi,\bi\rangle'
-=
-\langle\tan,\norm\rangle'
-=
-\langle\tan,\bi\rangle'
-=
-\langle\bi,\tan\rangle'=0.
+First note that 
+\[\begin{aligned}
+\langle\tan,\tan\rangle&=1,
+&
+\langle\norm,\norm\rangle&=1,
+&
+\langle\bi,\bi\rangle&=1,
+\\
+\langle\tan,\norm\rangle&=0,&
+\langle\tan,\norm\rangle&=0,&
+\langle\bi,\tan\rangle&=0
+\end{aligned}
+\eqlbl{eq:111000}
 \]
-Indeed,
-\begin{align*}
+at any parameter value $s$.
+
+Indeed, by \ref{eq:gamma'tan'norm'bi'}, we have the following system of differential equations:
+\[
+\begin{cases}
 \langle\tan,\tan\rangle'
 &=
 2\cdot\langle\tan,\tan'\rangle
 =
-2\cdot\kur\cdot \langle\tan,\norm\rangle
-=
-0,
+2\cdot\kur\cdot \langle\tan,\norm\rangle,
 \\
 \langle\norm,\norm\rangle'
 &=
@@ -326,17 +328,13 @@ Indeed,
 -
 2\cdot\kur\cdot\langle\norm,\tan\rangle
 +
-2\cdot\tor\cdot\langle\norm,\bi\rangle
-=
-0,
+2\cdot\tor\cdot\langle\norm,\bi\rangle,
 \\
 \langle\bi,\bi\rangle'
 &=
 2\cdot\langle\bi,\bi'\rangle
 =
--2\cdot\tor\langle\bi,\norm\rangle
-=
-0,
+-2\cdot\tor\langle\bi,\norm\rangle,
 \\
 \langle\tan,\norm\rangle'
 &=
@@ -348,33 +346,26 @@ Indeed,
 -
 \kur\cdot\langle\tan,\tan\rangle
 +
-\tor\cdot\langle\tan,\bi\rangle
-=
-0,
+\tor\cdot\langle\tan,\bi\rangle,
 \\
 \langle\norm,\bi\rangle'
 &=
 \langle\norm',\bi\rangle+\langle\norm,\bi'\rangle
-=0,
+=\kur\cdot\langle\tan,\bi\rangle+\tor\cdot\langle\bi,\bi\rangle-\tor\cdot\langle\norm,\norm\rangle,
 \\
 \langle\bi,\tan\rangle'
 &=
 \langle\bi',\tan\rangle+\langle\bi,\tan'\rangle
 =
 -\tor\cdot \langle\norm,\tan\rangle
-+\kur\cdot\langle\bi,\norm\rangle
-=0.
-\end{align*}
++\kur\cdot\langle\bi,\norm\rangle.
+\end{cases}
+\eqlbl{eq:<gamma'tan'norm'bi'>}
+\]
+Observe that the constants in \ref{eq:111000} is a solution of this system.
+Moreover, since we choose $\tan(s_0)$, $\norm(s_0)$, $\bi(s_0)$ to be an oriented orthonormal frame,
+\ref{eq:111000} solves our initial value problem for \ref{eq:<gamma'tan'norm'bi'>}.
 
-It follows that the values 
-$\langle\tan,\tan\rangle$,
-$\langle\norm,\norm\rangle$,
-$\langle\bi,\bi\rangle$,
-$\langle\tan,\norm\rangle$,
-$\langle\tan,\norm\rangle$,
-$\langle\bi,\tan\rangle$
-are constant functions of~$s$.
-Since we choose $\tan(s_0)$, $\norm(s_0)$, $\bi(s_0)$ to be an oriented orthonormal frame, we have that the triple $\tan(s)$, $\norm(s)$, $\bi(s)$ is an oriented orthonormal frame for any~$s$.
 In particular, $|\gamma'(s)|=1$ for all~$s$.
 
 Assume $\mathbb{J} \varsubsetneq \mathbb{I}$.

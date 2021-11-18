@@ -1,4 +1,4 @@
-settings.render=32;
+settings.render=64;
 
 import graph3;
 import contour;

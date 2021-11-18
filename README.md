@@ -23,7 +23,7 @@ Go into subfolder `asy/`, run `asy` for each `.asy`-file, come back:
 
 ### LaTeX
 
-Run `pdflatex`, `makeindex curves-and-surfaces` and `biber`:
+Run `pdflatex`, `makeindex` and `biber`:
 
 `pdflatex curves-and-surfaces.tex`<br/>
 `makeindex curves-and-surfaces`<br/>

@@ -1999,7 +1999,7 @@ z.b0=z.a0+1*direction 0 of p0;
 z.b3=z.a3+.5*direction 3 of p0;
 
 labelarcsprof(z.b0, z.a0, z.a3, 10,7, btex $\alpha$ etex);
-labelarcsprof2(z.a0, z.a3, (z.a3+2*(z.a3-z.b3)), 10,7, btex $\beta$ etex);
+whitelabelarcsprof2(z.a0, z.a3, (z.a3+2*(z.a3-z.b3)), 10,7, btex $\beta$ etex);
 draw p0;
 draw (z.a0+.5*(z.a0-z.b0))--z.b0 penhair;
 draw (z.a3+2*(z.a3-z.b3))--z.b3 penhair;
@@ -2074,7 +2074,7 @@ z.b3= .5*u*unitvector(direction 3 of p0);
 labelarcsprof(z.a0+z.b0, z.a0, z.a1, 10,7, btex {\small $\alpha_1$} etex);
 labelarcsprof(z.a1+z.b1, z.a1, z.a2, 10,7, btex {} etex);
 labelarcsprof(z.a2+z.b2, z.a2, z.a3, 10,7, btex {} etex);
-labelarcsprof(z.a3+z.b3, z.a3, z.a0, 10,7, btex {\small $\alpha_n$} etex);
+whitelabelarcsprof(z.a3+z.b3, z.a3, z.a0, 10,7, btex {\small $\alpha_n$} etex);
 
 labelarcsprof(z.a0-z.b0, z.a0, z.a3, 10,7, btex {\small $\beta_1$} etex);
 labelarcsprof(z.a1-z.b1, z.a1, z.a0, 10,7, btex {\small $\beta_2$} etex);
@@ -2191,14 +2191,16 @@ z.b2= .5*u*unitvector(direction 2 of p0);
 z.b23= .5*u*unitvector(direction 3 of p0);
 z.b3= .5*u*unitvector(direction 4 of p0);
 
-labelarcsprof(z.a0+z.b0, z.a0, z.a1, 10,7, btex {\small $\alpha_1$} etex);
+draw p0;
+
+whitelabelarcsprof(z.a0+z.b0, z.a0, z.a1, 10,7, btex {\small $\alpha_1$} etex);
 labelarcsprof(z.a1+z.b1, z.a1, z.a2, 10,7, btex {} etex);
 labelarcsprof(z.a2+z.b2, z.a2, z.a23, 10,7, btex {} etex);
 labelarcsprof(z.a23+z.b23, z.a23, z.a3, 10,7, btex {} etex);
-labelarcsprof(z.a3+z.b3, z.a3, z.a0, 10,7, btex {\small $\alpha_n$} etex);
+whitelabelarcsprof(z.a3+z.b3, z.a3, z.a0, 10,7, btex {\small $\alpha_n$} etex);
 
-labelarcsprof(z.a0-z.b0, z.a0, z.a3, 10,7, btex {\small $\beta_1$} etex);
-labelarcsprof(z.a1-z.b1, z.a1, z.a0, 10,7, btex {\small $\beta_2$} etex);
+whitelabelarcsprof(z.a0-z.b0, z.a0, z.a3, 10,7, btex {\small $\beta_1$} etex);
+whitelabelarcsprof(z.a1-z.b1, z.a1, z.a0, 10,8, btex {\small $\beta_2$} etex);
 labelarcsprof(z.a2-z.b2, z.a2, z.a1, 10,7, btex {} etex);
 labelarcsprof(z.a23-z.b23, z.a23, z.a2, 10,7, btex {} etex);
 labelarcsprof(z.a3-z.b3, z.a3, z.a23, 10,7, btex {} etex);
@@ -2206,7 +2208,6 @@ labelarcsprof(z.a3-z.b3, z.a3, z.a23, 10,7, btex {} etex);
 labeldashedarcsprof(z.a3, z.a0, z.a1, 12,16, btex {\small $\delta_1$} etex);
 labeldashedarcsprof(z.a0, z.a1, z.a2, 12,16, btex {\small $\delta_2$} etex);
 
-draw p0;
 draw p1;
 draw z.a0-z.b0--z.a0+z.b0 penhair;
 draw z.a1-z.b1--z.a1+z.b1 penhair;

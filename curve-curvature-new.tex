@@ -110,7 +110,7 @@ then its graph $y=f(x)$  has curvature
 at the point $p=(x,f(x))$.
 \end{thm}
 
-\begin{thm}{Exercise}\label{ex:approximation-const-curvature}
+\begin{thm}{Advanced exercise}\label{ex:approximation-const-curvature}
 Show that any smooth regular curve $\gamma\:\mathbb{I}\to\mathbb{R}^3$ with curvature at most 1 can be approximated by smooth curves with constant curvature~1.
 
 In other words, construct a sequence $\gamma_n\:\mathbb{I}\to\mathbb{R}^3$ of smooth regular curves  with constant curvature 1 such that $\gamma_n(t)\to \gamma(t)$ for any $t$ as $n\to\infty$.
@@ -156,6 +156,18 @@ Therefore, \ref{ex:integral-length} implies the following:
 \begin{thm}{Observation}\label{obs:tantrix}
 The total curvature of a smooth regular curve is the length of its tangent indicatrix.
 \end{thm}
+
+\begin{thm}{Exercise}\label{ex:tc(convex)}
+Let $\gamma$ be a convex smooth curve.
+Show that
+\begin{subthm}{}
+if $\gamma$ is closed, then $\tc\gamma=2\cdot\pi$.
+\end{subthm}
+\begin{subthm}{}
+if $\gamma$ is open, then $\tc\gamma\le\pi$.
+\end{subthm}
+\end{thm}
+
 
 \begin{thm}{Fenchel's theorem}
 \label{thm:fenchel}
@@ -392,7 +404,7 @@ Use this statement to show that any closed polygonal line has curvature at least
 Assume a polygonal line $\beta=p_0\dots p_n$ is inscribed in a smooth regular curve~$\gamma$.
 Then 
 \[\tc\gamma\ge \tc{\beta}.\]
-Moreover, if $\gamma$ is closed we allow the inscribed polygonal line $\beta$ to be closed.
+Moreover, if $\gamma$ is closed, we allow the inscribed polygonal line $\beta$ to be closed.
 
 \end{thm}
 
@@ -474,12 +486,15 @@ Draw a smooth regular plane curve $\gamma$ that has a self-intersection and such
 
 \begin{thm}{Proposition}\label{prop:fenchel=}
 The equality case in Fenchel's theorem holds only for convex plane curves;
-that is, if the total curvature of a smooth regular space curve $\gamma$ equals $2\cdot\pi$, then $\gamma$ is a convex plane curve.
+that is, the total curvature of a smooth regular space curve $\gamma$ equals $2\cdot\pi$ if and only if $\gamma$ is a convex plane curve.
 \end{thm}
 
 The proof is an application of Proposition~\ref{prop:inscribed-total-curvature}.
 
 \parit{Proof.}
+The if part follows from Exercise~\ref{ex:tc(convex)};
+it remains to prove the only-if part.
+
 Consider an inscribed quadrangle $abcd$ in~$\gamma$.
 By the definition of total curvature, we have that
 \begin{align*}
@@ -548,7 +563,7 @@ we get that $\gamma$ is a convex plane curve.
 \qeds
 
 \begin{wrapfigure}{r}{30 mm}
-\vskip-0mm
+\vskip-3mm
 \centering
 \includegraphics{mppics/pic-20}
 \vskip0mm
@@ -643,7 +658,7 @@ That is,
 \eqlbl{<gamma',u}
 \]
 if $s\ge s_0$.
-The same argument shows that \ref{<gamma',u} holds true for $s\ge s_0$.
+The same argument shows that \ref{<gamma',u} holds true for $s\le s_0$.
 Therefore, the inequality \ref{<gamma',u} holds for any~$s$.
 
 }
