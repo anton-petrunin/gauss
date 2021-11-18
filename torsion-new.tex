@@ -266,9 +266,9 @@ that is, $\rho(\ell)=o(\ell^3)$, where $\rho(\ell)$ denotes the distance from $\
 \section{Fundamental theorem of space curves}
 
 \begin{thm}{Theorem}\label{thm:fund-curves}
-Let $\kur(s)$ and $\tor(s)$ be two smooth real-valued functions defined on a real interval $\mathbb{I}$.
+Let $s\mapsto \kur(s)$ and $s\mapsto \tor(s)$ be two smooth real-valued functions defined on a real interval $\mathbb{I}$.
 Suppose $\kur(s)>0$ for all~$s$.
-Then there is a smooth unit-speed curve $\gamma\:\mathbb{I}\to\mathbb{R}^3$ with curvature $\kur(s)$ and torsion $\tor(s)$ for every~$s$.
+Then there is a smooth unit-speed curve $\gamma\:\mathbb{I}\to\mathbb{R}^3$ with curvature $\kur(s)$ and torsion $\tor(s)$ for every~$s\in \mathbb{I}$.
 Moreover, $\gamma$ is uniquely defined up to a rigid motion of the space.
 \end{thm}
 
@@ -290,7 +290,7 @@ Consider the following system of differential equations
 \end{cases}
 \eqlbl{eq:gamma'tan'norm'bi'}
 \]
-with the initial condition $\gamma(s_0)$ and an oriented orthonormal frame $\tan(s_0)$, $\norm(s_0)$, $\bi(s_0)$.
+with the initial condition formed by $\gamma(s_0)$ and an oriented orthonormal frame $\tan(s_0)$, $\norm(s_0)$, $\bi(s_0)$.
 (The system of equations has four vector equations, so it can be rewritten as a system of 12 scalar equations.)
 
 By \ref{thm:ODE}, this system has a unique solution which is defined in a maximal subinterval $\mathbb{J}\subset \mathbb{I}$ containing $s_0$.
@@ -312,7 +312,7 @@ First note that
 \]
 at any parameter value $s$.
 
-Indeed, by \ref{eq:gamma'tan'norm'bi'}, we have the following system of differential equations:
+Indeed, by \ref{eq:gamma'tan'norm'bi'}, we have the following system of scalar equations:
 \[
 \begin{cases}
 \langle\tan,\tan\rangle'
@@ -365,8 +365,6 @@ Indeed, by \ref{eq:gamma'tan'norm'bi'}, we have the following system of differen
 Observe that the constants in \ref{eq:111000} is a solution of this system.
 Moreover, since we choose $\tan(s_0)$, $\norm(s_0)$, $\bi(s_0)$ to be an oriented orthonormal frame,
 \ref{eq:111000} solves our initial value problem for \ref{eq:<gamma'tan'norm'bi'>}.
-
-In particular, $|\gamma'(s)|=1$ for all~$s$.
 
 Assume $\mathbb{J} \varsubsetneq \mathbb{I}$.
 Then an end of $\mathbb{J}$, say $b$, lies in the interior of $\mathbb{I}$.
