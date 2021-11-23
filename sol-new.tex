@@ -165,6 +165,16 @@ Observe that $a_2=\theta_0\z\le\theta_1\le \z\dots\le\theta_k=b_2$ if and only i
 $a_1=t_0\le t_1\le\z\dots\le t_k=b_1$.
 Make a conclusion.
 
+\parbf{\ref{ex:length-chain}.}
+Show that for any inscribed polygonal line $\beta$ and any $\epsilon>0$ we have
+\[\length\beta_n>\length\beta-\epsilon.\]
+for all large $n$.
+Conclude that
+\[\liminf_{n\to\infty}\length\beta_n\ge \length \gamma.\]
+Use the definition of length to show that 
+\[\limsup_{n\to\infty}\length\beta_n\le \length \gamma.\]
+Observe that the two obtained inequalities imply the required statement.
+
 \parbf{\ref{ex:length-image}.}
 Choose a partition $0=t_0<\dots <t_n=1$ of $[0,1]$.
 Set $\tau_0=0$ and 
@@ -183,7 +193,9 @@ By construction
 Since the partition $(t_i)$ is arbitrary, we get 
 \[\length \beta\ge \length \alpha.\]
 
-\parit{Remark.}
+\parit{Remarks.}
+If one assumes only that $\beta([0,1])\supset\alpha([0,1])$, then the statement follows from the following fact: \emph{the length of simple curve equals to the 1-dimensional Hausdorff measure of its image} \cite[Lemma 3.2]{falconer}.
+
 The inequality might be strict.
 It happens if $\beta$ runs back and forth along $\alpha$.
 In this case the partition $(\tau_i)$ above is \emph{not} arbitrary.
@@ -1300,7 +1312,7 @@ Let $x\in \ell$ be the point that minimizes the sum $|p-x|\z+|x-q|$.
 Show that $\measuredangle\hinge xpq\ge \pi-2\cdot\alpha$.
 Conclude that 
 \[|p-x|+|x-q|\le \frac{|p-q|}{\cos\alpha}.\]
-Apply \ref{cor:shorts+convex} to show that
+Apply \ref{thm:shorts+convex} to show that
 $\dist{p}{q}\Sigma\le |p-x|+|x-q|$.
 
 
@@ -1319,7 +1331,7 @@ Note that
 Denote by $\bar\gamma$ the closest-point projection of $\hat\gamma$ on~$\Sigma$.
 The curve $\bar\gamma$ lies in $\Sigma$, 
 it has the same endpoints as $\gamma$,
-and by \ref{cor:shorts+convex}
+and by \ref{thm:shorts+convex}
 \[\length\bar\gamma<\length\gamma.\]
 This means that $\gamma$ is not length minimizing --- 
 a contradiction.

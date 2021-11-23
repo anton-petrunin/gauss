@@ -118,7 +118,10 @@ Finally, since length is semicontinuous (\ref{thm:length-semicont}), we get that
 Therefore, $\length\gamma_\infty= \ell$ or, equivalently, $\gamma_\infty$ is a shortest path from $p$ to~$q$.
 \qeds
 
-\section{Closest-point projection}\label{sec:closest-point-projection}
+\section{Closest-point projection}
+
+The following statement belongs to convex geometry;
+we give prove it since it plays a significant role in the sequel.
 
 \begin{thm}{Lemma}\label{lem:closest-point-projection}
 Let $R$ be a closed convex set in $\mathbb{R}^3$.
@@ -152,7 +155,7 @@ Hence, the existence follows.
 {
 
 \begin{wrapfigure}{r}{22 mm}
-\vskip-0mm
+\vskip-10mm
 \centering
 \includegraphics{mppics/pic-40}
 \vskip-0mm
@@ -188,7 +191,9 @@ In particular,
 \[|p-q|\ge |\bar p-\bar q|.\]
 \qedsf
 
-\begin{thm}{Corollary}\label{cor:shorts+convex}
+\section{Shortest paths on convex surfaces}
+
+\begin{thm}{Theorem}\label{thm:shorts+convex}
 Assume a surface $\Sigma$ bounds a closed convex region $R$, and $p,q\in \Sigma$.
 Denote by $W$ the outer closed region of $\Sigma$;
 in other words, $W$ is the union of $\Sigma$ and the complement of~$R$.
@@ -199,8 +204,7 @@ Moreover, if  $\gamma$ does not lie in $\Sigma$, then the inequality is strict.
 \end{thm}
 
 \parit{Proof.}
-The first part of the corollary follows from the lemma and the definition of length.
-Indeed, consider the closest-point projection $\bar\gamma$ of~$\gamma$.
+Consider the closest-point projection $\bar\gamma$ of~$\gamma$.
 Note that $\bar\gamma$ lies in $\Sigma$ and connects $p$ to $q$; therefore, 
 \[\length\bar\gamma\ge \dist{p}{q}\Sigma.\]
 

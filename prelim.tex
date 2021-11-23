@@ -347,6 +347,11 @@ From the definition, it is easy to see that the intersection of an arbitrary fam
 The intersection of all convex sets containing $X$ is called the \index{convex!hull}\emph{convex hull} of $X$;
 it is the minimal convex set containing the set~$X$.
 
+These definitions and the following statements should appear on the first pages of any introductory text in convex geometry;
+see for example the book of Roger Webster \cite{webster}.
+
+\subsection*{Hyperplane separation}
+
 We will use the following corollary of the so-called \index{hyperplane separation theorem}\emph{hyperplane separation theorem}:
 
 \begin{thm}{Lemma}\label{lem:separation}
@@ -354,9 +359,6 @@ Let $K\subset \mathbb{R}^3$ be a closed convex set.
 Then for any point $p\notin K$ there is a plane $\Pi$ that separates $K$ from $p$;
 that is, $K$ and $p$ lie on opposite open half-spaces separated by $\Pi$.
 \end{thm}
-
-These definitions and hyperplane separation should appear on the first pages of any introductory text in convex geometry;
-see for example the book of Roger Webster \cite{webster}.
 
 \section{Linear algebra}
 
@@ -387,7 +389,7 @@ x\\y
 =\ell\cdot x^2+2\cdot m\cdot x\cdot y+n\cdot y^2,\]
 that is defined on a $(x,y)$-coordinate plane.
 Then after proper rotation of the coordinates, 
-the expression for $f$ in the new coordinates will be
+the expression for $f$ in the new $(x,y)$-coordinates will be
 \[\bar f(x,y)=
 \begin{pmatrix}
 x&y
@@ -725,7 +727,9 @@ Suppose we have an ordinary differential equation of order $k$
 \[\bm{x}^{(k)}=\bm{f}(\bm{x},\dots,\bm{x}^{(k-1)},t),\]
 where $t\mapsto\bm{x}=\bm{x}(t)$ is a function from a real interval to $\mathbb{R}^n$.
 
-This equation can be rewritten as $k$ first-order equations  with $k-1$ new vector variables $\bm{y}_i=\bm{x}^{(i)}$:
+This equation can be rewritten as $k$ first-order equations  with $k-1$ new vector variables 
+$\bm{y}_1=\bm{x}'$,
+$\bm{y}_2=\bm{x}'',\dots,\bm{y}_{k-1}=\bm{x}^{(k-1)}$:
 \[
 \begin{cases}
 \bm{x}'&=\bm{y}_1,
