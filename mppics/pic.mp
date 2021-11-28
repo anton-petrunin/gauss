@@ -153,10 +153,8 @@ u:=1cm;
 
 z.a=(0,0)*u;
 z.b=(2,0)*u;
-z.c=(2,2)*u;
-z.d=(0,2)*u;
-
-draw z.a--z.b--z.c--z.d--cycle penbold;
+z.c=(2,2.5)*u;
+z.d=(0,2.5)*u;
 
 z.u=.3[z.a,z.b];
 z.v=.4[z.b,z.c];
@@ -177,6 +175,8 @@ draw z.p--z.q;
 z.r=.5[z.p,z.q];
 z.s=.5[z.u,z.v];
 draw z.r--z.s;
+
+draw z.u..z.v..z.x..z.z..z.q..cycle penbold;
 
 hatchfill z.r--z.s--z.w--z.y--z.p--cycle  withcolor (87, 1.4mm, -.5bp);
 draw z.r--z.s--z.w--z.y--z.p--cycle penbold;

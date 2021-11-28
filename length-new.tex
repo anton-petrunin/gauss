@@ -61,12 +61,12 @@ n\to \infty.
 
 
 \begin{thm}{Exercise}\label{ex:length-image}
-Let $\alpha\:[0,1]\to\mathbb{R}^3$ be a simple path.
-Suppose that a path $\beta\:[0,1]\to\mathbb{R}^3$ has the same image as $\alpha$;
-that is, $\beta([0,1])=\alpha([0,1])$.
+Let $\gamma\:[0,1]\to\mathbb{R}^3$ be a simple path.
+Suppose that a path $\beta\:[0,1]\to\mathbb{R}^3$ has the same image as $\gamma$;
+that is, $\beta([0,1])=\gamma([0,1])$.
 Show that 
-\[\length \beta\ge \length \alpha.\]
-Try to prove the same assuming that only that $\beta([0,1])\supset\alpha([0,1])$.
+\[\length \beta\ge \length \gamma.\]
+Try to prove the same assuming that only that $\beta([0,1])\supset\gamma([0,1])$.
 \end{thm}
 
 
@@ -205,54 +205,46 @@ A simple plane curve is called \index{convex!curve}\emph{convex} if it bounds a 
 Since the boundary of any region is closed, any convex curve is either closed or open (see Section \ref{sec:proper-curves}).
 
 \begin{thm}{Proposition}\label{prop:convex-curve}
-Assume a convex closed curve $\alpha$ lies inside the domain bounded by another convex closed curve $\beta$.
+Assume that a convex closed curve $\alpha$ lies inside the domain bounded by a closed simple plane curve $\beta$.
 Then
 \[\length\alpha\le \length\beta.\]
 \end{thm}
 
-The proposition holds for any simple closed plane $\beta$ (not necessary convex) that bounds a region containing $\alpha$, but its proof is more technical.
-
-Note that to prove Proposition \ref{prop:convex-curve} it is sufficient to show that for any polygonal line inscribed in $\alpha$ there is a polygonal line inscribed in $\beta$ with equal or larger perimeter. %??? cheating
+Note that to prove Proposition \ref{prop:convex-curve} it is sufficient to show that perimeter of any polygon inscribed in $\alpha$ is not longer that  length of $\beta$.
 Since any polygon inscribed in $\alpha$ is convex, it is sufficient to prove the following lemma.
 
-
 \begin{thm}{Lemma}\label{lem:perimeter}
-Let $P$ and $Q$ be polygons.
-Assume $P$ is convex and $Q\supset P$.
+Assume that a convex polygon $P$ lies in a figure $F$ bounded by a simple closed curve.
 Then 
-\[\perim P\le \perim Q,\]
-where $\perim P$ denotes the perimeter of~$P$.
+\[\perim P\le \perim F,\]
+where $\perim F$ denotes the perimeter of~$F$.
 \end{thm}
 
+\parit{Proof.}
+Suppose $F'$ is a figure obtained from $F$ by cutting it along a \emph{chord};
+that is, a line segment in $F$ that runs from boundary to boundary.
+Note that by the triangle inequality, we have
+\[\perim F'\le \perim F.\]
 
 \begin{wrapfigure}{o}{24 mm}
-\vskip-0mm
+\vskip-10mm
 \centering
 \includegraphics{mppics/pic-7}
-\vskip0mm
+\vskip3mm
 %\caption*{}
 \end{wrapfigure}
 
-\parit{Proof.} 
-Note that by the triangle inequality,
-the inequality
-\[\perim P\le \perim Q\]
-holds true
-if $P$ can be obtained from $Q$ by cutting it along a chord;
-that is, a line segment in $Q$ that runs from boundary to boundary.
-
-Observe that there is an increasing sequence of polygons 
-$$P=P_0\subset P_1\subset\dots\subset P_n=Q$$
-such that $P_{i-1}$ obtained from $P_{i}$ by cutting along a chord.
+Observe that there is an decreasing sequence of figures 
+\[F=F_0\supset F_1\supset\dots\supset F_n=P\]
+such that $F_{i+1}$ obtained from $F_{i}$ by cutting along a chord.
 Therefore, 
 \begin{align*}
-\perim P=\perim P_0&\le\perim P_1\le\dots\le\perim P_n=\perim Q
+\perim F=\perim F_0&\ge\perim F_1\ge\dots\ge\perim F_n=\perim P.
 \end{align*}
-and the lemma follows.
-\qeds
+\qedsf
 
 \parit{Comment.}
-Two other proofs of \ref{lem:perimeter} can be obtained using Crofton's formulas (see \ref{ex:convex-croftons}) and the closest-point projection (see Lemma~\ref{lem:closest-point-projection}).  
+Two other proofs of \ref{lem:perimeter} can be obtained applying Crofton's formulas (see \ref{ex:convex-croftons}) and the closest-point projection (see Lemma~\ref{lem:closest-point-projection}).  
 
 \begin{thm}{Corollary}\label{cor:convex=>rectifiable}
 Any convex closed plane curve is rectifiable.  

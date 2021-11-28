@@ -178,28 +178,32 @@ Observe that the two obtained inequalities imply the required statement.
 \parbf{\ref{ex:length-image}.}
 Choose a partition $0=t_0<\dots <t_n=1$ of $[0,1]$.
 Set $\tau_0=0$ and 
-\[\tau_i=\max\set{\tau \in[0,1]}{\beta(\tau_i)=\alpha(t_i)}\]
+\[\tau_i=\max\set{\tau \in[0,1]}{\beta(\tau_i)=\gamma(t_i)}\]
 for $i>0$.
 Show that $(\tau_i)$ is a partition of $[0,1]$;
 that is, $0=\tau_0<\tau_1<\dots<\tau_n=1$.
 
 By construction 
 \begin{align*}
-|\alpha(t_0)&-\alpha(t_1)|+|\alpha(t_1)-\alpha(t_2)|+\dots+|\alpha(t_{n-1})-\alpha(t_n)|=
+|\gamma(t_0)&-\gamma(t_1)|+|\gamma(t_1)-\gamma(t_2)|+\dots+|\gamma(t_{n-1})-\gamma(t_n)|=
 \\
 &=
 |\beta(\tau_0)-\beta(\tau_1)|+|\beta(\tau_1)-\beta(\tau_2)|+\dots+|\beta(\tau_{n-1})-\beta(\tau_n)|.
 \end{align*}
 Since the partition $(t_i)$ is arbitrary, we get 
-\[\length \beta\ge \length \alpha.\]
+\[\length \beta\ge \length \gamma.\]
 
 \parit{Remarks.}
-If one assumes only that $\beta([0,1])\supset\alpha([0,1])$, then the problem becomes harder;
-it follows from the following fact: \emph{the length of simple curve equals to the 1-dimensional Hausdorff measure of its image} \cite[Theorem 2.6.2]{burago-burago-ivanov}.
-
 The inequality might be strict.
-It happens if $\beta$ runs back and forth along $\alpha$.
+It happens if $\beta$ runs back and forth along $\gamma$.
 In this case the partition $(\tau_i)$ above is \emph{not} arbitrary.
+
+If one assumes only that $\beta([0,1])\supset\gamma([0,1])$, then the problem becomes harder.
+It follows from the following useful fact \cite[2.6.1+2.6.2]{burago-burago-ivanov}:
+\emph{Denote by $h$ the 1-dimensional Hausdorff measure of the image $\gamma([0,1])$.
+Then $h\le \length\gamma$;
+moreover the equality holds if $\gamma$ is simple.}
+
 
 \parbf{\ref{ex:integral-length}.}
 For \ref{SHORT.ex:integral-length>}, apply the fundamental theorem of calculus for each segment in a given partition.
@@ -742,7 +746,7 @@ The second part in \ref{ex:between-parallels-1} can be reduced to \ref{ex:in-cir
 \parit{Remark.} Compare to \ref{ex:moon-rad}.
 
 \begin{wrapfigure}[4]{r}{34 mm}
-\vskip-0mm
+\vskip-3mm
 \centering
 \includegraphics{mppics/pic-268}
 \vskip0mm
@@ -771,7 +775,7 @@ In the latter case, we get a choice again.
 {
 
 \begin{wrapfigure}{o}{50 mm}
-\vskip0mm
+\vskip-2mm
 \centering
 \includegraphics{mppics/pic-29}
 \vskip0mm
@@ -798,7 +802,7 @@ Argue as at the end of the proof of \ref{thm:4-vert-supporting}, showing that th
 Apply the intermediate value theorem to show that curvature is  1 at some point.
 
 \begin{wrapfigure}[7]{r}{25 mm}
-\vskip-6mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-305}
 \vskip0mm
@@ -1042,7 +1046,7 @@ Apply \ref{prop:surf-support}.
 {
 
 \begin{wrapfigure}{r}{25 mm}
-\vskip-8mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-1050}
 \vskip-0mm
@@ -1105,13 +1109,6 @@ named after Sumner Myers who generalized it \cite{myers}.
 To prove \ref{SHORT.ex:convex-proper-sphere:single} use the convexity of~$R$.
 To prove \ref{SHORT.ex:convex-proper-sphere:smooth}, observe that the map $\Sigma\to\mathbb{S}^2$ is smooth and regular, then apply the inverse function theorem to show that its inverse is smooth as well.
 
-\begin{wrapfigure}[16]{r}{29 mm}
-\vskip-6mm
-\centering
-\includegraphics{mppics/pic-1182}
-\vskip-0mm
-\end{wrapfigure}
-
 \parbf{\ref{ex:convex-proper-plane}}; \ref{SHORT.ex:convex-proper-plane:a}
 We can assume that the origin lies on~$\Sigma$.
 Consider a sequence of points $x_n\in \Sigma$ such that $|x_n|\z\to \infty$ as $n\to \infty$.
@@ -1125,6 +1122,13 @@ Show that the half-line from the origin in the direction of $\vec u$ can be take
 Since $R$ is convex, so is its projection $\Omega$.
 
 Note and use that for any $q\in \Sigma$, the directions $\vec v_n=\tfrac{x_n-q}{|x_n-q|}$ converge to $\vec u$ as well.
+
+\begin{wrapfigure}[16]{r}{29 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-1182}
+\vskip-0mm
+\end{wrapfigure}
 
 Show that $\Sigma$ has no vertical tangent planes.
 Conclude that the projection map from $\Sigma$ to the $(x,y)$-plane is regular.
@@ -1290,7 +1294,7 @@ On the other hand, since $\Sigma$ is a graph outside the compact set $K$, we hav
 \setcounter{eqtn}{0}
 
 \begin{wrapfigure}[4]{r}{24 mm}
-\vskip-0mm
+\vskip-5mm
 \centering
 \includegraphics{mppics/pic-1250}
 \vskip-0mm
@@ -1424,12 +1428,12 @@ By \ref{prop:geod-existence} $\alpha$ coincides with $\hat\alpha$ --- a contradi
 It follows that $p$ and $q$ are the endpoints of $\alpha$.
 Analogously, $p$ and $q$ are the endpoints of $\beta$.
 
-\begin{wrapfigure}[11]{r}{38 mm}
+{
+
+\begin{wrapfigure}{r}{38 mm}
 \vskip-5mm
 \centering
 \includegraphics{mppics/pic-308}
-\bigskip
-\includegraphics{mppics/pic-310}
 \vskip0mm
 \end{wrapfigure}
 
@@ -1437,10 +1441,19 @@ For the second part, one could consider two distinct curves of the form
 \[ \gamma_b(t) = ( \cos t , \sin t , bt ) , t \in \mathbb{R} \]
 in the cylinder $x^2 + y^2 =1$.
 
+}
+
 \parbf{\ref{ex:min-geod+plane}.}
 Assume a shortest path $\alpha$ crosses $\Pi$ at least twice.
 In this case, there is an subarc $\alpha_1$ of $\alpha$ that lies entirely on one side
  on $\Pi$, has endpoints on $\Pi$, and these endpoints are distinct from the endpoints of $\alpha$.
+ 
+\begin{wrapfigure}{r}{38 mm}
+\vskip-6mm
+\centering
+\includegraphics{mppics/pic-310}
+\vskip0mm
+\end{wrapfigure}
 
 Let us remove the arc $\alpha_1$ from $\alpha$ and replace it with the reflection of $\alpha_1$ across $\Pi$.
 Note that the obtained curve, say $\beta$, lies in the surface;
