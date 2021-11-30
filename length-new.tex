@@ -210,7 +210,7 @@ Then
 \[\length\alpha\le \length\beta.\]
 \end{thm}
 
-Note that to prove Proposition \ref{prop:convex-curve} it is sufficient to show that perimeter of any polygon inscribed in $\alpha$ is not longer that  length of $\beta$.
+To prove Proposition \ref{prop:convex-curve} it is sufficient to show that the perimeter of any polygon inscribed in $\alpha$ is less or equal than the length of $\beta$.
 Since any polygon inscribed in $\alpha$ is convex, it is sufficient to prove the following lemma.
 
 \begin{thm}{Lemma}\label{lem:perimeter}
@@ -220,10 +220,11 @@ Then
 where $\perim F$ denotes the perimeter of~$F$.
 \end{thm}
 
-\parit{Proof.}
-Suppose $F'$ is a figure obtained from $F$ by cutting it along a \emph{chord};
-that is, a line segment in $F$ that runs from boundary to boundary.
-Note that by the triangle inequality, we have
+\parit{Proof.} 
+A \emph{chord} in $F$ is defined to be a line segment in $F$ with endpoints in its boundary. Suppose $F'$ is a figure obtained from $F$ by cutting it along a chord and removing one side. By the triangle inequality, we have
+%Suppose $F'$ is a figure obtained from $F$ by cutting it along a \emph{chord};
+%that is, a line segment in $F$ that runs from boundary to boundary.
+%Note that by the triangle inequality, we have
 \[\perim F'\le \perim F.\]
 
 \begin{wrapfigure}{o}{24 mm}
@@ -234,9 +235,9 @@ Note that by the triangle inequality, we have
 %\caption*{}
 \end{wrapfigure}
 
-Observe that there is an decreasing sequence of figures 
+Observe that there is a decreasing sequence of figures 
 \[F=F_0\supset F_1\supset\dots\supset F_n=P\]
-such that $F_{i+1}$ obtained from $F_{i}$ by cutting along a chord.
+such that $F_{i+1}$ is obtained from $F_{i}$ by cutting along a chord.
 Therefore, 
 \begin{align*}
 \perim F=\perim F_0&\ge\perim F_1\ge\dots\ge\perim F_n=\perim P.
