@@ -79,14 +79,14 @@ Let $\gamma_1$ and $\gamma_2$ be two smooth regular plane curves.
 
 Suppose $\gamma_1$ locally supports $\gamma_2$ from the left (right) at the time parameters $t_1$ and $t_2$.
 Then 
-\[\skur_1(t_1)\le \skur_2(t_2)\quad(\text{respectively}\quad \skur_1(t_1)\ge \skur_2(t_2)),\]
+\[\skur_1(t_1)\ge \skur_2(t_2)\quad(\text{respectively}\quad \skur_1(t_1)\le \skur_2(t_2)),\]
 where $\skur_1$ and $\skur_2$ denote the signed curvature of $\gamma_1$ and $\gamma_2$, respectively.
 
 A partial converse also holds.
 Namely, if $\gamma_1$ and $\gamma_2$ tangent and cooriented at the time parameters $t_1$ and $t_2$,
 then $\gamma_1$ locally supports $\gamma_2$ from the left (right) at the time parameters $t_1$ and $t_2$
 if 
-\[\skur_1(t_1)< \skur_2(t_2)\quad(\text{respectively}\quad \skur_1(t_1)> \skur_2(t_2)).\]
+\[\skur_1(t_1)> \skur_2(t_2)\quad(\text{respectively}\quad \skur_1(t_1)< \skur_2(t_2)).\]
 
 \end{thm}
 
@@ -97,18 +97,18 @@ $y=f_1(x)$ and $y=f_2(x)$ for smooth functions $f_1$ and $f_2$ such that $f_i(0)
 Note that $f_1''(0)=\skur_1(0)$, and $f_2''(0)=\skur_2(0)$ (see \ref{ex:curvature-graph})
 
 Clearly, $\gamma_1$ supports $\gamma_2$ from the left (right) if 
-\[f_1(x)\le f_2(x)\quad(\text{respectively}\quad f_1(x)\ge f_2(x))\]
+\[f_1(x)\ge f_2(x)\quad(\text{respectively}\quad f_1(x)\le f_2(x))\]
 for all sufficiently small values of~$x$.
 Applying the second derivative test, we get the result.
 \qeds
 
 
 \begin{thm}{Advanced exercise}\label{ex:support}
-Let $\gamma_0$ and $\gamma_1$ be two smooth unit-speed simple plane curves that are tangent and cooriented at the point $p\z=\gamma_0(0)\z=\gamma_1(0)$.
+Suppose that two smooth unit-speed simple plane curves $\gamma_0$ and $\gamma_1$ are tangent and cooriented at the point $p\z=\gamma_0(0)\z=\gamma_1(0)$.
 Assume $\skur_0(s)\le\skur_1(s)$ for any~$s$.
 Show that $\gamma_0$ locally supports $\gamma_1$ from the right at~$p$.
 
-Give an example of two proper curves $\gamma_0$ and $\gamma_1$ satisfying the above condition such that $\gamma_0$ does not support $\gamma_1$ at $p$ globally.
+Give an example of two proper curves $\gamma_0$ and $\gamma_1$ satisfying the above condition such that $\gamma_0$ does {}\emph{not} support $\gamma_1$ at $p$ {}\emph{globally}.
 \end{thm}
 
 According to \ref{thm:DNA}, for any closed smooth regular curve that runs in a unit disc, the average of its absolute curvature is at least~1; in particular, there is a point where the absolute curvature is at least~1.
@@ -413,8 +413,7 @@ in particular, any local minimum (or maximum) of the signed curvature is a verte
 For example, every point of a circle is a vertex.
 
 \begin{thm}{Four-vertex theorem}\label{thm:4-vert}
-Any smooth regular simple plane curve has at least four
-vertices.
+Any smooth regular simple closed plane curve has at least four vertices.
 \end{thm}
 
 }
@@ -439,7 +438,7 @@ Our proof of the following stronger statement based on the key lemma in the prev
 \end{wrapfigure}
 
 \begin{thm}{Theorem}\label{thm:4-vert-supporting}
-Any smooth regular simple plane curve is globally supported by its osculating circle at least at 4 distinct points;
+Any smooth regular simple closed plane curve is globally supported by its osculating circle at least at 4 distinct points;
 two from inside and two from outside.
 \end{thm}
 
