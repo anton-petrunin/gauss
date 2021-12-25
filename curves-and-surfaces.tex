@@ -3,11 +3,13 @@
 \geometry{top=0.9in, bottom=0.9in,inner=0.9in, outer=0.7in, paperwidth=6in, paperheight=9in}
 \makeindex
 
-%\newcommand{\arxiv}[2]{#1} %for arxiv
-\newcommand{\arxiv}[2]{#2} %for print
+\newcommand{\arxiv}[2]{#1} %for arxiv
+%\newcommand{\arxiv}[2]{#2} %for print
+
+%\overfullrule=100mm
 
 \begin{document}
-%\pagestyle{empty}
+%\pagestyle{empty}\renewcommand\includegraphics[2][{}]{}
 
 \input{title.tex}
 
@@ -53,7 +55,7 @@
 
 }
 
-\newgeometry{top=0.9in, bottom=0.9in,inner=0.9in, outer=0.7in, paperwidth=6in, paperheight=9in}
+\newgeometry{top=0.9in, bottom=0.9in,inner=0.9in, outer=0.7in}
 
 \input{afterword.tex}
 

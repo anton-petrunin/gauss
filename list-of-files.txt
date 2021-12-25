@@ -146,3 +146,6 @@ mppics/pic-86.mps
 mppics/pic-910.mps
 mppics/pic-920.mps
 pics/by-sa.eps
+pics/Curves.eps
+pics/Surfaces.eps
+pics/Geodesics.eps
