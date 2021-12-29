@@ -1,6 +1,8 @@
 \chapter{Torsion}
 \label{chap:torsion}
 
+Just like curvature measures how much a curve fails to be a straight line, the {}\emph{torsion} measures how much a space curve fails to be contained in a two-dimensional plane.
+
 This chapter provides mostly practice in computations.
 Except for the definitions in Section \ref{sec:frenet-frame},
 it will not be used in the sequel.
@@ -61,6 +63,11 @@ $\kur(s_0)\z\ne 0$ implies that $\kur(s)\z\ne 0$ for all $s$ near $s_0$.
 Therefore, the Frenet frame is also defined in an open interval containing $s_0$.
 Clearly, $\tan(s)$, $\norm(s)$, and $\bi(s)$ depend smoothly on $s$ in their domains of definition.
 Therefore, $\norm'(s_0)$ is defined, and so is the torsion.
+
+
+\begin{thm}{Exercise}\label{ex:torsion-plane}
+Let $\gamma$ be a smooth unit-speed space curve and assume that $\gamma^{\prime \prime}$ never vanishes. Show that $\gamma$ is contained in a plane of the form $\{ x \in \mathbb{R}^3 \vert x \cdot \vec v = c \}$ for some non-zero vector $\vec v$ and $c \in \mathbb{R}$ if and only if $\tor \equiv 0$.
+\end{thm}
 
 
 \begin{thm}{Exercise}\label{ex:helix-torsion}

@@ -1,6 +1,12 @@
 \chapter{Curvature}
 \label{chap:curve-curvature}
 
+In mathematics, the term {}\emph{curvature} is used for anything that measures how much a {}\emph{geometric object} deviates from being {}\emph{straight}.
+For curves, the curvature is a pointwise quantitative measure of how much the curve differs from a straight line.
+
+
+
+
 \section{Acceleration of a unit-speed curve}
 
 Recall that any regular smooth curve can be reparametrized by its arc-length (\ref{prop:arc-length-smooth}).
@@ -32,11 +38,6 @@ For a unit-speed smooth space curve $\gamma$, the magnitude $|\gamma''(s)|$ of i
 If $\gamma$ is simple, then we can say that $|\gamma''(s)|$ is the curvature at the point $p=\gamma(s)$ without ambiguity.
 The curvature is usually denoted by $\kur(s)$ or $\kur(s)_\gamma$, and, in the case of simple curves, it might be also denoted by $\kur(p)$ or $\kur(p)_\gamma$.
 
-The curvature measures how fast the curve turns;
-if you drive along a plane curve, then the curvature describes the position of your steering wheel at the given point.
-
-In general, the term {}\emph{curvature} is used for anything that measures how much a {}\emph{geometric object} deviates from being {}\emph{straight};
-for curves, it measures how fast it deviates from a straight line.
 
 
 \begin{thm}{Exercise}\label{ex:zero-curvature-curve}
@@ -135,9 +136,9 @@ Let $\gamma\:\mathbb{I}\to\mathbb{R}^3$ be a smooth unit-speed curve and $\tan$ 
 The integral 
 \[\tc\gamma\df\int_{\mathbb{I}}\kur(s)\cdot ds\]
 is called the \index{total!curvature}\emph{total curvature of}\label{page:total curvature of:smooth-def}
-$\gamma$.
+$\gamma$, and it measures the total change of direction along $\gamma$.
 
-Rewriting the above integral using a change of variables produce a formula for a general parametrization $t\mapsto \gamma(t)$:
+Rewriting the above integral using a change of variables produces a formula for a general parametrization $t\mapsto \gamma(t)$:
 \[\tc\gamma\df\int_{\mathbb{I}}\kur(t)\cdot|\gamma'(t)| \cdot dt.
 \eqlbl{eq:tocurv}\]
 
