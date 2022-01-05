@@ -1,6 +1,8 @@
 \chapter{Curvatures}
 \label{chap:surface-curvature}
 
+In the previous chapter, we learned that the tangent plane $\T_p$ to any surface $\Sigma$ has first-order contact with it at $p$. This means that up to first-order, all surfaces locally look the same. This is not the case for second-order approximations, which are determined by the {}\emph{principal curvatures} of the surface.
+
 \section{Tangent-normal coordinates} \label{sec:lmn}
 \index{tangent-normal coordinates}
 
@@ -130,7 +132,7 @@ Show that any surface with positive Gauss curvature is orientable.
 The sum \index{10h@$H$}
 \[H(p)=k_1(p)+ k_2(p)\] 
 is called the \index{curvature}\index{mean curvature}\emph{mean curvature}%
-\footnote{Some authors define it as $\tfrac12\cdot(k_1(p)+ k_2(p))$ --- the mean value of the principal curvatures. It suits the name better, but it is not as convenient when it comes to calculations.}
+\footnote{Some authors define it as $\tfrac12\cdot(k_1(p)+ k_2(p))$ --- the mean value of the principal curvatures. It suits the name better, but it is not as convenient when it comes to computations.}
 at~$p$.
 We may also denote it by $H(p)_\Sigma$.
 The mean curvature can be also interpreted as the trace of the Hessian matrix $M_p\z=
@@ -147,6 +149,12 @@ A surface with vanishing mean curvature is called \index{minimal surface}\emph{m
 
 Note that reversing the orientation of $\Sigma$ does not change the Gauss curvature, but changes the sign of the mean curvature.
 In particular, the Gauss curvature is well-defined for nonoriented surfaces.
+
+\begin{thm}{Exercise}\label{ex:re-scale-surface-curvature}
+Let $\Sigma$ be an oriented surface, and let $\Sigma_{\lambda}$ be a scaled copy of $\Sigma$ with factor $\lambda > 0$; that is, $\Sigma_{\lambda}$ consists of the points $\lambda \cdot x$ with $x \in \Sigma$. Show that
+\[  K(\lambda \cdot p) _{\Sigma_{\lambda}} = \frac{K(p)_{\Sigma}}{\lambda^2}   \quad\text{and}\quad  H(\lambda \cdot p) _{\Sigma_{\lambda}} = \frac{H(p)_{\Sigma}}{\lambda}   \]
+for any $p]in \Sigma$.  
+\end{thm}
 
 \section{Shape operator}
 
@@ -266,9 +274,11 @@ Then
 \Shape\vec j&=m\cdot \vec i+n\cdot\vec j;
 \end{align*}
 that is, the multiplication by the Hessian matrix at $p$ describes its shape operator.
-
-In particular, the principal curvatures of $\Sigma$ at $p$ are the eigenvalues of $\Shape_p$ and the principal directions are the eigendirections of $\Shape_p$.
 \end{thm}
+
+
+This corollary illustrates the close relationship between the curvatures of a surface and its shape operator; the principal curvatures of $\Sigma$ at $p$ are the eigenvalues of $\Shape_p$, the principal directions are the eigendirections of $\Shape_p$, the Gaussian curvature is the determinant of $\Shape_p$, and the mean curvature is the trace of $\Shape_p$.
+
 
 Since the Hessian matrix is symmetric, the corollary also implies that $\Shape$ is self-adjoint which gives another way to solve \ref{ex:self-adjoint}.
 
