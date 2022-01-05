@@ -2997,8 +2997,8 @@ p1=z.b0..z.b1..z.b2{direction 2 of p0}..z.b3..z.b4;
 p2=z.b3..z.a2+(0,2)*u..z.b1;
 
 
-draw p0 dashed evenly;
-drawarrow subpath (1.3,2.7) of p0 pensemibold;
+draw p0 dashed evenly withcolor .5;
+drawarrow subpath (1.3,2.7) of p0 pensemibold withcolor .5;
 draw p1 dashed evenly;
 drawarrow subpath (1,3) of p1 pensemibold;
 draw p2 penhair;
@@ -3008,7 +3008,7 @@ dOt point 2 of p0;
 hatchfill (subpath (1,3) of p1)--p2--cycle  withcolor (67, 1.4mm, -.5bp);
 
 label.bot(btex $p$ etex, z.a2);
-label.top(btex $\gamma_2$ etex,  point .7 of p0);
+label.top(btex {\color{darkgray}$\gamma_2$} etex,  point .7 of p0);
 label.bot(btex $\gamma_1$ etex, point .7 of p1);
 whitelabel(btex $R$ etex, z.a2+(0,1)*u);
 endfig;

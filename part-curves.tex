@@ -3,10 +3,11 @@
 \AddToShipoutPictureBG*{\includegraphics[width=\paperwidth]{pics/Curves}}
 \cleardoublepage
 \thispagestyle{empty}
+\stepcounter{part}
 \begin{center}
-{\Huge\textbf{Part I:\qquad Curves}}\
+{\Huge\textbf{Part \Roman{part}:\qquad Curves}}\
 \end{center}
-\addcontentsline{toc}{part}{Curves}
+\addcontentsline{toc}{part}{\Roman{part} Curves}
 \clearpage}
 {\backgroundsetup{
 scale=.9,
@@ -20,10 +21,11 @@ contents={
 \cleardoublepage
 \phantomsection
 \thispagestyle{empty}
-\begin{center}
-{\Huge\textbf{Part I:\qquad Curves}}\
-\end{center}
 \BgThispage
-\addcontentsline{toc}{part}{\protect\numberline{1} Curves}
+\stepcounter{part}
+\addcontentsline{toc}{part}{\Roman{part} Curves}
+\begin{center}
+{\Huge\textbf{Part \Roman{part}:\qquad Curves}}\
+\end{center}
 }
 

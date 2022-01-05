@@ -3,10 +3,11 @@
 \AddToShipoutPictureBG*{\includegraphics[width=\paperwidth]{pics/Geodesics}}
 \cleardoublepage
 \thispagestyle{empty}
+\stepcounter{part}
 \begin{center}
-{\Huge\textbf{Part III:\qquad Geodesics}}\
+{\Huge\textbf{Part \Roman{part}:\qquad Geodesics}}\
 \end{center}
-\addcontentsline{toc}{part}{Geodesics}
+\addcontentsline{toc}{part}{\Roman{part} Geodesics}
 \clearpage
 }
 {\backgroundsetup{
@@ -22,10 +23,11 @@ contents={%
 
 \cleardoublepage
 \phantomsection
-\addcontentsline{toc}{part}{Geodesics}
+\stepcounter{part}
+\addcontentsline{toc}{part}{\Roman{part} Geodesics}
 \thispagestyle{empty}
 \begin{center}
-{\Huge\textbf{Part III:\qquad Geodesics}}\
+{\Huge\textbf{Part \Roman{part}:\qquad Geodesics}}\
 \end{center}
 \BgThispage
 }

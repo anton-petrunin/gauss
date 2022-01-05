@@ -3,10 +3,11 @@
 \AddToShipoutPictureBG*{\includegraphics[width=\paperwidth]{pics/Surfaces}}
 \cleardoublepage
 \thispagestyle{empty}
+\stepcounter{part}
 \begin{center}
-{\Huge\textbf{Part II:\qquad Surfaces}}\
+{\Huge\textbf{Part \Roman{part}:\qquad Surfaces}}\
 \end{center}
-\addcontentsline{toc}{part}{Surfaces}
+\addcontentsline{toc}{part}{\Roman{part} Surfaces}
 \clearpage
 }
 {\backgroundsetup{scale=.64,opacity=1,angle=0,vshift=40mm,contents={%
@@ -16,10 +17,11 @@
 
 \cleardoublepage
 \phantomsection
-\addcontentsline{toc}{part}{Surfaces}
+\stepcounter{part}
+\addcontentsline{toc}{part}{\Roman{part} Surfaces}
 \thispagestyle{empty}
 \begin{center}
-{\Huge\textbf{Part II:\qquad Surfaces}}\
+{\Huge\textbf{Part \Roman{part}:\qquad Surfaces}}\
 \end{center}
 \BgThispage
 }
