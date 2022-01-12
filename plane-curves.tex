@@ -107,12 +107,12 @@ Consider the function
 Note that by the fundamental theorem of calculus, we have $\theta'(s)\z=\skur(s)$ for all~$s$.
 
 Set 
-\[\tan(s)=(\cos[\theta(s)],\sin[\theta(s)]),\]
+$\tan(s)=(\cos[\theta(s)],\sin[\theta(s)])$,
 and let $\norm(s)$ be its counterclockwise rotation by angle $\tfrac\pi2$; so 
-\[\norm(s)=(-\sin[\theta(s)],\cos[\theta(s)]).\]
+$\norm(s)=(-\sin[\theta(s)],\cos[\theta(s)])$.
 Consider the curve 
 \[\gamma(s)=\int_{s_0}^s\tan(s)\cdot ds.\]
-Since $|\gamma'|=|\tan|=1$, the curve $\gamma$ is unit-speed, and $\tan,\norm$ is its Frenet frame. 
+Since $|\gamma'|=|\tan|=1$, the curve $\gamma$ is unit-speed, and its Frenet frame is~$\tan,\norm$. 
 
 Note that
 \begin{align*}
@@ -158,7 +158,7 @@ Assume an oriented $(x,y)$-coordinate system is chosen in such a way that $\gamm
 Then 
 \[\gamma'(s)=(\cos[\theta(s)],\sin[\theta(s)]) , \]
 for all $s$, where 
-\[\theta(s)=\int_{s_0}^s\skur(t)\cdot dt.\]
+\[\theta(s)\df\int_{s_0}^s\skur(t)\cdot dt.\]
 \end{thm}
 
 
@@ -234,14 +234,6 @@ Consider a closed polygonal line $\beta=p_1\dots p_n$ inscribed in~$\gamma$.
 We can assume that the arcs between the vertices are sufficiently small 
 so that the polygonal line is simple, and each arc $\gamma_i$ from $p_i$ to $p_{i+1}$ has small total absolute curvature, say  $\tc{\gamma_i}<\pi$ for each~$i$.
 
-{
-
-\begin{wrapfigure}[13]{o}{43 mm}
-\vskip-5mm
-\centering
-\includegraphics{mppics/pic-59}
-\vskip0mm
-\end{wrapfigure}
 
 As usual, we use indexes modulo $n$; in particular, $p_{n+1}\z=p_1$.
 Assume $p_i=\gamma(t_i)$.
@@ -253,13 +245,19 @@ Set
 \end{align*}
 where $\alpha_i,\beta_i\in(-\pi,\pi)$ are signed angles --- $\alpha_i$ is positive if $\vec w_i$ points to the left from~$\vec v_i$.
 
-}
+
+\begin{wrapfigure}[13]{o}{43 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-59}
+\vskip0mm
+\end{wrapfigure}
 
 By \ref{eq:tsc-theta}, the value
 \[\tgc{\gamma_i}-\alpha_i-\beta_{i+1}\eqlbl{eq:Psi-alpha-beta}\]
 is a multiple of $2\cdot\pi$.
 Since $\tc{\gamma_i}<\pi$,the chord lemma (\ref{lem:chord}) implies that $|\alpha_i|\z+|\beta_i|<\pi$.
-By \ref{eq:tsc-tc}, we have that $|\tgc{\gamma_i}|\le\tc{\gamma_i}$;
+By \ref{eq:tsc-tc}, we have that $|\tgc{\gamma_i}|\z\le\tc{\gamma_i}$;
 therefore the value in \ref{eq:Psi-alpha-beta} vanishes.
 In other words, for each $i$ we have
 \[\tgc{\gamma_i}=\alpha_i+\beta_{i+1}.\]
@@ -368,15 +366,12 @@ Suppose $s_0=0$.
 Choose a coordinate system such that $p$ is its origin and $\tan$ points in the direction of the $x$-axis.
 Therefore, $\norm$ points in the direction of the $y$-axis.
 Then
-\begin{align*}\theta(s)&=\int_{0}^s\skur\cdot dt=
-\\
-&=\skur\cdot s.
+\begin{align*}\theta(s)&=\int_{0}^s\skur\cdot dt=\skur\cdot s.
 \end{align*}
 Therefore,
 \[\sigma'(s)=(\cos[\skur\cdot s],\sin[\skur\cdot s]).\]
 It remains to integrate the last identity.
-If $\skur=0$, we get 
-\[\sigma(s)=(s,0)\]
+If $\skur=0$, we get $\sigma(s)=(s,0)$
 which describes the line $\sigma(s)=p+s\cdot \tan$.
 
 If $\skur\ne 0$, we get
@@ -507,8 +502,7 @@ in the proof we showed that $(\tfrac1{\skur})'\cdot\norm$ is its velocity vector
 \begin{thm}{Exercise}\label{ex:evolute-of-ellipse}
 Show that the stretched astroid 
 \[\omega(t)=(\tfrac{a^2-b^2}{a}\cdot \cos^3 t,  \tfrac{b^2-a^2}{b}\cdot\sin^3 t)\]
-is an evolute of the ellipse
-\[\gamma(t)= (a\cdot \cos t, b\cdot\sin t).\]
+is an evolute of the ellipse $\gamma(t)= (a\cdot \cos t, b\cdot\sin t)$.
 \end{thm}
 
 The following theorem states formally that 
