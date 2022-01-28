@@ -38,6 +38,18 @@ urlcolor=black%
 \usepackage{epsfig,lpic,wrapfig}
 \usepackage{multicol}
 
+\usepackage{accsupp}
+\usepackage{soulutf8}
+\sodef\an{}{.1em}{.5em plus.1em}{.5em plus.1em minus.1em}
+
+\newcommand\ann[1]{%
+    \BeginAccSupp{method=escape,ActualText={\detokenize{#1}}}%
+      \an{#1}%
+    \EndAccSupp{}%
+}
+
+\def\emph{\ann}
+
 \usepackage{titling}
 \newcommand{\subtitle}[1]{%
 \posttitle{%

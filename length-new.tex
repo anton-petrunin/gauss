@@ -337,7 +337,9 @@ Therefore, if $\gamma$ has infinite length, then the average of lengths of $\gam
 \qeds
 
 \begin{thm}{Exercise}\label{ex:convex-croftons}
-Show that any closed plane curve $\gamma$ has length at least $\pi\cdot s$, where $s$ is the average length of the projections of $\gamma$ to lines.
+Suppose a closed simple plane curve $\gamma$ bounds a figure~$F$.
+Let $s$ be the average length of the projections of $F$ to lines.
+Show that $\length\gamma\ge \pi \cdot s$.
 Moreover, equality holds if and only if $\gamma$ is convex.
 
 Use this statement to give another solution to Exercise~\ref{ex:convex-hull}.
@@ -505,8 +507,8 @@ Any closed spherical curve of length less than $2\cdot \pi$ lies in an open hemi
 \end{thm}
 
 This lemma will play a key role in the proof of Fenchel's theorem (\ref{thm:fenchel}).
-The proof is not as simple as one may think --- try to prove it  before reading the proof.
 The following proof is due to Stephanie Alexander.
+It is not as simple as one may think --- try to prove it  before reading further.
 
 \parit{Proof.}
 Let $\gamma$ be a closed curve in $\mathbb{S}^2$ of length $2\cdot\ell$.
@@ -585,7 +587,7 @@ The vector ${\vec w}^*_{\vec u}$ is defined if ${\vec w}\ne\pm {\vec u}$.
 \begin{subthm}{adex:crofton:crofton}
 Show that for any spherical curve $\gamma$ we have
 \[\length\gamma=\overline{\length\gamma^*_{\vec u}},\]
-where $\overline{\length\gamma^*_{\vec u}}$ denotes the average length of $\gamma^*_{\vec u}$ with ${\vec u}$ varying in $\mathbb{S}^2$.
+where $\overline{\length\gamma^*_{\vec u}}$ denotes the average length of $\gamma^*_{\vec u}$ with ${\vec u}$ varying in~$\mathbb{S}^2$.
 (This is a spherical analog of Crofton's formula.)
 \end{subthm}
 
@@ -594,4 +596,9 @@ Use \ref{SHORT.adex:crofton:crofton} to give another proof of the hemisphere lem
 \end{subthm}
  
 \end{thm}
+
+Spherical Crofton's formula can be rewritten the following way:
+\[\length\gamma=\overline n\cdot \pi,\]
+where $\overline n$ denotes the avarage number of intersection points of $\gamma$ with equators.
+The equivalence can be proved using Levi's monotone convergence theorem.
 
