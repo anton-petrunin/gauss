@@ -41,11 +41,11 @@ The curvature is usually denoted by $\kur(s)$ or $\kur(s)_\gamma$, and, in the c
 
 
 \begin{thm}{Exercise}\label{ex:zero-curvature-curve}
-Show that a regular simple space curve has 0 curvature at each point if and only if it is a segment of a straight line.
+Show that a regular smooth simple space curve has 0 curvature at each point if and only if it is a segment of a straight line.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:scaled-curvature}
-Let $\gamma$ be a smooth simple space curve, and let $\gamma_{\lambda}$ be a scaled copy of $\gamma$ with factor $\lambda >0$;
+Let $\gamma$ be a regular smooth simple space curve, and let $\gamma_{\lambda}$ be a scaled copy of $\gamma$ with factor $\lambda >0$;
 that is, $\gamma_{\lambda}(t)=\lambda \cdot\gamma(t)$ for any~$t$.
 Show that 
 \[\kur(\lambda \cdot p )_{\gamma_{\lambda}}
@@ -359,8 +359,8 @@ Then
 \end{thm}
 
 \parit{Proof.}
-Let us parametrize the chord $\ell$ from $\gamma(b)$ to $\gamma(a)$ and consider the cyclic concatenation $\bar\gamma$ of $\gamma$ and $\ell$.
-The closed curve $\bar\gamma$ has two external angles $\pi-\alpha$ and $\pi-\beta$.
+Let us parametrize the chord $\ell$ from $\gamma(b)$ to $\gamma(a)$ and consider the cyclic concatenation $\hat\gamma$ of $\gamma$ and $\ell$.
+The closed curve $\hat\gamma$ has two external angles $\pi-\alpha$ and $\pi-\beta$.
 
 \begin{wrapfigure}{r}{45 mm}
 \vskip-5mm
@@ -370,9 +370,9 @@ The closed curve $\bar\gamma$ has two external angles $\pi-\alpha$ and $\pi-\bet
 \end{wrapfigure}
 
 Since the curvature of $\ell$ vanishes, we get 
-\[\tc{\bar\gamma}=\tc\gamma+(\pi-\alpha)+(\pi-\beta).\]
+\[\tc{\hat\gamma}=\tc\gamma+(\pi-\alpha)+(\pi-\beta).\]
 According to the generalized Fenechel's theorem (\ref{thm:gen-fenchel}),
-$\tc{\bar\gamma}\ge 2\cdot\pi$;
+$\tc{\hat\gamma}\ge 2\cdot\pi$;
 hence \ref{tc>a+b} follows.
 \qeds
 
@@ -401,10 +401,10 @@ Use this statement to show that any closed polygonal line has curvature at least
 
 
 \begin{thm}{Proposition}\label{prop:inscribed-total-curvature}
-Assume a polygonal line $\beta=p_0\dots p_n$ is inscribed in a smooth regular curve~$\gamma$.
+Assume a polygonal line $p_0\dots p_n$ is inscribed in a smooth regular curve~$\gamma$.
 Then 
-\[\tc\gamma\ge \tc{\beta}.\]
-Moreover, if $\gamma$ is closed, we allow the inscribed polygonal line $\beta$ to be closed.
+\[\tc\gamma\ge \tc{p_0\dots p_n}.\]
+Moreover, if $\gamma$ is closed, we allow the inscribed polygonal line $p_0\dots p_n$ to be closed.
 
 \end{thm}
 
@@ -437,7 +437,7 @@ By the chord lemma, the total curvature of the arc of $\gamma$ from $p_i$ to $p_
 
 Therefore, if $\gamma$ is a closed curve, we have
 \begin{align*}
-\tc{\beta}&=\theta_1+\dots+\theta_n\le 
+\tc{p_0\dots p_n}&=\theta_1+\dots+\theta_n\le 
 \\
 &\le\beta_1+\alpha_1+\dots+\beta_n+\alpha_n = 
 \\
@@ -447,7 +447,7 @@ Therefore, if $\gamma$ is a closed curve, we have
 \end{align*}
 If $\gamma$ is an arc, the argument is analogous:
 \begin{align*}
-\tc{\beta}&=\theta_1+\dots+\theta_{n-1}\le 
+\tc{p_0\dots p_n}&=\theta_1+\dots+\theta_{n-1}\le 
 \\
 &\le\beta_1+\alpha_1+\dots+\beta_{n-1}+\alpha_{n-1} \le
 \\
@@ -467,7 +467,7 @@ where the least upper bound is taken over all polygonal lines~$\beta$ inscribed 
 \end{thm}
 
 This exercise can be used to define the total curvature of an arbitrary curve~$\gamma$.
-Namely, it can be defined as {}\emph{the least upper bound on the total curvatures of inscribed nondegenerate polygonal lines inscribed in~$\gamma$.}
+Namely, it can be defined as {}\textit{the least upper bound on the total curvatures of inscribed nondegenerate polygonal lines inscribed in~$\gamma$.}
 
 It is possible to generalize most of the statements in this chapter to the (nonsmooth) curves of finite total curvature.
 This theory was developed by Alexandr Alexandrov and Yuri Reshetnyak \cite{aleksandrov-reshetnyak};
@@ -612,15 +612,27 @@ Construct two simple smooth unit-speed plane curves $\gamma_1,\gamma_2\:[a,b]\to
 \parit{Proof.}
 Denote by $\tan_1$ and $\tan_2$ the tangent indicatrixes of $\gamma_1$ and $\gamma_2$, respectively.
 
-Let $\gamma_1(s_0)$ be the point on $\gamma_1$ furthest to the line 
-thru $\gamma(a)$ and $\gamma(b)$.
+Let $\gamma_1(s_0)$ be the point on $\gamma_1$ furthest to the line thru $\gamma(a)$ and $\gamma(b)$.
 Consider two unit vectors 
 \[\vec u_1=\tan_1(s_0)=\gamma_1'(s_0)
 \quad\text{and}\quad
 \vec u_2=\tan_2(s_0)=\gamma_2'(s_0).\]
+Note that $\gamma(b)$ lies in the direction of $\vec u_1$ from $\gamma(a)$.
+
+Lets us show that 
+\[\measuredangle(\gamma'_1(s),\vec u_1)\ge \measuredangle(\gamma'_2(s),\vec u_2)
+\eqlbl{<gamma',u}
+\]
+for any $s$.
+We will prove for $s\le s_0$; the case $s\ge s_0$ is analogous.
 
 Since $\gamma_1$ is an arc of a convex curve, its indicatrix $\tan_1$ runs in one direction along the unit circle.
-Suppose $s\le s_0$, then 
+Moreover, the arc $\tan_1|_{[s,s_0]}$ lies in one of the unit semicircle with endpoints $\vec u_1$ and $-\vec u_1$.
+It follows that 
+\[\measuredangle(\tan_1(s),\vec u_1)=\length (\tan_1|_{[s,s_0]}).\]
+By \ref{obs:S2-length}, we also have 
+\[\measuredangle(\tan_2(s),\vec u_2)\le \length (\tan_2|_{[s,s_0]}).\]
+
 
 {
 
@@ -631,10 +643,9 @@ Suppose $s\le s_0$, then
 \vskip0mm
 \end{wrapfigure}
 
-\vskip-4mm
-
+Therefore,
 \begin{align*}
-\measuredangle(\gamma'_1(s),\vec u_1)&=\measuredangle(\tan_1(s),\tan_1(s_0))=
+\measuredangle(\gamma'_1(s),\vec u_1)&=\measuredangle(\tan_1(s),\vec u_1)=
 \\
 &=\length (\tan_1|_{[s,s_0]})=
 \\
@@ -649,23 +660,20 @@ Suppose $s\le s_0$, then
 \\
 &=\length (\tan_2|_{[s,s_0]})\ge
 \\
-&\ge \measuredangle(\tan_2(s),\tan_2(s_0))=
+&\ge \measuredangle(\tan_2(s),\vec u_2)=
 \\
 &= \measuredangle(\gamma'_2(s),\vec u_2).
 \end{align*}
-That is, 
-\[\measuredangle(\gamma'_1(s),\vec u_1)\ge \measuredangle(\gamma'_2(s),\vec u_2)
-\eqlbl{<gamma',u}
-\]
-if $s\ge s_0$.
-The same argument shows that \ref{<gamma',u} holds true for $s\le s_0$.
-Therefore, the inequality \ref{<gamma',u} holds for any~$s$.
-
 }
 
-Since
-\[1=|\gamma_1'(s)|=|\gamma_2'(s)|=|\vec u_1|=|\vec u_2|,\] 
-the inequality \ref{<gamma',u} implies that 
+Since $1=|\gamma_1'(s)|=|\gamma_2'(s)|=|\vec u_1|=|\vec u_2|$,
+we have 
+\[\langle\gamma'_1(s),\vec u_1\rangle=\cos \measuredangle(\gamma'_1(s),\vec u_1)
+\quad\text{and}\quad
+\langle\gamma'_2(s),\vec u_2\rangle=\cos \measuredangle(\gamma'_2(s),\vec u_2).
+\]
+The cosine is decreasing in the interval $[0,\pi]$.
+Therefore, \ref{<gamma',u} implies 
 \[\langle\gamma'_1(s),\vec u_1\rangle\le \langle\gamma'_2(s),\vec u_2\rangle\eqlbl{<gamma',u>}\]
 for any~$s$.
 

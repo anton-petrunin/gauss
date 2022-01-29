@@ -2128,25 +2128,27 @@ save u;
 u:=1.4cm;
 
 z.a0=(0,0)*u;
-z.a1=(1,3)*u;
+z.a1=(1,-3)*u;
 z.a2=(1.5,0)*u;
+z.b0=.5*u*unitvector(-1,-.5);
+z.b1=.5*u*unitvector(1,0);
+z.b2=.5*u*unitvector(-1,.7);
 
 save p; path p[];
-p0=z.a0..tension 1.4..z.a1{1,0}..tension 1.4..z.a2;
+p0=z.a0{z.b0}..tension 1.4..z.a1{z.b1}..tension 1.4..{z.b2}z.a2;
 
 draw p0;
 
-z.b1= .5*u*unitvector(direction 1 of p0);
-
-
+drawarrow z.a0--z.a0+z.b0;
 drawarrow z.a1--z.a1+z.b1;
+drawarrow z.a2--z.a2+z.b2;
 draw ddline(z.a0,z.a2)(.2,.2);
 dOt z.a0,z.a1,z.a2;
 
-label.bot(btex $\gamma_1(a)$ etex, z.a0);
-label.bot(btex $\gamma_1(s_0)$ etex, z.a1+(-2,0));
-label.bot(btex $\gamma_1(b)$ etex, z.a2);
-label.top(btex $\vec u_1$ etex, z.a1+z.b1);
+label.top(btex $\gamma_1(a)$ etex, z.a0);
+label.top(btex $\gamma_1(s_0)$ etex, z.a1+(-2,0));
+label.urt(btex $\gamma_1(b)$ etex, z.a2);
+label.bot(btex $\vec u_1$ etex, z.a1+z.b1);
 endfig;
 
 beginfig(58) 
