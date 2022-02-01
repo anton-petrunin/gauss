@@ -125,6 +125,11 @@ The line thru $\gamma(t)$ in the direction of $\tan(t)$ is called the \index{tan
 The tangent line could be also defined as a unique line that has \index{order of contact}\emph{first-order contact} with $\gamma$ at $s$;
 that is, $\rho(\ell)=o(\ell)$, where $\rho(\ell)$ denotes the distance from $\gamma(s+\ell)$ to the line.
 
+\begin{thm}{Advanced exercise}\label{ex:no-parallel-tangents}
+Construct a smooth regular closed space curve without parallel tangent lines.
+\end{thm}
+
+
 We say that a smooth regular curve $\gamma_1$ at $s_1$ is \index{tangent!curves}\emph{tangent} to a smooth regular curve $\gamma_2$ at $s_2$
 if $\gamma_1(s_1)=\gamma_2(s_2)$ and the tangent line of $\gamma_1$ at $s_1$ coincides with the tangent line of $\gamma_2$ at $s_2$;
 if both curves are simple we can also say that they are tangent at the point $p=\gamma_1(s_1)\z=\gamma_2(s_2)$ without ambiguity.
@@ -160,10 +165,10 @@ The total curvature of a smooth regular curve is the length of its tangent indic
 \begin{thm}{Exercise}\label{ex:tc(convex)}
 Let $\gamma$ be a convex smooth curve.
 Show that
-\begin{subthm}{}
+\begin{subthm}{ex:tc(convex):closed}
 if $\gamma$ is closed, then $\tc\gamma=2\cdot\pi$.
 \end{subthm}
-\begin{subthm}{}
+\begin{subthm}{ex:tc(convex):open}
 if $\gamma$ is open, then $\tc\gamma\le\pi$.
 \end{subthm}
 \end{thm}
@@ -248,7 +253,7 @@ for any~$s$.
 \begin{subthm}{ex:DNA:int>=length-tc}
 Use part \ref{SHORT.ex:DNA:c''c>=k} to show that 
 \[\int_0^\ell\langle\gamma(s),\gamma'(s)\rangle'\cdot ds\ge
-\length\gamma-\tc\gamma.\]
+\ell-\tc\gamma.\]
 
 \end{subthm}
 
@@ -627,28 +632,25 @@ for any $s$.
 We will prove for $s\le s_0$; the case $s\ge s_0$ is analogous.
 
 Since $\gamma_1$ is an arc of a convex curve, its indicatrix $\tan_1$ runs in one direction along the unit circle.
-Moreover, the arc $\tan_1|_{[s,s_0]}$ lies in one of the unit semicircle with endpoints $\vec u_1$ and $-\vec u_1$.
+Moreover, the arc $\tan_1|_{[s,s_0]}$ lies in one of the arcs with endpoints $\vec u_1$ and $-\vec u_1$ in the unit circle. %??? more needed here
 It follows that 
-\[\measuredangle(\tan_1(s),\vec u_1)=\length (\tan_1|_{[s,s_0]}).\]
+\[\measuredangle(\gamma'_1(s),\vec u_1)=\measuredangle(\tan_1(s),\vec u_1)=\length (\tan_1|_{[s,s_0]}).\eqlbl{<=length}\]
 By \ref{obs:S2-length}, we also have 
-\[\measuredangle(\tan_2(s),\vec u_2)\le \length (\tan_2|_{[s,s_0]}).\]
+\[\measuredangle(\gamma'_2(s),\vec u_2)=\measuredangle(\tan_2(s),\vec u_2)\le \length (\tan_2|_{[s,s_0]}).\eqlbl{<=<length}\]
 
 
 {
 
-\begin{wrapfigure}{o}{39 mm}
-\vskip14mm
+\begin{wrapfigure}{r}{39 mm}
+\vskip0mm
 \centering
 \includegraphics{mppics/pic-57}
 \vskip0mm
 \end{wrapfigure}
 
-Therefore,
+Further,
 \begin{align*}
-\measuredangle(\gamma'_1(s),\vec u_1)&=\measuredangle(\tan_1(s),\vec u_1)=
-\\
-&=\length (\tan_1|_{[s,s_0]})=
-\\
+\length (\tan_1|_{[s,s_0]})
 &=\int_s^{s_0}|\tan_1'(t)|\cdot d t=
 \\
 &=\int_s^{s_0}\kur_1(t)\cdot d t\ge
@@ -658,12 +660,9 @@ Therefore,
 \\
 &=\int_s^{s_0}|\tan_2'(t)|\cdot d t= 
 \\
-&=\length (\tan_2|_{[s,s_0]})\ge
-\\
-&\ge \measuredangle(\tan_2(s),\vec u_2)=
-\\
-&= \measuredangle(\gamma'_2(s),\vec u_2).
+&=\length (\tan_2|_{[s,s_0]}).
 \end{align*}
+This inequality, together with \ref{<=length} and \ref{<=<length}, implies \ref{<gamma',u}.
 }
 
 Since $1=|\gamma_1'(s)|=|\gamma_2'(s)|=|\vec u_1|=|\vec u_2|$,
@@ -672,12 +671,11 @@ we have
 \quad\text{and}\quad
 \langle\gamma'_2(s),\vec u_2\rangle=\cos \measuredangle(\gamma'_2(s),\vec u_2).
 \]
-The cosine is decreasing in the interval $[0,\pi]$.
-Therefore, \ref{<gamma',u} implies 
+Since the cosine is decreasing in the interval $[0,\pi]$, \ref{<gamma',u} implies 
 \[\langle\gamma'_1(s),\vec u_1\rangle\le \langle\gamma'_2(s),\vec u_2\rangle\eqlbl{<gamma',u>}\]
 for any~$s$.
 
-Further, since $\vec u_1$ is a unit vector parallel to $\gamma_1(b)-\gamma_1(a)$, we have that
+Further, since $\gamma(b)$ lies in the direction of $\vec u_1$ from $\gamma(a)$, we have that
 \[|\gamma_1(b)-\gamma_1(a)|=\langle \vec u_1,\gamma_1(b)-\gamma_1(a)\rangle,\]
 and, since $\vec u_2$ is a unit vector, we have that
 \[|\gamma_2(b)-\gamma_2(a)|\ge\langle \vec u_2,\gamma_2(b)-\gamma_2(a)\rangle.\]

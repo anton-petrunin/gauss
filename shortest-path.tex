@@ -56,6 +56,7 @@ Usually, if we write $[p,q]_\Sigma$, we are assuming that such a shortest path e
 \end{wrapfigure}
 
 \parbf{Nonuniqueness.} There are plenty of shortest paths between the poles of a round sphere --- each meridian is a shortest path.
+The latter follows from \ref{obs:S2-length}.
 
 \parbf{Nonexistence.} Let $\Sigma$ be the $(x,y)$-plane with the origin removed.
 Consider two points $p=(1,0,0)$ and $q=(-1,0,0)$ in~$\Sigma$.
@@ -113,9 +114,9 @@ Evidently, $\gamma_\infty$ runs from $p$ to $q$;
 in particular
 \[\length\gamma_\infty\ge \ell.\]
 Since $\Sigma$ is a closed set, $\gamma_\infty$ lies in~$\Sigma$.
-Finally, since length is semicontinuous (\ref{thm:length-semicont}), we get that
-\[\length\gamma_\infty\le \ell.\]
-Therefore, $\length\gamma_\infty= \ell$ or, equivalently, $\gamma_\infty$ is a shortest path from $p$ to~$q$.
+
+Since length is semicontinuous (\ref{thm:length-semicont}), $\length\gamma_\infty\le \ell$.
+Therefore, $\length\gamma_\infty= \ell$; equivalently, $\gamma_\infty$ is a shortest path from $p$ to~$q$.
 \qeds
 
 \section{Closest-point projection}
@@ -155,7 +156,7 @@ Hence, the existence follows.
 {
 
 \begin{wrapfigure}{r}{22 mm}
-\vskip-10mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-40}
 \vskip-0mm
@@ -240,6 +241,7 @@ Remove from $\gamma$ the arc from $a$ to $b$, and replace it with the line segme
 denote the obtained curve by $\gamma_1$. 
 From above, we have that
 \[\length\gamma>\length \gamma_1\]
+
 Note that $\gamma_1$ runs in~$W$.
 Therefore, by the first part of the corollary, we have
 \[\length \gamma_1\ge \dist{p}{q}\Sigma.\]

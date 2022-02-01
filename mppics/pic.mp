@@ -564,16 +564,18 @@ z.a=origin;
 z.b=(1,0)*u;
 z.c=2*z.b;
 z.d=3*z.b;
+z.x=.5[z.b,z.c]+(0,-1)*u;
 
 save p; path p[];
-p0=z.a..z.c..z.b..z.d..cycle;
+p0=z.x..z.c..z.b..z.x..z.d..z.a..cycle;
 
-draw p0;
+draw subpath (.05,5.95) of p0;
 draw -.2[z.a,z.d]--1.2[z.a,z.d];
-drawarrow subpath (3.2,3.7) of p0;
-drawarrow subpath (1.2,1.7) of p0;
-drawarrow subpath (.1,.3) of p0;
-drawarrow subpath (2.2,2.7) of p0;
+drawarrow subpath (4.2,4.6) of p0;
+drawarrow subpath (5.2,5.6) of p0;
+drawarrow subpath (1.2,1.6) of p0;
+drawarrow subpath (.3,.6) of p0;
+drawarrow subpath (3.2,3.5) of p0;
 dOt z.a,z.b,z.c,z.d;
 
 
@@ -581,7 +583,7 @@ label.urt(btex $a$ etex, z.a);
 label.ulft(btex $b$ etex, z.b);
 label.urt(btex $c$ etex, z.c);
 label.ulft(btex $d$ etex, z.d);
-label.top(btex $\gamma$ etex, point 3.5 of p0);
+label.lrt(btex $\gamma$ etex, point 3.5 of p0);
 endfig;
 
 beginfig(21) 
@@ -712,7 +714,7 @@ endfig;
 
 beginfig(25) 
 save u;
-u:=1cm;
+u:=.7cm;
 
 z.p=(0,1)*u;
 z.q=(2,1)*u;

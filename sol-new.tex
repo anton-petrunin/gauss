@@ -394,11 +394,25 @@ Use it to construct a sequence of unit-speed spherical curves $\tan_n\:\mathbb{I
 Show that the following sequence of curves solves the problem:
 \[\gamma_n(s)=\gamma(a)+\int_a^s\tan_n(t)\cdot dt.\]
 
+\parbf{\ref{ex:no-parallel-tangents}.}
+Reuse the construction in \ref{ex:antipodal} to get a closed smooth simple spherical curve $\tan\:\mathbb{S}^1\z\to\mathbb{S}^2$ that contains no pair of antipodal points and has zero average.
+Then construct a curve with tangent indicatrix $\tan$.
+(It was constructed by Beniamino Segre \cite{segre}.)
+
 \parbf{\ref{ex:helix-curvature}.}
 Show that $\gamma_{a,b}''\perp \gamma'_{a,b}$, and apply \ref{ex:curvature-formulas:a}.
 
-\parbf{\ref{ex:tc(convex)}.}
-Apply \ref{obs:tantrix}.
+\parbf{\ref{ex:tc(convex)}}; \ref{SHORT.ex:tc(convex):closed}.
+Consider a closed convex curve $\gamma\:\mathbb{S}^1\to\mathbb{R}^2$.
+Show that its tangent indicatrix $\tan\:\mathbb{S}^1\to\mathbb{S}^1$ is monotonic;
+that is, for any $u\in\mathbb{S}^1$, the inverse image $\tan^{-1}\{u\}$ is a connected set in $\mathbb{S}^1$.
+Then apply \ref{ex:integral-length-0} and \ref{obs:tantrix}. %???PIC
+
+\parit{\ref{SHORT.ex:tc(convex):open}.}
+Assume $\gamma\:\mathbb{R}\to\mathbb{R}^2$ is an open convex curve.
+Show that the image of its tangent indicatrix of lies in a semicircle.
+Then argue as in \ref{SHORT.ex:tc(convex):closed}.
+
 
 \parbf{\ref{ex:length>=2pi}.} Apply Fenchel's theorem.
 
@@ -677,6 +691,11 @@ An intersection appears if $\norm$ is rotated by certain angle near $\pi$.
 Observe that if a line or circle is tangent to $\gamma$,
 then it is tangent to the osculating circle at the same point.
 Then apply the spiral lemma (\ref{lem:spiral}).
+
+\parbf{\ref{ex:spherical-spiral}.}
+Note that osculating circles of a spherical curve lie in the sphere.
+Prove an analog of \ref{lem:spiral} for these circles.
+(Compare to \ref{ex:spherical-frenet:beta+}.)
 
 \stepcounter{chapter}
 \setcounter{eqtn}{0}
