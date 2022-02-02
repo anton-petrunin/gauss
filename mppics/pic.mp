@@ -4813,4 +4813,31 @@ label(btex $\dots$ etex rotated angle(z.p-z.x), z.x[0][3]+(-3,3));
 label(btex $\dots$ etex rotated angle(z.y-z.p), z.x[n][3]+(3,3));
 endfig;
 
+beginfig(3500) 
+save u,p;
+path p[];
+u:=1cm;
+
+z.p=(1,.5)*u;
+z.p1=(2,1)*u;
+z.p2=(1.3,3)*u;
+z.p3=(.3,1.2)*u;
+z.p4=z.p+(-.2,0)*u;
+
+p0=z.p{1,0}..z.p1..z.p2..z.p3..{1,0}z.p4--cycle;
+
+hatchfill p0  withcolor (57, 1.4mm, -.5bp);
+drawarrow subpath (0,1.6) of p0;
+draw subpath (1.6,5) of p0;
+drawarrow z.p--z.p+(1,0)*u;
+drawarrow z.p--z.p+(0,1)*u;
+dOt z.p;
+
+label.bot(btex $p$ etex, z.p);
+label.rt(btex $\gamma$ etex, point 1.6 of p0);
+label.bot(btex $\vec u$ etex, z.p+(1,0)*u);
+whitelabel.lft(btex $\vec v$ etex, z.p+(0,1)*u);
+whitelabel(btex $F$ etex, point 1.3 of p0+(-.7,0)*u);
+endfig;
+
 end

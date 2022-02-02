@@ -162,18 +162,6 @@ Therefore, \ref{ex:integral-length} implies the following:
 The total curvature of a smooth regular curve is the length of its tangent indicatrix.
 \end{thm}
 
-\begin{thm}{Exercise}\label{ex:tc(convex)}
-Let $\gamma$ be a convex smooth curve.
-Show that
-\begin{subthm}{ex:tc(convex):closed}
-if $\gamma$ is closed, then $\tc\gamma=2\cdot\pi$.
-\end{subthm}
-\begin{subthm}{ex:tc(convex):open}
-if $\gamma$ is open, then $\tc\gamma\le\pi$.
-\end{subthm}
-\end{thm}
-
-
 \begin{thm}{Fenchel's theorem}
 \label{thm:fenchel}
 \index{Fenchel's theorem}
@@ -267,6 +255,12 @@ Use this equality together with  part \ref{SHORT.ex:DNA:int>=length-tc} to prove
 
 \section{Piecewise smooth curves}
 
+\begin{wrapfigure}{o}{25 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-54}
+\end{wrapfigure}
+
 Assume $\alpha\:[a,b]\to \mathbb{R}^3$ and $\beta\:[b,c]\z\to \mathbb{R}^3$ are two curves such that $\alpha(b)\z=\beta(b)$.
 Note that these two curves can be combined into one $\gamma\:[a,c]\z\to \mathbb{R}^3$ by the rule 
 \[\gamma(t)=
@@ -282,12 +276,6 @@ The obtained curve $\gamma$ is called the
 
 The same definition of concatenation can be applied if $\alpha$ and/or $\beta$ are defined on semiopen intervals 
 $(a,b]$ and/or $[b,c)$.
-
-\begin{wrapfigure}{o}{25 mm}
-\vskip-3mm
-\centering
-\includegraphics{mppics/pic-54}
-\end{wrapfigure}
 
 The assumption that the intervals of definition of $\alpha$ and $\beta$ fit together is not essential --- one can concatenate any of the curves as long as the endpoint of $\alpha$ coincides with the starting point of~$\beta$.
 If this is the case, then the time intervals of both curves can be shifted so that they fit together. 
@@ -489,17 +477,59 @@ Draw a smooth regular plane curve $\gamma$ that has a self-intersection and such
 
 \end{thm}
 
+\begin{wrapfigure}{r}{30 mm}
+\vskip-2mm
+\centering
+\includegraphics{mppics/pic-20}
+\vskip0mm
+\end{wrapfigure}
+
+\begin{thm}{Exercise}\label{ex:quadrisecant}
+Suppose a closed curve $\gamma$ crosses a line at four points $a$, $b$, $c$, and~$d$.
+Assume these points appear on the line in the order $a$, $b$, $c$, $d$
+and they appear on the curve $\gamma$ in the order $a$, $c$, $b$,~$d$.
+Show that 
+\[\tc\gamma\ge 4\cdot\pi.\]
+
+\end{thm}
+
+Lines crossing a curve at four points as in the exercise are called \index{alternating quadrisecants}\emph{alternating quadrisecants}.
+It turns out that any {}\emph{nontrivial knot} admits an alternating quadrisecant \cite{denne};
+according to the exercise, the latter implies the so-called \index{F\'ary--Milnor theorem}\emph{F\'ary--Milnor theorem} --- the total curvature of any knot exceeds~$4\cdot \pi$.
+
+\section[\texorpdfstring{Total curvature $2\cdot\pi$}{Total curvature 2·πΩ}]{Total curvature $\bm{2\cdot \pi}$}
+
 \begin{thm}{Proposition}\label{prop:fenchel=}
 The equality case in Fenchel's theorem holds only for convex plane curves;
 that is, the total curvature of a smooth regular space curve $\gamma$ equals $2\cdot\pi$ if and only if $\gamma$ is a convex plane curve.
 \end{thm}
 
-The proof is an application of Proposition~\ref{prop:inscribed-total-curvature}.
+\parit{Proof; if part.}
+Suppose $\gamma$ bounds a convex figure $F$ in the plane.
+We may assume that $F$ lies on the left from $\gamma$.
+Denote by $\tan\:\mathbb{S}^1\to \mathbb{S}^1$ its tangent indicatrix.
 
-\parit{Proof.}
-The if part follows from Exercise~\ref{ex:tc(convex)};
-it remains to prove the only-if part.
+\begin{wrapfigure}{o}{30 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-3500}
+\vskip0mm
+\end{wrapfigure}
 
+Let $\vec u, \vec v$ be an oriented ortonormal frame in the plane,
+so $\vec v$ is a counterclockwise rotation of $\vec u$ by angle $\tfrac\pi2$.
+Consider a linear function $f$ with gradient~$\vec v$.
+Note that $\vec u$ is tangent indicatrix at point $p=\gamma(s)$ if and only if $p$ is a minimum point of $f$ on~$F$.
+The point $p$ might be unique minimum, in this case $\tan^{-1}\{\vec u\}=s$,
+or $f$ might have a line segment of minimal points in $\gamma$, in this case $\tan^{-1}\{\vec u\}$ is an arc of $\mathbb{S}^1$.
+
+It follows that the map $\tan\:\mathbb{S}^1\to \mathbb{S}^1$ is \index{monotonic map}\emph{monotonic};
+that is, for any $\vec u\z\in\mathbb{S}^1$, its inverse image $\tan^{-1}\{\vec u\}$ is a connected set in $\mathbb{S}^1$.
+By \ref{ex:integral-length-0}, 
+\[\length\tan=\length\mathbb{S}^1=2\cdot \pi.\]
+Applying \ref{obs:tantrix}, we get $\tc\gamma=2\cdot \pi$ --- the if part is proved.
+
+\parit{Only-if part.}
 Consider an inscribed quadrangle $abcd$ in~$\gamma$.
 By the definition of total curvature, we have that
 \begin{align*}
@@ -520,7 +550,7 @@ By the definition of total curvature, we have that
 \end{align*}
 
 
-Note that 
+By \ref{thm:spherical-triangle-inq},
 \[
 \measuredangle\hinge bac
 \le
@@ -559,33 +589,18 @@ By \ref{prop:inscribed-total-curvature},
 Therefore, we have equalities in \ref{eq:spheric-triangle}.
 It means that the point $d$ lies in the angle $abc$ 
 and the point $b$ lies in the angle $cda$.
-That is, $abcd$ is a convex plane quadrangle.
+The latter means that $abcd$ is a convex plane quadrangle.
 
 It follows that any quadrangle inscribed in $\gamma$ is a convex plane quadrangle.
 Therefore, all points of $\gamma$ lie in one plane defined by three points on~$\gamma$.
 Further, since any quadrangle inscribed in $\gamma$ is convex,
-we get that $\gamma$ is a convex plane curve. 
+we get that $\gamma$ is convex as well. 
 \qeds
 
-\begin{wrapfigure}{r}{30 mm}
-\vskip-5mm
-\centering
-\includegraphics{mppics/pic-20}
-\vskip0mm
-\end{wrapfigure}
-
-\begin{thm}{Exercise}\label{ex:quadrisecant}
-Suppose a closed curve $\gamma$ crosses a line at four points $a$, $b$, $c$, and~$d$.
-Assume these points appear on the line in the order $a$, $b$, $c$, $d$
-and they appear on the curve $\gamma$ in the order $a$, $c$, $b$,~$d$.
-Show that 
-\[\tc\gamma\ge 4\cdot\pi.\]
-
+\begin{thm}{Exercise}\label{ex:tc(convex)}
+Let $\gamma$ be an open convex smooth curve.
+Show that $\tc\gamma\le\pi$.
 \end{thm}
-
-Lines crossing a curve at four points as in the exercise are called \index{alternating quadrisecants}\emph{alternating quadrisecants}.
-It turns out that any {}\emph{nontrivial knot} admits an alternating quadrisecant \cite{denne};
-according to the exercise, the latter implies the so-called \index{F\'ary--Milnor theorem}\emph{F\'ary--Milnor theorem} --- the total curvature of any knot exceeds~$4\cdot \pi$.
 
 \section{Bow lemma}
 
