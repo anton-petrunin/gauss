@@ -2151,6 +2151,8 @@ label.top(btex $\gamma_1(a)$ etex, z.a0);
 label.top(btex $\gamma_1(s_0)$ etex, z.a1+(-2,0));
 label.urt(btex $\gamma_1(b)$ etex, z.a2);
 label.bot(btex $\vec u_1$ etex, z.a1+z.b1);
+label.bot(btex $\vec u_1$ etex, z.a1+z.b1);
+label.bot(btex $\ell$ etex, .5[z.a0,z.a2]);
 endfig;
 
 beginfig(58) 
