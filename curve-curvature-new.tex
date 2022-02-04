@@ -41,7 +41,7 @@ The curvature is usually denoted by $\kur(s)$ or $\kur(s)_\gamma$, and, in the c
 
 
 \begin{thm}{Exercise}\label{ex:zero-curvature-curve}
-Show that a regular smooth simple space curve has 0 curvature at each point if and only if it is a segment of a straight line.
+Show that a regular smooth simple space curve has zero curvature at each point if and only if it is a segment of a straight line.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:scaled-curvature}
@@ -116,11 +116,11 @@ Show that any smooth regular curve $\gamma\:\mathbb{I}\z\to\mathbb{R}^3$ with cu
 In other words, construct a sequence $\gamma_n\:\mathbb{I}\to\mathbb{R}^3$ of smooth regular curves  with constant curvature 1 such that $\gamma_n(t)\to \gamma(t)$ for any $t$ as $n\to\infty$.
 \end{thm}
 
-
-\section{Tangent curves}
+\section{Tangents}
 
 Let $\gamma$ be a smooth regular space curve and $\tan$ its tangent indicatrix.
-The line thru $\gamma(t)$ in the direction of $\tan(t)$ is called the \index{tangent!line}\emph{tangent line} of $\gamma$  at~$t$.
+The line thru $\gamma(t)$ in the direction of $\tan(t)$ is called the \index{tangent!line}\emph{tangent line} to $\gamma$  at~$t$.
+Any \emph{vector} propositional to $\tan(t)$ is called the \index{tangent!vector}\emph{tangent} to $\gamma$  at~$t$.
 
 The tangent line could be also defined as a unique line that has \index{order of contact}\emph{first-order contact} with $\gamma$ at $s$;
 that is, $\rho(\ell)=o(\ell)$, where $\rho(\ell)$ denotes the distance from $\gamma(s+\ell)$ to the line.
@@ -129,11 +129,92 @@ that is, $\rho(\ell)=o(\ell)$, where $\rho(\ell)$ denotes the distance from $\ga
 Construct a smooth regular closed space curve without parallel tangent lines.
 \end{thm}
 
-
 We say that a smooth regular curve $\gamma_1$ at $s_1$ is \index{tangent!curves}\emph{tangent} to a smooth regular curve $\gamma_2$ at $s_2$
 if $\gamma_1(s_1)=\gamma_2(s_2)$ and the tangent line of $\gamma_1$ at $s_1$ coincides with the tangent line of $\gamma_2$ at $s_2$;
 if both curves are simple we can also say that they are tangent at the point $p=\gamma_1(s_1)\z=\gamma_2(s_2)$ without ambiguity.
 
+\begin{thm}{Exercise}\label{ex:tangent-support}
+Let $\gamma$ be a convex plane curve;
+denote by $F$ the convex set bounded by $\gamma$.
+Show that a line $\ell$ is tangent to $\gamma$ at point $p$ if and only if it \index{supporting plane}\emph{supports} $F$ at $p$;
+that is, $\ell\ni p$ and $F$ lies in a closed half-plane bounded by $\ell$.
+\end{thm}
+
+\begin{thm}{Proposition}\label{prop:convex-monotone}
+Let $\gamma$ be a regular smooth convex plane curve.
+
+\begin{subthm}{prop:convex-monotone:closed}
+If $\gamma$ is closed, then its tangent indicatrix $\tan$ defines a monotone map $\mathbb{S}^1\to \mathbb{S}^1$;
+in other words, $\tan$ is a parametrization of the unit circle.
+\end{subthm}
+
+\begin{subthm}{prop:convex-monotone:open}
+If $\gamma$ is open, then its tangent indicatrix $\tan$ defines a monotone map to an interval in a unit semicircle;
+in other words, $\tan$ is a parametrization of an interval in a unit semicircle.
+\end{subthm}
+
+\end{thm}
+
+Recall that a map is monotone if the inverse image of any point in the target space is a nonempty connected set.
+
+\begin{wrapfigure}{r}{32 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-3500}
+\vskip0mm
+\end{wrapfigure}
+
+\parit{Proof; \ref{SHORT.prop:convex-monotone:closed}.}
+Since $\gamma$ is closed, it bounds a compact convex set $F$ in the plane.
+We may assume that $F$ lies on the left from $\gamma$.
+
+Choose a unit vector $\vec u$.
+Let $(x,y)$ be the coordinates of the plane with $x$-axis in the direction of $\vec u$.
+
+From Exercise~\ref{ex:tangent-support}, it follows that  $\vec u=\tan(s)$ if and only if $p=\gamma(s)$ is a minimum point of $y$-coordinate function on~$F$.
+Indeed suppose $p$ is a minimum point.
+Let $\ell$ be the horizontal line thru $p$.
+Then $\ell$ supports $F$ at $p$.
+By the exercise, $\ell$ is tangent to $\gamma$ at $p$.
+Since $F$ lies on the left from $\gamma$, we get that $\tan(s)=\vec u$.
+And the other way around, if $\tan(s)=\vec u$ then, the tangent line at $p=\gamma(s)$ is horizonal,
+and, by the exercise, it supports $F$.
+Since $F$ lies on the left $\gamma$ we get that $f$ has minimum in $F$ at $p$.
+
+A minimum point $p=\gamma(s)$ for $f$ exists since $F$ is compact.
+The point $p$ might be unique, in this case $\tan^{-1}\{\vec u\}=s$,
+or $f$ might have a line segment of minimal points in $\gamma$, in this case $\tan^{-1}\{\vec u\}$ is an arc of $\mathbb{S}^1$.
+It follows that $\tan\:\mathbb{S}^1\to \mathbb{S}^1$ is monotone.
+
+\parit{\ref{SHORT.prop:convex-monotone:open}} 
+The same argument in \ref{SHORT.prop:convex-monotone:closed} shows that $\tan$ is monotonic map to its image.
+Evidently the image is connected.
+It remains to show that it lies in a semicircle;
+in other words, there is a unit vector $\vec w$ such that $\measuredangle(\vec w,\tan(s))\le\tfrac\pi2$ for any $s$.
+
+\begin{figure}[ht!]
+\centering
+\includegraphics{mppics/pic-3502}
+\end{figure}
+
+Since $\gamma$ is open, it bounds an unbounded convex closed region $F$.
+As before we assume that $F$ lies on the left from $\gamma$.
+Note that there is half-line $h$ that lies in~$F$.
+
+Indeed, we can assume that the origin $o$ lies in~$F$.
+Consider a sequence of points $x_n\in F$ such that $|x_n|\z\to \infty$ as $n\to \infty$.
+Denote by $\vec v_n$ the unit vector in the direction of $x_n$; that is $\vec v_n=\tfrac{x_n}{|x_n|}$.
+
+Since the unit circle is compact, we can pass to a subsequence of $(x_n)$ such that $\vec v_n$ converges to a unit vector, say $\vec v$.
+Since $F$ is closed, the half-line $h$ from the origin in the direction of $\vec v$ lies in $F$.
+
+Denote by $\vec w$ the clockwise rotation of $\vec v$ by angle $\tfrac\pi 2$.
+Suppose $\vec u=\tan (s)$ for some $s$.
+The same argument as in \ref{SHORT.prop:convex-monotone:closed} shows that 
+$p=\gamma(s)$ is a minimum pint in $F$ of the $y$-coordinate.
+It follows that $h$ and therefore $\vec v$ point in the closed upper half-plane.
+The latter is equivalent to $\measuredangle(\vec w,\tan(s))\le\tfrac\pi2$.
+\qeds
 
 \section{Total curvature}
 
@@ -253,361 +334,7 @@ Use this equality together with  part \ref{SHORT.ex:DNA:int>=length-tc} to prove
 \end{subthm}
 \end{thm}
 
-\section{Piecewise smooth curves}
 
-\begin{wrapfigure}{o}{25 mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-54}
-\end{wrapfigure}
-
-Assume $\alpha\:[a,b]\to \mathbb{R}^3$ and $\beta\:[b,c]\z\to \mathbb{R}^3$ are two curves such that $\alpha(b)\z=\beta(b)$.
-Note that these two curves can be combined into one $\gamma\:[a,c]\z\to \mathbb{R}^3$ by the rule 
-\[\gamma(t)=
-\begin{cases}
-\alpha(t)&\text{if}\quad t\le b,
-\\
-\beta(t)&\text{if}\quad t\ge b.
-\end{cases}
-\]
-The obtained curve $\gamma$ is called the 
-\emph{concatenation} of $\alpha$ and $\beta$.
-(The condition $\alpha(b)=\beta(b)$ ensures that the map $t\mapsto\gamma(t)$ is continuous.)
-
-The same definition of concatenation can be applied if $\alpha$ and/or $\beta$ are defined on semiopen intervals 
-$(a,b]$ and/or $[b,c)$.
-
-The assumption that the intervals of definition of $\alpha$ and $\beta$ fit together is not essential --- one can concatenate any of the curves as long as the endpoint of $\alpha$ coincides with the starting point of~$\beta$.
-If this is the case, then the time intervals of both curves can be shifted so that they fit together. 
-
-If in addition $\beta(c)=\alpha(a)$, then we can do cyclic concatenation of these curves;
-this way we obtain a closed curve.
-
-If $\alpha'(b)$ and $\beta'(b)$ are defined, then the angle $\theta\z=\measuredangle(\alpha'(b),\beta'(b))$ is called the \index{external angle}\emph{external angle} of $\gamma$ at time~$b$.
-If $\theta=\pi$, then we say that $\gamma$ has a \index{cusp}\emph{cusp} at  time~$b$.
-
-A space curve $\gamma$ is called \index{piecewise smooth regular curve}\emph{piecewise smooth and regular} if it can be presented as an iterated concatenation of a finite number of smooth regular curves; if $\gamma$ is closed, then the  concatenation is assumed to be cyclic.
-
-If $\gamma$ is a concatenation of smooth regular arcs $\gamma_1,\dots,\gamma_n$, then the total curvature of $\gamma$ is defined as a sum of the total curvatures of $\gamma_i$ and the external angles;
-that is, 
-\[\tc\gamma=\tc{\gamma_1}+\dots+\tc{\gamma_n}+\theta_1+\dots+\theta_{n-1}\]
-where $\theta_i$ is the external angle at the joint between $\gamma_i$ and $\gamma_{i+1}$.
-
-If $\gamma$ is closed, then the total curvature of $\gamma$ is defined by
-\[\tc\gamma=\tc{\gamma_1}+\dots+\tc{\gamma_n}+\theta_1+\dots+\theta_{n},\]
-where $\theta_n$ is the external angle at the joint between $\gamma_n$ and $\gamma_1$.
-
-{
-
-\begin{wrapfigure}{r}{23 mm}
-\vskip-3mm
-\centering
-\includegraphics{mppics/pic-354}
-\end{wrapfigure}
-
-In particular, for a smooth regular loop $\gamma\:[a,b] \z\to \mathbb{R}^3$, the total curvature of the corresponding closed curve $\hat\gamma$ is defined as
-\[\tc{\hat\gamma}\df\tc\gamma + \theta,\]
-where $\theta=\measuredangle(\gamma'(a),\gamma'(b))$.
-
-}
-
-\begin{thm}{Generalized Fenchel's theorem}\label{thm:gen-fenchel}
-Let $\gamma$ be a closed piecewise smooth regular space curve.
-Then 
-\[\tc\gamma\ge2\cdot\pi.\]
-
-\end{thm}
-
-\parit{Proof.}
-Suppose $\gamma$ is a cyclic concatenation of $n$ smooth regular arcs $\gamma_1,\dots,\gamma_n$.
-Denote by $\theta_1,\dots,\theta_n$ its external angles.
-We need to show that \index{10phi@$\tc{\gamma}$}
-\[\tc{\gamma_1}+\dots+\tc{\gamma_n}+\theta_1+\dots+\theta_n\ge2\cdot\pi.\eqlbl{eq:gen-fenchel}\]
-
-Consider the tangent indicatrix $\tan_i$ for each arc $\gamma_i$;
-these are smooth spherical arcs.
-
-The same argument as in the proof of Fenchel's theorem shows that the curves $\tan_1,\dots,\tan_n$ cannot lie in an open hemisphere.
-
-Note that the spherical distance from the endpoint of $\tan_i$ to the starting point of $\tan_{i+1}$ is equal to the external angle $\theta_i$ (we enumerate the arcs modulo $n$, so $\gamma_{n+1}=\gamma_1$).
-Let us connect the endpoint of $\tan_i$ to the starting point of $\tan_{i+1}$ by a short arc of a great circle in the sphere.
-This way we get a closed spherical curve that is $\theta_1+\dots+\theta_n$ longer than the total length of $\tan_1,\dots,\tan_n$.
-
-Applying the hemisphere lemma (\ref{lem:hemisphere}) to the obtained closed curve, we get that
-\[\length\tan_1+\dots+\length\tan_n+\theta_1+\dots+\theta_n\ge 2\cdot\pi.\]
-By \ref{obs:tantrix}, the statement follows.
-\qedsf
-
-\begin{thm}{Chord lemma}\label{lem:chord}
-Let $\gamma\:[a,b]\z\to\mathbb{R}^3$
-be a smooth regular arc, and
-$\ell$ be its chord.
-Assume $\gamma$ meets $\ell$ at angles $\alpha$ and $\beta$ at $\gamma (a)$ and $\gamma (b)$, respectively;
-that is,
-\[\alpha=\measuredangle(\vec w,\gamma'(a))\quad\text{and}\quad \beta=\measuredangle(\vec w,\gamma'(b)),\]
-where $\vec w=\gamma(b)-\gamma(a)$.
-Then 
-\[\tc\gamma\ge \alpha+\beta.\eqlbl{tc>a+b}\] 
-
-\end{thm}
-
-\parit{Proof.}
-Let us parametrize the chord $\ell$ from $\gamma(b)$ to $\gamma(a)$ and consider the cyclic concatenation $\hat\gamma$ of $\gamma$ and $\ell$.
-The closed curve $\hat\gamma$ has two external angles $\pi-\alpha$ and $\pi-\beta$.
-
-\begin{wrapfigure}{r}{45 mm}
-\vskip-5mm
-\centering
-\includegraphics{mppics/pic-53}
-\vskip0mm
-\end{wrapfigure}
-
-Since the curvature of $\ell$ vanishes, we get 
-\[\tc{\hat\gamma}=\tc\gamma+(\pi-\alpha)+(\pi-\beta).\]
-According to the generalized Fenechel's theorem (\ref{thm:gen-fenchel}),
-$\tc{\hat\gamma}\ge 2\cdot\pi$;
-hence \ref{tc>a+b} follows.
-\qeds
-
-\begin{thm}{Exercise}\label{ex:chord-lemma-optimal}
-Show that the estimate in the chord lemma is optimal.
-That is, given two points $p, q$ and two unit vectors $\vec u,\vec v$ in $\mathbb{R}^3$,
-construct a smooth regular curve $\gamma$ that starts at $p$ in the direction $\vec u$ and ends at $q$ in the direction $\vec v$ such that 
-$\tc\gamma$ is arbitrarily close to $\measuredangle(\vec w,\vec u)+\measuredangle(\vec w,\vec v)$, where $\vec w=q-p$.
-
-\end{thm}
-
-\section{Polygonal lines} 
-
-Polygonal lines are a particular case of piecewise smooth regular curves;
-each arc in its concatenation is a line segment.
-Since the curvature of a line segment vanishes, the total curvature of a polygonal line is the sum of its external angles.
-
-\begin{thm}{Exercise}\label{ex:monotonic-tc}
-Let $a$, $b$, $c$, $d$, and $x$ be distinct points in $\mathbb{R}^3$.
-Show that the total curvature of the polygonal line $abcd$ cannot exceed the total curvature of $abxcd$; that is, 
-\[\tc {abcd} \le \tc {abxcd}.\]
-
-Use this statement to show that any closed polygonal line has curvature at least $2\cdot\pi$.
-\end{thm}
-
-
-
-\begin{thm}{Proposition}\label{prop:inscribed-total-curvature}
-Assume a polygonal line $p_0\dots p_n$ is inscribed in a smooth regular curve~$\gamma$.
-Then 
-\[\tc\gamma\ge \tc{p_0\dots p_n}.\]
-Moreover, if $\gamma$ is closed, we allow the inscribed polygonal line $p_0\dots p_n$ to be closed.
-
-\end{thm}
-
-\begin{wrapfigure}[7]{o}{40 mm}
-\vskip-4mm
-\centering
-\includegraphics{mppics/pic-55}
-\vskip0mm
-\end{wrapfigure}
-
-\parit{Proof.}
-Assume $p_i=\gamma(t_i)$.
-Set 
-\begin{align*}
-\vec w_i&=p_{i+1}-p_i,& \vec v_i&=\gamma'(t_i),
-\\
-\alpha_i&=\measuredangle(\vec w_i,\vec v_i),&\beta_i&=\measuredangle(\vec w_{i-1},\vec v_i),
-\\
-\theta_i&=\measuredangle(\vec w_{i-1},\vec w_i).
-\end{align*}
-In the case of a closed curve, we use indexes modulo $n$;
-so in this case, we have $p_{n+1}\z=p_1$.
-
-Since the curvature of line segments vanishes, 
-the total curvature of the polygonal line is the sum of external angles $\theta_i$.
-
-By triangle inequality for angles \ref{thm:spherical-triangle-inq}, we get that
-\[\theta_i\le \alpha_i+\beta_i.\]
-By the chord lemma, the total curvature of the arc of $\gamma$ from $p_i$ to $p_{i+1}$ is at least $\alpha_i+\beta_{i+1}$. 
-
-Therefore, if $\gamma$ is a closed curve, we have
-\begin{align*}
-\tc{p_0\dots p_n}&=\theta_1+\dots+\theta_n\le 
-\\
-&\le\beta_1+\alpha_1+\dots+\beta_n+\alpha_n = 
-\\
-&=(\alpha_1+\beta_2)+\dots+(\alpha_n+\beta_1) \le 
-\\
-&\le \tc\gamma.
-\end{align*}
-If $\gamma$ is an arc, the argument is analogous:
-\begin{align*}
-\tc{p_0\dots p_n}&=\theta_1+\dots+\theta_{n-1}\le 
-\\
-&\le\beta_1+\alpha_1+\dots+\beta_{n-1}+\alpha_{n-1} \le
-\\
-&\le (\alpha_0+\beta_1)+\dots+(\alpha_{n-1}+\beta_n) \le 
-\\
-&\le \tc\gamma.
-\end{align*}
-\qedsf
-
-The following exercise states that the inequality in \ref{prop:inscribed-total-curvature} is optimal.
-
-\begin{thm}{Exercise}\label{ex:total-curvature=}
-Show that for any regular smooth space curve $\gamma$ we have 
-\[\tc\gamma=\sup\{\tc\beta\},\]
-where the least upper bound is taken over all polygonal lines~$\beta$ inscribed in $\gamma$
-(if $\gamma$ is closed, then we assume so is $\beta$).
-\end{thm}
-
-This exercise can be used to define the total curvature of an arbitrary curve~$\gamma$.
-Namely, it can be defined as {}\textit{the least upper bound on the total curvatures of inscribed nondegenerate polygonal lines inscribed in~$\gamma$.}
-
-It is possible to generalize most of the statements in this chapter to the (nonsmooth) curves of finite total curvature.
-This theory was developed by Alexandr Alexandrov and Yuri Reshetnyak \cite{aleksandrov-reshetnyak};
-a good survey on the subject is written by John Sullivan \cite{sullivan-curves}.
-
-\begin{thm}{Exercise}\label{ex:sef-intersection}
-
-\begin{subthm}{ex:sef-intersection:<2pi}
-Draw a smooth regular plane curve $\gamma$ that has a self-intersection and such that $\tc\gamma<2\cdot\pi$.
-\end{subthm}
-
-\begin{subthm}{ex:sef-intersection:>pi} Show that if a smooth regular curve $\gamma\:[a,b]\to\mathbb{R}^3$ has a self-intersection, then $\tc\gamma>\pi$.
-\end{subthm}
-
-\end{thm}
-
-\begin{wrapfigure}{r}{30 mm}
-\vskip-2mm
-\centering
-\includegraphics{mppics/pic-20}
-\vskip0mm
-\end{wrapfigure}
-
-\begin{thm}{Exercise}\label{ex:quadrisecant}
-Suppose a closed curve $\gamma$ crosses a line at four points $a$, $b$, $c$, and~$d$.
-Assume these points appear on the line in the order $a$, $b$, $c$, $d$
-and they appear on the curve $\gamma$ in the order $a$, $c$, $b$,~$d$.
-Show that 
-\[\tc\gamma\ge 4\cdot\pi.\]
-
-\end{thm}
-
-Lines crossing a curve at four points as in the exercise are called \index{alternating quadrisecants}\emph{alternating quadrisecants}.
-It turns out that any {}\emph{nontrivial knot} admits an alternating quadrisecant \cite{denne};
-according to the exercise, the latter implies the so-called \index{F\'ary--Milnor theorem}\emph{F\'ary--Milnor theorem} --- the total curvature of any knot exceeds~$4\cdot \pi$.
-
-\section[\texorpdfstring{What if $\Phi(\gamma)=2\cdot \pi$?}{What if Φ(γ)=2·π?}]{What if $\bm{\Phi(\gamma)=2\cdot \pi}$?}
-
-\begin{thm}{Proposition}\label{prop:fenchel=}
-The equality case in Fenchel's theorem holds only for convex plane curves;
-that is, the total curvature of a smooth regular space curve $\gamma$ equals $2\cdot\pi$ if and only if $\gamma$ is a convex plane curve.
-\end{thm}
-
-\begin{thm}{Lemma}\label{prop:convex-monotone}
-Tangent indicatrix of a smooth regular closed convex plane curve $\gamma$ defines a \index{monotonic map}\emph{monotonic map}  $\tan\:\mathbb{S}^1\to \mathbb{S}^1$;
-that is, for any $\vec u\z\in\mathbb{S}^1$, its inverse image $\tan^{-1}\{\vec u\}$ is a nonempty connected set in $\mathbb{S}^1$.
-\end{thm}
-
-\begin{wrapfigure}{r}{25 mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-3500}
-\vskip0mm
-\end{wrapfigure}
-
-\parit{Proof.}
-Suppose $\gamma$ bounds a convex figure $F$ in the plane.
-We may assume that $F$ lies on the left from $\gamma$.
-Denote by $\tan\:\mathbb{S}^1\to \mathbb{S}^1$ its tangent indicatrix.
-
-Let $\vec u, \vec v$ be an oriented ortonormal frame in the plane,
-so $\vec v$ is a counterclockwise rotation of $\vec u$ by angle $\tfrac\pi2$.
-Consider a linear function $f$ with gradient~$\vec v$.
-
-By convexity,  $\vec u=\tan(s)$ if and only if $p=\gamma(s)$ is a minimum point of $f$ on~$F$.
-The point $p$ might be unique minimum, in this case $\tan^{-1}\{\vec u\}=s$,
-or $f$ might have a line segment of minimal points in $\gamma$, in this case $\tan^{-1}\{\vec u\}$ is an arc of $\mathbb{S}^1$ which proves the lemma.
-\qeds
-
-
-\parit{Proof of \ref{prop:fenchel=}; if part.}
-Denote by $\tan\:\mathbb{S}^1\to \mathbb{S}^1$ the tangent indicatrix of $\gamma$.
-By the lemma, the map $\tan\:\mathbb{S}^1\to \mathbb{S}^1$ is monotonic.
-Applying \ref{obs:tantrix} and \ref{ex:integral-length-0}, we get
-\[\tc\gamma=\length\tan=\length\mathbb{S}^1=2\cdot \pi.\]
-
-\parit{Only-if part.}
-Consider an inscribed quadrangle $abcd$ in~$\gamma$.
-By the definition of total curvature, we have that
-\begin{align*}
-\tc{abcd}&=(\pi-
-\measuredangle\hinge adb)+(\pi-
-\measuredangle\hinge bac)+(\pi-
-\measuredangle\hinge cbd)+(\pi-
-\measuredangle\hinge dca)=
-\\
-&=4\cdot\pi -(
-\measuredangle\hinge adb
-+
-\measuredangle\hinge bac
-+
-\measuredangle\hinge cbd
-+
-\measuredangle\hinge dca))
-\end{align*}
-
-
-By \ref{thm:spherical-triangle-inq},
-\[
-\measuredangle\hinge bac
-\le
-\measuredangle\hinge bad
-+ 
-\measuredangle\hinge bdc
-\quad\text{and}\quad
-\measuredangle\hinge dca\le
-\measuredangle\hinge dcb
-+ 
-\measuredangle\hinge dba.
-\eqlbl{eq:spheric-triangle}
-\]
-
-\begin{wrapfigure}[9]{r}{37 mm}
-\vskip-2mm
-\centering
-\includegraphics{mppics/pic-56}
-\vskip0mm
-\end{wrapfigure}
-
-The sum of angles in any triangle is $\pi$, so combining these inequalities, we get that 
-\begin{align*}
-\tc{abcd}\ge 4\cdot \pi 
-&- (\measuredangle\hinge adb+\measuredangle\hinge bad+ 
-\measuredangle\hinge dba)-
-\\
-&-(\measuredangle\hinge cbd+\measuredangle\hinge dcb 
-+\measuredangle\hinge  bdc)=
-\\
-=2\cdot\pi.&
-\end{align*}
-
-By \ref{prop:inscribed-total-curvature},
-\[\tc{abcd}\le \tc\gamma\le 2\cdot\pi.\]
-Therefore, we have equalities in \ref{eq:spheric-triangle}.
-It means that the point $d$ lies in the angle $abc$ 
-and the point $b$ lies in the angle $cda$.
-The latter means that $abcd$ is a convex plane quadrangle.
-
-It follows that any quadrangle inscribed in $\gamma$ is a convex plane quadrangle.
-Therefore, all points of $\gamma$ lie in one plane defined by three points on~$\gamma$.
-Further, since any quadrangle inscribed in $\gamma$ is convex,
-we get that $\gamma$ is convex as well. 
-\qeds
-
-\begin{thm}{Exercise}\label{ex:tc(convex)}
-Show that the total curvature of an open convex regular smooth curve is at most $\pi$.
-\end{thm}
 
 \section{Bow lemma}
 
@@ -660,7 +387,8 @@ We will prove for $s\le s_0$; the case $s\ge s_0$ is analogous.
 
 By convexity of $\gamma_1$, the function $d\circ \gamma$ is nondecreasing in the interval $[a,s_0]$.
 Therefore, the arc $\tan_1|_{[a,s_0]}$ lies in one of the unit semicircles with endpoints $\vec u_1$ and $-\vec u_1$.
-Therefore, by \ref{obs:tantrix}, \ref{prop:convex-monotone}, and \ref{ex:integral-length-0}, we get that
+Therefore, by \ref{obs:tantrix}, \ref{prop:convex-monotone}%ref to next chap
+, and \ref{ex:integral-length-0}, we get that
 \[\measuredangle(\gamma'_1(s),\vec u_1)=\measuredangle(\tan_1(s),\vec u_1)=\length (\tan_1|_{[s,s_0]}).\eqlbl{<=length}\]
 for any $s\le s_0$.
 By \ref{obs:S2-length}, we also have 
@@ -731,7 +459,8 @@ Assume
 \[|\gamma(b)-\gamma(a)|> \cos\theta\cdot\length\gamma.\]
 \end{subthm}
 
-\begin{subthm}{ex:length-dist:sef-intersection:>pi} Use part \ref{SHORT.ex:length-dist:>} to give another solution of \ref{ex:sef-intersection:>pi}.
+\begin{subthm}{ex:length-dist:sef-intersection:>pi}
+Use part \ref{SHORT.ex:length-dist:>} to give another solution of \ref{ex:sef-intersection:>pi}. %???ref to next chap
 \end{subthm}
 
 \begin{subthm}{ex:length-dist:=} Show that the inequality in \ref{SHORT.ex:length-dist:>} is optimal; that is, given 

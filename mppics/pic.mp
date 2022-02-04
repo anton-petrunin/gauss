@@ -4828,18 +4828,60 @@ z.p4=z.p+(-.2,0)*u;
 
 p0=z.p{1,0}..z.p1..z.p2..z.p3..{1,0}z.p4--cycle;
 
-hatchfill p0  withcolor (57, 1.4mm, -.5bp);
-drawarrow subpath (0,1.6) of p0;
-draw subpath (1.6,5) of p0;
+draw z.p+(-1,0)*u--z.p+(1.5,0)*u penhair withcolor .5;
+hatchfill p0  withcolor (53, 1.4mm, -.5bp);
+drawarrow subpath (0,1.6) of p0 pensemibold;
+draw subpath (1.6,5) of p0 pensemibold;
 drawarrow z.p--z.p+(1,0)*u;
 drawarrow z.p--z.p+(0,1)*u;
 dOt z.p;
 
 label.bot(btex $p$ etex, z.p);
+label.rt(btex $\ell$ etex, z.p+(1.5,0)*u) withcolor .5;
 label.rt(btex $\gamma$ etex, point 1.6 of p0);
 label.bot(btex $\vec u$ etex, z.p+(1,0)*u);
 whitelabel.lft(btex $\vec v$ etex, z.p+(0,1)*u);
 whitelabel(btex $F$ etex, point 1.3 of p0+(-.7,0)*u);
+endfig;
+
+beginfig(3502);
+save u;
+u:=1cm;
+
+z.a0=(6,1)*u;
+z.a1=(0,0)*u;
+z.a2=(6,-1)*u;
+
+save p; path p[];
+p0=z.a0{left}...z.a1{.1,-1}...z.a2{right};
+z.x1=point 1.2 of p0;
+z.xn=point 1.9 of p0;
+z.dots=point 1.6 of p0;
+z.q=point .8 of p0;
+z.Sigma=point .3 of p0;
+z.vn=z.a1+unitvector(z.xn-z.a1)*u;
+
+hatchfill p0--cycle  withcolor (53, 1.4mm, -.5bp);
+drawarrow subpath (0,.3) of p0 pensemibold;
+draw subpath (.3,3) of p0 pensemibold;
+
+draw z.a1--(x.a0,-y.a1);
+draw z.a1--z.x1;
+draw z.a1--z.xn;
+drawarrow z.a1--(z.a1+(1,0)*u);
+drawarrow z.a1--z.vn;
+
+dOt z.a1, z.xn, z.x1;
+
+label.lft(btex $o$ etex, z.a1);
+label.bot(btex $x_n$ etex, z.xn);
+label.bot(btex $x_1$ etex, z.x1);
+label.top(btex $\gamma$ etex, z.Sigma);
+whitelabel.bot(btex $F$ etex, z.Sigma+(0,-5));
+whitelabel.bot(btex $h$ etex, (x.Sigma,y.a1));
+whitelabel.top(btex $\vec v$ etex,z.a1+(1,0)*u);
+whitelabel.bot(btex $\vec v_n$ etex,z.vn);
+label.bot(btex $\dots$ etex rotated angle(direction 1.6 of p0), z.dots);
 endfig;
 
 end

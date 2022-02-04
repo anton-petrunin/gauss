@@ -394,6 +394,12 @@ Use it to construct a sequence of unit-speed spherical curves $\tan_n\:\mathbb{I
 Show that the following sequence of curves solves the problem:
 \[\gamma_n(s)=\gamma(a)+\int_a^s\tan_n(t)\cdot dt.\]
 
+\parbf{\ref{ex:tangent-support}.}
+Show that no line distinct from $\ell$ can support $F$ at $p$. 
+Apply \ref{lem:separation} to show that there is a line supporting $F$ at $p$.
+Conclude that it must be $\ell$.
+
+
 \parbf{\ref{ex:no-parallel-tangents}.}
 Reuse the construction in \ref{ex:antipodal} to get a closed smooth simple spherical curve $\tan\:\mathbb{S}^1\z\to\mathbb{S}^2$ that contains no pair of antipodal points and has zero average.
 Then construct a curve with tangent indicatrix $\tan$.
@@ -1139,6 +1145,7 @@ To prove \ref{SHORT.ex:convex-proper-sphere:single} use the convexity of~$R$.
 To prove \ref{SHORT.ex:convex-proper-sphere:smooth}, observe that the map $\Sigma\to\mathbb{S}^2$ is smooth and regular, then apply the inverse function theorem to show that its inverse is smooth as well.
 
 \parbf{\ref{ex:convex-proper-plane}}; \ref{SHORT.ex:convex-proper-plane:a}
+(The argument is similar to \ref{prop:convex-monotone:open}.)
 We can assume that the origin lies on~$\Sigma$.
 Consider a sequence of points $x_n\in \Sigma$ such that $|x_n|\z\to \infty$ as $n\to \infty$.
 Denote by $\vec u_n$ the unit vector in the direction of $x_n$; that is $\vec u_n=\tfrac{x_n}{|x_n|}$.
@@ -1237,7 +1244,7 @@ Show that the derivative $\tfrac{d}{dt}h_t(w)$ vanishes at the point $w$ if and 
 and the derivative changes sign if $w$ goes from one side of $\bar\ell_t$ to the other.
 
 If $\bar\gamma$ is star-shaped with respect to a point $w$, then $w$ cannot cross $\bar\ell_t$.
-Therefore, the function $t\mapsto h_t(w)$ is monotonic on $\mathbb{S}^1$.
+Therefore, the function $t\mapsto h_t(w)$ is monotone on $\mathbb{S}^1$.
 Observe that this function cannot be constant, and arrive at a contradiction.
 
 \parbf{\ref{ex:crosss}.}
@@ -1427,7 +1434,7 @@ If $\gamma$ is tangent to a meridian at some point, then by the uniqueness part 
 in particular, it is non-contractible.
 
 In the remaining case, $\gamma$ can intersect meridians only transversely.
-Therefore, the longitude of $\gamma$ is monotonic.
+Therefore, the longitude of $\gamma$ is monotone.
 Whence again $\gamma$ is non-contractible.
 
 
