@@ -133,89 +133,6 @@ We say that a smooth regular curve $\gamma_1$ at $s_1$ is \index{tangent!curves}
 if $\gamma_1(s_1)=\gamma_2(s_2)$ and the tangent line of $\gamma_1$ at $s_1$ coincides with the tangent line of $\gamma_2$ at $s_2$;
 if both curves are simple we can also say that they are tangent at the point $p=\gamma_1(s_1)\z=\gamma_2(s_2)$ without ambiguity.
 
-\begin{thm}{Exercise}\label{ex:tangent-support}
-Let $\gamma$ be a convex plane curve;
-denote by $F$ the convex set bounded by $\gamma$.
-Show that a line $\ell$ is tangent to $\gamma$ at point $p$ if and only if it \index{supporting plane}\emph{supports} $F$ at $p$;
-that is, $\ell\ni p$ and $F$ lies in a closed half-plane bounded by $\ell$.
-\end{thm}
-
-\begin{thm}{Proposition}\label{prop:convex-monotone}
-Let $\gamma$ be a regular smooth convex plane curve.
-
-\begin{subthm}{prop:convex-monotone:closed}
-If $\gamma$ is closed, then its tangent indicatrix $\tan$ defines a monotone map $\mathbb{S}^1\to \mathbb{S}^1$;
-in other words, $\tan$ is a parametrization of the unit circle.
-\end{subthm}
-
-\begin{subthm}{prop:convex-monotone:open}
-If $\gamma$ is open, then its tangent indicatrix $\tan$ defines a monotone map to an interval in a unit semicircle;
-in other words, $\tan$ is a parametrization of an interval in a unit semicircle.
-\end{subthm}
-
-\end{thm}
-
-Recall that a map is monotone if the inverse image of any point in the target space is a nonempty connected set.
-
-\begin{wrapfigure}{r}{32 mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-3500}
-\vskip0mm
-\end{wrapfigure}
-
-\parit{Proof; \ref{SHORT.prop:convex-monotone:closed}.}
-Since $\gamma$ is closed, it bounds a compact convex set $F$ in the plane.
-We may assume that $F$ lies on the left from $\gamma$.
-
-Choose a unit vector $\vec u$.
-Let $(x,y)$ be the coordinates of the plane with $x$-axis in the direction of $\vec u$.
-
-From Exercise~\ref{ex:tangent-support}, it follows that  $\vec u=\tan(s)$ if and only if $p=\gamma(s)$ is a minimum point of $y$-coordinate function on~$F$.
-Indeed suppose $p$ is a minimum point.
-Let $\ell$ be the horizontal line thru $p$.
-Then $\ell$ supports $F$ at $p$.
-By the exercise, $\ell$ is tangent to $\gamma$ at $p$.
-Since $F$ lies on the left from $\gamma$, we get that $\tan(s)=\vec u$.
-And the other way around, if $\tan(s)=\vec u$ then, the tangent line at $p=\gamma(s)$ is horizonal,
-and, by the exercise, it supports $F$.
-Since $F$ lies on the left $\gamma$ we get that $f$ has minimum in $F$ at $p$.
-
-A minimum point $p=\gamma(s)$ for $f$ exists since $F$ is compact.
-The point $p$ might be unique, in this case $\tan^{-1}\{\vec u\}=s$,
-or $f$ might have a line segment of minimal points in $\gamma$, in this case $\tan^{-1}\{\vec u\}$ is an arc of $\mathbb{S}^1$.
-It follows that $\tan\:\mathbb{S}^1\to \mathbb{S}^1$ is monotone.
-
-\parit{\ref{SHORT.prop:convex-monotone:open}} 
-The same argument in \ref{SHORT.prop:convex-monotone:closed} shows that $\tan$ is monotonic map to its image.
-Evidently the image is connected.
-It remains to show that it lies in a semicircle;
-in other words, there is a unit vector $\vec w$ such that $\measuredangle(\vec w,\tan(s))\le\tfrac\pi2$ for any $s$.
-
-\begin{figure}[ht!]
-\centering
-\includegraphics{mppics/pic-3502}
-\end{figure}
-
-Since $\gamma$ is open, it bounds an unbounded convex closed region $F$.
-As before we assume that $F$ lies on the left from $\gamma$.
-Note that there is half-line $h$ that lies in~$F$.
-
-Indeed, we can assume that the origin $o$ lies in~$F$.
-Consider a sequence of points $x_n\in F$ such that $|x_n|\z\to \infty$ as $n\to \infty$.
-Denote by $\vec v_n$ the unit vector in the direction of $x_n$; that is $\vec v_n=\tfrac{x_n}{|x_n|}$.
-
-Since the unit circle is compact, we can pass to a subsequence of $(x_n)$ such that $\vec v_n$ converges to a unit vector, say $\vec v$.
-Since $F$ is closed, the half-line $h$ from the origin in the direction of $\vec v$ lies in $F$.
-
-Denote by $\vec w$ the clockwise rotation of $\vec v$ by angle $\tfrac\pi 2$.
-Suppose $\vec u=\tan (s)$ for some $s$.
-The same argument as in \ref{SHORT.prop:convex-monotone:closed} shows that 
-$p=\gamma(s)$ is a minimum pint in $F$ of the $y$-coordinate.
-It follows that $h$ and therefore $\vec v$ point in the closed upper half-plane.
-The latter is equivalent to $\measuredangle(\vec w,\tan(s))\le\tfrac\pi2$.
-\qeds
-
 \section{Total curvature}
 
 Let $\gamma\:\mathbb{I}\to\mathbb{R}^3$ be a smooth unit-speed curve and $\tan$ its tangent indicatrix.
@@ -297,7 +214,7 @@ Recall that the curvature of a spherical curve is at least $1$
 In particular, the length of a spherical curve cannot exceed its total curvature.
 The following theorem shows that the same inequality holds for {}\emph{closed} curves in a unit ball.
 
-\begin{thm}{Theorem}\label{thm:DNA}
+\begin{thm}{DNA theorem}\label{thm:DNA}
 Let $\gamma$ be a smooth regular closed curve that lies in a unit ball.
 Then 
 \[\tc\gamma\ge \length\gamma.\]
@@ -308,7 +225,8 @@ The 2-dimensional case of this theorem was proved by Istv\'{a}n F\'{a}ry \cite{f
 It was generalized by Don Chakerian \cite{chakerian1962} to higher dimensions.
 This theorem has many very interesting and very different proofs;
 a number of them are collected by Serge Tabachnikov~\cite{tabachnikov}.
-The following exercise will guide you thru another proof by Don Chakerian \cite{chakerian1964}:
+The following exercise will guide you thru another proof by Don Chakerian \cite{chakerian1964}.
+Yet another proof is given in Section~\ref{sec:DNA-poly}.
 
 \begin{thm}{Exercise}\label{ex:DNA}
 Let $\gamma\:[0,\ell]\to\mathbb{R}^3$ be a smooth unit-speed closed curve that lies in the unit ball; that is, $|\gamma|\le 1$.
@@ -334,12 +252,140 @@ Use this equality together with  part \ref{SHORT.ex:DNA:int>=length-tc} to prove
 \end{subthm}
 \end{thm}
 
+\section{Convex curves}
 
+In this section we show that tangent indicatrix of a convex curve rotates monotonically. 
+The following exercise provides a key observation for the proof.
+
+\begin{thm}{Exercise}\label{ex:tangent-support}
+Let $\gamma$ be a convex plane curve;
+denote by $F$ the convex set bounded by $\gamma$.
+Show that a line $\ell$ is tangent to $\gamma$ at point $p$ if and only if it \index{supporting plane}\emph{supports} $F$ at $p$;
+that is, $\ell\ni p$ and $F$ lies in a closed half-plane bounded by $\ell$.
+\end{thm}
+
+Recall that a map is monotone if the inverse image of any point in the target space is a nonempty connected set.
+
+\begin{thm}{Proposition}\label{prop:convex-monotone}
+Let $\gamma$ be a regular smooth convex plane curve.
+
+\begin{subthm}{prop:convex-monotone:closed}
+If $\gamma$ is closed, then its tangent indicatrix $\tan$ defines a monotone map $\mathbb{S}^1\to \mathbb{S}^1$;
+in other words, $\tan$ is a parametrization of the unit circle.
+\end{subthm}
+
+\begin{subthm}{prop:convex-monotone:open}
+If $\gamma$ is open, then its tangent indicatrix $\tan$ defines a monotone map to an interval in a unit semicircle;
+in other words, $\tan$ is a parametrization of an interval in a unit semicircle.
+\end{subthm}
+
+\end{thm}
+
+The following corollary says that \textit{for convex curves we have equality in Fenchel's theorem} (\ref{thm:fenchel}).
+Latter we, in \ref{prop:fenchel=}, we will show that it holds \textit{only} for convex curves.
+
+\begin{thm}{Corollary}\label{cor:fenchel=convex}
+Let $\gamma$ be a convex plane curve.
+
+\begin{subthm}{}
+If $\gamma$ is closed, then $\tc\gamma=2\cdot\pi$.
+\end{subthm}
+
+\begin{subthm}{}
+If $\gamma$ is open, then $\tc\gamma\le\pi$.
+\end{subthm}
+
+\end{thm}
+
+\parit{Proof.}
+Follows from \ref{prop:convex-monotone:closed}, \ref{obs:tantrix} and \ref{ex:integral-length-0}.
+\qeds
+
+\begin{wrapfigure}{r}{32 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-3500}
+\vskip0mm
+\end{wrapfigure}
+
+\parit{Proof of \ref{prop:convex-monotone}; \ref{SHORT.prop:convex-monotone:closed}.}
+Since $\gamma$ is closed, it bounds a compact convex set $F$.
+We may assume that $F$ lies on the left from $\gamma$.
+
+Choose a unit vector $\vec u$.
+Let $(x,y)$ be the coordinates of the plane with $x$-axis in the direction of $\vec u$.
+
+From Exercise~\ref{ex:tangent-support}, it follows that  $\vec u=\tan(s)$ if and only if $p=\gamma(s)$ is a minimum point of $y$-coordinate function on~$F$.
+Indeed suppose $p$ is a minimum point.
+Let $\ell$ be the horizontal line thru $p$.
+Then $\ell$ supports $F$ at $p$.
+By the exercise, $\ell$ is tangent to $\gamma$ at $p$.
+Since $F$ lies on the left from $\gamma$, we get that $\tan(s)=\vec u$.
+And the other way around, if $\tan(s)=\vec u$ then, the tangent line at $p=\gamma(s)$ is horizonal,
+and, by the exercise, it supports $F$.
+Since $F$ lies on the left from $\gamma$, we get that the $y$-coordinate has minimum in $F$ at $p$.
+
+Since $F$ is compact, there is a minimum point $p=\gamma(s)$ for the $y$-coordinate.
+The point $p$ might be unique, in this case $\tan^{-1}\{\vec u\}=s$,
+or $f$ might have a line segment of minimal points in $\gamma$, in this case $\tan^{-1}\{\vec u\}$ is an arc of $\mathbb{S}^1$.
+It follows that $\tan\:\mathbb{S}^1\to \mathbb{S}^1$ is monotone.
+
+\parit{\ref{SHORT.prop:convex-monotone:open}} 
+The same argument in \ref{SHORT.prop:convex-monotone:closed} shows that $\tan$ is monotone map to its image.
+Evidently the image is connected set of $\mathbb{S}^1$.
+It remains to show that the image lies in a semicircle;
+in other words, there is a unit vector $\vec w$ such that 
+\[\measuredangle(\vec w,\tan(s))>\tfrac\pi2
+\quad\text{for any}\quad
+s.
+\eqlbl{eq:<(w,tan).pi/2}
+\]
+
+\begin{figure}[ht!]
+\centering
+\includegraphics{mppics/pic-3502}
+\end{figure}
+
+Since $\gamma$ is open, it bounds an unbounded convex closed region $F$.
+As before we assume that $F$ lies on the left from $\gamma$.
+Note that there is half-line $h$ that lies in~$F$.
+
+Indeed, we can assume that the origin $o$ lies in~$F$.
+Consider a sequence of points $q_n\in F$ such that $|q_n|\z\to \infty$ as $n\to \infty$.
+Denote by $\vec v_n$ the unit vector in the direction of $q_n$; that is $\vec v_n=\tfrac{q_n}{|q_n|}$.
+
+Since the unit circle is compact, we can pass to a subsequence of $q_n$ such that $\vec v_n$ converges to a unit vector, say $\vec v$.
+Since $F$ is closed, the half-line $h$ from the origin in the direction of $\vec v$ lies in $F$.
+
+Denote by $\vec w$ the counterclockwise rotation of $\vec v$ by angle $\tfrac\pi 2$.
+Suppose $\vec u=\tan (s)$ for some $s$;
+choose $(x,y)$-coordinates so that $x$-axis points in the direction of $\vec u$.
+The same argument as in \ref{SHORT.prop:convex-monotone:closed} shows that 
+$p=\gamma(s)$ is a minimum pint in $F$ of the $y$-coordinate.
+It follows that $h$ and therefore $\vec v$ point in the closed upper half-plane of the $(x,y)$-plane.
+The latter is equivalent to \ref{eq:<(w,tan).pi/2}.
+\qeds
 
 \section{Bow lemma}
 
+\begin{wrapfigure}{r}{39 mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-3510}
+\vskip0mm
+\end{wrapfigure}
+
 The following lemma was proved by Axel Schur \cite{shur};
 it is a differential-geometric analog of the so-called {}\emph{arm lemma} of Augustin-Louis Cauchy.
+The arm lemma says that 
+\textit{if $p_0\dots p_n$ is a convex plane polygon and $q_0\dots q_n$ is a polygonal line in the space such that 
+\begin{align*}
+|p_i-p_{i-1}|&=|q_i-q_{i-1}|,
+\\
+\measuredangle\hinge{p_i}{p_{i+1}}{p_{i1}}&\le \measuredangle\hinge{q_i}{q_{i+1}}{q_{i-1}}
+\end{align*}
+for each $i$, then $|p_0-p_n|\le |q_0-q_n|$.}
+
 
 \begin{thm}{Lemma}\label{lem:bow}\index{bow lemma}
 Let $\gamma_1\:[a,b]\to\mathbb{R}^2$ and $\gamma_2\:[a,b] \to\mathbb{R}^3$ be two smooth unit-speed curves.
@@ -364,14 +410,15 @@ Construct two simple smooth unit-speed plane curves $\gamma_1,\gamma_2\:[a,b]\to
 }
 
 \parit{Proof.}
-Denote by $\tan_1$ and $\tan_2$ the tangent indicatrixes of $\gamma_1$ and $\gamma_2$, respectively.
 We can assume that $\gamma_1(a)\ne \gamma_1(b)$;
 otherwise the statement is evident.
-By convexity, the curve $\gamma_1$ lies on one side of the line $\ell$ thru $\gamma(a)$ and $\gamma(b)$.
+By convexity, the curve $\gamma_1$ lies on one side of the line $\ell$ thru $\gamma(a)$ and $\gamma(b)$;
+we may assume $\ell$ is horizontal and $\gamma_1$ lies below $\ell$.
 
-Denote by $f(p)$ the distance from a point $p$ to the line $\ell$.
-Let $s_0$ be the maximal point of $f\circ \gamma$;
-that is, $\gamma_1(s_0)$ is the point on $\gamma_1$ furthest from $\ell$.
+Let $s_0$ be the lowest point on $\gamma$;
+that is, $\gamma(s_0)$ has minimal $y$-coordinate.
+
+Denote by $\tan_1$ and $\tan_2$ the tangent indicatrixes of $\gamma_1$ and $\gamma_2$, respectively.
 Consider two unit vectors 
 \[\vec u_1=\tan_1(s_0)=\gamma_1'(s_0)
 \quad\text{and}\quad
@@ -385,9 +432,9 @@ Lets us show that
 for any $s$.
 We will prove for $s\le s_0$; the case $s\ge s_0$ is analogous.
 
-By convexity of $\gamma_1$, the function $d\circ \gamma$ is nondecreasing in the interval $[a,s_0]$.
+By Exercise \ref{ex:tangent-support}, the $y$-coordinate of $\gamma$ is nonincreasing in the interval $[a,s_0]$.
 Therefore, the arc $\tan_1|_{[a,s_0]}$ lies in one of the unit semicircles with endpoints $\vec u_1$ and $-\vec u_1$.
-Therefore, by \ref{obs:tantrix}, \ref{prop:convex-monotone}%ref to next chap
+By \ref{obs:tantrix}, \ref{prop:convex-monotone}%ref to next chap
 , and \ref{ex:integral-length-0}, we get that
 \[\measuredangle(\gamma'_1(s),\vec u_1)=\measuredangle(\tan_1(s),\vec u_1)=\length (\tan_1|_{[s,s_0]}).\eqlbl{<=length}\]
 for any $s\le s_0$.
@@ -494,4 +541,3 @@ Show that
 Let $\kur$ be a smooth nonnegative function defined on $[0,\ell]$.
 Construct a smooth unit-speed curve $\gamma\:[0,\ell]\to\mathbb{R}^3$ with curvature function $\kur$ such that the distance $|\gamma(\ell)-\gamma(0)|$ is arbitrary close to $\ell$.
 \end{thm}
-

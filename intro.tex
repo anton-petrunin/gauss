@@ -23,10 +23,11 @@ To view a copy of this license, visit
 \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,scale=.25,
   thick,main node/.style={circle,draw,font=\sffamily\bfseries,minimum size=8mm}]
 
-  \node[main node] (1) at (3,5) {\ref{chap:curves-def}};
-  \node[main node] (2) at (6,-0) {\ref{chap:length}};
-  \node[main node] (3) at (9,-5) {\ref{chap:curve-curvature}};
-  \node[main node] (4) at (6,-10) {\ref{chap:torsion}};
+  \node[main node] (1) at (0,0) {\ref{chap:curves-def}};
+  \node[main node] (2) at (3,-5) {\ref{chap:length}};
+  \node[main node] (3) at (6,-10) {\ref{chap:curve-curvature}};
+  \node[main node] (31) at (9,-15) {\ref{chap:poly}};
+  \node[main node] (4) at (3,-15) {\ref{chap:torsion}};
   \node[main node] (5) at (12,-10) {\ref{chap:signed-curvature}};
   \node[main node] (6) at (15,-15) {\ref{chap:supporting-curves}};
   \node[main node] (7) at (12,0) {\ref{chap:surfaces-def}};
@@ -44,7 +45,9 @@ To view a copy of this license, visit
    (1) edge node{}(2)
    (2) edge node{}(3)
    (3) edge node{}(4)
+   (3) edge node{}(31)
    (3) edge node{}(5)
+   (31) edge[dashed] node{}(5)
    (5) edge node{}(6)
    (5) edge node{}(9)
    (6) edge node{}(10)

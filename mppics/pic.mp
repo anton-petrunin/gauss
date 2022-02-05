@@ -4866,22 +4866,76 @@ drawarrow subpath (0,.3) of p0 pensemibold;
 draw subpath (.3,3) of p0 pensemibold;
 
 draw z.a1--(x.a0,-y.a1);
-draw z.a1--z.x1;
 draw z.a1--z.xn;
 drawarrow z.a1--(z.a1+(1,0)*u);
+drawarrow z.a1--(z.a1+(0,1)*u);
+drawarrow z.x1--(z.x1+unitvector(direction 1.2 of p0)*u);
 drawarrow z.a1--z.vn;
 
 dOt z.a1, z.xn, z.x1;
 
 label.lft(btex $o$ etex, z.a1);
-label.bot(btex $x_n$ etex, z.xn);
-label.bot(btex $x_1$ etex, z.x1);
+label.bot(btex $q_n$ etex, z.xn);
+label.bot(btex $p$ etex, z.x1);
 label.top(btex $\gamma$ etex, z.Sigma);
 whitelabel.bot(btex $F$ etex, z.Sigma+(0,-5));
 whitelabel.bot(btex $h$ etex, (x.Sigma,y.a1));
 whitelabel.top(btex $\vec v$ etex,z.a1+(1,0)*u);
+label.lft(btex $\vec w$ etex,z.a1+(0,1)*u);
 whitelabel.bot(btex $\vec v_n$ etex,z.vn);
-label.bot(btex $\dots$ etex rotated angle(direction 1.6 of p0), z.dots);
+label.bot(btex $\vec u$ etex,(z.x1+unitvector(direction 1.2 of p0)*u));
+%label.bot(btex $\dots$ etex rotated angle(direction 1.6 of p0), z.dots);
+endfig;
+
+beginfig(3510) 
+save u,p;
+path p[];
+u:=1cm;
+
+z.p0=(-1,1.4)*u;
+z.p1=(-1.3,.9)*u;
+z.p2=(-.7,.2)*u;
+z.p3=(0,0)*u;
+z.p4=(.8,.4)*u;
+z.p5=(.6,1.4)*u;
+
+z.q3=z.p3+(0,-2)*u;
+z.q2=z.q3+(z.p2-z.p3) rotated 5;
+z.q1=z.q2+(z.p1-z.p2) rotated 10;
+z.q0=z.q1+(z.p0-z.p1) rotated 15;
+z.q4=z.q3+(z.p4-z.p3) rotated -5;
+z.q5=z.q4+(z.p5-z.p4) rotated -10;
+
+rimmark(z.p0--z.p1);
+rimmark2(z.p1--z.p2);
+rimmark3(z.p2--z.p3);
+rimmark4(z.p3--z.p4);
+rimmark5(z.p4--z.p5);
+
+rimmark(z.q0--z.q1);
+rimmark2(z.q1--z.q2);
+rimmark3(z.q2--z.q3);
+rimmark4(z.q3--z.q4);
+rimmark5(z.q4--z.q5);
+
+draw z.p0--z.p1--z.p2--z.p3--z.p4--z.p5;
+draw z.q0--z.q1--z.q2--z.q3--z.q4--z.q5;
+draw z.p0--z.p5 dashed evenly;
+draw z.q0--z.q5 dashed evenly;
+
+dOt z.p0,z.p1,z.p2,z.p3,z.p4,z.p5,z.q0,z.q1,z.q2,z.q3,z.q4,z.q5;
+
+label.ulft(btex $p_0$ etex, z.p0);
+label.lft(btex $p_1$ etex, z.p1);
+label(btex $\dots$ etex rotated angle(z.p3-z.p2), .5[z.p2,z.p3]+(-2,-6));
+label.rt(btex $p_{n-1}$ etex, z.p4);
+label.urt(btex $p_n$ etex, z.p5);
+
+label.ulft(btex $q_0$ etex, z.q0);
+label.lft(btex $q_1$ etex, z.q1);
+label(btex $\dots$ etex rotated angle(z.q3-z.q2), .5[z.q2,z.q3]+(-2,-6));
+label.rt(btex $q_{n-1}$ etex, z.q4);
+label.urt(btex $q_n$ etex, z.q5);
 endfig;
 
 end

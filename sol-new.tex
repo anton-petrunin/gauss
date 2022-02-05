@@ -394,12 +394,6 @@ Use it to construct a sequence of unit-speed spherical curves $\tan_n\:\mathbb{I
 Show that the following sequence of curves solves the problem:
 \[\gamma_n(s)=\gamma(a)+\int_a^s\tan_n(t)\cdot dt.\]
 
-\parbf{\ref{ex:tangent-support}.}
-Show that no line distinct from $\ell$ can support $F$ at $p$. 
-Apply \ref{lem:separation} to show that there is a line supporting $F$ at $p$.
-Conclude that it must be $\ell$.
-
-
 \parbf{\ref{ex:no-parallel-tangents}.}
 Reuse the construction in \ref{ex:antipodal} to get a closed smooth simple spherical curve $\tan\:\mathbb{S}^1\z\to\mathbb{S}^2$ that contains no pair of antipodal points and has zero average.
 Then construct a curve with tangent indicatrix $\tan$.
@@ -464,69 +458,10 @@ Since $\gamma$ is a smooth closed curve, we have
 $\gamma'(0)=\gamma'(\ell)$ and $\gamma(0)=\gamma(\ell)$.
 Therefore, \ref{SHORT.ex:DNA:int>=length-tc} and \ref{SHORT.ex:DNA:end} imply \ref{thm:DNA}.
 
-\parbf{\ref{ex:chord-lemma-optimal}.} 
-Set $\alpha=\measuredangle(\vec w,\vec u)$ 
-and $\beta=\measuredangle(\vec v,\vec u)$.
-Try to guess the example from the diagram.
-
-\begin{figure}[!ht]
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-285}
-\vskip0mm
-\end{figure}
-
-The shown curve is divided into three arcs: I, II, and III. 
-Arc I turns from $\vec v$ to $\vec u$;
-it has total curvature $\alpha$.
-Similarly, arc III turns from $\vec u$ to $\vec w$ and has total curvature $\beta$. 
-Arc II goes very close and almost parallel to the chord $pq$, and its total curvature can be made arbitrarily small.
-
-
-\parbf{\ref{ex:monotonic-tc}.}
-Use the fact that an exterior angle of a triangle equals the sum of the two remote interior angles.
-For the second part apply induction on the number of vertices.
-
-\parbf{\ref{ex:total-curvature=}.}
-By \ref{prop:inscribed-total-curvature}, $\tc\gamma\ge \tc\beta$;
-it remains to show that
-$\tc\gamma\le\sup\{\tc\beta\}$.
-In other words, 
-given $\epsilon>0$ and a polygonal line $\sigma=\vec u_0\dots \vec u_k$ inscribed in the tangent indicatrix $\tan$ of $\gamma$, 
-we need to construct a polygonal line $\beta$ inscribed in $\gamma$ such that
-\[\length\sigma<\tc\beta+\epsilon.
-\eqlbl{eq:tc=<tc}\]
-
-Suppose $\vec u_i=\tan(s_i)$.
-Choose an inscribed polygonal line $\beta=p_0\dots p_{2\cdot k+1}$ such that $p_{2\cdot i}$ and $p_{2\cdot i+1}$ lie sufficiency close to $\gamma(s_i)$; so we can assume that the direction of $p_{2\cdot i+1}-p_{2\cdot i}$ is sufficiency close to $\vec u_i$ for each~$i$.
-Show that \ref{eq:tc=<tc} holds true for the constructed polygonal line $\beta$.
-
-\begin{wrapfigure}{r}{23 mm}
-\vskip3mm
-\centering
-\includegraphics{mppics/pic-290}
-\vskip-0mm
-\end{wrapfigure}
-
-\parbf{\ref{ex:sef-intersection}}; \ref{SHORT.ex:sef-intersection:<2pi} See the diagram. 
-
-\parit{\ref{SHORT.ex:sef-intersection:>pi}.} Assume $x$ is a point of self-intersection.
-Show that we may choose two points $y$ and $z$ on $\gamma$ so that the triangle $xyz$ is nondegenerate.
-In particular, 
-$\measuredangle\hinge yxz
-\z+
-\measuredangle\hinge zyx
-<\pi$, or, equivalently, for the \emph{nonclosed} polygonal line $xyzx$ we have $\tc{xyzx}>\pi$.
-It remains to apply \ref{prop:inscribed-total-curvature}.
-
-\parbf{\ref{ex:tc(convex)}.}
-Show that the image of the tangent indicatrix of this curve lies in a semicircle.
-Then argue as in the proof of the if part in \ref{prop:fenchel=}.
-
-\parbf{\ref{ex:quadrisecant}.}
-Consider the closed polygonal line $acbd$.
-Observe that $\tc{acbd}=4\cdot\pi$.
-It remains to apply \ref{prop:inscribed-total-curvature}.
+\parbf{\ref{ex:tangent-support}.}
+Show that no line distinct from $\ell$ can support $F$ at $p$. 
+Apply \ref{lem:separation} to show that there is a line supporting $F$ at $p$.
+Conclude that it must be $\ell$.
 
 {
 
@@ -571,7 +506,151 @@ for example, a small spherical circle centered at this point.
 Consider a curve $\tan$ that runs along $\alpha$ with speed $\kappa(s)$ at any $s\in [0,\ell]$.
 Show that a curve with tangent indicatrix $\tan$ solves the problem.
 
-\input{torsion-sol.tex}
+\parbf{\ref{ex:chord-lemma-optimal}.} 
+Set $\alpha=\measuredangle(\vec w,\vec u)$ 
+and $\beta=\measuredangle(\vec v,\vec u)$.
+Try to guess the example from the diagram.
+
+\begin{figure}[!ht]
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-285}
+\vskip0mm
+\end{figure}
+
+The shown curve is divided into three arcs: I, II, and III. 
+Arc I turns from $\vec v$ to $\vec u$;
+it has total curvature $\alpha$.
+Similarly, arc III turns from $\vec u$ to $\vec w$ and has total curvature $\beta$. 
+Arc II goes very close and almost parallel to the chord $pq$, and its total curvature can be made arbitrarily small.
+
+
+\parbf{\ref{ex:monotonic-tc}.}
+Use the fact that an exterior angle of a triangle equals the sum of the two remote interior angles.
+For the second part apply induction on the number of vertices.
+
+\parbf{\ref{ex:total-curvature=}.}
+By \ref{prop:inscribed-total-curvature}, $\tc\gamma\ge \tc\beta$;
+it remains to show that
+$\tc\gamma\le\sup\{\tc\beta\}$.
+In other words, 
+given $\epsilon>0$ and a polygonal line $\sigma=\vec u_0\dots \vec u_k$ inscribed in the tangent indicatrix $\tan$ of $\gamma$, 
+we need to construct a polygonal line $\beta$ inscribed in $\gamma$ such that
+\[\length\sigma<\tc\beta+\epsilon.
+\eqlbl{eq:tc=<tc}\]
+
+Suppose $\vec u_i=\tan(s_i)$.
+Choose an inscribed polygonal line $\beta=p_0\dots p_{2\cdot k+1}$ such that $p_{2\cdot i}$ and $p_{2\cdot i+1}$ lie sufficiency close to $\gamma(s_i)$; so we can assume that the direction of $p_{2\cdot i+1}-p_{2\cdot i}$ is sufficiency close to $\vec u_i$ for each~$i$.
+Show that \ref{eq:tc=<tc} holds true for the constructed polygonal line $\beta$.
+
+\begin{wrapfigure}{r}{23 mm}
+\vskip-3mm
+\centering
+\includegraphics{mppics/pic-290}
+\bigskip
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{asy/helix(1)}
+\lbl[br]{8,24;$\norm$}
+\lbl[b]{2,26;$\bi$}
+\lbl[wl]{15,25;$\tan$}
+\end{lpic}
+\vskip-0mm
+\end{wrapfigure}
+
+\parbf{\ref{ex:sef-intersection}}; \ref{SHORT.ex:sef-intersection:<2pi} See the diagram. 
+
+\parit{\ref{SHORT.ex:sef-intersection:>pi}.} Assume $x$ is a point of self-intersection.
+Show that we may choose two points $y$ and $z$ on $\gamma$ so that the triangle $xyz$ is nondegenerate.
+In particular, 
+$\measuredangle\hinge yxz
+\z+
+\measuredangle\hinge zyx
+<\pi$, or, equivalently, for the \emph{nonclosed} polygonal line $xyzx$ we have $\tc{xyzx}>\pi$.
+It remains to apply \ref{prop:inscribed-total-curvature}.
+
+\parbf{\ref{ex:quadrisecant}.}
+Consider the closed polygonal line $acbd$.
+Observe that $\tc{acbd}=4\cdot\pi$.
+It remains to apply \ref{prop:inscribed-total-curvature}.
+
+\stepcounter{chapter}
+\setcounter{eqtn}{0}
+
+\parbf{\ref{ex:helix-torsion}.} 
+The arc-length parameter $s$ is already found in   \ref{ex:arc-length-helix}.
+It remains to find the Frenet frame and calculate curvature and torsion.
+The latter can be done by straightforward calculations;
+the answers are 
+\begin{align*}
+\tan(t)&=\tfrac{1}{\sqrt{a^2+b^2}}\cdot(-a\cdot\sin t, a\cdot\cos t,b),
+&
+\norm(t)&=(-\cos t,-\sin t,0),
+\\
+\bi(t)&=\tfrac{1}{\sqrt{a^2+b^2}}\cdot(b\cdot \sin t,-b\cdot \cos t, a),
+&
+\kur &\equiv \tfrac{a}{a^2+b^2},\qquad
+\tor \equiv \tfrac{b}{a^2+b^2}.
+\end{align*}
+
+It remains to show that the map $(a,b) \mapsto (\frac{a}{a^2+b^2}, \frac{b}{a^2+b^2})$ sends bijectively the half plane $a>0$ onto itself.
+
+\parbf{\ref{ex:beta-from-tau+nu}.} By the product rule, we get
+\begin{align*}
+\bi'&=(\tan\times \norm)'=
+\tan'\times \norm+\tan\times\norm'.
+\end{align*}
+It remains to substitute the values from \ref{eq:frenet-tau} and \ref{eq:frenet-nu} and simplify.
+
+\parbf{\ref{ex:torsion=0}.}
+This is a consequence of the equation $\bi' = - \tor\cdot \norm $.
+
+\parbf{\ref{ex:frenet}.}
+Observe that $\tfrac{\gamma'\times\gamma''}{|\gamma'\times\gamma''|}$ is a unit vector perpendicular to the plane spanned by $\gamma'$ and $\gamma''$, so, up to sign, it has to be equal to $\bi$.
+It remains to check that the sign is right.
+
+\parbf{\ref{ex:torsion-indicatrix}.} Assume that tangent indicatrix has no self-intersection.
+Show that it lies in an open hemisphere and argue as in Fenchel's theorem.
+
+\parbf{\ref{ex:lancret}}; \ref{SHORT.ex:lancret:a}.
+Observe that 
+$\langle \vec w,\tan\rangle'=0$.
+Show that it implies that $\langle \vec w, \norm\rangle =0$.
+
+By Frenet formulas,  
+$\langle \vec w,\norm\rangle'=0$
+ implies 
+$\langle \vec w, -\kur\cdot\tan+\tor\cdot \bi\rangle =0$.
+
+\parit{\ref{SHORT.ex:lancret:b}.}
+Show that $\vec w'=0$;
+it implies that $\langle \vec w,\tan\rangle=\tfrac\tor\kur$.
+In particular, the velocity vector of $\gamma$ makes a constant angle with $\vec w$; that is, $\gamma$ has a constant slope.
+
+\parbf{\ref{ex:evolvent-constant-slope}.}
+Suppose $\alpha$ is an evolvent of $\gamma$, and $\vec w$ is a fixed vector.
+Show that $\langle \vec w,\alpha\rangle$ is constant if $\gamma$ makes a constant angle with $\vec w$.
+
+\parbf{\ref{ex:spherical-frenet}}.
+Part \ref{SHORT.ex:spherical-frenet:tau} follows from the fact that $(  \tan,\norm,\bi)$ is an orthonormal basis.
+For \ref{SHORT.ex:spherical-frenet:nu} take the first and second derivatives of the identity $\langle\gamma,\gamma\rangle=1$ and simplify using the Frenet formulas.
+Part \ref{SHORT.ex:spherical-frenet:beta} follows from \ref{SHORT.ex:spherical-frenet:nu} and the Frenet formulas.
+By \ref{SHORT.ex:spherical-frenet:beta}, $\int\tfrac\tor\kur=0$, hence \ref{SHORT.ex:spherical-frenet:beta+} follows.
+Part \ref{SHORT.ex:spherical-frenet:kur-tor} is proved by algebraic manipulations.
+
+\parit{\ref{SHORT.ex:spherical-frenet:f}.}
+Use the Frenet formulas to show that $(\gamma+\tfrac1\kur\cdot \norm+\tfrac{\kur'}{\kur^2\cdot\tor}\cdot\bi)'=0$.
+
+
+
+\parbf{\ref{ex:cur+tor=helix}.} Use the second statement in \ref{ex:helix-torsion}.
+
+\parbf{\ref{ex:const-dist}.} Note that the function
+\[\rho(\ell)=|\gamma(t+\ell)-\gamma(t)|^2=\langle \gamma(t+\ell)-\gamma(t),\gamma(t+\ell)-\gamma(t)\rangle\] 
+is smooth and does not depend on~$t$.
+Express speed, curvature, and torsion of $\gamma$ in terms of the derivatives $\rho^{(n)}(0)$.
+Be patient, you will need two derivatives for the speed,
+four for the curvature,
+and six for the torsion.
+Once it is done, apply \ref{ex:cur+tor=helix}.
 
 \stepcounter{chapter}
 \setcounter{eqtn}{0}

@@ -1,6 +1,9 @@
 \chapter{Polygonal lines}
 \label{chap:poly}
 
+In this chapter should help to build a firm geometric intuition about curvature;
+it reinterpret the curvature of curves via inscribed polygonal lines.
+
 \section{Piecewise smooth curves}
 
 \begin{wrapfigure}{o}{25 mm}
@@ -58,6 +61,8 @@ In particular, for a smooth regular loop $\gamma\:[a,b] \z\to \mathbb{R}^3$, the
 where $\theta=\measuredangle(\gamma'(a),\gamma'(b))$.
 
 }
+
+\section{Generalized Fenchel's theorem}
 
 \begin{thm}{Generalized Fenchel's theorem}\label{thm:gen-fenchel}
 Let $\gamma$ be a closed piecewise smooth regular space curve.
@@ -253,13 +258,10 @@ The equality case in Fenchel's theorem holds only for convex plane curves;
 that is, the total curvature of a smooth regular space curve $\gamma$ equals $2\cdot\pi$ if and only if $\gamma$ is a convex plane curve.
 \end{thm}
 
-\parit{Proof of \ref{prop:fenchel=}; if part.}
-Denote by $\tan\:\mathbb{S}^1\to \mathbb{S}^1$ the tangent indicatrix of $\gamma$.
-By the lemma, the map $\tan\:\mathbb{S}^1\to \mathbb{S}^1$ is monotone.
-Applying \ref{obs:tantrix} and \ref{ex:integral-length-0}, we get
-\[\tc\gamma=\length\tan=\length\mathbb{S}^1=2\cdot \pi.\]
+\parit{Proof of \ref{prop:fenchel=}.}
+The if part is proved in Corollary~\ref{cor:fenchel=convex};
+it remains to prove the only-if part.
 
-\parit{Only-if part.}
 Consider an inscribed quadrangle $abcd$ in~$\gamma$.
 By the definition of total curvature, we have that
 \begin{align*}
@@ -327,6 +329,66 @@ Further, since any quadrangle inscribed in $\gamma$ is convex,
 we get that $\gamma$ is convex as well. 
 \qeds
 
-\begin{thm}{Exercise}\label{ex:tc(convex)}
-Show that the total curvature of an open convex regular smooth curve is at most $\pi$.
+\section{Genralized DNA theorem}\label{sec:DNA-poly}
+
+Recall that DNA theorem (\ref{thm:DNA}) states that \textit{total curvature of closed smooth regular curve in a unit ball cannot be smaller than its length}.
+In this section we prove the following polygonal analog of DNA theorem.
+
+\begin{thm}{Genralized DNA theorem}\label{thm:DNA-poly}
+Let $p_1\dots p_n$ be a closed polygonal line in a unit ball.
+Then 
+\[\tc{p_1\dots p_n}>\length(p_1\dots p_n).\]
+\end{thm}
+
+Note that by Exercise \ref{ex:total-curvature=}, this therem implies the original DNA theorem (\ref{thm:DNA}).
+Therefore, it is indeed a generalization of DNA theorem.
+
+\parit{Proof.}
+We assume that $p_n=p_0$, $p_{n+1}=p_1$ and so on.
+Denote by $\theta_i$ the external angle at $p_i$.
+
+\begin{figure}[ht!]
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-16}
+\vskip0mm
+\end{figure}
+
+Denote by $o$ the center of the disc.
+Consider a sequence of triangles 
+\[\triangle q_0q_1s_0\cong \triangle p_0p_1o,\ \triangle q_1q_2s_1\cong \triangle p_1p_2o,\dots\]
+such that the points $q_0,q_1\dots$ lie on one line in that order and all the $s_i$'s lie on one side from this line.
+
+Note that 
+\[|s_n-s_0|=\length (p_1\dots p_n).\]
+Therefore 
+\[|s_0-s_1|+\dots+|s_{n-1}-s_n|\ge \length (p_1\dots p_n).\]
+
+Note that 
+\[|q_i-s_{i-1}|=|q_i-s_i|=|p_i-o|\le 1\]
+and
+\[\measuredangle s_{i-1}q_is_i\le \theta_i\]
+for each $i$.
+It follows that
+\[|s_{i-1}-s_i|<\theta_i\]
+for each $i$.
+Therefore,
+\begin{align*}
+\tc {p_1\dots p_n}
+&=\theta_1+\dots+\theta_n>
+\\
+&> |s_{0}-s_1|+\dots |s_{n-1}-s_n|\ge 
+\\
+&\ge\length (p_1\dots p_n).
+\end{align*}
+\qedsf
+
+Let us mention the following related result;
+it was proved by Jeffrey Lagarias and Thomas Richardson \cite{lagarias-richardso}, another proof is given by Alexander Nazarov and Fedor Petrov \cite{nazarov-petrov}.
+The proofs are annoyingly tricky.
+
+\begin{thm}{Theorem}
+Let $\alpha$ be a closed curve that lies in a convex plane figure bounded by a curve $\gamma$
+Then the average curvature of $\alpha$ is not less than the average curvature of $\gamma$.
+
 \end{thm}
