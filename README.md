@@ -10,6 +10,7 @@ Go into subfolder `mppics/`, run `mpost pic`, come back:
 
 `cd mppics/`<br/>
 `mpost pic`<br/>
+`mpost pic-hints`<br/>
 `cd ..`<br/>
 
 ### Asymptote
