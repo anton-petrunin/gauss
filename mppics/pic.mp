@@ -3296,7 +3296,7 @@ endfig;
 
 beginfig(226);
 save u,a,n;
-u:=2.8cm;
+u:=1.8cm;
 a:=60;
 n:=5;
 
@@ -3448,7 +3448,7 @@ endfig;
 beginfig(260)
 save u,p;
 path p[];
-u:=1.2cm;
+u:=.6cm;
 
 p8=(-1,0)*u{up}..origin..(1,0)*u{up}..origin..cycle;
 drawarrow subpath (0,2) of p8;
@@ -3480,7 +3480,7 @@ endfig;
 beginfig(262)
 save u,p;
 path p[];
-u:=.7cm;
+u:=.35cm;
 z1=(1,0)*u;
 z2=(2,0)*u;
 z3=(3,0)*u;
@@ -3510,10 +3510,10 @@ for i=-80 step 3 until 90:
 draw p0 shifted (i,0);
 endfor
 
-clip currentpicture to (-5,-1)*u--(2,-1)*u--(2,1)*u--(-5,1)*u--cycle;
+clip currentpicture to (-2,-1)*u--(2,-1)*u--(2,1)*u--(-2,1)*u--cycle;
 
-draw (-5,-1)*u--(2,-1)*u;
-draw (-5,1)*u--(2,1)*u;
+draw (-2,-1)*u--(2,-1)*u;
+draw (-2,1)*u--(2,1)*u;
 endfig;
 
 beginfig(266);
@@ -3605,7 +3605,7 @@ endfig;
 beginfig(270);
 save u,p;
 path p[];
-u:=.7cm;
+u:=.5cm;
 
 draw 
 for i=-1.5 step 0.1 until 1.4:
@@ -3681,7 +3681,7 @@ endfig;
 beginfig(285);
 save u,p;
 path p[];
-u:=1cm;
+u:=.6cm;
 
 z.p=(0,0)*u;
 z.pp=(1,.3)*u;

@@ -5,7 +5,7 @@ import contour;
 defaultpen(fontsize(10pt));
 
 
-size(7cm,0);
+size(5cm,0);
 
 currentprojection=perspective(.3,.4,0);
 

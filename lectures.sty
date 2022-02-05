@@ -38,6 +38,10 @@ unicode
 \usepackage{epsfig,lpic,wrapfig}
 \usepackage{multicol}
 
+\newenvironment{Figure}
+  {\par\medskip\noindent\minipage{\linewidth}}
+  {\endminipage\par\medskip}
+
 \usepackage{accsupp}
 \usepackage{soulutf8}
 \sodef\an{}{.1em}{.5em plus.1em}{.5em plus.1em minus.1em}
@@ -83,7 +87,7 @@ isbn=false]{biblatex}
 \AtEveryBibitem{\clearlist{language}}
 \AtEveryBibitem{\clearlist{note}}
 \renewbibmacro{in:}{}
-\renewcommand*{\bibfont}{\scriptsize}
+\renewcommand*{\bibfont}{\footnotesize}
 
 \addbibresource{library.bib}
 

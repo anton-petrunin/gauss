@@ -204,22 +204,6 @@ If $\gamma$ is an arc, the argument is analogous:
 \end{align*}
 \qedsf
 
-The following exercise states that the inequality in \ref{prop:inscribed-total-curvature} is optimal.
-
-\begin{thm}{Exercise}\label{ex:total-curvature=}
-Show that for any regular smooth space curve $\gamma$ we have 
-\[\tc\gamma=\sup\{\tc\beta\},\]
-where the least upper bound is taken over all polygonal lines~$\beta$ inscribed in $\gamma$
-(if $\gamma$ is closed, then we assume so is $\beta$).
-\end{thm}
-
-This exercise can be used to define the total curvature of an arbitrary curve~$\gamma$.
-Namely, it can be defined as {}\textit{the least upper bound on the total curvatures of inscribed nondegenerate polygonal lines inscribed in~$\gamma$.}
-
-It is possible to generalize most of the statements in this chapter to the (nonsmooth) curves of finite total curvature.
-This theory was developed by Alexandr Alexandrov and Yuri Reshetnyak \cite{aleksandrov-reshetnyak};
-a good survey on the subject is written by John Sullivan \cite{sullivan-curves}.
-
 \begin{thm}{Exercise}\label{ex:sef-intersection}
 
 \begin{subthm}{ex:sef-intersection:<2pi}
@@ -250,6 +234,22 @@ Show that
 Lines crossing a curve at four points as in the exercise are called \index{alternating quadrisecants}\emph{alternating quadrisecants}.
 It turns out that any {}\emph{nontrivial knot} admits an alternating quadrisecant \cite{denne};
 according to the exercise, the latter implies the so-called \index{F\'ary--Milnor theorem}\emph{F\'ary--Milnor theorem} --- the total curvature of any knot exceeds~$4\cdot \pi$.
+
+The following exercise states that the inequality in \ref{prop:inscribed-total-curvature} is optimal.
+
+\begin{thm}{Exercise}\label{ex:total-curvature=}
+Show that for any regular smooth space curve $\gamma$ we have 
+\[\tc\gamma=\sup\{\tc\beta\},\]
+where the least upper bound is taken over all polygonal lines~$\beta$ inscribed in $\gamma$
+(if $\gamma$ is closed, then we assume so is $\beta$).
+\end{thm}
+
+This exercise can be used to define the total curvature of an arbitrary curve~$\gamma$.
+Namely, it can be defined as {}\textit{the least upper bound on the total curvatures of ondegenerate polygonal lines inscribed in~$\gamma$.}
+
+It is possible to generalize most of the statements in this chapter to the (nonsmooth) curves of finite total curvature.
+This theory was developed by Alexandr Alexandrov and Yuri Reshetnyak \cite{aleksandrov-reshetnyak};
+a good survey on the subject is written by John Sullivan \cite{sullivan-curves}.
 
 \section[\texorpdfstring{What if $\Phi(\gamma)=2\cdot \pi$?}{What if Φ(γ)=2·π?}]{What if $\bm{\Phi(\gamma)=2\cdot \pi}$?}
 
@@ -382,6 +382,14 @@ Therefore,
 &\ge\length (p_1\dots p_n).
 \end{align*}
 \qedsf
+
+\begin{thm}{Exercise}\label{ex:tc-rectifiable}
+Suppose that a simple curve $\gamma\:[0,1]\to\mathbb{R}^3$ has bounded total curvature in the generalized sense;
+that is, there is an upper bound on the total curvatures of polygonal lines inscribed in~$\gamma$.
+
+Show that $\gamma$ is rectifiable.
+Construct an example showing that the converse does not hold. 
+\end{thm}
 
 Let us mention the following related result;
 it was proved by Jeffrey Lagarias and Thomas Richardson \cite{lagarias-richardso}, another proof is given by Alexander Nazarov and Fedor Petrov \cite{nazarov-petrov}.

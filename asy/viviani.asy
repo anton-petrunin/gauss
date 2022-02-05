@@ -1,7 +1,7 @@
 settings.render=0;
 import solids;
 import three;
-size(3cm,0);
+size(4cm,0);
 currentprojection=orthographic((1.5, 1, .4));
 
 revolution cyl=cylinder((.5, 0, -1.3), .5, 2.6, Z);
