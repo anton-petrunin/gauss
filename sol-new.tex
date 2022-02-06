@@ -602,7 +602,12 @@ Consider the closed polygonal line $acbd$.
 Observe that $\tc{acbd}=4\cdot\pi$.
 It remains to apply \ref{prop:inscribed-total-curvature}.
 
-\parbf{\ref{ex:tc-rectifiable}.} Observe that $\gamma$ lies in a ball of finite radius and apply \ref{thm:DNA-poly} for its rescaling.
+\parbf{\ref{ex:tc-rectifiable}.}
+Show that for any polygonal line $\beta$ in a ball of radius $R$, we have
+\[\tc{\beta}+2\cdot \pi\ge\frac{\length\beta}R.\]
+Observe that $\gamma$ lies in a ball and apply this inequality.
+
+An example for the second question can be found among logarithmic spirals.
 
 %\end{multicols}
 %\par\noindent\rule{\textwidth}{0.4pt}
@@ -1214,28 +1219,6 @@ Apply \ref{ex:mean-curvature}.
 Use \ref{ex:line-of-curvature} and \ref{thm:moon-orginal}.
 
 \parbf{\ref{ex:lagunov-genus4}.} Drill an extra hole or combine two examples together.
-
-\parbf{\ref{ex:thin}.} 
-Denote by $L$ the \index{cut locus}\emph{cut locus} of $V$;
-that is, $L$ is a closure of the set of points $x\in V$ such that there are at least two points on $\partial V$ that minimize the distance to~$x$.
-
-Choose a connected component $\Sigma$ of the boundary $\partial V$.
-Show that $L$ is a smooth surface and the closest-point projection $L\to \Sigma$ is a smooth regular parametrization of~$\Sigma$.
-In particular, there is a unique point on $\Sigma$ that minimizes the distance to a given point $x\in L$.
-It follows that there is another component $\Sigma'$ with the same property.
-
-Finally, show that $\partial V$ cannot have more than two components.
-
-\parbf{\ref{ex:PI-sphere}.}
-Read about Bing's two-room house.
-Try to thicken it to construct the needed example.
-
-Assume $V$ does not contain a ball of radius $r_3$.
-Show that its cut locus $L$ is formed by a few smooth surfaces that meet by three along their boundary curves.
-Use this description to show that $L$ is not \index{simply-connected}\emph{simply-connected}; that is, there is a loop in $L$ that cannot be deformed continuously to a trivial loop.
-Conclude that $V$ is not simply-connected.
-
-Finally, arrive at a contradiction by showing that if $V$ is bounded by a smooth sphere, then $V$ is simply-connected.
 
 %\end{multicols}
 %\par\noindent\rule{\textwidth}{0.4pt}
@@ -2148,36 +2131,6 @@ Arrive at a contradiction using \ref{SHORT.ex:open-comparison:positive}.
 
 \parit{\ref{SHORT.ex:open-comparison:proof}.} Repeat the proof assuming that $p$ is provided by \ref{SHORT.ex:open-comparison:almost-min}.
 
-\parbf{\ref{ex:convex-polyhon+self-intersections}.}
-A complete solution is given in \cite{petrunin2021}.
-
-\parit{\ref{SHORT.ex:convex-polyhon+self-intersections:angles}.}
-Apply the Gauss--Bonnet formula for each region that $\gamma$ cuts from $\Sigma$, and simplify the obtained inequalities.
-
-\begin{Figure}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-474}
-\vskip-0mm
-\end{Figure}
-
-\parit{\ref{SHORT.ex:convex-polyhon}.}
-Consider the pentagon $\Delta$ with induced length-metric.
-Note that all its angles cannot exceed $\pi$.
-Repeat the proof of \ref{thm:comp:toponogov} to show that the comparison holds in $\Delta$.
-
-Choose a vertex $v$ of $\Delta$. 
-Subdivide the sides of $\Delta$ so that each arc of the subdivision is a minimizing geodesic, so the boundary of $\Delta$ is a broken geodesic.
-Divide $\Delta$ into triangles by joining $v$ to other vertices of the broken geodesic.
-Take a model triangle for each so that they shared sides as in $\Delta$.
-Use the comparison to show that these plane triangles form a required polygon.
-
-\parit{\ref{SHORT.ex:self-intersections-hard}}.
-It remains to show that the plane pentagon provided by \ref{SHORT.ex:convex-polyhon} cannot exist.
-Imagine that there is some air pressure in the pentagon, it should not move it; so the net force should vanish.
-Use part \ref{SHORT.ex:convex-polyhon+self-intersections:angles} to show that this is not the case.
-(Equivalently, show that the sum of its side vectors oriented counterclockwise does not vanish.)
-
 \parbf{\ref{ex:geod-convexity}.}
 Apply \ref{angk>angk} and \ref{angk<angk}.
 
@@ -2203,6 +2156,7 @@ that is,
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-1650}
+\vskip1mm
 \end{Figure}
 
 Let $\delta$ be the geodesic path from $\gamma_2(0)$ to $\gamma_1(1)$.

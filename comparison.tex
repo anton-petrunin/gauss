@@ -227,7 +227,7 @@ whence the result.
 Sine $\Sigma$ is simply-connected, \ref{ex:unique-geod} implies that 
 \[\inj(p)_\Sigma=\infty\]
 for any $p\in\Sigma$.
-Therefore, \ref{SHORT.thm:loc-comp:cba} implies \ref{thm:comp:cat}.
+Therefore, \ref{thm:loc-comp:cba} implies \ref{thm:comp:cat}.
 \qeds
 
 \section{Nonnegative curvature}\label{sec:nonneg-comp}
@@ -324,8 +324,8 @@ By \ref{3|xx'|}, we have that
 Therefore, the assumption imply that 
 \[\begin{aligned}
 \measuredangle\hinge x p{x'}
-\ge\modangle x p{x'},
-\\
+\ge\modangle x p{x'}
+\quad\text{and}\quad
 \measuredangle\hinge {x'}p x
 \ge\modangle {x'}p x.
   \end{aligned}
@@ -430,51 +430,6 @@ Use \ref{SHORT.ex:open-comparison:almost-min} to extend the proof of \ref{thm:co
 
 \end{thm}
 
-\begin{wrapfigure}[4]{r}{30 mm}
-\vskip-7mm
-\centering
-\includegraphics{mppics/pic-471}
-\end{wrapfigure}
-
-\begin{thm}{Advanced exercise}\label{ex:convex-polyhon+self-intersections}
-Make a complete proof from the following sketch:
-
-Let us show that a closed geodesic $\gamma$ on a closed smooth surface with nonnegative Gauss curvature cannot have self-intersections as shown on the diagram.
-
-Arguing by contradiction, suppose such geodesic exists;
-assume that arcs and angles are labeled as on the left diagram below.
-
-\begin{subthm}{ex:convex-polyhon+self-intersections:angles}
-Apply the Gauss--Bonnet formula to show that
-\[2\cdot\alpha<\beta+\gamma\]
-and 
-\[2\cdot\beta+2\cdot \gamma<\pi+\alpha.\]
-Conclude that $\alpha <\tfrac \pi 3$.
-\end{subthm}
-
-\begin{figure}[!ht]
-\begin{minipage}{.38\textwidth}
-\centering
-\includegraphics{mppics/pic-472}
-\end{minipage}\hfill
-\begin{minipage}{.58\textwidth}
-\centering
-\includegraphics{mppics/pic-473}
-\end{minipage}
-\end{figure}
-
-\begin{subthm}{ex:convex-polyhon}
-Consider the part of the geodesic $\gamma$ without the arc~$a$.
-It cuts from $\Sigma$ a pentagon $\Delta$ with sides and angles as shown on the diagram. 
-Show that there is a plane pentagon with convex sides of the same length and angles at most as big as the corresponding angles of $\Delta$.
-\end{subthm}
-
-\begin{subthm}{ex:self-intersections-hard}
-Arrive at a contradiction using \ref{SHORT.ex:convex-polyhon+self-intersections:angles} and \ref{SHORT.ex:convex-polyhon}. 
-\end{subthm}
-
-\end{thm}
-
 \section{Alexandrov's lemma}
 \index{Alexandrov's lemma}
 
@@ -513,9 +468,9 @@ the following expressions have the same sign:
 \item $\measuredangle\hinge{y}{\bar z}{p}-\measuredangle\hinge{y}{z}{p}$;
 \end{enumerate}
 The statement follows since
-\[\measuredangle\hinge{y'}{z'}{p'}+\measuredangle\hinge{y'}{x'}{p'}=\pi\]
-and
-\[\measuredangle\hinge{y}{\bar z}{p}+\measuredangle\hinge{y}{x}{p}=\pi.\]
+\[\measuredangle\hinge{y'}{z'}{p'}+\measuredangle\hinge{y'}{x'}{p'}=\pi
+\quad\text{and}\quad
+\measuredangle\hinge{y}{\bar z}{p}+\measuredangle\hinge{y}{x}{p}=\pi.\]
 \qedsf
 
 \section{Reformulations}

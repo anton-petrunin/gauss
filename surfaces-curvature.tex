@@ -660,46 +660,21 @@ This way we get a sphere with two handles.
 Modify Lagunov's construction to make the boundary surface a sphere with 4 handles.
 \end{thm}
 
-Question \ref{quest:lagunov} can be asked differently: what is the maximal radius $r$ of the ball that has to be included in any body bounded by a smooth surface with principal curvatures bounded in absolute value by~1.
-
-\begin{wrapfigure}{o}{25 mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-34}
-\vskip0mm
-\end{wrapfigure}
-
-One may also consider bodies bounded by more than one smooth surface.
-In this case, the example of a region between two large concentric spheres with almost equal radii shows that in the general case there is no bound.
-Indeed, this region can be made arbitrarily thin while the curvature of the boundary can be made arbitrarily close to zero.
-
-Recall that Lagunov's example shows that $r\le r_2$,
-where $r_2$ is the radius of the smallest circle tangent to three unit circles that are tangent to each other,
-so 
-\[r_2=\tfrac2{\sqrt{3}}-1< \tfrac16.\]
-The statement in the following exercise is due to Vladimir Lagunov \cite{lagunov-1960};
-it implies that this bound is optimal.
-
-\begin{thm}{Advanced exercise}\label{ex:thin}
-Suppose a connected body $V\subset \mathbb{R}^3$ is bounded by a finite number of closed smooth surfaces with principal curvatures bounded in absolute value by~1.
+Recall that in the body in Lagunov's example contains a ball of radius $r_2=\tfrac2{\sqrt{3}}-1$.
+It turns out that this radius is optimal.
+Moreover, 
+\textit{suppose a connected body $V\subset \mathbb{R}^3$ is bounded by a finite number of closed smooth surfaces with principal curvatures bounded by~1.
 Assume $V$ does not contain a ball of radius $r_2$.
-Show that its boundary has two diffeomorphic connected components. 
-\end{thm}
+Then the boundary of $V$ has two diffeomorphic connected components.}
+Such $V$ is squeezed between two nearly parallel surfaces;
+for example, between two large concentric spheres.
 
+For bodies bounded by sphere, there is a better bound $r_3=\sqrt{\tfrac32}-1$;
+it is the radius of the smallest sphere tangent to four unit spheres that are tangent to each other.
+Note that $r_3>r_2$.
+\textit{If a body $V\subset \mathbb{R}^3$ is bounded by a smooth sphere with principal curvatures bounded  by~1.
+Then $V$ contains a ball of radius~$r_3$.
+Moreover, this bound is sharp; that is, for every $\epsilon>0$, there are examples of such $V$ not containing a ball of radius $r_3+\epsilon$.}
 
-Let $r_3$
-be the radius of the smallest sphere tangent to four unit spheres that are tangent to each other.
-Direct calculations show that 
-\[r_3=\sqrt{\tfrac32}-1>\tfrac15.\]
-In particular, $r_3>r_2$.
+These results were obtained by Vladimir Lagunov and Abram Fet \cite{lagunov-1960, lagunov-fet-1963, lagunov-fet-1965}.
 
-The statement in the following exercise is a special case of a theorem by Vladimir Lagunov and Abram Fet \cite{lagunov-fet-1963, lagunov-fet-1965}.
-
-\begin{thm}{Very advanced exercise}\label{ex:PI-sphere}
-Suppose a body $V\subset \mathbb{R}^3$ is bounded by a smooth sphere with principal curvatures bounded in absolute value by~1.
-Show that $V$ contains a ball of radius~$r_3$.
-
-Show that this bound is sharp; that is, for every $\epsilon >0$, there are examples of $V$ as above not containing a ball of radius $r_3+\epsilon$.
-\end{thm}
-
-%??? shorten here
