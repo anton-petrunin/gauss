@@ -4,10 +4,10 @@
 \section{Intrinsic geometry}
 
 We begin to study the \index{intrinsic geometry}\emph{intrinsic geometry} of surfaces.
-A property is called \index{intrinsic property}\emph{intrinsic} if it can be checked by measuring things inside the surface; for example, lengths of curves or angles between the curves that lie in the surface.
+A property is called \index{intrinsic property}\emph{intrinsic} if it can be checked by measurements inside the surface; for example, lengths of curves or angles between the curves that lie in the surface.
 Otherwise, if its definition essentially uses the ambient space, then it is called \index{extrinsic property}\emph{extrinsic}.
 
-For instance, the mean curvature, as well as the Gauss curvature, are defined via principal curvatures, which are extrinsic.
+The mean curvature, as well as the Gauss curvature, are defined via principal curvatures, which are extrinsic.
 Later (\ref{thm:remarkable}) it will be shown that remarkably the Gauss curvature is intrinsic --- it can be calculated via measurements inside the surface.
 The mean curvature is not intrinsic; for example, the intrinsic geometry of the $(x,y)$-plane is not distinguishable from the intrinsic geometry of the graph $z\z=(x+y)^2$.
 However, while the mean curvature of the former vanishes at all points, the mean curvature of the latter does not vanish, say at $p=(0,0,1)$.  
@@ -25,7 +25,7 @@ We learned this problem from Joel Fine, who attributed it to Frederic Bourgeois 
 
 \begin{thm}{Exercise}\label{ex:lasso}
 А cowboy stands at the bottom of a frictionless ice-mountain formed by a cone with a circular base with  angle  of inclination~$\theta$.
-Hee throws up his lasso which slips neatly over the tip of the cone, pulls it tight and tries to climb.
+He throws up his lasso which slips neatly over the tip of the cone, pulls it tight and tries to climb.
 
 What is the critical angle $\theta$ at which the cowboy can not climb the ice-mountain?
 \end{thm}
@@ -40,19 +40,20 @@ Note that if $\Sigma$ is smooth, then any two points in $\Sigma$ can be joined b
 Since any such path is rectifiable, the value $\dist{p}{q}\Sigma$ is finite for any pair $p,q\in\Sigma$.
 
 A path $\gamma$ from $p$ to $q$ in $\Sigma$ that minimizes the length is called a \index{shortest path}\emph{shortest path} from $p$ to~$q$.
-
 The image of a shortest path between $p$ and $q$ in $\Sigma$ is usually denoted by $[p,q]$ or $[p,q]_\Sigma$.\index{10aac@$[p,q]$, $[p,q]_\Sigma$}
+Usually, if we write $[p,q]_\Sigma$, we are assuming that such a shortest path exists, and we have chosen one of them.
 In general, there might be no shortest path between two given points, and there might be many of them;
 this is shown in the following two examples.
 
-Usually, if we write $[p,q]_\Sigma$, we are assuming that such a shortest path exists, and we have chosen one of them.
 
 {
 
-\begin{wrapfigure}{r}{28 mm}
+\begin{wrapfigure}[9]{r}{28 mm}
 \vskip-6mm
 \centering
 \includegraphics{asy/sphere}
+\bigskip
+\includegraphics{mppics/pic-79}
 \end{wrapfigure}
 
 \parbf{Nonuniqueness.} There are plenty of shortest paths between the poles of a round sphere --- each meridian is a shortest path.
@@ -60,32 +61,19 @@ The latter follows from \ref{obs:S2-length}.
 
 \parbf{Nonexistence.} Let $\Sigma$ be the $(x,y)$-plane with the origin removed.
 Consider two points $p=(1,0,0)$ and $q=(-1,0,0)$ in~$\Sigma$.
+Let us show that \textit{there is no shortest path from $p$ to $q$ in~$\Sigma$.}
 
-}
-
-\begin{thm}{Claim}
-There is no shortest path from $p$ to $q$ in~$\Sigma$.
-\end{thm}
-
-\begin{wrapfigure}{r}{28 mm}
-\vskip-4mm
-\centering
-\includegraphics{mppics/pic-79}
-\end{wrapfigure}
-
-\parit{Proof.}
 Note that $\dist{p}{q}\Sigma=2$. 
 Indeed, given $\epsilon\z>0$, consider the point $s_\epsilon=(0,\epsilon,0)$.
 Observe that the polygonal path $ps_\epsilon q$ lies in $\Sigma$, and its length $2\cdot\sqrt{1+\epsilon^2}$ approaches $2$ as $\epsilon\to0$.
 It follows that $\dist{p}{q}\Sigma\le 2$.
 Since $\dist{p}{q}\Sigma\z\ge \dist{p}{q}{\mathbb{R}^3}=2$, we get $\dist{p}{q}\Sigma=2$.
 
-
 It follows that a shortest path from $p$ to $q$, if it exists, must have length~2.
 By the triangle inequality, any curve of length 2 from $p$ to $q$ must run along the line segment $[p,q]$;
 in particular, it must pass thru the origin.
 Since the origin does not lie in $\Sigma$, there is no shortest from $p$ to $q$ in $\Sigma$ 
-\qeds
+
 
 \begin{thm}{Proposition}\label{prop:shortest-paths-exist}
 Any two points in a proper smooth surface can be joined by a shortest path. 
@@ -107,7 +95,7 @@ for any $t_0,t_1\in[0,1]$.
 
 Note that the image of $\gamma_n$ lies in the closed ball $\bar B[p,\ell+1]$ for any~$n$.
 It follows that the coordinate functions of $\gamma_n$ are uniformly equicontinuous and uniformly bounded.
-By the Arzel\'{a}--Ascoli theorem (\ref{lem:equicontinuous})
+By the Arzel\'{a}--Ascoli theorem (\ref{lem:equicontinuous}),
  there is a convergent subsequence of $\gamma_n$, and its limit, say $\gamma_\infty\:[0,1]\to\mathbb{R}^3$, is continuous;
 that is, $\gamma_\infty$ is a path.
 Evidently, $\gamma_\infty$ runs from $p$ to $q$;
@@ -155,7 +143,7 @@ Hence, the existence follows.
 
 {
 
-\begin{wrapfigure}{r}{22 mm}
+\begin{wrapfigure}{l}{22 mm}
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-40}
@@ -176,9 +164,10 @@ We can assume that $\bar p\ne\bar q$; otherwise, there is nothing to prove.
 Note that if $\measuredangle \hinge{\bar p}{p}{\bar q}< \tfrac\pi2$, then $\dist{p}{x}{}\z<\dist{p}{\bar p}{}$ for some point $x\in [\bar p,\bar q]$.
 Since $[\bar p,\bar q]\subset K$,
 the latter is impossible.
+{
 
-\begin{wrapfigure}{l}{37 mm}
-\vskip-0mm
+\begin{wrapfigure}{r}{37 mm}
+\vskip-4mm
 \centering
 \includegraphics{mppics/pic-41}
 \vskip-0mm
@@ -188,9 +177,10 @@ Therefore, $p=\bar p$ or $\measuredangle \hinge{\bar p}{p}{\bar q}\ge \tfrac\pi2
 In both cases, the orthogonal projection of $p$ to the line $\bar p\bar q$ lies behind $\bar p$, or coincides with $\bar p$.
 The same way we show that the orthogonal projection of $q$ to the line $\bar p\bar q$ lies behind $\bar q$, or coincides with~$\bar q$.
 It implies that the orthogonal projection of the line segment $[p,q]$ to the line $\bar p\bar q$ contains the line segment $[\bar p,\bar q]$.
-In particular,
-\[|p-q|\ge |\bar p-\bar q|.\]
-\qedsf
+Whence \ref{eq:short-cpp} follows.
+\qeds
+
+}
 
 \section{Shortest paths on convex surfaces}
 

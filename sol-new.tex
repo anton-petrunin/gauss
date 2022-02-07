@@ -729,17 +729,15 @@ Once it is done, apply \ref{ex:cur+tor=helix}.
 Without loss of generality, we may assume that $\gamma_0$ is parametrized by its arc-length.
 Then
 \begin{align*}
-|\gamma_1'|&=|\gamma_0'+\tan'|=|\tan+\kur\cdot\norm|
-=
-\\
-&=
-\sqrt{1+\kur^2}
-\ge
-1=
-|\gamma_0'|;
+|\gamma_1'|&=|\gamma_0'+\tan'|=|\tan+\kur\cdot\norm|.
 \end{align*}
-that is, $|\gamma_1'(t)|\ge|\gamma_0'(t)|$ for any $t\in[a,b]$.
-Integrate this inequality and apply 
+It follows that
+\[|\gamma_1'(t)|\ge|\gamma_0'(t)|
+\quad\text{and}\quad
+|\gamma_1'(t)|\ge|\kur(t)_{\gamma_0}|
+\]
+for any $t\in[a,b]$.
+Integrate these inequalities and apply 
 \ref{ex:integral-length}.
 
 
@@ -1236,18 +1234,16 @@ and suppose the first principal direction of $\Sigma_1$ coincides with the secon
 \parbf{\ref{ex:positive-gauss-0} $\bm{+}$ \ref{ex:positive-gauss}.}
 Apply the same reasoning as in \ref{ex:between-parallels-1}--\ref{ex:lens}, but use families of spheres instead.
 
-{
+\parbf{\ref{ex:convex-surf}.}
+Show that any tangent plane $\T_p$ supports $\Sigma$ at~$p$.
+Apply \ref{prop:surf-support}.
 
-\begin{wrapfigure}{r}{22 mm}
-\vskip-0mm
+\begin{wrapfigure}{r}{16 mm}
+\vskip-5mm
 \centering
 \includegraphics{mppics/pic-1050}
 \vskip-0mm
 \end{wrapfigure}
-
-\parbf{\ref{ex:convex-surf}.}
-Show that any tangent plane $\T_p$ supports $\Sigma$ at~$p$.
-Apply \ref{prop:surf-support}.
 
 \parbf{\ref{ex:convex-lagunov}.}
 Assume a maximal ball in $R$ has radius $r$, and it touches the boundary of $R$ at the points $p$ and~$q$.
@@ -1255,9 +1251,6 @@ Consider the projection $S$ of $R$ to a plane thru $p$, $q$ and the center of th
 Show that $S$ is bounded by a smooth closed convex curve with curvature at most $1$.
 Argue as in \ref{ex:between-parallels-1} to
 show that $r\ge 1$.
-
-}
- 
 
 \parbf{\ref{ex:section-of-convex}.}
 Suppose a point $p$ lies in the intersection $\Pi\cap\Sigma$.
@@ -1306,18 +1299,18 @@ named after Sumner Myers who generalized it \cite{myers}.
 To prove \ref{SHORT.ex:convex-proper-sphere:single} use the convexity of~$R$.
 To prove \ref{SHORT.ex:convex-proper-sphere:smooth}, observe that the map $\Sigma\to\mathbb{S}^2$ is smooth and regular, then apply the inverse function theorem to show that its inverse is smooth as well.
 
-\parbf{\ref{ex:convex-proper-plane}}; \ref{SHORT.ex:convex-proper-plane:a}
-(The argument is similar to \ref{prop:convex-monotone:open}.)
-We can assume that the origin lies on~$\Sigma$.
-Consider a sequence of points $x_n\in \Sigma$ such that $|x_n|\z\to \infty$ as $n\to \infty$.
-Denote by $\vec u_n$ the unit vector in the direction of $x_n$; that is $\vec u_n=\tfrac{x_n}{|x_n|}$.
-
 \begin{wrapfigure}{r}{29 mm}
-\vskip-0mm
+\vskip-3mm
 \centering
 \includegraphics{mppics/pic-1182}
 \vskip-2mm
 \end{wrapfigure}
+
+\parbf{\ref{ex:convex-proper-plane}}; \ref{SHORT.ex:convex-proper-plane:a}
+(The argument is similar to \ref{prop:convex-monotone:open}.)
+We can assume that the origin lies on~$\Sigma$.
+Consider a sequence of points $x_n\in \Sigma$ such that $|x_n|\z\to \infty$ as $n\to \infty$.
+Denote by $\vec u_n$ the unit vector in the direction of $x_n$; that is $\vec u_n\z=\tfrac{x_n}{|x_n|}$.
 
 Since the unit sphere is compact, we can pass to a subsequence of $(x_n)$ such that $\vec u_n$ converges to a unit vector, say $\vec u$.
 Show that the half-line from the origin in the direction of $\vec u$ can be taken as $\ell$.
@@ -1420,13 +1413,12 @@ let $z=f(x,y)$ be the local graph representation of~$\Sigma$.
 We need to show that the solution of the equation $f(x,y)=0$ is a union of two smooth curves that intersect transversely at~$p$.
 
 Prove the following claim:
-\begin{itemize}
-\item Suppose $x\mapsto h(x)$ is a smooth function defined in an open interval $\mathbb{I}\ni0$ such that $h(0)=h'(0)=0$ and $h''(0)>0$.
-Then, for a smaller interval $\mathbb{J}\ni0$ there is a unique smooth function $a\:\mathbb{J}\to\mathbb{R}$ such that $h=a^2$, $a(0)=0$ and $a'(0)> 0$.
-\end{itemize}
-Note that passing to a small rectangular domain $|x|,|y|<\epsilon$, we can assume that $f_{xx}>\epsilon$ and $f_{yy}<-\epsilon$. 
+\textit{Suppose $x\z\mapsto h(x)$ is a smooth function defined in an open interval $\mathbb{I}\ni0$ such that $h(0)=h'(0)=0$ and $h''(0)>0$.
+Then, for a smaller interval $\mathbb{J}\ni0$ there is a unique smooth function $a\:\mathbb{J}\to\mathbb{R}$ such that $h=a^2$, $a(0)=0$ and $a'(0)> 0$.}
+
+Note that passing to a small rectangular domain $|x|,|y|<\epsilon$, we can assume that $f_{xx}\z>\epsilon$ and $f_{yy}<-\epsilon$. 
 Show that if $\epsilon$ is small, then for every $x$ there is unique $y(x)$ such that $f_x(x,y(x))=0$; 
-moreover, the function $x\mapsto y(x)$ is smooth.
+moreover, the function $x\z\mapsto y(x)$ is smooth.
 
 Set $h(x)=f(x,y(x))$.
 Note that $h(0)\z=h'(0)=0$ and $h''>0$.
@@ -1515,7 +1507,7 @@ Further, we can assume that $\Norm(p)+\Norm(q)\ne 0$; otherwise, the right-hand 
 
 In the remaining case, the tangent planes $\T_p$ and $\T_q$ intersect along a line, say $\ell$.
 Set $\alpha=\tfrac12\cdot\measuredangle(\Norm(p),\Norm(q))$.
-Show that $2\cdot\cos\alpha= |\Norm(p)+\Norm(q)|$.
+Show that $2\cdot\cos\alpha\z= |\Norm(p)+\Norm(q)|$.
 Let $x\in \ell$ be the point that minimizes the sum $|p-x|\z+|x-q|$.
 Show that $\measuredangle\hinge xpq\ge \pi-2\cdot\alpha$.
 Conclude that 
@@ -1646,7 +1638,7 @@ Analogously, $p$ and $q$ are the endpoints of $\beta$.
 
 
 For the second part, one could consider two distinct curves of the form 
-\[ \gamma_b(t) = ( \cos t , \sin t , bt ) , t \in \mathbb{R} \]
+\[ \gamma_b(t) = ( \cos t , \sin t , b\cdot t ) , t \in \mathbb{R} \]
 in the cylinder $x^2 + y^2 =1$.
 
 }
@@ -2077,12 +2069,11 @@ To show that $\Delta_a$ is not congruent to a spherical disc $\Delta_1$ for $a\n
 
 \parbf{\ref{ex:wide-hinges}.}
 Apply the triangle inequality $c_n\le a_n+b_n$ and the bound $a_n,b_n>\epsilon$ to show that the sequence 
-\[\frac{a_n+b_n+c_n}{2\cdot a_n\cdot b_n}\]
+\[s_n=\frac{a_n+b_n+c_n}{2\cdot a_n\cdot b_n}\]
 is bounded.
 Conclude that 
-\[\frac{(a_n+b_n)^2-c_n^2}{2\cdot a_n\cdot b_n}\to 0\]
+\[\frac{(a_n+b_n)^2-c_n^2}{2\cdot a_n\cdot b_n}=s_n\cdot (a_n+b_n-c_n)\to 0\]
 as $n\to\infty$.
-
 Use the last statement together with the cosine rule
 \[a_n^2+b_n^2-2\cdot a_n\cdot b_n\cdot\cos\tilde\theta_n -c_n^2=0\]
 to show that $\cos\tilde\theta_n\to -1$ as $n\to\infty$;
@@ -2210,13 +2201,6 @@ Note that it is sufficient to show that
 \dist{p}{q}\Sigma+t\cdot\cos\phi\eqlbl{eq:dist<cosphi}\]
 for $t$ sufficiently close to~$0$.
 
-\begin{Figure}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-1680}
-\vskip0mm
-\end{Figure}
-
 Chose small $t>0$, and set $x\z=\gamma(t)$.
 Consider a model triangle $[\tilde p\tilde q\tilde x]\z=\tilde\triangle(pqx)$.
 Let $\tilde\delta$ be the line thru $\tilde q$ perpendicular to $[\tilde p,\tilde q]$.
@@ -2263,6 +2247,13 @@ f\circ\gamma(t)&\le \dist{x}{y}\Sigma\le
 \end{align*}
 That is, we proved \ref{eq:dist<cosphi} for small $t>0$.
 The case $t<0$ can be done along the same lines. 
+
+\begin{Figure}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-1680}
+\vskip0mm
+\end{Figure}
 
 \parbf{\ref{ex:busemann}}; \ref{SHORT.ex:busemann:all}.
 Choose $x\in\Sigma$.

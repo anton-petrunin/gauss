@@ -4348,4 +4348,54 @@ label.rt(btex $q_{n-1}$ etex, z.q4);
 label.urt(btex $q_n$ etex, z.q5);
 endfig;
 
+beginfig(3540) 
+save u,p;
+path p[];
+u:=1cm;
+
+z.p0=(1.5,.5)*u;
+z.p1=(3.5,1.7)*u;
+z.p2=(1.3,3)*u;
+z.p3=(.3,1.2)*u;
+z.p4=z.p+(-.2,0)*u;
+
+z.p=z.p1+(1.5,0)*u;
+
+p0=z.p0{1,0}..z.p1--z.p1..z.p2..z.p3..cycle;
+
+hatchfill p0  withcolor (53, 1.4mm, -.5bp);
+draw  p0 pensemibold;
+draw ((x.p1+2*x.p)/3,y.p0)--((x.p1+2*x.p)/3,y.p2);
+dOt z.p;
+
+label.rt(btex $p$ etex, z.p);
+label(btex separating plane etex rotated 90, ((x.p1+2*x.p)/3,(y.p0+y.p2)/2)+(-7,0));
+whitelabel(btex $K$ etex, .5[z.p1,z.p3]);
+
+endfig;
+
+beginfig(3542) 
+save u,p;
+path p[];
+u:=1cm;
+
+z.p0=(1.5,.5)*u;
+z.p1=(3.5,1.7)*u;
+z.p2=(1.3,3)*u;
+z.p3=(.3,1.2)*u;
+z.p4=z.p+(-.2,0)*u;
+
+p0=z.p0{1,0}..z.p1--z.p1..z.p2..z.p3..cycle;
+
+hatchfill p0  withcolor (53, 1.4mm, -.5bp);
+draw  p0 pensemibold;
+draw (x.p1,y.p0)--(x.p1,y.p2);
+dOt z.p1;
+
+whitelabel.lft(btex $p$ etex, z.p1);
+whitelabel(btex $K$ etex, .5[z.p1,z.p3]);
+label(btex supporting plane etex rotated 90, (x.p1,(y.p0+y.p2)/2)+(7,0));
+
+endfig;
+
 end
