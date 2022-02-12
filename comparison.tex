@@ -74,7 +74,7 @@ Recall that a surface $\Sigma$ is called {}\emph{simply-connected} if any closed
 \begin{thm}{Comparison theorems}
 \label{thm:comp}
 \index{comparison theorem}
-Let $\Sigma$ be a proper smooth surface.
+Let $\Sigma$ be an open or closed smooth surface.
 
 \begin{subthm}{thm:comp:cat}
 If $\Sigma$ is simply-connected and has nonpositive Gauss curvature, then 
@@ -185,7 +185,7 @@ Since $r<\inj(x)_\Sigma$, we can choose $\vec v,\vec w\in\T_x$ such that
 \begin{align*}
 y&=\exp_x\vec v,
 & 
-z&=\exp_x\vec w
+z&=\exp_x\vec w,
 \\
 |\vec v|_{\T_x}&=\dist{x}{y}\Sigma,&
 |\vec w|_{\T_x}&=\dist{x}{z}\Sigma,
@@ -247,7 +247,7 @@ Applying the key lemma (\ref{key-lem:globalization}) a few times we get that the
 \qeds
 
 \begin{thm}{Key lemma}\label{key-lem:globalization} 
-Let $\Sigma$ be a proper smooth surface.
+Let $\Sigma$ be a open or closed smooth surface.
 Assume the comparison
 \[\measuredangle\hinge x y z
 \ge\modangle x y z\eqlbl{eq:key-lem:globalization}\]
@@ -484,7 +484,7 @@ if the inequality
 holds for any two points $p$ and $q$ on the sides of $[xyz]$.
 
 \begin{thm}{Proposition}\label{prop:comp-reformulations}
-Let $\Sigma$ be a proper smooth surface.
+Let $\Sigma$ be an open or closed smooth surface.
 Then the following three conditions are equivalent:
 
 \begin{subthm}{mang>angk}
@@ -566,7 +566,7 @@ Whence the implication follows.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:geod-convexity}
-Let $\Sigma$ be a proper smooth surface, 
+Let $\Sigma$ be an open smooth surface, 
  $\gamma$ a unit-speed geodesic in $\Sigma$, and $p\in\Sigma$.
 
 Consider the function
@@ -603,7 +603,7 @@ is convex.
 \end{thm}
 
 \begin{thm}{Advanced exercise}\label{ex:dist-to-bry}
-Suppose a smooth curve $\delta$ bounds a convex disc $\Delta$ in a proper smooth surface $\Sigma$;
+Suppose a smooth curve $\delta$ bounds a convex disc $\Delta$ in an open smooth surface $\Sigma$;
 that is, for any two points $x,y\in\Delta$, any shortest path $[x,y]_\Sigma$ lies in $\Delta$.
 
 Denote by $f\:\Sigma\to\mathbb{R}$ the intrinsic distance function to $\delta$;
@@ -672,3 +672,5 @@ It was proved by Stefan Cohn-Vossen \cite[Satz 5 in][]{convossen} and has a sequ
  \item Jeff Cheeger and Detlef Gromoll \cite{cheeger-gromoll-split} generalized it further to Riemannian manifolds with nonnegative Ricci curvature;
  \item Jost-Hinrich Eshenburg \cite{eshenburg-split} proved a splitting theorem for a space-time with nonnegative Ricci curvature in timelike directions.
 \end{itemize}
+
+%???shorten here

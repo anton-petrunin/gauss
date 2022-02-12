@@ -473,9 +473,7 @@ Therefore,
 By the fundamental theorem of calculus, we have
 \begin{align*}
 \int_0^\ell\langle\gamma(s),\gamma'(s)\rangle'\cdot ds
-&=\langle\gamma(\ell),\gamma'(\ell)\rangle
--
-\langle\gamma(0),\gamma'(0)\rangle.
+&=\langle\gamma(s),\gamma'(s)\rangle\bigg|_0^\ell.
 \end{align*}
 Since $\gamma(0)=\gamma(\ell)$ and $\gamma'(0)=\gamma'(\ell)$, the right-hand side vanishes.
 
@@ -544,10 +542,10 @@ and $\beta=\measuredangle(\vec v,\vec u)$.
 Try to guess the example from the diagram.
 
 \begin{Figure}
-\vskip-0mm
+\vskip-1mm
 \centering
 \includegraphics{mppics/pic-285}
-\vskip0mm
+\vskip-1mm
 \end{Figure}
 
 The shown curve is divided into three arcs: I, II, and III. 
@@ -578,7 +576,7 @@ Choose an inscribed polygonal line $\beta=p_0\dots p_{2\cdot k+1}$ such that $p_
 Show that \ref{eq:tc=<tc} holds true for the constructed polygonal line $\beta$.
 
 \begin{wrapfigure}{r}{23 mm}
-\vskip-0mm
+\vskip-3mm
 \centering
 \includegraphics{mppics/pic-290}
 \vskip-0mm
@@ -666,6 +664,11 @@ This is a consequence of the equation $\bi' = - \tor\cdot \norm $.
 \parbf{\ref{ex:frenet}.}
 Observe that $\tfrac{\gamma'\times\gamma''}{|\gamma'\times\gamma''|}$ is a unit vector perpendicular to the plane spanned by $\gamma'$ and $\gamma''$, so, up to sign, it has to be equal to $\bi$.
 It remains to check that the sign is right.
+
+\parbf{\ref{ex:+B}.}
+We can assume that $\gamma_0$ is unit-speed.
+Show that
+$|\gamma_1'|=|\tan-\tor\cdot \norm|\ge 1$ and use it.
 
 \parbf{\ref{ex:torsion-indicatrix}.} Assume that tangent indicatrix has no self-intersection.
 Show that it lies in an open hemisphere and argue as in Fenchel's theorem.
@@ -772,16 +775,16 @@ The answers are shown.
 In the last picture, we assume that the two marked points have parallel tangent lines.
 
 \begin{Figure}
-\begin{minipage}{.32\textwidth}
+\begin{minipage}{.27\textwidth}
 \centering
 \includegraphics{mppics/pic-260}
 \end{minipage}\hfill
-\begin{minipage}{.32\textwidth}
+\begin{minipage}{.42\textwidth}
 \centering
 \includegraphics{mppics/pic-261}
 \end{minipage}
 \hfill
-\begin{minipage}{.32\textwidth}
+\begin{minipage}{.27\textwidth}
 \centering
 \includegraphics{mppics/pic-262}
 \end{minipage}
@@ -929,6 +932,7 @@ Observe that one of the arcs of curvature 1 in the families shown on the diagram
 \includegraphics{mppics/pic-267}
 \end{minipage}
 \end{Figure}
+
 The second part in \ref{ex:between-parallels-1} can be reduced to \ref{ex:in-circle} using the shown family and another family of arcs curved in the opposite direction.
 
 \parit{Remark.} Compare to \ref{ex:moon-rad}.
@@ -985,8 +989,15 @@ The case $k=7$ and $n=11$ is shown on the diagram.
 Show that $\gamma$ contains a simple loop $\gamma_1$.
 Apply to $\gamma_1$ \ref{thm:moon-orginal}.
 
+\parbf{\ref{ex:2-squares}.}
+We may assume that $\gamma$ is oriented so that the smaller square on its left.
+Use \ref{thm:4-vert-supporting} to show that there are two points on $\gamma$ with signed curvature $\ge 1$ and $\le 1$ respectively.
+Apply the intermediate value theorem for signed curvature to show that there is a point with curvature $1$.
+
+
+
 \parbf{\ref{ex:moon-area}.} 
-Applying scaling, we may assume that $a=\pi$; that is, $\gamma$ bounds area of the unit disc.
+Applying rescaling, we may assume that $a=\pi$; that is, $\gamma$ bounds area of the unit disc.
 Then apply \ref{thm:moon} to show that the curvature is at least 1 at some point.
 Argue as at the end of the proof of \ref{thm:4-vert-supporting}, showing that the curvature is at most 1 at some point.
 Apply the intermediate value theorem to show that curvature is  1 at some point.
@@ -1292,16 +1303,16 @@ The latter means that any two points in $\Sigma$ can be connected by a path in $
 This theorem was proved by Heinz Hopf and Willi Rinow \cite{hopf-rinow} and 
 named after Sumner Myers who generalized it \cite{myers}.
 
-\parbf{\ref{ex:convex-proper-sphere}.}
-To prove \ref{SHORT.ex:convex-proper-sphere:single} use the convexity of~$R$.
-To prove \ref{SHORT.ex:convex-proper-sphere:smooth}, observe that the map $\Sigma\to\mathbb{S}^2$ is smooth and regular, then apply the inverse function theorem to show that its inverse is smooth as well.
-
 \begin{wrapfigure}{r}{29 mm}
 \vskip-3mm
 \centering
 \includegraphics{mppics/pic-1182}
 \vskip-2mm
 \end{wrapfigure}
+
+\parbf{\ref{ex:convex-proper-sphere}.}
+To prove \ref{SHORT.ex:convex-proper-sphere:single} use the convexity of~$R$.
+To prove \ref{SHORT.ex:convex-proper-sphere:smooth}, observe that the map $\Sigma\to\mathbb{S}^2$ is smooth and regular, then apply the inverse function theorem to show that its inverse is smooth as well.
 
 \parbf{\ref{ex:convex-proper-plane}}; \ref{SHORT.ex:convex-proper-plane:a}
 (The argument is similar to \ref{prop:convex-monotone:open}.)
@@ -1320,6 +1331,7 @@ Note and use that for any $q\in \Sigma$, the directions $\vec v_n=\tfrac{x_n-q}{
 Show that $\Sigma$ has no vertical tangent planes.
 Conclude that the projection map from $\Sigma$ to the $(x,y)$-plane is regular.
 Use the inverse function theorem to show that $\Omega$ is open.
+
 
 \parit{\ref{SHORT.ex:convex-proper-plane:e}.} 
 Arguing by contradiction, suppose for some sequence $(x_n,y_n)\z\to(x_\infty,y_\infty)\in \partial\Omega$ the sequence $f(x_n,y_n)$ stays bounded above.
@@ -2132,12 +2144,12 @@ It is sufficient to prove the Jensen inequality;
 that is, 
 \begin{align*}
 \dist{\gamma_1(\tfrac12)}{\gamma_2(\tfrac12)}{}
-&\le
-\tfrac12\cdot\dist{\gamma_1(0)}{\gamma_2(0)}{}
+\le
+\tfrac12\cdot&\dist{\gamma_1(0)}{\gamma_2(0)}{}
 +
 \\
-&+
-\tfrac12\cdot \dist{\gamma_1(1)}{\gamma_2(1)}{}.
++
+\tfrac12\cdot&\dist{\gamma_1(1)}{\gamma_2(1)}{}.
 \end{align*}
 
 \begin{Figure}
@@ -2277,7 +2289,7 @@ Observe that for any fixed $x\in\Sigma$, we have $\tfrac{\dist{\lambda(t)}{x}{}}
 Therefore,
 \begin{align*}
 \bus_\lambda\!\circ\alpha(s)
-&=
+&=\!
 \lim_{t\to\infty}\left(\frac{| \lambda (t) - \alpha (s) |_{\Sigma}^2 - s^2 }{t} -t\right)=
 \\
 &=

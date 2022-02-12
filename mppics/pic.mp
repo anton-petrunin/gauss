@@ -3536,6 +3536,24 @@ endfig;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+beginfig(725);
+save u,p;
+path p[];
+u:=.9cm;
+
+p0=(-1,-1)*u--(1,-1)*u--(1,1)*u--(-1,1)*u--cycle;
+p1=(-.5,.9)*u{1,0}...(.95,.7)*u{0,-1}...(.7,-.85)*u{-1,0}...(-.7,-.7)*u{-1,1}..tension 1.6..cycle;
+
+draw p0;
+draw p0 zscaled (.5,.5) rotated 40 shifted ((.1,.05)*u);
+draw p1 pensemibold;
+
+
+
+endfig;
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 beginfig(750);
 save u,p;
 path p[];
@@ -3599,6 +3617,8 @@ rimmark(z.a--z.ab,z.b--z.ab,z.c--z.ca,z.a--z.ca,z.b--z.bc,z.c--z.bc);
 %label.ulft (btex $1$ etex, .5[z.a,z.ab]);
 %label.ulft (btex $1$ etex, .5[z.b,z.ab]);
 endfig;
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 beginfig(920) 
 save u;
@@ -3711,6 +3731,8 @@ whitelabel.rt(btex $R$ etex, (x.a1,y.Sigma)+(5,0));
 whitelabel.rt(btex $\ell$ etex, (x.a1,y.Sigma/2));
 whitelabel.rt(btex $m$ etex, (x.q,y.Sigma/2));
 endfig;
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 beginfig(1182);
 save u;

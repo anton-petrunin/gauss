@@ -265,7 +265,7 @@ where $\alpha_i,\beta_i\in(-\pi,\pi)$ are signed angles --- $\alpha_i$ is positi
 By \ref{eq:tsc-theta}, the value
 \[\tgc{\gamma_i}-\alpha_i-\beta_{i+1}\eqlbl{eq:Psi-alpha-beta}\]
 is a multiple of $2\cdot\pi$.
-Since $\tc{\gamma_i}<\pi$,the chord lemma (\ref{lem:chord}) implies that $|\alpha_i|\z+|\beta_i|<\pi$.
+Since $\tc{\gamma_i}<\pi$, the chord lemma (\ref{lem:chord}) implies that $|\alpha_i|\z+|\beta_i|<\pi$.
 By \ref{eq:tsc-tc}, we have that $|\tgc{\gamma_i}|\z\le\tc{\gamma_i}$;
 therefore the value in \ref{eq:Psi-alpha-beta} vanishes.
 In other words, for each $i$ we have
@@ -333,7 +333,7 @@ $\tgc\gamma=2\cdot \pi$ and $\tc\gamma=4\cdot\pi$.
 \begin{thm}{Exercise}\label{ex:length'}
 Let $\gamma\:[a,b]\to\mathbb{R}$ be a smooth regular plane curve with Frenet frame $\tan,\norm$.
 Given a real parameter $\ell$, consider
-the curve $\gamma_\ell(t)\z=\gamma(t)+\ell\cdot\norm(t)$; it is called a {}\emph{parallel curve of $\gamma$ at signed distance~$\ell$}.
+the curve $\gamma_\ell(t)\z=\gamma(t)+\ell\cdot\norm(t)$; it is called a \index{parallel curve}\emph{parallel curve} of $\gamma$ at signed distance~$\ell$.
 
 \begin{subthm}{ex:length':reg}
 Show that $\gamma_\ell$ is a regular curve if $\ell\cdot \skur(t)\ne 1$ for all $t$, where $\skur(t)$ denotes the signed curvature of~$\gamma$.
@@ -475,7 +475,8 @@ It follows that $|\omega'(s)|= r'(s)$ and $\omega'(s)$ points in the direction o
 }
 
 Since $\norm'(s)=-\skur(s)\cdot\tan(s)$, the direction of $\omega'(s)$ cannot have constant direction on a nontrivial interval;
-that is, the curve $s\mapsto \omega(s)$ contains no line segments.
+in other words, the curve $s\mapsto \omega(s)$ contains no line segments.
+In particular, $|\omega(s_1)-\omega(s_0)|>\length(\omega|_{[s_0,s_1]})$ for any $s_0<s_1$.
 Therefore, 
 \begin{align*}
 |\omega(s_1)-\omega(s_0)|&<\length(\omega|_{[s_0,s_1]})=
@@ -486,7 +487,6 @@ Therefore,
 \\
 &=r(s_1)-r(s_0).
 \end{align*}
-
 In other words, the distance between the centers of $\sigma_{s_1}$ and $\sigma_{s_0}$
 is strictly less than the difference between their radii.
 Therefore, the osculating circle at $s_0$ lies inside the osculating circle at $s_1$ without touching it.
