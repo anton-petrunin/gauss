@@ -20,7 +20,7 @@ Assume $\gamma$ is a smooth unit-speed space curve.
 Then $\gamma'(s)\perp \gamma''(s)$ for any~$s$.
 \end{thm}
 
-The scalar product (also known as dot product) of two vectors $\vec v$ and $\vec w$ will be denoted by $\langle \vec v,\vec w\rangle$.
+The \emph{scalar product} (also known as \emph{dot product}) of two vectors $\vec v$ and $\vec w$ will be denoted by $\langle \vec v,\vec w\rangle$.
 Recall that the derivative of a scalar product satisfies the product rule;
 that is, if $\vec v=\vec v(t)$ and $\vec w=\vec w(t)$ are smooth vector-valued functions of a real parameter $t$, then
 \[\langle \vec v,\vec w\rangle'=\langle \vec v',\vec w\rangle+\langle \vec v,\vec w'\rangle.\]
@@ -34,7 +34,7 @@ whence $\gamma''\perp\gamma'$.
 
 \section{Curvature}\label{sec:curvature}
 
-For a unit-speed smooth space curve $\gamma$, the magnitude $|\gamma''(s)|$ of its acceleration is called its \index{curvature}\emph{curvature} at  time~$s$.
+For a unit-speed smooth space curve $\gamma$, the magnitude of its acceleration $|\gamma''(s)|$ is called its \index{curvature}\emph{curvature} at  time~$s$.
 If $\gamma$ is simple, then we can say that $|\gamma''(s)|$ is the curvature at the point $p=\gamma(s)$ without ambiguity.
 The curvature is usually denoted by $\kur(s)$ or $\kur(s)_\gamma$, and, in the case of simple curves, it might be also denoted by $\kur(p)$ or $\kur(p)_\gamma$.
 
@@ -79,16 +79,16 @@ Indeed, for an arc-length reparametrization by $s(t)$, we have $s'(t)=|\gamma'(t
 Therefore,
 \begin{align*}
 \kur&=\left|\frac{d\tan}{ ds}\right|=
-\\
-&=|\tfrac{d\tan}{ dt}|/|\tfrac{ds}{ dt}|=
-\\
-&=\frac{|\tan'|}{|\gamma'|}.
+\left|\frac{d\tan}{ dt}\right|/\left|\frac{ds}{ dt}\right|=
+\frac{|\tan'|}{|\gamma'|}.
 \end{align*}
 It follows that the indicatrix of a smooth regular curve $\gamma$ is regular if the curvature of $\gamma$ does not vanish.
 
 \begin{thm}{Exercise}\label{ex:curvature-formulas}
 Use the formulas \ref{eq:tantrix} and \ref{eq:curvature} to show that 
 for any smooth regular space curve $\gamma$ we have the following expressions for its curvature:
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
 
 \begin{subthm}{ex:curvature-formulas:a} 
 \[\kur=\frac{|\vec w|}{|\gamma'|^2},\]
@@ -99,7 +99,7 @@ where $\vec w=\vec w(t)$ denotes the projection of $\gamma''(t)$ to the plane no
 \[\kur=\frac{|\gamma''\times \gamma'|}{|\gamma'|^{3}},\]
 where $\times$ denotes the \index{vector product}\emph{vector product} (also known as \index{cross product}\emph{cross product}).
 \end{subthm}
-
+\end{multicols}
 \end{thm}
 
 
@@ -486,14 +486,11 @@ Since $\vec u_2$ is a unit vector, we have that
 Integrating \ref{<gamma',u>}, we get 
 \begin{align*}
 |\gamma_1(b)-\gamma_1(a)|&=\langle \vec u_1,\gamma_1(b)-\gamma_1(a)\rangle=
+\int_a^b\langle \vec u_1,\gamma'_1(s)\rangle\cdot ds \le 
 \\
-&=\int_a^b\langle \vec u_1,\gamma'_1(s)\rangle\cdot ds \le 
-\\
-&\le\int_a^b\langle \vec u_2,\gamma'_2(s)\rangle\cdot ds =
-\\
-&=\langle \vec u_2,\gamma_2(b)-\gamma_2(a)\rangle \le
-\\
-&\le |\gamma_2(b)-\gamma_2(a)|.
+\le\int_a^b\langle \vec u_2,\gamma'_2(s)\rangle\cdot ds 
+&=\langle \vec u_2,\gamma_2(b)-\gamma_2(a)\rangle 
+\le |\gamma_2(b)-\gamma_2(a)|.
 \end{align*}
 \qedsf
 
