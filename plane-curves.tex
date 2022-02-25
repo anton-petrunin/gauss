@@ -254,9 +254,10 @@ Set
 \end{align*}
 where $\alpha_i,\beta_i\in(-\pi,\pi)$ are signed angles --- $\alpha_i$ is positive if $\vec w_i$ points to the left from~$\vec v_i$.
 
+{
 
 \begin{wrapfigure}[13]{o}{43 mm}
-\vskip-0mm
+\vskip-2mm
 \centering
 \includegraphics{mppics/pic-59}
 \vskip0mm
@@ -270,6 +271,8 @@ By \ref{eq:tsc-tc}, we have that $|\tgc{\gamma_i}|\z\le\tc{\gamma_i}$;
 therefore the value in \ref{eq:Psi-alpha-beta} vanishes.
 In other words, for each $i$ we have
 \[\tgc{\gamma_i}=\alpha_i+\beta_{i+1}.\]
+
+}
 
 Note that 
 \[\delta_i=\pi-\alpha_i-\beta_i\eqlbl{eq:delta=pi-alpha-beta}\] 
@@ -474,7 +477,7 @@ It follows that $|\omega'(s)|= r'(s)$ and $\omega'(s)$ points in the direction o
 
 }
 
-Since $\norm'(s)=-\skur(s)\cdot\tan(s)$, the direction of $\omega'(s)$ cannot have constant direction on a nontrivial interval;
+Since $\norm'(s)=-\skur(s)\cdot\tan(s)$, the direction of $\omega'(s)$ cannot be constant on a nontrivial interval;
 in other words, the curve $s\mapsto \omega(s)$ contains no line segments.
 In particular, $|\omega(s_1)-\omega(s_0)|>\length(\omega|_{[s_0,s_1]})$ for any $s_0<s_1$.
 Therefore, 
@@ -492,14 +495,6 @@ is strictly less than the difference between their radii.
 Therefore, the osculating circle at $s_0$ lies inside the osculating circle at $s_1$ without touching it.
 \qeds
 
-{
-
-\begin{wrapfigure}{r}{32 mm}
-\vskip-4mm
-\centering
-\includegraphics{asy/ellipse-astroid}
-\vskip-0mm
-\end{wrapfigure}
 
 The curve $s\mapsto \omega(s)$ is called the \index{evolute}\emph{evolute} of $\gamma$; 
 it traces the centers of curvature of the curve. 
@@ -508,17 +503,16 @@ The evolute of $\gamma$ can be written as
 in the proof we showed that $(\tfrac1{\skur})'\cdot\norm$ is its velocity vector.
 
 
-\begin{thm}{Exercise}\label{ex:evolute-of-ellipse}
-Show that the stretched astroid 
-\[\omega(t)=(\tfrac{a^2-b^2}{a}\cdot \cos^3 t,  \tfrac{b^2-a^2}{b}\cdot\sin^3 t)\]
-is an evolute of the ellipse $\gamma(t)= (a\cdot \cos t, b\cdot\sin t)$.
+\begin{thm}{Exercise}\label{ex:evolute}
+Let $\omega$ be the evolute of a regular smooth plane curve~$\gamma$.
+Suppose $\gamma$ has positive curvature and no vertices.
+Find the Frenet frame and curvature of \(\omega\) in terms of Frenet frame $(\tan,\norm)$ and curvature $\kappa$ of \(\gamma\).
 \end{thm}
 
 The following theorem states formally that 
 \textit{if you drive on the plane and turn the steering wheel to the left all the time,
 then you will not be able to come back to the place you started.}
 
-}
 
 \begin{thm}{Theorem}\label{thm:spiral}
 Assume $\gamma$ is a smooth regular plane curve with positive strictly monotone signed curvature. 

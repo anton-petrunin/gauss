@@ -254,30 +254,27 @@ Applying the lens lemma, we get that the arcs $\gamma_1$ and $\gamma_2$ contain 
 \qeds
 
 \begin{thm}{Exercise}\label{ex:convex small}
-Suppose $\gamma$ is a smooth regular simple closed convex plane curve of diameter larger than~2.
+Suppose $\gamma$ is a smooth regular simple closed plane curve of diameter larger than~2.
 Show that $\gamma$ has a point with absolute curvature less than~1.
 \end{thm}
 
-\begin{thm}{Exercise}\label{ex:line-curve-intersections}
-Suppose $\gamma$ is a simple smooth regular plane curve with positive signed curvature.
-Assume $\gamma$ crosses a line $\ell$ at the points $p_1,p_2,\z\dots, p_n$, and these points appear on $\gamma$ in the same order.
+\begin{wrapfigure}{r}{45 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-713}
+\vskip0mm
+\end{wrapfigure}
 
-\begin{subthm}{ex:line-curve-intersections:a}
-Show that $p_2$ cannot lie between $p_1$ and $p_3$ on $\ell$.
-\end{subthm}
-
-\begin{subthm}{ex:line-curve-intersections:b}
-Show that if $p_3$ lies between $p_1$ and $p_2$ on $\ell$, then the points appear on $\ell$ in the following order:  
-\[p_1,p_3,\dots,p_4 ,p_2.\]
-
-\end{subthm}
-
-\begin{subthm}{ex:line-curve-intersections:c}
-Describe all possible orders of the points $p_i$ on $\ell$.
-
-\end{subthm}
-
+\begin{thm}{Exercise}\label{ex:convex-lens}
+Let $\gamma$ be a simple smooth regular plane arc with endpoints $p$ and~$q$.
+Suppose that $\gamma$ has nonnegative signed curvature and $|p-q|$ is the maximal distance between points on~$\gamma$.
+Show that the arc $\gamma$ and its chord $[p,q]$ bound a convex figure of the plane.
 \end{thm}
+
+\begin{thm}{Exercise}\label{ex:diameter-of-simple-curve}
+Show that any simple smooth regular plane curve with curvature at least 1 has diameter at most 2.
+\end{thm}
+
 
 \section{Moon in a puddle}
 
@@ -402,6 +399,9 @@ Suppose $R$ is the maximal radius of discs that lie in~$F$.
 Show that the absolute curvature of $\gamma$ is at least $\tfrac1R$ at some parameter value.
 \end{thm}
 
+
+
+
 \section{Four-vertex theorem}
 \index{Four-vertex theorem}
 {
@@ -432,9 +432,6 @@ The four-vertex theorem was first proved by Syamadas Mukhopadhyaya \cite{mukhopa
 Many proofs and generalizations are known.
 One of our favorite proofs was given by Robert Osserman \cite{osserman}.
 Our proof of the following stronger statement based on the key lemma in the previous section.
-
-
-
 
 
 \begin{thm}{Theorem}\label{thm:4-vert-supporting}
@@ -526,3 +523,4 @@ Construct an example of a closed simple smooth regular plane curve $\gamma$ with
 %Show that $\gamma$ has four points with zero torsion.
 %\end{thm}
 
+%\begin{thm}{Advanced exercise}\label{ex:order} Show that the points $a,b,c,d$ guaranteed by \ref{thm:4-vert-supporting} can be chosen so that they appear in the same order on the curve and the osculating circles at $a$ and $c$ support the curve from inside and $b$ and $d$ support the curve from outside. \end{thm}

@@ -3536,6 +3536,33 @@ endfig;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+beginfig(713) 
+save u;
+u:=1cm;
+
+z.a0=(0,0)*u;
+z.a3=(3,0)*u;
+
+save p; path p[];
+
+
+p0=z.a0{1,1}..{1,-2}z.a3;
+hatchfill p0--cycle  withcolor (87, 1.4mm, -.5bp);
+
+draw p0;
+draw z.a0--z.a3;
+
+dOt z.a0,z.a3;
+
+
+label.top(btex $\gamma$ etex, point .5 of p0);
+label.lft(btex $q$ etex, z.a0+(0,2));
+label.rt(btex $p$ etex, z.a3+(0,2));
+%label.lft(btex $\gamma'(a)$ etex, z.b0);
+%label.rt(btex $\gamma'(b)$ etex, z.b3);
+%label.top(btex $\alpha(b)-\alpha(a)$ etex, .5[z.a0,z.a3]);
+endfig;
+
 beginfig(725);
 save u,p;
 path p[];

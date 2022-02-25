@@ -824,10 +824,10 @@ Consider the unit circle $\gamma(t)=(\cos t,\sin t)$ for $t\in[0,2\cdot\pi]$ and
 \parbf{\ref{ex:inverse}.}
 Use the definition of osculating circle via order of contact, plus use the fact that inversions send circles to circlines. 
 
-\parbf{\ref{ex:evolute-of-ellipse}.}
-Find $\tan(t)$ and $\norm(t)$.
-Use the formula in \ref{ex:curvature-formulas:b} to calculate curvature $\kur(t)$.
-Apply the formula given right before the exercise.
+\parbf{\ref{ex:evolute}.}
+We assume that $\gamma$ is unit-speed.
+Show that $\omega'=\tfrac{\skur'}{\skur^2}\cdot \norm$. 
+Conclude that $\omega$ has Frenet frame either $(\norm,-\tan)$ or $(-\norm,\tan)$, and its curvature is $|\tfrac{\kur^3}{\kur'}|$.
 
 \begin{wrapfigure}{r}{15 mm}
 \vskip-5mm
@@ -952,38 +952,17 @@ Choose two points $x$ and $y$ surrounded by $\gamma$ such that $|x\z-y|\z>2$.
 Look at the maximal lens bounded by two arcs with a common chord $xy$ that lies in~$F$.
 Apply the supporting test (\ref{prop:supporting-circline}).
 
-\parbf{\ref{ex:line-curve-intersections}}; \ref{SHORT.ex:line-curve-intersections:a}.
-Apply the lens lemma to show that if $p_2$ lies between $p_1$ and $p_3$, then the curvature of $\gamma$ switches its sign.
+\parbf{\ref{ex:convex-lens}.}
+Apply the lens lemma to show that $\gamma$ lies on one side from the line $pq$.
+Conclude that the union of the arc $\gamma$ and its chord $[p,q]$ is a closed simple curve;
+by Jordan theorem, it bounds some figure, say~$F$.
 
-\parit{\ref{SHORT.ex:line-curve-intersections:b}.} Show that $p_4$ lies between $p_2$ and $p_3$;
-further $p_5$ lies between $p_3$ and $p_4$;
-and so on.
+Assume that $F$ is not convex and arrive at a contradiction as in \ref{prop:convex}. 
 
-\parit{\ref{SHORT.ex:line-curve-intersections:c}.}
-According to \ref{SHORT.ex:line-curve-intersections:a}, the point $p_3$ might lie between $p_1$ and $p_2$, and then further order is determined uniquely, or $p_1$ lies between $p_2$ and $p_3$.
-In the latter case, we have two choices, either $p_4$ lies between $p_2$ and $p_3$, and then further order is determined uniquely, or $p_2$ lies between $p_3$ and $p_4$.
-In the latter case, we get a choice again.
+\parbf{\ref{ex:diameter-of-simple-curve}.}
+Choose two points $p,q\in\gamma$ on the maximal distance.
+Apply \ref{ex:convex-lens} and the bow lemma (\ref{lem:bow}) to the arc of $\gamma$ from $p$ to $q$.
 
-Assume we make the first choice on the step number~$k$.
-Without loss of generality, we may assume that $p_k$ lies to the right from $p_{k-2}$.
-Then we have the following order:
-\begin{align*}
-p_{k-2}&,p_{p-4},
-\dots
-\\
-\dots&,p_{p-5},p_{k-3},p_k,p_{k+2},
-\dots
-\\
-&\dots,p_{k+1},p_{k-1}.
-\end{align*}
-The case $k=7$ and $n=11$ is shown on the diagram.
-
-\begin{Figure}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-29}
-\vskip0mm
-\end{Figure}
 
 \parbf{\ref{ex:moon-rad}.}
 Show that $\gamma$ contains a simple loop $\gamma_1$.
@@ -1035,7 +1014,7 @@ The case $\ell=0$ has to be done by hand --- it does not satisfy the sufficient 
 Show that any neighborhood of origin in $\Sigma_0$ cannot be described by a graph in any coordinate system;
 so by the definition (Section~\ref{sec:def-smooth-surface}) $\Sigma_0$ is not a smooth surface.
 
-\parbf{\ref{ex:inversion-chart}.} 
+\parbf{\ref{ex:diameter-of-simple-curve}.} 
 First, check that the image of $s$ lies in the unit sphere centered at $(0,0,1)$;
 that is, show that 
 \begin{align*}
@@ -1303,16 +1282,17 @@ The latter means that any two points in $\Sigma$ can be connected by a path in $
 This theorem was proved by Heinz Hopf and Willi Rinow \cite{hopf-rinow} and 
 named after Sumner Myers who generalized it \cite{myers}.
 
-\begin{wrapfigure}{r}{29 mm}
-\vskip-3mm
-\centering
-\includegraphics{mppics/pic-1182}
-\vskip-2mm
-\end{wrapfigure}
 
 \parbf{\ref{ex:convex-proper-sphere}.}
 To prove \ref{SHORT.ex:convex-proper-sphere:single} use the convexity of~$R$.
 To prove \ref{SHORT.ex:convex-proper-sphere:smooth}, observe that the map $\Sigma\to\mathbb{S}^2$ is smooth and regular, then apply the inverse function theorem to show that its inverse is smooth as well.
+
+\begin{wrapfigure}{r}{29 mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-1182}
+\vskip-3mm
+\end{wrapfigure}
 
 \parbf{\ref{ex:convex-proper-plane}}; \ref{SHORT.ex:convex-proper-plane:a}
 (The argument is similar to \ref{prop:convex-monotone:open}.)
