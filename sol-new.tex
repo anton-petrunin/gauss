@@ -945,7 +945,8 @@ The second part in \ref{ex:between-parallels-1} can be reduced to \ref{ex:in-cir
 \end{wrapfigure}
 
 \parbf{\ref{ex:convex small}.}
-Note that we can assume that $\gamma$ bounds a convex figure~$F$. Otherwise, by \ref{prop:convex} its curvature changes sign.
+Note that we can assume that $\gamma$ bounds a convex figure~$F$.
+Otherwise, by \ref{prop:convex} its curvature changes sign.
 Therefore, $\gamma$ has zero curvature at some point.
 
 Choose two points $x$ and $y$ surrounded by $\gamma$ such that $|x\z-y|\z>2$.
@@ -961,8 +962,10 @@ Assume that $F$ is not convex and arrive at a contradiction as in \ref{prop:conv
 
 \parbf{\ref{ex:diameter-of-simple-curve}.}
 Choose two points $p,q\in\gamma$ on the maximal distance.
-Apply \ref{ex:convex-lens} and the bow lemma (\ref{lem:bow}) to the arc of $\gamma$ from $p$ to $q$.
+Apply \ref{ex:convex-lens} to the arc of $\gamma$ from $p$ to $q$.
+After that use the bow lemma (\ref{lem:bow}), or argue as in \ref{ex:convex small}.
 
+For the last part of the problem, consider the smallest circle $\sigma$ that surrounds $\gamma$ and argue as before for one of the arcs of $\gamma$ between tangency points with $\sigma$.
 
 \parbf{\ref{ex:moon-rad}.}
 Show that $\gamma$ contains a simple loop $\gamma_1$.
@@ -1014,7 +1017,7 @@ The case $\ell=0$ has to be done by hand --- it does not satisfy the sufficient 
 Show that any neighborhood of origin in $\Sigma_0$ cannot be described by a graph in any coordinate system;
 so by the definition (Section~\ref{sec:def-smooth-surface}) $\Sigma_0$ is not a smooth surface.
 
-\parbf{\ref{ex:diameter-of-simple-curve}.} 
+\parbf{\ref{ex:inversion-chart}.} 
 First, check that the image of $s$ lies in the unit sphere centered at $(0,0,1)$;
 that is, show that 
 \begin{align*}
@@ -1108,7 +1111,11 @@ Show that we can assume that $\langle s(u,v),\vec k\rangle$ has a constant sign 
 Conclude that $s_u\perp \vec k$ and $s_v\perp \vec k$ at
 $0$, hence the result.
 
-\parbf{\ref{ex:implicit-orientable}.} By \ref{ex:tangent-normal}, $\Norm=\tfrac{\nabla h}{|\nabla h|}$ defines a unit normal field on~$\Sigma$.
+\parbf{\ref{ex:const-normal}.}
+Show and use that for any smooth curve $\gamma$ in $\Sigma$ the function $t\mapsto \langle\nu,\gamma(t)\rangle$ is constant.
+
+\parbf{\ref{ex:implicit-orientable}.}
+By \ref{ex:tangent-normal}, $\Norm=\tfrac{\nabla h}{|\nabla h|}$ defines a unit normal field on~$\Sigma$.
 
 \parbf{\ref{ex:plane-section}.}
 Use cutoffs and mollifiers (Section \ref{sec:analysis}) to construct a smooth nonnegative function $f$ on the $(x,y)$-plane such that $f(x,y)=0$ if and only if $(x,y)\in A$.
