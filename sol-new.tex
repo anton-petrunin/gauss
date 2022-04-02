@@ -1029,7 +1029,8 @@ that is, show that
 \end{align*}
 for any $u$ and~$v$.
 
-Show that the map $(x,y,z)\z\mapsto (\tfrac{2\cdot x}{x^2+y^2+z^2},\tfrac{2\cdot y}{x^2+y^2+z^2})$
+Show that the map 
+$(x,y,z)\z\mapsto \tfrac{2\cdot(x,y,z)}{x^2+y^2+z^2}$
 describes the inverse of $s$, which is continuous away from the origin.
 In particular, $s$ is an embedding that covers the entire sphere except for the origin.
 
@@ -1440,6 +1441,8 @@ It remains to observe that the two functions $g_\pm(x,y)=a(x)\pm b(x,y)$ have di
 Therefore, each equation $a(x)\pm b(x,y) =0$ defines a smooth regular curve in a neighborhood of $p$;
 see Section~\ref{sec:implicit-curves}.
 
+\parbf{\ref{ex:proper-saddle}.} Look at the the pseudosphere described in \ref{ex:principal-revolution:pseudosphere}.
+
 \parbf{\ref{ex:length-of-bry}.}
 Use \ref{lem:convex-saddle} and the hemisphere lemma (\ref{lem:hemisphere}).
 For the second part, consider a thin cylindrical tube bounded by two closed spherical curves.
@@ -1618,14 +1621,12 @@ in particular, they have the same length.
 Exchanging $\alpha_1$ in $\alpha$ to $\beta_1$ produces a shortest path, say $\hat\alpha$, that is distinct from $\alpha$.
 By \ref{prop:gamma''}, $\hat\alpha$ is a geodesic.
 
-{
-
-\begin{wrapfigure}[6]{r}{38 mm}
-\vskip-4mm
+\begin{Figure}
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-308}
 \vskip0mm
-\end{wrapfigure}
+\end{Figure}
 
 Suppose $\alpha_1$ is a proper subarc of $\alpha$;
 that is, $\alpha_1\ne\alpha$, or equivalently, either $p$ or $q$ is not an endpoint of $\alpha$.
@@ -1635,12 +1636,9 @@ By \ref{prop:geod-existence} $\alpha$ coincides with $\hat\alpha$ --- a contradi
 It follows that $p$ and $q$ are the endpoints of $\alpha$.
 Analogously, $p$ and $q$ are the endpoints of $\beta$.
 
-
 For the second part, one could consider two distinct curves of the form 
 \[ \gamma_b(t) = ( \cos t , \sin t , b\cdot t ) , t \in \mathbb{R} \]
 in the cylinder $x^2 + y^2 =1$.
-
-}
 
 \parbf{\ref{ex:min-geod+plane}.}
 Assume a shortest path $\alpha$ crosses $\Pi$ at least twice.

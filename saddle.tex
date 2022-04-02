@@ -193,6 +193,9 @@ it was proved by James Stoker \cite{stoker} and attributed it to Jacques Hadamar
 
 Note that in the proof we have to use that the surface is a connected set;
 otherwise, a pair of disjoint spheres would give a counterexample.
+It is true that \textit{any closed smooth surface with nonnegative Gauss curvature bounds a convex region}, but the proof requires much more work.
+
+From the next proof one can also extract the following statement: \textit{any closed connected locally convex region in the Euclidean space is convex}.
 
 \parit{Proof.}
 Since the Gauss curvature is positive, we can choose a unit normal field $\Norm$ on $\Sigma$ so that the principal curvatures are positive at any point.
@@ -232,10 +235,6 @@ Note that the region $R$ is the closure of its interior, therefore $R$ is convex
 Since $R$ is locally strictly convex, its boundary $\Sigma$ contains no line segments.
 Therefore, $R$ is strictly convex.
 \qeds
-
-\parit{Remark.}
-We proved a more general statement.
-Namely, \textit{any closed connected locally convex region in the Euclidean space is convex}.
 
 \begin{thm}{Exercise}\label{ex:surrounds-disc}
 Assume a closed convex surface $\Sigma$ surrounds a unit circle.
@@ -466,6 +465,11 @@ In this case, $\Sigma_0$ supports $\Delta$ from outside.
 By \ref{cor:surf-support}, we have $K(q)_\Sigma\z\ge K(q)_{\Sigma_0}>0$, a contradiction.
 \qeds
 
+\begin{thm}{Exercise}\label{ex:proper-saddle}
+Construct a proper saddle surface that does not lie in the convex hull of its boundary.
+\end{thm}
+
+
 \begin{thm}{Exercise}\label{ex:length-of-bry}
 Let $\Delta$ be a compact smooth regular saddle surface with boundary and $p\in \Delta$.
 Assume the boundary line of $\Delta$ lies in the unit sphere centered at~$p$.
@@ -575,7 +579,7 @@ Assume there is a compact subset $K\subset \Sigma$ such that the complement $\Si
 Show that the surface $\Sigma$ is a graph.
 \end{thm}
 
-The following lemma gives an analogous statement for an infinte parallelepiped.
+The following lemma gives an analogous to \ref{ex:length-of-bry}.
 
 \begin{thm}{Lemma}\label{lem:region}
 There is no proper strictly saddle smooth surface that has its boundary line in a plane $\Pi$ 
