@@ -1169,14 +1169,16 @@ Make a conclusion.
 \parbf{\ref{ex:shape-curvature-line}.} 
 We can assume that $\gamma$ is parametrized by arc-length.
 Denote by $\Norm_1(s)$ and $\Norm_2(s)$ the unit normal vectors to $\Sigma_1$ and $\Sigma_2$ at $\gamma(s)$.
-Since $\gamma$ is a curvature line in $\Sigma_1$, 
-$\Norm_1'$ is proportional to $\gamma'$;
-in particular, $\langle\Norm_1',\Norm_2\rangle=0$.
 
-By the assumption, $\langle \Norm_1(t),\Norm_2(t)\rangle$ is constant.
-Take its derivative and apply the above identity, show that $\langle\Norm_1,\Norm_2'\rangle=0$.
-Conclude that $\Norm_2'$ is proportional to $\gamma'$;
-that is, $\gamma$ is a curvature line in~$\Sigma_2$.
+By the assumption, $\langle \Norm_1,\Norm_2\rangle= c$ for some constant $c$.
+We know that
+$\Norm_1'$ is proportional to $\gamma'$ and need to show that $\Norm_2'$ is proportional to $\gamma'$.
+Observe that if $c=\pm1$, then $\Norm_1\equiv\pm \Norm_2$, and the statement trivially holds.
+
+Note that $\langle\Norm_1',\Norm_2\rangle=0$;
+Use that $c'=0$ to show that $\langle\Norm_1,\Norm_2'\rangle=0$.
+Show that $\langle\Norm_2,\Norm_2'\rangle=0$.
+Conclude that $\Norm_2'$ is proportional to $\gamma'$.
 
 \parbf{\ref{ex:equidistant}};
 \ref{SHORT.ex:equidistant:smooth}.
