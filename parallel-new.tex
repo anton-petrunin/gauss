@@ -30,19 +30,52 @@ Suppose ${\vec v}(t)$, $\vec w(t)$ are parallel vector fields along~$\gamma$.
 
 \section{Parallel transport}
 
+\begin{thm}{Proposition}\label{prop:parallel}
 Let $\Sigma$ be a smooth surface in the Euclidean space and $\gamma\:[a,b]\z\to \Sigma$ be a smooth curve.
 Assume $p=\gamma(a)$ and $q=\gamma(b)$.
 
-Given a tangent vector ${\vec v}\in\T_p$ there is a unique parallel field ${\vec v}(t)$ along $\gamma$ such that ${\vec v}(a)={\vec v}$.
-The latter follows from \ref{thm:ODE} (compare to \ref{lem:geodesic=2nd-order}); 
-the uniqueness also follows from Exercise~\ref{ex:parallel}.
+Given a tangent vector ${\vec w}\in\T_p$ there is a unique parallel field ${\vec w}(t)$ along $\gamma$ such that ${\vec w}(a)={\vec w}$.
+\end{thm}
 
-The vector $\vec w={\vec v}(b)\in\T_q$ is called the \index{parallel!transport}\emph{parallel transport} of ${\vec v}$ along~$\gamma$ in~$\Sigma$.
+The vector ${\vec w}(b)\in\T_q$ is called the \index{parallel!transport}\emph{parallel transport} of ${\vec w}(a)$ along~$\gamma$ in~$\Sigma$.
 
 The parallel transport along $\gamma$ will be denoted by $\iota_\gamma$;
-so we can write $\vec w=\iota_\gamma({\vec v})$ or $\vec w=\iota_\gamma({\vec v})_\Sigma$ if we need to emphasize that $\gamma$ lies in the surface~$\Sigma$.
+so we can write $\vec w(b)=\iota_\gamma({\vec w}(a))$ or $\vec w(b)=\iota_\gamma({\vec w}(a))_\Sigma$ if we need to emphasize that $\gamma$ lies in the surface~$\Sigma$.
 From Exercise~\ref{ex:parallel}, it follows that parallel transport $\iota_\gamma\:\T_p\z\to\T_q$ is an isometry.
 In general, the parallel transport $\iota_\gamma\:\T_p\z\to\T_q$ depends on the choice of $\gamma$; that is, for another curve $\gamma_1$ connecting $p$ to $q$ in $\Sigma$, the parallel transports $\iota_{\gamma_1}$ and $\iota_{\gamma}$ might be different.
+
+\parit{Sketch of proof.}
+Assume $\gamma$ lies in a local chart $(u,v)\mapsto s(u,v)$ of $\Sigma$;
+so $\gamma(t)\z=s(u(t),v(t))$ for some smooth functions $t\mapsto u(t)$ and $t\mapsto v(t)$.
+Set 
+\[
+\vec u(t)=s_u(u(t),v(t)),
+\quad
+\vec v(t)=s_v(u(t),v(t)),
+\quad
+\text{and}
+\quad
+\Norm(t)=\Norm(\gamma(t)).
+\]
+
+The conditions $\vec w(t)\in \T_{\gamma(t)}$ and $\vec w'(t)\perp \T_{\gamma(t)}$ can be written as a system of equations:
+\[
+\begin{cases}
+\ \langle\vec w(t), \Norm(t)\rangle=0,
+\\
+\ \langle\vec w'(t), \vec u(t)\rangle=0,
+\\
+\ \langle\vec w'(t), \vec v(t)\rangle=0.
+\end{cases}
+\]
+Rewriting this system in components of $\vec u$, $\vec v$, $\vec w$, and $\Norm$ produces a system of ordinary differential equations on the components of $\vec w$.
+Applying \ref{thm:ODE}, we get a solution $\vec w$.
+By \ref{ex:parallel}, $|\vec w|$ is constant;
+therefore \ref{thm:ODE} implies that $\vec w$ is defined on the whole interval $[a,b]$.
+
+If $\gamma$ is not covered by one chart we can subdivide it into a finite number of arcs $\gamma_1,\dots,\gamma_n$ such that each $\gamma_i$ lies in one chart.
+Applying the statement consequently to each $\gamma_i$ proves it for $\gamma$.
+\qeds
 
 Suppose $\gamma_1$ and $\gamma_2$ are two smooth curves in two smooth surfaces $\Sigma_1$ and $\Sigma_2$.
 Denote by $\Norm_i\:\Sigma_i\to\mathbb{S}^2$ the Gauss maps of $\Sigma_1$ and $\Sigma_2$.
