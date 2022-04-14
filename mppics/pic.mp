@@ -3297,8 +3297,8 @@ dOt z.p,z.q,z.pq,z.pp;
 label.top (btex {\Large $\Sigma$} etex, (0,10)+point 1.5 of p0);
 label.bot (btex $p$ etex, z.p);
 label.bot (btex $q$ etex, z.q);
-label.bot (btex $\gamma(t)$ etex, z.pq);
-label.top (btex $p^t$ etex, z.pp);
+label.bot (btex $\gamma(s)$ etex, z.pq);
+label.top (btex $p^s$ etex, z.pp);
 endfig;
 
 

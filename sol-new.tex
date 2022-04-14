@@ -1213,6 +1213,14 @@ Use \ref{ex:line-of-curvature} and Meusnier's theorem (\ref{thm:meusnier}).
 Observe that these two families are orthogonal to each other.
 Apply \ref{ex:mean-curvature}.
 
+\parbf{\ref{ex:rev(sin)}.}
+By \ref{ex:principal-revolution:a}, parallels and meridians are lines of curvature.
+One principal curvature is the curvature of generactrix.
+Use \ref{ex:curvature-formulas:a} to show that it is at most $a\cdot \sin x$.
+Note that the curvature of parallel is $\tfrac1{a\cdot \sin x}$;
+apply Meusnier's theorem, to show that the principal curvature in its direction cannot be larger.
+Make a conclusion.
+
 \parbf{\ref{ex:moon-revolution}.}
 Use \ref{ex:line-of-curvature} and \ref{thm:moon-orginal}.
 
@@ -1284,7 +1292,7 @@ By \ref{thm:convex-embedded}, the surface bounds a convex region that contains a
 \vskip-0mm
 \end{Figure}
 
-Use \ref{ex:curvature-graph} and \ref{thm:meusnier} to show that the Gauss curvature of the surface of revolution of the graph $y=a\cdot \sin x$ for $x\in(0,\pi)$ cannot exceed $1$.
+By \ref{ex:rev(sin)}, the Gauss curvature of the surface of revolution of the graph $y=a\cdot \sin x$ for $x\in(0,\pi)$ cannot exceed $1$.
 Try to support the surface $\Sigma$ from inside by a surface of revolution of the described type.
 (Compare to \ref{ex:convex small}.)
 
@@ -1541,6 +1549,9 @@ and by \ref{thm:shorts+convex}
 This means that $\gamma$ is not length minimizing --- 
 a contradiction.
 
+\parbf{\ref{ex:helix-geodesic}.} Show that $\gamma''(t)$ is proportional to $\nabla_{\gamma(t)} f$, where $f=x^2+y^2$. 
+Apply \ref{ex:tangent-normal}.
+
 \parbf{\ref{ex:intrinsic-diameter}.} 
 Show that the closest-point projection $\partial B\to\Sigma$ is surjective, and apply \ref{lem:closest-point-projection}.
 
@@ -1605,6 +1616,10 @@ In the remaining case, $\gamma$ can intersect meridians only transversely.
 Therefore, the longitude of $\gamma$ is monotone.
 Whence again $\gamma$ is non-contractible.
 
+\parbf{\ref{ex:closed-liberman}.} Assume $t\mapsto \gamma(t)=(x(t),y(t),z(t)$ is a closed unit-speed geodesic in the graph $z=f(x,y)$.
+By Liberman's lemma, $t\mapsto z'(t)$ is monotonic.
+Conclude that $z$ is constant on $\gamma$, so $\gamma$ runs in a horizonal plane.
+Show that $\gamma$ is straight and arrive at a contradiction.
 
 \parbf{\ref{ex:helix=geodesic}.}
 Show that $\Norm(\gamma(t))=(\cos t,\sin t, 0)$.
@@ -1665,24 +1680,25 @@ By \ref{prop:gamma''}, $\alpha$ and $\beta$ are geodesics.
 Since $\alpha$ and $\beta$ have a common subarc, they share one point and velocity vector at this point;
 by \ref{prop:geod-existence} $\alpha$ coincides with $\beta$ --- a contradiction.
 
-\parbf{\ref{ex:milka}.} Let $W$ be the closed region outside~$\Sigma$.
-Show that the distance $\dist{p^t}{q}W$ is constant with respect to~$t$.
-This implies that the concatenation of the line segment $[p^t,\gamma(t)]$ and the arc $\gamma|_{[t,\ell]}$ is a shortest path from $p^t$ to $q$ in~$W$.
+\parbf{\ref{ex:milka}.}
+Let $W$ be the closed region outside~$\Sigma$.
+Show that the distance $\dist{p^s}{q}W$ is constant with respect to~$s$.
+This implies that the concatenation of the line segment $[p^s,\gamma(s)]$ and the arc $\gamma|_{[s,\ell]}$ is a shortest path from $p^s$ to $q$ in~$W$.
 
 Since $\Sigma$ is strictly convex, 
-\[ \dist{\gamma (t)}{q}W > \dist{\gamma(t)}{q}{\mathbb{R}^3} \]
-for all $t < \ell$.
+\[ \dist{\gamma (s)}{q}W > \dist{\gamma(s)}{q}{\mathbb{R}^3} \]
+for all $s < \ell$.
 Hence,
 \begin{align*}
-\dist{p^t}{q}W&=\dist{p^t}{\gamma(t)}W+\dist{\gamma (t)}{q}W 
+\dist{p^s}{q}W&=\dist{p^s}{\gamma(s)}W+\dist{\gamma (s)}{q}W 
 > 
 \\
-&>\dist{p^t}{\gamma(t)}{\mathbb{R}^3} + \dist{ \gamma (t)}{q}{\mathbb{R}^3} 
+&>\dist{p^s}{\gamma(s)}{\mathbb{R}^3} + \dist{ \gamma (s)}{q}{\mathbb{R}^3} 
 \ge
 \\
-&\ge\dist{p^t}{q}{\mathbb{R}^3}. 
+&\ge\dist{p^s}{q}{\mathbb{R}^3}. 
 \end{align*}
-If the segment $[p^t , q ]$ was entirely contained in $W$ for some $t< \ell $, then $ \dist{p^t}{q}W = \dist{p^t}{q}{\mathbb{R}^3} $, which would be a contradiction.
+If the segment $[p^s,q]$ was entirely contained in $W$ for some $s<\ell$, then $\dist{p^s}{q}W = \dist{p^s}{q}{\mathbb{R}^3} $, which would be a contradiction.
 
 \parbf{\ref{ex:rho''}.}
 Equip $\Sigma$ with unit normal field $\Norm$ that points inside.
@@ -2063,7 +2079,7 @@ Its solution is defined on any interval where $|y'(t)|\z=|a\cdot \sin t|<1$ hold
 Apply \ref{ex:principal-revolution:formula} to calculate Gauss curvature of $\Sigma_a$.
 
 By \ref{ex:K=1}, small discs $\Delta_a$ in $\Sigma_a$ admit intrinsic isometry to a disc in a unit sphere.
-To show that $\Delta_a$ is not congruent to a spherical disc $\Delta_1$ for $a\ne 1$, show that its principle curvature is not 1 at some point. 
+To show that $\Delta_a$ is not congruent to a spherical disc $\Delta_1$ for $a\ne 1$, show that its principal curvature is not 1 at some point. 
 
 %\end{multicols}
 %\par\noindent\rule{\textwidth}{0.4pt}

@@ -6,6 +6,11 @@
 
 A smooth curve $\gamma$ in a smooth surface $\Sigma$ is called a \index{geodesic}\emph{geodesic} if, for any~$t$, the acceleration $\gamma''(t)$ is perpendicular to the tangent plane $\T_{\gamma(t)}$.
 
+\begin{thm}{Exercise}\label{ex:helix-geodesic}
+Show that the helix $\gamma(t)\z\df(\cos t,\sin t, t)$ is a geodesic on the cylindrical surface defined by the equation $x^2+y^2=1$.
+\end{thm}
+
+
 Physically, geodesics can be understood as the trajectories of particles that slide on $\Sigma$ without friction.
 Indeed, since there is no friction, the force that keeps the particle on $\Sigma$ must be perpendicular to~$\Sigma$.
 Therefore, by Newton's second law of motion,
@@ -381,12 +386,12 @@ Let $\Sigma$ be a smooth closed strictly convex surface
 in $\mathbb{R}^3$ 
 and $\gamma\:[0,\ell]\z\to \Sigma$ be a unit-speed minimizing geodesic.
 Set $p\z=\gamma(0)$, $q=\gamma(\ell)$, and 
-$$p^t=\gamma(t)-t\cdot\gamma'(t),$$ 
-where $\gamma'(t)$ denotes the velocity vector of $\gamma$ at~$t$.
+$$p^s=\gamma(s)-s\cdot\gamma'(s),$$ 
+where $\gamma'(s)$ denotes the velocity vector of $\gamma$ at~$s$.
 
-Show that for any $t\in (0,\ell)$,
-one {}\emph{cannot see} $q$ from $p^t$;
-that is, the line segment $[p^t,q]$ intersects $\Sigma$ at a point distinct from~$q$.
+Show that for any $s\in (0,\ell)$,
+one cannot see $q$ from $p^s$;
+that is, the line segment $[p^s,q]$ intersects $\Sigma$ at a point distinct from~$q$.
 
 Show that the statement does not hold without assuming that $\gamma$ is minimizing.
 \end{thm}
@@ -400,7 +405,7 @@ The following lemma is a smooth analog of a lemma proved by Joseph Liberman \cit
 \begin{thm}{Lemma}
 \label{lem:liberman}
 \index{Liberman's lemma}
-Let $f$ be a smooth convex function defined on an open subset of the plane.
+Let $f$ be a smooth locally convex function defined on an open subset of the plane.
 Suppose $t\mapsto \gamma(t)\z=(x(t),y(t),z(t))$ is a unit-speed geodesic on the graph $z=f(x,y)$.
 Then $t\mapsto z(t)$ is a convex function; that is, $z''(t)\ge 0$ for any~$t$.
 \end{thm}
@@ -429,6 +434,12 @@ in particular, $k(t)\ge 0$ for any~$t$.
 It follows that the right-hand side in \ref{eq:z''} is nonnegative;
 whence the statement follows.
 \qeds
+
+\begin{thm}{Exercise}\label{ex:closed-liberman}
+Let $\Sigma$ be the graph of a locally convex function defined on an open subset of the plane.
+Show that $\Sigma$ has no closed geodesics.
+\end{thm}
+
 
 \begin{thm}{Exercise}\label{ex:rho''}
 Assume $\gamma$ is a unit-speed geodesic on a smooth convex surface $\Sigma$, and a point $p$ lies in the interior of the convex set bounded by~$\Sigma$.
