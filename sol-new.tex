@@ -103,12 +103,12 @@ Try to argue similarly to \ref{ex:L-shape}.
 
 \parbf{\ref{ex:viviani}.}
 For $\ell=0$ the system describes a pair of points $(0,0,\pm1)$, so we can assume that $\ell\ne 0$.
-Note that the first equation describes the unit sphere centered at the origin, and the second equation describes a cylinder over the circle in the $(x,y)$-plane with center $(-\tfrac\ell2,0)$ and radius $|\tfrac\ell2|$.
+Note that the first equation describes the unit sphere centered at the origin, and the second equation describes a cylinder over the circle in the $(x,y)$-plane with center $(-\tfrac\ell2,0)$ and radius~$|\tfrac\ell2|$.
 
 
 \begin{Figure}
 \centering
-\vskip-0mm
+\vskip-3mm
 \begin{lpic}[t(2mm),b(0mm),r(0mm),l(0mm)]{asy/viviani(1)}
 \lbl[r]{-.5,18;$x$}
 \lbl[l]{41,22;$y$}
@@ -1322,7 +1322,7 @@ We can assume that the origin lies on~$\Sigma$.
 Consider a sequence of points $x_n\in \Sigma$ such that $|x_n|\z\to \infty$ as $n\to \infty$.
 Denote by $\vec u_n$ the unit vector in the direction of $x_n$; that is $\vec u_n\z=\tfrac{x_n}{|x_n|}$.
 
-Since the unit sphere is compact, we can pass to a subsequence of $(x_n)$ such that $\vec u_n$ converges to a unit vector, say $\vec u$.
+Since the unit sphere is compact, we can pass to a subsequence of $x_n$ such that $\vec u_n$ converges to a unit vector, say $\vec u$.
 Show that the half-line from the origin in the direction of $\vec u$ can be taken as $\ell$.
 
 \parit{\ref{SHORT.ex:convex-proper-plane:b} $+$ \ref{SHORT.ex:convex-proper-plane:c} $+$ \ref{SHORT.ex:convex-proper-plane:d}.}
@@ -1524,7 +1524,7 @@ Show that $2\cdot\cos\alpha\z= |\Norm(p)+\Norm(q)|$.
 Let $x\in \ell$ be the point that minimizes the sum $|p-x|\z+|x-q|$.
 Show that $\measuredangle\hinge xpq\ge \pi-2\cdot\alpha$.
 Conclude that 
-\[|p-x|+|x-q|\le \frac{|p-q|}{\cos\alpha}.\]
+\[|p-x|+|x-q|\le \tfrac{|p-q|}{\cos\alpha}.\]
 Apply \ref{thm:shorts+convex} to show that
 $\dist{p}{q}\Sigma\le |p-x|+|x-q|$.
 
@@ -1714,12 +1714,10 @@ for any~$t$.
 
 Applying the above estimates, we get 
 \begin{align*}
-\rho''(t)
-&=\langle\gamma(t),\gamma(t)\rangle''=
+&\rho''(t)
+=\langle\gamma(t),\gamma(t)\rangle''=
 \\
-&=2\cdot\langle\gamma''(t),\gamma(t)\rangle+2\cdot\langle\gamma'(t),\gamma'(t)\rangle\le
-\\
-&\le 2.
+&=2\cdot\langle\gamma''(t),\gamma(t)\rangle+2\cdot\langle\gamma'(t),\gamma'(t)\rangle\le 2.
 \end{align*}
 
 
@@ -2119,14 +2117,13 @@ Choose vectors $\vec u$, and $\vec w$
 such that $|\vec w|\z=\dist{p}{x}{}$, $|\vec u|=1$, and $\measuredangle(\vec u,\vec w)=\measuredangle\hinge xpq$.
 Consider the function
 $f\:t\mapsto t+|\vec w|-|\vec w-t\cdot \vec u|$.
-Set $t_0=\dist{x}{y}{}$ and $t_1=\dist{x}{q}{}$.
-Observe that 
+Observe that $f(0)\z=0$,
 \begin{align*}
-f(t_0)&=\dist{x}{p}{}+\dist{x}{y}{}-\side\hinge xpy,
+f(\dist{x}{y}{})&=\dist{x}{p}{}+\dist{x}{y}{}-\side\hinge xpy,
 \\
-f(t_1)&=\dist{x}{p}{}+\dist{x}{q}{}-\side\hinge xpq.
+f(\dist{x}{q}{})&=\dist{x}{p}{}+\dist{x}{q}{}-\side\hinge xpq.
 \end{align*}
-Show and use that $f$ is concave and $f(0)\z=0$.
+Show and use that $f$ is concave.
 
 \parbf{\ref{ex:open-comparison}}; \ref{SHORT.ex:open-comparison:positive}.
 Apply Rauch comparison \ref{prop:rauch} and properties of the exponential map in \ref{prop:exp}.
@@ -2285,11 +2282,11 @@ Also, by the triangle inequality, we have
 $\dist{\lambda(t)}{x}{\Sigma}- t\ge-\dist{\lambda(0)}{x}{}$;
 that is, for each $x$, the values $\dist{\lambda(t)}{x}{\Sigma}- t$ are bounded below.
 Thus the limit
-\[\bus_\lambda(x)=\lim_{t\to\infty}\dist{\lambda(t)}{x}{\Sigma}- t\]
+\[f(x)=\lim_{t\to\infty}\dist{\lambda(t)}{x}{\Sigma}- t\]
 is defined for any $x$.
 
 Observe that each function $x\mapsto \dist{\lambda(t)}{x}{\Sigma}- t$ is 1-Lipschitz.
-Therefore, its limit $x\mapsto\bus_\lambda(x)$ is 1-Lipschitz as well.
+Therefore, its limit $x\mapsto f(x)$ is 1-Lipschitz as well.
 The second part of \ref{SHORT.ex:busemann:all} is evident, since for $s \geq t$, we have $| \gamma (s) - \gamma (t) |_{\Sigma} = s-t$.
 
 \parit{\ref{SHORT.ex:busemann-} $+$ \ref{SHORT.ex:busemann+}}.
@@ -2300,7 +2297,7 @@ Given $t\ge 0$, consider the function
 Observe that for any fixed $x\in\Sigma$, we have $\tfrac{\dist{\lambda(t)}{x}{}}t\to 1$ as $t\to\infty$.
 Therefore,
 \begin{align*}
-\bus_\lambda\!\circ\alpha(s)
+f\!\circ\alpha(s)
 &=\!
 \lim_{t\to\infty}\left(\frac{| \lambda (t) - \alpha (s) |_{\Sigma}^2 - s^2 }{t} -t\right)=
 \\
@@ -2310,39 +2307,39 @@ Therefore,
 According to \ref{ex:geod-convexity}, the function 
 $s\mapsto h_t(s)$ is convex or concave, assuming the conditions in \ref{SHORT.ex:busemann-} or \ref{SHORT.ex:busemann+}, respectively.
 Therefore, so is the function
-\[s \mapsto \frac{h_t(s)}{t} -t \]
+$s \mapsto \tfrac{h_t(s)}{t} -t$
 for every~$t$.
 Since pointwise limits of convex or concave functions are respectively convex or concave, \ref{SHORT.ex:busemann-} and \ref{SHORT.ex:busemann+} follow.
 
 \parbf{\ref{thm:splitting}.}
-Consider two Busemann functions $\bus_+$ and $\bus_-$ associated with two half-lines of
+Consider two Busemann functions $f_+$ and $f_-$ associated with two half-lines of
 $\lambda$; that is,
 \[
-\bus_\pm(x)
+f_\pm(x)
 =
 \lim_{t\to\infty}\dist{\lambda(\pm t)}{x}{\Sigma}- t.
 \]
-Use the triangle inequality to show that $\bus_+(x)+\bus_-(x)\ge 0$.
-Use the comparison theorem to show that $\bus_+(x)+\bus_-(x)\le 0$.
+Use the triangle inequality to show that $f_+(x)+f_-(x)\ge 0$.
+Use the comparison theorem to show that $f_+(x)+f_-(x)\le 0$.
 Conclude that
 \[
-\bus_+(x)+\bus_-(x)= 0
+f_+(x)+f_-(x)= 0
 \eqlbl{eq:bus+-=0}
 \]
 for any $x\in \Sigma$.
 
 According to \ref{ex:busemann}, 
-both functions $\bus_\pm$ are concave, and $\bus_\pm\circ\lambda(t)=\mp t$ for any~$t$.
-By \ref{eq:bus+-=0} both functions $\bus_\pm$ are affine;
+both functions $f_\pm$ are concave, and $f_\pm\circ\lambda(t)=\mp t$ for any~$t$.
+By \ref{eq:bus+-=0} both functions $f_\pm$ are affine;
 that is, they are convex and concave at the same time.
-It follows that the differential of $\bus_\pm$ is defined at any point $x\in\Sigma$;
+It follows that the differential of $f_\pm$ is defined at any point $x\in\Sigma$;
 that is, there is a linear function $\T_x\to\mathbb{R}$ that is defined by
-$\vec v\mapsto D_{\vec v}\bus_\pm$
+$\vec v\mapsto D_{\vec v}f_\pm$
 for any tangent vector $\vec v \in \T_x$.
 
-Denote by $\vec u$ the gradient vector field of $\bus_-$;
+Denote by $\vec u$ the gradient vector field of $f_-$;
 that is, $\vec u$ is a tangent vector field such that for any tangent field $\vec v$ the following identity holds
-\[\langle\vec u,\vec v\rangle=D_{\vec v}(\bus_-).\]
+\[\langle\vec u,\vec v\rangle=D_{\vec v}(f_-).\]
 
 Show that, the surface $\Sigma$ can be subdivided into lines that run in the direction of $\vec u$.
 
@@ -2350,16 +2347,16 @@ Use the comparison theorem to show that the distances between points on two line
 
 \begin{clm}{}\label{clm:parallel}
 Let $\xi$ and $\zeta$ be two lines in $\Sigma$ that run in the direction of $\vec u$.
-Suppose $\xi$ and $\zeta$ are parametrized so that $\bus_-\circ \xi(t)=\bus_-\circ \zeta(t)=t$ for any $t$;
+Suppose $\xi$ and $\zeta$ are parametrized so that $f_-\circ \xi(t)=f_-\circ \zeta(t)=t$ for any $t$;
 further set $x_0=\xi(0)$, $z_0\z=\zeta(0)$, $x_1=\xi(s)$, $z_1=\zeta(t)$ for some $s,t$. 
 Then
 \[\dist{x_1}{z_1}\Sigma^2=\dist{x_0}{z_0}\Sigma^2+(s-t)^2.\]
 \end{clm}
 
 Use that $\Sigma$ is simply connected to show that 
-$L=\set{x\in\Sigma}{\bus_-(x)=0}$
+$L=\set{x\in\Sigma}{f_-(x)=0}$
 is a line.
 
 Choose an arc-length parametrization $v\z\mapsto\gamma(v)$ of $L$.
-Denote by $\lambda^v$ the line thru $\gamma(v)$ in the direction of $\vec u$ with the parametrization as above: that is, $\bus_-\circ\lambda^v(u)=u$ for any $u$ and~$v$.
+Denote by $\lambda^v$ the line thru $\gamma(v)$ in the direction of $\vec u$ with the parametrization as above: that is, $f_-\circ\lambda^v(u)=u$ for any $u$ and~$v$.
 According to \ref{clm:parallel}, $(u,v)\mapsto \lambda^v(u)$ is an intrinsic isometry from the Euclidean plane to~$\Sigma$.

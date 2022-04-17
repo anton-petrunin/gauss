@@ -37,7 +37,7 @@ it is called \index{model angle}\emph{model angle} of the triangle $[xyz]$ at~$x
 By side-side-side congruence condition,
 the model triangle $[\tilde x\tilde y\tilde z]$ is uniquely defined up to congruence.
 Therefore, the model angle $\tilde\theta=\modangle xyz$ is uniquely defined as well.
-In fact by cosine rule, we get 
+Note that by cosine rule, we have 
 \[\cos \tilde\theta=\frac{a^2+b^2-c^2}{2\cdot a \cdot b},\]
 where $a=\dist{x}{y}{\Sigma}$, $b=\dist{x}{z}{\Sigma}$, and $c=\dist{y}{z}{\Sigma}$.
 
@@ -71,25 +71,23 @@ Recall that a surface $\Sigma$ is called {}\emph{simply-connected} if any closed
 \begin{thm}{Comparison theorems}
 \label{thm:comp}
 \index{comparison theorem}
-Let $\Sigma$ be an open or closed smooth surface.
+\ 
 
 \begin{subthm}{thm:comp:cat}
-If $\Sigma$ is simply-connected and has nonpositive Gauss curvature, then 
+If $\Sigma$ is an open simply-connected  smooth surface with nonpositive Gauss curvature, then 
 \[\measuredangle\hinge {x}{y}{z}\le\modangle xyz\]
 for any geodesic triangle $[xyz]$.
 \end{subthm}
 
 \begin{subthm}{thm:comp:toponogov}
-If $\Sigma$ has nonnegative Gauss curvature, then 
+If $\Sigma$ is an closed (or open) simply-connected smooth surface with nonnegative Gauss curvature, then 
  \[\measuredangle\hinge {x}{y}{z}\ge\modangle xyz\]
 for any geodesic triangle $[xyz]$.
 \end{subthm}
 
 \end{thm}
 
-The proof of part \ref{SHORT.thm:comp:cat} will be given in Section~\ref{sec:nonpos-comp}.
-The proof of part \ref{SHORT.thm:comp:toponogov} will be finished in Section~\ref{sec:nonneg-comp}.
-
+The proofs of parts \ref{SHORT.thm:comp:cat} and \ref{SHORT.thm:comp:toponogov} will be given in section~\ref{sec:nonpos-comp} and ~\ref{sec:nonneg-comp} respectively.
 
 \begin{thm}{Exercise}\label{ex:thm:comp:cat:nsc}
 Show that the conclusion in \ref{thm:comp:cat} does not hold the hyperboloid
@@ -108,10 +106,16 @@ It follows that
 \item if $K_\Sigma\le 0$, then $\alpha+\beta+\gamma\le\pi$.
 \end{itemize}
 
+\begin{wrapfigure}{r}{35mm}
+\centering
+\vskip-10mm
+\includegraphics{mppics/pic-2307}
+\end{wrapfigure}
+
 Now set 
-$\hat\alpha=\measuredangle\hinge {x}{y}{z}$,
-$\hat\beta=\measuredangle\hinge {y}{z}{x}$,
-and $\hat\gamma=\measuredangle\hinge {z}{x}{y}$.
+$\hat\alpha\z=\measuredangle\hinge {x}{y}{z}$,
+$\hat\beta\z=\measuredangle\hinge {y}{z}{x}$,
+and $\hat\gamma\z=\measuredangle\hinge {z}{x}{y}$.
 Since the angles of any plane triangle add up $\pi$, from the comparison theorems, we get that
 \begin{itemize}
 \item if $K_\Sigma\ge 0$, then $\hat\alpha+\hat\beta+\hat\gamma\ge\pi$, and
@@ -196,7 +200,7 @@ in particular, $|\vec v|, |\vec w|< \tfrac r2$.
 Consider a minimizing geodesic $\gamma$ joining $y$ to $z$ in~$\Sigma$.
 Since $\dist{x}{y}{\Sigma},\dist{x}{z}{\Sigma}\z<\tfrac r2$, the triangle inequality implies that $\gamma$ lies in the $r$-neighborhood of~$x$.
 In particular, $\log_x\circ\gamma$ is defined, and the curve
-$\tilde \gamma=\log_x\circ\gamma$ lies in an $r$-neighborhood of zero in $\T_x$ that corresponds to~$\gamma$.
+$\tilde \gamma=\log_x\circ\gamma$ lies in an $r$-neighborhood of zero in $\T_x$.
 Note that $\tilde\gamma$ connects $\vec v$ to $\vec w$ in $\T_x$.
 
 By Rauch comparison (\ref{prop:rauch:K=<0}), we have
@@ -361,10 +365,10 @@ By \ref{eq:thm:=def-loc-fivestar} and \ref{eq:thm:=def-loc-fourstar}, both seque
 \[s_n=\side \hinge{x_n}pq\quad\text{and}\quad r_n=\dist{p}{x_n}\Sigma+\dist{x_n}{q}\Sigma\]
 are nonincreasing.
 
-The sequence $(x_n)$ might terminate at some $n$ only if $r_n< \tfrac{2}{3}\cdot\ell $.
+The sequence $x_n$ might terminate at some $n$ only if $r_n< \tfrac{2}{3}\cdot\ell $.
 In this case, by the assumptions of the lemma, we have
 \[s_n=\side \hinge{x_n}p q\ge\dist{p}{q}\Sigma.\]
-Since the sequence $(s_n)$ is nonincreasing, we get
+Since the sequence $s_n$ is nonincreasing, we get
 \[\side \hinge{x}p q=s_0\ge s_n\ge\dist{p}{q}\Sigma;\]
 whence \ref{eq:thm:=def-loc} follows.
 
@@ -373,7 +377,7 @@ whence \ref{eq:thm:=def-loc} follows.
 \includegraphics{mppics/pic-2315}
 \end{figure}
 
-It remains to prove \ref{eq:thm:=def-loc} if the sequence $(x_n)$ does not terminate.
+It remains to prove \ref{eq:thm:=def-loc} if the sequence $x_n$ does not terminate.
 By \ref{3|xx'|}, we have 
 \[
 \dist{x_n}{x_{n-1}}\Sigma
@@ -389,7 +393,7 @@ Therefore,
 \[r_n-s_n\le 100\cdot (r_n-r_{n+1})\eqlbl{eq:r-s<100(r-r)}\]
 In the case $x_{n+1}\in [x_n,p]$, inequality \ref{eq:r-s<100(r-r)} follows if one applies \ref{ex:s-r} for the hinges $\hinge{x_n}pq$ and $\hinge{x_n}{x_{n+1}}q$.
 
-The sequences $(r_n)$ and $(s_n)$ are nonincreasing and nonnegative;
+The sequences $r_n$ and $s_n$ are nonincreasing and nonnegative;
 so, they have to converge.
 In particular, $(r_n-r_{n+1})\to0$ as $n\to \infty$.
 Therefore, \ref{eq:r-s<100(r-r)} implies that
@@ -434,7 +438,7 @@ A reformulation of the following lemma (\ref{lem:alex-reformulation}) will be us
 
 \begin{thm}{Lemma}
 \label{lem:alex}
-Assume $[pxyz]$ and $[p'x'y'z']$ are two quadrangles in the plane with equal corresponding sides.
+Consider two quadrangles in the Euclidean plane $pxyz$ and $p'x'y'z'$ with equal corresponding sides.
 Assume the sides $[x',y']$ and $[y',z']$ extend each other; that is, $y'$ lies on the line segment $[x',z']$.
 Then the following expressions have the same signs:
 \begin{enumerate}[(i)]
@@ -557,7 +561,7 @@ where $\tilde w$ and $\tilde y$ are the points corresponding to $w$ and $y$ poin
 \parit{\ref{SHORT.fat}$\Rightarrow$\ref{SHORT.mang>angk}.}
 Since the triangle is fat, we have 
 \[\modangle xwy \ge \modangle xpz\]
-for any $w\in \left]xp\right]$ and $y\in \left]xz\right]$.
+for any $w\in [x,p]\backslash \{x\}$ and $y\in [x,z]\backslash \{x\}$.
 Note that $\modangle xwy\to \measuredangle\hinge xpz$ as $w,y\to x$.
 Whence the implication follows.
 \qeds
@@ -629,25 +633,25 @@ Suppose $\lambda\:[0,\infty)\to \Sigma$ is a half-line in a smooth surface~$\Sig
 
 \begin{subthm}{ex:busemann:all}
 Show that the function 
-\[\bus_\lambda(x)=\lim_{t\to\infty}\dist{\lambda(t)}{x}{\Sigma}- t\]
+\[f(x)\df\lim_{t\to\infty}\dist{\lambda(t)}{x}{\Sigma}- t\]
 is defined.
 Moreover, 
-$\bus_\lambda$ is a $1$-Lipschitz function, and
-\[\bus_\lambda\circ\lambda(t)+t=0\] 
+$f$ is a $1$-Lipschitz function, and
+\[f\circ\lambda(t)+t=0\] 
 for any~$t$.
-The function $\bus_\lambda$ is called \index{Busemann function}\emph{Busemann function} associated to $\lambda$.
+The function $f$ is called \index{Busemann function}\emph{Busemann function} associated to $\lambda$.
 \end{subthm}
 
 \begin{subthm}{ex:busemann-}
-Show that if $\Sigma$ is an open simply-connected surface with nonpositive Gauss curvature, then $\bus_\lambda$ is convex;
+Show that if $\Sigma$ is an open simply-connected surface with nonpositive Gauss curvature, then $f$ is convex;
 that is, for any geodesic $\alpha$ the real-to-real function 
-$t\mapsto \bus_\lambda\circ\alpha(t)$ is convex.
+$t\mapsto f\circ\alpha(t)$ is convex.
 \end{subthm}
 
 \begin{subthm}{ex:busemann+}
-Show that if $\Sigma$ is an open surface with nonnegative Gauss curvature, then $\bus_\lambda$ is concave;
+Show that if $\Sigma$ is an open surface with nonnegative Gauss curvature, then $f$ is concave;
 that is, for any geodesic $\alpha$ the real-to-real function 
-$t\z\mapsto \bus_\lambda\circ\alpha(t)$ is concave.
+$t\z\mapsto f\circ\alpha(t)$ is concave.
 \end{subthm}
 
 \end{thm}
@@ -663,11 +667,4 @@ the Euclidean plane.
 \end{thm}
 
 The last statement is a partial case of the so-called \emph{line splitting theorem}. 
-It was proved by Stefan Cohn-Vossen \cite[Satz 5 in][]{convossen} and has a sequence of variations:
-\begin{itemize}
- \item Victor Toponogov \cite{toponogov-globalization+splitting} proved a version of the splitting theorem for Riemannian manifolds with nonnegative sectional curvature;
- \item Jeff Cheeger and Detlef Gromoll \cite{cheeger-gromoll-split} generalized it further to Riemannian manifolds with nonnegative Ricci curvature;
- \item Jost-Hinrich Eshenburg \cite{eshenburg-split} proved a splitting theorem for a space-time with nonnegative Ricci curvature in timelike directions.
-\end{itemize}
-
-%???shorten here
+It was proved by Stefan Cohn-Vossen \cite[Satz 5 in][]{convossen} and generalized by Victor Toponogov \cite{toponogov-globalization+splitting}.

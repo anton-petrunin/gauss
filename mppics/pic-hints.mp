@@ -543,7 +543,7 @@ draw z.p1--z.q1 penhair;
 dOt z.p0,z.p1,z.q0,z.q1,z.a,z.b,z.c;
 
 label.lft(btex $\gamma_1(0)$ etex, z.p0);
-label.urt(btex {\small $\gamma_1(1)=\delta(1)$} etex, z.p1);
+label.rt(btex {\small $\gamma_1(1)=\delta(1)$} etex, z.p1);
 label.lrt(btex $\gamma_2(1)$ etex, z.q1);
 label.llft(btex {\small $\gamma_2(0)=\delta(0)$} etex, z.q0);
 label.top(btex $\gamma_1(\tfrac12)$ etex, z.a);

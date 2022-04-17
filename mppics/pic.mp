@@ -3968,6 +3968,42 @@ label.llft(btex $p$ etex, z.p);
 
 endfig;
 
+beginfig(2307) 
+save u,p;
+path p[];
+u:=.7cm;
+
+z.a=(0,1)*u;
+z.b=(2,0)*u;
+z.c=-z.b;
+
+p1=z.a{1,1}..{1,-2}z.b;
+p2=z.b{-1,-1}..{-1,1}z.c;
+p3=z.c{1,2}..{1,-1}z.a;
+
+p11=circle(z.a,8);
+p12=circle(origin,10) rotated 90 shifted z.a;
+p21=circle(z.b,10);
+p31=circle(origin,10) rotated 180 shifted z.c;
+
+draw p1;
+draw p2;
+draw p3;
+
+draw p11 cutbefore p1 cutafter p3;
+draw p12 cutbefore p3 cutafter p1;
+draw p21 cutbefore p1 cutafter p2;
+draw p31 cutbefore p2 cutafter p3;
+
+dOt z.a,z.b,z.c;
+
+label.top(btex $\alpha$ etex, z.a+(0,-11));
+label.top(btex $\hat\alpha$ etex, z.a+(0,8));
+label.lft(btex $\beta{=}\hat\beta$ etex, z.b+(-8,2));
+label.rt(btex $\gamma{=}\hat\gamma$ etex, z.c+(8,2));
+label.top(btex $\Delta$ etex, (0,3)+point .5 of p2);
+endfig;
+
 beginfig(2308) 
 save u,p;
 path p[];
