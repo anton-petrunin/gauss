@@ -2,25 +2,25 @@
 \label{chap:semigeodesic}
 
 This chapter contains computational proofs of several statements discussed above, including 
-\begin{itemize}
-\item Proposition~\ref{prop:inj-rad} --- an alternative definition of injectivity radius.
-\item Proposition~\ref{prop:gamma''} --- shortest paths are geodesics.
-\item The Gauss--Bonnet formula (\ref{thm:gb}).
-\end{itemize}
-In addition, we discuss intrinsic isometries between surfaces and prove Gauss' remarkable theorem, stating that Gauss curvature can be defined intrinsically.
+Proposition~\ref{prop:inj-rad} --- an alternative definition of \textit{injectivity radius},
+Proposition~\ref{prop:gamma''} --- \textit{shortest paths are geodesics}, and
+The Gauss--Bonnet formula (\ref{thm:gb}).
+In addition, we discuss intrinsic isometries between surfaces and prove Gauss' remarkable theorem, stating that \textit{Gauss curvature is an intrinsic invariant}.
 
 \section{Polar coordinates}
 
 The property of the exponential map in \ref{prop:exp} can be used to define \index{polar coordinates}\emph{polar coordinates} in a smooth surface $\Sigma$ with respect to a point $p\in \Sigma$.
 
-Namely, fix some polar coordinates $(r,\theta) \in \mathbb{R}_{\ge0} \times \mathbb{S}^1  $ on the tangent plane $\T_p$.
+Namely, fix polar coordinates $(r,\theta) \in \mathbb{R}_{\ge0} \times \mathbb{S}^1  $ on the tangent plane $\T_p$.
 If $\vec v\in \T_p$ has coordinates $(r,\theta)$,
 then we say that $s(r,\theta)\z=\exp_p\vec v$ is the point in $\Sigma$ with  polar coordinates $(r,\theta)$.
 
 
 Since there might be many geodesics from $p$ to a given point $x$,
 the point $x$ might be written differently in the polar coordinates.
-However, according to Proposition~\ref{prop:exp} polar coordinates behave in  the usual way for small values of~$r$.
+However, for small values of~$r$,
+polar coordinates behave in the usual way.
+The latter follows from Proposition~\ref{prop:exp}.
 More precisely, the following statement holds:
 
 \begin{thm}{Observation}\label{obs:polar}
@@ -34,7 +34,7 @@ $r_1=r_2=0$ or $r_1=r_2$ and $\theta_1\z=\theta_2+2\cdot n\cdot\pi$ for an integ
 The following statement will play a key role in the formal proof that shortest paths are geodesics; see Section~\ref{sec:proof-of-gamma''}.
 
 \begin{thm}{Gauss lemma}\label{lem:palar-perp}
-Let $(r,\theta)\mapsto s(r,\theta)$ describe polar coordinates with respect to a point $p$ in a smooth surface~$\Sigma$.
+Let $(r,\theta)\mapsto s(r,\theta)$ be polar coordinates with respect to a point $p$ in a smooth surface~$\Sigma$.
 Then
 $s_\theta\perp s_r$
 for any $r$ and~$\theta$.
@@ -76,16 +76,18 @@ It follows that
 \end{aligned}
 \eqlbl{eq:<s',s'>'=0}
 \]
-Therefore, for fixed $\theta$, the value 
-$\langle  s_\theta, s_r\rangle$ does not depend on~$r$.
 
 Note that $s(0,\theta)=p$ for any $\theta$.
 Therefore,
 $s_\theta(0,\theta)=0$
 and, in particular,
+$\langle s_\theta, s_r\rangle=0$
+if $r=0$.
+By \ref{eq:<s',s'>'=0}, the value 
+$\langle  s_\theta, s_r\rangle$ does not depend on~$r$ for fixed $\theta$.
+Therefore
 \[\langle s_\theta, s_r\rangle=0\]
-for $r=0$.
-By \ref{eq:<s',s'>'=0} the same holds for any~$r$.
+for any $r$ and $\theta$.
 \qeds
 
 \section[Shortest paths are geodesics: a formal proof]{Shortest paths are geodesics:
@@ -135,7 +137,7 @@ Let $\epsilon>0$ be as in \ref{prop:exp}.
 Assume a geodesic $\gamma$ of length less than $\epsilon$ from $p$ to $q$ does not minimize the length between its endpoints.
 Then there is a shortest path from $p$ to $q$, which becomes a geodesic when it is parametrized by its arc-length.
 That is, there are two geodesics from $p$ to $q$ of length smaller than $\epsilon$.
-In other words there are two vectors ${\vec v},\vec w\in\T_p$ such that $|{\vec v}|<\epsilon$, $|\vec w|<\epsilon$, and 
+In other words, there are two vectors ${\vec v},\vec w\in\T_p$ such that $|{\vec v}|<\epsilon$, $|\vec w|<\epsilon$, and 
 $q=\exp_p\vec v\z=\exp_p\vec w$.
 But according to \ref{prop:exp}, the exponential map $\T_p \to \Sigma$ is injective in the $\epsilon$-neighborhood of zero --- a contradiction.\qeds
 
@@ -223,11 +225,11 @@ b\cdot K&=b\cdot (\ell\cdot n-m^2)=
 \cancel{\langle\vec u_{uv},\vec v\rangle}
 \right)=
 \\
-&=-b_{uu}.
+&=0-b_{uu}.
 \end{align*}
 It remains to prove the four identities in \ref{eq:uu-vv}.
 
-\parit{$\vec u_u=\ell\cdot \Norm$.}
+\parit{Derivation of $\vec u_u=\ell\cdot \Norm$.}
 Since the frame $\Norm$, $\vec u$, and $\vec v$ is orthonormal, this vector identity can be rewritten as the following three scalar identities:
 \[
 \begin{aligned}
@@ -256,7 +258,7 @@ Indeed,
 &=\ell.
 \end{align*}
 
-\parit{$\vec u_v=-b_u\cdot \vec v+b\cdot m\cdot\Norm$.}
+\parit{Derivation of $\vec u_v=-b_u\cdot \vec v+b\cdot m\cdot\Norm$.}
 This vector identity can be rewritten as the following three scalar identities:
 \[
 \begin{aligned}
@@ -307,7 +309,7 @@ Finally, applying \ref{thm:shape-chart}, \ref{eq:Shape(u,v)}, and $s_v=b\cdot \v
 &=b\cdot m.
 \end{align*}
 
-\parit{$\vec v_u=m\cdot \Norm$ and $\vec v_v=-b_u\cdot \vec u+b\cdot n\cdot\Norm$.}
+\parit{Derivation of $\vec v_u=m\cdot \Norm$ and $\vec v_v=-b_u\cdot \vec u+b\cdot n\cdot\Norm$.}
 Recall that $\vec v=\Norm\times \vec u$.
 Therefore,
 \[\begin{aligned}
@@ -440,7 +442,7 @@ Suppose $(u,v)\mapsto s(u,v)$ is a \index{conformal chart}\emph{conformal chart}
 that is, there is a function $(u,v)\mapsto b(u,v)$ such that $b=|s_u|=|s_v|$ and $s_u\perp s_v$ for any $(u,v)$.
 (The function $b$ is called a \index{conformal factor}\emph{conformal factor} of~$s$.)
 
-Use \ref{lem:K(orthogonal)} to show that the Gauss curvature can be expressed as 
+Use \ref{lem:K(orthogonal)} to show that  
 \[K=-\frac{\triangle (\ln b)}{b^2},\]
 where $\triangle$ denotes the \index{Laplacian}\emph{Laplacian}; that is, $\triangle=\tfrac{\partial^2}{\partial u^2}+\tfrac{\partial^2}{\partial v^2}$, and 
  $K=K(u,v)$ is the Gauss curvature of $\Sigma$ at $s(u,v)$.
@@ -472,7 +474,7 @@ Set $\vec y=\Norm\times\vec x$.
 
 Note that there is a continuous function $t\mapsto \phi(t)$ such that 
 $\vec u(t)$ is a counterclockwise rotation of $\vec x(0)$ by angle $\phi(t)$.
-Since $\vec x(0)=\vec u(0)$, we can (and will) assume that $\phi(0)=0$.
+Since $\vec x(0)=\vec u(0)$, we can and will assume that $\phi(0)=0$.
 
 Note that
 \begin{align*}
@@ -554,10 +556,10 @@ Then
 
 \section{Gauss--Bonnet formula: a formal proof}\label{sec:gauss--bonnet:formal}
 
-Recall that for a topological disc $\Delta$ in a smooth oriented surface $\Sigma$ we set
+Recall that the Gauss--Bonnet formula can be written as $\GB(\Delta)=0$,
+where $\Delta$ is a topological disc in a smooth oriented surface,
 \[\GB(\Delta)=\tgc{\partial\Delta}+\iint_\Delta K-2\cdot \pi,\]
-where we assume that $\partial \Delta$ is oriented in such a way that $\Delta$ lies on its left.
-So the Gauss--Bonnet formula can be written as $\GB(\Delta)=0$.
+and $\partial \Delta$ is oriented in such a way that $\Delta$ lies on its left.
 
 \parit{Proof of the Gauss--Bonnet formula (\ref{thm:gb}).}
 First, assume $\Delta$ is covered by a semigeodesic chart.
@@ -579,9 +581,7 @@ From above, $f(t)$ is a multiple of $2\cdot\pi$ for any~$t$.
 It follows that $f$ is a constant function.
 In particular,
 \begin{align*}
-\GB(\Delta)&=\GB(\Delta_0)=
-\\
-&=0,
+\GB(\Delta)&=\GB(\Delta_0)=0,
 \end{align*}
 where the last equality follows from $\ref{prop:total-signed-curvature}$.
 
@@ -664,6 +664,9 @@ Let $\Sigma$ and $\Sigma^{*}$ be two smooth surfaces in the Euclidean space.
 A map $f\:\Sigma\to \Sigma^{*}$ is called \index{length-preserving}\emph{length-preserving} if, for any curve $\gamma$ in $\Sigma$, the curve $\gamma^{*}=f\circ\gamma$ in $\Sigma^{*}$ has the same length. 
 If in addition $f$ is smooth and bijective, then it is called an  \index{intrinsic isometry}\emph{intrinsic isometry}. 
 
+A simple example of length-preserving map can be obtained by wrapping a plane into a cylinder with the map $s\:\mathbb{R}^2 \to \mathbb{R}^3$ given by 
+\[s(x,y) = (\cos x ,\sin x, y).\]
+
 \begin{thm}{Exercise}\label{ex:K=0}
 Suppose the Gauss curvature of a smooth surface $\Sigma$ vanishes.
 Show that $\Sigma$ is \index{locally flat surface}\emph{locally flat};
@@ -674,10 +677,6 @@ that is, a neighborhood of any point in $\Sigma$ admits an intrinsic isometry to
 Suppose a smooth surface $\Sigma$ has a unit Gauss curvature at every point.
 Show that a neighborhood of any point in $\Sigma$ admits an intrinsic isometry to an open domain in the unit sphere.
 \end{thm}
-
-A simple example of intrinsic isometry can be obtained by wrapping a plane into a cylinder with the map $s\:\mathbb{R}^2 \to \mathbb{R}^3$ given by 
-\[s(x,y) = (\cos x ,\sin x, y).\]
-The following exercise describes a more interesting example:
 
 \begin{thm}{Exercise}\label{ex:deformation}
 Given $a>0$, show that there is a smooth unit speed curve 
@@ -700,7 +699,7 @@ Let $\Sigma_a$ be the surface of revolution of $\gamma$ around the $x$-axis.
 Show that the surface $\Sigma_a$ has a unit Gauss curvature at each point.
 
 Use \ref{ex:K=1} to conclude that any small round disc $\Delta$ in $\mathbb{S}^2$ admits a smooth length-preserving deformation;
-that is, there is a one-parameter family of surfaces with boundary $\Delta_t$, such that $\Delta_0=\Delta$ and $\Delta_t$ is not congruent to $\Delta_0$ for $t\ne0$.%
+that is, there is a one-parameter family $\Delta_t$ of surfaces with boundary, such that $\Delta_0=\Delta$ and $\Delta_t$ is not congruent to $\Delta_0$ for $t\ne0$.%
 \footnote{In fact any disc in $\mathbb{S}^2$ admits a smooth length preserving deformation.
 However, if the disc is larger than half-sphere, then the proof requires more;
 it can be obtained as a corollary of two deep results of Alexandr Alexandrov: the gluing theorem and the theorem on the existence of a convex surface with an abstractly given metric \cite[p. 44]{pogorelov}.
@@ -719,9 +718,9 @@ that is, the Gauss curvature of $\Sigma$ at $p$ is the same as the Gauss curvatu
 
 This theorem was proved by Carl Friedrich Gauss \cite{gauss} who justifiably called it \index{Remarkable theorem}\emph{remarkable} (\index{Theorema Egregium}\emph{Theorema Egregium}).
 The theorem is indeed remarkable because the Gauss curvature is defined as a product of principal curvatures which might be different at the points $p$ and $p^*$; however, according to the theorem, their products are the same.
-In other words, the Gaussian curvature is an {}\emph{intrinsic invariant}.
+In other words, the Gaussian curvature is an \textit{intrinsic invariant}.
 
-In fact the Gauss curvature of the surface at the given point can be found {}\emph{intrinsically},
+In fact the Gauss curvature of the surface at the given point can be found \textit{intrinsically},
 by measuring the lengths of curves in the surface.
 For example, the Gauss curvature $K(p)$ appears in the following formula for the circumference $c(r)$ of a geodesic circle centered at $p$ in a surface: 
 \[c(r)=2\cdot\pi\cdot r-\tfrac\pi3\cdot K(p)\cdot r^3+o(r^3).\]
@@ -729,7 +728,7 @@ For example, the Gauss curvature $K(p)$ appears in the following formula for the
 The theorem implies, for example, that there is no smooth length-preserving map that sends an open region in the unit sphere to the plane.%
 \footnote{Smoothness is essential --- there are plenty of non-smooth length-preserving maps from the sphere to the plane; see \cite{petrunin-yashinski} and the references therein.}
 This follows since the Gauss curvature of the plane is zero and the unit sphere has Gauss curvature~1. 
-In other words, there is no geographic map of any region on Earth without distortion.
+In other words, it is impossible to produce a geographic map of any region on Earth without distortion.
 
 \parit{Proof.}
 Choose a chart $(u,v)\mapsto s(u,v)$ on $\Sigma$, and set
