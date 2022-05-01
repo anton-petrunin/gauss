@@ -23,10 +23,10 @@ A formal computational proof will be given in Section~\ref{sec:gauss--bonnet:for
 Before going into the proofs, we suggest solving the following exercises using the Gauss--Bonnet formula.
 
 \begin{thm}{Exercise}\label{ex:1=geodesic-curvature}
- Assume $\gamma$ is a closed simple curve with constant geodesic curvature $1$ in a smooth closed surface $\Sigma$ with positive Gauss curvature.
- Show that 
- \[\length\gamma\le 2\cdot\pi;\]
-that is, the length of $\gamma$ cannot exceed the length of the unit circle in the plane.  
+Assume $\gamma$ is a closed simple curve with constant geodesic curvature $1$ in a smooth closed surface $\Sigma$ with positive Gauss curvature.
+Show that 
+ \[\length\gamma< 2\cdot\pi;\]
+that is, $\gamma$ is shorter than the unit circle in the plane.  
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:geodesic-half}
@@ -48,7 +48,7 @@ Conclude that any two closed geodesics on $\Sigma$ have a common point.
 \begin{thm}{Exercise}\label{ex:self-intersections}
 Let $\Sigma$ be a closed smooth surface with positive Gauss curvature. 
 Suppose $\gamma$ is a closed geodesic in $\Sigma$.
-Show that in a single coordinate chart the $\gamma$ cannot look like one of the curves on the following diagrams.
+Show that in a single coordinate chart $\gamma$ cannot look like one of the curves on the following diagrams.
 
 \begin{figure}[h]
 \begin{minipage}{.32\textwidth}
@@ -105,6 +105,7 @@ Suppose $\Sigma$ is a simply-connected open surface with nonpositive Gauss curva
 
 \begin{subthm}{ex:unique-geod:unique}
 Show that any two points in $\Sigma$ are connected by a unique geodesic.
+In particular, geodesics in $\Sigma$ do not have self-intersections. 
 \end{subthm}
 
 \begin{subthm}{ex:unique-geod:diffeomorphism}
@@ -325,7 +326,7 @@ that is, $\gamma_s$ has no self-intersections.
 \qeds
 
 \begin{wrapfigure}{r}{17 mm}
-\vskip-3mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-1575}
 \end{wrapfigure}

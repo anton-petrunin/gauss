@@ -1206,7 +1206,8 @@ Make a conclusion.
 \parbf{\ref{ex:principal-revolution}.}
 Use \ref{ex:line-of-curvature} and Meusnier's theorem (\ref{thm:meusnier}).
 
-\parbf{\ref{ex:catenoid-is-minimal}.} Use \ref{ex:principal-revolution}.
+\parbf{\ref{ex:catenoid-is-minimal}.}
+Use \ref{ex:principal-revolution:a},  \ref{ex:curvature-graph}, and \ref{thm:meusnier}.
 
 \parbf{\ref{ex:helicoid-is-minimal}.} Apply Meusnier's theorem (\ref{thm:meusnier}) to show that the coordinate curves $\alpha_v\:u\mapsto s(u,v)$ and $\beta_u\:v\mapsto s(u,v)$ are asymptotic; that is, they have vanishing normal curvature.
 
@@ -2184,179 +2185,29 @@ Sum it up, and apply the triangle inequality.
 \parit{Remark.} Note that modulo the comparison theorem, 
 the case of the Euclidean plane is just as hard.
 
-\parbf{\ref{ex:dist-to-bry}}; \ref{SHORT.ex:dist-to-bry:-}.
-Choose two points $x,z\in\Sigma$;
-let $y$ be the midpoint of $[x,z]$.
-Denote by $\bar x$ and $\bar z$ the points on $\delta$ that minimize the distances to $x$ and $z$, respectively;
-so we have
-$f(x)
-=\dist{x}{\bar x}\Sigma$,
-and $f(z)=\dist{z}{\bar z}\Sigma$.
+\parbf{\ref{ex:disc+}.} Consider a ball $B=\bar B[p,R]_\Sigma$.
+Given a point $x\in B$ choose a geodesic $[p,x]$ and denote by $\tilde x$ the point in $\T_p$ that lies on the distance $|p-x|_\Sigma$ from $p$ in the direction of $[p,x]$.
+The map $x\mapsto \tilde x$ send $B$ into the $R$-ball in $\T_p$;
+by \mbox{\ref{mang>angk}}, this map is distance-noncontracting.
+Whence the statement follows.
 
-Since $\Delta$ is convex, the midpoint of $[\bar x,\bar z]$, say $\bar y$, lies in $\Delta$.
-By \ref{ex:convex-dist}, we have 
-\begin{align*}
-f(y)&\le \dist{y}{\bar y}\Sigma
-\le
-\\
-&\le
-\tfrac12\cdot(\dist{x}{\bar x}\Sigma
-+
-\dist{z}{\bar z}\Sigma)
-=
-\\
-&=
-\tfrac12\cdot(f(x)+f(z)).
-\end{align*}
-Observe that this inequality implies the convexity of ~$f$.
+\parbf{\ref{ex:disc-}}.
+Let $p\in\Sigma$ be the center of $\Delta$. 
 
-\parit{\ref{SHORT.ex:dist-to-bry:+}.}
-Suppose $\gamma$ is a unit-speed geodesic in $\Delta$, and $\gamma(0)=p$. 
-Let $q$ be a point on $\delta$ that minimize the distance to~$p$.
-Denote by $\phi$ the angle between $\gamma$ and $[p,q]$ at~$p$.
-Note that it is sufficient to show that 
-\[f\circ\gamma(t)\le 
-\dist{p}{q}\Sigma+t\cdot\cos\phi\eqlbl{eq:dist<cosphi}\]
-for $t$ sufficiently close to~$0$.
+\parit{\ref{SHORT.ex:disc-:kg}.}
+Consider equilateral triange $[pxy]_\Sigma$ with $|p-x|_\Sigma=|p-y|_\Sigma=R$;
+set $\alpha=\measuredangle\hinge xpy$ and $\beta=\measuredangle\hinge ypx$.
+Denote by $\sigma$ the arc of $\partial \Delta$ from $x$ to $y$.
+Note that $[pxy]_\Sigma$ lies in region bounded by $[p,x]$, $[p,y]$, and $\sigma$.
+Apply Gauss--Bonnet formula to show that $\tgc\sigma>\pi-\alpha-\beta$.
+Use \mbox{\ref{mang<angk}} to find a lower bound on $\pi-\alpha-\beta$ in terms of $|x-y|_\Sigma$ and $R$.
+Apply it for $|x-y|_\Sigma\to0$, and make a conclusion.
 
-Chose small $t>0$, and set $x\z=\gamma(t)$.
-Consider a model triangle $[\tilde p\tilde q\tilde x]\z=\tilde\triangle(pqx)$.
-Let $\tilde\delta$ be the line thru $\tilde q$ perpendicular to $[\tilde p,\tilde q]$.
-Denote by $\tilde y$ the orthogonal projection of $\tilde x$ to $\tilde\delta$.
-By comparison, we have that 
-\begin{align*}
-\phi
-=\measuredangle\hinge qpx
-&\ge \modangle qpx
-\mathrel{=:}\tilde\phi,
-\\
-\psi\df
-\measuredangle\hinge pqx
-&\ge 
-\modangle pqx
-\mathrel{=:}\tilde \psi
-\end{align*}
+\parit{\ref{SHORT.ex:disc-:area}.}
+By \ref{mang<angk}, the $\exp_p\:\T_p\to\Sigma$ is distance-nonexpanding.
+Observe that it maps the $R$-ball in $\T_p$ centered at the origin onto $\Delta$.
+Whence the statement follows.
 
-Since $t=\dist{\tilde p}{\tilde x}{\mathbb{R}^2}$ is small, so is the distances $\dist{\tilde q}{\tilde y}{\mathbb{R}^2}$.
-Therefore, we can choose a point $y$ on $\delta$ such that $\dist{q}{y}\Sigma=\dist{\tilde q}{\tilde y}{\mathbb{R}^2}$.
-Moreover, if we choose in on the {}\emph{right side}, then $\tfrac\pi2-\psi \ge \measuredangle\hinge qxy$.
-By construction and comparison, we have 
-\begin{align*}
-\measuredangle\hinge {\tilde q}{\tilde x}{\tilde y}&=\tfrac\pi2-\tilde\psi
-\ge
-\tfrac\pi2-\psi
-\ge
-\measuredangle\hinge q x y
-\ge 
-\modangle q x y.
-\end{align*}
-Therefore, $\dist{x}{y}\Sigma\le \dist{\tilde x}{\tilde y}{\mathbb{R}}$.
-Since $\tilde\phi\le\phi$, we get that
-\begin{align*}
-f\circ\gamma(t)&\le \dist{x}{y}\Sigma\le 
-\dist{\tilde x}{\tilde y}{\mathbb{R}}=
-\\
-&=
-\dist{p}{q}\Sigma+t\cdot\cos\tilde\phi
-\le
-\\
-&\le
-\dist{p}{q}\Sigma+t\cdot\cos\phi.
-\end{align*}
-That is, we proved \ref{eq:dist<cosphi} for small $t>0$.
-The case $t<0$ can be done along the same lines. 
-
-\begin{Figure}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-1680}
-\vskip0mm
-\end{Figure}
-
-\parbf{\ref{ex:busemann}}; \ref{SHORT.ex:busemann:all}.
-Choose $x\in\Sigma$.
-By the triangle inequality, the function 
-\[t\mapsto\dist{\lambda(t)}{x}{}- t\]
-is nonincreasing in~$t$. 
-Also, by the triangle inequality, we have
-$\dist{\lambda(t)}{x}{\Sigma}- t\ge-\dist{\lambda(0)}{x}{}$;
-that is, for each $x$, the values $\dist{\lambda(t)}{x}{\Sigma}- t$ are bounded below.
-Thus the limit
-\[f(x)=\lim_{t\to\infty}\dist{\lambda(t)}{x}{\Sigma}- t\]
-is defined for any $x$.
-
-Observe that each function $x\mapsto \dist{\lambda(t)}{x}{\Sigma}- t$ is 1-Lipschitz.
-Therefore, its limit $x\mapsto f(x)$ is 1-Lipschitz as well.
-The second part of \ref{SHORT.ex:busemann:all} is evident, since for $s \geq t$, we have $| \gamma (s) - \gamma (t) |_{\Sigma} = s-t$.
-
-\parit{\ref{SHORT.ex:busemann-} $+$ \ref{SHORT.ex:busemann+}}.
-Choose a geodesic~$\alpha$.
-Given $t\ge 0$, consider the function 
-\[h_t(s)=\dist{\lambda(t)}{\alpha(s)}{\Sigma}^2-s^2.\]
-
-Observe that for any fixed $x\in\Sigma$, we have $\tfrac{\dist{\lambda(t)}{x}{}}t\to 1$ as $t\to\infty$.
-Therefore,
-\begin{align*}
-f\!\circ\alpha(s)
-&=\!
-\lim_{t\to\infty}\left(\frac{| \lambda (t) - \alpha (s) |_{\Sigma}^2 - s^2 }{t} -t\right)=
-\\
-&=
-\lim_{t\to\infty}\left(\frac{h_t(s)}{t} -t\right).
-\end{align*}
-According to \ref{ex:geod-convexity}, the function 
-$s\mapsto h_t(s)$ is convex or concave, assuming the conditions in \ref{SHORT.ex:busemann-} or \ref{SHORT.ex:busemann+}, respectively.
-Therefore, so is the function
-$s \mapsto \tfrac{h_t(s)}{t} -t$
-for every~$t$.
-Since pointwise limits of convex or concave functions are respectively convex or concave, \ref{SHORT.ex:busemann-} and \ref{SHORT.ex:busemann+} follow.
-
-\parbf{\ref{thm:splitting}.}
-Consider two Busemann functions $f_+$ and $f_-$ associated with two half-lines of
-$\lambda$; that is,
-\[
-f_\pm(x)
-=
-\lim_{t\to\infty}\dist{\lambda(\pm t)}{x}{\Sigma}- t.
-\]
-Use the triangle inequality to show that $f_+(x)\z+f_-(x)\ge 0$.
-Use the comparison theorem to show that $f_+(x)+f_-(x)\le 0$.
-Conclude that
-\[
-f_+(x)+f_-(x)= 0
-\eqlbl{eq:bus+-=0}
-\]
-for any $x\in \Sigma$.
-
-According to \ref{ex:busemann}, 
-both functions $f_\pm$ are concave, and $f_\pm\circ\lambda(t)=\mp t$ for any~$t$.
-By \ref{eq:bus+-=0} both functions $f_\pm$ are affine;
-that is, they are convex and concave at the same time.
-It follows that the differential of $f_\pm$ is defined at any point $x\in\Sigma$;
-that is, there is a linear function $\T_x\to\mathbb{R}$ that is defined by
-$\vec v\mapsto D_{\vec v}f_\pm$
-for any tangent vector $\vec v \in \T_x$.
-
-Denote by $\vec u$ the gradient vector field of $f_-$;
-that is, $\vec u$ is a tangent vector field such that for any tangent field $\vec v$ the following identity holds
-\[\langle\vec u,\vec v\rangle=D_{\vec v}(f_-).\]
-
-Show that, the surface $\Sigma$ can be subdivided into lines that run in the direction of $\vec u$.
-
-Use the comparison theorem to show that the distances between points on two lines in the direction of $\vec u$ behave the same way as the distances between parallel lines in the Euclidean plane; here is a precise formulation:
-
-\begin{clm}{}\label{clm:parallel}
-Let $\xi$ and $\zeta$ be two lines in $\Sigma$ that run in the direction of $\vec u$.
-Suppose $\xi$ and $\zeta$ are parametrized so that $f_-\circ \xi(t)=f_-\circ \zeta(t)=t$ for any $t$;
-further set $x_0=\xi(0)$, $z_0\z=\zeta(0)$, $x_1=\xi(s)$, $z_1=\zeta(t)$ for some $s,t$. 
-Then
-\[\dist{x_1}{z_1}\Sigma^2=\dist{x_0}{z_0}\Sigma^2+(s-t)^2.\]
-\end{clm}
-
-Use that $\Sigma$ is simply connected to show that 
-$L=\set{x\in\Sigma}{f_-(x)=0}$
-is a line.
-
-Choose an arc-length parametrization $v\z\mapsto\gamma(v)$ of $L$.
-Denote by $\lambda^v$ the line thru $\gamma(v)$ in the direction of $\vec u$ with the parametrization as above: that is, $f_-\circ\lambda^v(u)=u$ for any $u$ and~$v$.
-According to \ref{clm:parallel}, $(u,v)\mapsto \lambda^v(u)$ is an intrinsic isometry from the Euclidean plane to~$\Sigma$.
+\parbf{\ref{ex:moon-}.}
+Mimic the proof of \ref{thm:moon-orginal}.
+For the last statement, apply \ref{ex:disc-:area}.

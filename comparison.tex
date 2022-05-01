@@ -603,68 +603,34 @@ Show that the function
 is convex.
 \end{thm}
 
-\begin{thm}{Advanced exercise}\label{ex:dist-to-bry}
-Suppose a smooth curve $\delta$ bounds a convex disc $\Delta$ in an open smooth surface $\Sigma$;
-that is, for any two points $x,y\in\Delta$, any shortest path $[x,y]_\Sigma$ lies in $\Delta$.
+\begin{thm}{Exercise}\label{ex:disc+}
+Let $\Sigma$ be an open or closed smooth surface $\Sigma$ with nonnegative Gauss curvature.
+Show that area of any $R$-ball in the intrinsic metric of $\Sigma$ is at most $\pi\cdot R^2$.
 
-Denote by $f\:\Sigma\to\mathbb{R}$ the intrinsic distance function to $\delta$;
-that is, 
-\[f(x)=\inf_{y\in\delta}\{\,\dist{x}{y}\Sigma\,\}.\]
+\end{thm}
 
-\begin{subthm}{ex:dist-to-bry:-}
-Show that if $\Sigma$ is simply-connected and $K_\Sigma\le 0$, then the restriction of $f$ to the complement of $\Delta$ is convex;
-that is, for any geodesic $\gamma$ in $\Sigma\backslash\Delta$ the function $t\mapsto f\circ\gamma(t)$ is convex.
+\begin{thm}{Exercise}\label{ex:disc-}
+Let $\Delta$ be an $R$-ball in the intrinsic metric of an open simply connected smooth surface $\Sigma$  with nonpositive Gauss curvature.
+
+\begin{subthm}{ex:disc-:kg}
+Show that the boundary of $\Delta$ is a smooth curve with geodesic curvature at least $\tfrac1R$.
 \end{subthm}
 
-\begin{subthm}{ex:dist-to-bry:+}
-Show that if $K_\Sigma\ge 0$, then the restriction of $f$ to $\Delta$ is concave;
-that is, for any geodesic $\gamma$ in $\Delta$ the function $t\mapsto f\circ\gamma(t)$ is concave.
+\begin{subthm}{ex:disc-:area}
+Show that the area of $\Delta$ is at least $\pi\cdot R^2$.
 \end{subthm}
 
 \end{thm}
 
-A unit-speed geodesic $\lambda\:[0,\infty)\to \spc{X}$ is called a \index{half-line}\emph{half-line} if it is minimizing on each interval $[a,b]\subset [0,\infty)$.
-In the following exercise we introduce the so-called
-{}\emph{Busemann function};
-it describes the distance to an ideal point at infinity.
+The following exercise generalizes the Moon in a puddle theorem (\ref{thm:moon-orginal});
+it was suggested by Dmitri Burago.
 
-\begin{thm}{Advanced exercise}\label{ex:busemann}
-Suppose $\lambda\:[0,\infty)\to \Sigma$ is a half-line in a smooth surface~$\Sigma$.
+\begin{thm}{Advanced exercise}\label{ex:moon-}
+Let $\Delta$ be a disc in a smooth surface $\Sigma$ with nonpositive Gauss curvature.
+Assume $\Delta$ is bounded by a smooth curve $\gamma$ with geodesic curvature at most 1 by absolute value.
+Show that $\Delta$ contains a unit ball in the intrinsic metric of $\Sigma$;
+that is, there is a point $x\in \Delta$ such that if $|x-y|_\Sigma\le 1$ then $y\in\Delta$.
 
-\begin{subthm}{ex:busemann:all}
-Show that the function 
-\[f(x)\df\lim_{t\to\infty}\dist{\lambda(t)}{x}{\Sigma}- t\]
-is defined.
-Moreover, 
-$f$ is a $1$-Lipschitz function, and
-\[f\circ\lambda(t)+t=0\] 
-for any~$t$.
-The function $f$ is called \index{Busemann function}\emph{Busemann function} associated to $\lambda$.
-\end{subthm}
-
-\begin{subthm}{ex:busemann-}
-Show that if $\Sigma$ is an open simply-connected surface with nonpositive Gauss curvature, then $f$ is convex;
-that is, for any geodesic $\alpha$ the real-to-real function 
-$t\mapsto f\circ\alpha(t)$ is convex.
-\end{subthm}
-
-\begin{subthm}{ex:busemann+}
-Show that if $\Sigma$ is an open surface with nonnegative Gauss curvature, then $f$ is concave;
-that is, for any geodesic $\alpha$ the real-to-real function 
-$t\z\mapsto f\circ\alpha(t)$ is concave.
-\end{subthm}
-
+Conclude that the area of $\Delta$ is at least $\pi$.
 \end{thm}
 
-Let $\Sigma$ be a smooth surface.
-A unit-speed geodesic $\lambda\:\mathbb{R}\to\Sigma$ is called a \index{line}\emph{line} if it is length-minimizing on each interval $[a,b]\subset \mathbb{R}$.
-
-\begin{thm}{Very advanced exercise}\label{thm:splitting}
-Let $\Sigma$ be an open smooth simply-connected surface with nonnegative Gauss curvature
-and $\lambda$ be a line in~$\Sigma$. 
-Show that $\Sigma$ admits an intrinsic isometry to 
-the Euclidean plane.
-\end{thm}
-
-The last statement is a partial case of the so-called \emph{line splitting theorem}. 
-It was proved by Stefan Cohn-Vossen \cite[Satz 5 in][]{convossen} and generalized by Victor Toponogov \cite{toponogov-globalization+splitting}.

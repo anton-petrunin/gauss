@@ -27,7 +27,7 @@ We learned this problem from Joel Fine, who attributed it to Frederic Bourgeois 
 А cowboy stands at the bottom of a frictionless ice-mountain formed by a cone with a circular base with  angle  of inclination~$\theta$.
 He throws up his lasso which slips neatly over the tip of the cone, pulls it tight and tries to climb.
 
-What is the critical angle $\theta$ at which the cowboy can not climb the ice-mountain?
+What is the critical angle $\theta$ at which the cowboy cannot climb the ice-mountain?
 \end{thm}
 
 \section{Definition}
@@ -36,8 +36,6 @@ Let $p$ and $q$ be two points on a surface~$\Sigma$.
 Recall that $\dist{p}{q}\Sigma$ denotes the induced length distance from $p$ to~$q$;
 that is, the greatest lower bound of the lengths of paths in $\Sigma$ from $p$ to~$q$.
 
-Note that if $\Sigma$ is smooth, then any two points in $\Sigma$ can be joined by a piecewise smooth path.
-Since any such path is rectifiable, the value $\dist{p}{q}\Sigma$ is finite for any pair $p,q\in\Sigma$.
 
 A path $\gamma$ from $p$ to $q$ in $\Sigma$ that minimizes the length is called a \index{shortest path}\emph{shortest path} from $p$ to~$q$.
 The image of a shortest path between $p$ and $q$ in $\Sigma$ is usually denoted by $[p,q]$ or $[p,q]_\Sigma$.\index{10aac@$[p,q]$, $[p,q]_\Sigma$}
@@ -76,12 +74,15 @@ Since the origin does not lie in $\Sigma$, there is no shortest from $p$ to $q$ 
 
 
 \begin{thm}{Proposition}\label{prop:shortest-paths-exist}
-Any two points in a proper smooth surface can be joined by a shortest path. 
+Any two points in a proper smooth surface (possibly nonempty boundary) can be joined by a shortest path. 
 \end{thm}
 
 \parit{Proof.}
 Choose two points $p$ and $q$ in a proper smooth surface~$\Sigma$.
 Set $\ell=\dist{p}{q}\Sigma$.
+
+Since $\Sigma$ is smooth, the points $p$ and $q$ can be joined by a piecewise smooth path in $\Sigma$.
+Since any such path is rectifiable, $\ell$ has to be finite.
 
 By the definition of induced length-metric (Section~\ref{sec:Length metric}),
 there is a sequence of paths $\gamma_n$ from $p$ to $q$ in $\Sigma$ such that
