@@ -2195,13 +2195,16 @@ Whence the statement follows.
 Let $p\in\Sigma$ be the center of $\Delta$. 
 
 \parit{\ref{SHORT.ex:disc-:kg}.}
-Consider equilateral triange $[pxy]_\Sigma$ with $|p-x|_\Sigma=|p-y|_\Sigma=R$;
-set $\alpha=\measuredangle\hinge xpy$ and $\beta=\measuredangle\hinge ypx$.
+Consider geodesic triangle $[pxy]_\Sigma$ with $|p-x|_\Sigma=|p-y|_\Sigma=R$;
+set $\alpha=\measuredangle\hinge xpy$, 
+$\beta=\measuredangle\hinge ypx$ and $\ell=|x-y|_\Sigma$.
+Use \mbox{\ref{mang<angk}} to show that 
+\[\pi-\alpha-\beta>\tfrac\ell R+o(\ell).\]
+
 Denote by $\sigma$ the arc of $\partial \Delta$ from $x$ to $y$.
-Note that $[pxy]_\Sigma$ lies in region bounded by $[p,x]$, $[p,y]$, and $\sigma$.
+Note that $[x,y]_\Sigma$ lies in region bounded by $[p,x]$, $[p,y]$, and $\sigma$.
 Apply Gauss--Bonnet formula to show that $\tgc\sigma>\pi-\alpha-\beta$.
-Use \mbox{\ref{mang<angk}} to find a lower bound on $\pi-\alpha-\beta$ in terms of $|x-y|_\Sigma$ and $R$.
-Apply it for $|x-y|_\Sigma\to0$, and make a conclusion.
+Pass to a limit as $\ell\to0$, and make a conclusion.
 
 \parit{\ref{SHORT.ex:disc-:area}.}
 By \ref{mang<angk}, the $\exp_p\:\T_p\to\Sigma$ is distance-nonexpanding.
@@ -2209,5 +2212,5 @@ Observe that it maps the $R$-ball in $\T_p$ centered at the origin onto $\Delta$
 Whence the statement follows.
 
 \parbf{\ref{ex:moon-}.}
-Mimic the proof of \ref{thm:moon-orginal}.
+Mimic the proof of \ref{thm:moon-orginal} using \ref{ex:disc-:kg}.
 For the last statement, apply \ref{ex:disc-:area}.
