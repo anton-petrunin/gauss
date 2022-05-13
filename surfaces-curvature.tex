@@ -1,7 +1,9 @@
 \chapter{Curvatures}
 \label{chap:surface-curvature}
 
-In the previous chapter, we learned that the tangent plane $\T_p$ to any surface $\Sigma$ has first-order contact with it at $p$. This means that up to first-order, all surfaces locally look the same. This is not the case for second-order approximations, which are determined by the {}\emph{principal curvatures} of the surface.
+In the previous chapter, we learned that the tangent plane $\T_p$ to any surface $\Sigma$ has first-order contact with it at $p$.
+This means that up to first order, all surfaces locally look the same.
+This is not the case for second-order approximations, which are determined by the {}\emph{principal curvatures} of the surface.
 
 \section{Tangent-normal coordinates} \label{sec:lmn}
 \index{tangent-normal coordinates}
@@ -406,7 +408,7 @@ $\tan(s),\mu(s),\Norm(s)$ is an oriented orthonormal basis;
 it is called the \index{Darboux frame}\emph{Darboux frame} of $\gamma$ in~$\Sigma$.
 
 Since $\T_{\gamma (s)}\z\perp\Norm(s)$, the vector $\mu(s)$ is tangent to $\Sigma$ at $\gamma(s)$.
-In fact $\mu(s)$ is a counterclockwise rotation of $\tan(s)$ by the angle $\tfrac\pi2$ in the tangent plane $\T_{\gamma(s)}$.
+In fact, $\mu(s)$ is a counterclockwise rotation of $\tan(s)$ by the angle $\tfrac\pi2$ in the tangent plane $\T_{\gamma(s)}$.
 This vector can also be defined as the vector product $\mu(s)\z\df\Norm(s)\times \tan(s)$.
 
 Since $\gamma$ is unit-speed, we have that $\gamma''\perp \gamma'$ (see \ref{prop:a'-pertp-a''}).
@@ -435,7 +437,7 @@ that
 \\
 &=k_n(s)+\langle \tan(s),D_{\tan(s)}\Norm\rangle.
 \end{align*}
-Applying the definition of shape operator,
+Applying the definition of the shape operator,
 we get the following:
 
 \begin{thm}{Proposition}\label{prop:normal-shape}
@@ -516,7 +518,7 @@ The theorem above, as well as the statement in the following exercise, were prov
 Let $\Sigma$ be a smooth surface, $p\in\Sigma$, and ${\vec v}\in \T_p\Sigma$ a unit vector.
 Assume $k_{\vec v}(p)\ne 0$; that is, the normal curvature of $\Sigma$ at $p$ in the direction of ${\vec v}$ does not vanish.
 
-Show that the osculating circles at $p$ of smooth regular curves in $\Sigma$ that run in the direction ${\vec v}$ sweep out a sphere $S$ with center $p+\tfrac1{k_{\vec v}}\cdot\Norm$ and radius $r=\tfrac1{|k_{\vec v}|}$.
+Show that the osculating circles at $p$ of smooth regular curves in $\Sigma$ that run in the direction ${\vec v}$ sweep out a sphere $S$ with center at $p+\tfrac1{k_{\vec v}}\cdot\Norm$ and radius $r=\tfrac1{|k_{\vec v}|}$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:principal-revolution}
@@ -599,15 +601,14 @@ Is it true that $V$ contains a ball of radius~1?
 Show that Question \ref{quest:lagunov} has an affirmative answer if $V$ is a body of revolution.
 \end{thm}
 
-According to the, the answer is ``yes'' for surfaces of revolution.
 Later (see \ref{ex:convex-lagunov})
 we will show that the answer is ``yes'' for convex surfaces.
 Now we are going to show by an example that the answer is ``no'' in the general case;
-this example was constructed by Vladimir Lagunov \cite{lagunov-1961}.
+it was constructed by Vladimir Lagunov \cite{lagunov-1961}.
 
 \parit{Construction.}
 Let us start with a body of revolution $V_1$ whose cross-section is shown on the diagram below.
-The boundary curve of the cross-section consists of 6 long horizontal line segments included into 3 closed simple smooth curves.
+The boundary curve of the cross-section consists of 6 long horizontal line segments included in 3 closed simple smooth curves.
 (To make the curves smooth, one has to use cutoffs and mollifiers from Section~\ref{sec:analysis}.)
 The boundary of $V_1$ has 3 components, each of which is a smooth sphere.
 
@@ -679,7 +680,7 @@ This way we get a sphere with two handles.
 Modify Lagunov's construction to make the boundary surface a sphere with 4 handles.
 \end{thm}
 
-Recall that in the body in Lagunov's example contains a ball of radius $r_2=\tfrac2{\sqrt{3}}-1$.
+Recall that Lagunov's example contains a ball of radius $r_2=\tfrac2{\sqrt{3}}-1$.
 It turns out that this radius is optimal.
 Moreover, 
 \textit{suppose a connected body $V\subset \mathbb{R}^3$ is bounded by a finite number of closed smooth surfaces with principal curvatures bounded by~1.
@@ -688,12 +689,12 @@ Then the boundary of $V$ has two diffeomorphic connected components.}
 Such $V$ could be the region squeezed between two close surfaces;
 for example, a region between two concentric spheres.
 
-For bodies bounded by sphere, there is a better bound $r_3=\sqrt{\tfrac32}-1$;
+For bodies bounded by a sphere, there is a better bound $r_3=\sqrt{\tfrac32}-1$;
 it is the radius of the smallest sphere tangent to four unit spheres that are tangent to each other.
 Note that $r_3>r_2$.
 \textit{If a body $V\subset \mathbb{R}^3$ is bounded by a smooth sphere with principal curvatures bounded  by~1.
 Then $V$ contains a ball of radius~$r_3$.
 Moreover, this bound is sharp; that is, for every $\epsilon>0$, there are examples of such $V$ not containing a ball of radius $r_3+\epsilon$.}
 
-These results due to Vladimir Lagunov and Abram Fet \cite{lagunov-1960, lagunov-fet-1963, lagunov-fet-1965}.
+These results are due to Vladimir Lagunov and Abram Fet \cite{lagunov-1960, lagunov-fet-1963, lagunov-fet-1965}.
 

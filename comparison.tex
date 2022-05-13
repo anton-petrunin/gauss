@@ -10,11 +10,11 @@ This chapter is based on the introductory material in the book by Stephanie Alex
 Recall that a shortest path between points $x$ and $y$ in a surface $\Sigma$ is denoted by $[x,y]$ or $[x,y]_\Sigma$, and
 $\dist{x}{y}\Sigma$ denotes the \index{intrinsic distance}\emph{intrinsic distance} from $x$ to $y$ in~$\Sigma$.
 
-A \index{geodesic!triangle}\emph{geodesic triangle} in a surface $\Sigma$ is defined as a triple of points $x,y,z\z\in \Sigma$ with a choice of minimizing geodesics $[x,y]_\Sigma$, $[y,z]_\Sigma$ and $[z,x]_\Sigma$.
+A \index{geodesic!triangle}\emph{geodesic triangle} in a surface $\Sigma$ is defined as a triple of points $x,y,z\z\in \Sigma$ with a choice of minimizing geodesics $[x,y]_\Sigma$, $[y,z]_\Sigma$, and $[z,x]_\Sigma$.
 The points $x,y,z$ are called the {}\emph{vertices} of the triangle,
 the minimizing geodesics $[x,y]$, $[y,z]$, and $[z,x]$ are called its {}\emph{sides};
 the triangle itself is denoted by $[xyz]$, or $[xyz]_\Sigma$;
-the latter notation is used if we need to emphasize that the triangle lies in the surface~$\Sigma$.\index{10aad@$[xyz]$, $[xyz]_\Sigma$}
+the latter notation is used if we need to emphasize that the triangle lies on the surface~$\Sigma$.\index{10aad@$[xyz]$, $[xyz]_\Sigma$}
 
 A triangle $[\tilde x\tilde y\tilde z]$ in the plane $\mathbb{R}^2$ is called a \index{model!triangle}\emph{model triangle} of the triangle $[xyz]$
 if its corresponding sides are equal;
@@ -80,14 +80,14 @@ for any geodesic triangle $[xyz]$.
 \end{subthm}
 
 \begin{subthm}{thm:comp:toponogov}
-If $\Sigma$ is an closed (or open) simply-connected smooth surface with nonnegative Gauss curvature, then 
+If $\Sigma$ is a closed (or open) simply-connected smooth surface with nonnegative Gauss curvature, then 
  \[\measuredangle\hinge {x}{y}{z}\ge\modangle xyz\]
 for any geodesic triangle $[xyz]$.
 \end{subthm}
 
 \end{thm}
 
-The proofs of parts \ref{SHORT.thm:comp:cat} and \ref{SHORT.thm:comp:toponogov} will be given in section~\ref{sec:nonpos-comp} and ~\ref{sec:nonneg-comp} respectively.
+The proofs of parts \ref{SHORT.thm:comp:cat} and \ref{SHORT.thm:comp:toponogov} will be given in sections~\ref{sec:nonpos-comp} and~\ref{sec:nonneg-comp} respectively.
 
 \begin{thm}{Exercise}\label{ex:thm:comp:cat:nsc}
 Show that the conclusion in \ref{thm:comp:cat} does not hold the hyperboloid
@@ -97,7 +97,7 @@ In particular, \ref{thm:comp:cat} does not hold without assuming that $\Sigma$ i
 
 Let us discuss the relationship between the Gauss--Bonnet formula and the comparison theorems.
 Suppose a disc $\Delta$ is bounded by a geodesic triangle $[xyz]$ with internal angles $\alpha$, $\beta$, and~$\gamma$.
-Then Gauss--Bonnet implies that 
+Then the Gauss--Bonnet implies that 
 \[\alpha+\beta+\gamma-\pi=\iint_\Delta K;\]
 in particular, both sides of the equation have the same sign.
 It follows that
@@ -248,7 +248,7 @@ Applying the key lemma (\ref{key-lem:globalization}) a few times we get that the
 \qeds
 
 \begin{thm}{Key lemma}\label{key-lem:globalization} 
-Let $\Sigma$ be a open or closed smooth surface.
+Let $\Sigma$ be an open or closed smooth surface.
 Assume the comparison
 \[\measuredangle\hinge x y z
 \ge\modangle x y z\eqlbl{eq:key-lem:globalization}\]
@@ -476,7 +476,7 @@ The statement follows since
 
 \section{Reformulations}
 
-In this section we formulate conditions equivalent to the conclusion of the comparison theorem (\ref{thm:comp}).
+In this section, we formulate conditions equivalent to the conclusion of the comparison theorem (\ref{thm:comp}).
 
 For any triangle $[xyz]$ in a surface $\Sigma$, and its model triangle $[\tilde x \tilde y \tilde z]$, there is a natural map $p\mapsto \tilde p$ that isometrically sends the geodesics $[x,y]$, $[y,z]$, $[z,x]$ to the line segments $[\tilde x,\tilde y ]$, $[\tilde y , \tilde z]$, $[ \tilde z , \tilde x ]$, respectively.
 The triangle $[xyz]$ is called \index{fat triangle}\emph{fat} (\index{thin triangle}\emph{thin})

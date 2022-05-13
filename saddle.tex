@@ -23,13 +23,13 @@ If the normal vectors are opposite, we say that $\Sigma_1$ and $\Sigma_2$ are \i
 in this case, reversing the orientation of one of the surfaces makes them cooriented.
 
 If $\Sigma_2$ locally supports $\Sigma_1$, and they are cooriented at $p$,
-then we can say that $\Sigma_1$ supports $\Sigma_2$ \index{support}\emph{from inside} or \index{support}\emph{from outside},
+then we can say that $\Sigma_1$ supports $\Sigma_2$ \index{support}\emph{from the inside} or \index{support}\emph{from the outside},
 assuming that the normal vector points {}\emph{inside} the domain bounded by the surface $\Sigma_2$ in~$U$.
-Using the above notations, $\Sigma_1$ locally supports $\Sigma_2$ from inside (from outside)  if $f_1(x,y)\ge f_2(x,y)$ (respectively $f_1(x,y)\le f_2(x,y)$) for $(x,y)$ in a sufficiently small neighborhood of the origin.
+Using the above notations, $\Sigma_1$ locally supports $\Sigma_2$ from the inside (from the outside)  if $f_1(x,y)\ge f_2(x,y)$ (respectively $f_1(x,y)\le f_2(x,y)$) for $(x,y)$ in a sufficiently small neighborhood of the origin.
 
 \begin{thm}{Proposition}\label{prop:surf-support}
 Let $\Sigma_1$ and $\Sigma_2$ be oriented surfaces.
-Assume $\Sigma_1$ locally supports $\Sigma_2$ from inside at the point $p$ (equivalently $\Sigma_2$ locally supports $\Sigma_1$ from outside).
+Assume $\Sigma_1$ locally supports $\Sigma_2$ from the inside at the point $p$ (equivalently $\Sigma_2$ locally supports $\Sigma_1$ from the outside).
 Then 
 \[k_1(p)_{\Sigma_1}\ge k_1(p)_{\Sigma_2}\quad\text{and}\quad k_2(p)_{\Sigma_1}\z\ge k_2(p)_{\Sigma_2}.\]
 \end{thm}
@@ -95,7 +95,7 @@ k_2(p)_{\Sigma_2}&=k_{\vec w}(p)_{\Sigma_2}\le
 
 \begin{thm}{Corollary}\label{cor:surf-support}
 Let $\Sigma_1$ and $\Sigma_2$ be oriented surfaces.
-Assume $\Sigma_1$ locally supports $\Sigma_2$ from inside at the point~$p$.
+Assume $\Sigma_1$ locally supports $\Sigma_2$ from the inside at the point~$p$.
 Then:
 
 \begin{subthm}{cor:surf-support:mean}$H(p)_{\Sigma_1}\ge H(p)_{\Sigma_2}$;
@@ -160,7 +160,7 @@ Let $z=f(x,y)$ be the local description of a smooth surface $\Sigma$ in tangent-
 Assume both principal curvatures of $\Sigma$ are positive at~$p$.
 Then the function $f$ is strictly convex in a neighborhood of the origin and has a local minimum at the origin.
 
-In particular, the tangent plane $\T_p$ locally supports $\Sigma$ from outside at~$p$.
+In particular, the tangent plane $\T_p$ locally supports $\Sigma$ from the outside at~$p$.
 \end{thm}
 
 \parit{Proof.}
@@ -187,15 +187,15 @@ Suppose $\Sigma$ is an open or closed smooth surface with positive Gauss curvatu
 Then $\Sigma$ bounds a strictly convex region.
 \end{thm}
 
-In fact the theorem holds for surfaces with possible self-intersections. 
+In fact, the theorem holds for surfaces with possible self-intersections. 
 This is the so-called {}\emph{Hadamard theorem};
-it was proved by James Stoker \cite{stoker} and attributed it to Jacques Hadamard who proved a closely relevant statement \cite[item 23]{hadamard}.
+it was proved by James Stoker \cite{stoker}, but attributed to Jacques Hadamard who proved a closely relevant statement \cite[item 23]{hadamard}.
 
 Note that in the proof we have to use that the surface is a connected set;
 otherwise, a pair of disjoint spheres would give a counterexample.
 It is true that \textit{any closed smooth surface with nonnegative Gauss curvature bounds a convex region}, but the proof requires much more work.
 
-From the next proof one can also extract the following statement: \textit{any closed connected locally convex region in the Euclidean space is convex}.
+From the next proof, one can also extract the following statement: \textit{any closed connected locally convex region in the Euclidean space is convex}.
 
 \parit{Proof.}
 Since the Gauss curvature is positive, we can choose a unit normal field $\Norm$ on $\Sigma$ so that the principal curvatures are positive at any point.
@@ -461,7 +461,7 @@ Consider the smallest spherical dome $\Sigma_0$ with boundary $\sigma$ that surr
 
 Note that $\Sigma_0$ supports $\Sigma$ at some point~$q$.
 Without loss of generality, we may assume that $\Sigma_0$ and $\Sigma$ are cooriented at $q$, and $\Sigma_0$ has positive principal curvatures.
-In this case, $\Sigma_0$ supports $\Delta$ from outside.
+In this case, $\Sigma_0$ supports $\Delta$ from the outside.
 By \ref{cor:surf-support}, we have $K(q)_\Sigma\z\ge K(q)_{\Sigma_0}>0$, a contradiction.
 \qeds
 
@@ -479,8 +479,9 @@ Show that if $\Delta$ is a disc, then $\length(\partial\Delta)\ge 2\cdot\pi$.
 Show that the statement does not hold without assuming that $\Delta$ is a disc.
 \end{thm}
 
-\parit{Remark.} In fact $\area \Delta\ge \pi$;
-that is, the unit plane disc has minimal possible area.
+\parit{Remark.}
+In fact, $\area \Delta\ge \pi$;
+that is, the unit plane disc has the minimal possible area.
 The proof of this statement can be obtained by applying the so-called \index{coarea formula}\emph{coarea formula} together with the inequality in the exercise. 
 
 \begin{thm}{Exercise}\label{ex:circular-cone-saddle}
@@ -585,14 +586,13 @@ Show that the surface $\Sigma$ is a graph.
 The following lemma gives an analogous to \ref{ex:length-of-bry}.
 
 \begin{thm}{Lemma}\label{lem:region}
-There is no proper strictly saddle smooth surface that has its boundary line in a plane $\Pi$ 
-and lies at a bounded distance from a line contained in $\Pi$.
+There is no proper strictly saddle smooth surface that has its boundary line in a plane $\Pi$ and lies at a bounded distance from a line contained in $\Pi$.
 \end{thm}
 
 \parit{Proof.}
 Note that by \ref{ex:saddle-linear}, the statement can be reformulated in the following way:
 \textit{There is no proper strictly saddle smooth surface 
-with  boundary line in the $(x,y)$-plane
+with its boundary line in the $(x,y)$-plane
 and contained in a region of the form:}
 \[R=\set{(x,y,z)\in\mathbb{R}^3}{0\le z\le r, 0\le y\le r}.\]
 Let us prove this statement.
@@ -619,7 +619,7 @@ we can assume that $\Delta$ is a compact surface with its boundary line in $\Pi$
 Since the plane $\Pi$ is convex, this statement contradicts \ref{lem:convex-saddle}.
 
 Summarizing, $\Theta$ is an open convex set of $H$ that contains all points above $z=r$.
-By convexity, together with any point $w$, the set $\Theta$ contains all points on the half-lines that start as $w$ and {}\emph{point up}; that is, in directions with positive $z$-coordinate. 
+By convexity, together with any point $w$, the set $\Theta$ contains all points on the half-lines that start as $w$ and \textit{point up}; that is, in directions with positive $z$-coordinate. 
 In other words, with any point $w$,
 the set $\Theta$ contains all points with larger $z$-coordinates.
 \begin{figure}[!ht]
@@ -666,9 +666,9 @@ This set lies at a bounded distance from the line of intersection of $\T_p$ with
 
 Let us move $\T_p$ slightly upward and cut from $\Sigma^+_0$ the piece above the obtained plane, say $\bar\Sigma^+_0$.
 By the general position argument (\ref{lem:reg-section}),
-we can assume that $\bar\Sigma^+_0$ is a surface with smooth boundary line;
+we can assume that $\bar\Sigma^+_0$ is a surface with a smooth boundary line;
 by construction the boundary line lies in the plane.
-Note that the obtained surface $\bar\Sigma^+_0$ still lies on a bounded distance to a line.
+Note that the obtained surface $\bar\Sigma^+_0$ still lies at a bounded distance to a line.
 The latter is impossible by \ref{lem:region}.
 \qeds
 
@@ -676,7 +676,7 @@ The latter is impossible by \ref{lem:region}.
 
 Note that Bernstein's theorem and the lemma in its proof do not hold for nonstrictly saddle surfaces;
 counterexamples can be found among infinite cylinders over smooth regular curves.
-In fact it can be shown that these are the only counterexamples;
+In fact, it can be shown that these are the only counterexamples;
 a proof is based on the same idea, but it is more technical.
 
 By \ref{prop:hat}, saddle surfaces can be defined as smooth surfaces without hats.

@@ -1,7 +1,7 @@
 \chapter{Supporting curves}
 \label{chap:supporting-curves}
 
-When two plane curves are tangent and do not cross, it is possible to control the signed curvature of one of them in terms of the signed curvature of other one.
+When two plane curves are tangent and do not cross, it is possible to control the signed curvature of one of them in terms of the signed curvature of the other.
 In this chapter, we show how to use this idea to control the global behavior of plane curves.
 
 \section{Cooriented tangent curves}
@@ -18,7 +18,7 @@ then the velocity vectors $\gamma_1'(t_1)$ and $\gamma_2'(t_2)$ are parallel.
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-85}
-\vskip0mm
+\vskip-0mm
 \end{figure}
 If $\gamma_1'(t_1)$ and $\gamma_2'(t_2)$ have the same direction, we say that the curves are \index{cooriented!curves}\emph{cooriented},
 if their directions are opposite, the curves are called \index{controriented!curves}\emph{counteroriented}.
@@ -34,7 +34,7 @@ Suppose that there is $\epsilon>0$ such that the arc $\gamma_2|_{[t_2-\epsilon, 
 then we say that $\gamma_1$ \index{support}\emph{locally supports} $\gamma_2$ at the time parameters $t_1$ and $t_2$.
 
 \begin{wrapfigure}[8]{o}{43 mm}
-\vskip-3mm
+\vskip-4mm
 \centering
 \includegraphics{mppics/pic-86}
 \vskip0mm
@@ -47,10 +47,10 @@ Then we say that $\gamma_1$ \index{support}\emph{globally supports} $\gamma_2$ a
 if $\gamma_2$ runs in one of these closed regions, and 
 $p$ lies on~$\gamma_1$.
 
-Further, suppose $\gamma_2$ is closed simple plane curve.
+Further, suppose $\gamma_2$ is a closed simple plane curve.
 By Jordan's theorem (\ref{thm:jordan}), $\gamma_2$ cuts from the plane two regions, one is bounded and the other is unbounded.
 We say that a point lies {}\emph{inside} (respectively, {}\emph{outside}) $\gamma_2$ if it lies in the bounded region (respectively, unbounded) region.
-In this case, we say that $\gamma_1$ supports $\gamma_2$ \index{support}\emph{from inside} (\index{support}\emph{from outside}) if $\gamma_1$ supports $\gamma_2$ and lies in the region inside $\gamma_2$ (respectively outside $\gamma_2$). 
+In this case, we say that $\gamma_1$ supports $\gamma_2$ \index{support}\emph{from the inside} (\index{support}\emph{from the outside}) if $\gamma_1$ supports $\gamma_2$ and lies in the region inside $\gamma_2$ (respectively outside $\gamma_2$). 
 
 Note that if $\gamma_1$ and $\gamma_2$ share a point $p=\gamma_1(t_1)=\gamma_2(t_2)$ and are not tangent at $t_1$ and $t_2$, then at time $t_2$ the curve $\gamma_2$ crosses $\gamma_1$  moving from one of its sides to the other.
 It follows that $\gamma_1$ cannot locally support $\gamma_2$ at the time parameters $t_1$ and $t_2$.
@@ -195,7 +195,7 @@ so that the points $p, x, y, q$ appear in that order.
 We can assume that $p$ and $q$ lie sufficiently far from $x$ and $y$, so the half-disc with diameter $pq$ contains~$\gamma$.
 
 \begin{wrapfigure}[6]{o}{50 mm}
-\vskip-3mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-24}
 \end{wrapfigure}
@@ -285,10 +285,10 @@ For convex curves, this result was known earlier \cite[\S 24]{blaschke}.
 
 
 \begin{wrapfigure}{r}{18 mm}
-\vskip-6mm
+\vskip-8mm
 \centering
 \includegraphics{mppics/pic-67}
-\vskip0mm
+\vskip-2mm
 \end{wrapfigure}
 
 \begin{thm}{Theorem}\label{thm:moon-orginal}
@@ -335,7 +335,7 @@ assume that the osculating circle at each point $p\in \gamma$ does not lie in~$F
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-32}
-\vskip0mm
+\vskip-2mm
 \end{figure}
 
 Given a point $p\in\gamma$ let us consider the maximal circle $\sigma$ that lies completely in $F$ and tangent to $\gamma$ at~$p$.
@@ -361,11 +361,11 @@ Denote by $\gamma_1$ an arc of $\gamma$ from $p_1$ to a first point $q_1$ on $\s
 Denote by $\hat\sigma_1$ and $\check\sigma_1$ two arcs of $\sigma_1$ from $p_1$ to $q_1$ such that the cyclic concatenation of $\hat\sigma_1$ and $\gamma_1$ surrounds~$\check\sigma_1$. 
 
 \begin{wrapfigure}{r}{32 mm}
-\vskip-2mm
+\vskip-8mm
 \centering
 \includegraphics{mppics/pic-64}
 \caption*{Two ovals pretend to be circles.}
-\vskip0mm
+\vskip-2mm
 \end{wrapfigure}
 
 Let $p_2$ be the midpoint of $\gamma_1$.
@@ -375,7 +375,6 @@ Note that $\sigma_2$ cannot intersect $\hat\sigma_1$.
 Otherwise, if $\sigma_2$ intersects $\hat\sigma_1$ at some point $s$, then $\sigma_2$ has to have two more common points with $\check\sigma_1$, say $x$ and $y$ --- one for each arc of $\sigma_2$ from $p_2$ to~$s$.
 Therefore, $\sigma_1\z=\sigma_2$ since these two circles have three common points: $s$, $x$, and~$y$. 
 On the other hand, by construction, $p_2\in \sigma_2$ and $p_2\notin \sigma_1$ --- a contradiction.
-
 
 Recall that $\sigma_2$ has to touch $\gamma$ at another point.
 From above, it follows that $\sigma_2$ can only touch $\gamma_1$. 
@@ -433,12 +432,12 @@ the second curve has exactly four vertices and no self-intersections.
 The four-vertex theorem was first proved by Syamadas Mukhopadhyaya \cite{mukhopadhyaya} for convex curves.
 Many proofs and generalizations are known.
 One of our favorite proofs was given by Robert Osserman \cite{osserman}.
-Our proof of the following stronger statement based on the key lemma in the previous section.
+Our proof of the following stronger statement is based on the key lemma in the previous section.
 For more on the subject, see \cite{petrunin-zamora:moon} and the references therein.
 
 \begin{thm}{Theorem}\label{thm:4-vert-supporting}
 Any smooth regular simple closed plane curve is globally supported by its osculating circle at least at 4 distinct points;
-two from inside and two from outside.
+two from the inside and two from the outside.
 \end{thm}
 
 {
@@ -465,22 +464,20 @@ Therefore $\sigma$ does not support $\gamma$ locally at~$p$.
 
 
 \parit{Proof of \ref{thm:4-vert-supporting}.}
-According to the key lemma (\ref{thm:moon}), there is a point $p\in\gamma$ such that its osculating circle supports $\gamma$ from inside.
+According to the key lemma (\ref{thm:moon}), there is a point $p\in\gamma$ such that its osculating circle supports $\gamma$ from the inside.
 The curve $\gamma$ can be considered as a loop with the base at~$p$.
 Therefore, the key lemma implies the existence of another point $q\in\gamma$ with the same property.
 
-It shows the existence of two osculating circles that support $\gamma$ from inside;
-it remains to show the existence of two osculating circles that support $\gamma$ from outside.
+It shows the existence of two osculating circles that support $\gamma$ from the inside;
+it remains to show the existence of two osculating circles that support $\gamma$ from the outside.
 
-In order to get the osculating circles supporting $\gamma$ from outside, one can repeat the proof of the key lemma taking instead of incircle the circline of maximal signed curvature that supports the curve from outside, assuming that $\gamma$ is oriented so that the region on the left from it is bounded.
+In order to get the osculating circles supporting $\gamma$ from the outside, one can repeat the proof of the key lemma taking instead of incircle the circline of maximal signed curvature that supports the curve from the outside, assuming that $\gamma$ is oriented so that the region on the left from it is bounded.
 
-(Alternatively, if one applies to $\gamma$ an inversion with respect to a circle whose center lies inside~$\gamma$, then the obtained curve $\gamma_1$ also has  two osculating circles that support $\gamma_1$ from inside.
+(Alternatively, if one applies to $\gamma$ an inversion with respect to a circle whose center lies inside~$\gamma$, then the obtained curve $\gamma_1$ also has  two osculating circles that support $\gamma_1$ from the inside.
 According to \ref{ex:inverse}, these osculating circlines are inverses of the osculating circlines of~$\gamma$.
 Note that the region lying inside $\gamma$ is mapped to the region outside $\gamma_1$, and the other way around.
-Therefore, these two circlines correspond to the osculating circlines supporting $\gamma$ from outside.)
+Therefore, these two circlines correspond to the osculating circlines supporting $\gamma$ from the outside.)
 \qeds
-
-The following exercise was suggested by Alexander Lytchak.
 
 {
 
@@ -527,4 +524,4 @@ Construct an example of a closed simple smooth regular plane curve $\gamma$ with
 %Show that $\gamma$ has four points with zero torsion.
 %\end{thm}
 
-%\begin{thm}{Advanced exercise}\label{ex:order} Show that the points $a,b,c,d$ guaranteed by \ref{thm:4-vert-supporting} can be chosen so that they appear in the same order on the curve and the osculating circles at $a$ and $c$ support the curve from inside and $b$ and $d$ support the curve from outside. \end{thm}
+%\begin{thm}{Advanced exercise}\label{ex:order} Show that the points $a,b,c,d$ guaranteed by \ref{thm:4-vert-supporting} can be chosen so that they appear in the same order on the curve and the osculating circles at $a$ and $c$ support the curve from the inside and $b$ and $d$ support the curve from the outside. \end{thm}

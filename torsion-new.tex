@@ -86,7 +86,7 @@ Assume the Frenet frame $\tan(s),\norm(s),\bi(s)$ of a curve $\gamma$ is defined
 Recall that 
 \[\tan'=\kur\cdot \norm.
 \eqlbl{eq:frenet-tau}\]
-Let us find the remaining derivatives $\norm'$ and $\bi'$ in the frame $\tan,\norm,\bi$.
+Let us write the remaining derivatives $\norm'$ and $\bi'$ in the frame $\tan,\norm,\bi$.
 
 Let us show that
 \[\norm'=-\kur\cdot\tan+\tor\cdot\bi.\eqlbl{eq:frenet-nu}\]
@@ -293,7 +293,7 @@ Then there is a smooth unit-speed curve $\gamma\:\mathbb{I}\to\mathbb{R}^3$ with
 Moreover, $\gamma$ is uniquely defined up to a rigid motion of the space.
 \end{thm}
 
-The proof is an application of the theorem on existence and uniqueness of solutions of ordinary differential equations (\ref{thm:ODE}).
+The proof is an application of the theorem on the existence and uniqueness of solutions of ordinary differential equations (\ref{thm:ODE}).
 
 \parit{Proof.}
 Fix a parameter value $s_0$, a point $\gamma(s_0)$, and an oriented orthonormal frame $\tan(s_0)$, $\norm(s_0)$, $\bi(s_0)$.
@@ -382,7 +382,7 @@ Indeed, by \ref{eq:gamma'tan'norm'bi'}, we have the following system of scalar e
 \end{cases}
 \eqlbl{eq:<gamma'tan'norm'bi'>}
 \]
-Observe that the constants in \ref{eq:111000} is a solution of this system.
+Observe that the constants in \ref{eq:111000} are a solution of this system.
 Moreover, since we choose $\tan(s_0)$, $\norm(s_0)$, $\bi(s_0)$ to be an oriented orthonormal frame,
 \ref{eq:111000} solves our initial value problem for \ref{eq:<gamma'tan'norm'bi'>}.
 
@@ -401,8 +401,8 @@ Hence, the last statement follows.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:cur+tor=helix}
-Assume a curve $\gamma\:\mathbb{R}\to\mathbb{R}^3$ has a constant curvature and torsion.
-Show that $\gamma$ is a helix, possibly degenerate to a circle;
+Assume a curve $\gamma\:\mathbb{R}\to\mathbb{R}^3$ has constant curvature and torsion.
+Show that $\gamma$ is a helix, possibly degenerating to a circle;
 that is, in a suitable coordinate system we have
 $\gamma(t)=(a\cdot \cos t,a\cdot\sin t, b\cdot t)$
 for some constants $a$ and~$b$.

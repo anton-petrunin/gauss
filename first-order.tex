@@ -58,7 +58,7 @@ Show that if a smooth surface $\Sigma$ meets a plane $\Pi$ at a single point $p$
 
 \section{Directional derivative}\label{sec:dirder}
 
-In this section we extend the definition of {}\emph{directional derivative} to smooth functions defined on smooth surfaces.
+In this section, we extend the definition of {}\emph{directional derivative} to smooth functions defined on smooth surfaces.
 First, let us recall the standard definition.
 
 Suppose $f$ is a function defined at a point $p$ in the space, and $\vec w$ a vector.
@@ -83,7 +83,7 @@ Moreover, if $(u,v)\mapsto s(u,v)$ is a local chart at $p$, then
 where $\vec{w}=a\cdot s_u +b\cdot s_v$. 
 \end{thm}
 
-Note that our definition agrees with the standard definition of directional derivative if $\Sigma$ is a plane.
+Note that our definition agrees with the standard definition of the directional derivative if $\Sigma$ is a plane.
 Indeed, in this case, $\gamma(t)=p+\vec w\cdot t$ is a curve in $\Sigma$ that starts at $p$ with velocity vector $\vec{w}$.
 For a general surface, the point $p+\vec w\cdot t$ might not lie on the surface; therefore the function $f$ might be undefined at this point; therefore the standard definition does not work.
 
@@ -117,7 +117,7 @@ The last statement follows from \ref{eq:f-gamma}.
 
 \section{Tangent vectors as functionals}
 
-In this section we introduce a more conceptual way to define tangent vectors.
+In this section, we introduce a more conceptual way to define tangent vectors.
 We will not use this approach in the sequel, but it is better to know about it.
 
 A tangent vector $\vec w\in \T_p$ to a smooth surface $\Sigma$ 
@@ -146,7 +146,7 @@ Assume $s$ is a smooth map from one smooth surface $\Sigma_0$ to another $\Sigma
 Note that $D_{\vec w} s(p)\in \T_{s(p)}\Sigma_1$ for any $\vec w\in \T_p$.
 Indeed, choose a curve $\gamma_0$ in $\Sigma_0$ such that $\gamma_0(0)=p$ and $\gamma_0'(0)=\vec w$.
 Observe that $\gamma_1= s\circ \gamma_0$ is a smooth curve in $\Sigma_1$, and, 
-by the definition of directional derivative, we have $D_{\vec w} s(p)=\gamma_1'(0)$.
+by the definition of the directional derivative, we have $D_{\vec w} s(p)=\gamma_1'(0)$.
 It remains to note that $\gamma_1(0)\z= s(p)$.
 Therefore its velocity $\gamma_1'(0)$ is in $\T_{ s(p)}\Sigma_1$.
 
@@ -234,11 +234,11 @@ Follows from \ref{eq:jac-composition} and the definition of surface integral.
 \qeds
 
 \parit{Remark.}
-The notion of area of a surface is closely related to the length of a curve.
+The notion of the area of a surface is closely related to the length of a curve.
 However, to define length we use a different idea --- it was defined as the least upper bound on the lengths of inscribed polygonal lines.
 It turns out that an analogous definition does not work even for very simple surfaces.
 The latter is shown by a classical example --- \emph{Schwarz's boot}.
-This example and different approaches to the notion of area are discussed in a popular article by Vladimir Dubrovsky~\cite{dubrovsky}.
+This example and different approaches to the notion of the area are discussed in a popular article by Vladimir Dubrovsky~\cite{dubrovsky}.
 
 \section{Normal vector and orientation}
 A unit vector that is normal to $\T_p$ is usually denoted by $\Norm(p)$;
@@ -265,7 +265,7 @@ The Möbius strip shown on the diagram gives an example of a nonorientable surfa
 \end{wrapfigure}
 
 Note that each surface is locally orientable.
-In fact each chart $s(u,v)$ admits an orientation 
+In fact, each chart $s(u,v)$ admits an orientation 
 \[\Norm=
 \frac{s_u\times s_v}
 {\left|s_u\times s_v\right|}.\]
@@ -291,7 +291,7 @@ Therefore, we can choose the unit normal field on $\Sigma$ that points into one 
 Any smooth proper surface without boundary in the Euclidean space is orientable.
 \end{thm}
 
-In particular, it follows that the Möbius strip does not lie in a proper smooth surface without boundary.
+In particular, it follows that the Möbius strip does not lie on a proper smooth surface without boundary.
 
 \section{Sections}
 

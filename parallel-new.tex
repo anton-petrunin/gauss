@@ -11,7 +11,7 @@ A tangent field ${\vec v}(t)$ on $\gamma$ is called \index{parallel!field}\emph{
 
 In general, the family of tangent planes $\T_{\gamma(t)}\Sigma$ is not parallel.
 Therefore, one cannot expect to have a {}\emph{truly} parallel family ${\vec v}(t)$ with ${\vec v}'\equiv 0$.
-The condition ${\vec v}'(t)\perp\T_{\gamma(t)}$ means that the family is \textit{as parallel as possible} --- it rotates together with the tangent plane, but does not rotate inside the plane.
+The condition ${\vec v}'(t)\perp\T_{\gamma(t)}$ means that the family is \textit{as parallel as possible} --- it rotates together with the tangent plane but does not rotate inside the plane.
 
 Note that by the definition of geodesic, the velocity field ${\vec v}(t)\z=\gamma'(t)$ of any geodesic $\gamma$ is parallel on~$\gamma$.
 
@@ -40,7 +40,7 @@ Given a tangent vector ${\vec w}\in\T_p$ there is a unique parallel field ${\vec
 The vector ${\vec w}(b)\in\T_q$ is called the \index{parallel!transport}\emph{parallel transport} of ${\vec w}(a)$ along~$\gamma$ in~$\Sigma$.
 
 The parallel transport along $\gamma$ will be denoted by $\iota_\gamma$;
-so we can write $\vec w(b)=\iota_\gamma({\vec w}(a))$ or $\vec w(b)=\iota_\gamma({\vec w}(a))_\Sigma$ if we need to emphasize that $\gamma$ lies in the surface~$\Sigma$.
+so we can write $\vec w(b)=\iota_\gamma({\vec w}(a))$ or $\vec w(b)=\iota_\gamma({\vec w}(a))_\Sigma$ if we need to emphasize that $\gamma$ lies on the surface~$\Sigma$.
 From Exercise~\ref{ex:parallel}, it follows that parallel transport $\iota_\gamma\:\T_p\z\to\T_q$ is an isometry.
 In general, the parallel transport $\iota_\gamma\:\T_p\z\to\T_q$ depends on the choice of $\gamma$; that is, for another curve $\gamma_1$ connecting $p$ to $q$ in $\Sigma$, the parallel transports $\iota_{\gamma_1}$ and $\iota_{\gamma}$ might be different.
 
@@ -105,14 +105,14 @@ coincides with the parallel translation along $\gamma$ in $\Sigma_2$.
 
 \section{Bike wheel and projections}
 
-In this section we give two interpretations of parallel transport;
+In this section, we give two interpretations of parallel transport;
 they might help to build the right intuition, but will not help in writing rigorous proofs.
-The first is a thaut experiment with {}\emph{bike wheel} suggested by Mark Levi \cite{levi}.
+The first is a thaut experiment with a bike wheel suggested by Mark Levi \cite{levi}.
 The second one uses orthogonal projections of tangent planes.
 
 Suppose $\gamma\:[a,b]\to\Sigma$ is a smooth regular arc in a smooth surface $\Sigma$.
 Think of walking along $\gamma$ and carrying a perfectly balanced \emph{horizontal} bike wheel.
-More precisely, you keep wheel's axis normal to $\Sigma$ and touch only the tips of the axis.
+More precisely, you keep the wheel's axis normal to $\Sigma$ and touch only the tips of the axis.
 By Newton's first law of motion, if the wheel is not spinning at the starting point $p$, then it will not be spinning after stopping at~$q$.
 (Indeed, by pushing the axis one cannot produce torque to spin the wheel.)
 The map that sends the initial position of the wheel to the final position is the parallel transport~$\iota_\gamma$.

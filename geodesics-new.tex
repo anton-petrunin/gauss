@@ -73,9 +73,7 @@ Show that $\gamma$, parametrized by arc-length, is a geodesic on~$\Sigma$.
 
 \section{Existence and uniqueness}
 
-The following proposition says that the position of a particle that travels without friction depends smoothly on its initial position, initial velocity, and the time. 
-
-
+The following proposition says that the position of a particle that travels without friction depends smoothly on its initial position, initial velocity, and time. 
 
 \begin{thm}{Proposition}\label{prop:geod-existence} 
 Let $\Sigma$ be a smooth surface without boundary.
@@ -96,7 +94,7 @@ A surface that satisfies the conclusion of \ref{SHORT.prop:geod-existence:whole}
 So part \ref{SHORT.prop:geod-existence:whole} says that any proper surface is geodesically complete.
 The latter statement is a part of the \index{Hopf--Rinow theorem}\emph{Hopf--Rinow theorem} \cite{hopf-rinow}.
 
-The proof of this proposition uses the theorem on existence of solutions for an initial value problem (\ref{thm:ODE}).
+The proof of this proposition uses the theorem on the existence of solutions for an initial value problem (\ref{thm:ODE}).
 The following lemma shows that the condition of being a geodesic can be stated as a second-order differential equation.
 
 \begin{thm}{Lemma}\label{lem:geodesic=2nd-order}
@@ -115,7 +113,8 @@ where $g$ and $h$ are smooth functions of four variables determined by~$f$.
 
 The proof of the lemma is done by direct calculations.
 
-\parit{Proof.} In the following calculations, we often omit the arguments --- we may write $x$ instead of $x(t)$ and $f$ instead of $f(x,y)$ or $f(x(t),y(t))$ and so on.
+\parit{Proof.} In the following calculations, we often omit the arguments;
+in other words, we may use shortcuts $x=x(t)$, $f=f(x,y)=f(x(t),y(t))$, and so on.
 
 First, let us express $z''(t)$ in terms of $f$, $x(t)$, and $y(t)$.
 \[
@@ -201,7 +200,7 @@ Therefore, $\mathbb{I}$ is not maximal --- a contradiction.
 
 \begin{thm}{Exercise}\label{ex:round-torus}
 Let $\Sigma$ be a smooth torus of revolution; that is,
-a smooth surface of revolution with closed generatrix.
+a smooth surface of revolution with a closed generatrix.
 Show that any closed geodesic on $\Sigma$ is noncontractible.
 
 (In other words, if $s\:\mathbb{R}^2\to \Sigma$ is the natural bi-periodic parametrization of $\Sigma$, then
@@ -247,17 +246,17 @@ The differential $d_0(\exp_p)\:\T_p\to \T_p$ is the identity map.
 
 \end{thm}
 
-In fact it is easy to see that $\Dom(\exp_p)$ --- the domain of definition of $\exp_p$ --- is an open \index{star-shaped}\emph{star-shaped} region of $\T_p$;
+In fact, it is easy to see that $\Dom(\exp_p)$ --- the domain of definition of $\exp_p$ --- is an open \index{star-shaped}\emph{star-shaped} region of $\T_p$;
 the latter means that if $\vec v\in \Dom(\exp_p)$, then $\lambda\cdot\vec v\in \Dom(\exp_p)$ for any $0\le \lambda\le 1$.
 
 
 \begin{thm}{Proposition}\label{prop:exp}
 Let $p$ be a point on a smooth surface $\Sigma$ (without boundary).
 Then there is $r_p>0$ such that
-the exponential map $\exp_p$ is defined on the open ball $B_p\df B(0,r_p)_{\T_p}$
+the exponential map $\exp_p$ is defined on the open ball $B_p\df B(0,r_p)_{\T_p}$,
 and the restriction $\exp_p|_{B_p}$ is a smooth regular parametrization of a neighborhood of $p$ in~$\Sigma$.
 
-Moreover, we have a {}\emph{local control} on $r_p$;
+Moreover, we have {}\emph{local control} on $r_p$;
 that is, for any $q\in \Sigma$ there is $\epsilon>0$ such that if $\dist{p}{q}\Sigma<\epsilon$, then $r_p\ge\epsilon$.
 \end{thm}
 
@@ -466,7 +465,7 @@ Assume $\Sigma$ is the graph $z=f(x,y)$ of a convex $\ell$-Lipschitz function $f
 Then the total curvature of any geodesic in $\Sigma$ is at most $2\cdot \ell$.
 \end{thm}
 
-This theorem was first proved by Vladimir Usov \cite{usov},
+This theorem was first proved by Vladimir Usov \cite{usov};
 an amusing generalization was found by David Berg \cite{berg}.
 
 \parit{Proof.}
@@ -576,7 +575,7 @@ that is, if $\length(\Norm\circ\gamma)\le C$ for a universal constant~$C$.
 The latter was conjectured by Aleksei Pogorelov \cite{pogorelov};
 counterexamples to the different forms of this conjecture were found 
 by Viktor Zalgaller \cite{zalgaller},
-Anatoliy Milka \cite{milka}
+Anatoliy Milka \cite{milka},
 and Vladimir Usov \cite{usov};
 these results were partly rediscovered later 
 by J\'{a}nos Pach \cite{pach}.

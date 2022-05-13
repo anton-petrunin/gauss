@@ -124,8 +124,8 @@ Set \index{10gb@$\GB$}
 \[\GB(\Delta)=\tgc{\partial\Delta}+\iint_\Delta K-2\cdot \pi,
 \eqlbl{eq:GB}\]
 where $K$ denotes the Gauss curvature of~$\Sigma$.
-Here $\GB$ stands for Gauss--Bonnet formula;
- our goal is to show that
+Here $\GB$ stands for Gauss--Bonnet;
+our goal is to show that
 \[\GB(\Delta)=0.\]
 
 \begin{thm}{Lemma}\label{lem:GB-sum}
@@ -210,7 +210,7 @@ but it goes along the same lines as \ref{ex:total-curvature=}.
 
 
 \begin{thm}{Exercise}\label{ex:half-sphere-total-curvature}
-Assume $\gamma$ is a simple piecewise smooth loop on $\mathbb{S}^2$ that divides its area in two equal parts.
+Assume $\gamma$ is a simple piecewise smooth loop on $\mathbb{S}^2$ that divides its area into two equal parts.
 Denote by $p$ the base point of~$\gamma$.
 Show that the parallel transport $\iota_\gamma\:\T_p\mathbb{S}^2\to\T_p\mathbb{S}^2$ is the identity map.
 \end{thm}
@@ -219,7 +219,7 @@ Show that the parallel transport $\iota_\gamma\:\T_p\mathbb{S}^2\to\T_p\mathbb{S
 
 \section{Intuitive proof}
 
-In this section we prove a special case of the Gauss--Bonnet formula.
+In this section, we prove a special case of the Gauss--Bonnet formula.
 This case is leading --- the general case can be proved similarly, but one has to use the signed area counted with multiplicity.
 
 \parit{Proof of \ref{thm:gb} for open and closed surfaces with positive Gauss curvature.}
@@ -309,7 +309,7 @@ if and only if the same geodesic traveled backwards
 $t\mapsto \gamma(-t)$
 is counterclockwise.
 
-Let us shoot a unit-speed geodesic at each direction from a given point $p\z=\gamma(0)$.
+Let us shoot a unit-speed geodesic in each direction from a given point $p\z=\gamma(0)$.
 This gives a one-parameter family of geodesics $\gamma_s$ for $s\in[0,\pi]$ connecting the geodesic $t\mapsto \gamma(t)$ with $t\mapsto \gamma(-t)$; that is, $\gamma_0(t)\z=\gamma(t)$, and $\gamma_\pi(t)=\gamma(-t)$.
 
 Observe that the subset of values $s\in [0,\pi]$ such that $\gamma_s$ is right (or left) is open.
@@ -340,7 +340,7 @@ Show that there is a simple two-sided infinite geodesic $\gamma$ that is tangent
 \section{General domains}
 \index{Gauss--Bonnet formula}
 
-The following generalization of Gauss--Bonnet formula is due to Walther von Dyck \cite{dyck}.
+The following generalization of the Gauss--Bonnet formula is due to Walther von Dyck \cite{dyck}.
 
 \begin{thm}{Theorem}\label{thm:GB-generalized}
 Let $\Lambda$ be a compact domain bounded by a finite collection (possibly empty) of simple piecewise smooth regular curves $\gamma_1,\dots,\gamma_n$ in a smooth surface~$\Sigma$.
@@ -358,7 +358,7 @@ Note that $\chi$ does not depend on the choice of the subdivision since the left
 \parit{Proof.}
 Suppose a graph with $v$ vertices and $e$ edges subdivides $\Lambda$ into $f$ discs.
 Apply the Gauss--Bonnet formula for each disc, and sum up the results.
-Observe that each disc and each vertex contributes $2\cdot\pi$, and each edge contributes $-2\cdot\pi$ to the total sum.
+Observe that each disc and vertex contributes $2\cdot\pi$, and each edge contributes $-2\cdot\pi$ to the total sum.
 Whence \ref{eq:g-b++} follows.
 \qeds
 

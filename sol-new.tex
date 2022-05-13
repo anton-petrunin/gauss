@@ -103,7 +103,7 @@ Try to argue similarly to \ref{ex:L-shape}.
 
 \parbf{\ref{ex:viviani}.}
 For $\ell=0$ the system describes a pair of points $(0,0,\pm1)$, so we can assume that $\ell\ne 0$.
-Note that the first equation describes the unit sphere centered at the origin, and the second equation describes a cylinder over the circle in the $(x,y)$-plane with center $(-\tfrac\ell2,0)$ and radius~$|\tfrac\ell2|$.
+Note that the first equation describes the unit sphere centered at the origin, and the second equation describes a cylinder over the circle in the $(x,y)$-plane with center at $(-\tfrac\ell2,0)$ and radius~$|\tfrac\ell2|$.
 
 
 \begin{Figure}
@@ -509,7 +509,7 @@ Observe that $\measuredangle(\gamma'(s_0),\gamma'(s))\le \theta$ for any~$s$.
 Use this inequality in the same way as in the proof of the bow lemma.
 
 Part \ref{SHORT.ex:length-dist:sef-intersection:>pi} is straightforward.
-For part \ref{SHORT.ex:length-dist:=} consider the the concatenation of two equal line segment with the external angle $2\cdot\theta$ and smooth its joint. 
+For part \ref{SHORT.ex:length-dist:=} consider the concatenation of two equal line segments with the external angle $2\cdot\theta$ and smooth its joint. 
 
 
 }
@@ -517,7 +517,7 @@ For part \ref{SHORT.ex:length-dist:=} consider the the concatenation of two equa
 \parbf{\ref{ex:schwartz}.}
 Let $\ell=\length\gamma$.
 Suppose $\ell_1<\ell<\ell_2$.
-Let $\gamma_1$ be an arc of unit circle with length $\ell$.
+Let $\gamma_1$ be an arc of the unit circle with length $\ell$.
 
 Show that the distance between the endpoints of $\gamma_1$ is smaller than $|p-q|$, and apply the bow lemma (\ref{lem:bow}).
 
@@ -670,7 +670,7 @@ We can assume that $\gamma_0$ is unit-speed.
 Show that
 $|\gamma_1'|=|\tan-\tor\cdot \norm|\ge 1$ and use it.
 
-\parbf{\ref{ex:torsion-indicatrix}.} Assume that tangent indicatrix has no self-intersection.
+\parbf{\ref{ex:torsion-indicatrix}.} Assume that the tangent indicatrix has no self-intersection.
 Show that it lies in an open hemisphere and argue as in Fenchel's theorem.
 
 \parbf{\ref{ex:lancret}}; \ref{SHORT.ex:lancret:a}.
@@ -691,7 +691,7 @@ Show that $\langle \vec w,\alpha\rangle$ is constant if $\gamma$ makes a constan
 
 \parbf{\ref{ex:spherical-frenet}}.
 Part \ref{SHORT.ex:spherical-frenet:tau} follows from the fact that $(  \tan,\norm,\bi)$ is an orthonormal basis.
-For \ref{SHORT.ex:spherical-frenet:nu} take the first and second derivatives of the identity $\langle\gamma,\gamma\rangle=1$ and simplify using the Frenet formulas.
+For \ref{SHORT.ex:spherical-frenet:nu}, take the first and second derivatives of the identity $\langle\gamma,\gamma\rangle=1$ and simplify them using the Frenet formulas.
 Part \ref{SHORT.ex:spherical-frenet:beta} follows from \ref{SHORT.ex:spherical-frenet:nu} and the Frenet formulas.
 By \ref{SHORT.ex:spherical-frenet:beta}, $\int\tfrac\tor\kur=0$, hence \ref{SHORT.ex:spherical-frenet:beta+} follows.
 Part \ref{SHORT.ex:spherical-frenet:kur-tor} is proved by algebraic manipulations.
@@ -909,7 +909,7 @@ Use the fact that $\gamma_t$ moves almost horizontally to show that in a small n
 whence the statement follows.
 
 \parbf{\ref{ex:in-circle}.} Move the center of the unit circle to the base of the loop and then reduce its radius to zero.
-Show that at the moment when the circle first touch the loop, it supports the loop at a point distinct from the base.
+Show that at the moment when the circle first touches the loop, it supports the loop at a point distinct from the base.
 Apply \ref{prop:supporting-circline}.
 
 
@@ -956,7 +956,7 @@ Apply the supporting test (\ref{prop:supporting-circline}).
 \parbf{\ref{ex:convex-lens}.}
 Apply the lens lemma to show that $\gamma$ lies on one side from the line $pq$.
 Conclude that the union of the arc $\gamma$ and its chord $[p,q]$ is a closed simple curve;
-by Jordan theorem, it bounds some figure, say~$F$.
+by Jordan's theorem, it bounds some figure, say~$F$.
 
 Assume that $F$ is not convex and arrive at a contradiction as in \ref{prop:convex}. 
 
@@ -975,8 +975,6 @@ Apply to $\gamma_1$ \ref{thm:moon-orginal}.
 We may assume that $\gamma$ is oriented so that the smaller square on its left.
 Use \ref{thm:4-vert-supporting} to show that there are two points on $\gamma$ with signed curvature $\ge 1$ and $\le 1$ respectively.
 Apply the intermediate value theorem for signed curvature to show that there is a point with curvature $1$.
-
-
 
 \parbf{\ref{ex:moon-area}.} 
 Applying rescaling, we may assume that $a=\pi$; that is, $\gamma$ bounds area of the unit disc.
@@ -1070,7 +1068,7 @@ $\gamma_i(1)=q_i$, and $\gamma_i(t)\ne \gamma_j(t)$ if $i\ne j$.
 
 Choose a smooth vector field $\vec v_t$ such that $\vec v_t(\gamma_i(t))=\gamma'_i(t)$ for any $i$ and~$t$.
 We can assume in addition that $\vec v_t$ vanishes outside a sufficiently large disc; this can be arranged by multiplying the vector field by an appropriate bell function;
-for example $\sigma_1(R-|x|)$, where $R$ is large and $\sigma_1$ is defined on page \pageref{page:sigma-function}.
+for example, $\sigma_1(R-|x|)$, where $R$ is large and $\sigma_1$ is defined on page \pageref{page:sigma-function}.
 
 It remains to apply the Moser trick to the constructed vector field. 
 
@@ -1078,7 +1076,7 @@ It remains to apply the Moser trick to the constructed vector field.
 Without loss of generality, we can assume that the origin belongs to both $\Sigma$ and~$\Theta$.
 
 In each case show that there is a vector field $\vec v$ defined on $\mathbb{R}^2\backslash\{0\}$ that flows $\Sigma$ to $\Theta$.
-In fact one can choose radial fields of that type,
+In fact, one can choose radial fields of that type,
 but be careful with the cases \ref{SHORT.ex:star-shaped-disc:nonsmooth} and \ref{SHORT.ex:star-shaped-disc:star-shaped} --- they are not as easy as one might think.
 
 %\end{multicols}
@@ -1154,7 +1152,7 @@ Show that it defines a global field on the surface.
 Apply \ref{thm:shape-chart} to a map $s$ such that $s_u(0,0)=\vec u$ and $s_v(0,0)=\vec v$.
 
 \parbf{\ref{ex:normal-curvature=const}}; \ref{SHORT.ex:normal-curvature=const:a}.
-Observe that $\Sigma$ has unit Hessian matrix at each point, and apply the definition of shape operator.
+Observe that $\Sigma$ has unit Hessian matrix at each point, and apply the definition of the shape operator.
 
 \parit{\ref{SHORT.ex:normal-curvature=const:b}.}
 Choose a chart $s$ in~$\Sigma$.
@@ -1185,7 +1183,7 @@ Conclude that $\Norm_2'$ is proportional to $\gamma'$.
 Fix~$t$.
 Set $f_t\:p\mapsto p+t\cdot\Norm(p)$; it maps $\Sigma$ to $\Sigma_t$.
 
-Apply the definition of shape operator to show that $d_pf_t(\vec v)=\vec v-t\cdot\Shape_p(\vec v)$.
+Apply the definition of the shape operator to show that $d_pf_t(\vec v)=\vec v-t\cdot\Shape_p(\vec v)$.
 Since $\Sigma$ is closed, the norm of $\Shape$ is bounded.
 Whence $f_t$ is regular if $t\approx 0$.
 
@@ -1216,7 +1214,7 @@ Apply \ref{ex:mean-curvature}.
 
 \parbf{\ref{ex:rev(sin)}.}
 By \ref{ex:principal-revolution:a}, parallels and meridians are lines of curvature.
-One principal curvature is the curvature of generactrix.
+One principal curvature is the curvature of generatrix.
 Use \ref{ex:curvature-formulas:a} to show that it is at most $a\cdot \sin x$.
 Note that the curvature of parallel is $\tfrac1{a\cdot \sin x}$;
 apply Meusnier's theorem, to show that the principal curvature in its direction cannot be larger.
@@ -1278,7 +1276,7 @@ Therefore its signed curvature has a constant sign.
 
 
 \parbf{\ref{ex:surrounds-disc}.}
-Assume contrary, then by \ref{thm:convex-embedded} the surface is convex.
+Assume the contrary, then by \ref{thm:convex-embedded} the surface is convex.
 Show that there is a supporting spherical dome with the unit circle as the boundary.
 Make a conclusion.
 
@@ -1294,7 +1292,7 @@ By \ref{thm:convex-embedded}, the surface bounds a convex region that contains a
 \end{Figure}
 
 By \ref{ex:rev(sin)}, the Gauss curvature of the surface of revolution of the graph $y=a\cdot \sin x$ for $x\in(0,\pi)$ cannot exceed $1$.
-Try to support the surface $\Sigma$ from inside by a surface of revolution of the described type.
+Try to support the surface $\Sigma$ from the inside by a surface of revolution of the described type.
 (Compare to \ref{ex:convex small}.)
 
 \parit{Remark.}
@@ -1416,13 +1414,13 @@ Observe that this function cannot be constant, and arrive at a contradiction.
 \parbf{\ref{ex:crosss}.}
 This problem follows easily from the so-called \index{Morse lemma}\emph{Morse lemma}.
 The following sketch is a slightly stripped version of it.
-A more conceptual proof \cite{palais} can be built on the Moser's trick; ses the solution of \ref{ex:star-shaped-disc}.
+A more conceptual proof \cite{palais} can be built on the Moser trick; ses the solution of \ref{ex:star-shaped-disc}.
 
 \medskip
 
 Choose tangent-normal coordinates at $p$ so that the coordinate axes point in the principal directions of $\Sigma$ at $p$;
 let $z=f(x,y)$ be the local graph representation of~$\Sigma$.
-We need to show that the solution of the equation $f(x,y)=0$ is a union of two smooth curves that intersect transversely at~$p$.
+We need to show that the solution of $f(x,y)=0$ is a union of two smooth curves that intersect transversely at~$p$.
 
 Prove the following claim:
 \textit{Suppose $x\z\mapsto h(x)$ is a smooth function defined in an open interval $\mathbb{I}\ni0$ such that $h(0)=h'(0)=0$ and $h''(0)>0$.
@@ -1453,7 +1451,7 @@ It remains to observe that the two functions $g_\pm(x,y)=a(x)\pm b(x,y)$ have di
 Therefore, each equation $a(x)\pm b(x,y) =0$ defines a smooth regular curve in a neighborhood of $p$;
 see Section~\ref{sec:implicit-curves}.
 
-\parbf{\ref{ex:proper-saddle}.} Look at the the pseudosphere described in \ref{ex:principal-revolution:pseudosphere}.
+\parbf{\ref{ex:proper-saddle}.} Look at the pseudosphere described in \ref{ex:principal-revolution:pseudosphere}.
 
 \parbf{\ref{ex:length-of-bry}.}
 Use \ref{lem:convex-saddle} and the hemisphere lemma (\ref{lem:hemisphere}).
@@ -1619,7 +1617,7 @@ Whence again $\gamma$ is non-contractible.
 
 \parbf{\ref{ex:closed-liberman}.} Assume $t\mapsto \gamma(t)=(x(t),y(t),z(t)$ is a closed unit-speed geodesic in the graph $z=f(x,y)$.
 By Liberman's lemma, $t\mapsto z'(t)$ is monotonic.
-Conclude that $z$ is constant on $\gamma$, so $\gamma$ runs in a horizonal plane.
+Conclude that $z$ is constant on $\gamma$, so $\gamma$ runs in a horizontal plane.
 Show that $\gamma$ is straight and arrive at a contradiction.
 
 \parbf{\ref{ex:helix=geodesic}.}
@@ -1661,8 +1659,7 @@ in the cylinder $x^2 + y^2 =1$.
 
 \parbf{\ref{ex:min-geod+plane}.}
 Assume a shortest path $\alpha$ crosses $\Pi$ at least twice.
-In this case, there is an subarc $\alpha_1$ of $\alpha$ that lies entirely on one side
- on $\Pi$, has endpoints on $\Pi$, and these endpoints are distinct from the endpoints of $\alpha$.
+In this case, there is a subarc $\alpha_1$ of $\alpha$ that lies entirely on one side on $\Pi$, has endpoints on $\Pi$, and these endpoints are distinct from the endpoints of $\alpha$.
  
 \begin{wrapfigure}{r}{38 mm}
 \vskip-4mm
@@ -1672,7 +1669,7 @@ In this case, there is an subarc $\alpha_1$ of $\alpha$ that lies entirely on on
 \end{wrapfigure}
 
 Let us remove the arc $\alpha_1$ from $\alpha$ and replace it with the reflection of $\alpha_1$ across $\Pi$.
-Note that the obtained curve, say $\beta$, lies in the surface;
+Note that the obtained curve, say $\beta$, lies on the surface;
 it has the same length as $\alpha$, and it connects the same pair of points, say $p$ and~$q$.
 Therefore, $\beta$ is another shortest path from $p$ to $q$ in $\Sigma$ that is distinct from~$\alpha$.
 
@@ -1800,7 +1797,7 @@ Apply \ref{obs:parallel=}.
 
 \parbf{\ref{ex:holonomy=not0}.}
 Nearly any loop solves the problem.
-For example, consider the right-angled spherical triangle that an octant of $\mathbb{R}^3$ cuts form the sphere.
+For example, consider the right-angled spherical triangle that an octant of $\mathbb{R}^3$ cuts from the sphere.
 Argue that parallel transport around it rotates the tangent plane by the angle $\tfrac\pi 2$. 
 
 \stepcounter{chapter}
@@ -1808,7 +1805,7 @@ Argue that parallel transport around it rotates the tangent plane by the angle $
 
 \parbf{\ref{ex:1=geodesic-curvature}.}
 By \ref{ex:convex-proper-sphere}, $\Sigma$ is a smooth sphere.
-By Jordan theorem (\ref{thm:jordan}) the curve $\gamma$ divides $\Sigma$ into two discs.
+By Jordan's theorem (\ref{thm:jordan}) the curve $\gamma$ divides $\Sigma$ into two discs.
 Let us denote by $\Delta$ the disc that lies on the left from~$\gamma$.
 
 Observe that $\tgc\gamma=\length\gamma$, and apply the Gauss--Bonnet formula (\ref{thm:gb}) for $\Delta$.
@@ -2010,9 +2007,9 @@ Applying \ref{eq:dv/du}, \ref{eq:shape-lmn}, and $s_v\perp\Norm$ we get
 \langle\vec v_u,\Norm\rangle
 &=
 \tfrac1{a}\cdot \langle s_{uv},\Norm\rangle
-=a\cdot m,
+=a\cdot m.
 \end{align*}
-that imply the last two equalities in \ref{eq:key-orthogonal/2}.
+It implies the last two equalities in \ref{eq:key-orthogonal/2}.
 
 Therefore, the first two identities in \ref{SHORT.lem:K(orthogonal):uu-vv} are proved;
 the remaining two identities can be proved along the same lines.
@@ -2101,7 +2098,7 @@ conclude that $\theta_n\to \pi$.
 
 \parbf{\ref{ex:thm:comp:cat:nsc}.}
 Consider the triangle on the hyperboloid with vertices $(1,0,0)$, $(-\tfrac{1}2, \tfrac{\sqrt{3} }2, 0)$, and $(-\tfrac{1}2, -\tfrac{\sqrt{3} }2, 0)$.
-Note that all its angles equal to $\pi$, but all model angles equal to $\tfrac{\pi}3$.
+Note that all its angles are $\pi$, but all model angles are $\tfrac{\pi}3$.
 
 \parbf{\ref{ex:diam-angle}.}
 Show that $\dist{p}{x}\Sigma\le \dist{p}{q}\Sigma$ and $\dist{q}{x}\Sigma\le \dist{p}{q}\Sigma$.
@@ -2202,8 +2199,8 @@ Use \mbox{\ref{mang<angk}} to show that
 \[\pi-\alpha-\beta>\tfrac\ell R+o(\ell).\]
 
 Denote by $\sigma$ the arc of $\partial \Delta$ from $x$ to $y$.
-Note that $[x,y]_\Sigma$ lies in region bounded by $[p,x]$, $[p,y]$, and $\sigma$.
-Apply Gauss--Bonnet formula to show that $\tgc\sigma>\pi-\alpha-\beta$.
+Note that $[x,y]_\Sigma$ lies in the region bounded by $[p,x]$, $[p,y]$, and $\sigma$.
+Apply the Gauss--Bonnet formula to show that $\tgc\sigma>\pi-\alpha-\beta$.
 Pass to a limit as $\ell\to0$, and make a conclusion.
 
 \parit{\ref{SHORT.ex:disc-:area}.}

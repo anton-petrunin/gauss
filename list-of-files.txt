@@ -5,6 +5,7 @@ afterword.tex
 plane-curves.tex
 polar-chart.tex
 prelim.tex
+poly.tex
 saddle.tex
 shortest-path.tex
 sol-new.tex
@@ -13,7 +14,6 @@ surfaces-curvature.tex
 surfaces-def.tex
 title.tex
 torsion-new.tex
-torsion-sol.tex
 comparison.tex
 curve-curvature-new.tex
 curves-and-surfaces.bbl
@@ -52,6 +52,7 @@ mppics/pic-1250.mps
 mppics/pic-130.mps
 mppics/pic-1550.mps
 mppics/pic-1575.mps
+mppics/pic-16.mps
 mppics/pic-1650.mps
 mppics/pic-1680.mps
 mppics/pic-1750.mps
@@ -65,6 +66,7 @@ mppics/pic-226.mps
 mppics/pic-23.mps
 mppics/pic-230.mps
 mppics/pic-2305.mps
+mppics/pic-2307.mps
 mppics/pic-2308.mps
 mppics/pic-2310.mps
 mppics/pic-2315.mps
@@ -99,6 +101,11 @@ mppics/pic-326.mps
 mppics/pic-33.mps
 mppics/pic-34.mps
 mppics/pic-354.mps
+mppics/pic-3540.mps
+mppics/pic-3542.mps
+mppics/pic-3500.mps
+mppics/pic-3502.mps
+mppics/pic-3510.mps
 mppics/pic-37.mps
 mppics/pic-40.mps
 mppics/pic-41.mps
@@ -129,6 +136,8 @@ mppics/pic-67.mps
 mppics/pic-68.mps
 mppics/pic-7.mps
 mppics/pic-70.mps
+mppics/pic-713.mps
+mppics/pic-725.mps
 mppics/pic-73.mps
 mppics/pic-74.mps
 mppics/pic-75.mps
