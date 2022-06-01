@@ -194,8 +194,8 @@ This identity will play a key role in the definition of surface area.
 
 Let $\Sigma$ be a smooth surface, and $h\:\Sigma\to\mathbb{R}$ be a smooth function.
 Let us define the integral of the function $h$ along a region $R\subset \Sigma$.
-The definition will work for any Borel set $R$,
-but it will be used mostly for surfaces with boundary.
+The \index{region}\emph{region} is defined as any Borel set $R\subset\Sigma$,
+but most of the time our regions will be surfaces with boundary.
 
 Recall that $\jac_ps$ is defined in the previous section.
 Assume there is a chart $(u,v)\mapsto s(u,v)$ of $\Sigma$ defined on an open set $U\subset\mathbb{R}^2$ such that $R\subset s(U)$.
@@ -221,17 +221,46 @@ The area of a region $R$ in a smooth surface $\Sigma$ is defined as the surface 
 The following proposition is the substitution rule for surface integral.
 
 \begin{thm}{Area formula}\label{prop:surface-integral}
-Suppose $ s\:\Sigma_0\to \Sigma_1$ is a smooth parametrization of a smooth surface $\Sigma_1$ by  a smooth surface $\Sigma_0$.
+Suppose $s\:\Sigma_0\to \Sigma_1$ is a smooth parametrization of a smooth surface $\Sigma_1$ by  a smooth surface $\Sigma_0$.
 Then, for any region $R\subset \Sigma_0$ and any smooth function $f\:\Sigma_1\to\mathbb{R}$, we have
 \[\iint_R (f\circ s)\cdot \jac  s=\int_{s(R)}f.\]
 In particular, if $f\equiv 1$, we have
-\[\iint_R \jac  s=\area [ s(R)].\]
+\[\iint_R \jac  s=\area [s(R)].\]
 
 \end{thm}
 
 \parit{Proof.}
 Follows from \ref{eq:jac-composition} and the definition of surface integral.
 \qeds
+
+Let $\Sigma_1$ and $\Sigma_2$ be two smooth surfaces in the Euclidean space.
+A map $f\:\Sigma_1\to \Sigma_2$ is called \index{length-nonincreasing}\emph{length-nonincreasing} if, for any curve $\gamma$ in $\Sigma$ we have $\length\gamma\ge \length (f\circ\gamma)$. 
+The following theorem provides a more natural definition of area; we omit its proof.
+
+\begin{thm}{Theorem}\label{thm:area-axioms}
+The area functional satisfies the following properties:
+
+\begin{subthm}{thm:area-axioms:aditivity}
+Aditivity: 
+Let $R_1$ and $R_2$ be two regions in a smooth surface.
+Then 
+\[\area R_1+ \area R_2=\area (R_1\cup R_2)+ \area (R_1\cap R_2).\]
+\end{subthm}
+
+\begin{subthm}{thm:area-axioms:monotonicity}
+Monotonicity:
+Let $f\:\Sigma_1\to \Sigma_2$ be length-nonincreasing map between two smooth surfaces.
+Suppose that $R_1\subset \Sigma$ and $R_2\subset \Sigma_2$ are regions such that $f(R_1)\supset R_2$.
+Then 
+\[\area R_1\ge \area R_2.\]
+\end{subthm}
+
+\begin{subthm}{thm:area-axioms:unit}
+Unit square has unit area. 
+\end{subthm}
+
+Moreover, the area functional is uniquely defined by these properties.
+\end{thm}
 
 \parit{Remark.}
 The notion of the area of a surface is closely related to the length of a curve.
