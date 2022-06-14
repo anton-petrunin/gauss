@@ -235,22 +235,24 @@ Follows from \ref{eq:jac-composition} and the definition of surface integral.
 
 Let $\Sigma_1$ and $\Sigma_2$ be two smooth surfaces in the Euclidean space.
 A map $f\:\Sigma_1\to \Sigma_2$ is called \index{length-nonincreasing}\emph{length-nonincreasing} if, for any curve $\gamma$ in $\Sigma$ we have $\length\gamma\ge \length (f\circ\gamma)$. 
-The following theorem provides a more natural definition of area; we omit its proof.
+The following theorem provides a more natural definition of area.
+Despite its intuitive statement, the proof is well beyond the scope of this book;
+it is based on a generalization of the area formula that works for Lipschitz maps \cite[3.2.3]{federer}. 
 
 \begin{thm}{Theorem}\label{thm:area-axioms}
 The area functional satisfies the following properties:
 
 \begin{subthm}{thm:area-axioms:aditivity}
-Aditivity: 
-Let $R_1$ and $R_2$ be two regions in a smooth surface.
+Sigma-aditivity: 
+Let $R_1,R_2,\dots$ be a sequence of disjoint regions in a smooth surface.
 Then 
-\[\area R_1+ \area R_2=\area (R_1\cup R_2)+ \area (R_1\cap R_2).\]
+\[\area (R_1\cup R_2\cup \dots)=\area R_1+ \area R_2+{}\dots\]
 \end{subthm}
 
 \begin{subthm}{thm:area-axioms:monotonicity}
 Monotonicity:
 Let $f\:\Sigma_1\to \Sigma_2$ be length-nonincreasing map between two smooth surfaces.
-Suppose that $R_1\subset \Sigma$ and $R_2\subset \Sigma_2$ are regions such that $f(R_1)\supset R_2$.
+Suppose that $R_1\subset \Sigma_1$ and $R_2\subset \Sigma_2$ are regions such that $f(R_1)\supset R_2$.
 Then 
 \[\area R_1\ge \area R_2.\]
 \end{subthm}
