@@ -251,6 +251,18 @@ Observe that $\gamma$ can be divided into 4 arcs such that each one is a scaled 
 It follows that $\ell=\tfrac43\cdot\ell$.
 Evidently, $\ell>0$ --- a contradiction.
 
+\parbf{\ref{ex:cont-length}.}
+Use \ref{thm:length-semicont} to show that $s$ is lower semicontinous;
+that is, if $t_n\to t_\infty$ as $n\to\infty$, then 
+\[\liminf_{n\to\infty} s(t_n)\ge s(t_\infty).\]
+
+Observe that
+\[s(b)-s(t)=\length(\gamma|_{[t,b]}).\]
+Apply \ref{thm:length-semicont} to show that $s$ is upper semicontinous.
+Make a conclusion.
+
+Instead of the second step, one can show and use that $s$ is nondecreasing.
+
 \parbf{\ref{ex:arc-length-helix}.} 
 We have to assume $a\ne 0$ or $b\ne0$;
 otherwise, we get a constant curve.
@@ -575,14 +587,14 @@ Suppose $\vec u_i=\tan(s_i)$.
 Choose an inscribed polygonal line $\beta=p_0\dots p_{2\cdot k+1}$ such that $p_{2\cdot i}$ and $p_{2\cdot i+1}$ lie sufficiency close to $\gamma(s_i)$; so we can assume that the direction of $p_{2\cdot i+1}-p_{2\cdot i}$ is sufficiency close to $\vec u_i$ for each~$i$.
 Show that \ref{eq:tc=<tc} holds true for the constructed polygonal line $\beta$.
 
+\parbf{\ref{ex:sef-intersection}}; \ref{SHORT.ex:sef-intersection:<2pi} See the diagram. 
+
 \begin{wrapfigure}{r}{23 mm}
-\vskip-3mm
+\vskip-10mm
 \centering
 \includegraphics{mppics/pic-290}
 \vskip-0mm
 \end{wrapfigure}
-
-\parbf{\ref{ex:sef-intersection}}; \ref{SHORT.ex:sef-intersection:<2pi} See the diagram. 
 
 \parit{\ref{SHORT.ex:sef-intersection:>pi}.} Assume $x$ is a point of self-intersection.
 Show that we may choose two points $y$ and $z$ on $\gamma$ so that the triangle $xyz$ is nondegenerate.
@@ -1308,18 +1320,18 @@ named after Sumner Myers who generalized it \cite{myers}.
 To prove \ref{SHORT.ex:convex-proper-sphere:single} use the convexity of~$R$.
 To prove \ref{SHORT.ex:convex-proper-sphere:smooth}, observe that the map $\Sigma\to\mathbb{S}^2$ is smooth and regular, then apply the inverse function theorem to show that its inverse is smooth as well.
 
+\parbf{\ref{ex:convex-proper-plane}}; \ref{SHORT.ex:convex-proper-plane:a}
+(The argument is similar to \ref{prop:convex-monotone:open}.)
+We can assume that the origin lies on~$\Sigma$.
+Consider a sequence of points $x_n\in \Sigma$ such that $|x_n|\z\to \infty$ as $n\to \infty$.
+Denote by $\vec u_n$ the unit vector in the direction of $x_n$; that is $\vec u_n\z=\tfrac{x_n}{|x_n|}$.
+
 \begin{wrapfigure}{r}{29 mm}
 \vskip-4mm
 \centering
 \includegraphics{mppics/pic-1182}
 \vskip-3mm
 \end{wrapfigure}
-
-\parbf{\ref{ex:convex-proper-plane}}; \ref{SHORT.ex:convex-proper-plane:a}
-(The argument is similar to \ref{prop:convex-monotone:open}.)
-We can assume that the origin lies on~$\Sigma$.
-Consider a sequence of points $x_n\in \Sigma$ such that $|x_n|\z\to \infty$ as $n\to \infty$.
-Denote by $\vec u_n$ the unit vector in the direction of $x_n$; that is $\vec u_n\z=\tfrac{x_n}{|x_n|}$.
 
 Since the unit sphere is compact, we can pass to a subsequence of $x_n$ such that $\vec u_n$ converges to a unit vector, say $\vec u$.
 Show that the half-line from the origin in the direction of $\vec u$ can be taken as $\ell$.
