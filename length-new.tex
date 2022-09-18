@@ -207,14 +207,6 @@ In this case,
 \[\length\gamma_\infty=\sqrt{2}\quad
 \text{and}\quad \length\gamma_n=2\]
 for any~$n$.
-
-\begin{thm}{Exercise}\label{ex:cont-length}
-Let  $\gamma\:[a,b]\to \spc{X}$ be a rectifiable curve in a metric space.
-Given $t\in [a,b]$, denote by $s(t)$ the length of arc $\gamma|_{[a,t]}$.
-Show that the function $t\mapsto s(t)$ is continuous.
-\end{thm}
-
-
   
 \section{Arc-length parametrization}
 
@@ -224,19 +216,19 @@ if
 for any two parameter values $t_1<t_2$;
 that is, the arc of $\gamma$ from $t_1$ to $t_2$ has length $t_2-t_1$.
 
+\begin{thm}{Exercise}\label{ex:cont-length}
+Let  $\gamma\:[a,b]\to \spc{X}$ be a rectifiable curve in a metric space.
+Given $t\in [a,b]$, denote by $s(t)$ the length of arc $\gamma|_{[a,t]}$.
+Show that the function $t\mapsto s(t)$ is continuous.
+
+Conclude that $\gamma$ admits am arc-length parametrization.
+\end{thm}
+
 Note that a smooth space curve $\gamma(t)=(x(t),y(t),z(t))$ is an arc-length parametrization if and only if it has unit velocity vector at all times;
 that is, 
 \[|\gamma'(t)|=\sqrt{x'(t)^2+y'(t)^2+z'(t)^2}=1\]
 for all $t$; by that reason smooth curves equipped with an arc-length parametrization are also called \index{unit-speed curve}\emph{unit-speed curves}.
 Observe that smooth unit-speed curves are automatically regular (see \ref{sec:Smooth curves}).
-
-Any rectifiable curve $\gamma\:[a,b]\to\spc{X}$ can be reparametrized by its arc-length.
-Indeed, consider the function
-\[s(t)=
-\length\gamma|_{[a,t]}.
-\] 
-Evidently, $t\mapsto s(t)$ is monotonic and by \ref{ex:cont-length} it is continuous.
-It follows that $t\mapsto s(t)$ is an arc-length parameter of the curve~$\gamma$.
 
 \begin{thm}{Proposition}\label{prop:arc-length-smooth}
 If $t\mapsto \gamma(t)$ is a smooth regular curve, 
@@ -244,6 +236,8 @@ then its arc-length parametrization is also smooth and regular.
 Moreover, the arc-length parameter $s$ of $\gamma$ can be written as an integral
 \[s(t)=\int_{t_0}^t |\gamma'(\tau)|\cdot d\tau.\eqlbl{s(t)}\]
 \end{thm}
+
+Most of the time we will use $s$ for an arc-length parameter of a curve.
 
 \parit{Proof.} The function $t\mapsto s(t)$ defined by \ref{s(t)} is a smooth increasing function.
 Furthermore, by the fundamental theorem of calculus, $s'(t)=|\gamma'(t)|$.
@@ -254,8 +248,6 @@ and $|(\gamma\circ s^{-1})'|\equiv1$.
 Therefore, $\gamma\circ s^{-1}$ is a unit-speed reparametrization  of $\gamma$ by~$s$.
 By construction, $\gamma\circ s^{-1}$ is smooth, and, since $|(\gamma\circ s^{-1})'|\equiv1$, it is regular.
 \qeds
-
-Most of the time we use $s$ for an arc-length parameter of a curve.
 
 \begin{thm}{Exercise}\label{ex:arc-length-helix}
 Reparametrize the helix 
@@ -392,7 +384,7 @@ It follows that $2\cdot \pi =k\cdot 4$.
 Therefore, Crofton's formula holds for arbitrary smooth curves.
 
 Applying the same argument together with \ref{adex:integral-length}, we get that Crofton's formula holds for arbitrary Lipschitz curve.
-Further, since arc length parametrization of any rectifiable curves is Lipschitz, we get Crofton's formula for arbitrary rectifiable curve.
+Further, since arc length parametrization of any rectifiable curves is Lipschitz, \ref{ex:cont-length} implies it for arbitrary rectifiable curve.
 
 It remains to consider the nonrectifiable case;
 we have to show that 

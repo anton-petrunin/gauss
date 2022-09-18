@@ -252,16 +252,14 @@ It follows that $\ell=\tfrac43\cdot\ell$.
 Evidently, $\ell>0$ --- a contradiction.
 
 \parbf{\ref{ex:cont-length}.}
-Use \ref{thm:length-semicont} to show that $s$ is lower semicontinous;
+Use \ref{thm:length-semicont} to show that $s$ is lower semicontinuous;
 that is, if $t_n\to t_\infty$ as $n\to\infty$, then 
 \[\liminf_{n\to\infty} s(t_n)\ge s(t_\infty).\]
-
 Observe that
-\[s(b)-s(t)=\length(\gamma|_{[t,b]}).\]
-Apply \ref{thm:length-semicont} to show that $s$ is upper semicontinous.
-Make a conclusion.
-
-Instead of the second step, one can show and use that $s$ is nondecreasing.
+\[s(t)=s(b)-\length(\gamma|_{[t,b]}).\]
+Apply \ref{thm:length-semicont} to show that $s$ is upper semicontinuous.
+Conclude that $s$ is continuous.
+Finally, show and use that $s$ is nondecreasing.
 
 \parbf{\ref{ex:arc-length-helix}.} 
 We have to assume $a\ne 0$ or $b\ne0$;
