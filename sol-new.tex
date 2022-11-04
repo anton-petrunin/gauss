@@ -211,6 +211,8 @@ Since the partition $(t_i)$ is arbitrary, we get
 \[\length \beta\ge \length \gamma.\]
 
 \parit{Remarks.}
+It is instructive to compare this exercise with \ref{obs:S2-length}.
+
 The inequality might be strict.
 It happens if $\beta$ runs back and forth along $\gamma$.
 In this case the partition $(\tau_i)$ above is \textit{not} arbitrary.
@@ -975,11 +977,22 @@ Choose two points $p,q\in\gamma$ on the maximal distance.
 Apply \ref{ex:convex-lens} to the arc of $\gamma$ from $p$ to $q$.
 After that use the bow lemma (\ref{lem:bow}), or argue as in \ref{ex:convex small}.
 
-For the last part of the problem, consider the smallest circle $\sigma$ that surrounds $\gamma$ and argue as before for one of the arcs of $\gamma$ between tangency points with $\sigma$.
+For the last part of the problem, consider the smallest circle $\sigma$ that surrounds $\gamma$ and argue as before for one of the arcs of $\gamma$ between common points with $\sigma$.
+
+\parit{Remark.}
+If self-intersections are allowed, then diameter of the curve can be arbitrary large.
+An example can be guessed from the following diagram.
+In fact the diameter can be made arbitrarily close to the length of curve.
+\begin{Figure}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-269}
+\vskip-0mm
+\end{Figure}
 
 \parbf{\ref{ex:moon-rad}.}
 Show that $\gamma$ contains a simple loop $\gamma_1$.
-Apply to $\gamma_1$ \ref{thm:moon-orginal}.
+Apply \ref{thm:moon-orginal} to $\gamma_1$.
 
 \parbf{\ref{ex:2-squares}.}
 We may assume that $\gamma$ is oriented so that the smaller square on its left.
@@ -990,17 +1003,22 @@ Apply the intermediate value theorem for signed curvature to show that there is 
 Applying rescaling, we may assume that $a=\pi$; that is, $\gamma$ bounds area of the unit disc.
 Then apply \ref{thm:moon} to show that the curvature is at least 1 at some point.
 Argue as at the end of the proof of \ref{thm:4-vert-supporting}, showing that the curvature is at most 1 at some point.
-Apply the intermediate value theorem to show that curvature is  1 at some point.
 
-\begin{wrapfigure}{r}{25 mm}
-\vskip-6mm
+{
+
+\begin{wrapfigure}{r}{20 mm}
+\vskip-2mm
 \centering
 \includegraphics{mppics/pic-305}
 \vskip0mm
 \end{wrapfigure}
 
+Apply the intermediate value theorem to show that curvature is  1 at some point.
+
 \parbf{\ref{ex:curve-crosses-circle}.}
 Repeat the proof of the \ref{thm:moon} for each cyclic concatenation of an arc of $\gamma$ from $p_i$ to $p_{i+1}$ with a large arc of the circle. 
+
+}
 
 An example for the second part can be guessed from the diagram.
 
@@ -1256,7 +1274,7 @@ Show that any tangent plane $\T_p$ supports $\Sigma$ at~$p$.
 Apply \ref{prop:surf-support}.
 
 \begin{wrapfigure}{r}{16 mm}
-\vskip-5mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-1050}
 \vskip-2mm
