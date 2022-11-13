@@ -9,7 +9,7 @@ For curves, the curvature is a pointwise quantitative measure of how much the cu
 
 \section{Acceleration of a unit-speed curve}
 
-Recall that any regular smooth curve can be reparametrized by its arc-length (\ref{prop:arc-length-smooth}).
+Recall that any smooth curve can be reparametrized by its arc-length (\ref{prop:arc-length-smooth}).
 The obtained parametrized curve, say $\gamma$, remains to be smooth, and it has unit speed; 
 that is, $|\gamma'(s)|=1$ for all~$s$.
 The following proposition states that in this case
@@ -41,11 +41,11 @@ The curvature is usually denoted by $\kur(s)$ or $\kur(s)_\gamma$, and, in the c
 
 
 \begin{thm}{Exercise}\label{ex:zero-curvature-curve}
-Show that a regular smooth simple space curve has zero curvature at each point if and only if it is a segment of a straight line.
+Show that a smooth simple space curve has zero curvature at each point if and only if it is a segment of a straight line.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:scaled-curvature}
-Let $\gamma$ be a regular smooth simple space curve, and let $\gamma_{\lambda}$ be a scaled copy of $\gamma$ with factor $\lambda >0$;
+Let $\gamma$ be a smooth simple space curve, and let $\gamma_{\lambda}$ be a scaled copy of $\gamma$ with factor $\lambda >0$;
 that is, $\gamma_{\lambda}(t)=\lambda \cdot\gamma(t)$ for any~$t$.
 Show that 
 \[\kur(\lambda \cdot p )_{\gamma_{\lambda}}
@@ -54,12 +54,12 @@ for any $p \in \gamma$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:curvature-of-spherical-curve}
-Show that any regular smooth unit-speed spherical curve has curvature at least 1 at each time.
+Show that any smooth unit-speed spherical curve has curvature at least 1 at each time.
 \end{thm}
 
 \section{Tangent indicatrix}\label{sec:Tangent indicatrix}
 
-Let $\gamma$ be a regular smooth space curve.
+Let $\gamma$ be a smooth space curve.
 The curve 
 \[\tan(t)=\tfrac{\gamma'(t)}{|\gamma'(t)|};
 \eqlbl{eq:tantrix}\] 
@@ -82,11 +82,11 @@ Therefore,
 \left|\frac{d\tan}{ dt}\right|/\left|\frac{ds}{ dt}\right|=
 \frac{|\tan'|}{|\gamma'|}.
 \end{align*}
-It follows that the indicatrix of a smooth regular curve $\gamma$ is regular if the curvature of $\gamma$ does not vanish.
+It follows that the indicatrix of a smooth curve $\gamma$ is smooth if the curvature of $\gamma$ does not vanish.
 
 \begin{thm}{Exercise}\label{ex:curvature-formulas}
 Use the formulas \ref{eq:tantrix} and \ref{eq:curvature} to show that 
-for any smooth regular space curve $\gamma$ we have the following expressions for its curvature:
+for any smooth space curve $\gamma$ we have the following expressions for its curvature:
 \setlength{\columnseprule}{0.4pt}
 \begin{multicols}{2}
 
@@ -111,14 +111,14 @@ at the point $p=(x,f(x))$.
 \end{thm}
 
 \begin{thm}{Advanced exercise}\label{ex:approximation-const-curvature}
-Show that any smooth regular curve $\gamma\:\mathbb{I}\z\to\mathbb{R}^3$ with curvature at most 1 can be approximated by smooth curves with constant curvature~1.
+Show that any smooth curve $\gamma\:\mathbb{I}\z\to\mathbb{R}^3$ with curvature at most 1 can be approximated by smooth curves with constant curvature~1.
 
-In other words, construct a sequence $\gamma_n\:\mathbb{I}\to\mathbb{R}^3$ of smooth regular curves  with constant curvature 1 such that $\gamma_n(t)\to \gamma(t)$ for any $t$ as $n\to\infty$.
+In other words, construct a sequence $\gamma_n\:\mathbb{I}\to\mathbb{R}^3$ of smooth curves  with constant curvature 1 such that $\gamma_n(t)\to \gamma(t)$ for any $t$ as $n\to\infty$.
 \end{thm}
 
 \section{Tangents}
 
-Let $\gamma$ be a smooth regular space curve and $\tan$ its tangent indicatrix.
+Let $\gamma$ be a smooth space curve and $\tan$ its tangent indicatrix.
 The line thru $\gamma(t)$ in the direction of $\tan(t)$ is called the \index{tangent!line}\emph{tangent line} to $\gamma$  at~$t$.
 Any \emph{vector} propositional to $\tan(t)$ is called the \index{tangent!vector}\emph{tangent} to $\gamma$  at~$t$.
 
@@ -126,10 +126,10 @@ The tangent line could be also defined as a unique line that has \index{order of
 that is, $\rho(\ell)=o(\ell)$, where $\rho(\ell)$ denotes the distance from $\gamma(s+\ell)$ to the line.
 
 \begin{thm}{Advanced exercise}\label{ex:no-parallel-tangents}
-Construct a smooth regular closed space curve without parallel tangent lines.
+Construct a smooth closed space curve without parallel tangent lines.
 \end{thm}
 
-We say that a smooth regular curve $\gamma_1$ at $s_1$ is \index{tangent!curves}\emph{tangent} to a smooth regular curve $\gamma_2$ at $s_2$
+We say that a smooth curve $\gamma_1$ at $s_1$ is \index{tangent!curves}\emph{tangent} to a smooth curve $\gamma_2$ at $s_2$
 if $\gamma_1(s_1)=\gamma_2(s_2)$ and the tangent line of $\gamma_1$ at $s_1$ coincides with the tangent line of $\gamma_2$ at $s_2$;
 if both curves are simple we can also say that they are tangent at the point $p=\gamma_1(s_1)\z=\gamma_2(s_2)$ without ambiguity.
 
@@ -157,17 +157,17 @@ the speed of its tangent indicatrix equals its curvature.
 Therefore, \ref{ex:integral-length} implies the following:
 
 \begin{thm}{Observation}\label{obs:tantrix}
-The total curvature of a smooth regular curve is the length of its tangent indicatrix.
+The total curvature of a smooth curve is the length of its tangent indicatrix.
 \end{thm}
 
 \begin{thm}{Fenchel's theorem}
 \label{thm:fenchel}
 \index{Fenchel's theorem}
-The total curvature of any closed regular space curve is at least $2\cdot\pi$.
+The total curvature of any closed smooth space curve is at least $2\cdot\pi$.
 \end{thm}
 
 \parit{Proof.}
-Fix a closed regular space curve~$\gamma$.
+Fix a closed smooth space curve~$\gamma$.
 We can assume that $\gamma$ is described by a unit-speed loop $\gamma\:[a,b]\to \mathbb{R}^3$;
 in this case, $\gamma(a)=\gamma(b)$ and $\gamma'(a)=\gamma'(b)$.
 
@@ -194,7 +194,7 @@ that is,
 
 
 \begin{thm}{Advanced exercise}\label{ex:gamma/|gamma|}
-Suppose $\gamma$ is a smooth regular space curve that does not pass thru the origin.
+Suppose $\gamma$ is a smooth space curve that does not pass thru the origin.
 Consider the spherical curve $\sigma$ defined by $\sigma(t)\df\frac{\gamma(t)}{|\gamma(t)|}$.
 Show that 
 \[\length \sigma< \tc\gamma+\pi.\]
@@ -215,7 +215,7 @@ In particular, the length of a spherical curve cannot exceed its total curvature
 The following theorem shows that the same inequality holds for {}\emph{closed} curves in a unit ball.
 
 \begin{thm}{DNA theorem}\label{thm:DNA}
-Let $\gamma$ be a smooth regular closed curve that lies in a unit ball.
+Let $\gamma$ be a smooth closed curve that lies in a unit ball.
 Then 
 \[\tc\gamma\ge \length\gamma.\]
 
@@ -267,7 +267,7 @@ that is, $\ell\ni p$ and $F$ lies in a closed half-plane bounded by $\ell$.
 Recall that a map is monotone if the inverse image of any point in the target space is a nonempty connected set.
 
 \begin{thm}{Proposition}\label{prop:convex-monotone}
-Let $\gamma$ be a regular smooth convex plane curve.
+Let $\gamma$ be a smooth convex plane curve.
 
 \begin{subthm}{prop:convex-monotone:closed}
 If $\gamma$ is closed, then its tangent indicatrix $\tan$ defines a monotone map $\mathbb{S}^1\to \mathbb{S}^1$;
@@ -495,7 +495,7 @@ Integrating \ref{<gamma',u>}, we get
 \qedsf
 
 \begin{thm}{Exercise}\label{ex:length-dist}
-Let $\gamma\:[a,b]\to \mathbb{R}^3$ be a smooth regular curve and $0\z<\theta\z\le\tfrac\pi2$.
+Let $\gamma\:[a,b]\to \mathbb{R}^3$ be a smooth curve and $0\z<\theta\z\le\tfrac\pi2$.
 Assume 
 \[\tc\gamma\le 2\cdot\theta.\]
 
@@ -508,7 +508,7 @@ Use part \ref{SHORT.ex:length-dist:>} to give another solution of \ref{ex:sef-in
 \end{subthm}
 
 \begin{subthm}{ex:length-dist:=} Show that the inequality in \ref{SHORT.ex:length-dist:>} is optimal; that is, given 
-$\theta$ there is a smooth regular curve $\gamma$ such that $\frac{|\gamma(b)-\gamma(a)|}{\length\gamma}$ is arbitrarily close to $\cos\theta$.
+$\theta$ there is a smooth curve $\gamma$ such that $\frac{|\gamma(b)-\gamma(a)|}{\length\gamma}$ is arbitrarily close to $\cos\theta$.
 \end{subthm}
 
 \end{thm}
@@ -528,7 +528,7 @@ Show that either
 The following exercise generalizes \ref{ex:length>=2pi}.
 
 \begin{thm}{Exercise}\label{ex:loop}
-Suppose $\gamma\:[a,b]\to \mathbb{R}^3$ is a smooth regular loop with curvature at most~1.
+Suppose $\gamma\:[a,b]\to \mathbb{R}^3$ is a smooth loop with curvature at most~1.
 Show that 
 \[\length\gamma\ge2\cdot\pi.\]
 

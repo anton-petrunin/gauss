@@ -85,7 +85,7 @@ Without loss of generality, we may assume that $x(0)\z=y(0)=0$.
 Note that $x(t)\ge 0$ for any $t$ therefore $x'(0)=0$.
 The same way we get that $y'(0)\z=0$.
 That is, $\beta'(0)=0$;
-so $L$ does not admit a smooth \emph{regular} parametrization.
+so $L$ does not admit a smooth \textit{regular} parametrization.
 
 \parbf{\ref{ex:cycloid}.}
 Apply the definitions.
@@ -124,7 +124,7 @@ Find the gradients $\nabla f$ and $\nabla h$ for the functions
 \end{align*}
 Show that for $\ell\ne 0$,
 the gradients are linearly dependent only on the $x$-axis.
-Conclude that for $\ell\ne\pm 1$ each connected component of the set of solutions is a smooth regular curve.
+Conclude that for $\ell\ne\pm 1$ each connected component of the set of solutions is a smooth curve.
 
 Show that 
 \begin{itemize}
@@ -539,7 +539,7 @@ Suppose $\length\gamma<2\cdot\pi$.
 Apply the bow lemma (\ref{lem:bow}) to $\gamma$ and an arc of the unit circle of the same length.
 
 \parbf{\ref{ex:bow-upper}.}
-Choose a smooth regular spherical curve $\alpha$ that runs near one point;
+Choose a smooth spherical curve $\alpha$ that runs near one point;
 for example, a small spherical circle centered at this point.
 Consider a curve $\tan$ that runs along $\alpha$ with speed $\kappa(s)$ at any $s\in [0,\ell]$.
 Show that a curve with tangent indicatrix $\tan$ solves the problem.
@@ -710,7 +710,7 @@ Part \ref{SHORT.ex:spherical-frenet:kur-tor} is proved by algebraic manipulation
 For \ref{SHORT.ex:spherical-frenet:f},
 use the Frenet formulas to show that $(\gamma+\tfrac1\kur\cdot \norm+\tfrac{\kur'}{\kur^2\cdot\tor}\cdot\bi)'=0$.
 
-(Part \ref{SHORT.ex:spherical-frenet:beta} implies that \textit{$\int\tfrac\tor\kur=0$ for any closed smooth regular spherical curve}.
+(Part \ref{SHORT.ex:spherical-frenet:beta} implies that \textit{$\int\tfrac\tor\kur=0$ for any closed smooth spherical curve}.
 In fact this property characterizes spheres and planes; the latter was proved by Beniamino Segre \cite{segre}.)
 
 \parbf{\ref{ex:cur+tor=helix}.} Use the second statement in \ref{ex:helix-torsion}.
@@ -1296,7 +1296,7 @@ then $p$ is an isolated point of the intersection $\Pi\cap\Sigma$.
 It follows that if $\gamma$ is a connected component of the intersection $\Pi\cap\Sigma$ that is not an isolated point,
 then $\Pi$ intersects $\Sigma$ \index{transversality}\emph{transversally} along $\gamma$;
 that is, $\T_p\Sigma\ne\Pi$ for any point $p \in \gamma$.
-Apply the implicit function theorem to show that $\gamma$ is a smooth regular curve.
+Apply the implicit function theorem to show that $\gamma$ is a smooth curve.
 
 Finally, observe that the curvature of $\gamma$ cannot be smaller than the normal curvature of $\Sigma$ in the same direction.
 Whence $\gamma$ has no points with vanishing curvature.
@@ -1476,7 +1476,7 @@ f(x,y)&=a(x)^2-b(x,y)^2=
 That is $f(x,y)=0$ if $a(x)\pm b(x,y) =0$.
 
 It remains to observe that the two functions $g_\pm(x,y)=a(x)\pm b(x,y)$ have distinct non-zero gradients at $0$.
-Therefore, each equation $a(x)\pm b(x,y) =0$ defines a smooth regular curve in a neighborhood of $p$;
+Therefore, each equation $a(x)\pm b(x,y) =0$ defines a smooth curve in a neighborhood of $p$;
 see Section~\ref{sec:implicit-curves}.
 
 \parbf{\ref{ex:proper-saddle}.} Look at the pseudosphere described in \ref{ex:principal-revolution:pseudosphere}.
@@ -1515,7 +1515,7 @@ Show that there is a point $p\in\Sigma$ with a vertical tangent plane;
 that is, $\T_p\Sigma$ is perpendicular to the $(x,y)$-plane.
 
 Let $\Gamma_p$ be the connected component of $p$ in the intersection of $\Sigma$ and the affine tangent plane $\T_p\Sigma$.
-Use \ref{ex:crosss} to show that $\Gamma_p$ is a union of smooth regular curves that can cross each other transversely.
+Use \ref{ex:crosss} to show that $\Gamma_p$ is a union of smooth curves that can cross each other transversely.
 Moreover, two of these curves pass thru $p$, and $\Gamma_p$ does not bound a compact region on~$\Sigma$.
 
 Show that $\Gamma_p$ must have at least 4 ways to escape to infinity.
@@ -1706,6 +1706,12 @@ We may assume that both $\alpha$ and $\beta$ have arc-length parametrization.
 By \ref{prop:gamma''}, $\alpha$ and $\beta$ are geodesics.
 Since $\alpha$ and $\beta$ have a common subarc, they share one point and velocity vector at this point;
 by \ref{prop:geod-existence} $\alpha$ coincides with $\beta$ --- a contradiction.
+
+\parbf{\ref{ex:round-sphere}.}
+Argue as in \ref{ex:const-dist} to show that all geodesics in $\Sigma$ have the constant curvature.
+Conclude that $\Sigma$ has constant normal curvature and argue as in \ref{ex:normal-curvature=const}.
+
+\parit{Source:} The problem is due to Ali Taghavi \cite{taghavi}.
 
 \parbf{\ref{ex:milka}.}
 Let $W$ be the closed region outside~$\Sigma$.

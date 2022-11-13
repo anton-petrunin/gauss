@@ -6,7 +6,7 @@ In this chapter, we show how to use this idea to control the global behavior of 
 
 \section{Cooriented tangent curves}
 
-Suppose $\gamma_1$ and $\gamma_2$ are smooth regular plane curves.
+Suppose $\gamma_1$ and $\gamma_2$ are smooth plane curves.
 Recall that the curves $\gamma_1$ and $\gamma_2$ are tangent at the  time parameters $t_1$ and $t_2$
 if $\gamma_1(t_1)=\gamma_2(t_2)$
 and they share the tangent line at these time parameters.
@@ -27,7 +27,7 @@ If we reverse the parametrization of one of the curves, then cooriented curves b
 
 \section{Supporting curves}
 
-Let $\gamma_1$ and $\gamma_2$ be two smooth regular plane curves that share a point 
+Let $\gamma_1$ and $\gamma_2$ be two smooth plane curves that share a point 
 \[p=\gamma_1(t_1)=\gamma_2(t_2);\] 
 we assume that $p$ is not an endpoint for both.
 Suppose that there is $\epsilon>0$ such that the arc $\gamma_2|_{[t_2-\epsilon, t_2+\epsilon]}$ lies in a closed plane region $R$ with the arc $\gamma_1|_{[t_1-\epsilon, t_1+\epsilon]}$ in its boundary,
@@ -57,7 +57,7 @@ It follows that $\gamma_1$ cannot locally support $\gamma_2$ at the time paramet
 Whence we get the following:
 
 \begin{thm}{Definition-Observation}
-Let $\gamma_1$ and $\gamma_2$ be two smooth regular plane curves.
+Let $\gamma_1$ and $\gamma_2$ be two smooth plane curves.
 Suppose $\gamma_1$ locally supports $\gamma_2$ at time parameters $t_1$ and $t_2$.
 Then $\gamma_1$ is tangent to $\gamma_2$ at $t_1$ and $t_2$.
 
@@ -65,13 +65,13 @@ In such a case, if the curves are cooriented, and the region $R$ in the definiti
 $\gamma_1$ supports $\gamma_2$ from the left (respectively right).
 \end{thm}
 
-We say that a smooth regular plane curve $\gamma$ has a \index{vertex of  curve}\emph{vertex} at $s$
+We say that a smooth plane curve $\gamma$ has a \index{vertex of  curve}\emph{vertex} at $s$
 if the signed curvature function is critical at $s$;
 that is, if $\skur'(s)_\gamma=0$.
 If in addition to that, $\gamma$ is simple, we could say that the point $p=\gamma(s)$ is a vertex of~$\gamma$.
 
 \begin{thm}{Exercise}\label{ex:vertex-support}
-Assume the osculating circle $\sigma_s$ of a smooth regular plane curve $\gamma$ locally supports $\gamma$ at $p=\gamma(s)$.
+Assume the osculating circle $\sigma_s$ of a smooth plane curve $\gamma$ locally supports $\gamma$ at $p=\gamma(s)$.
 Show that $p$ is a vertex of~$\gamma$.
 \end{thm}
 
@@ -80,7 +80,7 @@ Show that $p$ is a vertex of~$\gamma$.
 The following proposition resembles the second derivative test. 
 
 \begin{thm}{Proposition}\label{prop:supporting-circline}
-Let $\gamma_1$ and $\gamma_2$ be two smooth regular plane curves.
+Let $\gamma_1$ and $\gamma_2$ be two smooth plane curves.
 
 Suppose $\gamma_1$ locally supports $\gamma_2$ from the left (right) at the time parameters $t_1$ and $t_2$.
 Then 
@@ -116,24 +116,24 @@ Show that $\gamma_0$ locally supports $\gamma_1$ from the right at~$p$.
 Give an example of two simple curves $\gamma_0$ and $\gamma_1$ satisfying the above condition such that $\gamma_0$ is closed, but does not support $\gamma_1$ at $p$ globally.
 \end{thm}
 
-According to \ref{thm:DNA}, for any closed smooth regular curve that runs in a unit disc, the average of its absolute curvature is at least~1; in particular, there is a point where the absolute curvature is at least~1.
+According to \ref{thm:DNA}, for any closed smooth curve that runs in a unit disc, the average of its absolute curvature is at least~1; in particular, there is a point where the absolute curvature is at least~1.
 The following exercise says that this statement also holds for loops.
 
 \begin{thm}{Exercise}\label{ex:in-circle}
-Assume a smooth regular plane loop $\gamma$ runs in a unit disc.
+Assume a smooth plane loop $\gamma$ runs in a unit disc.
 Show that there is a point on $\gamma$ with absolute curvature at least~1.
 \end{thm}
 
 
 \begin{thm}{Exercise}\label{ex:between-parallels-1}
-Assume a closed smooth regular plane curve $\gamma$ runs between two parallel lines at distance 2 from each other.
+Assume a closed smooth plane curve $\gamma$ runs between two parallel lines at distance 2 from each other.
 Show that there is a point on $\gamma$ with absolute curvature at least~1.
 
-Try to prove the same for a smooth regular plane loop.
+Try to prove the same for a smooth plane loop.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:in-triangle}
-Assume a closed smooth regular plane curve $\gamma$ runs inside a triangle $\triangle$ with inradius~1; that is, the circle tangent to all three sides of $\triangle$ has radius~1. 
+Assume a closed smooth plane curve $\gamma$ runs inside a triangle $\triangle$ with inradius~1; that is, the circle tangent to all three sides of $\triangle$ has radius~1. 
 Show that there is a point on $\gamma$ with absolute curvature at least~$1$.
 \end{thm}
 
@@ -151,7 +151,7 @@ The three exercises above are baby cases of \ref{ex:moon-rad}; try to find a dir
 \begin{thm}{Exercise}\label{ex:lens}
 Let $F$ be a plane figure bounded by two circle arcs $\sigma_1$ and $\sigma_2$ of signed curvature 1 that run from $x$ to~$y$.
 Suppose $\sigma_1$ is shorter than~$\sigma_2$.
-Assume a smooth regular arc $\gamma$ runs in $F$ and has both endpoints on $\sigma_1$.
+Assume a smooth arc $\gamma$ runs in $F$ and has both endpoints on $\sigma_1$.
 Show that the absolute curvature of $\gamma$ is at least 1 at some parameter value.
 
 \end{thm}
@@ -169,7 +169,7 @@ Then $F$ is convex if and only if the signed curvature of $\gamma$ does not chan
 
 
 \begin{thm}{Lens lemma}\label{lem:lens}
-Let $\gamma$ be a smooth regular simple plane curve that runs from $x$ to~$y$.
+Let $\gamma$ be a smooth simple plane curve that runs from $x$ to~$y$.
 Assume $\gamma$ runs on the right side (left side) of the oriented line $xy$, and only its endpoints $x$ and $y$ lie on the line.
 Then $\gamma$ has a point with positive (respectively negative) signed curvature.
 \end{thm}
@@ -254,7 +254,7 @@ Applying the lens lemma, we get that the arcs $\gamma_1$ and $\gamma_2$ contain 
 \qeds
 
 \begin{thm}{Exercise}\label{ex:convex small}
-Suppose $\gamma$ is a smooth regular simple closed plane curve of diameter larger than~2.
+Suppose $\gamma$ is a smooth simple closed plane curve of diameter larger than~2.
 Show that $\gamma$ has a point with absolute curvature less than~1.
 \end{thm}
 
@@ -266,13 +266,13 @@ Show that $\gamma$ has a point with absolute curvature less than~1.
 \end{wrapfigure}
 
 \begin{thm}{Exercise}\label{ex:convex-lens}
-Let $\gamma$ be a simple smooth regular plane arc with endpoints $p$ and~$q$.
+Let $\gamma$ be a simple smooth plane arc with endpoints $p$ and~$q$.
 Suppose that $\gamma$ has nonnegative signed curvature and $|p-q|$ is the maximal distance between points on~$\gamma$.
 Show that the arc $\gamma$ and its chord $[p,q]$ bound a convex figure of the plane.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:diameter-of-simple-curve}
-Show that any simple smooth regular plane curve $\gamma$ with curvature at least 1 has diameter at most 2.
+Show that any simple smooth plane curve $\gamma$ with curvature at least 1 has diameter at most 2.
 
 Try to prove that $\gamma$ lies in a unit disc.
 \end{thm}
@@ -292,7 +292,7 @@ For convex curves, this result was known earlier \cite[\S 24]{blaschke}.
 \end{wrapfigure}
 
 \begin{thm}{Theorem}\label{thm:moon-orginal}
-Assume $\gamma$ is a simple smooth regular plane loop with absolute curvature bounded by~1.
+Assume $\gamma$ is a simple smooth plane loop with absolute curvature bounded by~1.
 Then it surrounds a unit disc.
 \end{thm}
 
@@ -313,7 +313,7 @@ However, as one may see from the spinner-like example on the diagram it does not
 }
 
 \begin{thm}{Key lemma}\label{thm:moon}
-Assume $\gamma$ is a simple smooth regular plane loop.
+Assume $\gamma$ is a simple smooth plane loop.
 Then at one point of $\gamma$ (distinct from its base), its osculating circle $\sigma$ globally supports $\gamma$ from the inside.
 \end{thm}
 
@@ -395,7 +395,7 @@ It follows that $q_\infty =p_\infty$ --- a contradiction.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:moon-rad}
-Assume a closed smooth regular curve $\gamma$ lies in a figure $F$ bounded by a closed simple plane curve.
+Assume a closed smooth curve $\gamma$ lies in a figure $F$ bounded by a closed simple plane curve.
 Suppose $R$ is the maximal radius of discs that lie in~$F$.
 Show that the absolute curvature of $\gamma$ is at least $\tfrac1R$ at some parameter value.
 \end{thm}
@@ -414,17 +414,17 @@ Show that the absolute curvature of $\gamma$ is at least $\tfrac1R$ at some para
 \vskip0mm
 \end{wrapfigure}
 
-Recall that a vertex of a smooth regular curve is defined as a critical point of its signed curvature;
+Recall that a vertex of a smooth curve is defined as a critical point of its signed curvature;
 in particular, any local minimum (or maximum) of the signed curvature is a vertex.
 For example, every point of a circle is a vertex.
 
 \begin{thm}{Four-vertex theorem}\label{thm:4-vert}
-Any smooth regular simple closed plane curve has at least four vertices.
+Any smooth simple closed plane curve has at least four vertices.
 \end{thm}
 
 }
 
-Evidently, any closed smooth regular curve has at least two vertices --- where the minimum and the maximum of the curvature are attained.
+Evidently, any closed smooth curve has at least two vertices --- where the minimum and the maximum of the curvature are attained.
 On the diagram the vertices are marked;
 the first curve has one self-intersection and exactly two vertices;
 the second curve has exactly four vertices and no self-intersections.
@@ -436,7 +436,7 @@ Our proof of the following stronger statement is based on the key lemma in the p
 For more on the subject, see \cite{petrunin-zamora:moon} and the references therein.
 
 \begin{thm}{Theorem}\label{thm:4-vert-supporting}
-Any smooth regular simple closed plane curve is globally supported by its osculating circle at least at 4 distinct points;
+Any smooth simple closed plane curve is globally supported by its osculating circle at least at 4 distinct points;
 two from the inside and two from the outside.
 \end{thm}
 
@@ -489,14 +489,14 @@ Therefore, these two circlines correspond to the osculating circlines supporting
 \end{wrapfigure}
 
 \begin{thm}{Exercise}\label{ex:2-squares}
-Assume that a smooth regular simple closed plane curve \(\gamma\) is contained in a square with side 2 and surrounds a square with diagonal~2.
+Assume that a smooth simple closed plane curve \(\gamma\) is contained in a square with side 2 and surrounds a square with diagonal~2.
 Show that \(\gamma\) contains a point with curvature~1.
 \end{thm}
 
 }
 
 \begin{thm}{Exercise}\label{ex:moon-area}
-Suppose a smooth regular simple plane loop $\gamma$ bounds area $a$.
+Suppose a smooth simple plane loop $\gamma$ bounds area $a$.
 Show that $\gamma$ has curvature $\sqrt{\pi/a}$ at some point.
 \end{thm}
 
@@ -508,18 +508,18 @@ Show that $\gamma$ has curvature $\sqrt{\pi/a}$ at some point.
 \end{wrapfigure}
 
 \begin{thm}{Advanced exercise}\label{ex:curve-crosses-circle}
-Suppose $\gamma$ is a closed simple smooth regular plane curve, and $\sigma$ is a circle.
+Suppose $\gamma$ is a closed simple smooth plane curve, and $\sigma$ is a circle.
 Assume $\gamma$ crosses $\sigma$ at the points $p_1,\dots,p_{2{\cdot} n}$, and these points appear in the same cycle order on $\gamma$ and on $\sigma$.
 Show that $\gamma$ has at least $2\cdot n$ vertices.
 
-Construct an example of a closed simple smooth regular plane curve $\gamma$ with only 4 vertices that crosses a given circle at arbitrarily many points. 
+Construct an example of a closed simple smooth plane curve $\gamma$ with only 4 vertices that crosses a given circle at arbitrarily many points. 
 \end{thm}
 
 %The following exercise is a version of four-vertex theorem for space curves without parallel tangents;
 %they exist by \ref{ex:no-parallel-tangents}.
 
 %\begin{thm}{Advanced exercise}\label{ex:4x0-torsion}
-%Let $\gamma$ be a closed smooth regular space curve that has no pair of points with parallel tangent lines.
+%Let $\gamma$ be a closed smooth space curve that has no pair of points with parallel tangent lines.
 %Assume the curvature of $\gamma$ does not vanish.
 %Show that $\gamma$ has four points with zero torsion.
 %\end{thm}

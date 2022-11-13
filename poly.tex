@@ -37,9 +37,9 @@ this way we obtain a closed curve.
 If $\alpha'(b)$ and $\beta'(b)$ are defined, then the angle $\theta\z=\measuredangle(\alpha'(b),\beta'(b))$ is called the \index{external angle}\emph{external angle} of $\gamma$ at time~$b$.
 If $\theta=\pi$, then we say that $\gamma$ has a \index{cusp}\emph{cusp} at  time~$b$.
 
-A space curve $\gamma$ is called \index{piecewise smooth regular curve}\emph{piecewise smooth and regular} if it can be presented as an iterated concatenation of a finite number of smooth regular curves; if $\gamma$ is closed, then the  concatenation is assumed to be cyclic.
+A space curve $\gamma$ is called \index{piecewise smooth curve}\emph{piecewise smooth} if it can be presented as an iterated concatenation of a finite number of smooth curves; if $\gamma$ is closed, then the  concatenation is assumed to be cyclic.
 
-If $\gamma$ is a concatenation of smooth regular arcs $\gamma_1,\dots,\gamma_n$, then the total curvature of $\gamma$ is defined as a sum of the total curvatures of $\gamma_i$ and the external angles;
+If $\gamma$ is a concatenation of smooth arcs $\gamma_1,\dots,\gamma_n$, then the total curvature of $\gamma$ is defined as a sum of the total curvatures of $\gamma_i$ and the external angles;
 that is, 
 \[\tc\gamma=\tc{\gamma_1}+\dots+\tc{\gamma_n}+\theta_1+\dots+\theta_{n-1}\]
 where $\theta_i$ is the external angle at the joint between $\gamma_i$ and $\gamma_{i+1}$.
@@ -56,7 +56,7 @@ where $\theta_n$ is the external angle at the joint between $\gamma_n$ and $\gam
 \includegraphics{mppics/pic-354}
 \end{wrapfigure}
 
-In particular, for a smooth regular loop $\gamma\:[a,b] \z\to \mathbb{R}^3$, the total curvature of the corresponding closed curve $\hat\gamma$ is defined as
+In particular, for a smooth loop $\gamma\:[a,b] \z\to \mathbb{R}^3$, the total curvature of the corresponding closed curve $\hat\gamma$ is defined as
 \[\tc{\hat\gamma}\df\tc\gamma + \theta,\]
 where $\theta=\measuredangle(\gamma'(a),\gamma'(b))$.
 
@@ -65,14 +65,14 @@ where $\theta=\measuredangle(\gamma'(a),\gamma'(b))$.
 \section{Generalized Fenchel's theorem}
 
 \begin{thm}{Theorem}\label{thm:gen-fenchel}
-Let $\gamma$ be a closed piecewise smooth regular space curve.
+Let $\gamma$ be a closed piecewise smooth space curve.
 Then 
 \[\tc\gamma\ge2\cdot\pi.\]
 
 \end{thm}
 
 \parit{Proof.}
-Suppose $\gamma$ is a cyclic concatenation of $n$ smooth regular arcs $\gamma_1,\dots,\gamma_n$.
+Suppose $\gamma$ is a cyclic concatenation of $n$ smooth arcs $\gamma_1,\dots,\gamma_n$.
 Denote by $\theta_1,\dots,\theta_n$ its external angles.
 We need to show that \index{10phi@$\tc{\gamma}$}
 \[\tc{\gamma_1}+\dots+\tc{\gamma_n}+\theta_1+\dots+\theta_n\ge2\cdot\pi.\eqlbl{eq:gen-fenchel}\]
@@ -93,7 +93,7 @@ By \ref{obs:tantrix}, the statement follows.
 
 \begin{thm}{Chord lemma}\label{lem:chord}
 Let $\gamma\:[a,b]\z\to\mathbb{R}^3$
-be a smooth regular arc, and
+be a smooth arc, and
 $\ell$ be its chord.
 Assume $\gamma$ meets $\ell$ at angles $\alpha$ and $\beta$ at $\gamma (a)$ and $\gamma (b)$, respectively;
 that is,
@@ -126,14 +126,14 @@ hence \ref{tc>a+b} follows.
 Show that the estimate in the chord lemma is optimal.
 
 More precisely, given two points $p, q$ and two unit vectors $\vec u,\vec v$ in $\mathbb{R}^3$,
-construct a smooth regular curve $\gamma$ that starts at $p$ in the direction $\vec u$ and ends at $q$ in the direction $\vec v$ such that 
+construct a smooth curve $\gamma$ that starts at $p$ in the direction $\vec u$ and ends at $q$ in the direction $\vec v$ such that 
 $\tc\gamma$ is arbitrarily close to $\measuredangle(\vec w,\vec u)+\measuredangle(\vec w,\vec v)$, where $\vec w=q-p$.
 
 \end{thm}
 
 \section{Polygonal lines} 
 
-Polygonal lines are a particular case of piecewise smooth regular curves;
+Polygonal lines are a particular case of piecewise smooth curves;
 each arc in its concatenation is a line segment.
 Since the curvature of a line segment vanishes, the total curvature of a polygonal line is the sum of its external angles.
 
@@ -148,7 +148,7 @@ Use this statement to show that any closed polygonal line has curvature at least
 
 
 \begin{thm}{Proposition}\label{prop:inscribed-total-curvature}
-Assume a polygonal line $p_0\dots p_n$ is inscribed in a smooth regular curve~$\gamma$.
+Assume a polygonal line $p_0\dots p_n$ is inscribed in a smooth curve~$\gamma$.
 Then 
 \[\tc\gamma\ge \tc{p_0\dots p_n}.\]
 Moreover, if $\gamma$ is closed, we allow the inscribed polygonal line $p_0\dots p_n$ to be closed.
@@ -207,10 +207,10 @@ If $\gamma$ is an arc, the argument is analogous:
 \begin{thm}{Exercise}\label{ex:sef-intersection}
 
 \begin{subthm}{ex:sef-intersection:<2pi}
-Draw a smooth regular plane curve $\gamma$ that has a self-intersection and such that $\tc\gamma<2\cdot\pi$.
+Draw a smooth plane curve $\gamma$ that has a self-intersection and such that $\tc\gamma<2\cdot\pi$.
 \end{subthm}
 
-\begin{subthm}{ex:sef-intersection:>pi} Show that if a smooth regular curve $\gamma\:[a,b]\to\mathbb{R}^3$ has a self-intersection, then $\tc\gamma>\pi$.
+\begin{subthm}{ex:sef-intersection:>pi} Show that if a smooth curve $\gamma\:[a,b]\to\mathbb{R}^3$ has a self-intersection, then $\tc\gamma>\pi$.
 \end{subthm}
 
 \end{thm}
@@ -238,7 +238,7 @@ according to the exercise, the latter implies the so-called \index{F\'ary--Milno
 The following exercise states that the inequality in \ref{prop:inscribed-total-curvature} is optimal.
 
 \begin{thm}{Exercise}\label{ex:total-curvature=}
-Show that for any regular smooth space curve $\gamma$ we have 
+Show that for any smooth space curve $\gamma$ we have 
 \[\tc\gamma=\sup\{\tc\beta\},\]
 where the least upper bound is taken over all polygonal lines~$\beta$ inscribed in $\gamma$
 (if $\gamma$ is closed, then we assume so is $\beta$).
@@ -255,7 +255,7 @@ a good survey on the subject is written by John Sullivan \cite{sullivan-curves}.
 
 \begin{thm}{Proposition}\label{prop:fenchel=}
 The equality case in Fenchel's theorem holds only for convex plane curves;
-that is, the total curvature of a smooth regular space curve $\gamma$ equals $2\cdot\pi$ if and only if $\gamma$ is a convex plane curve.
+that is, the total curvature of a smooth space curve $\gamma$ equals $2\cdot\pi$ if and only if $\gamma$ is a convex plane curve.
 \end{thm}
 
 \parit{Proof of \ref{prop:fenchel=}.}
@@ -331,7 +331,7 @@ we get that $\gamma$ is convex as well.
 
 \section{Genralized DNA theorem}\label{sec:DNA-poly}
 
-Recall that DNA theorem (\ref{thm:DNA}) states that \textit{total curvature of closed smooth regular curve in a unit ball cannot be smaller than its length}.
+Recall that DNA theorem (\ref{thm:DNA}) states that \textit{total curvature of closed smooth curve in a unit ball cannot be smaller than its length}.
 In this section, we prove the following polygonal analog of DNA theorem.
 
 \begin{thm}{Genralized DNA theorem}\label{thm:DNA-poly}

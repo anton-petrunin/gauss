@@ -3051,6 +3051,16 @@ label.bot(btex $p$ etex, origin);
 label.rt(btex $\gamma$ etex, (1,1)*u);
 endfig;
 
+beginfig(140) 
+save u,p;
+path p[];
+u:=1cm;
+
+p0=(1,0)*u--(0,0)*u--(0,1)*u;
+
+draw p0;
+endfig;
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 beginfig(220);

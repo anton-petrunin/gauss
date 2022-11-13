@@ -9,7 +9,7 @@ it will not be used in the sequel.
 
 \section{Frenet frame}\label{sec:frenet-frame}
 
-Let $\gamma$ be a smooth regular space curve.
+Let $\gamma$ be a smooth space curve.
 Without loss of generality, we may assume that $\gamma$ has an arc-length parametrization,
 so the velocity vector $\tan(s)=\gamma'(s)$ is unit.
 
@@ -156,12 +156,12 @@ $\bi=\tan\times \norm$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:torsion=0}
-Let $\gamma$ be a regular space curve with nonvanishing curvature.
+Let $\gamma$ be a smooth space curve with nonvanishing curvature.
 Show that $\gamma$ lies in a plane if and only if its torsion vanishes.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:+B}
-Let $\gamma_0\:[a,b]\to \mathbb{R}^3$ be a smooth regular space curve with Frenet frame $\tan,\norm,\bi$.
+Let $\gamma_0\:[a,b]\to \mathbb{R}^3$ be a smooth space curve with Frenet frame $\tan,\norm,\bi$.
 Consider the curve $\gamma_1(t)=\gamma_0(t)+\bi(t)$.
 Show that
 \[\length\gamma_1\ge\length\gamma_0.\]
@@ -169,7 +169,7 @@ Show that
 
 
 \begin{thm}{Exercise}\label{ex:frenet}
-Suppose $\gamma$ is a smooth regular space curve.
+Suppose $\gamma$ is a smooth space curve.
 Let $\kur$ and $\tor$ be its curvature and torsion,
 and $\tan,\norm,\bi$ be its Frenet frame.
 Show that 
@@ -181,18 +181,18 @@ Show that
 \end{thm}
 
 \begin{thm}{Advanced exercise}\label{ex:torsion-indicatrix}
-Let $\gamma$ be a closed smooth regular space curve with positive torsion.
+Let $\gamma$ be a closed smooth space curve with positive torsion.
 Show that the tangent indicatrix of $\gamma$ has a self-intersection.
 \end{thm}
 
 
 \section{Curves of constant slope}
 
-We say that a smooth regular space curve $\gamma$ has \index{constant slope}\emph{constant slope} if its velocity vector makes a constant angle with a fixed direction.
+We say that a smooth space curve $\gamma$ has \index{constant slope}\emph{constant slope} if its velocity vector makes a constant angle with a fixed direction.
 The following theorem was proved by Michel Ange Lancret~\cite{lancret}.
 
 \begin{thm}{Theorem}\label{thm:const-slope}
-Let $\gamma$ be a smooth regular curve;
+Let $\gamma$ be a smooth curve;
 denote by $\kur$ and $\tor$ its curvature and torsion.
 Suppose $\kur(s)>0$ for all~$s$.
 Then $\gamma$ has a constant slope if and only if the ratio $\tfrac\tor\kur$ is constant.
@@ -201,7 +201,7 @@ Then $\gamma$ has a constant slope if and only if the ratio $\tfrac\tor\kur$ is 
 The following exercise will guide you thru the proof of the theorem. 
 
 \begin{thm}{Exercise}\label{ex:lancret}
-Let $\gamma$ be a smooth regular space curve with nonvanishing curvature, $\tan,\norm,\bi$ 
+Let $\gamma$ be a smooth space curve with nonvanishing curvature, $\tan,\norm,\bi$ 
 its Frenet frame, and $\kur$, $\tor$ its curvature and torsion.
 
 
@@ -234,7 +234,7 @@ Show that the evolvent of a constant slope curve is a plane curve.
 \section{Spherical curves}
 
 \begin{thm}{Theorem}
-Suppose $\gamma$ is a smooth regular space curve with nonvanishing torsion $\tor$ and (therefore) curvature $\kur$.
+Suppose $\gamma$ is a smooth space curve with nonvanishing torsion $\tor$ and (therefore) curvature $\kur$.
 Then $\gamma$ lies in a unit sphere if and only if 
 the following identity holds true:
 \[\left|\frac{\kur'}{\tor}\right|=\kur\cdot\sqrt{\kur^2-1}.\]
@@ -410,7 +410,7 @@ for some constants $a$ and~$b$.
 
 
 \begin{thm}{Advanced exercise}\label{ex:const-dist}
-Let $\gamma$ be a smooth regular space curve such that the distance $|\gamma(t)-\gamma(t+\ell)|$ depends only on $\ell$.
+Let $\gamma$ be a smooth space curve such that the distance $|\gamma(t)-\gamma(t+\ell)|$ depends only on $\ell$.
 Show that $\gamma$ is a helix, possibly degenerate to a line or a circle.
 \end{thm}
 

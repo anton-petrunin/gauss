@@ -13,7 +13,7 @@ To learn more about this problem check the reference given after Exercise~\ref{e
 
 The notion of curve comes with many variations.
 Some of them are described by nouns (path, arc, and so on)
-others by adjectives (closed, open, proper, simple, smooth, regular, and so on).
+others by adjectives (closed, open, proper, simple, smooth, and so on).
 The following diagram gives an idea about four of these variations.
 
 \vskip-0mm
@@ -135,15 +135,25 @@ A parametrized space curve can be described by its coordinate functions
 Plane curves can be considered as a special case of space curves with $z(t)\equiv 0$.
 
 Recall that a real-to-real function is called \index{smooth!function}\emph{smooth} if its derivatives of all orders are defined everywhere in the domain of definition.  
-If each of the coordinate functions $x(t), y(t)$, and $z(t)$ of a space curve $\gamma$ are smooth, then the parametrized curve is called \index{smooth!curve}\emph{smooth}.
+If each of the coordinate functions $x(t), y(t)$, and $z(t)$ are smooth, then the parametrization is called 
+\index{smooth!parametrization}\emph{smooth}.
 
 If the \index{velocity vector}\emph{velocity vector} 
 \[\gamma'(t)=(x'(t),y'(t),z'(t))\] 
-does not vanish at any point, then the parametrized curve $\gamma$ is called \index{regular!curve}\emph{regular}.\label{page:regular curve}
+does not vanish at any point, then the parametrization $\gamma$ is called \index{regular!parametrization}\emph{regular}.
 
-A simple space curve is called \index{smooth!curve}\emph{smooth} (respectively, {}\emph{regular}) if it admits a smooth (respectively, regular) parametrization.
-Regular smooth curves are among the main objects in differential geometry;
-colloquially, the term \index{smooth!curve}\emph{smooth curve} is often used as a shortcut for {}\emph{smooth regular curves}. 
+A parametrized curve is called \emph{smooth} if its parametrization is smooth and regular.
+A simple space curve is called \index{smooth!curve}\emph{smooth} if it admits a regular smooth parametrization.
+Pedantically, they could be called \emph{regular smooth curve}. 
+Smooth curves are among the main objects in differential geometry.
+
+The following exercise shows that curves with smooth parametrizations might have corners, so they do not look smooth.
+
+\begin{wrapfigure}{o}{15 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-140}
+\end{wrapfigure}
 
 \begin{thm}{Exercise}\label{ex:L-shape}
 Recall that (see Section \ref{sec:analysis}) that the following function is smooth: 
@@ -155,17 +165,18 @@ Recall that (see Section \ref{sec:analysis}) that the following function is smoo
 \end{cases}
 \]
 
-Show that $\alpha(t)=(f(t),f(-t))$ gives a smooth parametrization of a simple curve formed by the union of two half-axis in the plane.
+Show that $\alpha(t)=(f(t),f(-t))$ gives a smooth parametrization of the curve shown on the diagram;
+it is a simple curve formed by the union of two half-axis in the plane.
 
 Show that any smooth parametrization of this curve has a vanishing velocity vector at the origin.
-Conclude that this curve is not regular;
+Conclude that this curve is not smooth;
 that is, it does not admit a regular smooth parametrization.
 \end{thm}
 
 
 \begin{thm}{Exercise}\label{ex:cycloid}
 Describe the set of real numbers $\ell$
-such that the plane curve $\gamma_\ell (t)= (t+\ell \cdot \sin t,\ell \cdot \cos t)$, $t\in\mathbb{R}$ is
+such that the the parametrization $\gamma_\ell (t)= (t+\ell \cdot \sin t,\ell \cdot \cos t)$, $t\in\mathbb{R}$ is
 
 \begin{minipage}{.30\textwidth}
 \begin{subthm}{ex:cycloid:smooth}
@@ -194,20 +205,20 @@ Find a parametrization of the cubic parabola $y=x^3$ in the $(x,y)$-plane that i
 
 \section{Periodic parametrizations}
 
-Any smooth regular closed curve can be described by a {}\emph{periodic} parametrized curve $\gamma\: \mathbb{R}\to \spc{X}$;
+Any smooth closed curve can be described by a {}\emph{periodic} parametrized curve $\gamma\: \mathbb{R}\to \spc{X}$;
 that is, a curve such that $\gamma(t+\ell)=\gamma(t)$ for a fixed period $\ell>0$ and all~$t$.
 For example, the unit circle in the plane can be described by the $2{\cdot}\pi$-periodic parametrization $\gamma(t)=(\cos t,\sin t)$.
 
 {
 
 \begin{wrapfigure}{o}{17 mm}
-\vskip-2mm
+\vskip-4mm
 \centering
 \includegraphics{mppics/pic-51}
 \end{wrapfigure}
 
-Any smooth regular closed curve can be also described by a smooth regular loop.
-But in general, the closed curve described by a smooth regular loop might fail to be regular at its base; an example is shown on the diagram.
+Any smooth closed curve can be also described by a smooth loop.
+But in general, the closed curve described by a smooth loop might fail to be smooth at its base; an example is shown on the diagram.
 
 }
 
@@ -218,14 +229,14 @@ that is, all its partial derivatives are defined everywhere.
 Let $\gamma\subset \mathbb{R}^2$ be its level set described by  the equation $f(x,y)=0$.
 
 Assume $\gamma$ is connected.
-According to the implicit function theorem (\ref{thm:imlicit}), the set $\gamma$ is a smooth regular simple curve if $0$ is a \index{regular!value}\emph{regular value} of~$f$; that is, the gradient $\nabla_p f$ does not vanish at any point $p\in \gamma$.
+According to the implicit function theorem (\ref{thm:imlicit}), the set $\gamma$ is a smooth simple curve if $0$ is a \index{regular!value}\emph{regular value} of~$f$; that is, the gradient $\nabla_p f$ does not vanish at any point $p\in \gamma$.
 In other words, if $f(p)=0$, then   
 $f_x(p)\ne 0$ or $f_y(p)\ne 0$.%
 \footnote{Here $f_x$ is a shortcut notation for the partial derivative
 $\tfrac{\partial f}{\partial x}$.\index{10f@$f_x$}}
 
 The described condition is sufficient but \textit{not necessary}.
-For example, zero is \textit{not} a regular value the function $f(x,y)=y^2$, but the equation $f(x,y)=0$ describes a smooth regular curve --- the $x$-axis.
+For example, zero is \textit{not} a regular value the function $f(x,y)=y^2$, but the equation $f(x,y)=0$ describes a smooth curve --- the $x$-axis.
 
 Similarly, assume $(f,h)$ is a pair of smooth functions defined in $\mathbb{R}^3$.
 The system of equations
@@ -235,7 +246,7 @@ The system of equations
    h(x,y,z)=0
   \end{cases}
 \]
-defines a regular smooth space curve if the set $\gamma$ of solutions is connected, and $0$ is a regular value of the map $F\:\mathbb{R}^3\to\mathbb{R}^2$ defined by
+defines a smooth space curve if the set $\gamma$ of solutions is connected, and $0$ is a regular value of the map $F\:\mathbb{R}^3\to\mathbb{R}^2$ defined by
 \[F\:(x,y,z)\mapsto (f(x,y,z),h(x,y,z)).\]
 It means that the gradients $\nabla f$ and $\nabla h$ are linearly independent at any point $p\in \gamma$.
 In other words, the Jacobian matrix
@@ -257,7 +268,7 @@ However, when it comes to calculations, it is usually easier to work directly wi
 Consider the set in the plane described by the equation
 $y^2=x^3$.
 Is it a simple curve?
-Is it a smooth regular curve?
+Is it a smooth curve?
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:viviani}
@@ -268,7 +279,7 @@ x^2+y^2+z^2&=1
 \\
 x^2+\ell\cdot x+y^2&=0
 \end{cases}\]
-describes a smooth regular curve.
+describes a smooth curve.
 \end{thm}
 
 \section{Proper, closed, and open curves}\label{sec:proper-curves}

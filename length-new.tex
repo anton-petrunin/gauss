@@ -228,10 +228,10 @@ Note that a smooth space curve $\gamma(t)=(x(t),y(t),z(t))$ is an arc-length par
 that is, 
 \[|\gamma'(t)|=\sqrt{x'(t)^2+y'(t)^2+z'(t)^2}=1\]
 for all $t$; by that reason smooth curves equipped with an arc-length parametrization are also called \index{unit-speed curve}\emph{unit-speed curves}.
-Observe that smooth unit-speed curves are automatically regular (see \ref{sec:Smooth curves}).
+Observe that smooth unit-speed parametrizations are automatically regular (see \ref{sec:Smooth curves}).
 
 \begin{thm}{Proposition}\label{prop:arc-length-smooth}
-If $t\mapsto \gamma(t)$ is a smooth regular curve, 
+If $t\mapsto \gamma(t)$ is a smooth curve, 
 then its arc-length parametrization is also smooth and regular.
 Moreover, the arc-length parameter $s$ of $\gamma$ can be written as an integral
 \[s(t)=\int_{t_0}^t |\gamma'(\tau)|\cdot d\tau.\eqlbl{s(t)}\]
@@ -241,7 +241,7 @@ Most of the time we will use $s$ for an arc-length parameter of a curve.
 
 \parit{Proof.} The function $t\mapsto s(t)$ defined by \ref{s(t)} is a smooth increasing function.
 Furthermore, by the fundamental theorem of calculus, $s'(t)=|\gamma'(t)|$.
-Since $\gamma$ is regular, $s'(t)\ne0$ for any parameter value~$t$.
+Since $\gamma$ is smooth, $s'(t)\ne0$ for any parameter value~$t$.
 
 By the inverse function theorem (\ref{thm:inverse}), the inverse function $s^{-1}(t)$ is also smooth
 and $|(\gamma\circ s^{-1})'|\equiv1$.
@@ -256,7 +256,7 @@ by its arc-length.
 \end{thm}
 
 We will be interested in the properties of curves that are invariant under reparametrizations.
-Therefore, we can always assume that any given smooth regular curve comes with an arc-length parametrization.
+Therefore, we can always assume that any given smooth curve comes with an arc-length parametrization.
 A nice property of arc-length parametrizations is that they are almost canonical --- these parametrizations differ only by a sign and an additive constant.
 For that reason, it is easier to express parametrization-independent quantities.
 This observation will be used in the definitions of curvature and torsion.

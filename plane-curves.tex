@@ -77,7 +77,7 @@ They can be written in a matrix form as:
 \]
 
 \begin{thm}{Exercise}\label{ex:bike}
-Let $\gamma_0\:[a,b]\to\mathbb{R}^2$ be a smooth regular curve and $\tan$ its tangent indicatrix.
+Let $\gamma_0\:[a,b]\to\mathbb{R}^2$ be a smooth curve and $\tan$ its tangent indicatrix.
 Consider another curve $\gamma_1\:[a,b]\to\mathbb{R}^2$ defined by $\gamma_1(t)\df\gamma_0(t)+\tan(t)$.
 Show that
 
@@ -184,12 +184,12 @@ Note that if $\mathbb{I}=[a,b]$, then
 \[\tgc\gamma=\theta(b)-\theta(a),\eqlbl{eq:tsc-theta}\]
 where $\theta$ is as in \ref{cor:2D-angle}.
 
-If $\gamma$ is a piecewise smooth regular plane curve, then we define its total signed curvature as the sum of the total signed curvatures of its arcs plus the sum of the {}\emph{signed} external angles at its joints;
+If $\gamma$ is a piecewise smooth plane curve, then we define its total signed curvature as the sum of the total signed curvatures of its arcs plus the sum of the {}\emph{signed} external angles at its joints;
 they are positive where $\gamma$ turns left, negative where $\gamma$ turns right, and 0 where $\gamma$ goes straight.
 It is undefined if $\gamma$ turns exactly backwards;
 that is, if it has a cusp.
 
-In other words, if $\gamma$ is a concatenation of smooth regular arcs $\gamma_1,\dots,\gamma_n$, then 
+In other words, if $\gamma$ is a concatenation of smooth arcs $\gamma_1,\dots,\gamma_n$, then 
 \[\tgc\gamma=\tgc{\gamma_1}+\dots+\tgc{\gamma_n}+\theta_1+\dots+\theta_{n-1}\]
 where $\theta_i$ is the signed external angle at the joint between $\gamma_i$ and $\gamma_{i+1}$.
 If $\gamma$ is closed, then the concatenation is cyclic, and
@@ -198,7 +198,7 @@ where $\theta_n$ is the signed external angle at the joint between $\gamma_n$ an
 
 Since $\left|\int \skur(s)\cdot ds\right|\le \int|\skur(s)|\cdot ds$, we have
 \[|\tgc\gamma|\le \tc\gamma\eqlbl{eq:tsc-tc}\] 
-for any smooth regular plane curve $\gamma$;
+for any smooth plane curve $\gamma$;
 that is, the total signed curvature $\tgc{}$ cannot exceed the total curvature $\tc{}$ in absolute value.
 Note that the equality holds if and only if the signed curvature does not change the sign.
 
@@ -226,10 +226,10 @@ A family of \index{trochoid}\emph{trochoids} $\gamma_a\:[0,2\cdot\pi]\to \mathbb
 \end{thm}
 
 \begin{thm}{Proposition}\label{prop:total-signed-curvature}
-Any closed simple smooth regular plane curve $\gamma$ has total signed curvature  $\pm2\cdot\pi$; it is $+2\cdot\pi$
+Any closed simple smooth plane curve $\gamma$ has total signed curvature  $\pm2\cdot\pi$; it is $+2\cdot\pi$
 if the region bounded by $\gamma$ lies on the left from it and  $-2\cdot\pi$ otherwise.
 
-Moreover, the same statement holds for any simple closed piecewise smooth regular plane curve $\gamma$ if its total signed curvature is defined.
+Moreover, the same statement holds for any simple closed piecewise smooth plane curve $\gamma$ if its total signed curvature is defined.
 \end{thm}
 
 This proposition is called sometimes {}\emph{Umlaufsatz}; it is a differential-geometric analog of the theorem about the sum of the internal angles of a polygon (\ref{thm:sum=(n-2)pi}) which we use in the proof.
@@ -296,7 +296,7 @@ Therefore,
 &=2\cdot\pi.
 \end{aligned}\eqlbl{eq:delta=pi-alpha-beta-sum}\]
 
-The case of piecewise smooth regular curves is done the same way;
+The case of piecewise smooth curves is done the same way;
 we need to subdivide the arcs in the cyclic concatenation further to meet the requirement above, and, instead of equation \ref{eq:delta=pi-alpha-beta}, we have 
 \[\delta_i=\pi-\alpha_i-\beta_i-\theta_i,\]
 where $\theta_i$ is the signed external angle of $\gamma$ at $p_i$; it vanishes if the curve $\gamma$ is smooth at $p_i$.
@@ -317,7 +317,7 @@ Therefore, instead of equation \ref{eq:delta=pi-alpha-beta-sum}, we have
 \qedsf
 
 \begin{thm}{Exercise}\label{ex:zero-tsc}
-Draw a smooth regular closed plane curve $\gamma$ such that 
+Draw a smooth closed plane curve $\gamma$ such that 
 
 \begin{subthm}{ex:zero-tsc:0}
 $\tgc\gamma=0$;
@@ -334,12 +334,12 @@ $\tgc\gamma=2\cdot \pi$ and $\tc\gamma=4\cdot\pi$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:length'}
-Let $\gamma\:[a,b]\to\mathbb{R}$ be a smooth regular plane curve with Frenet frame $\tan,\norm$.
+Let $\gamma\:[a,b]\to\mathbb{R}$ be a smooth plane curve with Frenet frame $\tan,\norm$.
 Given a real parameter $\ell$, consider
-the curve $\gamma_\ell(t)\z=\gamma(t)+\ell\cdot\norm(t)$; it is called a \index{parallel curve}\emph{parallel curve} of $\gamma$ at signed distance~$\ell$.
+the curve $\gamma_\ell(t)\z=\gamma(t)\z+\ell\cdot\norm(t)$; it is called a \index{parallel!curve}\emph{parallel curve} of $\gamma$ at signed distance~$\ell$.
 
 \begin{subthm}{ex:length':reg}
-Show that $\gamma_\ell$ is a regular curve if $\ell\cdot \skur(t)\ne 1$ for all $t$, where $\skur(t)$ denotes the signed curvature of~$\gamma$.
+Show that the parametrization $\gamma_\ell$ is a regular if $\ell\cdot \skur(t)\ne 1$ for all $t$, where $\skur(t)$ denotes the signed curvature of~$\gamma$.
 \end{subthm}
  
 \begin{subthm}{ex:length':formula}
@@ -415,7 +415,7 @@ that is, $\rho(\ell)\z=o(\ell^2)$, where $\rho(\ell)$ denotes the distance from 
 The following exercise is recommended to the reader familiar with the notion of \index{inversion}\emph{inversion}.
 
 \begin{thm}{Advanced exercise}\label{ex:inverse}
-Suppose $\gamma$ is a smooth regular plane curve that does not pass thru the origin.
+Suppose $\gamma$ is a smooth plane curve that does not pass thru the origin.
 Let $\hat \gamma$ be the inversion of $\gamma$ with respect to a circle centered at the origin.
 Show that the osculating circline of $\hat\gamma$ at $s$ is the inversion of the osculating circline of $\gamma$ at~$s$.
 \end{thm}
@@ -436,7 +436,7 @@ and later rediscovered by Adolf Kneser \cite{kneser}.
 \end{wrapfigure}
 
 \begin{thm}{Lemma}\label{lem:spiral}
-Assume $\gamma$ is a smooth regular plane curve with strictly decreasing positive signed curvature. Then the osculating circles of $\gamma$ are nested; that is, if $\sigma_s$ denoted the osculating circle of $\gamma$ at $s$,
+Assume $\gamma$ is a smooth plane curve with strictly decreasing positive signed curvature. Then the osculating circles of $\gamma$ are nested; that is, if $\sigma_s$ denoted the osculating circle of $\gamma$ at $s$,
 then $\sigma_{s_0}$ lies in the open disc bounded by $\sigma_{s_1}$ for any $s_0<s_1$. \index{10sigma@$\sigma_s$}
 \end{thm}
 
@@ -504,7 +504,7 @@ in the proof, we showed that $(\tfrac1{\skur})'\cdot\norm$ is its velocity vecto
 
 
 \begin{thm}{Exercise}\label{ex:evolute}
-Let $\omega$ be the evolute of a regular smooth plane curve~$\gamma$.
+Let $\omega$ be the evolute of a smooth plane curve~$\gamma$.
 Suppose $\gamma$ has positive curvature and no vertices.
 Find the Frenet frame and curvature of \(\omega\) in terms of Frenet frame $(\tan,\norm)$ and curvature $\kappa$ of \(\gamma\).
 \end{thm}
@@ -515,7 +515,7 @@ then you will not be able to come back to the place you started.}
 
 
 \begin{thm}{Theorem}\label{thm:spiral}
-Assume $\gamma$ is a smooth regular plane curve with positive strictly monotone signed curvature. 
+Assume $\gamma$ is a smooth plane curve with positive strictly monotone signed curvature. 
 Then $\gamma$ is simple.
 \end{thm}
 
@@ -529,11 +529,11 @@ hence the result.\qeds
 
 \begin{thm}{Advanced exercise}\label{ex:3D-spiral}
 Show that a 3-dimensional analog of the theorem does not hold.
-That is, there are self-intersecting smooth regular space curves with strictly monotone curvature.
+That is, there are self-intersecting smooth space curves with strictly monotone curvature.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:double-tangent}
-Assume $\gamma$ is a smooth regular plane curve with positive strictly monotone signed curvature.
+Assume $\gamma$ is a smooth plane curve with positive strictly monotone signed curvature.
 
 \begin{subthm}{ex:double-tangent:a}Show that no line can be tangent to $\gamma$ at two distinct points.
 \end{subthm}
@@ -557,7 +557,7 @@ Note that part \ref{SHORT.ex:double-tangent:a} does not hold if we allow the cur
 }
 
 \begin{thm}{Advanced exercise}\label{ex:spherical-spiral}
-Show that a smooth regular spherical curve with nonvanishing torsion has no self-intersections.
+Show that a smooth spherical curve with nonvanishing torsion has no self-intersections.
 \end{thm}
 
 
