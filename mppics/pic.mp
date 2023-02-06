@@ -3667,7 +3667,7 @@ z.b=z.a rotated 90;
 z.c=z.a rotated 180;
 z.d=z.a rotated -90;
 z.shift=(2.6,0)*u;
-z.vshift=(0,-3.3)*u;
+z.vshift=(0,-2.5)*u;
 
 z.x=(.8,.3)*u;
 z.y=z.x yscaled -1;
