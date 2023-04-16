@@ -73,7 +73,7 @@ Analogously, the {}\emph{closed ball} is denoted as $\bar B[p,R]$ or $\bar B[p,R
 Let $\spc{X}$ be a metric space.
 
 \begin{subthm}{ex:B2inB1:a}
-Show that if $\bar B[p,2]\subset \bar B[q,1]$ for some points $p,q\in \spc{X}$, then $\bar B[p,2]\z=\bar B[q,1]$.
+Show that if $\bar B[p,2]\subset \bar B[q,1]$ for $p,q\in \spc{X}$, then $\bar B[p,2]\z=\bar B[q,1]$.
 \end{subthm}
 
 \begin{subthm}{ex:B2inB1:b} Construct a metric space $\spc{X}$ with two points $p$ and $q$ such that the strict inclusion
@@ -259,7 +259,7 @@ Then a diagonal of $P$ lies completely in~$P$.
 The {}\emph{measure} of angle with sides $[p,x]$ and $[p,y]$ will be denoted by $\measuredangle\hinge pxy$\index{10aab@$\measuredangle\hinge yxz$};
 it takes a value in the interval $[0,\pi]$.
 
-The following lemma is very simple and very useful.
+The following lemma is simple and useful.
 It says that the angle of a triangle monotonically depends on the opposite side, assuming we keep the other two sides fixed.
 It follows directly from the cosine rule.
 
@@ -449,7 +449,7 @@ The following theorem makes it possible to extend many statements about continuo
 \begin{thm}{Lusin's theorem}\label{thm:lusin}
 Let $\phi\:[a,b]\to \mathbb{R}$ be a measurable function.
 Then for any $\epsilon>0$, there is a continuous function $\psi_\epsilon\:[a,b]\to \mathbb{R}$ that coincides with $\phi$ outside a set of measure at most $\epsilon$.
-Moreover, if $\phi$ is bounded above and/or below by some constants, then we may assume that so is $\psi_\epsilon$.  
+Moreover, if $\phi$ is bounded above and/or below by constants, then we may assume that so is~$\psi_\epsilon$.  
 \end{thm}
 
 \subsection*{Uniform continuity and convergence}
@@ -488,7 +488,7 @@ Then any uniformly equicontinuous sequence of function $f_n\:\spc{X}\z\to \spc{Y
 
 \subsection*{Cutoffs and mollifiers}
 
-Here we construct examples of smooth functions that mimic the behavior of some model functions.
+Here we construct examples of smooth functions that mimic the behavior of certain model functions.
 These functions are used to smooth model objects keeping their shape nearly unchanged.
 
 As an example, consider the following functions
@@ -568,7 +568,7 @@ we assume the right-hand side is evaluated at $\bm{x}=(x_1,\dots,x_m)$.
 If the Jacobian matrix defines a surjective linear map $\mathbb{R}^m\to\mathbb{R}^n$ (that is, if $\rank(\Jac_{\bm{x}}\bm{f})=n$), then we say that 
 $\bm{x}$ is a \index{regular!point}\emph{regular point} of~$\bm{f}$.
 
-If, for some $\bm{y}\in \mathbb{R}^n$, each point $\bm{x}$ such that $\bm{f}(\bm{x})=\bm{y}$ is regular,
+If $\bm{x}$ is regular anytime $\bm{f}(\bm{x})=\bm{y}$,
 then we say that $\bm{y}$ is a \index{regular!value}\emph{regular value} of $\bm{f}$.
 The following lemma states that {}\emph{most} values of a smooth map are regular.
 
@@ -601,7 +601,7 @@ Let $\bm{f}=(f_1,\dots,f_n)\:\Omega\to\mathbb{R}^n$ be a smooth map
 defined on an open set $\Omega\subset \mathbb{R}^n$.
 Assume the Jacobian matrix
 $\Jac_{\bm{x}}\bm{f}$
-is invertible at some point $\bm{x}\in \Omega$.
+is invertible at $\bm{x}\in \Omega$.
 Then there is a smooth map $\bm{h}\:\Phi\to\mathbb{R}^n$ defined in an open neighborhood $\Phi$ of ${\bm{y}}\z=\bm{f}(\bm{x})$ that is a {}\emph{local inverse of $\bm{f}$ at $\bm{x}$};
 that is, there is a neighborhood $\Psi\ni \bm{x}$ such that
 $\bm{f}$ defines a bijection $\Psi\leftrightarrow \Phi$, and
@@ -622,7 +622,7 @@ M=\begin{pmatrix}
 \vdots & \ddots & \vdots\\
 \dfrac{\partial f_n}{\partial x_1} & \cdots & \dfrac{\partial f_n}{\partial x_n} \end{pmatrix}\]
 formed by the first $n$ columns of the Jacobian matrix.
-Assume $M$ is invertible at some point $\bm{x}=(x_1,\dots,x_n,y_1,\dots y_m)\in \Omega$, and $\bm{f}(\bm{x})=0$.
+Assume $M$ is invertible at $\bm{x}=(x_1,\dots,x_n,y_1,\dots y_m)\in \Omega$, and $\bm{f}(\bm{x})=0$.
 Then there is a neighborhood $\Psi\ni \bm{x}$
 and a smooth function $\bm{h}\:\mathbb{R}^m\to\mathbb{R}^n$ defined in a neighborhood $\Phi\ni 0$ such that
 for any $(x_1,\dots,x_n,y_1,\dots y_m)\z\in \Psi$, the equality
@@ -696,7 +696,7 @@ For any $x_0,x_1\in K$, we have
 
 \section{Ordinary differential equations}
 
-The following material is discussed at the very beginning of any course of ordinary differential equations; the classical book by Vladimir Arnold \cite{arnold} is one of our favorites.
+The following material is discussed at the beginning of any course of ordinary differential equations; the classical book by Vladimir Arnold \cite{arnold} is one of our favorites.
 
 
 \subsection*{Systems of the first order}

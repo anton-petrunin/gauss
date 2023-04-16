@@ -1,0 +1,381 @@
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+
+
+
+
+
+
+
+\begin{thm}{Advanced exercise}\label{ex:dist-to-bry}
+Suppose a smooth curve $\delta$ bounds a convex disc $\Delta$ in an open smooth surface $\Sigma$;
+that is, for any two points $x,y\in\Delta$, any shortest path $[x,y]_\Sigma$ lies in $\Delta$.
+
+Denote by $f\:\Sigma\to\mathbb{R}$ the intrinsic distance function to $\delta$;
+that is, 
+\[f(x)=\inf_{y\in\delta}\{\,\dist{x}{y}\Sigma\,\}.\]
+
+\begin{subthm}{ex:dist-to-bry:-}
+Show that if $\Sigma$ is simply-connected and $K_\Sigma\le 0$, then the restriction of $f$ to the complement of $\Delta$ is convex;
+that is, for any geodesic $\gamma$ in $\Sigma\backslash\Delta$ the function $t\mapsto f\circ\gamma(t)$ is convex.
+\end{subthm}
+
+\begin{subthm}{ex:dist-to-bry:+}
+Show that if $K_\Sigma\ge 0$, then the restriction of $f$ to $\Delta$ is concave;
+that is, for any geodesic $\gamma$ in $\Delta$ the function $t\mapsto f\circ\gamma(t)$ is concave.
+\end{subthm}
+
+\end{thm}
+
+A unit-speed geodesic $\lambda\:[0,\infty)\to \spc{X}$ is called a \index{half-line}\emph{half-line} if it is minimizing on each interval $[a,b]\subset [0,\infty)$.
+In the following exercise we introduce the so-called
+{}\emph{Busemann function};
+it describes the distance to an ideal point at infinity.
+
+\begin{thm}{Advanced exercise}\label{ex:busemann}
+Suppose $\lambda\:[0,\infty)\to \Sigma$ is a half-line in a smooth surface~$\Sigma$.
+
+\begin{subthm}{ex:busemann:all}
+Show that the function 
+\[f(x)\df\lim_{t\to\infty}\dist{\lambda(t)}{x}{\Sigma}- t\]
+is defined.
+Moreover, 
+$f$ is a $1$-Lipschitz function, and
+\[f\circ\lambda(t)+t=0\] 
+for any~$t$.
+The function $f$ is called \index{Busemann function}\emph{Busemann function} associated to $\lambda$.
+\end{subthm}
+
+\begin{subthm}{ex:busemann-}
+Show that if $\Sigma$ is an open simply-connected surface with nonpositive Gauss curvature, then $f$ is convex;
+that is, for any geodesic $\alpha$ the real-to-real function 
+$t\mapsto f\circ\alpha(t)$ is convex.
+\end{subthm}
+
+\begin{subthm}{ex:busemann+}
+Show that if $\Sigma$ is an open surface with nonnegative Gauss curvature, then $f$ is concave;
+that is, for any geodesic $\alpha$ the real-to-real function 
+$t\z\mapsto f\circ\alpha(t)$ is concave.
+\end{subthm}
+
+\end{thm}
+
+Let $\Sigma$ be a smooth surface.
+A unit-speed geodesic $\lambda\:\mathbb{R}\to\Sigma$ is called a \index{line}\emph{line} if it is length-minimizing on each interval $[a,b]\subset \mathbb{R}$.
+
+\begin{thm}{Very advanced exercise}\label{thm:splitting}
+Let $\Sigma$ be an open smooth simply-connected surface with nonnegative Gauss curvature
+and $\lambda$ be a line in~$\Sigma$. 
+Show that $\Sigma$ admits an intrinsic isometry to 
+the Euclidean plane.
+\end{thm}
+
+The last statement is a partial case of the so-called \emph{line splitting theorem}. 
+It was proved by Stefan Cohn-Vossen \cite[Satz 5 in][]{convossen} and generalized by Victor Toponogov \cite{toponogov-globalization+splitting}.
+
+
+\parbf{\ref{ex:dist-to-bry}}; \ref{SHORT.ex:dist-to-bry:-}.
+Choose two points $x,z\in\Sigma$;
+let $y$ be the midpoint of $[x,z]$.
+Denote by $\bar x$ and $\bar z$ the points on $\delta$ that minimize the distances to $x$ and $z$, respectively;
+so we have
+$f(x)
+=\dist{x}{\bar x}\Sigma$,
+and $f(z)=\dist{z}{\bar z}\Sigma$.
+
+Since $\Delta$ is convex, the midpoint of $[\bar x,\bar z]$, say $\bar y$, lies in $\Delta$.
+By \ref{ex:convex-dist}, we have 
+\begin{align*}
+f(y)&\le \dist{y}{\bar y}\Sigma
+\le
+\\
+&\le
+\tfrac12\cdot(\dist{x}{\bar x}\Sigma
++
+\dist{z}{\bar z}\Sigma)
+=
+\\
+&=
+\tfrac12\cdot(f(x)+f(z)).
+\end{align*}
+Observe that this inequality implies the convexity of ~$f$.
+
+\parit{\ref{SHORT.ex:dist-to-bry:+}.}
+Suppose $\gamma$ is a unit-speed geodesic in $\Delta$, and $\gamma(0)=p$. 
+Let $q$ be a point on $\delta$ that minimize the distance to~$p$.
+Denote by $\phi$ the angle between $\gamma$ and $[p,q]$ at~$p$.
+Note that it is sufficient to show that 
+\[f\circ\gamma(t)\le 
+\dist{p}{q}\Sigma+t\cdot\cos\phi\eqlbl{eq:dist<cosphi}\]
+for $t$ sufficiently close to~$0$.
+
+Chose small $t>0$, and set $x\z=\gamma(t)$.
+Consider a model triangle $[\tilde p\tilde q\tilde x]\z=\tilde\triangle(pqx)$.
+Let $\tilde\delta$ be the line thru $\tilde q$ perpendicular to $[\tilde p,\tilde q]$.
+Denote by $\tilde y$ the orthogonal projection of $\tilde x$ to $\tilde\delta$.
+By comparison, we have that 
+\begin{align*}
+\phi
+=\measuredangle\hinge qpx
+&\ge \modangle qpx
+\mathrel{=:}\tilde\phi,
+\\
+\psi\df
+\measuredangle\hinge pqx
+&\ge 
+\modangle pqx
+\mathrel{=:}\tilde \psi
+\end{align*}
+
+Since $t=\dist{\tilde p}{\tilde x}{\mathbb{R}^2}$ is small, so is the distances $\dist{\tilde q}{\tilde y}{\mathbb{R}^2}$.
+Therefore, we can choose a point $y$ on $\delta$ such that $\dist{q}{y}\Sigma=\dist{\tilde q}{\tilde y}{\mathbb{R}^2}$.
+Moreover, if we choose it on the {}\emph{right side}, then $\tfrac\pi2-\psi \ge \measuredangle\hinge qxy$.
+By construction and comparison, we have 
+\begin{align*}
+\measuredangle\hinge {\tilde q}{\tilde x}{\tilde y}&=\tfrac\pi2-\tilde\psi
+\ge
+\tfrac\pi2-\psi
+\ge
+\measuredangle\hinge q x y
+\ge 
+\modangle q x y.
+\end{align*}
+Therefore, $\dist{x}{y}\Sigma\le \dist{\tilde x}{\tilde y}{\mathbb{R}}$.
+Since $\tilde\phi\le\phi$, we get that
+\begin{align*}
+f\circ\gamma(t)&\le \dist{x}{y}\Sigma\le 
+\dist{\tilde x}{\tilde y}{\mathbb{R}}=
+\\
+&=
+\dist{p}{q}\Sigma+t\cdot\cos\tilde\phi
+\le
+\\
+&\le
+\dist{p}{q}\Sigma+t\cdot\cos\phi.
+\end{align*}
+That is, we proved \ref{eq:dist<cosphi} for small $t>0$.
+The case $t<0$ can be done along the same lines. 
+
+\begin{Figure}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-1680}
+\vskip0mm
+\end{Figure}
+
+\parbf{\ref{ex:busemann}}; \ref{SHORT.ex:busemann:all}.
+Choose $x\in\Sigma$.
+By the triangle inequality, the function 
+\[t\mapsto\dist{\lambda(t)}{x}{}- t\]
+is nonincreasing in~$t$. 
+Also, by the triangle inequality, we have
+$\dist{\lambda(t)}{x}{\Sigma}- t\ge-\dist{\lambda(0)}{x}{}$;
+that is, for each $x$, the values $\dist{\lambda(t)}{x}{\Sigma}- t$ are bounded below.
+Thus the limit
+\[f(x)=\lim_{t\to\infty}\dist{\lambda(t)}{x}{\Sigma}- t\]
+is defined for any $x$.
+
+Observe that each function $x\mapsto \dist{\lambda(t)}{x}{\Sigma}- t$ is 1-Lipschitz.
+Therefore, its limit $x\mapsto f(x)$ is 1-Lipschitz as well.
+The second part of \ref{SHORT.ex:busemann:all} is evident, since for $s \geq t$, we have $| \gamma (s) - \gamma (t) |_{\Sigma} = s-t$.
+
+\parit{\ref{SHORT.ex:busemann-} $+$ \ref{SHORT.ex:busemann+}}.
+Choose a geodesic~$\alpha$.
+Given $t\ge 0$, consider the function 
+\[h_t(s)=\dist{\lambda(t)}{\alpha(s)}{\Sigma}^2-s^2.\]
+
+Observe that for any fixed $x\in\Sigma$, we have $\tfrac{\dist{\lambda(t)}{x}{}}t\to 1$ as $t\to\infty$.
+Therefore,
+\begin{align*}
+f\!\circ\alpha(s)
+&=\!
+\lim_{t\to\infty}\left(\frac{| \lambda (t) - \alpha (s) |_{\Sigma}^2 - s^2 }{t} -t\right)=
+\\
+&=
+\lim_{t\to\infty}\left(\frac{h_t(s)}{t} -t\right).
+\end{align*}
+According to \ref{ex:geod-convexity}, the function 
+$s\mapsto h_t(s)$ is convex or concave, assuming the conditions in \ref{SHORT.ex:busemann-} or \ref{SHORT.ex:busemann+}, respectively.
+Therefore, so is the function
+$s \mapsto \tfrac{h_t(s)}{t} -t$
+for every~$t$.
+Since pointwise limits of convex or concave functions are respectively convex or concave, \ref{SHORT.ex:busemann-} and \ref{SHORT.ex:busemann+} follow.
+
+\parbf{\ref{thm:splitting}.}
+Consider two Busemann functions $f_+$ and $f_-$ associated with two half-lines of
+$\lambda$; that is,
+\[
+f_\pm(x)
+=
+\lim_{t\to\infty}\dist{\lambda(\pm t)}{x}{\Sigma}- t.
+\]
+Use the triangle inequality to show that $f_+(x)\z+f_-(x)\ge 0$.
+Use the comparison theorem to show that $f_+(x)+f_-(x)\le 0$.
+Conclude that
+\[
+f_+(x)+f_-(x)= 0
+\eqlbl{eq:bus+-=0}
+\]
+for any $x\in \Sigma$.
+
+According to \ref{ex:busemann}, 
+both functions $f_\pm$ are concave, and $f_\pm\circ\lambda(t)=\mp t$ for any~$t$.
+By \ref{eq:bus+-=0} both functions $f_\pm$ are affine;
+that is, they are convex and concave at the same time.
+It follows that the differential of $f_\pm$ is defined at any point $x\in\Sigma$;
+that is, there is a linear function $\T_x\to\mathbb{R}$ that is defined by
+$\vec v\mapsto D_{\vec v}f_\pm$
+for any tangent vector $\vec v \in \T_x$.
+
+Denote by $\vec u$ the gradient vector field of $f_-$;
+that is, $\vec u$ is a tangent vector field such that for any tangent field $\vec v$ the following identity holds
+\[\langle\vec u,\vec v\rangle=D_{\vec v}(f_-).\]
+
+Show that, the surface $\Sigma$ can be subdivided into lines that run in the direction of $\vec u$.
+
+Use the comparison theorem to show that the distances between points on two lines in the direction of $\vec u$ behave the same way as the distances between parallel lines in the Euclidean plane; here is a precise formulation:
+
+\begin{clm}{}\label{clm:parallel}
+Let $\xi$ and $\zeta$ be two lines in $\Sigma$ that run in the direction of $\vec u$.
+Suppose $\xi$ and $\zeta$ are parametrized so that $f_-\circ \xi(t)=f_-\circ \zeta(t)=t$ for any $t$;
+further set $x_0=\xi(0)$, $z_0\z=\zeta(0)$, $x_1=\xi(s)$, $z_1=\zeta(t)$ for some $s,t$. 
+Then
+\[\dist{x_1}{z_1}\Sigma^2=\dist{x_0}{z_0}\Sigma^2+(s-t)^2.\]
+\end{clm}
+
+Use that $\Sigma$ is simply connected to show that 
+$L=\set{x\in\Sigma}{f_-(x)=0}$
+is a line.
+
+Choose an arc-length parametrization $v\z\mapsto\gamma(v)$ of $L$.
+Denote by $\lambda^v$ the line thru $\gamma(v)$ in the direction of $\vec u$ with the parametrization as above: that is, $f_-\circ\lambda^v(u)=u$ for any $u$ and~$v$.
+According to \ref{clm:parallel}, $(u,v)\mapsto \lambda^v(u)$ is an intrinsic isometry from the Euclidean plane to~$\Sigma$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(A) Write a parametrization for an evolvent of the unit circle.<br>
+(B) Let \(\gamma\) be a unit speed plane curve with curvature less than 1 at all points.
+Imagine that a unit disc rolls along $\gamma$ without sliding, write an equation for a curve traced by a point on its boundary in terms of \(\gamma\) and its Frenet frame \(T,N\).<br>
+(C) Let \(\gamma\) be a smooth space curve with Frenet frame \(T,N,B\).
+Consider the curve \(\beta=\gamma+N\).
+Show that \(\mathrm{length}\,\beta\ge \mathrm{length}\,\gamma-\Phi(\gamma)\).<br>
+(D) Let \(\gamma\) be a smooth spherical curve with Frenet fram \(T,N,B\). Show that \(\langle \gamma,N\rangle<0\) at any point.<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\parbf{\ref{ex:thin}.} 
+Denote by $L$ the \index{cut locus}\emph{cut locus} of $V$;
+that is, $L$ is a closure of the set of points $x\in V$ such that there are at least two points on $\partial V$ that minimize the distance to~$x$.
+
+Choose a connected component $\Sigma$ of the boundary $\partial V$.
+Show that $L$ is a smooth surface and the closest-point projection $L\to \Sigma$ is a smooth regular parametrization of~$\Sigma$.
+In particular, there is a unique point on $\Sigma$ that minimizes the distance to a given point $x\in L$.
+It follows that there is another component $\Sigma'$ with the same property.
+
+Finally, show that $\partial V$ cannot have more than two components.
+
+\parbf{\ref{ex:PI-sphere}.}
+Read about Bing's two-room house.
+Try to thicken it to construct the needed example.
+
+Assume $V$ does not contain a ball of radius $r_3$.
+Show that its cut locus $L$ is formed by a few smooth surfaces that meet by three along their boundary curves.
+Use this description to show that $L$ is not \index{simply-connected}\emph{simply-connected}; that is, there is a loop in $L$ that cannot be deformed continuously to a trivial loop.
+Conclude that $V$ is not simply-connected.
+
+Finally, arrive at a contradiction by showing that if $V$ is bounded by a smooth sphere, then $V$ is simply-connected.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{wrapfigure}[4]{r}{30 mm}
+\vskip-7mm
+\centering
+\includegraphics{mppics/pic-471}
+\end{wrapfigure}
+
+\begin{thm}{Advanced exercise}\label{ex:convex-polyhon+self-intersections}
+Make a complete proof from the following sketch:
+
+Let us show that a closed geodesic $\gamma$ on a closed smooth surface with nonnegative Gauss curvature cannot have self-intersections as shown on the diagram.
+
+Arguing by contradiction, suppose such geodesic exists;
+assume that arcs and angles are labeled as on the left diagram below.
+
+\begin{subthm}{ex:convex-polyhon+self-intersections:angles}
+Apply the Gauss--Bonnet formula to show that
+\[2\cdot\alpha<\beta+\gamma\]
+and 
+\[2\cdot\beta+2\cdot \gamma<\pi+\alpha.\]
+Conclude that $\alpha <\tfrac \pi 3$.
+\end{subthm}
+
+\begin{figure}[!ht]
+\begin{minipage}{.38\textwidth}
+\centering
+\includegraphics{mppics/pic-472}
+\end{minipage}\hfill
+\begin{minipage}{.58\textwidth}
+\centering
+\includegraphics{mppics/pic-473}
+\end{minipage}
+\end{figure}
+
+\begin{subthm}{ex:convex-polyhon}
+Consider the part of the geodesic $\gamma$ without the arc~$a$.
+It cuts from $\Sigma$ a pentagon $\Delta$ with sides and angles as shown on the diagram. 
+Show that there is a plane pentagon with convex sides of the same length and angles at most as big as the corresponding angles of $\Delta$.
+\end{subthm}
+
+\begin{subthm}{ex:self-intersections-hard}
+Arrive at a contradiction using \ref{SHORT.ex:convex-polyhon+self-intersections:angles} and \ref{SHORT.ex:convex-polyhon}. 
+\end{subthm}
+
+\end{thm}

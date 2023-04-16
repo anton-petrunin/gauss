@@ -101,7 +101,7 @@ In this section, we use the construction of polar coordinates and the Gauss lemm
 \parit{Proof of \ref{prop:gamma''}.}
 Let $\gamma\:[0,\ell]\to\Sigma$ be a shortest path parametrized by arc-length.
 Suppose $\ell=\length\gamma$ is sufficiently small, so $\gamma$ can be described in the polar coordinates at $p$;
-say as $\gamma(t)=s(r(t),\theta(t))$ for some functions $t\mapsto \theta(t)$ and $t\mapsto r(t)$ with $r(0)=0$.
+say as $\gamma(t)=s(r(t),\theta(t))$ for functions $t\mapsto \theta(t)$ and $t\mapsto r(t)$ with $r(0)=0$.
 
 Note that by the chain rule, we have
 \[\gamma'= s_\theta\cdot \theta'+ s_r\cdot r'
@@ -151,7 +151,7 @@ Note that according to the Gauss lemma (\ref{lem:palar-perp}), the polar coordin
 Note that we can choose a unit vector field~$\Norm=\Norm(u,v)$ that is normal to $\Sigma$ at $s(u,v)$.
 For each pair $(u,v)$, consider an orthonormal frame $\Norm$, $\vec u=s_u$, and $\vec v=\Norm\times \vec u$.
 Recall that since the vector $s_v(u,v)$ is tangent to $\Sigma$ at $s(u,v)$, we get $s_v\perp \vec u$ and $s_v\perp \Norm$. 
-Therefore, we have that $s_v=b\cdot\vec v$ for some smooth function $(u,v)\z\mapsto b(u,v)$.
+Therefore, we have that $s_v=b\cdot\vec v$ for a smooth function $(u,v)\z\mapsto b(u,v)$.
 
 (For a fixed value $v_0$, the vector field $s_v=b\cdot\vec v$ describes the difference between $\gamma_0$ and an {}\emph{infinitesimally close} geodesic $\gamma_1\:u\mapsto s(u,v_1)$.
 The fields with this property are called \index{Jacobi field}\emph{Jacobi fields} along $\gamma_0$.)
@@ -372,7 +372,7 @@ Apply \ref{SHORT.ex:inj-rad:sign} and \ref{SHORT.ex:inj-rad:0} to prove \ref{pro
 A chart $(u,v)\mapsto s(u,v)$ is called \index{orthogonal chart}\emph{orthogonal} if $s_u\perp s_v$ for any $(u,v)$.
 Note that any semigeodesic chart is orthogonal.
 
-A solution of the following exercise is very similar to \ref{prop:jaccobi}.
+A solution of the following exercise is similar to \ref{prop:jaccobi}.
 
 \begin{thm}{Exercise}\label{lem:K(orthogonal)}
 Let $(u,v)\mapsto s(u,v)$ be an orthogonal chart of a smooth surface~$\Sigma$.
@@ -748,8 +748,8 @@ Note that $s^{*}$ is a chart of $\Sigma^{*}$, and
 \langle s_v^{*}, s_v^{*}\rangle
 \end{align*}
 at any $(u,v)$.
-Indeed, the first and the third identities hold since otherwise $f$ would not preserve the lengths of the coordinate lines $\gamma\:t\mapsto s(t,v)$ or  $\gamma\:t\z\mapsto s(u,t)$.
-Taking this into account, the second identity holds since otherwise $f$ would not preserve the lengths of the coordinate lines $\gamma\:t\z\mapsto s(t,c-t)$ for some constant~$c$.
+Indeed, since $f$ preserves the lengths of the coordinate lines $\gamma\:t\mapsto s(t,v)$ and  $\gamma\:t\z\mapsto s(u,t)$, we get the first and the third identities.
+Now, since $f$ preserves the lengths of the curves $\gamma\:t\z\mapsto s(t,c-t)$ for any constant~$c$, the first and the third identities imply the second one.
 
 Therefore, if $s$ is a semigeodesic chart, then so is $s^{*}$.
 It remains to apply \ref{prop:jaccobi} and \ref{ex:semigeodesc-chart}.
