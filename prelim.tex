@@ -70,14 +70,15 @@ Analogously, the {}\emph{closed ball} is denoted as $\bar B[p,R]$ or $\bar B[p,R
 \[\bar B[p,R]=\bar B[p,R]_{\spc{X}}=\set{x\in \spc{X}}{\dist{x}{p}{\spc{X}}\le R}.\]
 
 \begin{thm}{Exercise}\label{ex:B2inB1}
-Let $\spc{X}$ be a metric space.
 
 \begin{subthm}{ex:B2inB1:a}
-Show that if $\bar B[p,2]\subset \bar B[q,1]$ for $p,q\in \spc{X}$, then $\bar B[p,2]\z=\bar B[q,1]$.
+Let $p$ and $q$ be points in $\spc{X}$ be a metric space.
+Show that if $\bar B[p,2]\subset \bar B[q,1]$, then $\bar B[p,2]\z=\bar B[q,1]$.
 \end{subthm}
 
-\begin{subthm}{ex:B2inB1:b} Construct a metric space $\spc{X}$ with two points $p$ and $q$ such that the strict inclusion
-$B(p,\tfrac32)\subset B(q,1)$ holds.
+\begin{subthm}{ex:B2inB1:b}
+Construct a metric space $\spc{X}$ with two points $p$ and $q$ such that the strict inclusion
+$B(p,\tfrac32)\subsetneq B(q,1)$ holds.
 \end{subthm}
 
 \end{thm}
@@ -449,7 +450,7 @@ The following theorem makes it possible to extend many statements about continuo
 \begin{thm}{Lusin's theorem}\label{thm:lusin}
 Let $\phi\:[a,b]\to \mathbb{R}$ be a measurable function.
 Then for any $\epsilon>0$, there is a continuous function $\psi_\epsilon\:[a,b]\to \mathbb{R}$ that coincides with $\phi$ outside a set of measure at most $\epsilon$.
-Moreover, if $\phi$ is bounded above and/or below by constants, then we may assume that so is~$\psi_\epsilon$.  
+Moreover, if $\phi$ is bounded above and/or below, then we may assume that so is~$\psi_\epsilon$.  
 \end{thm}
 
 \subsection*{Uniform continuity and convergence}
