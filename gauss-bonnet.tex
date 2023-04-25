@@ -343,23 +343,106 @@ Show that there is a simple two-sided infinite geodesic $\gamma$ that is tangent
 The following generalization of the Gauss--Bonnet formula is due to Walther von Dyck \cite{dyck}.
 
 \begin{thm}{Theorem}\label{thm:GB-generalized}
-Let $\Lambda$ be a compact domain bounded by a finite collection (possibly empty) of simple piecewise smooth curves $\gamma_1,\dots,\gamma_n$ in a smooth surface~$\Sigma$.
-Suppose each $\gamma_i$ 
+Let $\Lambda$ be a compact domain on a smooth surface.
+Assume $\Lambda$ is bounded by a finite (possibly empty) collection of simple closed piecewise smooth curves $\gamma_1,\dots,\gamma_n$.
+Suppose that each $\gamma_i$ 
 is oriented in such a way that $\Lambda$ lies on its left.
-Then \[\tgc{\gamma_1}+\dots+\tgc{\gamma_n}+\iint_\Lambda K=2\cdot \pi\cdot \chi\eqlbl{eq:g-b++}\]
+Then
+\[\iint_\Lambda K=2\cdot \pi\cdot \chi-\tgc{\gamma_1}-\dots-\tgc{\gamma_n}\eqlbl{eq:g-b++}\]
 for an integer $\chi=\chi(\Lambda)$.
 
 Moreover, if $\Lambda$ can be subdivided into $f$ discs by an embedded graph with $v$ vertices and $e$ edges, then $\chi=v-e+f$.
 \end{thm}
 
 The number $\chi=\chi(\Lambda)$ is called the \index{Euler characteristic}\emph{Euler characteristic} of $\Lambda$. 
-Note that $\chi$ does not depend on the choice of the subdivision since the left-hand side in \ref{eq:g-b++} does not.
+Note that $\chi$ does not depend on the choice of the subdivision since the remaining terms in \ref{eq:g-b++} do not.
+
+The proof goes along the same lines as \ref{lem:GB-sum}, but the combinatorics gets trickier.
+
+\begin{wrapfigure}{r}{38 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-1580}
+\end{wrapfigure}
+
+Before reading the proof, try to derive the formula for the subdivision of the annulus $A$ on the diagram;
+its graph has 4 vertices and 6 edges (one of them is a loop) and it subdivides the annulus into two discs $\Delta_1$ and $\Delta_2$.
+Therefore, we have $\chi(A)=4-6+2=0$ and we should get 
+\[\iint_A K=-\tgc{\gamma_1}-\tgc{\gamma_2}.\]
+
 
 \parit{Proof.}
-Suppose a graph with $v$ vertices and $e$ edges subdivides $\Lambda$ into $f$ discs.
-Apply the Gauss--Bonnet formula for each disc, and sum up the results.
-Observe that each disc and vertex contributes $2\cdot\pi$, and each edge contributes $-2\cdot\pi$ to the total sum.
-Whence \ref{eq:g-b++} follows.
+Suppose that a graph with $v$ vertices and $e$ edges subdivides $\Lambda$ into $f$ discs $\Delta_1,\dots,\Delta_f$.
+Lets us apply the Gauss--Bonnet formula for each disc, and sum up the results:
+\[
+\begin{aligned}
+\iint_\Lambda K&=\iint_{\Delta_1} K+\dots+\iint_{\Delta_f} K=
+\\
+&=2\cdot f\cdot \pi-\tgc{\partial\Delta_1}-\dots-\tgc{\partial\Delta_f}.
+\end{aligned}
+\]
+It remains to show that  
+\[\tgc{\gamma_1}+\dots+\tgc{\gamma_n}-\tgc{\partial\Delta_1}-\dots-\tgc{\partial\Delta_f}
+=
+2\cdot\pi\cdot(v-e).
+\eqlbl{eq:GB-sum}\]
+In the proof of this identity, we will handle the contributions of each edge and vertex separately.
+
+Choose an edge $\sigma$ of the graph.
+If $\sigma$ does not appear on some $\gamma_i$,
+then it appears twice in the boundary of the discs, say for $\Delta_i$ and $\Delta_j$.
+We may assume that $\Delta_i$ lies on the left from $\sigma$ and $\Delta_j$ is on its right.
+In this case, $\sigma$ contributes $\tgc\sigma$ to $\tgc{\partial\Delta_i}$ and $-\tgc\sigma$ to $\tgc{\partial\Delta_j}$; so $\sigma$ contributes nothing to \ref{eq:GB-sum}.
+It might happen that $i=j$ (as for one of the edges on the diagram above);
+in this case, we have one disc on both sides of~$\sigma$, but still, it contributes nothing to \ref{eq:GB-sum}.
+If $\sigma$ appears on some $\gamma_i$, then it also appears once on the boundary of some disc, say $\Delta_j$.
+We may assume that $\Lambda$ and $\Delta_j$ lie on the left from $\sigma$.
+In this case, it contributes $\tgc\sigma$ to $\tgc{\gamma_i}$ and to $\tgc{\partial\Delta_j}$.
+These contributions cancel each other in \ref{eq:GB-sum}.
+
+Summarizing, the total contribution in \ref{eq:GB-sum} that comes from the total geodesic curvatures of edges vanishes.
+
+Let us handle the external angles.
+Choose a vertex $p$.
+If $p$ is a vertex of $\Delta_i$ then denote by $\delta_{i}$ the internal angle of $\Delta_i$ and $p$;
+note that $\phi_{i}=\pi-\delta_{i}$ is the external angle of $\Delta_i$ at $p$.
+
+\begin{wrapfigure}{r}{23 mm}
+\vskip-6mm
+\centering
+\includegraphics{mppics/pic-1585}
+\end{wrapfigure}
+
+If $p$ lies in the interior of $\Lambda$, then it contributes  
+$-\sum\phi_{i}$
+to \ref{eq:GB-sum}, here the sum is taken for all $i$ such that $p\in\Delta_i$.
+Note that $\sum\delta_{i}=2\cdot\pi$.
+Therefore, $p$ contributes
+\[-\sum\phi_{i}=(2-d)\cdot \pi,\]
+here $d$ denotes the \index{degree of vertex}\emph{degree} of $p$; that is, the number of edges that end at~$p$.
+
+\begin{wrapfigure}{r}{23 mm}
+\vskip-6mm
+\centering
+\includegraphics{mppics/pic-1590}
+\end{wrapfigure}
+
+Further, if $p$ lies on the boundary of $\Lambda$, then
+\[\sum\delta_{i}=\pi-\theta,\]
+where $\theta\in(-\pi,\pi)$ denotes the external angle of $\Lambda$ at $p$.
+And again, $p$ contributes
+\[\theta-\sum\phi_{i}=(2-d)\cdot \pi.\]
+to \ref{eq:GB-sum}.
+
+Summarizing, suppose $p_1,\dots,p_v$ are the vertices of the graph, and $d_1,\dots,d_v$ are the corresponding degrees.
+Then the total contribution from external angles to \ref{eq:GB-sum} is 
+\[2\cdot v\cdot \pi-(d_1+\dots+d_v)\cdot\pi.
+\eqlbl{eq:GB-sum-d}\]
+Since the edges contributed nothing, we get that \ref{eq:GB-sum-d} equals to the left-hand side in \ref{eq:GB-sum}.
+
+It remains to observe that $d_1+\dots+d_v=2\cdot e$.
+Indeed, $d_1+\dots+d_v$ is the total number of ends of edges in the graph, and each edge has exactly two ends. 
+This finishes the proof of \ref{eq:GB-sum} and \ref{eq:g-b++}.
 \qeds
 
 

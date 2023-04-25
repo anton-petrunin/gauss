@@ -3851,7 +3851,100 @@ dOt origin;
 label.rt(btex $\alpha$ etex, (1,1)*u);
 endfig;
 
+beginfig(1580) 
+save u,p,t;
+path p[];
+u:=.5cm;
+t:=.2;
 
+z.a1=(-1,0)*u;
+z.a2=(1,0)*u;
+
+p1=z.a1{up}..z.a2{down}..cycle;
+
+z.b1=(-3,0)*u;
+z.b2=(3,0)*u;
+
+p2=z.b1{down}..z.b2{up}..cycle;
+
+z.c0=point t of p2;
+z.c2=point 2-t of p2;
+z.c1=(-1.7,0)*u;
+
+p3=z.c0..z.c1..z.c2;
+
+fill p1--p2--cycle withcolor .5;
+
+drawarrow subpath (0,1) of p1;
+draw subpath (1,2) of p1;
+drawarrow subpath (0,1) of p2;
+draw subpath (1,2) of p2;
+draw p3;
+draw z.c1--z.a1;
+
+Dot z.a1,z.c0,z.c1,z.c2;
+
+label(btex $\Delta_1$ etex, (2,0)*u) withcolor 1;
+label(btex $\Delta_2$ etex, (-2.4,0)*u) withcolor 1;
+label.lft(btex $\gamma_1$ etex, z.a2);
+label.rt(btex $\gamma_2$ etex, z.b2);
+endfig;
+
+
+beginfig(1585) 
+save u,p;
+path p[];
+u:=1cm;
+
+z.p=origin;
+z1=(1,.2)*u;
+z2=(0,1)*u;
+z3=(-1,.3)*u;
+z4=(-1,-.4)*u;
+z5=(.1,-1)*u;
+
+draw z.p--z1;
+draw z.p--z2;
+draw z.p--z3;
+draw z.p--z4;
+draw z.p--z5;
+
+dOt z.p;
+
+labelarcsprof(z1, z.p, z2, 12, 12, btex $\delta_2$ etex);
+labelarcsprof(z3, z.p, z2, 13, 13, btex $\delta_7$ etex);
+labelarcsprof(z3, z.p, z4, 14, 14, btex $\delta_5$ etex);
+labelarcsprof(z5, z.p, z4, 12, 12, btex $\delta_1$ etex);
+labelarcsprof(z5, z.p, z1, 13, 13, btex $\delta_9$ etex);
+label.lrt(btex $p$ etex, z.p);
+endfig;
+
+beginfig(1590) 
+save u,p;
+path p[];
+u:=1cm;
+
+z.p=origin;
+z1=(1,-.3)*u;
+z2=(.1,-1)*u;
+z3=(-.4,-1)*u;
+z4=(-1,-.3)*u;
+
+
+draw z.p--z1;
+draw z.p--z2;
+draw z.p--z3;
+draw z.p--z4;
+draw z.p-- -z1 dashed evenly;
+
+dOt z.p;
+
+labelarcsprof(z1, z.p, z2, 12, 12, btex $\delta_2$ etex);
+labelarcsprof(z3, z.p, z2, 13, 13, btex $\delta_7$ etex);
+labelarcsprof(z3, z.p, z4, 14, 14, btex $\delta_5$ etex);
+labelarcsprof(-z1, z.p, z4, 12, 12, btex $\theta$ etex);
+label.urt(btex $p$ etex, z.p);
+endfig;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 beginfig(1750) 
