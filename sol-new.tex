@@ -571,22 +571,6 @@ Arc II goes very close and almost parallel to the chord $pq$, and its total curv
 Use the fact that an exterior angle of a triangle equals the sum of the two remote interior angles.
 For the second part apply induction on the number of vertices.
 
-\parbf{\ref{ex:total-curvature=}.}
-By \ref{prop:inscribed-total-curvature}, $\tc\gamma\ge \tc\beta$;
-it remains to show that
-$\tc\gamma\le\sup\{\tc\beta\}$.
-In other words, 
-given $\epsilon>0$ and a polygonal line $\sigma=\vec u_0\dots \vec u_k$ inscribed in the tangent indicatrix $\tan$ of $\gamma$, 
-we need to construct a polygonal line $\beta$ inscribed in $\gamma$ such that
-\[\length\sigma<\tc\beta+\epsilon.
-\eqlbl{eq:tc=<tc}\]
-
-{
-
-Suppose $\vec u_i=\tan(s_i)$.
-Choose an inscribed polygonal line $\beta=p_0\dots p_{2\cdot k+1}$ such that $p_{2\cdot i}$ and $p_{2\cdot i+1}$ lie sufficiency close to $\gamma(s_i)$; so we can assume that the direction of $p_{2\cdot i+1}-p_{2\cdot i}$ is sufficiency close to $\vec u_i$ for each~$i$.
-Show that \ref{eq:tc=<tc} holds true for the constructed polygonal line $\beta$.
-
 \parbf{\ref{ex:sef-intersection}}; \ref{SHORT.ex:sef-intersection:<2pi} See the diagram. 
 
 \begin{wrapfigure}{r}{23 mm}
@@ -605,7 +589,19 @@ $\measuredangle\hinge yxz
 <\pi$, or, equivalently, for the \emph{nonclosed} polygonal line $xyzx$ we have $\tc{xyzx}>\pi$.
 It remains to apply \ref{prop:inscribed-total-curvature}.
 
-}
+\parbf{\ref{ex:total-curvature=}.}
+By \ref{prop:inscribed-total-curvature}, $\tc\gamma\ge \tc\beta$;
+it remains to show that
+$\tc\gamma\le\sup\{\tc\beta\}$.
+In other words, 
+given $\epsilon>0$ and a polygonal line $\sigma=\vec u_0\dots \vec u_k$ inscribed in the tangent indicatrix $\tan$ of $\gamma$, 
+we need to construct a polygonal line $\beta$ inscribed in $\gamma$ such that
+\[\length\sigma<\tc\beta+\epsilon.
+\eqlbl{eq:tc=<tc}\]
+
+Suppose $\vec u_i=\tan(s_i)$.
+Choose an inscribed polygonal line $\beta=p_0\dots p_{2\cdot k+1}$ such that $p_{2\cdot i}$ and $p_{2\cdot i+1}$ lie sufficiency close to $\gamma(s_i)$; so we can assume that the direction of $p_{2\cdot i+1}-p_{2\cdot i}$ is sufficiency close to $\vec u_i$ for each~$i$.
+Show that \ref{eq:tc=<tc} holds true for the constructed polygonal line $\beta$.
 
 \parbf{\ref{ex:quadrisecant}.}
 Consider the closed polygonal line $acbd$.
@@ -673,14 +669,14 @@ It remains to substitute the values from \ref{eq:frenet-tau} and \ref{eq:frenet-
 \parbf{\ref{ex:torsion=0}.}
 This is a consequence of the equation $\bi' = - \tor\cdot \norm $.
 
-\parbf{\ref{ex:frenet}.}
-Observe that $\tfrac{\gamma'\times\gamma''}{|\gamma'\times\gamma''|}$ is a unit vector perpendicular to the plane spanned by $\gamma'$ and $\gamma''$, so, up to sign, it has to be equal to $\bi$.
-It remains to check that the sign is right.
-
 \parbf{\ref{ex:+B}.}
 We can assume that $\gamma_0$ is unit-speed.
 Show that
 $|\gamma_1'|=|\tan-\tor\cdot \norm|\ge 1$ and use it.
+
+\parbf{\ref{ex:frenet}.}
+Observe that $\tfrac{\gamma'\times\gamma''}{|\gamma'\times\gamma''|}$ is a unit vector perpendicular to the plane spanned by $\gamma'$ and $\gamma''$, so, up to sign, it has to be equal to $\bi$.
+It remains to check that the sign is right.
 
 \parbf{\ref{ex:torsion-indicatrix}.} Assume that the tangent indicatrix has no self-intersection.
 Show that it lies in an open hemisphere and argue as in Fenchel's theorem.
@@ -1586,9 +1582,6 @@ and by \ref{thm:shorts+convex}
 This means that $\gamma$ is not length minimizing --- 
 a contradiction.
 
-\parbf{\ref{ex:helix-geodesic}.} Show that $\gamma''(t)$ is proportional to $\nabla_{\gamma(t)} f$, where $f=x^2+y^2$. 
-Apply \ref{ex:tangent-normal}.
-
 \parbf{\ref{ex:intrinsic-diameter}.} 
 Show that the closest-point projection $\partial B\to\Sigma$ is surjective.
 Apply \ref{lem:closest-point-projection} and \ref{thm:area-axioms:monotonicity}.
@@ -1600,6 +1593,8 @@ Apply \ref{lem:closest-point-projection} and \ref{thm:area-axioms:monotonicity}.
 \stepcounter{chapter}
 \setcounter{eqtn}{0}
 
+\parbf{\ref{ex:helix-geodesic}.} Show that $\gamma''(t)$ is proportional to $\nabla_{\gamma(t)} f$, where $f=x^2+y^2$. 
+Apply \ref{ex:tangent-normal}.
 
 \parbf{\ref{ex:clairaut}.} 
 We can assume that the origin lies on the axis of revolution, and $\vec i$ points in the direction of such axis.
@@ -1654,18 +1649,11 @@ In the remaining case, $\gamma$ can intersect meridians only transversely.
 Therefore, the longitude of $\gamma$ is monotone.
 Whence again $\gamma$ is non-contractible.
 
-\parbf{\ref{ex:closed-liberman}.} Assume $t\mapsto \gamma(t)=(x(t),y(t),z(t)$ is a closed unit-speed geodesic in the graph $z=f(x,y)$.
-By Liberman's lemma, $t\mapsto z'(t)$ is monotonic.
-Conclude that $z$ is constant on $\gamma$, so $\gamma$ runs in a horizontal plane.
-Show that $\gamma$ is straight and arrive at a contradiction.
-
 \parbf{\ref{ex:helix=geodesic}.}
 Show that $\Norm(\gamma(t))=(\cos t,\sin t, 0)$.
 Calculate $\gamma''(t)$, and show that it is proportional to $\Norm(\gamma(t))$.
 The latter is equivalent to $\gamma''(t)\perp\T_{\gamma(t)}$. 
 Note that the line segment from $\gamma (0) $ to $\gamma (2{\cdot}\pi) $ is contained in~$\Sigma$.
-
-
 
 \parbf{\ref{ex:two-min-geod}.}
 Assume two shortest paths $\alpha$ and $\beta$ have two common points $p$ and~$q$.
@@ -1717,11 +1705,6 @@ By \ref{prop:gamma''}, $\alpha$ and $\beta$ are geodesics.
 Since $\alpha$ and $\beta$ have a common subarc, they share one point and velocity vector at this point;
 by \ref{prop:geod-existence} $\alpha$ coincides with $\beta$ --- a contradiction.
 
-\parbf{\ref{ex:round-sphere}.}
-Argue as in \ref{ex:const-dist} to show that all geodesics in $\Sigma$ have the constant curvature.
-Conclude that $\Sigma$ has constant normal curvature and argue as in \ref{ex:normal-curvature=const}.
-
-\parit{Source:} The problem is due to Ali Taghavi \cite{taghavi}.
 
 \parbf{\ref{ex:milka}.}
 Let $W$ be the closed region outside~$\Sigma$.
@@ -1742,6 +1725,17 @@ Hence,
 &\ge\dist{p^s}{q}{\mathbb{R}^3}. 
 \end{align*}
 If the segment $[p^s,q]$ was entirely contained in $W$ for some $s<\ell$, then $\dist{p^s}{q}W = \dist{p^s}{q}{\mathbb{R}^3} $, which would be a contradiction.
+
+\parbf{\ref{ex:round-sphere}.}
+Argue as in \ref{ex:const-dist} to show that all geodesics in $\Sigma$ have the constant curvature.
+Conclude that $\Sigma$ has constant normal curvature and argue as in \ref{ex:normal-curvature=const}.
+
+\parit{Source:} The problem is due to Ali Taghavi \cite{taghavi}.
+
+\parbf{\ref{ex:closed-liberman}.} Assume $t\mapsto \gamma(t)=(x(t),y(t),z(t)$ is a closed unit-speed geodesic in the graph $z=f(x,y)$.
+By Liberman's lemma, $t\mapsto z'(t)$ is monotonic.
+Conclude that $z$ is constant on $\gamma$, so $\gamma$ runs in a horizontal plane.
+Show that $\gamma$ is straight and arrive at a contradiction.
 
 \parbf{\ref{ex:rho''}.}
 Equip $\Sigma$ with unit normal field $\Norm$ that points inside.
@@ -1813,6 +1807,22 @@ For the second part, consider a geodesic on a cone with slope $2$, and mollify i
 \parit{Remark.}
 The statement still holds for $\sqrt{3}$-Lipschitz functions, and $\sqrt{3}=\tg\tfrac\pi3$ is the optimal bound; see \ref{ex:sqrt(3)}.
 It is the same slope as in the problem about the cowboy and the lasso (\ref{ex:lasso}).
+
+\parbf{\ref{ex:bound-tc}}; \ref{SHORT.ex:bound-tc:a}.
+Show and use that $|\gamma|\le 1$, and
+\[\langle\nu,\epsilon\cdot \nu-\gamma\rangle\le0.\]
+
+\parit{\ref{SHORT.ex:bound-tc:b}.} Show and use that $|\gamma|\le 1$, $|\gamma'|= 1$, and
+\[\rho'=2\cdot \langle\gamma,\gamma'\rangle.\]
+
+\parit{\ref{SHORT.ex:bound-tc:c}.} Show and use that $\langle\gamma,\nu\rangle=|\gamma|\cdot\cos\theta$, $|\gamma'|= 1$, $\gamma''=-k\cdot \nu$ and
+\[\rho''=2\cdot \langle\gamma',\gamma'\rangle+2\cdot \langle\gamma,\gamma''\rangle.\]
+
+\parit{\ref{SHORT.ex:bound-tc:d}.} Suppose $x,y$ are the points in the unit sphere that project to the ends of $\gamma$. 
+Connect $x$ to $y$ by a an arc of length $\le \pi$ in the sphere, project it to $\Sigma$.
+Apply \ref{lem:closest-point-projection} and use that $\gamma$ is a shortest path.
+
+\parit{\ref{SHORT.ex:bound-tc:e}.} Use \ref{SHORT.ex:bound-tc:a}--\ref{SHORT.ex:bound-tc:d}.
 
 %\end{multicols}
 %\par\noindent\rule{\textwidth}{0.4pt}
@@ -1904,6 +1914,12 @@ Apply \ref{prop:pt+tgc} and \ref{prop:area-of-spher-polygon}.
 
 \parbf{\ref{ex:cohn-vossen}.}
 Repeat the end of the proof of \ref{thm:cohn-vossen} for a one-parameter family of geodesics $\gamma_\tau$ defined by $\gamma_\tau(0)=\alpha(\tau)$ and $\gamma'(0)=\alpha'(\tau)$. 
+
+\parbf{\ref{ex:g-b-chi}.}
+Subdivide each surface into discs,
+count number of edges vertices and discs in the subdivision.
+Calculate the Euler characteristic and apply the theorem.
+For the Möbius band and pair of pans, use that the boundary has vanishing geodesic curvature.
 
 %\end{multicols}
 %\par\noindent\rule{\textwidth}{0.4pt}

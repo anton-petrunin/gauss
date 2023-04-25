@@ -356,7 +356,6 @@ Moreover, if $\Lambda$ can be subdivided into $f$ discs by an embedded graph wit
 
 The number $\chi=\chi(\Lambda)$ is called the \index{Euler characteristic}\emph{Euler characteristic} of $\Lambda$. 
 Note that $\chi$ does not depend on the choice of the subdivision since the remaining terms in \ref{eq:g-b++} do not.
-
 The proof goes along the same lines as \ref{lem:GB-sum}, but the combinatorics gets trickier.
 
 \begin{wrapfigure}{r}{38 mm}
@@ -365,7 +364,7 @@ The proof goes along the same lines as \ref{lem:GB-sum}, but the combinatorics g
 \includegraphics{mppics/pic-1580}
 \end{wrapfigure}
 
-Before reading the proof, try to derive the formula for the subdivision of the annulus $A$ on the diagram;
+Before reading the proof, try to modify the argument in \ref{lem:GB-sum} to derive the formula for the subdivision of the annulus $A$ on the diagram;
 its graph has 4 vertices and 6 edges (one of them is a loop) and it subdivides the annulus into two discs $\Delta_1$ and $\Delta_2$.
 Therefore, we have $\chi(A)=4-6+2=0$ and we should get 
 \[\iint_A K=-\tgc{\gamma_1}-\tgc{\gamma_2}.\]
@@ -428,7 +427,7 @@ here $d$ denotes the \index{degree of vertex}\emph{degree} of $p$; that is, the 
 \end{wrapfigure}
 
 Further, if $p$ lies on the boundary of $\Lambda$, then
-\[\sum\delta_{i}=\pi-\theta,\]
+$\sum\delta_{i}\z=\pi-\theta$,
 where $\theta\in(-\pi,\pi)$ denotes the external angle of $\Lambda$ at $p$.
 And again, $p$ contributes
 \[\theta-\sum\phi_{i}=(2-d)\cdot \pi.\]
@@ -450,20 +449,48 @@ This finishes the proof of \ref{eq:GB-sum} and \ref{eq:g-b++}.
 \begin{thm}{Exercise}\label{ex:g-b-chi}
 Find the integral of the Gauss curvature on each of the following surfaces:
 
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+
 \begin{subthm}{ex:g-b-chi:torus}
 Torus.
 \end{subthm}
+
+\begin{Figure}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-1595}
+\end{Figure}
 
 \begin{subthm}{ex:g-b-chi:moebius}
 Möbius band with geodesic boundary.
 \end{subthm}
 
+\begin{Figure}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-1605}
+\end{Figure}
+
 \begin{subthm}{ex:g-b-chi:pair-of-pants}
 Pair of pants with geodesic boundary components.
 \end{subthm}
+\begin{Figure}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-1600}
+\end{Figure}
 
 \begin{subthm}{ex:g-b-chi:two-handles}
 Sphere with two handles.
 \end{subthm}
+
+\begin{Figure}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-1610}
+\end{Figure}
+
+\end{multicols}
 
 \end{thm}

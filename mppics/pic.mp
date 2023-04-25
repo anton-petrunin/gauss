@@ -3857,8 +3857,8 @@ path p[];
 u:=.5cm;
 t:=.2;
 
-z.a1=(-1,0)*u;
-z.a2=(1,0)*u;
+z.a1=(-.5,0)*u;
+z.a2=(1.5,0)*u;
 
 p1=z.a1{up}..z.a2{down}..cycle;
 
@@ -3869,7 +3869,7 @@ p2=z.b1{down}..z.b2{up}..cycle;
 
 z.c0=point t of p2;
 z.c2=point 2-t of p2;
-z.c1=(-1.7,0)*u;
+z.c1=(-1.5,0)*u;
 
 p3=z.c0..z.c1..z.c2;
 
@@ -3884,8 +3884,8 @@ draw z.c1--z.a1;
 
 Dot z.a1,z.c0,z.c1,z.c2;
 
-label(btex $\Delta_1$ etex, (2,0)*u) withcolor 1;
-label(btex $\Delta_2$ etex, (-2.4,0)*u) withcolor 1;
+label(btex $\Delta_1$ etex, (0,2)*u) withcolor 1;
+label(btex $\Delta_2$ etex, (-2.25,0)*u) withcolor 1;
 label.lft(btex $\gamma_1$ etex, z.a2);
 label.rt(btex $\gamma_2$ etex, z.b2);
 endfig;
@@ -3939,12 +3939,129 @@ draw z.p-- -z1 dashed evenly;
 
 dOt z.p;
 
-labelarcsprof(z1, z.p, z2, 12, 12, btex $\delta_2$ etex);
-labelarcsprof(z3, z.p, z2, 13, 13, btex $\delta_7$ etex);
-labelarcsprof(z3, z.p, z4, 14, 14, btex $\delta_5$ etex);
+labelarcsprof(z1, z.p, z2, 12, 12, btex $\delta_3$ etex);
+labelarcsprof(z3, z.p, z2, 13, 13, btex $\delta_8$ etex);
+labelarcsprof(z3, z.p, z4, 14, 14, btex $\delta_6$ etex);
 labelarcsprof(-z1, z.p, z4, 12, 12, btex $\theta$ etex);
 label.urt(btex $p$ etex, z.p);
 endfig;
+
+beginfig(1595) 
+save u,n;
+u:=.6cm;
+
+z.shift=(6,0)*u;
+z0=origin;
+z1=(3,2)*u;
+z11=(x1,-y1);
+
+
+z.a=(2,.2)*u;
+z.b=(4,.2)*u;
+
+path p[];
+p0=z.a{1,-1}..{1,1}z.b;
+p1=z0..z1..z0+z.shift..z11..cycle;
+
+draw p0;
+draw ((subpath (.2,.8) of p0) reflectedabout(point .2 of p0,point .8 of p0));
+draw p1;
+endfig;
+
+beginfig(1600) 
+save u,n,a;
+u:=.5cm;
+a:=20;
+path p[];
+
+
+z.a=(-3,0)*u;
+z.b=(3,0)*u;
+
+z.l=(-1.4,-4)*u;
+z.r=(1.4,-4)*u;
+
+p0=z.a{up}..tension 4..{down}z.b..tension 4..cycle;
+p1=z.l{up}..tension 4..{down}z.r..tension 4..cycle;
+p2=p1 rotated (-a) shifted ((-1.6,0)*u);
+p3=p1 rotated (a) shifted ((1.6,0)*u);
+
+draw p0;
+draw subpath (0,1) of p2 dashed evenly;
+draw subpath (1,2) of p2;
+draw subpath (0,1) of p3 dashed evenly;
+draw subpath (1,2) of p3;
+draw z.a{down}..{-(direction 0.01 of p2)}point 0.01 of p2;
+draw z.b{down}..{(direction .99 of p3)}point .99 of p3;
+draw point 1 of p2{-(direction 1 of p2)}..{-(direction 0 of p3)} point 0 of p3;
+endfig;
+
+beginfig(1605) 
+save u,n;
+u:=.6cm;
+path p[];
+
+z.a=(-3,0)*u;
+z.b=(3,0)*u;
+z.u=z.a+z.l +(1.5,-.7)*u;
+z.v=z.u xscaled -1;
+z.z=(0,-2.5)*u;
+z.l=(-.3,-2.4)*u;
+z.r=z.l xscaled -1;
+
+p0=z.a{-z.l}..tension 4..z.b{z.r}..z.z..z.u{left}..z.a+z.l{-z.l}..tension 4..z.b+z.r{z.r}..z.v{left}..z.z..cycle;
+
+draw subpath (0,4) of p0;
+draw subpath (4,5) of p0 cutafter subpath (6,8) of p0 dashed evenly;
+draw subpath (4,5) of p0 cutbefore subpath (6,8) of p0 cutafter subpath (1,2) of p0;
+draw subpath (4,5) of p0 cutbefore subpath (1,2) of p0 dashed evenly;
+draw subpath (5,6) of p0;
+draw subpath (6,7) of p0 dashed evenly;
+draw subpath (7,8) of p0;
+
+draw z.u--z.v;
+draw z.a--z.a+z.l;
+draw z.b--z.b+z.r;
+endfig;
+
+beginfig(1610) 
+save u,n;
+u:=.4cm;
+n:=1;
+
+z.shift=(6,0)*u;
+z0=origin;
+z1=(3,2)*u;
+z2=(6,.8)*u;
+z11=(x1,-y1);
+z22=(x2,-y2);
+
+z.a=(2,.2)*u;
+z.b=(4,.2)*u;
+
+
+path p[];
+p0=z.a{1,-1}..{1,1}z.b;
+
+
+for i=0 step 1 until n:
+draw p0 shifted (i*z.shift);
+draw ((subpath (.2,.8) of p0) reflectedabout(point .2 of p0,point .8 of p0)) shifted (i*z.shift);
+endfor
+
+draw z0..z1..z2
+for i=1 step 1 until n-1:
+..z1+i*z.shift..z2+i*z.shift
+endfor
+..z1+n*z.shift..z0+(n+1)*z.shift..z11+n*z.shift
+for i=n-1 step -1 until 0:
+..z22+i*z.shift..z11+i*z.shift
+endfor
+..cycle
+;
+
+endfig;
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 beginfig(1750) 
