@@ -1812,17 +1812,28 @@ It is the same slope as in the problem about the cowboy and the lasso (\ref{ex:l
 Show and use that $|\gamma|\le 1$, and
 \[\langle\nu,\epsilon\cdot \nu-\gamma\rangle\le0.\]
 
-\parit{\ref{SHORT.ex:bound-tc:b}.} Show and use that $|\gamma|\le 1$, $|\gamma'|= 1$, and
+\parit{\ref{SHORT.ex:bound-tc:b}.}
+Show and use that $|\gamma|\le 1$, $|\gamma'|= 1$, and
 \[\rho'=2\cdot \langle\gamma,\gamma'\rangle.\]
 
-\parit{\ref{SHORT.ex:bound-tc:c}.} Show and use that $\langle\gamma,\nu\rangle=|\gamma|\cdot\cos\theta$, $|\gamma'|= 1$, $\gamma''=-k\cdot \nu$ and
+\parit{\ref{SHORT.ex:bound-tc:c}.}
+Show and use that $\langle\gamma,\nu\rangle=|\gamma|\cdot\cos\theta$, $|\gamma'|= 1$, $\gamma''=-k\cdot \nu$, and
 \[\rho''=2\cdot \langle\gamma',\gamma'\rangle+2\cdot \langle\gamma,\gamma''\rangle.\]
 
-\parit{\ref{SHORT.ex:bound-tc:d}.} Suppose $x,y$ are the points in the unit sphere that project to the ends of $\gamma$. 
+\parit{\ref{SHORT.ex:bound-tc:d}.}
+Suppose $x,y$ are the points in the unit sphere that project to the ends of $\gamma$. 
 Connect $x$ to $y$ by a an arc of length $\le \pi$ in the sphere, project it to $\Sigma$.
 Apply \ref{lem:closest-point-projection} and use that $\gamma$ is a shortest path.
 
-\parit{\ref{SHORT.ex:bound-tc:e}.} Use \ref{SHORT.ex:bound-tc:a}--\ref{SHORT.ex:bound-tc:d}.
+\parit{\ref{SHORT.ex:bound-tc:e}.}
+Suppose $\gamma\:[0,\ell]\to\Sigma$ is a unit-speed parametrization.
+Use \ref{SHORT.ex:bound-tc:d} to show that $\ell\le \pi$.
+Use \ref{SHORT.ex:bound-tc:a}, \ref{SHORT.ex:bound-tc:b}, \ref{SHORT.ex:bound-tc:c}, and $|\gamma|\ge \epsilon$, to show that 
+\[2\cdot \ell-2\cdot \epsilon^2\cdot \tc{\gamma}
+\ge
+\int_0^\ell\rho''.\]
+Use \ref{SHORT.ex:bound-tc:b} to show that $\int_0^\ell\rho''\ge -4$.
+Make a conclusion.
 
 %\end{multicols}
 %\par\noindent\rule{\textwidth}{0.4pt}
