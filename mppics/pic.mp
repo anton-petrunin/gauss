@@ -3911,11 +3911,11 @@ draw z.p--z5;
 
 dOt z.p;
 
-labelarcsprof(z1, z.p, z2, 12, 12, btex $\delta_2$ etex);
-labelarcsprof(z3, z.p, z2, 13, 13, btex $\delta_7$ etex);
-labelarcsprof(z3, z.p, z4, 14, 14, btex $\delta_5$ etex);
-labelarcsprof(z5, z.p, z4, 12, 12, btex $\delta_1$ etex);
-labelarcsprof(z5, z.p, z1, 13, 13, btex $\delta_9$ etex);
+labelarcsprof(z1, z.p, z2, 12, 12, btex $\delta_1$ etex);
+labelarcsprof(z3, z.p, z2, 13, 13, btex $\delta_2$ etex);
+labelarcsprof(z3, z.p, z4, 14, 14, btex $\delta_3$ etex);
+labelarcsprof(z5, z.p, z4, 12, 12, btex $\delta_4$ etex);
+labelarcsprof(z5, z.p, z1, 13, 13, btex $\delta_5$ etex);
 label.lrt(btex $p$ etex, z.p);
 endfig;
 
@@ -3940,8 +3940,8 @@ draw z.p-- -z1 dashed evenly;
 dOt z.p;
 
 labelarcsprof(z1, z.p, z2, 12, 12, btex $\delta_3$ etex);
-labelarcsprof(z3, z.p, z2, 13, 13, btex $\delta_8$ etex);
-labelarcsprof(z3, z.p, z4, 14, 14, btex $\delta_6$ etex);
+labelarcsprof(z3, z.p, z2, 13, 13, btex $\delta_2$ etex);
+labelarcsprof(z3, z.p, z4, 14, 14, btex $\delta_1$ etex);
 labelarcsprof(-z1, z.p, z4, 12, 12, btex $\theta$ etex);
 label.urt(btex $p$ etex, z.p);
 endfig;
@@ -4059,6 +4059,52 @@ for i=n-1 step -1 until 0:
 endfor
 ..cycle
 ;
+
+endfig;
+
+beginfig(1700) 
+save u,p;
+path p[];
+u:=1cm;
+
+z.shift=(2,0)*u;
+
+p0=(0,0)*u--(1,0)*u--(1,1)*u--(0,1)*u--cycle;
+
+draw p0;
+
+p1=(1/2,0)*u--(1/2,1)*u;
+
+draw p0 shifted z.shift;
+draw p1 shifted z.shift;
+
+p2=(0,1/2)*u--(1,1/2)*u;
+
+draw p0 shifted (2*z.shift);
+draw p1 shifted (2*z.shift);
+draw p2 shifted (2*z.shift);
+
+p3=(1/4,0)*u--(1/4,1)*u;
+p4=(3/4,0)*u--(3/4,1)*u;
+
+draw p0 shifted (3*z.shift);
+draw p1 shifted (3*z.shift);
+draw p2 shifted (3*z.shift);
+draw p3 shifted (3*z.shift);
+draw p4 shifted (3*z.shift);
+
+p5=(0,1/4)*u--(1,1/4)*u;
+p6=(0,3/4)*u--(1,3/4)*u;
+
+draw p0 shifted (4*z.shift);
+draw p1 shifted (4*z.shift);
+draw p2 shifted (4*z.shift);
+draw p3 shifted (4*z.shift);
+draw p4 shifted (4*z.shift);
+draw p5 shifted (4*z.shift);
+draw p6 shifted (4*z.shift);
+
+label(btex $\dots$ etex, 5*z.shift+(0,1/2)*u);
 
 endfig;
 

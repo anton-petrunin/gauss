@@ -561,33 +561,48 @@ where $\Delta$ is a topological disc in a smooth oriented surface,
 and $\partial \Delta$ is oriented in such a way that $\Delta$ lies on its left.
 
 \parit{Proof of the Gauss--Bonnet formula (\ref{thm:gb}).}
-First, assume $\Delta$ is covered by a semigeodesic chart.
-Note that the following weaker formula follows from \ref{prop:pt+tgc},
+Assume $\Delta$ is covered by a semigeodesic chart.
+From \ref{prop:pt+tgc},
 \ref{lem:rotation-parallel},
-and \ref{lem:rotation-semigeoesic}:
-\[\GB(\Delta)=2\cdot n\cdot \pi,
+and \ref{lem:rotation-semigeoesic} we get
+\[\GB(\Delta)
+=
+2\cdot n\cdot \pi,
 \eqlbl{eq:gb(n)}\]
 where $n=n(\Delta)$ is an integer.
 
 By \ref{ex:semigeodesc-chart}, any point can be covered by a semigeodesic chart.
 Therefore, applying \ref{lem:GB-sum} finite number of times, we get that 
 \ref{eq:gb(n)} holds for any disc $\Delta$ in~$\Sigma$.
+More precisely, by Jordan’s theorem (\ref{thm:jordan}), $\Delta$ can be parametrized by the standard disc, or equality the unit square.
+\begin{figure}[!ht]
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-1700}
+\vskip-0mm
+\end{figure}
+Applying the subdivision shown on the diagram, sufficiently many times we can assume the formula holds for any small square.
+Note that on each step we divide each disc in two;
+therefore, applying \ref{lem:GB-sum} several times we get the formula for the big square.
 
+It remains to show that $n=0$.
 Assume $\Delta$ lies in a local graph realization $z=f(x,y)$ of~$\Sigma$.
-Consider the one-parameter family $\Sigma_t$ of graphs $z=t\cdot f(x,y)$ and denote by $\Delta_t$ the corresponding disc in $\Sigma_t$, so $\Delta_1=\Delta$ and $\Delta_0$ is its projection to the $(x,y)$-plane.
+Consider the one-parameter family $\Sigma_t$ of graphs $z=t\cdot f(x,y)$;
+denote by $\Delta_t$ the corresponding disc in $\Sigma_t$, so $\Delta_1=\Delta$ and $\Delta_0$ is its projection to the $(x,y)$-plane.
 Note that the function $f\:t\mapsto \GB(\Delta_t)$ is continuous.
-From above, $f(t)$ is a multiple of $2\cdot\pi$ for any~$t$.
+By \ref{eq:gb(n)}, $f(t)$ is a multiple of $2\cdot\pi$ for any~$t$.
 It follows that $f$ is a constant function.
-In particular,
+Therefore,
 \begin{align*}
-\GB(\Delta)&=\GB(\Delta_0)=0,
+\GB(\Delta)&=\GB(\Delta_0)=0;
 \end{align*}
-where the last equality follows from $\ref{prop:total-signed-curvature}$.
+the last equality follows from $\ref{prop:total-signed-curvature}$.
 
 We proved that 
 \[\GB(\Delta)=0\eqlbl{eq:GB=0}\]
 if $\Delta$ lies in a graph $z=f(x,y)$ for some $(x,y,z)$-coordinate system.
-Since  any point of $\Sigma$ has a neighborhood that can be covered by such a graph, applying Lemma~\ref{lem:GB-sum} as above we get that \ref{eq:GB=0} holds for any disc~$\Delta$ in~$\Sigma$.
+Any point of $\Sigma$ has a neighborhood that can be covered by such a graph.
+Therefore, applying Lemma~\ref{lem:GB-sum} the same way as above, we get that \ref{eq:GB=0} holds for any disc~$\Delta$ in~$\Sigma$.
 \qeds
 
 

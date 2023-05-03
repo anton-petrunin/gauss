@@ -351,7 +351,7 @@ Then
 \[\iint_\Lambda K=2\cdot \pi\cdot \chi-\tgc{\gamma_1}-\dots-\tgc{\gamma_n}\eqlbl{eq:g-b++}\]
 for an integer $\chi=\chi(\Lambda)$.
 
-Moreover, if $\Lambda$ can be subdivided into $f$ discs by an embedded graph with $v$ vertices and $e$ edges, then $\chi=v-e+f$.
+Moreover, if $\Lambda$ can be subdivided into $f$ discs ($f$ stands for faces) by an embedded graph with $v$ vertices and $e$ edges, then $\chi=v-e+f$.
 \end{thm}
 
 The number $\chi=\chi(\Lambda)$ is called the \index{Euler characteristic}\emph{Euler characteristic} of $\Lambda$. 
@@ -366,7 +366,7 @@ The argument is similar to \ref{lem:GB-sum}, but the combinatorics gets trickier
 \end{wrapfigure}
 
 Before reading the proof, try to modify the argument in \ref{lem:GB-sum} to derive the formula for the subdivision of the annulus $A$ on the diagram;
-its graph has 4 vertices and 6 edges (one of them is a loop) and it subdivides the annulus into two discs $\Delta_1$ and $\Delta_2$.
+its graph has 4 vertices and 6 edges (one of them is a loop) and it subdivides $A$ into two discs $\Delta_1$ and $\Delta_2$.
 Therefore, we have $\chi(A)=4-6+2=0$ and we should get 
 \[\iint_A K=-\tgc{\gamma_1}-\tgc{\gamma_2}.\]
 
@@ -386,40 +386,42 @@ It remains to show that
 =
 2\cdot\pi\cdot(v-e).
 \eqlbl{eq:GB-sum}\]
-In the proof of this identity, we will handle the contributions of each edge and vertex separately.
+To prove this identity, we compute the left-hand side adding up the contributions of each edge and each vertex separately.
 
 Choose an edge $\sigma$ of the graph.
-If $\sigma$ does not appear on some $\gamma_i$,
-then it appears twice in the boundary of the discs, say for $\Delta_i$ and $\Delta_j$.
-We may assume that $\Delta_i$ lies on the left from $\sigma$ and $\Delta_j$ is on its right.
-In this case, $\sigma$ contributes $\tgc\sigma$ to $\tgc{\partial\Delta_i}$ and $-\tgc\sigma$ to $\tgc{\partial\Delta_j}$; so $\sigma$ contributes nothing to \ref{eq:GB-sum}.
+If $\sigma$ is not part of some $\gamma_i$,
+then it appears twice in the boundary of the discs, say in  $\partial \Delta_i$ and $ \partial \Delta_j$. 
+In the latter case, we may assume that $\Delta_i$ lies on the left from $\sigma$ and $\Delta_j$ is on its right, so 
+ $\sigma$ contributes $\tgc\sigma$ to $\tgc{\partial\Delta_i}$ and $-\tgc\sigma$ to $\tgc{\partial\Delta_j}$; hence $\sigma$ contributes nothing to the left-hand side of \ref{eq:GB-sum}.
 It might happen that $i=j$ (as for one of the edges on the diagram above);
 in this case, we have one disc on both sides of~$\sigma$, but still, it contributes nothing to \ref{eq:GB-sum}.
-If $\sigma$ appears on some $\gamma_i$, then it also appears once on the boundary of some disc, say $\Delta_j$.
-We may assume that $\Lambda$ and $\Delta_j$ lie on the left from $\sigma$.
-In this case, it contributes $\tgc\sigma$ to $\tgc{\gamma_i}$ and to $\tgc{\partial\Delta_j}$.
-These contributions cancel each other in \ref{eq:GB-sum}.
+If $\sigma$ is part of some $\gamma_i$, then it also appears once in the boundary of some disc, say in $\partial \Delta_j$.
+We may assume that both $\Lambda$ and $\Delta_j$ lie on the left from $\sigma$,
+so it contributes $\tgc\sigma$ to both $\tgc{\gamma_i}$ and $\tgc{\partial\Delta_j}$.
+These contributions cancel each other on the left-hand side of  \ref{eq:GB-sum}.
 
-Summarizing, the total contribution in \ref{eq:GB-sum} that comes from the total geodesic curvatures of edges vanishes.
+Summarizing, the contributions to the left-hand side of  \ref{eq:GB-sum} that come from the total geodesic curvatures of edges cancel out.
 
-Let us handle the external angles.
+Let us now handle the external angles at the vertices.
 Choose a vertex $p$.
-If $p$ is a vertex of $\Delta_i$ then denote by $\delta_{i}$ the internal angle of $\Delta_i$ and $p$;
-note that $\phi_{i}=\pi-\delta_{i}$ is the external angle of $\Delta_i$ at $p$.
+Denote by $d$ the \index{degree of vertex}\emph{degree} of~$p$;
+that is, the number of edges that end at~$p$.
 
 \begin{wrapfigure}{r}{23 mm}
-\vskip-6mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-1585}
 \end{wrapfigure}
 
-If $p$ lies in the interior of $\Lambda$, then it contributes  
-$-\sum\phi_{i}$
-to \ref{eq:GB-sum}, here the sum is taken for all $i$ such that $p\in\Delta_i$.
-Note that $\sum\delta_{i}=2\cdot\pi$.
-Therefore, $p$ contributes
-\[-\sum\phi_{i}=(2-d)\cdot \pi,\]
-here $d$ denotes the \index{degree of vertex}\emph{degree} of $p$; that is, the number of edges that end at~$p$.
+Suppose $p$ lies in the interior of $\Lambda$.
+Denote by $\delta_1,\dots,\delta_d$ the internal angles at $p$ of the discs containing $p$ as a vertex. 
+Let  $\phi_{i}=\pi-\delta_{i}$ be the corresponding external angles.
+Then $p$ contributes  
+$-\phi_1-\dots-\phi_d$ to the sum.
+Note that $\delta_1+\dots+\delta_d=2\cdot\pi$;
+so $p$ contributes
+\[-\phi_1-\dots-\phi_d = (\delta_1+\dots+\delta_d) - d\cdot \pi=(2-d)\cdot \pi,\]
+to the left-hand side of \ref{eq:GB-sum}.
 
 \begin{wrapfigure}{r}{23 mm}
 \vskip-6mm
@@ -427,21 +429,24 @@ here $d$ denotes the \index{degree of vertex}\emph{degree} of $p$; that is, the 
 \includegraphics{mppics/pic-1590}
 \end{wrapfigure}
 
-Further, if $p$ lies on the boundary of $\Lambda$, then
-$\sum\delta_{i}\z=\pi-\theta$,
+If $p$ lies on the boundary of $\Lambda$, then it is a vertex of $d-1$ internal angles
+$\delta_1,\dots,\delta_{d-1}$.
+Let $\phi_{i}\z=\pi-\delta_{i}$ be the corresponding external angles.
+Note that
+\[\delta_1+\dots+\delta_{d-1}\z=\pi-\theta,\]
 where $\theta\in(-\pi,\pi)$ denotes the external angle of $\Lambda$ at $p$.
 And again, $p$ contributes
-\[\theta-\sum\phi_{i}=(2-d)\cdot \pi.\]
-to \ref{eq:GB-sum}.
+\[\theta-\sum\phi_{i}=(2-d)\cdot \pi\]
+to the left-hand side of \ref{eq:GB-sum}.
 
-Summarizing, suppose $p_1,\dots,p_v$ are the vertices of the graph, and $d_1,\dots,d_v$ are the corresponding degrees.
-Then the total contribution from external angles to \ref{eq:GB-sum} is 
+Summarizing, suppose $p_1,\dots,p_v$ are the vertices of the graph, and $d_1,\dots,d_v$ are their corresponding degrees.
+Then the total contribution from external angles to the left-hand side of  \ref{eq:GB-sum} is 
 \[2\cdot v\cdot \pi-(d_1+\dots+d_v)\cdot\pi.
 \eqlbl{eq:GB-sum-d}\]
-Since the edges contributed nothing, we get that \ref{eq:GB-sum-d} equals to the left-hand side in \ref{eq:GB-sum}.
+Since the edges contributed nothing, the left-hand side of  \ref{eq:GB-sum} equals \ref{eq:GB-sum-d}.
 
 It remains to observe that $d_1+\dots+d_v=2\cdot e$.
-Indeed, $d_1+\dots+d_v$ is the total number of ends of edges in the graph, and each edge has exactly two ends. 
+Indeed, $d_1+\dots+d_v$ is the total number of ends of $e$ edges in the graph, and each edge has exactly two ends. 
 This finishes the proof of \ref{eq:GB-sum} and \ref{eq:g-b++}.
 \qeds
 
