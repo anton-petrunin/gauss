@@ -572,18 +572,20 @@ and \ref{lem:rotation-semigeoesic} we get
 where $n=n(\Delta)$ is an integer.
 
 By \ref{ex:semigeodesc-chart}, any point can be covered by a semigeodesic chart.
-Therefore, applying \ref{lem:GB-sum} finite number of times, we get that 
-\ref{eq:gb(n)} holds for any disc $\Delta$ in~$\Sigma$.
-More precisely, by Jordan’s theorem (\ref{thm:jordan}), $\Delta$ can be parametrized by the standard disc, or equality the unit square.
+Therefore, applying \ref{lem:GB-sum} finite number of times, we get 
+\ref{eq:gb(n)} for any disc $\Delta$ in~$\Sigma$.
+More precisely, we can cut $\Delta$ by a smooth curve that runs from boundary to boundary
+and repeat such subdivision recursively for the obtained discs;
+see the diagram.
 \begin{figure}[!ht]
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-1700}
 \vskip-0mm
 \end{figure}
-Applying the subdivision shown on the diagram, sufficiently many times we can assume the formula holds for any small square.
-Note that on each step we divide each disc in two;
-therefore, applying \ref{lem:GB-sum} several times we get the formula for the big square.
+After several such steps, every small disc is covered by a semigeodesic chart.
+In particular, \ref{eq:gb(n)} holds for each small disc.
+Then applying \ref{lem:GB-sum} several times we get \ref{eq:gb(n)} for the original disc.
 
 It remains to show that $n=0$.
 Assume $\Delta$ lies in a local graph realization $z=f(x,y)$ of~$\Sigma$.

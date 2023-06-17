@@ -4104,7 +4104,7 @@ draw p4 shifted (4*z.shift);
 draw p5 shifted (4*z.shift);
 draw p6 shifted (4*z.shift);
 
-label(btex $\dots$ etex, 5*z.shift+(0,1/2)*u);
+label(btex {\LARGE $\dots$} etex, 5*z.shift+(0,1/2)*u);
 
 endfig;
 
