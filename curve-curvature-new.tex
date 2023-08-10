@@ -1,7 +1,7 @@
 \chapter{Curvature}
 \label{chap:curve-curvature}
 
-In mathematics, the term {}\emph{curvature} is used for anything that measures how much a {}\emph{geometric object} deviates from being {}\emph{straight}.
+In mathematics, the term curvature is used for anything that measures how much a geometric object deviates from being \textit{straight}.
 For curves, the curvature is a pointwise quantitative measure of how much the curve differs from a straight line.
 
 
@@ -212,7 +212,7 @@ whence
 Recall that the curvature of a spherical curve is at least $1$
 (see \ref{ex:curvature-of-spherical-curve}).
 In particular, the length of a spherical curve cannot exceed its total curvature.
-The following theorem shows that the same inequality holds for {}\emph{closed} curves in a unit ball.
+The following theorem shows that the same inequality holds for \textit{closed} curves in a unit ball.
 
 \begin{thm}{DNA theorem}\label{thm:DNA}
 Let $\gamma$ be a smooth closed curve that lies in a unit ball.
@@ -382,7 +382,7 @@ The arm lemma says that
 \begin{align*}
 |p_i-p_{i-1}|&=|q_i-q_{i-1}|,
 \\
-\measuredangle\hinge{p_i}{p_{i+1}}{p_{i1}}&\le \measuredangle\hinge{q_i}{q_{i+1}}{q_{i-1}}
+\measuredangle\hinge{p_i}{p_{i+1}}{p_{i-1}}&\le \measuredangle\hinge{q_i}{q_{i+1}}{q_{i-1}}
 \end{align*}
 for each $i$, then $|p_0-p_n|\le |q_0-q_n|$.}
 
@@ -415,29 +415,30 @@ otherwise the statement is evident.
 By convexity, the curve $\gamma_1$ lies on one side of the line $\ell$ thru $\gamma(a)$ and $\gamma(b)$;
 we may assume $\ell$ is horizontal and $\gamma_1$ lies below $\ell$.
 
-Let $s_0$ be the lowest point on $\gamma$;
-that is, $\gamma(s_0)$ has minimal $y$-coordinate.
+Let $s_0$ be the lowest point on $\gamma_1$;
+that is, $\gamma_1(s_0)$ has minimal $y$-coordinate.
 
 Denote by $\tan_1$ and $\tan_2$ the tangent indicatrixes of $\gamma_1$ and $\gamma_2$, respectively.
 Consider two unit vectors 
 \[\vec u_1=\tan_1(s_0)=\gamma_1'(s_0)
 \quad\text{and}\quad
 \vec u_2=\tan_2(s_0)=\gamma_2'(s_0).\]
-Note that $\gamma(b)$ lies in the direction of $\vec u_1$ from $\gamma(a)$.
+Note that $\gamma_1(b)$ lies in the direction of $\vec u_1$ from $\gamma_1(a)$.
 
 Lets us show that 
 \[\measuredangle(\gamma'_1(s),\vec u_1)\ge \measuredangle(\gamma'_2(s),\vec u_2)
 \eqlbl{<gamma',u}
 \]
 for any $s$.
-We will prove for $s\le s_0$; the case $s\ge s_0$ is analogous.
+We will prove it for $s\le s_0$; the case $s\ge s_0$ is analogous.
 
-By Exercise \ref{ex:tangent-support}, the $y$-coordinate of $\gamma$ is nonincreasing in the interval $[a,s_0]$.
-Therefore, the arc $\tan_1|_{[a,s_0]}$ lies in one of the unit semicircles with endpoints $\vec u_1$ and $-\vec u_1$.
-By \ref{obs:tantrix}, \ref{prop:convex-monotone}%ref to next chap
-, and \ref{ex:integral-length-0}, we get that
+Note that
 \[\measuredangle(\gamma'_1(s),\vec u_1)=\measuredangle(\tan_1(s),\vec u_1)=\length (\tan_1|_{[s,s_0]}).\eqlbl{<=length}\]
 for any $s\le s_0$.
+Indeed, by \ref{ex:tangent-support}, the $y$-coordinate of $\gamma_1$ is nonincreasing in the interval $[a,s_0]$.
+Therefore, the arc $\tan_1|_{[a,s_0]}$ lies in one of the unit semicircles with endpoints $\vec u_1$ and $-\vec u_1$.
+It remains to apply \ref{obs:tantrix}, \ref{prop:convex-monotone}, and \ref{ex:integral-length-0}.
+
 By \ref{obs:S2-length}, we also have 
 \[\measuredangle(\gamma'_2(s),\vec u_2)=\measuredangle(\tan_2(s),\vec u_2)\le \length (\tan_2|_{[s,s_0]}).\eqlbl{<=<length}\]
 
@@ -478,7 +479,7 @@ The cosine is decreasing in the interval $[0,\pi]$; therefore, \ref{<gamma',u} i
 \[\langle\gamma'_1(s),\vec u_1\rangle\le \langle\gamma'_2(s),\vec u_2\rangle\eqlbl{<gamma',u>}\]
 for any~$s$.
 
-Further, since $\gamma(b)$ lies in the direction of $\vec u_1$ from $\gamma(a)$, we have that
+Further, since $\gamma_1(b)$ lies in the direction of $\vec u_1$ from $\gamma_1(a)$, we have that
 \[|\gamma_1(b)-\gamma_1(a)|=\langle \vec u_1,\gamma_1(b)-\gamma_1(a)\rangle.\]
 Since $\vec u_2$ is a unit vector, we have that
 \[|\gamma_2(b)-\gamma_2(a)|\ge\langle \vec u_2,\gamma_2(b)-\gamma_2(a)\rangle.\]

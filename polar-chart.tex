@@ -153,7 +153,7 @@ For each pair $(u,v)$, consider an orthonormal frame $\Norm$, $\vec u=s_u$, and 
 Recall that since the vector $s_v(u,v)$ is tangent to $\Sigma$ at $s(u,v)$, we get $s_v\perp \vec u$ and $s_v\perp \Norm$. 
 Therefore, we have that $s_v=b\cdot\vec v$ for a smooth function $(u,v)\z\mapsto b(u,v)$.
 
-(For a fixed value $v_0$, the vector field $s_v=b\cdot\vec v$ describes the difference between $\gamma_0$ and an {}\emph{infinitesimally close} geodesic $\gamma_1\:u\mapsto s(u,v_1)$.
+(For a fixed value $v_0$, the vector field $s_v=b\cdot\vec v$ describes the difference between $\gamma_0$ and an \textit{infinitesimally close} geodesic $\gamma_1\:u\mapsto s(u,v_1)$.
 The fields with this property are called \index{Jacobi field}\emph{Jacobi fields} along $\gamma_0$.)
 
 
@@ -357,7 +357,7 @@ $b(r,\theta)$ does not change its sign for $0\z\le r\z<r_0$.
 \end{subthm}
 
 \begin{subthm}{ex:inj-rad:0}
-$b(r,\theta)\ne0$ if $0\le r<r_0$.
+$b(r,\theta)\ne0$ if $0< r<r_0$.
 \end{subthm}
 
 \begin{subthm}{ex:inj-rad:prop:inj-rad}
@@ -508,7 +508,9 @@ Observe that
 \item $\vec u(1)$ is a counterclockwise rotation of $\vec x(1)$ by the angle $\phi(1)\z=\rot_\gamma\vec u$,
 
 \end{itemize}
-It follows that $\vec x(1)$ is a {}\emph{clockwise} rotation of $\vec x(0)$ by angle $\rot_\gamma\vec u$, and the result follows.
+It follows that $\vec x(1)$ is a \textit{clockwise} rotation of $\vec x(0)$ by angle $\rot_\gamma\vec u$, and the result follows.
+
+The last statement follows from \ref{prop:pt+tgc}.
 \qeds
 
 The following lemma will play a key role in the proof of the Gauss--Bonnet formula given in the next section.
@@ -521,12 +523,13 @@ Then
 where $\vec u=s_u$, and $K$ denotes the Gauss curvature of~$\Sigma$.
 \end{thm}
 
-The proof is done by a calculation using the so-called \index{Green formula}\emph{Green formula} which can be formulated the following way:
+The proof is done by a calculation using the so-called \index{Green formula}\emph{Green formula} which can be formulated the following way.
 
-Let $D$ be a compact region in the $(u,v)$-coordinate plane that is bounded by a piecewise smooth simple closed curve $\alpha$.
+\textit{Let $D$ be a compact region in the $(u,v)$-coordinate plane that is bounded by a piecewise smooth simple closed curve $\alpha$.
 Suppose $\alpha$ is oriented in such a way that $D$ lies on its left.
-Then for any two smooth functions $P$ and $Q$ defined on $D$ we have
-\[\iint_D (Q_u- P_v)\cdot du\cdot dv=\int_\alpha (P\cdot du+Q\cdot dv).\]
+Then}
+\[\iint_D (Q_u- P_v)\cdot du\cdot dv=\int_\alpha (P\cdot du+Q\cdot dv)\]
+\textit{for any two smooth functions $P$ and $Q$ defined on $D$.}
 
 Note that the Green and Gauss--Bonnet formulas are similar --- they relate the integral along a disc and its boundary curve.
 So it shouldn't be  surprising that Green helps to prove Gauss--Bonnet.
@@ -544,11 +547,11 @@ Then
 \\
 &=\int_{s^{-1}\circ\gamma}b_u\cdot dv=
 \intertext{by the Green formula}
-&=\iint_{s^{-1}(R)}b_{uu}\cdot du\cdot dv=
+&=\iint_{s^{-1}(\Delta)}b_{uu}\cdot du\cdot dv=
 \intertext{Since $s_u\perp s_v$, we get $\jac s=|s_u|\cdot|s_v|=b$; therefore}
-&=\iint_R\frac{b_{uu}}{b}=
+&=\iint_\Delta\frac{b_{uu}}{b}=
 \intertext{by \ref{prop:jaccobi}, $K=-\tfrac{b_{uu}}{b}$, so we get}
-&=-\iint_{R}K.
+&=-\iint_{\Delta}K.
 \end{align*}
 \qedsf
 
@@ -556,8 +559,9 @@ Then
 \section{Gauss--Bonnet formula: a formal proof}\label{sec:gauss--bonnet:formal}
 
 Recall that the Gauss--Bonnet formula can be written as $\GB(\Delta)=0$,
-where $\Delta$ is a topological disc in a smooth oriented surface,
+where 
 \[\GB(\Delta)=\tgc{\partial\Delta}+\iint_\Delta K-2\cdot \pi,\]
+$\Delta$ is a topological disc in a smooth oriented surface,
 and $\partial \Delta$ is oriented in such a way that $\Delta$ lies on its left.
 
 \parit{Proof of the Gauss--Bonnet formula (\ref{thm:gb}).}
@@ -592,7 +596,7 @@ Assume $\Delta$ lies in a local graph realization $z=f(x,y)$ of~$\Sigma$.
 Consider the one-parameter family $\Sigma_t$ of graphs $z=t\cdot f(x,y)$;
 denote by $\Delta_t$ the corresponding disc in $\Sigma_t$, so $\Delta_1=\Delta$ and $\Delta_0$ is its projection to the $(x,y)$-plane.
 Note that the function $f\:t\mapsto \GB(\Delta_t)$ is continuous.
-By \ref{eq:gb(n)}, $f(t)$ is a multiple of $2\cdot\pi$ for any~$t$.
+By \ref{eq:gb(n)}, $f(t)$ is an integer multiple of $2\cdot\pi$ for any~$t$.
 It follows that $f$ is a constant function.
 Therefore,
 \begin{align*}
@@ -652,7 +656,16 @@ By \ref{prop:jaccobi}
 If $K\ge 0$, then $r\mapsto b(r,\theta)$ is concave
 and
 if $K\le 0$, then $r\mapsto b(r,\theta)$ is convex for any fixed $\theta$.
-Note that $b(0,\theta)=0$, and by \ref{obs:d(exp)=1}, $b_\theta(0,\theta)=1$.
+
+Note that $b(0,\theta)=0$, and $b_r(0,\theta)=1$ for any $\theta$.
+Indeed, we may assume that $\theta=0$.
+Choose the standard basis $\vec v,\vec w$ in $\T_p$; so $\vec v$ points in the direction of curve $t\mapsto s(t,0)$.
+Note that 
+\[b(r,0)=r\cdot |(D_{\vec w}\exp_p)(r\cdot \vec v)|.\]
+In particular, $b(0,0)=0$.
+Further, by \ref{obs:d(exp)=1}, $|(D_{\vec w}\exp_p)(0)|=1$.
+Therefore $b_r(0,0)=1$.
+
 Therefore, 
 \[
 \begin{aligned}

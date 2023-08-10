@@ -589,6 +589,11 @@ $\measuredangle\hinge yxz
 <\pi$, or, equivalently, for the \emph{nonclosed} polygonal line $xyzx$ we have $\tc{xyzx}>\pi$.
 It remains to apply \ref{prop:inscribed-total-curvature}.
 
+\parbf{\ref{ex:quadrisecant}.}
+Consider the closed polygonal line $acbd$.
+Observe that $\tc{acbd}=4\cdot\pi$.
+It remains to apply \ref{prop:inscribed-total-curvature}.
+
 \parbf{\ref{ex:total-curvature=}.}
 By \ref{prop:inscribed-total-curvature}, $\tc\gamma\ge \tc\beta$;
 it remains to show that
@@ -602,11 +607,6 @@ we need to construct a polygonal line $\beta$ inscribed in $\gamma$ such that
 Suppose $\vec u_i=\tan(s_i)$.
 Choose an inscribed polygonal line $\beta=p_0\dots p_{2\cdot k+1}$ such that $p_{2\cdot i}$ and $p_{2\cdot i+1}$ lie sufficiency close to $\gamma(s_i)$; so we can assume that the direction of $p_{2\cdot i+1}-p_{2\cdot i}$ is sufficiency close to $\vec u_i$ for each~$i$.
 Show that \ref{eq:tc=<tc} holds true for the constructed polygonal line $\beta$.
-
-\parbf{\ref{ex:quadrisecant}.}
-Consider the closed polygonal line $acbd$.
-Observe that $\tc{acbd}=4\cdot\pi$.
-It remains to apply \ref{prop:inscribed-total-curvature}.
 
 \parbf{\ref{ex:tc-rectifiable}.}
 Show that for any polygonal line $\beta$ in a ball of radius $R$, we have
@@ -916,9 +916,11 @@ Show that $\alpha_s$ moves almost vertically up.
 Use the fact that $\gamma_t$ moves almost horizontally to show that in a small neighborhood of $p$, the curve $\gamma_1$ lies above $\gamma_0$,
 whence the statement follows.
 
-\parbf{\ref{ex:in-circle}.} Move the center of the unit circle to the base of the loop and then reduce its radius to zero.
+\parbf{\ref{ex:in-circle}.}
+Move the unit circle straight until its center gets to the base of the loop,
+and then reduce its radius to zero.
 Show that at the moment when the circle first touches the loop, it supports the loop at a point distinct from the base.
-Apply \ref{prop:supporting-circline}.
+Apply~\ref{prop:supporting-circline}.
 
 
 \parbf{\ref{ex:between-parallels-1} $\bm{+}$ \ref{ex:in-triangle} $\bm{+}$ \ref{ex:lens}.}
@@ -1296,7 +1298,7 @@ show that $r\ge 1$.
 \parbf{\ref{ex:section-of-convex}.}
 Suppose a point $p$ lies in the intersection $\Pi\cap\Sigma$.
 
-Show that if the tangent plane $\T_p\Sigma$ is parallel to $\Pi$,
+Show that if $\Pi$ is tangent to surface at $p$,
 then $p$ is an isolated point of the intersection $\Pi\cap\Sigma$.
 
 It follows that if $\gamma$ is a connected component of the intersection $\Pi\cap\Sigma$ that is not an isolated point,
@@ -2174,7 +2176,8 @@ Note that all its angles are $\pi$, but all model angles are $\tfrac{\pi}3$.
 
 \parbf{\ref{ex:diam-angle}.}
 Show that $\dist{p}{x}\Sigma\le \dist{p}{q}\Sigma$ and $\dist{q}{x}\Sigma\le \dist{p}{q}\Sigma$.
-Conclude that $\modangle xpq\ge \tfrac\pi3$.
+Conclude that
+\[\modangle xpq\ge \tfrac\pi3.\]
 Apply \ref{thm:comp:toponogov}.
 
 \parbf{\ref{ex:sum=<2pi}.}

@@ -3,7 +3,7 @@
 
 In the previous chapter, we learned that the tangent plane $\T_p$ to any surface $\Sigma$ has first-order contact with it at $p$.
 This means that up to first order, all surfaces locally look the same.
-This is not the case for second-order approximations, which are determined by the {}\emph{principal curvatures} of the surface.
+This is not the case for second-order approximations, which are determined by the principal curvatures of the surface.
 
 \section{Tangent-normal coordinates} \label{sec:lmn}
 \index{tangent-normal coordinates}
@@ -37,7 +37,7 @@ m&=f_{xy}(0,0)=f_{yx}(0,0),
 \\
 n&=f_{yy}(0,0).
 \end{align*}
-The {}\emph{Taylor series} 
+The \textit{Taylor series} 
 for $f$ at $(0,0)$ up to the second-order term can be then written as
 \[f(x,y)=\tfrac12(\ell\cdot x^2+2\cdot m\cdot x\cdot y+n\cdot y^2)+o(x^2+y^2).\]
 Note that values $\ell$, $m$, and $n$ are completely determined by this equation.\index{10lmn@$\ell$, $m$, $n$}
@@ -87,7 +87,7 @@ if we need to emphasize that we compute them at the point $p$ for the surface~$\
 We will always assume $k_1\le k_2$.
 
 
-Note that if $x=f(x,y)$ is a local graph representation of $\Sigma$ in these coordinates, then 
+Note that if $z=f(x,y)$ is a local graph representation of $\Sigma$ in these coordinates, then 
 \[f(x,y)=\tfrac12\cdot(k_1\cdot x^2+k_2\cdot y^2)+o(x^2+y^2).\]
 
 The principal curvatures can be also defined as the eigenvalues of the Hessian matrix $M_p$.
@@ -127,6 +127,9 @@ m&n
 )
 $ is the Hessian matrix.
 
+Note that reversing the orientation of $\Sigma$ does not change the Gauss curvature.
+In particular, the Gauss curvature is well-defined for nonoriented surfaces.
+
 \begin{thm}{Exercise}\label{ex:gauss+orientable}
 Show that any surface with positive Gauss curvature is orientable. 
 \end{thm}
@@ -149,8 +152,7 @@ that is,
 
 A surface with vanishing mean curvature is called \index{minimal surface}\emph{minimal}.
 
-Note that reversing the orientation of $\Sigma$ does not change the Gauss curvature, but changes the sign of the mean curvature.
-In particular, the Gauss curvature is well-defined for nonoriented surfaces.
+Note that reversing the orientation of $\Sigma$ changes the sign of the mean curvature.
 
 \begin{thm}{Exercise}\label{ex:re-scale-surface-curvature}
 Let $\Sigma$ be an oriented surface, and let $\Sigma_{\lambda}$ be a scaled copy of $\Sigma$ with factor $\lambda > 0$; that is, $\Sigma_{\lambda}$ consists of the points $\lambda \cdot x$ with $x \in \Sigma$. Show that
@@ -611,7 +613,7 @@ Now we are going to show by an example that the answer is ``no'' in the general 
 it was constructed by Vladimir Lagunov \cite{lagunov-1961}.
 
 \parit{Construction.}
-Let us start with a body of revolution $V_1$ whose cross-section is shown on the diagram below.
+Let us start with a body of revolution $V_1$ whose cross-section is shown on the next diagram.
 The boundary curve of the cross-section consists of 6 long horizontal line segments included in 3 simple closed smooth curves.
 (To make the curves smooth, one has to use cutoffs and mollifiers from Section~\ref{sec:analysis}.)
 The boundary of $V_1$ has 3 components, each of which is a smooth sphere.
