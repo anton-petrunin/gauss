@@ -40,7 +40,7 @@ n&=f_{yy}(0,0).
 The \textit{Taylor series} 
 for $f$ at $(0,0)$ up to the second-order term can be then written as
 \[f(x,y)=\tfrac12(\ell\cdot x^2+2\cdot m\cdot x\cdot y+n\cdot y^2)+o(x^2+y^2).\]
-Note that values $\ell$, $m$, and $n$ are completely determined by this equation.\index{10lmn@$\ell$, $m$, $n$}
+Note that values $\ell$, $m$, and $n$ are completely determined by this equation.\index{10lmn@$\ell$, $m$, $n$ (Hessian-matrix components)}
 The so-called \index{osculating!paraboloid}\emph{osculating paraboloid}
 \[z=\tfrac12\cdot(\ell\cdot x^2+2\cdot m\cdot x\cdot y+n\cdot y^2)\]
 has \index{order of contact}\emph{second-order contact} with $\Sigma$ at~$p$.
@@ -51,7 +51,7 @@ x\\y
 \end{smallmatrix}), (\begin{smallmatrix}
 x\\y
 \end{smallmatrix})\rangle,\]
-where $M_p$ is the so-called \index{Hessian matrix}\emph{Hessian matrix} of $f$ at $(0,0)$,\index{10m@$M_p$}
+where $M_p$ is the so-called \index{Hessian matrix}\emph{Hessian matrix} of $f$ at $(0,0)$,\index{10m@$M_p$ (Hessian matrix)}
 \[M_p=\begin{pmatrix}
  \ell
  &m
@@ -81,7 +81,7 @@ In this case,
  &k_2
  \end{pmatrix},
 \]
-the diagonal components $k_1$ and $k_2$ of $M_p$ are called the \index{principal curvatures and directions}\emph{principal curvatures} of $\Sigma$ at $p$;\index{10k@$k_1$, $k_2$}
+the diagonal components $k_1$ and $k_2$ of $M_p$ are called the \index{principal curvatures and directions}\emph{principal curvatures} of $\Sigma$ at $p$;\index{10k@$k_1$, $k_2$ (principal curvatures)}
 they might also be denoted as $k_1(p)$ and $k_2(p)$, or $k_1(p)_\Sigma$ and $k_2(p)_\Sigma$;
 if we need to emphasize that we compute them at the point $p$ for the surface~$\Sigma$.
 We will always assume $k_1\le k_2$.
@@ -112,7 +112,7 @@ Recall that $k_1(p)$ and $k_2(p)$ denote the principal curvatures at~$p$.
 
 The product 
 \[K(p)=k_1(p)\cdot k_2(p)\]
-is called the \index{10k@$K$}\index{Gauss curvature}\emph{Gauss curvature} at~$p$.
+is called the \index{10k@$K$ (Gauss curvature)}\index{Gauss curvature}\emph{Gauss curvature} at~$p$.
 We may denote it by $K$, $K(p)$, or $K(p)_\Sigma$ if we need to specify the point $p$ and the surface~$\Sigma$.
 
 Since the determinant is equal to the product of the eigenvalues, we get
@@ -134,7 +134,7 @@ In particular, the Gauss curvature is well-defined for nonoriented surfaces.
 Show that any surface with positive Gauss curvature is orientable. 
 \end{thm}
 
-The sum \index{10h@$H$}
+The sum \index{10h@$H$ (mean curvature)}
 \[H(p)=k_1(p)+ k_2(p)\] 
 is called the \index{curvature}\index{mean curvature}\emph{mean curvature}%
 \footnote{Some authors define it as $\tfrac12\cdot(k_1(p)+ k_2(p))$ --- the mean value of the principal curvatures. It suits the name better, but it is not as convenient when it comes to computations.}
@@ -266,7 +266,7 @@ Show that the shape operator is \index{self-adjoint operator}\emph{self-adjoint}
 for any $\vec u,\vec v\in\T_p$.
 \end{thm}
 
-Let us denote by $\vec i$, $\vec j$ and $\vec k$ the standard basis in the $\mathbb{R}^3$.\index{10i@$\vec i$, $\vec j$, $\vec k$}
+Let us denote by $\vec i$, $\vec j$ and $\vec k$ the standard basis in the $\mathbb{R}^3$.\index{10i@$\vec i$, $\vec j$, $\vec k$ (standard basis)}
 Recall that the components $\ell$, $m$, and $n$ of the Hessian matrix are defined in Section~\ref{sec:lmn}.
 
 \begin{thm}{Corollary}\label{cor:Shape(ij)}
@@ -405,7 +405,7 @@ Without loss of generality, we may assume that $\gamma$ is unit-speed;
 in this case, $\tan(s)=\gamma'(s)$ is its tangent indicatrix.
 Let us use the shortcut notation $\Norm(s)\z=\Norm(\gamma(s))$.
 Note that the unit vectors $\tan(s)$ and $\Norm(s)$ are orthogonal.
-Therefore there is a unique unit vector $\mu(s)$\index{10tmn@$\tan$, $\mu$, $\Norm$} such that 
+Therefore there is a unique unit vector $\mu(s)$\index{10tmn@$\tan$, $\mu$, $\Norm$ (Darboux frame)} such that 
 $\tan(s),\mu(s),\Norm(s)$ is an oriented orthonormal basis;
 it is called the \index{Darboux frame}\emph{Darboux frame} of $\gamma$ in~$\Sigma$.
 
@@ -415,7 +415,7 @@ This vector can also be defined as the vector product $\mu(s)\z\df\Norm(s)\times
 
 Since $\gamma$ is unit-speed, we have that $\gamma''\perp \gamma'$ (see \ref{prop:a'-pertp-a''}).
 Therefore, the acceleration of $\gamma$ can be written as a linear combination of $\mu$ and $\Norm$;
-that is, \index{10k@$k_g$, $k_n$}
+that is, \index{10k@$k_g$ geodesic curvature}\index{10k@$k_n$ (normal curvature)}
 \[\gamma''(s)=k_g(s)\cdot \mu(s)+k_n(s)\cdot\Norm(s).\]
 The values $k_g(s)$ and $k_n(s)$ are called \index{curvature}\index{geodesic!curvature}\emph{geodesic} and \index{normal!curvature}\emph{normal curvatures} of $\gamma$ at $s$, respectively.
 Since the frame $\tan(s),\mu(s),\Norm(s)$ is orthonormal, these curvatures can be also written as the following scalar products:
@@ -451,7 +451,7 @@ where $k_n$ denotes the normal curvature of $\gamma$ at $s_0$, and $\Shape_p$ is
 \end{thm}
 
 Note that according to the proposition, the normal curvature of a smooth curve in $\Sigma$ is completely determined by the velocity vector $\vec v$ at the point~$p$.
-For that reason, the normal curvature is also denoted by $k_{\vec v}$;\index{10k@$k_{\vec v}$}
+For that reason, the normal curvature is also denoted by $k_{\vec v}$;\index{10k@$k_{\vec v}$ (normal curvature)}
 according to the proposition,
 \[k_{\vec v}=\langle \Shape_p(\vec v),\vec v\rangle\]
 for any unit vector $\vec v$ in $\T_p$.

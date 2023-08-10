@@ -32,7 +32,7 @@ A set with a metric is called a \index{metric space}\emph{metric space}, and the
 
 \subsection*{Shortcut for distance}
 Usually, we consider only one metric on a set, therefore we can denote the metric space and its underlying set by the same letter, say $\spc{X}$.
-In this case, we also use the shortcut notations $\dist{x}{y}{}$ or $\dist{x}{y}{\spc{X}}$  for the {}\emph{distance} $\Dist(x,y)$ from $x$ to $y$ in $\spc{X}$.\index{10aaa@$\dist{x}{y}{}$, $\dist{x}{y}{\spc{X}}$}
+In this case, we also use the shortcut notations $\dist{x}{y}{}$ or $\dist{x}{y}{\spc{X}}$ for the {}\emph{distance} $\Dist(x,y)$ from $x$ to $y$ in $\spc{X}$.\index{10aaa@$\dist{x}{y}{}$, $\dist{x}{y}{\spc{X}}$ (distance)}
 For example, the triangle inequality can be written as 
 $$\dist{x}{z}{\spc{X}}\le \dist{x}{y}{\spc{X}}+\dist{y}{z}{\spc{X}}.$$
 
@@ -65,7 +65,7 @@ The {}\emph{open ball} is denoted as $B(p,R)$ or $B(p,R)_{\spc{X}}$;
 the second notation is used if we need to emphasize that the ball lies in the metric space $\spc{X}$.
 Formally speaking
 \[B(p,R)=B(p,R)_{\spc{X}}=\set{x\in \spc{X}}{\dist{x}{p}{\spc{X}}< R}.\]
-\index{10b@$B(p,R)_{\spc{X}}$, $\bar B[p,R]_{\spc{X}}$}
+\index{10b@$B(p,R)_{\spc{X}}$, $\bar B[p,R]_{\spc{X}}$ (ball)}
 Analogously, the {}\emph{closed ball} is denoted as $\bar B[p,R]$ or $\bar B[p,R]_{\spc{X}}$ and
 \[\bar B[p,R]=\bar B[p,R]_{\spc{X}}=\set{x\in \spc{X}}{\dist{x}{p}{\spc{X}}\le R}.\]
 
@@ -89,7 +89,7 @@ $B(p,\tfrac32)\subsetneq B(q,1)$ holds.
 
 \begin{thm}{Definition}
  Let ${\spc{X}}$ be a metric space.
-A sequence of points $x_1, x_2, \ldots$ in ${\spc{X}}$ \index{convergence of points}\emph{converges}
+A sequence of points $x_1, x_2, \ldots$ in ${\spc{X}}$ {}\emph{converges}
 if there is a point
 $x_\infty\in {\spc{X}}$ such that $\dist{x_\infty}{x_n}{}\to 0$ as $n\to\infty$.  
 That is, for every $\epsilon > 0$, there is a natural number $N$ such that for all $n \ge N$, we have
@@ -202,7 +202,7 @@ If $p=\alpha (0)$ and $q = \alpha (1)$, then we say that $\alpha$ connects $p$ t
 
 A set $X$ in the Euclidean space is called \index{path-connected set}\emph{path-connected} if any two points $x,y\in X$ can be connected by a path lying in~$X$.
 
-A set $X$ in the Euclidean space is called \index{connected set}\emph{connected} if one cannot cover $X$ with two disjoint open sets $V$ and $W$ such that both intersections $X\cap V$ and $X\cap W$ are nonempty.
+A set $X$ in the Euclidean space is called \index{connected}\emph{connected} if one cannot cover $X$ with two disjoint open sets $V$ and $W$ such that both intersections $X\cap V$ and $X\cap W$ are nonempty.
 
 \begin{thm}{Proposition}
 Any path-connected set is connected.
@@ -210,7 +210,7 @@ Any path-connected set is connected.
 Moreover, any open connected set in the Euclidean space or plane is path-connected.
 \end{thm}
 
-Given a point $x\in X$, the maximal connected subset of $X$ containing $x$ is called the \index{connected component}\emph{connected component} of $x$ in~$X$.
+Given a point $x\in X$, the maximal connected subset of $X$ containing $x$ is called the {}\emph{connected component} of $x$ in~$X$.
 
 \subsection*{Jordan's theorem}
 \index{Jordan's theorem}
@@ -257,7 +257,7 @@ Then a diagonal of $P$ lies completely in~$P$.
 
 \subsection*{Angle monotonicity}
 
-The {}\emph{measure} of angle with sides $[p,x]$ and $[p,y]$ will be denoted by $\measuredangle\hinge pxy$\index{10aab@$\measuredangle\hinge yxz$};
+The {}\emph{measure} of angle with sides $[p,x]$ and $[p,y]$ will be denoted by $\measuredangle\hinge pxy$\index{10aab@$\measuredangle\hinge yxz$ (angle measure)};
 it takes a value in the interval $[0,\pi]$.
 
 The following lemma is simple and useful.
@@ -359,7 +359,7 @@ Let $K\subset \mathbb{R}^3$ be a closed convex set.
 Then for any point $p\notin K$ there is a plane $\Pi$ that separates $K$ from $p$;
 that is, $K$ and $p$ lie on opposite open half-spaces separated by $\Pi$.
 
-Moreover, for any boundary point $p\in\partial K$, there is a plane $\Pi$ \index{supporting plane}\emph{supporting} $K$ at $p$;
+Moreover, for any boundary point $p\in\partial K$, there is a plane $\Pi$ \index{supporting!plane}\emph{supporting} $K$ at $p$;
 that is, $\Pi\ni p$ and $K$ lies in a closed half-space bounded by $\Pi$
 \end{thm}
 
@@ -558,7 +558,7 @@ A map $\bm{f}\:\mathbb{R}^m\to\mathbb{R}^n$ can be thaut of as an array of funct
 The map $\bm{f}$ is called \index{smooth!map}\emph{smooth} if each function $f_i$ is smooth;
 that is, all partial derivatives of $f_i$ are defined in the domain of definition of $\bm{f}$.
 
-The Jacobian matrix of $\bm{f}$ at $\bm{x}\in\mathbb{R}^m$ is defined as \index{10j@$\Jac$}
+The Jacobian matrix of $\bm{f}$ at $\bm{x}\in\mathbb{R}^m$ is defined as \index{10j@$\Jac$ (Jacobian matrix)}
 \[\Jac_{\bm{x}}\bm{f}=
 \begin{pmatrix}
 \dfrac{\partial f_1}{\partial x_1} & \cdots & \dfrac{\partial f_1}{\partial x_m}\\
@@ -637,7 +637,8 @@ holds if and only if
 
 Let $\bm{f}\:\mathbb{R}^n\to\mathbb{R}^n$ is a smooth map (maybe partially defined).
 Set
-\[\jac_{\bm{x}}\bm{f}\df|\det[\Jac_{\bm{x}}\bm{f}]|;\index{10j@$\jac$}\]
+\[\jac_{\bm{x}}\bm{f}\df|\det[\Jac_{\bm{x}}\bm{f}]|;
+\index{10j@$\jac$ (Jacobian determinant)}\]
 that is, $\jac_{\bm{x}}\bm{f}$ is the absolute value of the determinant of the Jacobian matrix of $\bm{f}$ at $\bm{x}$.
 
 The following theorem plays the role of a substitution rule for multiple variables.
