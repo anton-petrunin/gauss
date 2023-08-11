@@ -1,3 +1,4 @@
+%Lualatex+needs P22UndergroundCYBookSC.tt and P22-Underground-Reg.ttf
 \documentclass[
 coverheight=9in,
 coverwidth=6in,
@@ -6,7 +7,10 @@ bleedwidth=.125in,%.125in,
 marklength=0in,
 markcolor=black]{bookcover}
 
-\usepackage[T1]{fontenc}
+\usepackage{xcolor}
+\usepackage{background}
+\usepackage{blindtext}
+\usepackage{fontspec}
 
 \newbookcoverpart{pfront}{
 \setpartposx{\marklength+\bleedwidth+\spinewidth+\coverwidth+6mm}
@@ -33,23 +37,27 @@ markcolor=black]{bookcover}
 \vfill
 }
 
+\setmainfont{P22-Underground-Reg}
+
 \bookcovercomponent{center}{spine}
 {\rotatebox[origin=c]{-90}{
 \color{textcolor}
-\fontsize{20}{25}\usefont{OT1}{lmtt}{b}{n}
-       WHAT IS DIFFERENTIAL GEOMETRY?\qquad  CURVES AND SURFACES}}
+\fontsize{18}{25}\selectfont
+WHAT IS DIFFERENTIAL GEOMETRY?\qquad  CURVES AND SURFACES}}
+
 
 \bookcovercomponent{center}{pfront}{
 \begin{center}
-{\color{textcolor}\fontsize{23}{28}\usefont{OT1}{lmtt}{b}{n}
+{\color{textcolor}\fontsize{23}{28}\selectfont
 WHAT IS DIFFERENTIAL GEOMETRY?\\[5mm]
 }
-{\color{white}{\color{white}\fontsize{37}{28}\usefont{OT1}{lmtt}{b}{n}CURVES AND SURFACES}\hskip-1mm
+{{\color{textcolor}\fontsize{34}{28}\selectfont
+CURVES AND SURFACES}\hskip-1mm
 }
 \end{center}
 \vfill
 \begin{center}
-{\color{textcolor}\fontsize{17}{28}\usefont{OT1}{lmtt}{b}{n}
+{\color{textcolor}\fontsize{17}{28}\selectfont
 \ Anton Petrunin and Sergio Zamora Barrera
 }
 \end{center}
@@ -58,13 +66,14 @@ WHAT IS DIFFERENTIAL GEOMETRY?\\[5mm]
 \bookcovercomponent{center}{pback}{
 \begin{flushleft}
 \parbox{.8\textwidth}{
-\color{textcolor}\fontsize{16}{28}\usefont{OT1}{lmtt}{b}{n}
-Preliminary edition for friends only.}
+\color{textcolor}\fontsize{16}{18}\selectfont
+These notes are designed for those who either plan to work in differential geometry,
+or at least want to have a good reason not to do~it.}
 \end{flushleft}
 \vfill
 \begin{flushleft}
-{\color{textcolor}\fontsize{15}{28}\usefont{OT1}{lmtt}{b}{n}
-arXiv:2012.11814v4\\
+{\color{textcolor}\fontsize{15}{28}\selectfont
+arXiv:2012.11814v5\\
 github.com/anton-petrunin/gauss}
 \end{flushleft}
 }
