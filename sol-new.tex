@@ -544,6 +544,30 @@ for example, a small spherical circle centered at this point.
 Consider a curve $\tan$ that runs along $\alpha$ with speed $\kappa(s)$ at any $s\in [0,\ell]$.
 Show that a curve with tangent indicatrix $\tan$ solves the problem.
 
+\parbf{\ref{ex:gromov-twist}.}
+We can assume that $\gamma$ is unit-speed.
+Suppose the inequality fails at $t=0$.
+We may assume that $\alpha(0)\le\tfrac\pi2$;
+otherwise, revert the parametrization.
+
+In the plane spanned by $\gamma(0)$ and~$\gamma'(0)$, choose a unit-speed circline arc $\sigma$ from $0$ to $\gamma(0)$ that comes to $\gamma(0)$ in the direction opposite to $\gamma'(0)$.
+Consider a unit-speed semicircle $\tilde\gamma$ with curvature $2$
+that starts at $\gamma(0)$ in the direction $\gamma'(0)$ so that that the concatenation $\sigma*\tilde\gamma$ is an arc of a convex plane curve; see the figure.
+
+\begin{Figure}
+\vskip-1mm
+\centering
+\includegraphics{mppics/pic-282}
+\vskip-1mm
+\end{Figure}
+
+Show that if $|\gamma(0)|> \sin[\alpha(0)]$, then $\tilde\gamma$ leaves the unit ball; that is, $|\tilde\gamma(t_0)|>1$ for some~$t_0$.
+
+The concatenations $\sigma*\gamma$ and $\sigma*\tilde\gamma$ fail to be smooth at the joint, but it is differentiable at this point.
+Check that the proof of the bow lemma works in this more general case.
+
+Apply the bow lemma for $\sigma*\gamma$ and $\sigma*\tilde\gamma$, to get $|\gamma(t_0)|\ge |\tilde\gamma(t_0)|$, and arrive at a contradiction.
+
 %\end{multicols}
 %\par\noindent\rule{\textwidth}{0.4pt}
 %\begin{multicols}{2}
@@ -586,7 +610,7 @@ In particular,
 $\measuredangle\hinge yxz
 \z+
 \measuredangle\hinge zyx
-<\pi$, or, equivalently, for the \emph{nonclosed} polygonal line $xyzx$ we have $\tc{xyzx}>\pi$.
+<\pi$, or, equivalently, for the \textit{nonclosed} polygonal line $xyzx$ we have $\tc{xyzx}>\pi$.
 It remains to apply \ref{prop:inscribed-total-curvature}.
 
 \parbf{\ref{ex:quadrisecant}.}
@@ -837,12 +861,12 @@ We assume that $\gamma$ is unit-speed.
 Show that $\omega'=\tfrac{\skur'}{\skur^2}\cdot \norm$. 
 Conclude that $\omega$ has Frenet frame either $(\norm,-\tan)$ or $(-\norm,\tan)$, and its curvature is $|\tfrac{\kur^3}{\kur'}|$.
 
-\begin{wrapfigure}{r}{15 mm}
-\vskip-5mm
+\begin{Figure}
+\vskip-1mm
 \centering
 \includegraphics{mppics/pic-296}
-\vskip-3mm
-\end{wrapfigure}
+\vskip-1mm
+\end{Figure}
 
 \parbf{\ref{ex:3D-spiral}.}
 Start with a plane spiral curve as shown on the diagram.
@@ -1351,7 +1375,7 @@ Consider a sequence of points $x_n\in \Sigma$ such that $|x_n|\z\to \infty$ as $
 Denote by $\vec u_n$ the unit vector in the direction of $x_n$; that is $\vec u_n\z=\tfrac{x_n}{|x_n|}$.
 
 \begin{wrapfigure}{r}{29 mm}
-\vskip-4mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-1182}
 \vskip-3mm
@@ -1690,12 +1714,12 @@ in the cylinder $x^2 + y^2 =1$.
 Assume a shortest path $\alpha$ crosses $\Pi$ at least twice.
 In this case, there is a subarc $\alpha_1$ of $\alpha$ that lies strictly on one side on $\Pi$ (only its endpoints are on $\Pi$), and these endpoints are distinct from the endpoints of $\alpha$.
  
-\begin{wrapfigure}{r}{38 mm}
-\vskip-4mm
+\begin{Figure}
+\vskip-1mm
 \centering
 \includegraphics{mppics/pic-310}
-\vskip0mm
-\end{wrapfigure}
+\vskip-1mm
+\end{Figure}
 
 Let us remove the arc $\alpha_1$ from $\alpha$ and replace it with the reflection of $\alpha_1$ across $\Pi$.
 Note that the obtained curve, say $\beta$, lies on the surface;

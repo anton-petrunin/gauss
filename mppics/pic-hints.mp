@@ -318,6 +318,42 @@ label.urt (btex $-y$ etex, -z.y);
 label.ulft (btex $-z$ etex, -z.z);
 endfig;
 
+beginfig(282) 
+save u,p;
+u:=1.4cm;
+path p[];
+
+
+z.o=origin;
+z.x=(.6,.3)*u;
+z.b=z.x+(1,0)*u rotated -90;
+
+p1=z.b{(z.x-z.b) zscaled (0,-1)}..{(z.x-z.b) zscaled (0,1)}z.x..z.o;
+
+z.y=point 0.2 of p1;
+
+z.ss=2*z.x;
+z.s=z.x+(unitvector(z.x-z.b) zscaled (0,-1))*u;
+
+draw p1 pensemibold;
+draw z.o--z.x dashed evenly;
+drawarrow z.x--z.s;
+
+draw circle(z.o,1*u);
+
+labelarcsprof(z.ss, z.x, z.s, 10, 18, btex $\alpha$ etex);
+label.lft(btex $0$ etex, z.o);
+label.bot(btex $\gamma(0)$ etex, z.x);
+label.top(btex $\sigma$ etex, point 1.5 of p1);
+label.lrt(btex $\tilde\gamma(t_0)$ etex, z.y);
+label.rt(btex $\tilde\gamma$ etex, point 0.55 of p1);
+label.lrt(btex $\gamma'(0)$ etex, z.s);
+
+fill_angle(z.ss, z.x, z.s, 20);
+
+dOt z.o,z.x,z.y;
+endfig;
+
 
 beginfig(285);
 save u,p;
@@ -354,6 +390,30 @@ label.bot (btex $\vec u$ etex, z.qq+z.u);
 label.top (btex I etex, point .7 of p1);
 label.bot (btex II etex, point 1.55 of p1);
 whitelabel.top (btex III etex, point 2.4 of p1);
+
+endfig;
+
+beginfig(296);
+save u,p,t;
+path p[];
+u:=2cm;
+
+z[0]=(0,1)*u;
+z.k=(1-.01,.07);
+
+for i=1 step 1 until 301:
+z[i]=z[i-1] zscaled z.k;
+endfor
+
+p0=
+for i=0 step 1 until 301:
+z[i]..
+endfor
+origin;
+
+draw subpath (0,90) of p0;
+draw subpath (90,120) of p0 dashed evenly;
+draw subpath (120,300) of p0;
 
 endfig;
 

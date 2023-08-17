@@ -3396,30 +3396,6 @@ origin;
 
 endfig;
 
-beginfig(296);
-save u,p,t;
-path p[];
-u:=1cm;
-
-z[0]=(0,1)*u;
-z.k=(1-.01,.07);
-
-for i=1 step 1 until 301:
-z[i]=z[i-1] zscaled z.k;
-endfor
-
-p0=
-for i=0 step 1 until 301:
-z[i]..
-endfor
-origin;
-
-draw subpath (0,90) of p0;
-draw subpath (90,120) of p0 dashed evenly;
-draw subpath (120,300) of p0;
-
-endfig;
-
 beginfig(300);
 save u,p;
 path p[];

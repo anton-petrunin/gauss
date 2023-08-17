@@ -20,7 +20,7 @@ Assume $\gamma$ is a smooth unit-speed space curve.
 Then $\gamma'(s)\perp \gamma''(s)$ for any~$s$.
 \end{thm}
 
-The \emph{scalar product} (also known as \emph{dot product}) of two vectors $\vec v$ and $\vec w$ will be denoted by $\langle \vec v,\vec w\rangle$.
+The \index{scalar product}\emph{scalar product} (also known as \textit{dot product}) of two vectors $\vec v$ and $\vec w$ will be denoted by $\langle \vec v,\vec w\rangle$.
 Recall that the derivative of a scalar product satisfies the product rule;
 that is, if $\vec v=\vec v(t)$ and $\vec w=\vec w(t)$ are smooth vector-valued functions of a real parameter $t$, then
 \[\langle \vec v,\vec w\rangle'=\langle \vec v',\vec w\rangle+\langle \vec v,\vec w'\rangle.\]
@@ -120,7 +120,7 @@ In other words, construct a sequence $\gamma_n\:\mathbb{I}\to\mathbb{R}^3$ of sm
 
 Let $\gamma$ be a smooth space curve and $\tan$ its tangent indicatrix.
 The line thru $\gamma(t)$ in the direction of $\tan(t)$ is called the \index{tangent!line}\emph{tangent line} to $\gamma$  at~$t$.
-Any \emph{vector} propositional to $\tan(t)$ is called the \index{tangent!vector}\emph{tangent} to $\gamma$  at~$t$.
+Any vector proportional to $\tan(t)$ is called the \index{tangent!vector}\emph{tangent} to $\gamma$ at~$t$.
 
 The tangent line could be also defined as a unique line that has \index{order of contact}\emph{first-order contact} with $\gamma$ at $s$;
 that is, $\rho(\ell)=o(\ell)$, where $\rho(\ell)$ denotes the distance from $\gamma(s+\ell)$ to the line.
@@ -487,11 +487,17 @@ Since $\vec u_2$ is a unit vector, we have that
 Integrating \ref{<gamma',u>}, we get 
 \begin{align*}
 |\gamma_1(b)-\gamma_1(a)|&=\langle \vec u_1,\gamma_1(b)-\gamma_1(a)\rangle=
+\\
+&=
 \int_a^b\langle \vec u_1,\gamma'_1(s)\rangle\cdot ds \le 
 \\
-\le\int_a^b\langle \vec u_2,\gamma'_2(s)\rangle\cdot ds 
-&=\langle \vec u_2,\gamma_2(b)-\gamma_2(a)\rangle 
-\le |\gamma_2(b)-\gamma_2(a)|.
+&\le\int_a^b\langle \vec u_2,\gamma'_2(s)\rangle\cdot ds 
+=
+\\
+&=\langle \vec u_2,\gamma_2(b)-\gamma_2(a)\rangle
+\le
+\\
+&\le |\gamma_2(b)-\gamma_2(a)|.
 \end{align*}
 \qedsf
 
@@ -509,7 +515,9 @@ Use part \ref{SHORT.ex:length-dist:>} to give another solution of \ref{ex:sef-in
 \end{subthm}
 
 \begin{subthm}{ex:length-dist:=} Show that the inequality in \ref{SHORT.ex:length-dist:>} is optimal; that is, given 
-$\theta$ there is a smooth curve $\gamma$ such that $\frac{|\gamma(b)-\gamma(a)|}{\length\gamma}$ is arbitrarily close to $\cos\theta$.
+$\theta$ there is a smooth curve $\gamma$ such that $\tc\gamma\le 
+2\cdot\theta$, and $\frac{|\gamma(b)-\gamma(a)|}{\length\gamma}$ is arbitrarily 
+close to $\cos\theta$.
 \end{subthm}
 
 \end{thm}
@@ -539,3 +547,12 @@ Show that
 Let $\kur$ be a smooth nonnegative function defined on $[0,\ell]$.
 Show that there is a smooth unit-speed curve $\gamma\:[0,\ell]\to\mathbb{R}^3$ with curvature function $\kur$ such that the distance $|\gamma(\ell)-\gamma(0)|$ is arbitrarily close to $\ell$.
 \end{thm}
+
+\begin{thm}{Advanced exercise}\label{ex:gromov-twist}
+Let $\gamma$ be a closed smooth space curve with curvature at most 2.
+Suppose $|\gamma(t)|\le 1$ for any $t$.
+Show that if $\gamma(t)\ne 0$, then 
+\[|\gamma(t)| \le \sin [\alpha(t)]\]
+where $\alpha(t)$ denotes the angle between  $\gamma(t)$ and $\gamma'(t)$.
+\end{thm}
+
