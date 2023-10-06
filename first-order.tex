@@ -67,6 +67,8 @@ Consider the function
 Then the directional derivative of $f$ at $p$ along $\vec w$ is defined as \index{10d@$D_{\vec{w}}f$ (directional derivative)}
 \[D_{\vec w}f(p)\df h'(0).\]
 
+Recall that a function $f: \Sigma \to \mathbb{R}$ is said to be smooth if for any chart $s : U \to \Sigma$, the composition $f \circ s$ is smooth.
+
 \begin{thm}{Proposition-Definition}\label{def:directional-derivative}
 Let $f$ be a smooth function defined on a smooth surface $\Sigma$.
 Suppose $\gamma$ is a smooth curve in $\Sigma$ that starts at $p$ with velocity vector $\vec{w}\in \T_p$;
@@ -74,7 +76,7 @@ that is, $\gamma(0)=p$, and $\gamma'(0)=\vec{w}$.
 Then the derivative $(f\circ\gamma)'(0)$
 depends only on $f$, $p$, and $\vec{w}$;
 it is called the \index{directional derivative}\emph{directional derivative of $f$ along $\vec{w}$ at $p$}
-and denoted by
+and is denoted by
 \[D_{\vec{w}}f,\quad D_{\vec{w}}f(p), \quad\text{or}\quad D_{\vec{w}}f(p)_\Sigma\] 
 --- we may omit $p$ and $\Sigma$ if it is clear from the context.
 
@@ -164,30 +166,30 @@ The differential $d_p s$ can be described by a $2{\times}2$-matrix $M$ in orthon
 Set $\jac_p s=|\det M|$; this value  
 does not depend on the choice of orthonormal bases in $\T_p$ and $\T_{s(p)}\Sigma_1$. \label{page:|L|}\index{10d@$d_p f$ (differential)}
 
-Let $ s_1\:\Sigma_1\to\Sigma_2$ be another smooth map between smooth surfaces $\Sigma_1$ and $\Sigma_2$.
-Suppose ${p_1}= s(p)\in\Sigma_1$;
+Let $ s_1\:\Sigma_1\to\Sigma_2$ be a smooth map between smooth surfaces $\Sigma_1$ and $\Sigma_2$.
+Suppose ${p_1}= s_0(p_0)\in\Sigma_1$ for some chart $s_0$ of $\Sigma_1$;
 observe that 
-\[d_p( s_1\circ s)=d_{p_1} s_1 \circ d_p s.\]
+\[d_{p_0}( s_1\circ s_0)=d_{p_1} s_1 \circ d_{p_0} s_0 .\]
 It follows that
-\[\jac_p( s_1\circ s)
+\[\jac_{p_0}( s_1\circ s_0)
 =
-\jac_{p_1} s_1\cdot\jac_p s.\eqlbl{eq:jac-composition}\]
+\jac_{p_1} s_1\cdot\jac_{p_0} s_0 .\eqlbl{eq:jac-composition}\]
 
 
-If $\Sigma_0$ is a domain in the $(u,v)$-plane, then the value $\jac_p s$ can be found using the following formulas:
+The value $\jac_{p_0} s_0$ can be found using the following formulas:
 \begin{align*}
-\jac s
-&=|s_v\times s_u|=
+\jac s_0
+&=|(s_0)_v\times (s_0)_u|=
 \\
-&=\sqrt{\langle s_u, s_u\rangle\cdot\langle s_v, s_v\rangle -\langle s_u, s_v\rangle^2}=
+&=\sqrt{\langle (s_0)_u, (s_0)_u\rangle\cdot\langle (s_0)_v, (s_0)_v\rangle -\langle (s_0)_u, (s_0)_v\rangle^2}=
 \\
-&=\sqrt{\det[\Jac^\top s\cdot \Jac s]},
+&=\sqrt{\det[\Jac^\top s_0\cdot \Jac s_0 ]},
 \end{align*}
-where $\Jac s$ denotes the Jacobian matrix of $s$; it is a $2{\times}3$ matrix with column vectors $s_u$ and $s_v$.
+where $\Jac s_0$ denotes the Jacobian matrix of $s_0$; it is a $2{\times}3$ matrix with column vectors $(s_0)_u$ and $(s_0)_v$.
 
-The value $\jac_p s$ has the following geometric meaning:
-if $P_0$ is a region in $\T_p$ and $P_1=(d_p s)(P_0)$, then
-\[\area P_1=\jac_p s\cdot \area P_0.\]
+The value $\jac_{p_1} s_1$ has the following geometric meaning:
+if $P_1$ is a region in $\T_{p_1}$ and $P_2=(d_{p_1} s_1)(P_1)$, then
+\[\area P_2=\jac_{p_1} s_1 \cdot \area P_1.\]
 This identity will play a key role in the definition of surface area.
 
 \section{Surface integral and area}
@@ -213,7 +215,7 @@ After that one could define the integral along $R$ as the sum
 \[\iint_Rh
 \df
 \iint_{R_1}h+\iint_{R_2}h+\dots\]
-It is straightforward to check that the value $\iint_Rh$ does not depend on the choice of such subdivision.
+In case $R$ is compact or $h \geq 0$, it is straightforward to check that the value $\iint_Rh$ does not depend on the choice of such subdivision. 
 
 The area of a region $R$ in a smooth surface $\Sigma$ is defined as the surface integral 
 \[\area R=\iint_R 1.\]
@@ -222,12 +224,12 @@ The following proposition is the substitution rule for surface integral.
 
 \begin{thm}{Area formula}\label{prop:surface-integral}
 Suppose $s\:\Sigma_0\to \Sigma_1$ is a smooth parametrization of a smooth surface $\Sigma_1$ by  a smooth surface $\Sigma_0$.
-Then, for any region $R\subset \Sigma_0$ and any smooth function $f\:\Sigma_1\to\mathbb{R}$, we have
-\[\iint_R (f\circ s)\cdot \jac  s=\int_{s(R)}f.\]
+Consider a region $R\subset \Sigma_0$ and a smooth function $f\:\Sigma_1\to\mathbb{R}$. Then if either $R$ is compact or $f$ is non-negative, we have
+\[\iint_R (f\circ s)\cdot \jac  s=\int_{s(R)}f.  \]
 In particular, if $f\equiv 1$, we have
 \[\iint_R \jac  s=\area [s(R)].\]
-
 \end{thm}
+
 
 \parit{Proof.}
 Follows from \ref{eq:jac-composition} and the definition of surface integral.
