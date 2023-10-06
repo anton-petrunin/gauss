@@ -69,10 +69,10 @@ that is, $\tan$ is a spherical curve.
 
 
 If $s\mapsto \gamma(s)$ is a unit-speed parametrization, then $\tan(s)=\gamma'(s)$.
-In this case, we have the following expression for curvature:
+In this case, we have the following expression for the curvature:
 \[\kur(s)\z=|\tan'(s)|\z=|\gamma''(s)|.\]
 
-For general parametrization $t\mapsto \gamma(t)$,
+For a general parametrization $t\mapsto \gamma(t)$,
 we have instead
 \[ \kur(t)=\frac{|\tan'(t)|}{|\gamma'(t)|}.\eqlbl{eq:curvature}\]
 Indeed, for an arc-length reparametrization by $s(t)$, we have $s'(t)=|\gamma'(t)|$.
@@ -82,7 +82,7 @@ Therefore,
 \left|\frac{d\tan}{ dt}\right|/\left|\frac{ds}{ dt}\right|=
 \frac{|\tan'|}{|\gamma'|}.
 \end{align*}
-It follows that the indicatrix of a smooth curve $\gamma$ is smooth if the curvature of $\gamma$ does not vanish.
+It follows that the tangent indicatrix of a smooth curve $\gamma$ is smooth if the curvature of $\gamma$ does not vanish.
 
 \begin{thm}{Exercise}\label{ex:curvature-formulas}
 Use the formulas \ref{eq:tantrix} and \ref{eq:curvature} to show that 
@@ -135,7 +135,7 @@ if both curves are simple we can also say that they are tangent at the point $p=
 
 \section{Total curvature}
 
-Let $\gamma\:\mathbb{I}\to\mathbb{R}^3$ be a smooth unit-speed curve and $\tan$ its tangent indicatrix.
+Let $\gamma\:\mathbb{I}\to\mathbb{R}^3$ be a smooth unit-speed curve.
 The integral 
 \[\tc\gamma\df\int_{\mathbb{I}}\kur(s)\cdot ds\]
 is called the \index{total!curvature}\emph{total curvature of}\label{page:total curvature of:smooth-def}
@@ -205,7 +205,7 @@ Moreover, if $\gamma$ is closed, then
 Note that the last inequality gives an alternative proof of Fenchel's theorem.
 Indeed, without loss of generality, we can assume that the origin lies on a chord of~$\gamma$.
 In this case, the closed spherical curve $\sigma$ goes from a point to its antipode and comes back; 
-it takes length $\pi$ each way, 
+it takes length at least $\pi$ each way, 
 whence 
 \[\length\sigma\ge 2\cdot\pi.\]
 
@@ -258,7 +258,7 @@ In this section, we show that the tangent indicatrix of a convex curve rotates m
 The following exercise provides a key observation for the proof.
 
 \begin{thm}{Exercise}\label{ex:tangent-support}
-Let $\gamma$ be a convex plane curve;
+Let $\gamma$ be a smooth convex plane curve;
 denote by $F$ the convex set bounded by $\gamma$.
 Show that a line $\ell$ is tangent to $\gamma$ at point $p$ if and only if it \index{supporting!plane}\emph{supports} $F$ at $p$;
 that is, $\ell\ni p$ and $F$ lies in a closed half-plane bounded by $\ell$.
@@ -282,7 +282,7 @@ in other words, $\tan$ is a parametrization of an interval in a unit semicircle.
 \end{thm}
 
 The following corollary says that \textit{for convex curves we have equality in Fenchel's theorem} (\ref{thm:fenchel}).
-Latter we, in \ref{prop:fenchel=}, we will show that it holds \textit{only} for convex curves.
+Later we, in \ref{prop:fenchel=}, we will show that equality holds \textit{only} for convex curves.
 
 \begin{thm}{Corollary}\label{cor:fenchel=convex}
 Let $\gamma$ be a convex plane curve.
@@ -315,7 +315,7 @@ We may assume that $F$ lies on the left from $\gamma$.
 Choose a unit vector $\vec u$.
 Let $(x,y)$ be the coordinates of the plane with $x$-axis in the direction of $\vec u$.
 
-From Exercise~\ref{ex:tangent-support}, it follows that  $\vec u=\tan(s)$ if and only if $p=\gamma(s)$ is a minimum point of $y$-coordinate function on~$F$.
+From Exercise~\ref{ex:tangent-support}, it follows that  $\vec u=\tan(s)$ if and only if $p=\gamma(s)$ is a minimum point of the $y$-coordinate function on~$F$.
 Indeed suppose $p$ is a minimum point.
 Let $\ell$ be the horizontal line thru $p$.
 Then $\ell$ supports $F$ at $p$.
@@ -361,7 +361,7 @@ Denote by $\vec w$ the counterclockwise rotation of $\vec v$ by angle $\tfrac\pi
 Suppose $\vec u=\tan (s)$ for some $s$;
 choose $(x,y)$-coordinates so that $x$-axis points in the direction of $\vec u$.
 The same argument as in \ref{SHORT.prop:convex-monotone:closed} shows that 
-$p=\gamma(s)$ is a minimum pint in $F$ of the $y$-coordinate.
+$p=\gamma(s)$ is a minimum point in $F$ of the $y$-coordinate.
 It follows that $h$ and therefore $\vec v$ point in the closed upper half-plane of the $(x,y)$-plane.
 The latter is equivalent to \ref{eq:<(w,tan).pi/2}.
 \qeds
@@ -512,9 +512,10 @@ Assume
 \[|\gamma(b)-\gamma(a)|> \cos\theta\cdot\length\gamma.\]
 \end{subthm}
 
-\begin{subthm}{ex:length-dist:sef-intersection:>pi}
-Use part \ref{SHORT.ex:length-dist:>} to give another solution of \ref{ex:sef-intersection:>pi}. 
+\begin{subthm}{ex:length-dist:self-intersection:>pi}
+Show that if a smooth curve $\gamma\:[a,b]\to\mathbb{R}^3$ has a self-intersection, then $\tc\gamma>\pi$.
 \end{subthm}
+
 
 \begin{subthm}{ex:length-dist:=} Show that the inequality in \ref{SHORT.ex:length-dist:>} is optimal; that is, given 
 $\theta$ there is a smooth curve $\gamma$ such that $\tc\gamma\le 
