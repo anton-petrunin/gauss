@@ -9,7 +9,7 @@ This is not the case for second-order approximations, which are determined by th
 \index{tangent-normal coordinates}
 
 Fix a point $p$ in a smooth oriented surface~$\Sigma$.
-Consider a coordinate system $(x,y,z)$ with origin at $p$ such that the $(x,y)$-plane coincides with $\T_p$, and the $z$-axis points in the direction of the normal vector $\Norm(p)$.
+Consider a coordinate system $(x,y,z)$ with origin at $p$ such that the $(x,y)$-plane coincides with $\T_p$, and the $z$-axis points in the direction of the normal vector $\Norm(p)$. Such coordinates are called \emph{tangent-normal coordinates}. 
 By \ref{ex:vertical-tangent}, we can present $\Sigma$ locally at $p$ as a graph $z=f(x,y)$ of a smooth function. 
 Note that 
 \begin{align*}
@@ -95,7 +95,7 @@ The eigendirections of $M_p$ are called the {}\emph{principal directions} of $\S
 Note that if $k_1(p)\ne k_2(p)$, then $p$ has exactly two principal directions, which are perpendicular to each other;
 if $k_1(p)\z= k_2(p)$, then all tangent directions at $p$ are principal.
 
-Note that if we reverse the orientation of $\Sigma$, then the principal curvatures switch their signs and indexes.
+Note that if we reverse the orientation of $\Sigma$, then the principal curvatures switch their signs and indexes; that is, $k_1$ becomes $-k_2$ and $k_2$ becomes $-k_1$.
 
 A smooth curve on a surface $\Sigma$ that always runs in the principal directions is called a \index{line of curvature}\emph{line of curvature} of~$\Sigma$. 
 
@@ -344,7 +344,7 @@ By the area formula (\ref{prop:surface-integral}), the statement follows.
 
 \begin{thm}{Exercise}\label{ex:normal-curvature=const}
 Let $\Sigma$ be a smooth surface with orientation defined by a unit normal field $\Norm$.
-Suppose $\Sigma$ has unit principal curvatures at any point.
+Suppose the principal curvatures of $\Sigma$ are 1 at all points.
 
 \begin{subthm}{ex:normal-curvature=const:a} Show that $\Shape_p(\vec w)=\vec w$ for any $p\in\Sigma$ and $\vec w\in \T_p\Sigma$.
 \end{subthm}
@@ -581,8 +581,8 @@ is a minimal surface.
 \end{wrapfigure}
 
 \begin{thm}{Exercise}\label{ex:rev(sin)}
-Let $\Sigma$ be of the surface of revolution around $x$-axis
-with the generatrix $y=a\cdot \sin x$ for a constant $a>0$ and $x\in (0,\pi)$.
+Let $\Sigma$ be the surface of revolution around the $x$-axis
+with generatrix $y=a\cdot \sin x$ for a constant $a>0$ and $x\in (0,\pi)$.
 Show that the Gauss curvature of $\Sigma$ cannot exceed 1.
 \end{thm}
 
