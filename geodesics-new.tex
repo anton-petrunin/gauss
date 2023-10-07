@@ -173,7 +173,7 @@ Applying the existence and uniqueness of the initial value problem (\ref{thm:ODE
 Let us extend $\gamma$ to a maximal open interval $\mathbb{I}$.
 Suppose there is another geodesic $\gamma_1$ with the same initial data that is defined on a maximal open interval $\mathbb{I}_1$.
 Suppose $\gamma_1$ splits from $\gamma$ at some $t_0>0$;
-that is, $\gamma_1$ coincides with $\gamma$ on the interval $[0,t_0)$, but they are different on any interval $[0,t_0+\delta)$ for $\delta>0$.
+that is, $\gamma_1$ coincides with $\gamma$ on the interval $[0,t_0)$, but they are different on any interval $[0,t_0+\delta)$ with $\delta>0$.
 By continuity, $\gamma_1(t_0)=\gamma(t_0)$, and $\gamma'(t_0)=\gamma'(t_0)$.
 Applying uniqueness of the initial value problem (\ref{thm:ODE}) again, we get that $\gamma_1$ coincides with $\gamma$ in a small neighborhood of $t_0$ --- a contradiction.
 
@@ -200,7 +200,7 @@ Therefore, $\mathbb{I}$ is not maximal --- a contradiction.
 
 \begin{thm}{Exercise}\label{ex:round-torus}
 Let $\Sigma$ be a smooth torus of revolution; that is,
-a smooth surface of revolution with a closed generatrix.
+a smooth surface of revolution whose generatrix is a closed curve.
 Show that any closed geodesic on $\Sigma$ is noncontractible.
 
 (In other words, if $s\:\mathbb{R}^2\to \Sigma$ is the natural bi-periodic parametrization of $\Sigma$, then
@@ -219,10 +219,11 @@ The map
 is called \index{exponential map}\emph{exponential}.%
 \footnote{There is a good reason to call this map \textit{exponential}, but it is far from the subject.}
 By \ref{prop:geod-existence}, the map $\exp_p\:\T_p\to \Sigma$ is smooth, and it is defined in a neighborhood of zero in the tangent plane $\T_p$.
-Moreover, if $\Sigma$ is proper, then $\exp_p$ is defined on the entire plane $\T_p$.
+Moreover, by \ref{prop:geod-existence} if $\Sigma$ is proper, 
+then $\exp_p$ is defined on the entire plane $\T_p$.
 
 The exponential map
-is defined on the tangent plane, which is a smooth surface,
+is defined on the tangent plane (or an open subset of it), which is a smooth surface,
 and its target is another smooth surface.
 Observe that one can identify the plane $\T_p$
 with its tangent plane $\T_0\T_p$ so the differential $d_0(\exp_p)\:\vec v\mapsto D_{\vec v}\exp_p$ maps $\T_p$ to itself.
@@ -260,7 +261,7 @@ Moreover, we have {}\emph{local control} on $r_p$;
 that is, for any $q\in \Sigma$ there is $\epsilon>0$ such that if $\dist{p}{q}\Sigma<\epsilon$, then $r_p\ge\epsilon$.
 \end{thm}
 
-The proof of the proposition uses the observation and the inverse function theorem (\ref{thm:inverse}).
+The proof of the proposition uses \ref{obs:d(exp)=1} and the inverse function theorem (\ref{thm:inverse}).
 
 \parit{Proof.}
 Let $z=f(x,y)$ be a local graph representation of $\Sigma$ in tangent-normal coordinates at~$p$.
@@ -425,7 +426,7 @@ Since $\gamma$ is a geodesic, we have $\gamma''(t)\perp\T_{\gamma(t)}$,
 or equivalently $\gamma''(t)$ is proportional to $\Norm(t)$ for any~$t$.
 Furthermore,
 \[\gamma''=k\cdot\Norm,\]
-where $k=k(t)$ is the normal curvature at $\gamma(t)$ in the direction of $\gamma'(t)$.
+where $k=k(t)$ is the normal curvature of the graph at $\gamma(t)$ in the direction of $\gamma'(t)$.
 
 Therefore,
 \[z''=k\cdot\cos\theta,
@@ -435,7 +436,7 @@ where $\theta=\theta(t)$ denotes the angle between $\Norm(t)$ and the $z$-axis.
 Since $\Norm$ points up, we have $\theta(t)<\tfrac\pi2$, or equivalently
 \[\cos\theta>0.\]
 
-Since $f$ is convex, we have that the tangent plane supports the graph from below at any point;
+Since $f$ is convex, the tangent plane supports the graph from below at any point;
 in particular, $k(t)\ge 0$ for any~$t$.
 It follows that the right-hand side in \ref{eq:z''} is nonnegative;
 whence the statement follows.
@@ -457,7 +458,7 @@ Show that $\rho''(t)\le 2$ for any~$t$.
 
 \section{Total curvature of geodesics}
 
-Recall that $\tc\gamma$ denotes the total curvature of curve~$\gamma$.
+Recall that $\tc\gamma$ denotes the total curvature of the curve~$\gamma$.
 
 \begin{thm}{Exercise}\label{ex:tc-spherical-image}
 Let $\gamma$ be a geodesic on an oriented smooth surface $\Sigma$

@@ -4,17 +4,17 @@
 \section{Intrinsic geometry}
 
 We begin to study the {}\emph{intrinsic geometry} of surfaces.
-A property is called \index{intrinsic}\emph{intrinsic} if it can be checked by measurements inside the surface;
+A property is called \index{intrinsic}\emph{intrinsic} if it can be checked by measurements within the surface;
 for example, lengths of curves or angles between the curves that lie on the surface.
-Otherwise, if its definition essentially uses the ambient space, then it is called \index{extrinsic property}\emph{extrinsic}.
+Otherwise, if a property's definition essentially uses the ambient space, such property is called \index{extrinsic property}\emph{extrinsic}.
 
 The mean curvature, as well as the Gauss curvature, are defined via principal curvatures, which are extrinsic.
-Later (\ref{thm:remarkable}) it will be shown that remarkably the Gauss curvature is intrinsic --- it can be calculated via measurements inside the surface.
+Later (\ref{thm:remarkable}) it will be shown that remarkably the Gauss curvature is intrinsic --- it can be calculated via measurements within the surface.
 The mean curvature is not intrinsic; for example, the intrinsic geometry of the $(x,y)$-plane is not distinguishable from the intrinsic geometry of the graph $z\z=(x+y)^2$.
-However, while the mean curvature of the former vanishes at all points, the mean curvature of the latter does not vanish, say at $p=(0,0,1)$.  
+However, the mean curvature of the former vanishes at all points, while the mean curvature of the latter does not vanish, say at $p=(0,0,1)$.  
 
 The following exercise should help you get in the right mood;
-it might look like a tedious problem in calculus, but actually, it is an easy problem in geometry.
+it might look like a tedious problem in calculus, but it actually is an easy problem in geometry.
 We learned this problem from Joel Fine, who attributed it to Frederic Bourgeois \cite{fine}.
 
 \begin{wrapfigure}[6]{r}{33 mm}
@@ -40,7 +40,7 @@ that is, the greatest lower bound of the lengths of paths in $\Sigma$ from $p$ t
 
 A path $\gamma$ from $p$ to $q$ in $\Sigma$ that minimizes the length is called a \index{shortest path}\emph{shortest path} from $p$ to~$q$.
 The image of a shortest path between $p$ and $q$ in $\Sigma$ is usually denoted by $[p,q]$ or $[p,q]_\Sigma$.\index{10aac@$[p,q]$, $[p,q]_\Sigma$ (shortest path)}
-Usually, if we write $[p,q]_\Sigma$, we are assuming that such a shortest path exists, and we have chosen one of them.
+If we write $[p,q]_\Sigma$, we are assuming that such a shortest path exists, and we have chosen one of them.
 In general, there might be no shortest path between two given points, and there might be many of them;
 this is shown in the following two examples.
 
@@ -71,7 +71,7 @@ Since $\dist{p}{q}\Sigma\z\ge \dist{p}{q}{\mathbb{R}^3}=2$, we get $\dist{p}{q}\
 It follows that a shortest path from $p$ to $q$, if it exists, must have length~2.
 By the triangle inequality, any curve of length 2 from $p$ to $q$ must run along the line segment $[p,q]$;
 in particular, it must pass thru the origin.
-Since the origin does not lie in $\Sigma$, there is no shortest from $p$ to $q$ in $\Sigma$ 
+Since the origin does not lie in $\Sigma$, there is no shortest path from $p$ to $q$ in $\Sigma$ 
 
 
 \begin{thm}{Proposition}\label{prop:shortest-paths-exist}
@@ -126,7 +126,7 @@ for any pair of points $p,q\in \mathbb{R}^3$.
 \end{thm}
 
 The map $p\mapsto \bar p$ is called the \label{closest-point projection}\index{closest-point projection}\emph{closest-point projection};
-it maps the Euclidean space to~$R$.
+it maps the Euclidean space onto~$R$.
 Note that if $p\in R$, then $\bar p=p$.
 
 \parit{Proof.}
@@ -163,7 +163,7 @@ We can assume that $\bar p\ne\bar q$; otherwise, there is nothing to prove.
 
 }
 
-Note that if $\measuredangle \hinge{\bar p}{p}{\bar q}< \tfrac\pi2$, then $\dist{p}{x}{}\z<\dist{p}{\bar p}{}$ for a point $x\in [\bar p,\bar q]$.
+Note that if $\measuredangle \hinge{\bar p}{p}{\bar q}< \tfrac\pi2$, then $\dist{p}{x}{}\z<\dist{p}{\bar p}{}$ for a point $x\in [\bar p,\bar q]$ close to $\bar p$.
 Since $[\bar p,\bar q]\subset K$,
 the latter is impossible.
 {
@@ -178,7 +178,7 @@ the latter is impossible.
 Therefore, $p=\bar p$ or $\measuredangle \hinge{\bar p}{p}{\bar q}\ge \tfrac\pi2$.
 In both cases, the orthogonal projection of $p$ to the line $\bar p\bar q$ lies behind $\bar p$, or coincides with $\bar p$.
 The same way we show that the orthogonal projection of $q$ to the line $\bar p\bar q$ lies behind $\bar q$, or coincides with~$\bar q$.
-It implies that the orthogonal projection of the line segment $[p,q]$ to the line $\bar p\bar q$ contains the line segment $[\bar p,\bar q]$.
+This implies that the orthogonal projection of the line segment $[p,q]$ to the line $\bar p\bar q$ contains the line segment $[\bar p,\bar q]$.
 Whence \ref{eq:short-cpp} follows.
 \qeds
 
