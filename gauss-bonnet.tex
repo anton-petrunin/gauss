@@ -96,7 +96,7 @@ Show that any geodesic in the graph $z=f(x,y)$ has no self-intersections.
 \end{thm}
 
 A surface $\Sigma$ is called \index{simply-connected surface}\emph{simply-connected} if any simple closed curve in $\Sigma$ bounds a disc.
-Equivalently any closed curve in $\Sigma$ can be continuously deformed into a \index{trivial curve}\emph{trivial curve}; that is, a curve that stands at one point all the time.
+Equivalently, any closed curve in $\Sigma$ can be continuously deformed into a \index{trivial curve}\emph{trivial curve}; that is, a curve that stands at one point all the time.
 
 Observe that a plane and a sphere are examples of simply-connected surfaces, while the torus and the cylinder are not simply-connected.
 
@@ -210,14 +210,14 @@ but it goes along the same lines as \ref{ex:total-curvature=}.
 
 
 \begin{thm}{Exercise}\label{ex:half-sphere-total-curvature}
-Assume $\gamma$ is a simple piecewise smooth loop on $\mathbb{S}^2$ that divides its area into two equal parts.
+Assume $\gamma$ is a simple piecewise smooth loop on $\mathbb{S}^2$ that divides $\mathbb{S}^2$ in two regions of equal area.
 Denote by $p$ the base point of~$\gamma$.
 Show that the parallel transport $\iota_\gamma\:\T_p\mathbb{S}^2\to\T_p\mathbb{S}^2$ is the identity map.
 \end{thm}
 
 
 
-\section{Intuitive proof}
+\section{Intuitive proof}\label{sec:gb-intuitive-proof}
 
 In this section, we prove a special case of the Gauss--Bonnet formula.
 This case is leading --- the general case can be proved similarly, but one has to use the signed area counted with multiplicity.
@@ -251,10 +251,12 @@ Therefore,
 \eqlbl{eq:sum=2pin}\]
 for an integer~$n$.
 
-It remains to show that $n=0$.
-By \ref{prop:total-signed-curvature}, this is so for a topological disc in a plane.
-One can think of a general disc $\Delta$ as the result of a continuous deformation of a plane disc.
-The integer $n$ cannot change in the process of deformation since the left-hand side in \ref{eq:sum=2pin} is continuous along the deformation; 
+It remains to show that $n=0$. By \ref{prop:total-signed-curvature}, 
+this is so for a topological disc in a plane. 
+One can think of a general disc $\Delta$ as the result of a 
+continuous deformation of a plane disc. 
+The integer $n$ cannot change during the process since the left hand side 
+in \ref{eq:sum=2pin} is continuous along the deformation; 
 whence $n=0$ for the result of the deformation.
 \qeds
 
@@ -275,7 +277,7 @@ the restriction $\ell=\gamma|_{[a,b]}$ is a simple loop.
 
 By \ref{ex:convex-proper-plane}, $\Sigma$ is parametrized by an open convex region $\Omega$ in the plane.
 By Jordan's theorem (\ref{thm:jordan}), $\ell$ bounds a disc in $\Sigma$; denote it by~$\Delta$.
-If $\phi$ is the angle at the base of the loop, then by the Gauss--Bonnet formula,
+If $\phi$ is the internal angle at the base of the loop, then by the Gauss--Bonnet formula,
 \[\iint_\Delta K=\pi+\phi.\] 
 
 Recall that by \ref{ex:intK:2pi}, we have

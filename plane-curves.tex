@@ -2,7 +2,8 @@
 
 For plane curves, it makes sense to think about left (right) turns as positive (respectively negative).
 In other words, we can introduce \textit{signed curvature} that measures how fast a plane curve is turning either left or right.
-If you drive a car along a plane curve, then the signed curvature describes the position of your steering wheel at a given point. 
+If you drive a car along a plane curve, then the signed curvature describes the position of your steering wheel at a given %point. 
+time.
 
 \label{chap:signed-curvature}
 
@@ -28,7 +29,7 @@ Note that
 \[\kur(s)=|\skur(s)|;\]
 that is, up to sign, the signed curvature $\skur(s)$ equals the curvature $\kur(s)$  of $\gamma$ at $s$ defined in Section~\ref{sec:curvature};
 the sign prescribes the direction of turn --- if $\gamma$ turns left at time $s$, then $\skur (s)>0$.
-If we want to emphasize that we are working with the \textit{non-signed} curvature of the curve, 
+If we want to emphasize that we are working with the \textit{non-signed} curvature of a curve, 
 we call it \index{curvature}\index{absolute curvature}\emph{absolute curvature}.
 
 Note that if we reverse the parametrization of $\gamma$ or change the orientation of the plane, then
@@ -436,7 +437,7 @@ and later rediscovered by Adolf Kneser \cite{kneser}.
 \end{wrapfigure}
 
 \begin{thm}{Lemma}\label{lem:spiral}
-Assume $\gamma$ is a smooth plane curve with strictly decreasing positive signed curvature. Then the osculating circles of $\gamma$ are nested; that is, if $\sigma_s$ denoted the osculating circle of $\gamma$ at $s$,
+Assume $\gamma$ is a smooth plane curve with strictly decreasing positive signed curvature. Then the osculating circles of $\gamma$ are nested; that is, if $\sigma_s$ denotes the osculating circle of $\gamma$ at $s$,
 then $\sigma_{s_0}$ lies in the open disc bounded by $\sigma_{s_1}$ for any $s_0<s_1$. \index{10sigma@$\sigma_s$ (osculating circline)}
 \end{thm}
 
@@ -505,7 +506,8 @@ in the proof, we showed that $(\tfrac1{\skur})'\cdot\norm$ is its velocity vecto
 
 \begin{thm}{Exercise}\label{ex:evolute}
 Let $\omega$ be the evolute of a smooth plane curve~$\gamma$.
-Suppose $\gamma$ has positive curvature and no vertices.
+Suppose $\gamma$ has positive curvature and $\skur ^{\prime} \neq 0$ at all points.
+%%%%%%% Vertices haven't been defined yet.
 Find the Frenet frame and curvature of \(\omega\) in terms of Frenet frame $(\tan,\norm)$ and curvature $\kappa$ of \(\gamma\).
 \end{thm}
 

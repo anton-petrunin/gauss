@@ -50,7 +50,7 @@ where each function $f_+$, $f_-$, $g_+$, $g_-$, $h_+$, and $h_-$ is defined in a
 Any point $p\in\mathbb{S}^2$ lies in one of these graphs therefore $\mathbb{S}^2$ is a surface.
 
 \section{Surfaces with boundary}
-A connected subset in a surface that is bounded by one or more 
+A connected subset in a surface that is bounded by one or more piecewise
 smooth curves is called a \index{surface!with boundary}\emph{surface with boundary}; such curves form the \index{boundary line}\emph{boundary line} of the surface.
 
 When we say {}\emph{surface} we usually mean a {}\emph{smooth surface without boundary};
@@ -102,7 +102,7 @@ We may assume that $f_z(p)\ne 0$;
 otherwise, permute the coordinates $x,y,z$.
 
 The implicit function theorem (\ref{thm:imlicit}) implies that a neighborhood of $p$ in $\Sigma$ is the graph $z=h(x,y)$ of a smooth function $h$ defined on an open domain in $\mathbb{R}^2$.
-It remains to apply the definition of smooth surfaces (Section~\ref{sec:def-smooth-surface}).
+It remains to apply the definition of smooth surface (Section~\ref{sec:def-smooth-surface}).
 \qeds
 
 \begin{thm}{Exercise}\label{ex:hyperboloids}
@@ -138,9 +138,9 @@ y_u&y_v\\
 z_u&z_v
 \end{pmatrix}
 \]
-has rank two at any pint $(u,v)\in U$.
+has rank two at any point $(u,v)\in U$.
 
-Choose a point $p\in \Sigma$; by shifting the $(x,y,z)$ and $(u,v)$ coordinate systems, we may assume that $p$ is the origin and $p=s(0,0)$.
+Choose a point $p\in \Sigma$; by shifting the $(x,y,z)$ and $(u,v)$ coordinate systems, we may assume that $p = (0,0, 0) =s(0,0)$.
 Permuting the coordinates $x,y,z$ if necessary, we may assume that 
 the matrix 
 \[
@@ -229,7 +229,7 @@ Show that the surface of revolution around the $x$-axis with generatrix $\gamma$
 \end{thm}
 
 
-\section{Global parametrizations}
+\section{Global parametrizations}\label{sec:global-parametrizations}
 \index{parametrization}
 
 A surface can be described by an embedding from a known surface to the space.
@@ -238,25 +238,25 @@ For example, consider the ellipsoid
 \[\Theta=\set{(x,y,z)\in\mathbb{R}^3}{\tfrac{x^2}{a^2}+\tfrac{y^2}{b^2}+\tfrac{z^2}{c^2}=1}\]
 for positive constants $a$, $b$, and~$c$.
 By \ref{prop:implicit-surface}, $\Theta$ is a smooth surface.
-Indeed, set $f(x,y,z)=\tfrac{x^2}{a^2}+\tfrac{y^2}{b^2}+\tfrac{z^2}{c^2}$,
+Indeed, set $h(x,y,z)=\tfrac{x^2}{a^2}+\tfrac{y^2}{b^2}+\tfrac{z^2}{c^2}$,
 then
-\[\nabla f(x,y,z)=(\tfrac{2}{a^2}\cdot x,\tfrac{2}{b^2}\cdot y,\tfrac{2}{c^2}\cdot z).\]
-Therefore, $\nabla f\ne0$ if $f=1$; that is, $1$ is a regular value of~$f$.
+\[\nabla h(x,y,z)=(\tfrac{2}{a^2}\cdot x,\tfrac{2}{b^2}\cdot y,\tfrac{2}{c^2}\cdot z).\]
+Therefore, $\nabla h\ne0$ if $h=1$; that is, $1$ is a regular value of~$h$.
 It remains to observe that $\Theta$ is connected.
 
-Note that $\Theta$ can be defined as the image of the map $s\:\mathbb{S}^2\to\mathbb{R}^3$, defined as the restriction of the following map to the unit sphere $\mathbb{S}^2$:
+Note that $\Theta$ can be defined as the image of the map $ \mathbb{S}^2\to\mathbb{R}^3$, defined as the restriction of the following map to the unit sphere $\mathbb{S}^2$:
 \[(x,y,z)\z\mapsto (a\cdot x, b\cdot y,c\cdot z).\]
 
-For a surface $\Sigma$, a map $s\: \Sigma \to \mathbb{R}^3$ is called a 
-\emph{smooth parametrized surface} if $s$ is an embedding, and, for any chart $f\:U\to \Sigma$,
-the composition $s\circ f$ is smooth and regular;
-that is, all partial derivatives $\frac{\partial^{m+n}}{\partial u^m\partial v^n}(s\circ f)$ are defined and continuous in the domain of definition, and the two vectors 
-$\frac{\partial}{\partial u}(s\circ f)$ and $\frac{\partial}{\partial v}(s\circ f)$ are linearly independent.
-
-Note that in this case, the image $\Sigma^{*}=s(\Sigma)$ is a smooth surface.
-The latter follows since for any chart $f\:U\to \Sigma$ the composition $s\circ f\:U\to \Sigma^{*}$ is a chart of $\Sigma^{*}$. 
-The map $s$ is called a \index{diffeomorphism}\emph{diffeomorphism} from $\Sigma$ to $\Sigma^{*}$;
-the surfaces $\Sigma$ and $\Sigma^{*}$ are said to be {}\emph{diffeomorphic} if there is a diffeomorphism $s\:\Sigma\to\Sigma^{*}$.
+For a surface $\Sigma$ and $k \in \mathbb{N}$, a map $f\: \Sigma \to \mathbb{R}^k$ is said to be \emph{smooth} if for any chart $s \: U\to \Sigma$,
+the composition $f\circ s$ is smooth; that is, all partial derivatives $\frac{\partial^{m+n}}{\partial u^m\partial v^n}(f\circ s)$ are defined and continuous in the domain of definition. Further, a smooth map $f \: \Sigma \to \mathbb{R}^3$ is called a 
+\emph{smooth parametrized surface} if it is an embedding, and for any chart $s \:U\to \Sigma$,
+the composition $f\circ s$ is regular;
+that is,  the two vectors 
+$\frac{\partial}{\partial u}(f\circ s)$ and $\frac{\partial}{\partial v}(f\circ s)$ are linearly independent.
+Note that in this case, the image $\Sigma^{*}=f(\Sigma)$ is a smooth surface.
+The latter follows since for any chart $s\:U\to \Sigma$ the composition $f\circ s\:U\to \Sigma^{*}$ is a chart of $\Sigma^{*}$. 
+The map $f$ is called a \index{diffeomorphism}\emph{diffeomorphism} from $\Sigma$ to $\Sigma^{*}$;
+the surfaces $\Sigma$ and $\Sigma^{*}$ are said to be {}\emph{diffeomorphic} if there is a diffeomorphism $f\:\Sigma\to\Sigma^{*}$.
 
 Let us state without proof that \textit{the inverse of a diffeomorphism is a diffeomorphism}.
 From this statement, one can easily deduce that \textit{being diffeomorphic} is an equivalence relation for surfaces.

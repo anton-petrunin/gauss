@@ -3,29 +3,20 @@
 
 \section{Definitions}
 
-Assume two surfaces $\Sigma_1$ and $\Sigma_2$ have a common point~$p$.
-If there is a neighborhood $U$ of $p$ such that $\Sigma_1\cap U$ lies on one side from $\Sigma_2$ in $U$, then we say that $\Sigma_2$ \index{local!support}\emph{locally supports} $\Sigma_1$ at~$p$.
 
-Let us describe $\Sigma_2$ locally at $p$ as a graph $z=f_2(x,y)$ in tangent-normal coordinates at~$p$.
-If $\Sigma_2$ locally supports $\Sigma_1$ at $p$, then  all points of $\Sigma_1$ near $p$ lie either above or below the graph $z=f_2(x,y)$.
+We say two surfaces $\Sigma_1$ and $\Sigma_2$ are \index{tangent!surfaces}\emph{tangent} at a point $p \in \Sigma_1 \cap \Sigma_2$ if they have a common tangent plane at~$p$. If the surfaces are orientable, we say they are \index{cooriented!surfaces}\emph{cooriented} if they have a common unit normal vector at $p$. If their normal vectors at $p$ point in opposite directions, we say the surfaces are \index{counteroriented!surfaces}\emph{counteroriented}; in such a case, reversing the orientation of one of the surfaces makes them cooriented.
 
-In both cases, the surfaces $\Sigma_1$ and $\Sigma_2$ have a common tangent plane at~$p$.
-So we can write both as graphs $z=f_1(x,y)$ and $z=f_2(x,y)$ in the common tangent-normal coordinates at~$p$.
-Note that $\Sigma_2$ locally supports $\Sigma_1$ at $p$ if and only if 
-\[\text{either}\quad f_1(x,y)\ge f_2(x,y)
+
+If there is a neighborhood $U$ of $p$ such that $\Sigma_1\cap U$ lies on one side from $\Sigma_2$ in $U$, then we say that $\Sigma_2$ \index{local!support}\emph{locally supports} $\Sigma_1$ at~$p$. If this happens, then $\Sigma_1$ and $\Sigma_2$ are tangent at $p$, and after adjusting the orientation of one of them, we can assume they are cooriented.
+
+
+Let us describe $\Sigma_1$ and $\Sigma_2$ locally at $p$ in tangent-normal coordinates as the graphs of functions $f_1(x,y)$ and $f_2(x,y)$ respectively. Note that $\Sigma_2$ locally supports $\Sigma_1$ at $p$ if and only if either
+\[   f_1(x,y)\ge f_2(x,y)
 \quad\text{or}\quad
 f_1(x,y)\le f_2(x,y)\]
-holds for all $(x,y)$ sufficiently close to the origin.
+holds for all $(x,y)$ sufficiently close to the origin. In the former case, we say  $\Sigma_2$ locally supports $\Sigma_1$ \index{supporting!surface}\emph{from the outside}, and in the latter we say $\Sigma_2$ locally supports $\Sigma_1$ \emph{from the inside}. 
 
-If the surfaces are orientable, we can assume that they are \index{cooriented!surfaces}\emph{cooriented} at $p$;
-that is, they have a common unit normal vector at $p$ in the direction of the $z$-axis.
-If the normal vectors are opposite, we say that $\Sigma_1$ and $\Sigma_2$ are \index{controriented!surfaces}\emph{counteroriented} at $p$;
-in this case, reversing the orientation of one of the surfaces makes them cooriented.
 
-If $\Sigma_2$ locally supports $\Sigma_1$, and they are cooriented at $p$,
-then we can say that $\Sigma_1$ supports $\Sigma_2$ \index{supporting!surface}\emph{from the inside} or {}\emph{from the outside},
-assuming that the normal vector points {}\emph{inside} the domain bounded by the surface $\Sigma_2$ in~$U$.
-Using the above notations, $\Sigma_1$ locally supports $\Sigma_2$ from the inside (from the outside)  if $f_1(x,y)\ge f_2(x,y)$ (respectively $f_1(x,y)\le f_2(x,y)$) for $(x,y)$ in a sufficiently small neighborhood of the origin.
 
 \begin{thm}{Proposition}\label{prop:surf-support}
 Let $\Sigma_1$ and $\Sigma_2$ be oriented surfaces.
@@ -151,8 +142,8 @@ Show that $R$ contains a unit ball.
 Recall that a region $R$ in the Euclidean space is called  {}\emph{strictly convex} if, for any two points $x,y\in R$, any point $z$ between $x$ and $y$ lies in the interior of~$R$.
 
 Evidently, a closed convex region is strictly convex if and only if its boundary does not contain a line segment.
-Note that any open convex set is strictly convex;
-the cube (as well as any convex polyhedron) gives an example of a non-strictly convex set.
+Note that any open convex set is strictly convex. 
+The cube (as well as any convex polyhedron) gives an example of a non-strictly convex set.
 
 
 \begin{thm}{Lemma}\label{lem:gauss+=>convexity}
@@ -177,7 +168,7 @@ Finally, since $\nabla f(0,0)=0$, and $f$ is strictly convex in a neighborhood o
 
 \begin{thm}{Exercise}\label{ex:section-of-convex}
 Let $\Sigma$ be a smooth surface (without boundary) with positive Gauss curvature.
-Show that any connected component of the intersection of $\Sigma$ with a plane $\Pi$ is either a single point or a smooth plane curve whose signed curvature has a constant sign.
+Show that any connected component of the intersection of $\Sigma$ with a plane $\Pi$ is either a single point or a smooth plane curve whose signed curvature has constant sign.
 \end{thm}
 
 The following theorem gives a global description of surfaces with positive Gauss curvature.
@@ -310,7 +301,7 @@ Show that the projection of $\Sigma$ to the $(x,y)$ plane is an open convex set;
 
 \begin{subthm}{ex:convex-proper-plane:d}
 Conclude that $\Sigma$ is a graph $z=f(x,y)$ of a convex function $f$ defined on $\Omega$.
-(It proves the main statement in \ref{thm:convex-open}.)
+(This proves the main statement in \ref{thm:convex-open}.)
 \end{subthm}
 
 \begin{subthm}{ex:convex-proper-plane:e}
@@ -473,10 +464,10 @@ Construct a proper saddle surface that does not lie in the convex hull of its bo
 
 \begin{thm}{Exercise}\label{ex:length-of-bry}
 Let $\Delta$ be a compact smooth saddle surface with boundary and $p\in \Delta$.
-Assume the boundary line of $\Delta$ lies in the unit sphere centered at~$p$.
-Show that if $\Delta$ is a disc, then $\length(\partial\Delta)\ge 2\cdot\pi$.
+Assume the boundary curve of $\Delta$ lies in the unit sphere centered at~$p$.
+Show that if $\Delta$ is a topological disc, then $\length(\partial\Delta)\ge 2\cdot\pi$.
 
-Show that the statement does not hold without assuming that $\Delta$ is a disc.
+Show that the statement does not hold without assuming that $\Delta$ is a topological disc.
 \end{thm}
 
 \parit{Remark.}
@@ -489,7 +480,7 @@ Show that an open saddle surface
 cannot lie inside an infinite circular cone. 
 \end{thm}
 
-A disc $\Delta$ in a surface $\Sigma$ is called a \index{hat}\emph{hat} of $\Sigma$
+A topological disc $\Delta$ in a surface $\Sigma$ is called a \index{hat}\emph{hat} of $\Sigma$
 if its boundary line $\partial\Delta$ lies in a plane $\Pi$ and $\Delta \backslash \partial \Delta$ lies strictly on one side of $\Pi$.
 
 \begin{thm}{Proposition}\label{prop:hat}
@@ -498,14 +489,14 @@ A smooth surface $\Sigma$ is saddle if and only if it has no hats.
 
 Note that a saddle surface can contain a closed plane curve.
 For example, the hyperboloid $x^2+y^2-z^2=1$ contains the unit circle in the $(x,y)$-plane.
-However, according to the proposition (as well as the lemma), a plane curve cannot bound a disc (as well as any compact set) in a saddle surface.
+However, according to the proposition (as well as the lemma), a plane curve cannot bound a topological disc (as well as any compact set) in a saddle surface.
 
 \parit{Proof.}
 Since a plane is convex, the only-if part follows from \ref{lem:convex-saddle};
 it remains to prove the if part.
 
 Assume $\Sigma$ is not saddle; that is, it has a point $p$ with strictly positive Gauss curvature;
-or equivalently, the principal curvatures $k_1(p)$ and $k_2(p)$ have the same sign.
+or equivalently, the principal curvatures $k_1(p)$ and $k_2(p)$ have the same sign. From now on we assume $0 < k_1 (p) \leq k_2 (p) $, the other case being analogous.
 
 
 Let $z=f(x,y)$ be a graph representation of $\Sigma$ in tangent-normal coordinates at~$p$.
@@ -555,7 +546,7 @@ $|f(x,y)|\le C$ for any $(x,y)\in\mathbb{R}^2$.
 \end{thm}
 
 The theorem states that a saddle graph cannot lie between two parallel horizontal planes;
-applying \ref{ex:saddle-linear} we get that saddle graphs cannot lie between two parallel planes,
+combining this with \ref{ex:saddle-linear}, we get that saddle graphs cannot lie between two parallel planes,
 not necessarily horizontal.
 The following exercise shows that the theorem does not hold for saddle surfaces that are not graphs.
 
@@ -583,7 +574,7 @@ Assume there is a compact subset $K\subset \Sigma$ such that the complement $\Si
 Show that the surface $\Sigma$ is a graph.
 \end{thm}
 
-The following lemma gives an analogous to \ref{ex:length-of-bry}.
+The following lemma gives an analogue of \ref{ex:length-of-bry}, and will be used in the proof of Theorem \ref{thm:bernshtein}.
 
 \begin{thm}{Lemma}\label{lem:region}
 There is no proper strictly saddle smooth surface that has its boundary line in a plane $\Pi$ and lies at a bounded distance from a line contained in $\Pi$.
@@ -594,7 +585,7 @@ Note that by \ref{ex:saddle-linear}, the statement can be reformulated in the fo
 \textit{There is no proper strictly saddle smooth surface 
 with its boundary line in the $(x,y)$-plane
 and contained in a region of the form:}
-\[R=\set{(x,y,z)\in\mathbb{R}^3}{0\le z\le r, 0\le y\le r}.\]
+\[R=\set{(x,y,z)\in\mathbb{R}^3}{0\le z\le r, 0\le y\le r}.   \]
 Let us prove this statement.
 
 Assume the contrary, let $\Sigma$ be such a surface.
@@ -633,6 +624,8 @@ It follows that the plane $z=r_0$ supports $\Sigma$ at some point (in fact at ma
 By \ref{prop:surf-support}, the latter is impossible --- a contradiction.
 \qeds
 
+%Note that the same proof goes through if one replaces the condition $0 \leq y \leq r$ in \ref{eq:R-bernstein} with $0 \leq y \leq h(x)$ for some positive continuous function $h$.
+
 \parit{Proof of \ref{thm:bernshtein}.}
 Denote by $\Sigma$ the graph $z=f(x,y)$.
 Assume the contrary; that is, $\Sigma$ lies between two planes $z=\pm C$.
@@ -643,23 +636,24 @@ It follows that the tangent plane $\T_p$ at some point $p\in\Sigma$ is not horiz
 Denote by $\Sigma^+$ the part of $\Sigma$ that lies above $\T_p$.
 Note that it has at least two connected components which are approaching $p$ from both sides 
 in the principal direction with positive principal curvature.
-Indeed, if there was a curve that runs in $\Sigma^+$ and approaches $p$ from both sides, then it would cut a disc from $\Sigma$ with the boundary line above $\T_p$ and some points below it;
-the latter would contradict \ref{lem:convex-saddle}.
+Indeed, if there was a curve that runs in $\Sigma^+$ and approaches $p$ from both sides, then it would cut a topological disc from $\Sigma$ with the boundary line above $\T_p$ and some points below it;
+the latter would contradict \ref{lem:convex-saddle}. 
+Summarizing, $\Sigma^+$ has at least two connected components.
 
 \begin{figure}[!ht]
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-76}
-\caption*{The surface $\Sigma$ seeing from above.}
+\caption*{The surface $\Sigma$ seen from above.}
 \vskip0mm
 \end{figure}
 
-Summarizing, $\Sigma^+$ has at least two connected components, denote them by $\Sigma^+_0$ and $\Sigma^+_1$.
+
 Let $z=h(x,y)=a\cdot x+b\cdot y+c$ be the equation of $\T_p$.
-Note that $\Sigma^+$ contains all points in the region
+Notice that $\Sigma^{+} = \set{(x,y,f(x,y))\in \Sigma}{h(x,y) \leq f(x,y)}$, hence it contains the connected set
 \[R_-=\set{(x,y,f(x,y))\in\Sigma}{h(x,y)< -C}\] 
-which is a connected set and no points in 
-\[R_+=\set{(x,y,f(x,y))\in\Sigma}{h(x,y)> C}\]
+and is disjoint from  
+\[R_+=\set{(x,y,f(x,y))\in\Sigma}{h(x,y)> C} . \]
 Whence one of the connected components, say $\Sigma^+_0$, lies in the strip
 \[R_0=\set{(x,y,f(x,y))\in\Sigma}{|h(x,y)|\le  C}.\]
 This set lies at a bounded distance from the line of intersection of $\T_p$ with the $(x,y)$-plane.

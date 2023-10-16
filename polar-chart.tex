@@ -17,7 +17,7 @@ then we say that $s(r,\theta)\z=\exp_p\vec v$ is the point in $\Sigma$ with  pol
 
 
 Since there might be many geodesics from $p$ to a given point $x$,
-the point $x$ might be written differently in the polar coordinates.
+the point $x$ might be expressed in polar coordinates in multiple ways.
 However, for small values of~$r$,
 polar coordinates behave in the usual way.
 The latter follows from Proposition~\ref{prop:exp}.
@@ -42,7 +42,7 @@ for any $r$ and~$\theta$.
 
 
 \parit{Proof.}
-Choose $\theta$.
+Fix $\theta \in \mathbb{S}^1$.
 By the definition of the exponential map, the curve $\gamma(t)\z=s(t,\theta)$ is a unit-speed geodesic that starts at $p$;
 in particular, we have the following two identities:
 \begin{enumerate}[(i)]
@@ -141,7 +141,7 @@ In other words, there are two vectors ${\vec v},\vec w\in\T_p$ such that $|{\vec
 $q=\exp_p\vec v\z=\exp_p\vec w$.
 But according to \ref{prop:exp}, the exponential map $\T_p \to \Sigma$ is injective in the $\epsilon$-neighborhood of zero --- a contradiction.\qeds
 
-\section{Gauss curvature}
+\section{Gauss curvature}\label{sec:jacobi-formula}
 
 Let $s$ be a smooth map from a (possibly unbounded) coordinate rectangle in the $(u,v)$-plane to a smooth surface~$\Sigma$.
 The map $s$ is called \index{semigeodesic}\emph{semigeodesic} if, for any fixed $v$, the map $u\mapsto s(u,v)$ is a unit-speed geodesic and $s_u\perp s_v$ for any $(u,v)$.
@@ -177,7 +177,7 @@ Moreover,
 The proof is lengthy but straightforward.
 
 \parit{Proof.}
-Suppose $\ell=\ell(u,v)$, $m=m(u,v)$, and $n=n(u,v)$ be the components of the matrix describing the shape operator in the frame $\vec u, \vec v$;
+Let $\ell=\ell(u,v)$, $m=m(u,v)$, and $n=n(u,v)$ be the components of the matrix describing the shape operator in the frame $\vec u, \vec v$;
 that is,
 \[
 \begin{aligned}
@@ -250,7 +250,7 @@ Indeed,
 \langle\vec u_u,\Norm\rangle
 &=\langle s_{uu},\Norm\rangle=
 \\
-&=\langle \Shape s_u,s_u\rangle=
+&=    \langle \Shape s_u,s_u\rangle=
 \\
 &=\langle \Shape \vec u,\vec u\rangle=
 \\
@@ -534,7 +534,7 @@ Note that the Green and Gauss--Bonnet formulas are similar --- they relate the i
 So it shouldn't be  surprising that Green helps to prove Gauss--Bonnet.
 
 \parit{Proof.}
-Let $\vec u$, $\vec v$, and $b$ be as in Section~\ref{prop:jaccobi}.
+Let $\vec u$, $\vec v$, and $b$ be as in Section~\ref{sec:jacobi-formula}.
 Let us write $\gamma$ in the $(u,v)$-coordinates: $\gamma(t)=s(u(t),v(t))$.
 Then
 \begin{align*}
@@ -588,24 +588,15 @@ After several such steps, every small disc is covered by a semigeodesic chart.
 In particular, \ref{eq:gb(n)} holds for each small disc.
 Then applying \ref{lem:GB-sum} several times we get \ref{eq:gb(n)} for the original disc.
 
-It remains to show that $n=0$.
-Assume $\Delta$ lies in a local graph realization $z=f(x,y)$ of~$\Sigma$.
-Consider the one-parameter family $\Sigma_t$ of graphs $z=t\cdot f(x,y)$;
-denote by $\Delta_t$ the corresponding disc in $\Sigma_t$, so $\Delta_1=\Delta$ and $\Delta_0$ is its projection to the $(x,y)$-plane.
-Note that the function $f\:t\mapsto \GB(\Delta_t)$ is continuous.
-By \ref{eq:gb(n)}, $f(t)$ is an integer multiple of $2\cdot\pi$ for any~$t$.
-It follows that $f$ is a constant function.
-Therefore,
-\begin{align*}
-\GB(\Delta)&=\GB(\Delta_0)=0;
-\end{align*}
-the last equality follows from $\ref{prop:total-signed-curvature}$.
+
+
+It remains to show that $n=0$. Assume $\Delta$ lies in a local graph realization $z = f(x,y)$ of $\Sigma$. Consider the one-parameter family $\Sigma_t$ of graphs $z = t \cdot f(x,y)$; denote by $\Delta_t$ the corresponding disc in $\Sigma_t$, so $\Delta_1 = \Delta$ and $\Delta_0$ is its projection onto the $(x,y)$-plane. Note that the function $h \: t \mapsto \GB (\Delta_t )$ is continuous. By \ref{eq:gb(n)}, $h(t)$ is an integer multiple of  $2 \cdot \pi$ for any $t$. It follows that $h$ is a constant function. Therefore, 
+\[   \GB (\Delta ) = \GB (\Delta_0) = 0;     \]
+the last equality follows from \ref{prop:total-signed-curvature}.
 
 We proved that 
-\[\GB(\Delta)=0\eqlbl{eq:GB=0}\]
-if $\Delta$ lies in a graph $z=f(x,y)$ for some $(x,y,z)$-coordinate system.
-Any point of $\Sigma$ has a neighborhood that can be covered by such a graph.
-Therefore, applying Lemma~\ref{lem:GB-sum} the same way as above, we get that \ref{eq:GB=0} holds for any disc~$\Delta$ in~$\Sigma$.
+\[        \GB (\Delta ) = 0 \eqlbl{eq:GB=0}  \]
+if $\Delta$ lies in a graph $z = f(x,y)$ for some $(x,y,z)$-coordinate system. Any point of $\Sigma$ has a neighborhood that can be covered by such a graph. Therefore, applying Lemma~\ref{lem:GB-sum} the same way as above, we get that \ref{eq:GB=0} holds for any disc~$\Delta$ in~$\Sigma$.
 \qeds
 
 
@@ -700,7 +691,7 @@ that is, a neighborhood of any point in $\Sigma$ admits an intrinsic isometry to
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:K=1}
-Suppose a smooth surface $\Sigma$ has a unit Gauss curvature at every point.
+Suppose a smooth surface $\Sigma$ has Gauss curvature  equal to 1 at every point.
 Show that a neighborhood of any point in $\Sigma$ admits an intrinsic isometry to an open domain in the unit sphere.
 \end{thm}
 

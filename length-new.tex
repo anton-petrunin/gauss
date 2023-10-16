@@ -218,17 +218,17 @@ that is, the arc of $\gamma$ from $t_1$ to $t_2$ has length $t_2-t_1$.
 
 \begin{thm}{Exercise}\label{ex:cont-length}
 Let  $\gamma\:[a,b]\to \spc{X}$ be a rectifiable curve in a metric space.
-Given $t\in [a,b]$, denote by $s(t)$ the length of arc $\gamma|_{[a,t]}$.
+Given $t\in [a,b]$, denote by $s(t)$ the length of the arc $\gamma|_{[a,t]}$.
 Show that the function $t\mapsto s(t)$ is continuous.
 
-Conclude that $\gamma$ admits am arc-length parametrization.
+Conclude that $\gamma$ admits an arc-length parametrization.
 \end{thm}
 
 Note that a smooth space curve $\gamma(t)=(x(t),y(t),z(t))$ is an arc-length parametrization if and only if it has unit velocity vector at all times;
 that is, 
 \[|\gamma'(t)|=\sqrt{x'(t)^2+y'(t)^2+z'(t)^2}=1\]
 for all $t$; by that reason smooth curves equipped with an arc-length parametrization are also called \index{unit-speed curve}\emph{unit-speed curves}.
-Observe that smooth unit-speed parametrizations are automatically regular (see \ref{sec:Smooth curves}).
+Observe that smooth unit-speed parametrizations are automatically regular (see Section \ref{sec:Smooth curves}).
 
 \begin{thm}{Proposition}\label{prop:arc-length-smooth}
 If $t\mapsto \gamma(t)$ is a smooth curve, 
@@ -246,7 +246,7 @@ Since $\gamma$ is smooth, $s'(t)\ne0$ for any parameter value~$t$.
 By the inverse function theorem (\ref{thm:inverse}), the inverse function $s^{-1}(t)$ is also smooth
 and $|(\gamma\circ s^{-1})'|\equiv1$.
 Therefore, $\gamma\circ s^{-1}$ is a unit-speed reparametrization  of $\gamma$ by~$s$.
-By construction, $\gamma\circ s^{-1}$ is smooth, and, since $|(\gamma\circ s^{-1})'|\equiv1$, it is regular.
+By construction, $\gamma\circ s^{-1}$ is smooth, and since $|(\gamma\circ s^{-1})'|\equiv1$, it is regular.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:arc-length-helix}
@@ -258,7 +258,7 @@ by its arc-length.
 We will be interested in the properties of curves that are invariant under reparametrizations.
 Therefore, we can always assume that any given smooth curve comes with an arc-length parametrization.
 A nice property of arc-length parametrizations is that they are almost canonical --- these parametrizations differ only by a sign and an additive constant.
-For that reason, it is easier to express parametrization-independent quantities.
+For that reason, it is easier to define parametrization-independent quantities.
 This observation will be used in the definitions of curvature and torsion.
 
 On the other hand, it is usually impossible to find an explicit arc-length parametrization, which makes it hard to perform calculations;
@@ -350,7 +350,7 @@ that is,
 For any plane curve $\gamma$ we have
 \[
 \length\gamma
-=\tfrac\pi2\cdot \overline{\length\gamma_{\vec u}},
+=\tfrac\pi2\cdot \overline{\length\gamma_{\vec u}}, \eqlbl{crofton-formula}
 \]
 where $\gamma_{\vec u}$ is the curve defined by $\gamma_{\vec u}(t) \df (\gamma (t))_{\vec u}$.
 \end{thm}
@@ -383,8 +383,8 @@ Hence $\length\gamma_{\vec u}=4$ for any $\vec u$, and
 It follows that $2\cdot \pi =k\cdot 4$.
 Therefore, Crofton's formula holds for arbitrary smooth curves.
 
-Applying the same argument together with \ref{adex:integral-length}, we get that Crofton's formula holds for arbitrary Lipschitz curve.
-Further, since arc length parametrization of any rectifiable curves is Lipschitz, \ref{ex:cont-length} implies it for arbitrary rectifiable curve.
+Applying the same argument together with \ref{adex:integral-length}, we get that Crofton's formula holds for arbitrary Lipschitz curves.
+Further, since an arc length parametrization of any rectifiable curve is Lipschitz, \ref{ex:cont-length} implies \ref{crofton-formula} for arbitrary rectifiable curves.
 
 It remains to consider the nonrectifiable case;
 we have to show that 
@@ -396,7 +396,7 @@ we have to show that
 Observe that from the definition of length, we get
 \[\length\gamma_{\vec u}+\length\gamma_{\vec v}\ge \length\gamma\]
 for any plane curve $\gamma$ and any pair $(\vec u , \vec v )$ of orthonormal vectors in $\mathbb{R}^2$.
-Therefore, if $\gamma$ has infinite length, then the average of lengths of $\gamma_{\vec u}$ is infinite as well.
+Therefore, if $\gamma$ has infinite length, then the average length of $\gamma_{\vec u}$ is infinite as well.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:convex-croftons}
@@ -475,7 +475,7 @@ For any $u,v\in \mathbb{S}^2$, we have
 \end{thm}
 
 \parit{Proof.}
-The short arc $\gamma$ of a great circle  from $u$ to $v$ in $\mathbb{S}^2$ has length $\measuredangle(u,v)$.
+The short arc $\gamma$ of a great circle\footnote{A great circle is a circle of radius 1 contained in $\mathbb{S}^2$. Equivalently, a subset $C$ of $ \mathbb{S}^2$ is a great circle if there is an isometry of $\mathbb{S}^2$ that sends the equator $ \mathbb{S}^2 \cap \{ z = 0 \}$ to $C$.}  from $u$ to $v$ in $\mathbb{S}^2$ has length $\measuredangle(u,v)$.
 Therefore,
 \[\dist{u}{v}{\mathbb{S}^2}\le\measuredangle(u,v).\]
 
@@ -486,7 +486,13 @@ $\beta_1=q_0\dots q_n$ inscribed in any given spherical path $\gamma_1$ connecti
 
 Define $q_i$ as the first point on $\gamma_1$ such that $|u-p_i|=|u-q_i|$, but set $q_n=v$.
 Clearly, $\beta_1$ is inscribed in $\gamma_1$, and, according to the triangle inequality for angles (\ref{thm:spherical-triangle-inq}), we have that 
-\[ \measuredangle(q_{i-1},q_i)\ge\measuredangle(p_{i-1},p_i).\]
+\begin{align*}
+ \measuredangle(q_{i-1},q_i) &\ge  \measuredangle (u, q_i) - \measuredangle ( u , q_{i-1})  =
+\\
+&= \measuredangle (u,p_i) - \measuredangle (u,p_{i-1}) =
+\\
+& = \measuredangle(p_{i-1},p_i).
+\end{align*}
 By the angle monotonicity (\ref{lem:angle-monotonicity}),
 \[|q_{i-1}-q_i|\ge|p_{i-1}-p_i|\]
 and \ref{eq:length beta=<length beta} follows.
@@ -541,7 +547,7 @@ Describe a simple closed spherical curve that does not pass thru a pair of antip
 
 
 \begin{thm}{Exercise}\label{ex:bisection-of-S2}
-Suppose a simple closed spherical curve $\gamma$ divides $\mathbb{S}^2$ into two regions of equal area.
+Suppose a simple closed spherical curve $\gamma$ divides $\mathbb{S}^2$ in two regions of equal area.
 Show that 
 \[\length\gamma\ge2\cdot\pi.\]
 \end{thm}
@@ -575,7 +581,9 @@ in other words, if ${\vec w}^\perp_{\vec u}$ is the projection of ${\vec w}$ to 
 The vector ${\vec w}^*_{\vec u}$ is defined if ${\vec w}\ne\pm {\vec u}$.
 
 \begin{subthm}{adex:crofton:crofton}
-Show that for any spherical curve $\gamma$ we have
+Show that for any rectifiable 
+%one requires rectifiable for the right hand side to be defined for almost all U 
+spherical curve $\gamma$ we have
 \[\length\gamma=\overline{\length\gamma^*_{\vec u}},\]
 where $\overline{\length\gamma^*_{\vec u}}$ denotes the average length of $\gamma^*_{\vec u}$ with ${\vec u}$ varying in~$\mathbb{S}^2$.
 (This is a spherical analog of Crofton's formula.)
