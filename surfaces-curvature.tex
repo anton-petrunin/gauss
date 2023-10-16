@@ -387,17 +387,12 @@ where $H$ and $K$ denote mean and Gauss curvature of~$\Sigma$.
 
 \end{thm}
 
-The following exercise is the key part in the proof \cite{massey1962} of the following fact:
-\textit{Any open surface with vanishing Gauss curvature a \index{cylindrical surface}\emph{cylindrical surface}};
-the latter means that the surface is swept out by a family of parallel lines.
-
 \begin{thm}{Advanced exercise}\label{ex:flat-plane}
-Let $\Sigma$ be a smooth oriented surface and $(u,v)\mapsto s(u,v)$ be its chart defined in a coordinate rectangle.
+Let $\Sigma$ be a smooth oriented surface parametrized by a coordinate rectangle as $(u,v)\mapsto s(u,v)$.
 Denote by $\Norm(u,v)$ the normal unit vector at $s(u,v)$.
 Set $\vec u=\tfrac{s_u}{|s_u|}$ and $\vec v=\tfrac{s_v}{|s_v|}$.
-Suppose $\vec u$ and $\vec v$ are principal directions at each point,
-the principal curvature in the direction $\vec u$ vanishes 
-and $k=k(u,v)$ is the principal curvature in the direction $\vec v$ at $s(u,v)$.
+Suppose $\vec u$ and $\vec v$ are principal directions at each point;
+let $0$ and $k=k(u,v)$ be their principal curvatures at $s(u,v)$.
 Assume $k$ does not vanish.
 
 \begin{subthm}{ex:flat-plane:orthonormal}
@@ -412,6 +407,7 @@ Conclude that $v$-coordinate lines are line segments.
 \begin{subthm}{ex:flat-plane:depend-u}
 Show that $s_{uu}$ is proportional to $s_u$ at all points.
 Use it to show that $|s_u|$ depend only on $u$.
+Conclude that if $|s_u(0,t)|=1$ for any $t$, then  $|s_u|=1$ at all points.
 \end{subthm}
 
 
@@ -420,10 +416,14 @@ Assume that $|s_u|=1$ at all points.
 Show that for fixed $v$ the value $\tfrac1k$ depends linearly on $u$.
 \end{subthm}
 
-
 \end{thm}
 
-
+This exercise is the key part in the proof of the following theorem:
+\textit{Any open surface with vanishing Gauss curvature is \index{cylindrical surface}\emph{cylindrical}};
+that is, the surface is swept out by a family of parallel lines.
+Exercise \ref{ex:line-cylinder} below illustrates another part of this proof.
+The mentioned theorem was originally proved by Aleksey Pogorelov \cite[II §3]{pogorelov1956} in much more general settings; it was rediscovered couple of times since when \cite{hartman-nirenberg,massey1962}.
+The exercise is based on the proof given by Sergei Ivanov in his lectures \cite[2$^\text{nd}$ Sem., Lect. 13]{ivanov}.
 
 \chapter{Curves in a surface}
 
