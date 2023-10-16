@@ -228,7 +228,7 @@ Note that a smooth space curve $\gamma(t)=(x(t),y(t),z(t))$ is an arc-length par
 that is, 
 \[|\gamma'(t)|=\sqrt{x'(t)^2+y'(t)^2+z'(t)^2}=1\]
 for all $t$; by that reason smooth curves equipped with an arc-length parametrization are also called \index{unit-speed curve}\emph{unit-speed curves}.
-Observe that smooth unit-speed parametrizations are automatically regular (see Section \ref{sec:Smooth curves}).
+Observe that smooth unit-speed parametrizations are automatically regular (see Section~\ref{sec:Smooth curves}).
 
 \begin{thm}{Proposition}\label{prop:arc-length-smooth}
 If $t\mapsto \gamma(t)$ is a smooth curve, 
@@ -267,7 +267,7 @@ therefore it is often convenient to use the original parametrization.
 \section{Convex curves}
 
 A simple plane curve is called \index{convex!curve}\emph{convex} if it bounds a convex region.
-Since the boundary of any region is closed, any convex curve is either closed or open (see Section \ref{sec:proper-curves}).
+Since the boundary of any region is closed, any convex curve is either closed or open (see Section~\ref{sec:proper-curves}).
 
 \begin{thm}{Proposition}\label{prop:convex-curve}
 Assume that a closed convex curve $\alpha$ lies inside the domain bounded by a simple closed plane curve $\beta$.
@@ -475,7 +475,9 @@ For any $u,v\in \mathbb{S}^2$, we have
 \end{thm}
 
 \parit{Proof.}
-The short arc $\gamma$ of a great circle\footnote{A great circle is a circle of radius 1 contained in $\mathbb{S}^2$. Equivalently, a subset $C$ of $ \mathbb{S}^2$ is a great circle if there is an isometry of $\mathbb{S}^2$ that sends the equator $ \mathbb{S}^2 \cap \{ z = 0 \}$ to $C$.}  from $u$ to $v$ in $\mathbb{S}^2$ has length $\measuredangle(u,v)$.
+The short arc $\gamma$ of a great circle%
+\footnote{A great circle is the intersection of $\mathbb{S}^2$ with a plane passing thru sphere's center.
+Equivalently, it is a circle of radius 1 contained in $\mathbb{S}^2$.}  from $u$ to $v$ in $\mathbb{S}^2$ has length $\measuredangle(u,v)$.
 Therefore,
 \[\dist{u}{v}{\mathbb{S}^2}\le\measuredangle(u,v).\]
 
