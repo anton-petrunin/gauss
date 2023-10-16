@@ -63,7 +63,7 @@ where $M_p$ is the so-called \index{Hessian matrix}\emph{Hessian matrix} of $f$ 
 \]
 
 
-\section{Principal curvatures}
+\section{Principal curvatures}\label{sec:Principal curvatures}
 
 Note that tangent-normal coordinates give an almost canonical coordinate system in a neighborhood of $p$;
 it is unique up to a rotation of the $(x,y)$-plane.
@@ -84,7 +84,9 @@ In this case,
 the diagonal components $k_1$ and $k_2$ of $M_p$ are called the \index{principal curvatures and directions}\emph{principal curvatures} of $\Sigma$ at $p$;\index{10k@$k_1$, $k_2$ (principal curvatures)}
 they might also be denoted as $k_1(p)$ and $k_2(p)$, or $k_1(p)_\Sigma$ and $k_2(p)_\Sigma$;
 if we need to emphasize that we compute them at the point $p$ for the surface~$\Sigma$.
-We will always assume $k_1\le k_2$.
+We will assume 
+\[k_1\le k_2\]
+unless indicated otherwise.
 
 
 Note that if $z=f(x,y)$ is a local graph representation of $\Sigma$ in these coordinates, then 
@@ -97,7 +99,9 @@ if $k_1(p)\z= k_2(p)$, then all tangent directions at $p$ are principal.
 
 Note that if we reverse the orientation of $\Sigma$, then the principal curvatures switch their signs and indexes.
 
-A smooth curve on a surface $\Sigma$ that always runs in the principal directions is called a \index{line of curvature}\emph{line of curvature} of~$\Sigma$. 
+A smooth curve on a surface $\Sigma$ that always runs in the principal directions is called a \index{line of curvature}\emph{line of curvature} of~$\Sigma$.
+If $k_1(p)\ne k_2(p)$, then there is a chart $(u,v)\mapsto s(u,v)$ at $p$ with coordinate lines formed by lines of curvature (it follows from \ref{ex:lin-ind-chart}).
+Since principal directions are orthogonal we have $s_u\perp s_v$.
 
 \begin{thm}{Exercise}\label{ex:line-of-curvature}
 Assume a smooth surface $\Sigma$ is mirror-symmetric with respect to a plane $\Pi$.
@@ -381,11 +385,49 @@ Show that for all $t$ sufficiently close to zero we have
 where $H$ and $K$ denote mean and Gauss curvature of~$\Sigma$.
 \end{subthm}
 
+\end{thm}
+
+The following exercise is the key part in the proof \cite{massey1962} of the following fact:
+\textit{Any open surface with vanishing Gauss curvature a \index{cylindrical surface}\emph{cylindrical surface}};
+the latter means that the surface is swept out by a family of parallel lines.
+
+\begin{thm}{Advanced exercise}\label{ex:flat-plane}
+Let $\Sigma$ be a smooth oriented surface and $(u,v)\mapsto s(u,v)$ be its chart defined in a coordinate rectangle.
+Denote by $\Norm(u,v)$ the normal unit vector at $s(u,v)$.
+Set $\vec u=\tfrac{s_u}{|s_u|}$ and $\vec v=\tfrac{s_v}{|s_v|}$.
+Suppose $\vec u$ and $\vec v$ are principal directions at each point,
+the principal curvature in the direction $\vec u$ vanishes 
+and $k=k(u,v)$ is the principal curvature in the direction $\vec v$ at $s(u,v)$.
+Assume $k$ does not vanish.
+
+\begin{subthm}{ex:flat-plane:orthonormal}
+Show that $\Norm(u,v)$, $\vec u(u,v)$, and $\vec v(u,v)$ form an orthonormal frame for any $(u,v)$.
+\end{subthm}
+
+\begin{subthm}{ex:flat-plane:depend}
+Show that $\Norm(u,v)$, $\vec u(u,v)$, and $\vec v(u,v)$ depend only on $v$.
+Conclude that $v$-coordinate lines are line segments.
+\end{subthm}
+
+\begin{subthm}{ex:flat-plane:depend-u}
+Show that $s_{uu}$ is proportional to $s_u$ at all points.
+Use it to show that $|s_u|$ depend only on $u$.
+\end{subthm}
+
+
+\begin{subthm}{ex:flat-plane:linear}
+Assume that $|s_u|=1$ at all points.
+Show that for fixed $v$ the value $\tfrac1k$ depends linearly on $u$.
+\end{subthm}
 
 
 \end{thm}
 
-\section{Curves in a surface}\label{sec:Darboux}
+
+
+\chapter{Curves in a surface}
+
+\section{Darboux frame}\label{sec:Darboux}
 
 \begin{wrapfigure}{r}{42 mm}
 \vskip-10mm
@@ -455,6 +497,8 @@ For that reason, the normal curvature is also denoted by $k_{\vec v}$;\index{10k
 according to the proposition,
 \[k_{\vec v}=\langle \Shape_p(\vec v),\vec v\rangle\]
 for any unit vector $\vec v$ in $\T_p$.
+
+\section{Euler's formula}
 
 Let $p$ be a point on a smooth surface~$\Sigma$.
 Assume we choose tangent-normal coordinates at $p$ so that the Hessian matrix is diagonalized, then we have
@@ -573,24 +617,22 @@ Show that the \index{helicoid}\emph{helicoid} defined by the following parametri
 is a minimal surface.
 \end{thm}
 
-\begin{wrapfigure}{o}{51 mm}
-\vskip-6mm
-\centering
-\includegraphics{asy/sin}
-\vskip-2mm
-\end{wrapfigure}
-
 \begin{thm}{Exercise}\label{ex:rev(sin)}
 Let $\Sigma$ be of the surface of revolution around $x$-axis
 with the generatrix $y=a\cdot \sin x$ for a constant $a>0$ and $x\in (0,\pi)$.
 Show that the Gauss curvature of $\Sigma$ cannot exceed 1.
 \end{thm}
 
-%\begin{thm}{Exercise}
-%Let $f\:(a,b)\to\mathbb{R}$ be a smooth positive function and $\Sigma$ be a surface of revolution of the graph $y=f(x)$ around $x$-axis.
-%Suppose $\Sigma$ has vanishing Gauss curvature.
-%Show that $f$ is a linear function; that is $f(x)=c\cdot x+d$ for some constants $c$ and $d$.
-%\end{thm}
+\begin{figure}[ht!]
+\centering
+\includegraphics{asy/sin}
+\end{figure}
+
+\begin{thm}{Exercise}\label{ex:rev(lin)}
+Let $f\:(a,b)\to\mathbb{R}$ be a smooth positive function and $\Sigma$ be a surface of revolution of the graph $y=f(x)$ around $x$-axis.
+Suppose $\Sigma$ has vanishing Gauss curvature.
+Show that $f$ is a linear function; that is $f(x)=c\cdot x+d$ for some constants $c$ and $d$.
+\end{thm}
 
 \section{Lagunov's fishbowl}
 \index{Lagunov's fishbowl}
@@ -659,7 +701,7 @@ Note that the boundary of $V_3$ is connected.
 Assuming that the holes are large, its boundary can be made so that its principal curvatures are still at most $1$; the latter can be proved in the same way as for~$V_1$.
 \qeds
 
-\section*{Remarks}
+\section{Remarks}
 
 Note that the surface of $V_3$ in Lagunov's fishbowl has genus 2;
 that is, it can be parametrized by a sphere with two handles.

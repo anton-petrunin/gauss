@@ -1,6 +1,7 @@
 \stepcounter{chapter}
 \setcounter{eqtn}{0}
 
+\raggedcolumns\setlength{\multicolsep}{-10mm}
 \begin{multicols}{2}
 
 \parbf{\ref{ex:ell-infty}.} Check all the conditions in the definition of metric, page \pageref{page:def:metric}.
@@ -595,14 +596,14 @@ Arc II goes very close and almost parallel to the chord $pq$, and its total curv
 Use the fact that an exterior angle of a triangle equals the sum of the two remote interior angles.
 For the second part apply induction on the number of vertices.
 
-\parbf{\ref{ex:sef-intersection}}; \ref{SHORT.ex:sef-intersection:<2pi} See the diagram. 
-
 \begin{wrapfigure}{r}{23 mm}
-\vskip-10mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-290}
 \vskip-0mm
 \end{wrapfigure}
+
+\parbf{\ref{ex:sef-intersection}}; \ref{SHORT.ex:sef-intersection:<2pi} See the diagram. 
 
 \parit{\ref{SHORT.ex:sef-intersection:>pi}.} Assume $x$ is a point of self-intersection.
 Show that we may choose two points $y$ and $z$ on $\gamma$ so that the triangle $xyz$ is nondegenerate.
@@ -656,7 +657,7 @@ The latter can be done by straightforward calculations.
 {
 
 \begin{wrapfigure}{r}{25 mm}
-\vskip-1mm
+\vskip-6mm
 \centering
 \begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{asy/helix(1)}
 \lbl[br]{8,24;$\norm$}
@@ -1026,18 +1027,18 @@ Applying rescaling, we may assume that $a=\pi$; that is, $\gamma$ bounds area of
 Then apply \ref{thm:moon} to show that the curvature is at least 1 at some point.
 Argue as at the end of the proof of \ref{thm:4-vert-supporting}, showing that the curvature is at most 1 at some point.
 
-Apply the intermediate value theorem to show that curvature is  1 at some point.
-
-\parbf{\ref{ex:curve-crosses-circle}.}
-Repeat the proof of the \ref{thm:moon} for each cyclic concatenation of an arc of $\gamma$ from $p_i$ to $p_{i+3}$ the arc of the circle with points $p_{i+4},\z\dots,p_{i-1}$ on it.
-
-
 \begin{wrapfigure}{r}{20 mm}
 \vskip-6mm
 \centering
 \includegraphics{mppics/pic-305}
 \vskip-2mm
 \end{wrapfigure}
+
+
+Apply the intermediate value theorem to show that curvature is  1 at some point.
+
+\parbf{\ref{ex:curve-crosses-circle}.}
+Repeat the proof of the \ref{thm:moon} for each cyclic concatenation of an arc of $\gamma$ from $p_i$ to $p_{i+3}$ the arc of the circle with points $p_{i+4},\z\dots,p_{i-1}$ on it.
 
 An example for the second part can be guessed from the diagram.
 
@@ -1200,6 +1201,9 @@ Show that we can assume that $\langle s(u,v),\vec k\rangle$ has a constant sign 
 Conclude that $s_u\perp \vec k$ and $s_v\perp \vec k$ at
 $0$, hence the result.
 
+\parbf{\ref{ex:lin-ind-chart}.}
+Apply \ref{thm:ODE} and \ref{thm:inverse} in a local chart at $p$ and then apply \ref{thm:inverse} again.
+
 \parbf{\ref{ex:const-normal}.}
 Show and use that for any smooth curve $\gamma$ in $\Sigma$ the function $t\mapsto \langle\nu,\gamma(t)\rangle$ is constant.
 
@@ -1284,6 +1288,41 @@ conclude that $f_t$ is a smooth embedding.
 \[\area\Sigma_t=\int_{p\in \Sigma}\jac_pf_t.\]
 Show and use that $\jac_pf_t=1-t\cdot H+t^2\cdot K$.
 
+\parbf{\ref{ex:flat-plane};} \ref{SHORT.ex:flat-plane:orthonormal}.
+Use that principal directions are orthogonal; see \ref{sec:Principal curvatures}.
+
+\parit{\ref{SHORT.ex:flat-plane:depend}.} 
+Show that $\Norm_u=0$, use it to show that $\Norm$ depends only on~$v$.
+
+Observe that $\Norm_{uv}=\Norm_{vu}=0$.
+Use \ref{cor:Shape(ij)} to show that $\Norm_v=-k \cdot s_v$.
+Conclude that $\vec v_u=0$ and therefore $\vec v$ depends only on~$v$.
+
+Apply \ref{SHORT.ex:flat-plane:orthonormal} to show that $\vec u$ depends only on~$v$.
+Make a conclusion.
+
+\parit{\ref{SHORT.ex:flat-plane:depend-u}.}
+The first part follows from the conclusion of \ref{SHORT.ex:flat-plane:depend}.
+
+By \ref{SHORT.ex:flat-plane:orthonormal}, $\langle s_u,s_v\rangle=0$.
+Since $s_{uu}$ is proportional to $s_u$, we also get $\langle s_{v},s_{uu}\rangle=0$.
+Therefore,
+\begin{align*}
+\tfrac{\partial}{\partial v}\langle s_u,s_u\rangle&=2\cdot \langle s_{vu},s_u\rangle=
+\\
+&=2\cdot \tfrac{\partial}{\partial u}\langle s_v,s_u\rangle-2\cdot \langle s_{v},s_{uu}\rangle=0.
+\end{align*}
+Make a conclusion.
+
+\parit{\ref{SHORT.ex:flat-plane:linear}.} 
+Since $\langle s_u,s_u\rangle=1$,
+\[0=\tfrac{\partial}{\partial u}\langle s_u,s_u\rangle=2\cdot\langle s_{uu},s_u\rangle.\]
+By \ref{SHORT.ex:flat-plane:depend-u}, $s_{uu}\parallel s_u$; therefore, $s_{uu}=0$.
+
+Conclude that $s_v$ depends linearly on $u$.
+Use this together with the equations
+\[\Norm_v=-k\cdot s_v,\quad \Norm_{uv}=0.\]
+
 \parbf{\ref{ex:mean-curvature}.}
 Apply \ref{obs:k1-k2} and the definition of mean curvature.
 
@@ -1316,6 +1355,8 @@ Use \ref{ex:curvature-formulas:a} to show that it is at most $a\cdot \sin x$.
 Note that the curvature of parallel is $\tfrac1{a\cdot \sin x}$;
 apply Meusnier's theorem, to show that the principal curvature in its direction cannot be larger.
 Make a conclusion.
+
+\parbf{\ref{ex:rev(lin)}.} Apply \ref{ex:principal-revolution:formula}.
 
 \parbf{\ref{ex:moon-revolution}.}
 Use \ref{ex:line-of-curvature} and \ref{thm:moon-orginal}.
@@ -1385,7 +1426,7 @@ By \ref{thm:convex-embedded}, the surface bounds a convex region that contains a
 \begin{Figure}
 \vskip-0mm
 \centering
-\includegraphics{asy/sin}
+\includegraphics{asy/sin-mini}
 \vskip-0mm
 \end{Figure}
 
@@ -2213,6 +2254,26 @@ Apply \ref{ex:principal-revolution:formula} to calculate Gauss curvature of $\Si
 
 By \ref{ex:K=1}, small discs $\Delta_a$ in $\Sigma_a$ admit intrinsic isometry to a disc in a unit sphere.
 To show that $\Delta_a$ is not congruent to a spherical disc $\Delta_1$ for $a\ne 1$, show that its principal curvature is not 1 at some point. 
+
+
+\parbf{\ref{ex:line-cylinder}.}
+Observe that for any two points $p$ and $q$ in the $(u,v)$ plane we have $|f(p)-f(q)|\le |p-q|$.
+
+Let $f(u,v)=(x(u,v),y(u,v),z(u,v))$;
+we can assume that $z(0,v)=v$ for any $v$.
+
+Apply the observation and the triangle inequality to points $(0,-a)$, $(u,v_1)$, $(u,v_2)$, and $(0,a)$ for $a\to \infty$ to show that 
+\begin{align*}
+z(u,v_1)&=v_1,
+&
+z(u,v_2)&=v_2,
+\\
+x(u,v_1)&=x(u,v_2),
+&
+y(u,v_1)&=y(u,v_2).
+\end{align*}
+Make a conclusion.
+
 
 %\end{multicols}
 %\par\noindent\rule{\textwidth}{0.4pt}

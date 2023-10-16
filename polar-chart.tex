@@ -486,8 +486,7 @@ It follows that
 \langle\vec u',\vec v\rangle
 =\phi'\cdot\biggl(&(\sin \phi)^2\cdot \langle\vec x,\vec x\rangle+(\cos \phi)^2\cdot \langle\vec y,\vec y\rangle
 \biggr)=
-\\
-=\phi'.\ &
+\phi'.
 \end{align*}
 
 Therefore,
@@ -543,9 +542,7 @@ Then
 \intertext{by the chain rule}
 &=\int_0^1[\langle\vec u_u,\vec v\rangle\cdot u'+\langle\vec u_v,\vec v\rangle\cdot v']\cdot dt=
 \intertext{by \ref{prop:jaccobi},}
-&=\int_0^1b_u\cdot v'\cdot dt=
-\\
-&=\int_{s^{-1}\circ\gamma}b_u\cdot dv=
+&=\int_0^1b_u\cdot v'\cdot dt=\int_{s^{-1}\circ\gamma}b_u\cdot dv=
 \intertext{by the Green formula}
 &=\iint_{s^{-1}(\Delta)}b_{uu}\cdot du\cdot dv=
 \intertext{Since $s_u\perp s_v$, we get $\jac s=|s_u|\cdot|s_v|=b$; therefore}
@@ -734,6 +731,17 @@ However, if the disc is larger than half-sphere, then the proof requires more;
 it can be obtained as a corollary of two deep results of Alexandr Alexandrov: the gluing theorem and the theorem on the existence of a convex surface with an abstractly given metric \cite[p. 44]{pogorelov}.
 }
 \end{thm}
+
+The following exercise illustrates the final step in the proof that \textit{any open surface with vanishing Gauss curvature a cylindrical surface}.
+See the discussion right before \ref{ex:flat-plane}.
+
+\begin{thm}{Advanced exercise}\label{ex:line-cylinder} 
+Suppose $(u,v)\mapsto f(u,v)$ describes an intrinsic isometry from the plane with standard $(u,v)$-coordinates to a surface $\Sigma$ in $\mathbb{R}^3$.
+Assume that $f$ maps $v$-axis to the $z$-axis isometrically.
+Show that $\Sigma$ is a cylindrical surface;
+more precisely, is a union of a family of lines parallel to the $z$-axis.
+\end{thm}
+
 
 \section{The remarkable theorem}
 

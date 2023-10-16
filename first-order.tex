@@ -25,6 +25,11 @@ More precisely,
 it has \index{order of contact}\emph{first-order contact} with $\Sigma$ at $p$;
 that is, $\rho(q)\z=o(|p-q|)$, where $q\in \Sigma$, and $\rho(q)$ denotes the distance from $q$ to $\T_p$.
 
+An assignment of a tangent vector $\vec v_p$ to each point $p$ of the surface $\Sigma$ is called a \emph{tangent vector field} if $\vec v_p$ depends smoothly of $p$.
+More precisely, for any chart $s$ of $\Sigma$ we have
+\[\vec v_{s(u,v)}=a(u,v)\cdot s_u+b(u,v)\cdot s_v\]
+for smooth functions $a$ and $b$ defined in the domain $s$.
+
 \parit{Proof.}
 Fix a chart $s$ at~$p$.
 Assume $\gamma$ is a smooth curve that starts at~$p$.
@@ -63,7 +68,7 @@ First, let us recall the standard definition.
 
 Suppose $f$ is a function defined at a point $p$ in the space, and $\vec w$ a vector.
 Consider the function
-\[h(t)=f(p+t\cdot\vec w).\]
+$h(t)=f(p+t\cdot\vec w)$.
 Then the directional derivative of $f$ at $p$ along $\vec w$ is defined as \index{10d@$D_{\vec{w}}f$ (directional derivative)}
 \[D_{\vec w}f(p)\df h'(0).\]
 
@@ -114,6 +119,24 @@ It follows that $(f\circ\gamma)'(0)$ depends only on $p$, $\vec w$, and~$f$.
 
 The last statement follows from \ref{eq:f-gamma}.
 \qeds
+
+\begin{thm}{Advanced exercise}\label{ex:lin-ind-chart}
+Let $\vec x$ and $\vec y$ be vector fields on a smooth surface $\Sigma$.
+Suppose that $\vec x_p$ and $\vec y_p$ are linearly independent at some point $p\in \Sigma$.
+Construct two functions $u$ in a neighborhood of $p$ such that 
+\begin{align*}
+D_{\vec x} u&>0,
+&
+D_{\vec y} u&=0,
+&
+D_{\vec x} v&=0,
+&
+D_{\vec y} v&>0.
+\end{align*}
+
+Conclude that there is a chart $(u,v)\mapsto s(u,v)$ of $\Sigma$ at $p$ such that $\vec x$ and $\vec y$ are tangent to the coordinate lines; in other words, $\vec x$ and $\vec y$ are proportional to $s_u$ and $s_v$ at any point.
+\end{thm}
+
 
 \section{Tangent vectors as functionals}
 
@@ -284,16 +307,16 @@ Note that each orientable surface admits two orientations: $\Norm$ and $-\Norm$.
 Let $\Sigma$ be a smooth oriented surface with unit normal field $\Norm$.
 The map $\Norm\:\Sigma\to \mathbb{S}^2$ defined by $p\mapsto \Norm(p)$ is called the \index{spherical!map}\emph{spherical map} or \index{Gauss map}\emph{Gauss map}.
 
-For surfaces, the spherical map plays essentially the same role as the tangent indicatrix for curves.
-
-The Möbius strip shown on the diagram gives an example of a nonorientable surface --- there is no choice of a normal vector field that is continuous along the middle of the strip (it changes the sign if you try to go around).
-
 \begin{wrapfigure}{o}{42 mm}
 \vskip-0mm
 \centering
 \includegraphics{asy/moebius}
 \vskip0mm
 \end{wrapfigure}
+
+For surfaces, the spherical map plays essentially the same role as the tangent indicatrix for curves.
+
+The Möbius strip shown on the diagram gives an example of a nonorientable surface --- there is no choice of a normal vector field that is continuous along the middle of the strip (it changes the sign if you try to go around).
 
 Note that each surface is locally orientable.
 In fact, each chart $s(u,v)$ admits an orientation 
