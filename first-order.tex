@@ -189,30 +189,30 @@ The differential $d_p s$ can be described by a $2{\times}2$-matrix $M$ in orthon
 Set $\jac_p s=|\det M|$; this value  
 does not depend on the choice of orthonormal bases in $\T_p$ and $\T_{s(p)}\Sigma_1$. \label{page:|L|}\index{10d@$d_p f$ (differential)}
 
-Let $ s_1\:\Sigma_1\to\Sigma_2$ be a smooth map between smooth surfaces $\Sigma_1$ and $\Sigma_2$.
-Suppose ${p_1}= s_0(p_0)\in\Sigma_1$ for some chart $s_0$ of $\Sigma_1$;
+Let $r\:\Sigma_1\to\Sigma_2$ be a smooth map between smooth surfaces $\Sigma_1$ and $\Sigma_2$.
+Suppose ${p_1}= s(p_0)\in\Sigma_1$ for some chart $s$ of $\Sigma_1$;
 observe that 
-\[d_{p_0}( s_1\circ s_0)=d_{p_1} s_1 \circ d_{p_0} s_0 .\]
+\[d_{p_0}( r\circ s)=d_{p_1} r \circ d_{p_0} s .\]
 It follows that
-\[\jac_{p_0}( s_1\circ s_0)
+\[\jac_{p_0}( r\circ s)
 =
-\jac_{p_1} s_1\cdot\jac_{p_0} s_0 .\eqlbl{eq:jac-composition}\]
+\jac_{p_1} r\cdot\jac_{p_0} s .\eqlbl{eq:jac-composition}\]
 
 
-The value $\jac_{p_0} s_0$ can be found using the following formulas:
+The value $\jac_{p_0} s$ can be found using the following formulas:
 \begin{align*}
-\jac s_0
-&=|(s_0)_v\times (s_0)_u|=
+\jac s
+&=|s_v\times s_u|=
 \\
-&=\sqrt{\langle (s_0)_u, (s_0)_u\rangle\cdot\langle (s_0)_v, (s_0)_v\rangle -\langle (s_0)_u, (s_0)_v\rangle^2}=
+&=\sqrt{\langle s_u, s_u\rangle\cdot\langle s_v, s_v\rangle -\langle s_u, s_v\rangle^2}=
 \\
-&=\sqrt{\det[\Jac^\top s_0\cdot \Jac s_0 ]},
+&=\sqrt{\det[(\Jac s)^\top\cdot \Jac s ]},
 \end{align*}
-where $\Jac s_0$ denotes the Jacobian matrix of $s_0$; it is a $2{\times}3$ matrix with column vectors $(s_0)_u$ and $(s_0)_v$.
+where $\Jac s$ denotes the Jacobian matrix of $s$; it is a $2{\times}3$ matrix with column vectors $s_u$ and $s_v$.
 
-The value $\jac_{p_1} s_1$ has the following geometric meaning:
-if $P_1$ is a region in $\T_{p_1}$ and $P_2=(d_{p_1} s_1)(P_1)$, then
-\[\area P_2=\jac_{p_1} s_1 \cdot \area P_1.\]
+The value $\jac_{p_1} r$ has the following geometric meaning:
+if $S_1$ is a region in $\T_{p_1}$ and $S_2=(d_{p_1} r)(S_1)$, then
+\[\area S_2=\jac_{p_1} r \cdot \area S_1.\]
 This identity will play a key role in the definition of surface area.
 
 \section{Surface integral and area}
