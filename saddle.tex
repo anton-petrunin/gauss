@@ -25,7 +25,7 @@ Then
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:surf-support}
-Give an example of two surfaces $\Sigma_1$ and $\Sigma_2$ that have a  common point $p$ with a common unit normal vector $\Norm_p$ such that 
+Construct two surfaces $\Sigma_1$ and $\Sigma_2$ that have a  common point $p$ with a common unit normal vector $\Norm_p$ such that 
 $k_1(p)_{\Sigma_1}\z> k_1(p)_{\Sigma_2}$ and $k_2(p)_{\Sigma_1}\z> k_2(p)_{\Sigma_2}$, but $\Sigma_1$ does not support $\Sigma_2$ locally at~$p$.
 \end{thm}
 
@@ -52,11 +52,14 @@ Note that in this case, the curve $\gamma_1$ supports the curve $\gamma_2$ from 
 By \ref{prop:supporting-circline}, we have the following inequality for the normal curvatures of $\Sigma_1$ and $\Sigma_2$ at $p$ in the direction of ${\vec w}$:
 \[k_{\vec w}(p)_{\Sigma_1}\ge k_{\vec w}(p)_{\Sigma_2}.\eqlbl{kw>=kw}\]
 
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
 According to \ref{obs:k1-k2},
-\[k_1(p)_{\Sigma_i}=\min\set{k_{\vec w}(p)_{\Sigma_i}}{{\vec w}\in\T_p, |{\vec w}|=1}\]
-for $i=1,2$.
-Choose ${\vec w}$ so that $k_1(p)_{\Sigma_1}=k_{\vec w}(p)_{\Sigma_1}$.
-Then by \ref{kw>=kw}, we have that
+\[k_1(p)_{\Sigma_i}=\min_{\vec w}\set{k_{\vec w}(p)_{\Sigma_i}}{},\]
+where $\vec w\in\T_p$ and $|\vec w|=1$.
+Fix ${\vec w}$ such that 
+\[k_1(p)_{\Sigma_1}\z=k_{\vec w}(p)_{\Sigma_1}.\]
+By \ref{kw>=kw}, 
 \begin{align*}
 k_1(p)_{\Sigma_1}&=k_{\vec w}(p)_{\Sigma_1}\ge
 \\
@@ -64,14 +67,17 @@ k_1(p)_{\Sigma_1}&=k_{\vec w}(p)_{\Sigma_1}\ge
 \\
 &\ge\min_{\vec v}\set{k_{\vec v}(p)_{\Sigma_2}}{}=
 \\
-&=k_1(p)_{\Sigma_2};
+&=k_1(p)_{\Sigma_2}.
 \end{align*}
-here we assume $\vec v\in\T_p$ and $|\vec v|=1$.
 
-Similarly, by \ref{obs:k1-k2}, we have that
-\[k_2(p)_{\Sigma_i}=\max_{\vec w}\set{k_{\vec w}(p)_{\Sigma_i}}{}.\]
-Let us fix ${\vec w}$ so that $k_2(p)_{\Sigma_2}=k_{\vec w}(p)_{\Sigma_2}$.
-Then 
+\columnbreak
+
+Similarly, by \ref{obs:k1-k2},
+\[k_2(p)_{\Sigma_i}=\max_{\vec w}\set{k_{\vec w}(p)_{\Sigma_i}}{},\]
+where $\vec w\in\T_p$ and $|\vec w|=1$.
+Fix ${\vec w}$ such that 
+\[k_2(p)_{\Sigma_2}=k_{\vec w}(p)_{\Sigma_2}.\]
+By \ref{kw>=kw},
 \begin{align*}
 k_2(p)_{\Sigma_2}&=k_{\vec w}(p)_{\Sigma_2}\le
 \\
@@ -81,7 +87,10 @@ k_2(p)_{\Sigma_2}&=k_{\vec w}(p)_{\Sigma_2}\le
 \\
 &=k_2(p)_{\Sigma_1}.
 \end{align*}
-\qedsf
+\end{multicols}
+
+
+Both times we assume  that  $\vec v\in\T_p$ and $|\vec v|=1$.\qeds
 
 \begin{thm}{Corollary}\label{cor:surf-support}
 Let $\Sigma_1$ and $\Sigma_2$ be oriented surfaces.
@@ -97,8 +106,8 @@ Then:
 \end{thm}
 
 \parit{Proof; \ref{SHORT.cor:surf-support:mean}.}
-The statement follows from  \ref{prop:surf-support} since 
-\[H(p)_{\Sigma_i}=k_1(p)_{\Sigma_i}+k_2(p)_{\Sigma_i}.\]
+The statement follows from  \ref{prop:surf-support} since $H=k_1+k_2$. 
+%\[H(p)_{\Sigma_i}=k_1(p)_{\Sigma_i}+k_2(p)_{\Sigma_i}.\]
 
 
 \parit{\ref{SHORT.cor:surf-support:gauss}.} Since $k_2(p)_{\Sigma_i}\ge k_1(p)_{\Sigma_i}$, and $k_1(p)_{\Sigma_2}\ge 0$, we get that all the principal curvatures 
@@ -245,8 +254,8 @@ The following exercise will guide you thru the proof of the theorem.
 
 {
 
-\begin{wrapfigure}{r}{33 mm}
-\vskip-0mm
+\begin{wrapfigure}[8]{r}{33 mm}
+\vskip-4mm
 \centering
 \includegraphics{mppics/pic-78}
 \end{wrapfigure}
@@ -275,7 +284,7 @@ Moreover, $f(x_n,y_n)\to\infty$ as $(x_n,y_n)\to(x_\infty,y_\infty)\z\in \partia
 \end{thm}
 
 \begin{wrapfigure}{r}{33 mm}
-\vskip-8mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-1181}
 \end{wrapfigure}
@@ -341,6 +350,8 @@ Conclude that
 \[\iint_\Sigma K=4\cdot\pi.\]
 \end{subthm}
 
+\columnbreak
+
 \begin{subthm}{ex:intK:2pi}
 Show that if $\Sigma$ is open, then $\Norm\:\Sigma\to \mathbb{S}^2$
 maps $\Sigma$ bijectively into a subset of a hemisphere.
@@ -353,18 +364,17 @@ Conclude that
 \end{thm}
 
 
-
 \section{Saddle surfaces}\label{sec:saddle}
 
+A surface is called \index{saddle surface}\emph{saddle} if its Gauss curvature at each point is nonpositive;
+in other words, the principal curvatures at each point have opposite signs or at least one of them is zero.
+
 \begin{wrapfigure}{r}{43 mm}
-\vskip-8mm
+\vskip-0mm
 \centering
 \includegraphics{asy/saddle}
 \vskip0mm
 \end{wrapfigure}
-
-A surface is called \index{saddle surface}\emph{saddle} if its Gauss curvature at each point is nonpositive;
-in other words, the principal curvatures at each point have opposite signs or at least one of them is zero.
 
 If the Gauss curvature is negative at each point,
 then the surface is said to be {}\emph{strictly saddle};

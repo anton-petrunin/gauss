@@ -80,7 +80,7 @@ Suppose $\gamma$ is a smooth curve in $\Sigma$ that starts at $p$ with velocity 
 that is, $\gamma(0)=p$, and $\gamma'(0)=\vec{w}$.
 Then the derivative $(f\circ\gamma)'(0)$
 depends only on $f$, $p$, and $\vec{w}$;
-it is called the \index{directional derivative}\emph{directional derivative of $f$ along $\vec{w}$ at $p$}
+it is called the \index{directional derivative}\emph{directional derivative} of $f$ along $\vec{w}$ at $p$
 and is denoted by
 \[D_{\vec{w}}f,\quad D_{\vec{w}}f(p), \quad\text{or}\quad D_{\vec{w}}f(p)_\Sigma\] 
 --- we may omit $p$ and $\Sigma$ if it is clear from the context.
@@ -92,7 +92,9 @@ where $\vec{w}=a\cdot s_u +b\cdot s_v$.
 
 Note that our definition agrees with the standard definition of the directional derivative if $\Sigma$ is a plane.
 Indeed, in this case, $\gamma(t)=p+\vec w\cdot t$ is a curve in $\Sigma$ that starts at $p$ with velocity vector $\vec{w}$.
-For a general surface, the point $p+\vec w\cdot t$ might not lie on the surface; therefore the function $f$ might be undefined at this point; therefore the standard definition does not work.
+For a general surface, the point $p+\vec w\cdot t$ might not lie on the surface.
+Therefore the function $f$ might be undefined at this point.
+In this case, the standard definition does not work.
 
 \parit{Proof.}
 Without loss of generality, we may assume that $p=s(0,0)$ and the curve $\gamma$ is covered by the chart $s$;
@@ -125,7 +127,7 @@ The last statement follows from \ref{eq:f-gamma}.
 \begin{thm}{Advanced exercise}\label{ex:lin-ind-chart}
 Let $\vec x$ and $\vec y$ be vector fields on a smooth surface $\Sigma$.
 Suppose that $\vec x_p$ and $\vec y_p$ are linearly independent at some point $p\in \Sigma$.
-Construct two functions $u$ in a neighborhood of $p$ such that 
+Construct two functions $u$ and $v$ in a neighborhood of $p$ such that 
 \begin{align*}
 D_{\vec x} u&>0,
 &
@@ -136,7 +138,7 @@ D_{\vec x} v&=0,
 D_{\vec y} v&>0.
 \end{align*}
 
-Conclude that there is a chart $(u,v)\mapsto s(u,v)$ of $\Sigma$ at $p$ such that $\vec x$ and $\vec y$ are tangent to the coordinate lines; in other words, $\vec x$ and $\vec y$ are proportional to $s_u$ and $s_v$ at any point.
+Conclude that there is a chart $(u,v)\mapsto s(u,v)$ of $\Sigma$ at $p$ such that $\vec x$ and $\vec y$ are tangent to the coordinate lines.
 \end{thm}
 
 
@@ -167,37 +169,41 @@ $ s(p)=(x(p),y(p),z(p))$.
 To take a directional derivative of the map we should take the  directional derivative of each of its coordinate functions.
 \[D_{\vec{w}} s\df(D_{\vec{w}}x,D_{\vec{w}}y,D_{\vec{w}}z).\]
 
-Assume $s$ is a smooth map from one smooth surface $\Sigma_0$ to another $\Sigma_1$ and $p\in \Sigma_0$.
-Note that $D_{\vec w} s(p)\in \T_{s(p)}\Sigma_1$ for any $\vec w\in \T_p$.
-Indeed, choose a curve $\gamma_0$ in $\Sigma_0$ such that $\gamma_0(0)=p$ and $\gamma_0'(0)=\vec w$.
-Observe that $\gamma_1= s\circ \gamma_0$ is a smooth curve in $\Sigma_1$, and, 
-by the definition of the directional derivative, we have $D_{\vec w} s(p)=\gamma_1'(0)$.
-It remains to note that $\gamma_1(0)\z= s(p)$.
-Therefore its velocity $\gamma_1'(0)$ is in $\T_{ s(p)}\Sigma_1$.
+Assume $s$ maps one smooth surface $\Sigma_0$ to another $\Sigma_1$.
+Let $p_0\in \Sigma_0$ and $p_1=s(p_0)$.
+Note that $D_{\vec w} s\in \T_{p_1}\Sigma_1$ for any $\vec w\in \T_{p_0}$.
+Indeed, choose a curve $\gamma_0$ in $\Sigma_0$ such that $\gamma_0(0)=p_0$ and $\gamma_0'(0)=\vec w$.
+Observe that $\gamma_1= s\circ \gamma_0$ is a smooth curve in $\Sigma_1$. 
+By the definition of the directional derivative, we have $D_{\vec w} s=\gamma_1'(0)$.
+It remains to note that $\gamma_1(0)\z= p_1$.
+Therefore its velocity $\gamma_1'(0)$ is in $\T_{ p_1}\Sigma_1$.
 
-Recall that \ref{def:directional-derivative} implies that 
-$\vec w \mapsto D_{\vec w} s$ defines a linear map $\T_p\Sigma_0\z\to \T_{ s(p)}\Sigma_1$;
+By \ref{def:directional-derivative},
+$\vec w \mapsto D_{\vec w} s$ defines a linear map $\T_{p_0}\Sigma_0\z\to \T_{ p_1}\Sigma_1$;
 that is,
-\[D_{c\cdot \vec w} s=c\cdot D_{\vec w} s(p)
-\quad\text{and}\quad D_{\vec v+ \vec w} s=D_{\vec v} s(p)+ D_{\vec w} s(p)\]
-for any $c\in\mathbb{R}$ and $\vec v, \vec w\in\T_p$.
-The map 
-\[d_p s\:\vec w \mapsto D_{\vec w} s\] 
-is called the \index{differential}\emph{differential} of $s$ at~$p$.
+\[D_{c\cdot \vec w} s=c\cdot D_{\vec w} s
+\quad\text{and}\quad D_{\vec v+ \vec w} s=D_{\vec v} s+ D_{\vec w} s\]
+for $c\in\mathbb{R}$ and $\vec v, \vec w\in\T_{p_0}$.
+The map $d_{p_0} s\:\T_{p_0}\Sigma_0\z\to \T_{ p_1}\Sigma_1$ defined by
+\[d_{p_0} s\:\vec w \mapsto D_{\vec w} s\]
+is called the \index{differential}\emph{differential} of $s$ at~$p_0$.
 
-The differential $d_p s$ can be described by a $2{\times}2$-matrix $M$ in orthonormal bases of $\T_p$ and $\T_{s(p)}\Sigma_1$.
-Set $\jac_p s=|\det M|$; this value  
-does not depend on the choice of orthonormal bases in $\T_p$ and $\T_{s(p)}\Sigma_1$. \label{page:|L|}\index{10d@$d_p f$ (differential)}
+The differential $d_{p_0} s$ can be described by a $2{\times}2$-matrix $M$ in orthonormal bases of $\T_{p_0}\Sigma_0$ and $\T_{p_1}\Sigma_1$.
+Set $\jac_{p_0} s=|\det M|$; this value  
+does not depend on the choice of orthonormal bases in $\T_{p_0}$ and $\T_{p_1}\Sigma_1$. \label{page:|L|}\index{10d@$d_p f$ (differential)}
+
+The value $\jac_{p_0} s$ has the following geometric meaning:
+if $S_0$ is a region in $\T_{p_0}$ and $S_1=(d_{p_0} s)(S_0)$, then
+$\area S_1=\jac_{p_0} s \cdot \area S_0$.
+This identity will play a key role in the definition of surface area.
 
 Let $r\:\Sigma_1\to\Sigma_2$ be a smooth map between smooth surfaces $\Sigma_1$ and $\Sigma_2$.
-Suppose ${p_1}= s(p_0)\in\Sigma_1$ for some chart $s$ of $\Sigma_1$;
-observe that 
+Observe that 
 \[d_{p_0}( r\circ s)=d_{p_1} r \circ d_{p_0} s .\]
 It follows that
 \[\jac_{p_0}( r\circ s)
 =
 \jac_{p_1} r\cdot\jac_{p_0} s .\eqlbl{eq:jac-composition}\]
-
 
 The value $\jac_{p_0} s$ can be found using the following formulas:
 \begin{align*}
@@ -208,17 +214,12 @@ The value $\jac_{p_0} s$ can be found using the following formulas:
 \\
 &=\sqrt{\det[(\Jac s)^\top\cdot \Jac s ]},
 \end{align*}
-where $\Jac s$ denotes the Jacobian matrix of $s$; it is a $2{\times}3$ matrix with column vectors $s_u$ and $s_v$.
-
-The value $\jac_{p_1} r$ has the following geometric meaning:
-if $S_1$ is a region in $\T_{p_1}$ and $S_2=(d_{p_1} r)(S_1)$, then
-\[\area S_2=\jac_{p_1} r \cdot \area S_1.\]
-This identity will play a key role in the definition of surface area.
+where $\Jac s$ denotes the Jacobian matrix of $s$; see Section~\ref{sec:Multivariable calculus}.
 
 \section{Surface integral and area}
 
 Let $\Sigma$ be a smooth surface, and $h\:\Sigma\to\mathbb{R}$ be a smooth function.
-Let us define the integral of the function $h$ along a region $R\subset \Sigma$.
+Let us define the integral of $h$ along a region $R\subset \Sigma$.
 The {}\emph{region} is defined as any Borel set $R\subset\Sigma$,
 but most of the time our regions will be surfaces with boundary.
 
@@ -309,11 +310,11 @@ Note that each orientable surface admits two orientations: $\Norm$ and $-\Norm$.
 Let $\Sigma$ be a smooth oriented surface with unit normal field $\Norm$.
 The map $\Norm\:\Sigma\to \mathbb{S}^2$ defined by $p\mapsto \Norm(p)$ is called the \index{spherical!map}\emph{spherical map} or \index{Gauss map}\emph{Gauss map}.
 
-\begin{wrapfigure}{o}{42 mm}
-\vskip-0mm
+\begin{wrapfigure}{r}{42 mm}
+\vskip-7mm
 \centering
 \includegraphics{asy/moebius}
-\vskip0mm
+\vskip-1mm
 \end{wrapfigure}
 
 For surfaces, the spherical map plays essentially the same role as the tangent indicatrix for curves.
@@ -361,7 +362,7 @@ each connected component of the intersection of $\Sigma$ with the level set $L_r
 \parit{Proof.}
 The surface $\Sigma$ can be covered by a countable set of charts $s_i\:U_i\z\to \Sigma$.
 Note that the composition $f\circ s_i$ is a smooth function for any~$i$.
-By Sard's lemma (\ref{lem:sard}), almost all real numbers $r$ are regular values for each $f\circ s_i$.
+By Sard's lemma (\ref{lem:sard}), $r$ is a regular value of each $f\circ s_i$ for almost all $r$.
 
 Fix such a value $r$ sufficiently close to $r_0$, and consider the level set $L_r$ described by the equation $f(x,y,z)=r$.
 Any point in the intersection $\Sigma\cap L_r$ lies in the image of one of the charts.
@@ -370,7 +371,8 @@ hence the result.
 \qeds
 
 \begin{thm}{Advanced exercise}\label{ex:plane-section}
-Let $\Pi$ be the $(x,y)$-plane and $A \subset \Pi$ be any closed subset. Show that there is an open smooth surface $\Sigma$ with $\Sigma \cap \Pi = A$.
+Let $\Pi$ be the $(x,y)$-plane and $A \subset \Pi$ be any closed subset.
+Construct an open smooth surface $\Sigma$ such that $\Sigma \cap \Pi = A$.
 \end{thm}
 
 The exercise above says that plane sections of a smooth surface might look complicated.
