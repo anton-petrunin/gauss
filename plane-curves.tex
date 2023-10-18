@@ -134,7 +134,7 @@ Note that
 \\
 &=\skur(s)\cdot \norm(s).
 \end{align*}
-So $\skur(s)$ is the signed curvature of $\gamma$ at~$s$. 
+So, $\skur(s)$ is the signed curvature of $\gamma$ at~$s$. 
 
 This proves the existence;
 it remains to prove the uniqueness.
@@ -393,27 +393,30 @@ If $\skur\ne 0$, we get
 it is the circle of radius $r=\tfrac1{|\skur|}$ centered at $(0,\tfrac1\skur)=p+\tfrac1\skur\cdot\norm$.
 \qeds
 
+\begin{thm}{Definition}
+Let $\gamma$ be a smooth unit-speed plane curve;
+denote by $\skur(s)$ the signed curvature of $\gamma$ at~$s$.
 
-\begin{wrapfigure}{r}{31 mm}
+The unit-speed curve $\sigma_s$ of constant signed curvature $\skur(s)$ that starts at $\gamma(s)$ in the direction $\gamma'(s)$ is called the \index{osculating!circline}\emph{osculating circline} of $\gamma$ at~$s$.
+
+The center and radius of the osculating circle at a given point are called the \index{center of curvature}\emph{center of curvature} and \index{radius of curvature}\emph{radius of curvature} of the curve at that point.
+\end{thm}
+
+{
+
+\begin{wrapfigure}{o}{31 mm}
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-21}
 \vskip0mm
 \end{wrapfigure}
 
-\begin{thm}{Definition}
-Let $\gamma$ be a smooth unit-speed plane curve;
-denote by $\skur(s)$ the signed curvature of $\gamma$ at~$s$.
-
-The unit-speed curve $\sigma$ of constant signed curvature $\skur(s)$ that starts at $\gamma(s)$ in the direction $\gamma'(s)$ is called the \index{osculating!circline}\emph{osculating circline} of $\gamma$ at~$s$.
-
-The center and radius of the osculating circle at a given point are called the \index{center of curvature}\emph{center of curvature} and \index{radius of curvature}\emph{radius of curvature} of the curve at that point.
-\end{thm}
-
 The osculating circle $\sigma_s$ can be also defined as the unique circline that has \index{order of contact}\emph{second-order contact} with $\gamma$ at $s$;
 that is, $\rho(\ell)\z=o(\ell^2)$, where $\rho(\ell)$ denotes the distance from $\gamma(s+\ell)$ to $\sigma_s$.
 
 The following exercise is recommended to the reader familiar with the notion of \index{inversion}\emph{inversion}.
+
+}
 
 \begin{thm}{Advanced exercise}\label{ex:inverse}
 Suppose $\gamma$ is a smooth plane curve that does not pass thru the origin.
@@ -452,12 +455,12 @@ Let $\tan(s),\norm(s)$ be the Frenet frame,
 $\omega(s)$, $r(s)$
 the center and radius of curvature of~$\gamma$.
 By \ref{prop:circline},  we have
-\[\omega(s)=\gamma(s)+r(s)\cdot \norm(s).\]
+\[\phantom{\omega(s)=\gamma(s)+r(s)\cdot}\omega(s)=\gamma(s)+r(s)\cdot \norm(s).\]
 
 {
 
-\begin{wrapfigure}{o}{35 mm}
-\vskip-0mm
+\begin{wrapfigure}[5]{o}{35 mm}
+\vskip-10mm
 \centering
 \begin{lpic}[t(-0 mm),b(-0 mm),r(0 mm),l(0 mm)]{mppics/pic-84}
 \end{lpic}

@@ -413,7 +413,7 @@ Conclude that if $|s_u(0,t)|=1$ for any $t$, then  $|s_u|=1$ at all points.
 
 \begin{subthm}{ex:flat-plane:linear}
 Assume that $|s_u|=1$ at all points.
-Show that for fixed $v$ the value $\tfrac1k$ depends linearly on $u$.
+Show that for fixed $v$ the value $\tfrac1{k(u,v)}$ depends linearly on $u$.
 \end{subthm}
 
 \end{thm}
@@ -421,9 +421,9 @@ Show that for fixed $v$ the value $\tfrac1k$ depends linearly on $u$.
 This exercise is the key part in the proof of the following theorem:
 \textit{Any open surface with vanishing Gauss curvature is \index{cylindrical surface}\emph{cylindrical}};
 that is, the surface is swept out by a family of parallel lines.
-Exercise \ref{ex:line-cylinder} below illustrates another part of this proof.
-The mentioned theorem was originally proved by Aleksey Pogorelov \cite[II §3]{pogorelov1956} in much more general settings; it was rediscovered couple of times since when \cite{hartman-nirenberg,massey1962}.
-The exercise is based on the proof given by Sergei Ivanov in his lectures \cite[2$^\text{nd}$ Sem., Lect. 13]{ivanov}.
+Exercise \ref{ex:line-cylinder} illustrates another part of this proof.
+The mentioned theorem was originally proved by Aleksey Pogorelov \cite[II §3 Thm 2]{pogorelov1956} in much more general settings; it was rediscovered couple of times after that \cite{hartman-nirenberg,massey1962}.
+The exercise is based on the proof given by Sergei Ivanov \cite[2$^\text{nd}$ Sem. Lect. 13]{ivanov}.
 
 \chapter{Curves in a surface}
 
@@ -598,7 +598,7 @@ The case $y=e^{-s}$ is shown; this is the so-called \index{pseudosphere}\emph{ps
 \end{thm}
 
 \begin{figure}[ht!]
-\vskip-3mm
+\vskip-0mm
 \hskip30mm
 \includegraphics{asy/pseudosphere}
 \vskip-3mm
@@ -616,16 +616,18 @@ Show that the \index{helicoid}\emph{helicoid} defined by the following parametri
 is a minimal surface.
 \end{thm}
 
+\begin{wrapfigure}{r}{51 mm}
+\vskip-6mm
+\centering
+\includegraphics{asy/sin-mini}
+\vskip0mm
+\end{wrapfigure}
+
 \begin{thm}{Exercise}\label{ex:rev(sin)}
 Let $\Sigma$ be the surface of revolution around the $x$-axis
 with generatrix $y=a\cdot \sin x$ for a constant $a>0$ and $x\in (0,\pi)$.
-Show that the Gauss curvature of $\Sigma$ cannot exceed 1.
+Show that the Gauss curvature of $\Sigma$ does not exceed 1.
 \end{thm}
-
-\begin{figure}[ht!]
-\centering
-\includegraphics{asy/sin}
-\end{figure}
 
 \begin{thm}{Exercise}\label{ex:rev(lin)}
 Let $f\:(a,b)\to\mathbb{R}$ be a smooth positive function and $\Sigma$ be a surface of revolution of the graph $y=f(x)$ around $x$-axis.
@@ -700,17 +702,19 @@ Note that the boundary of $V_3$ is connected.
 Assuming that the holes are large, its boundary can be made so that its principal curvatures are still at most $1$; the latter can be proved in the same way as for~$V_1$.
 \qeds
 
-\section{Remarks}
 
-Note that the surface of $V_3$ in Lagunov's fishbowl has genus 2;
+The bound $r_2=\tfrac2{\sqrt{3}}-1$ is optimal;
+this and more was proved by Vladimir Lagunov and Abram Fet \cite{lagunov-1960, lagunov-fet-1963, lagunov-fet-1965}.
+
+The surface of $V_3$ in Lagunov's fishbowl has genus 2;
 that is, it can be parametrized by a sphere with two handles.
 
-\begin{figure}[ht!]
+\begin{wrapfigure}{o}{55 mm}
 \centering
 \vskip-0mm
 \includegraphics{mppics/pic-920}
 \vskip0mm
-\end{figure}
+\end{wrapfigure}
 
 Indeed, the boundary of $V_1$ consists of three smooth spheres.
 
@@ -727,21 +731,17 @@ This way we get a sphere with two handles.
 Modify Lagunov's construction to make the boundary surface a sphere with 4 handles.
 \end{thm}
 
-Recall that Lagunov's fishbowl contains a ball of radius $r_2=\tfrac2{\sqrt{3}}-1$.
-It turns out that this radius is optimal.
-Moreover, 
-\textit{suppose a connected body $V\subset \mathbb{R}^3$ is bounded by a finite number of closed smooth surfaces with principal curvatures bounded by~1.
-Assume $V$ does not contain a ball of radius $r_2$.
-Then the boundary of $V$ has two diffeomorphic connected components.}
-Such $V$ could be the region squeezed between two close surfaces;
-for example, a region between two concentric spheres.
+%Recall that Lagunov's fishbowl contains a ball of radius $r_2=\tfrac2{\sqrt{3}}-1$.
+%It turns out that this radius is optimal.
+%Moreover, \textit{suppose a connected body $V\subset \mathbb{R}^3$ is bounded by a finite number of closed smooth surfaces with principal curvatures bounded by~1.
+%Assume $V$ does not contain a ball of radius $r_2$.
+%Then the boundary of $V$ has two diffeomorphic connected components.}
+%Such $V$ could be the region squeezed between two close surfaces; for example, a region between two concentric spheres.
 
-For bodies bounded by a sphere, there is a better bound $r_3=\sqrt{\tfrac32}-1$;
-it is the radius of the smallest sphere tangent to four unit spheres that are tangent to each other.
-Note that $r_3>r_2$.
-\textit{If a body $V\subset \mathbb{R}^3$ is bounded by a smooth sphere with principal curvatures bounded  by~1.
-Then $V$ contains a ball of radius~$r_3$.
-Moreover, this bound is sharp; that is, for every $\epsilon>0$, there are examples of such $V$ not containing a ball of radius $r_3+\epsilon$.}
-
-These results are due to Vladimir Lagunov and Abram Fet \cite{lagunov-1960, lagunov-fet-1963, lagunov-fet-1965}.
+%For bodies bounded by a sphere, there is a better bound $r_3=\sqrt{\tfrac32}-1$;
+%it is the radius of the smallest sphere tangent to four unit spheres that are tangent to each other.
+%Note that $r_3>r_2$.
+%\textit{If a body $V\subset \mathbb{R}^3$ is bounded by a smooth sphere with principal curvatures bounded  by~1.
+%Then $V$ contains a ball of radius~$r_3$.
+%Moreover, this bound is sharp; that is, for every $\epsilon>0$, there are examples of such $V$ not containing a ball of radius $r_3+\epsilon$.}
 

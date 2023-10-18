@@ -164,7 +164,7 @@ For example, \ref{def:directional-derivative} becomes a tautology.
 
 \section{Differential of map}\label{sec:differential}
 
-Any smooth map $s$ from a surface $\Sigma$ to $\mathbb{R}^3$ can be described by its coordinate functions 
+Any smooth map $s$ from a surface $\Sigma_0$ to $\mathbb{R}^3$ can be described by its coordinate functions 
 $ s(p)=(x(p),y(p),z(p))$. 
 To take a directional derivative of the map we should take the  directional derivative of each of its coordinate functions.
 \[D_{\vec{w}} s\df(D_{\vec{w}}x,D_{\vec{w}}y,D_{\vec{w}}z).\]
@@ -190,22 +190,24 @@ is called the \index{differential}\emph{differential} of $s$ at~$p_0$.
 
 The differential $d_{p_0} s$ can be described by a $2{\times}2$-matrix $M$ in orthonormal bases of $\T_{p_0}\Sigma_0$ and $\T_{p_1}\Sigma_1$.
 Set $\jac_{p_0} s=|\det M|$; this value  
-does not depend on the choice of orthonormal bases in $\T_{p_0}$ and $\T_{p_1}\Sigma_1$. \label{page:|L|}\index{10d@$d_p f$ (differential)}
+does not depend on the choice of orthonormal bases in $\T_{p_0}$ and $\T_{p_1}\Sigma_1$.%
+\label{page:|L|}\index{10d@$d_p f$ (differential)}%
+\footnote{The value $\jac_{p_0} s$ has the following geometric meaning:
+if $R_0$ is a region in $\T_{p_0}$ and $R_1=(d_{p_0} s)(R_0)$, then
+\[\area R_1=\jac_{p_0} s \cdot \area R_0.\]
+This identity will play a key role in the definition of surface area.}
 
-The value $\jac_{p_0} s$ has the following geometric meaning:
-if $S_0$ is a region in $\T_{p_0}$ and $S_1=(d_{p_0} s)(S_0)$, then
-$\area S_1=\jac_{p_0} s \cdot \area S_0$.
-This identity will play a key role in the definition of surface area.
-
-Let $r\:\Sigma_1\to\Sigma_2$ be a smooth map between smooth surfaces $\Sigma_1$ and $\Sigma_2$.
 Observe that 
-\[d_{p_0}( r\circ s)=d_{p_1} r \circ d_{p_0} s .\]
+\[d_{p_0}( r\circ s)=d_{p_1} r \circ d_{p_0} s,\]
+where $r\:\Sigma_1\to\Sigma_2$ is another smooth map between smooth surfaces $\Sigma_1$ and $\Sigma_2$.
 It follows that
 \[\jac_{p_0}( r\circ s)
 =
 \jac_{p_1} r\cdot\jac_{p_0} s .\eqlbl{eq:jac-composition}\]
 
-The value $\jac_{p_0} s$ can be found using the following formulas:
+The constructions above can be applied to a chart $s$;
+in this case, the surface $\Sigma_0$ is an open domain in $\mathbb{R}^2$.
+Then, the value $\jac_{p_0} s$ can be found using the following formulas:
 \begin{align*}
 \jac s
 &=|s_v\times s_u|=

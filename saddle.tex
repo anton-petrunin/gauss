@@ -270,10 +270,12 @@ that is, there is a positive function $\rho\:\mathbb{S}^2\z\to\mathbb{R}$ such t
 
 \begin{subthm}{ex:convex-proper-sphere:smooth}
 Show that $\rho\:\mathbb{S}^2\to\mathbb{R}$ is a smooth function.
-Conclude that $\xi\mapsto \rho(\xi)\cdot \xi$ is a smooth regular parametrization $\mathbb{S}^2\z\to \Sigma$.
+Conclude that $\xi\z\mapsto \rho(\xi)\cdot \xi$ is a smooth regular parametrization $\mathbb{S}^2\z\to \Sigma$.
 \end{subthm}
 
 \end{thm}
+
+}
 
 \begin{thm}{Theorem}\label{thm:convex-open}
 Suppose $\Sigma$ is an open smooth strictly convex surface.
@@ -283,10 +285,13 @@ Moreover, $f(x_n,y_n)\to\infty$ as $(x_n,y_n)\to(x_\infty,y_\infty)\z\in \partia
 
 \end{thm}
 
+{
+
 \begin{wrapfigure}{r}{33 mm}
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-1181}
+\vskip2mm
 \end{wrapfigure}
 
 
@@ -316,10 +321,7 @@ Conclude that $\Sigma$ is a graph $z=f(x,y)$ of a convex function $f$ defined on
 Prove the last statement in \ref{thm:convex-open}.
 \end{subthm}
 
-
 \end{thm}
-
-
 
 }
 
@@ -330,6 +332,7 @@ that is, there is an embedding $\mathbb{R}^2\to\mathbb{R}^3$ with image~$\Sigma$
 Try to show that $\Sigma$ is a smooth plane;
 that is, the embedding $f$ can be made smooth and regular.
 \end{thm}
+
 
 \begin{thm}{Exercise}\label{ex:circular-cone}
 Show that any open smooth surface $\Sigma$ with positive Gauss curvature
@@ -490,7 +493,7 @@ cannot lie inside an infinite circular cone.
 \end{thm}
 
 A topological disc $\Delta$ in a surface $\Sigma$ is called a \index{hat}\emph{hat} of $\Sigma$
-if its boundary line $\partial\Delta$ lies in a plane $\Pi$ and $\Delta \backslash \partial \Delta$ lies strictly on one side of $\Pi$.
+if its boundary line $\partial\Delta$ lies in a plane $\Pi$ and $\Delta \setminus \partial \Delta$ lies strictly on one side of $\Pi$.
 
 \begin{thm}{Proposition}\label{prop:hat}
 A smooth surface $\Sigma$ is saddle if and only if it has no hats.
@@ -579,7 +582,7 @@ it can be used in combination with Bernstein's theorem.
 
 \begin{thm}{Advanced exercise}\label{ex:saddle-graph}
 Let $\Sigma$ be an open smooth strictly saddle surface in $\mathbb{R}^3$.
-Assume there is a compact subset $K\subset \Sigma$ such that the complement $\Sigma\backslash K$ is the graph $z=f(x,y)$ of a smooth function defined in an open domain of the $(x,y)$-plane.
+Assume there is a compact subset $K\subset \Sigma$ such that the complement $\Sigma\setminus K$ is the graph $z=f(x,y)$ of a smooth function defined in an open domain of the $(x,y)$-plane.
 Show that the surface $\Sigma$ is a graph.
 \end{thm}
 
@@ -602,7 +605,7 @@ Consider the projection $\hat \Sigma$ of $\Sigma$ to the $(x,z)$-plane.
 It lies in the upper half-plane and below the line $z=r$.
 
 Consider the open upper half-plane $H=\set{(x,z)\in \mathbb{R}^2}{z> 0}$. 
-Let $\Theta$ be the connected component of the complement $H\backslash \hat \Sigma$ that contains all the points above the line $z=r$.
+Let $\Theta$ be the connected component of the complement $H\setminus \hat \Sigma$ that contains all the points above the line $z=r$.
 
 Note that $\Theta$ is convex.
 If not, then there is a line segment $[p,q]$ for some $p,q\in \Theta$ that cuts from $\hat\Sigma$ a compact piece.

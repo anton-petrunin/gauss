@@ -18,13 +18,13 @@ Take $\spc{X}$ to be the half-line $[0,\infty)$ with the standard metric; $p=0$ 
 Show that the conditions in \ref{def:continuous} hold for $\delta=\epsilon$.
 
 \parbf{\ref{ex:close-open}.}
-Suppose the complement $\Omega=\spc{X}\backslash Q$ is open.
+Suppose the complement $\Omega=\spc{X}\setminus Q$ is open.
 Then for each point $p\in \Omega$ there is $\epsilon>0$ such that $\dist{p}{q}{\spc{X}}>\epsilon$ for any $q\in Q$.
 It follows that $p$ is \textit{not} a limit point of any sequence $q_n\in Q$.
 That is, any limit of a sequence in $Q$ lies in $Q$;
 by the definition, $Q$ is closed.
 
-Now suppose $\Omega=\spc{X}\backslash Q$ is not open.
+Now suppose $\Omega=\spc{X}\setminus Q$ is not open.
 Show that there is a point $p\in \Omega$ and a sequence $q_n\in Q$ such that $\dist{p}{q_n}{\spc{X}}\z<\tfrac 1n$ for any~$n$.
 Conclude that $q_n\to p$ as $n\to \infty$;
 therefore $Q$ is not closed.
@@ -109,11 +109,11 @@ Note that the first equation describes the unit sphere centered at the origin, a
 
 \begin{Figure}
 \centering
-\vskip-3mm
+\vskip-0mm
 \begin{lpic}[t(2mm),b(0mm),r(0mm),l(0mm)]{asy/viviani(1)}
 \lbl[r]{-.5,18;$x$}
 \lbl[l]{41,22;$y$}
-\lbl[b]{18,54;$z$}
+\lbl[r]{18,54;$z$}
 \end{lpic}
 \end{Figure}
 
@@ -472,15 +472,11 @@ for all~$s$.
 \parit{\ref{SHORT.ex:DNA:int>=length-tc}.}
 Since $\gamma$ is unit-speed, we have $\ell=\length\gamma$ and $\langle\gamma',\gamma'\rangle\equiv1$.
 Therefore,
-\begin{align*}
-\int_0^\ell\langle\gamma(s),\gamma'(s)\rangle'\cdot ds
-&=
-\int_0^\ell\langle\gamma'(s),\gamma'(s)\rangle\cdot ds+
-\\
-&+\int_0^\ell\langle\gamma(s),\gamma''(s)\rangle\cdot ds\ge
-\\
-&\ge \length\gamma-\tc\gamma.
-\end{align*}
+\[\int_0^\ell\langle\gamma(s),\gamma'(s)\rangle'\cdot ds
+=\]
+\[=\int_0^\ell\langle\gamma'(s),\gamma'(s)\rangle\cdot ds+\int_0^\ell\langle\gamma(s),\gamma''(s)\rangle\cdot ds\ge\]
+\[\ge \length\gamma-\tc\gamma.\]
+
 
 \parit{\ref{SHORT.ex:DNA:end}.}
 By the fundamental theorem of calculus, we have
@@ -521,7 +517,7 @@ Choose a value $s_0\in[a,b]$ that splits the total curvature of $\gamma$ into tw
 Observe that $\measuredangle(\gamma'(s_0),\gamma'(s))\le \theta$ for any~$s$.
 Use this inequality in the same way as in the proof of the bow lemma.
 
-Part \ref{SHORT.ex:length-dist:sef-intersection:>pi} is straightforward.
+Part \ref{SHORT.ex:length-dist:self-intersection:>pi} is straightforward.
 For part \ref{SHORT.ex:length-dist:=} consider the concatenation of two equal line segments with the external angle $2\cdot\theta$ and smooth its joint. 
 
 
@@ -569,6 +565,8 @@ Check that the proof of the bow lemma works in this more general case.
 
 Apply the bow lemma for $\sigma*\gamma$ and $\sigma*\tilde\gamma$, to get $|\gamma(t_0)|\ge |\tilde\gamma(t_0)|$, and arrive at a contradiction.
 
+\parit{Source:} This statement was used by the first author \cite{petrunin2023}.
+
 %\end{multicols}
 %\par\noindent\rule{\textwidth}{0.4pt}
 %\begin{multicols}{2}
@@ -597,7 +595,7 @@ Use the fact that an exterior angle of a triangle equals the sum of the two remo
 For the second part apply induction on the number of vertices.
 
 \begin{wrapfigure}{r}{23 mm}
-\vskip-0mm
+\vskip-4mm
 \centering
 \includegraphics{mppics/pic-290}
 \vskip-0mm
@@ -1153,7 +1151,7 @@ such a map is automatically a diffeomorphism.
 
 
 \parit{\ref{SHORT.ex:plane-n}.}
-Suppose $\Sigma=\mathbb{R}^2\backslash\{p_1,\dots,p_n\}$ and $\Theta=\mathbb{R}^2\backslash\{q_1,\dots,q_n\}$.
+Suppose $\Sigma=\mathbb{R}^2\setminus\{p_1,\dots,p_n\}$ and $\Theta=\mathbb{R}^2\setminus\{q_1,\dots,q_n\}$.
 Choose smooth paths $\gamma_i\:[0,1]\z\to \mathbb{R}^2$ such that $\gamma_i(0)=p_i$,
 $\gamma_i(1)=q_i$, and $\gamma_i(t)\ne \gamma_j(t)$ if $i\ne j$.
 
@@ -1166,7 +1164,7 @@ It remains to apply the Moser trick to the constructed vector field.
 \parit{\ref{SHORT.ex:star-shaped-disc:smooth}--\ref{SHORT.ex:star-shaped-disc:star-shaped}.}
 Without loss of generality, we can assume that the origin belongs to both $\Sigma$ and~$\Theta$.
 
-In each case show that there is a vector field $\vec v$ defined on $\mathbb{R}^2\backslash\{0\}$ that flows $\Sigma$ to $\Theta$.
+In each case show that there is a vector field $\vec v$ defined on $\mathbb{R}^2\setminus\{0\}$ that flows $\Sigma$ to $\Theta$.
 In fact, one can choose radial fields of that type,
 but be careful with the cases \ref{SHORT.ex:star-shaped-disc:nonsmooth} and \ref{SHORT.ex:star-shaped-disc:star-shaped} --- they are not as easy as one might think.
 
@@ -1202,7 +1200,14 @@ Conclude that $s_u\perp \vec k$ and $s_v\perp \vec k$ at
 $0$, hence the result.
 
 \parbf{\ref{ex:lin-ind-chart}.}
-Apply \ref{thm:ODE} and \ref{thm:inverse} in a local chart at $p$ and then apply \ref{thm:inverse} again.
+By \ref{thm:ODE}, there is a curve $\alpha$ in $\Sigma$ such that $\alpha(0)=p$ and $\alpha'(x)=\vec x_{\alpha(x)}$.
+The same way construct a curve $\beta_x$ in $\Sigma$ such that $\beta_x(0)=\alpha(x)$ and $\beta_x'(y)=\vec y_{\beta_x(y)}$.
+Apply \ref{thm:inverse} to show that $(x,y)\mapsto \beta_x(y)$ describes a chart of a small neighborhood $W$ of $p$.
+
+Show that $u\:\beta_x(y)= x$ meets the required conditions in $W$.
+The same way one can construct $v$.
+
+It remains to apply \ref{thm:inverse} again.
 
 \parbf{\ref{ex:const-normal}.}
 Show and use that for any smooth curve $\gamma$ in $\Sigma$ the function $t\mapsto \langle\nu,\gamma(t)\rangle$ is constant.
@@ -1383,11 +1388,13 @@ Apply the same reasoning as in \ref{ex:between-parallels-1}--\ref{ex:lens}, but 
 Show that any tangent plane $\T_p$ supports $\Sigma$ at~$p$.
 Apply \ref{prop:surf-support}.
 
+{
+
 \begin{wrapfigure}{r}{16 mm}
-\vskip-3mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-1050}
-\vskip-2mm
+\vskip-0mm
 \end{wrapfigure}
 
 \parbf{\ref{ex:convex-lagunov}.}
@@ -1397,6 +1404,8 @@ Consider the projection $S$ of $R$ to a plane thru $p$, $q$ and the center of th
 Show that $S$ is bounded by a smooth closed convex curve with curvature at most $1$.
 Argue as in \ref{ex:between-parallels-1} to
 show that $r\ge 1$.
+
+}
 
 \parbf{\ref{ex:section-of-convex}.}
 Suppose a point $p$ lies in the intersection $\Pi\cap\Sigma$.
@@ -1631,7 +1640,7 @@ Use \ref{ex:crosss} to show that $\Gamma_p$ is a union of smooth curves that can
 Moreover, two of these curves pass thru $p$, and $\Gamma_p$ does not bound a compact region on~$\Sigma$.
 
 Show that $\Gamma_p$ must have at least 4 ways to escape to infinity.
-On the other hand, since $\Sigma$ is a graph outside the compact set $K$, we have that $\Gamma_p\backslash K$ is a graph of a real-to-real function that has only two ways to escape to infinity --- a contradiction.
+On the other hand, since $\Sigma$ is a graph outside the compact set $K$, we have that $\Gamma_p\setminus K$ is a graph of a real-to-real function that has only two ways to escape to infinity --- a contradiction.
 
 %\end{multicols}
 %\par\noindent\rule{\textwidth}{0.4pt}
@@ -2069,7 +2078,7 @@ The latter contradicts that $b_r(0,\theta_1)=1$.
 We need to show that $\exp_p$ is regular in~$B$.
 Suppose vector $\vec v\in B$ has polar coordinates $(r,\theta)$ for some $r>0$.
 Show that $\exp_p$ is regular at $\vec v$ if $b(r,\theta)\ne 0$.
-Conclude that $\exp_p$ is regular in $B\backslash \{0\}$.
+Conclude that $\exp_p$ is regular in $B\setminus \{0\}$.
 
 By \ref{obs:d(exp)=1}, $\exp_p$ is regular at $0$.
 Whence $\exp_p|_B$ is a regular injective smooth map.

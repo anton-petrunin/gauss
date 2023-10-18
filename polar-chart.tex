@@ -242,17 +242,17 @@ Since the frame $\Norm$, $\vec u$, and $\vec v$ is orthonormal, this vector iden
 \]
 Since $u\mapsto s(u,v)$ is a geodesic we have that $\vec u_u=s_{uu}(u,v)\perp\T_{s(u,v)}$.
 Hence, the first two identities follow.
-
-The remaining identity 
-$\langle\vec u_u,\Norm\rangle=\ell$ follows from \ref{thm:shape-chart} and \ref{eq:Shape(u,v)}.
-Indeed,
+Now, 
 \begin{align*}
 \langle\vec u_u,\Norm\rangle
 &=\langle s_{uu},\Norm\rangle=
+\tag{by \ref{thm:shape-chart}}
 \\
 &=    \langle \Shape s_u,s_u\rangle=
+\tag{since $\vec u=s_u$}
 \\
 &=\langle \Shape \vec u,\vec u\rangle=
+\tag{by \ref{eq:Shape(u,v)}}
 \\
 &=\ell.
 \end{align*}
@@ -274,36 +274,31 @@ Since $\langle\vec u,\vec u\rangle=1$, we get
 $0=\tfrac{\partial}{\partial v}\langle\vec u,\vec u\rangle=2\cdot\langle\vec u_v,\vec u\rangle$; 
 hence the first identity in \ref{eq:uu-vv:2} follows.
 
-Further, since
-\begin{align*}
-\langle \vec v,\vec v\rangle=1,
-\quad
-0=\tfrac{\partial}{\partial u}\langle \vec v,\vec v\rangle=2\cdot\langle \vec v_u,\vec v\rangle,
-\quad
-\text{and}
-\quad
-s_v=b\cdot \vec v,
-\end{align*}
-we get
+Further, 
 \begin{align*}
 \langle\vec u_v,\vec v\rangle&=\langle s_{vu},\vec v\rangle=
+\tag{since $s_v=b\cdot \vec v$}
 \\
 &=\langle \tfrac{\partial}{\partial u} (b\cdot\vec v),\vec v\rangle =
 \\
 &=b_u\cdot \langle \vec v,\vec v\rangle+b\cdot \langle \vec v_u,\vec v\rangle=
+\tag{$0=\tfrac{\partial}{\partial u}\langle \vec v,\vec v\rangle=2\cdot\langle \vec v_u,\vec v\rangle$}
 \\
 &=b_u; 
 \end{align*}
 hence the second identity in \ref{eq:uu-vv:2} follows.
 
-Finally, applying \ref{thm:shape-chart}, \ref{eq:Shape(u,v)}, and $s_v=b\cdot \vec v$, we get
+Finally, 
 \begin{align*}
 \langle\vec u_v,\Norm\rangle
 &=\langle s_{uv},\Norm\rangle=
+\tag{by \ref{thm:shape-chart}}
 \\
 &=\langle \Shape s_u,s_v\rangle=
+\tag{since $\vec u=s_u$ and $s_v=b\cdot \vec v$}
 \\
 &=\langle \Shape \vec u,b\cdot \vec v\rangle=
+\tag{by \ref{eq:Shape(u,v)}}
 \\
 &=b\cdot m.
 \end{align*}
@@ -539,15 +534,19 @@ Let us write $\gamma$ in the $(u,v)$-coordinates: $\gamma(t)=s(u(t),v(t))$.
 Then
 \begin{align*}
 \rot_\gamma \vec u&=\int_0^1\langle\vec u',\vec v\rangle\cdot dt=
-\intertext{by the chain rule}
-&=\int_0^1[\langle\vec u_u,\vec v\rangle\cdot u'+\langle\vec u_v,\vec v\rangle\cdot v']\cdot dt=
-\intertext{by \ref{prop:jaccobi},}
+\tag{by the chain rule}
+\\
+&=\int_0^1[\langle\vec u_u,\vec v\rangle\cdot u'+\langle\vec u_v,\vec v\rangle\cdot v']\cdot dt=\tag{by \ref{prop:jaccobi}}
+\\
 &=\int_0^1b_u\cdot v'\cdot dt=\int_{s^{-1}\circ\gamma}b_u\cdot dv=
-\intertext{by the Green formula}
+\tag{by the Green formula}
+\\
 &=\iint_{s^{-1}(\Delta)}b_{uu}\cdot du\cdot dv=
-\intertext{Since $s_u\perp s_v$, we get $\jac s=|s_u|\cdot|s_v|=b$; therefore}
+\tag{$s_u\perp s_v \Longrightarrow \jac s=|s_u|\cdot|s_v|=b$}
+\\
 &=\iint_\Delta\frac{b_{uu}}{b}=
-\intertext{by \ref{prop:jaccobi}, $K=-\tfrac{b_{uu}}{b}$, so we get}
+\tag{by \ref{prop:jaccobi}}
+\\
 &=-\iint_{\Delta}K.
 \end{align*}
 \qedsf
@@ -676,7 +675,7 @@ in particular, it is a Lipschitz curve.
 Note that
 \begin{align*}
 \length\tilde\gamma&=\int_a^b\sqrt{r'(t)^2+r(t)^2\cdot\theta'(t)^2}.
-\intertext{Applying \ref{lem:palar-perp}, we get}
+\shortintertext{Applying \ref{lem:palar-perp}, we get}
 \length\gamma&=\int_a^b\sqrt{r'(t)^2+b(r(t),\theta(t))^2\cdot\theta'(t)^2}.
 \end{align*}
 Both statements \ref{SHORT.prop:rauch:K>=0} and \ref{SHORT.prop:rauch:K=<0} follow from \ref{eq:b-K}.

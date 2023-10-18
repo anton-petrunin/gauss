@@ -607,11 +607,13 @@ p1=circle(z.z,(point 1.3 of p0)-z.z);
 
 draw p1;
 
-dOt (point 1.3 of p0);
+z.s=point 1.3 of p0;
+
+dOt z.s;
 
 label.lrt(btex $\gamma$ etex, point 3 of p0);
-label.urt(btex $\sigma$ etex, point 1 of p1);
-
+label.urt(btex $\sigma_s$ etex, point 1 of p1);
+label.rt(btex $\gamma(s)$ etex, z.s);
 endfig;
 
 beginfig(22) 
@@ -3635,7 +3637,7 @@ endfig;
 
 beginfig(920) 
 save u;
-u:=.6cm;
+u:=.5cm;
 path p[];
 
 z.a=(1,0)*u rotated 45;
@@ -3721,9 +3723,9 @@ beginfig(1181);
 save u;
 u:=1cm;
 
-z.a0=(-1,6)*u;
+z.a0=(-1,5)*u;
 z.a1=(0,0)*u;
-z.a2=(1,6)*u;
+z.a2=(1,5)*u;
 
 save p; path p[];
 p0=z.a0{down}...z.a1{1,-.1}...z.a2{up};

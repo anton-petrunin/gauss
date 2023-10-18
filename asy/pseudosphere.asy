@@ -4,7 +4,7 @@ import graph3;
 import contour;
 defaultpen(fontsize(10pt));
 
-size(0,4.3cm);
+size(0,3.3cm);
 
 currentprojection=perspective(-2,-1.5,.2);
 
