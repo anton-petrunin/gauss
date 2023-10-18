@@ -282,9 +282,10 @@ Further,
 &=\langle \tfrac{\partial}{\partial u} (b\cdot\vec v),\vec v\rangle =
 \\
 &=b_u\cdot \langle \vec v,\vec v\rangle+b\cdot \langle \vec v_u,\vec v\rangle=
-\tag{$0=\tfrac{\partial}{\partial u}\langle \vec v,\vec v\rangle=2\cdot\langle \vec v_u,\vec v\rangle$}
+\tag*{(since $\langle \vec v,\vec v\rangle=1$ and $\qquad$} 
 \\
 &=b_u; 
+\tag*{$0=\tfrac{\partial}{\partial u}\langle \vec v,\vec v\rangle=2\cdot\langle \vec v_u,\vec v\rangle$)}
 \end{align*}
 hence the second identity in \ref{eq:uu-vv:2} follows.
 
@@ -382,8 +383,7 @@ Let $\Norm=\Norm(u,v)$ be the unit normal vector at $s(u,v)$.
 
 \begin{subthm}{lem:K(orthogonal):uu-vv}
 Show that 
-\[
-\begin{aligned}
+\begin{align*}
 \vec u_u
 &=
 -\tfrac1{b}\cdot a_v
@@ -412,8 +412,7 @@ b\cdot m\cdot \Norm
 -\tfrac1{a}\cdot b_u\cdot\vec u
 +
 b\cdot n\cdot \Norm,
-\end{aligned}
-\]
+\end{align*}
 where $\ell=\ell(u,v)$, $m=m(u,v)$, and $n=n(u,v)$ be the components of the matrix describing the shape operator in the frame $\vec u, \vec v$.
 \end{subthm}
 
