@@ -389,11 +389,12 @@ where $H$ and $K$ denote mean and Gauss curvature of~$\Sigma$.
 
 \begin{thm}{Advanced exercise}\label{ex:flat-plane}
 Let $\Sigma$ be a smooth oriented surface parametrized by a coordinate rectangle as $(u,v)\mapsto s(u,v)$.
-Denote by $\Norm(u,v)$ the normal unit vector at $s(u,v)$.
-Set $\vec u=\tfrac{s_u}{|s_u|}$ and $\vec v=\tfrac{s_v}{|s_v|}$.
+Set $\vec u=\tfrac{s_u}{|s_u|}$, $\vec v=\tfrac{s_v}{|s_v|}$;
+denote by $\Norm(u,v)$ the normal unit vector at $s(u,v)$.
+
 Suppose $\vec u$ and $\vec v$ are principal directions at each point;
-let $0$ and $k=k(u,v)$ be their principal curvatures at $s(u,v)$.
-Assume $k$ does not vanish.
+let $0$ and $k\z=k(u,v)$ be their principal curvatures.
+Assume $k$ does not vanish and $|s_u|=1$ on some $u$-coordinate line of $\Sigma$.
 
 \begin{subthm}{ex:flat-plane:orthonormal}
 Show that $\Norm(u,v)$, $\vec u(u,v)$, and $\vec v(u,v)$ form an orthonormal frame for any $(u,v)$.
@@ -401,19 +402,16 @@ Show that $\Norm(u,v)$, $\vec u(u,v)$, and $\vec v(u,v)$ form an orthonormal fra
 
 \begin{subthm}{ex:flat-plane:depend}
 Show that $\Norm(u,v)$, $\vec u(u,v)$, and $\vec v(u,v)$ depend only on $v$.
-Conclude that $v$-coordinate lines are line segments.
+Conclude that $u$-coordinate lines are line segments.
 \end{subthm}
 
 \begin{subthm}{ex:flat-plane:depend-u}
 Show that $s_{uu}$ is proportional to $s_u$ at all points.
-Use it to show that $|s_u|$ depend only on $u$.
-Conclude that if $|s_u(0,t)|=1$ for any $t$, then  $|s_u|=1$ at all points.
+Use it to show that $|s_u|=1$ at all points.
 \end{subthm}
 
-
 \begin{subthm}{ex:flat-plane:linear}
-Assume that $|s_u|=1$ at all points.
-Show that for fixed $v$ the value $\tfrac1{k(u,v)}$ depends linearly on $u$.
+Show that for any fixed $v_0$ the value $\tfrac1{k(u,v_0)}$ depends linearly on $u$.
 \end{subthm}
 
 \end{thm}
@@ -422,7 +420,7 @@ This exercise is the key part in the proof of the following theorem:
 \textit{Any open surface with vanishing Gauss curvature is \index{cylindrical surface}\emph{cylindrical}};
 that is, the surface is swept out by a family of parallel lines.
 Exercise \ref{ex:line-cylinder} illustrates another part of this proof.
-The mentioned theorem was originally proved by Aleksey Pogorelov \cite[II §3 Thm 2]{pogorelov1956} in much more general settings; it was rediscovered couple of times after that \cite{hartman-nirenberg,massey1962}.
+The mentioned theorem was originally proved by Aleksey Pogorelov \cite[II §3 Thm 2]{pogorelov1956} in more general settings; it was rediscovered couple of times after that \cite{hartman-nirenberg,massey1962}.
 The exercise is based on the proof given by Sergei Ivanov \cite[2$^\text{nd}$ Sem. Lect. 13]{ivanov}.
 
 \chapter{Curves in a surface}
