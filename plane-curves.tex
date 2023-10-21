@@ -157,18 +157,19 @@ Moreover, they have the same initial values at $s_0$.
 By the uniqueness of solutions of ordinary differential equations (\ref{thm:ODE}), we have $\gamma_1=\gamma_2$.
 \qeds
 
-Note that from the proof of the theorem we obtain the following corollary:
+Suppose $\gamma\:\mathbb{I}\to\mathbb{R}^2$ is a unit-speed curve.
+A continuous function $\theta\:\mathbb{I}\to\mathbb{R}$ is called \index{continuous argument}\emph{continuous argument} of $\gamma$ if 
+\[\gamma'(s)=(\cos [\theta(s)],\sin[\theta(s)])\]
+for any $s$.
+Note that the proof of the theorem implies the following.
 
 
 
 \begin{thm}{Corollary}\label{cor:2D-angle}
-Let $\gamma\:\mathbb{I}\to\mathbb{R}^2$ be a smooth unit-speed curve and $s_0\z\in \mathbb{I}$.
-Denote by $\skur$ the signed curvature of~$\gamma$.
-Assume an oriented $(x,y)$-coordinate system is chosen in such a way that $\gamma(s_0)$ is the origin and $\gamma'(s_0)$ points in the direction of the $x$-axis.
-Then 
-\[\gamma'(s)=(\cos[\theta(s)],\sin[\theta(s)]) , \]
-for all $s$, where 
-\[\theta(s)\df\int_{s_0}^s\skur(t)\cdot dt.\]
+For any smooth curve unit-speed curve $\gamma\:\mathbb{I}\to\mathbb{R}^2$ there is a continuous argument $\theta\:\mathbb{I}\to\mathbb{R}$.
+Moreover 
+\[\theta'(s)=\skur(s),\]
+where $\skur$ denotes the signed curvature of~$\gamma$.
 \end{thm}
 
 
@@ -183,7 +184,7 @@ where $\skur$ denotes the signed curvature of~$\gamma$.
 
 Note that if $\mathbb{I}=[a,b]$, then 
 \[\tgc\gamma=\theta(b)-\theta(a),\eqlbl{eq:tsc-theta}\]
-where $\theta$ is as in \ref{cor:2D-angle}.
+where $\theta$ is a continuous argument of $\gamma$ (see \ref{cor:2D-angle}).
 
 If $\gamma$ is a piecewise smooth plane curve, then we define its total signed curvature as the sum of the total signed curvatures of its arcs plus the sum of the {}\emph{signed} external angles at its joints;
 they are positive where $\gamma$ turns left, negative where $\gamma$ turns right, and 0 where $\gamma$ goes straight.
@@ -373,14 +374,13 @@ Further, we will use the term \index{circline}\emph{circline} for a \textit{circ
 these are the only plane curves with constant signed curvature.
 
 \parit{Proof.}
-The proof is done by a calculation based on \ref{thm:fund-curves-2D} and \ref{cor:2D-angle}.
-
 Suppose $s_0=0$.
 Choose a coordinate system such that $p$ is its origin and $\tan$ points in the direction of the $x$-axis.
 Therefore, $\norm$ points in the direction of the $y$-axis.
 Then
-\begin{align*}\theta(s)&=\int_{0}^s\skur\cdot dt=\skur\cdot s.
+\begin{align*}\theta(s)&=\int_{0}^s\skur\cdot dt=\skur\cdot s
 \end{align*}
+is a continuous argument of $\gamma$, see \ref{cor:2D-angle}.
 Therefore,
 \[\sigma'(s)=(\cos[\skur\cdot s],\sin[\skur\cdot s]).\]
 It remains to integrate the last identity.
