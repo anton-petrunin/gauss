@@ -1,7 +1,7 @@
 \stepcounter{chapter}
 \setcounter{eqtn}{0}
 
-\raggedcolumns\setlength{\multicolsep}{-10mm}
+\raggedcolumns\setlength{\multicolsep}{-0mm}
 \begin{multicols}{2}
 
 \parbf{\ref{ex:ell-infty}.} Check all the conditions in the definition of metric, page \pageref{page:def:metric}.
@@ -591,19 +591,12 @@ Arc II goes very close and almost parallel to the chord $pq$, and its total curv
 
 
 \parbf{\ref{ex:monotonic-tc}.}
-Use the fact that an exterior angle of a triangle equals the sum of the two remote interior angles.
+Use that an exterior angle of a triangle equals the sum of the two remote interior angles.
 For the second part apply induction on the number of vertices.
 
-\begin{wrapfigure}{r}{23 mm}
-\vskip-4mm
-\centering
-\includegraphics{mppics/pic-290}
-\vskip-0mm
-\end{wrapfigure}
 
-\parbf{\ref{ex:sef-intersection}}; \ref{SHORT.ex:sef-intersection:<2pi} See the diagram. 
-
-\parit{\ref{SHORT.ex:sef-intersection:>pi}.} Assume $x$ is a point of self-intersection.
+\parbf{\ref{ex:sef-intersection}}; 
+\ref{SHORT.ex:sef-intersection:>pi}. Assume $x$ is a point of self-intersection.
 Show that we may choose two points $y$ and $z$ on $\gamma$ so that the triangle $xyz$ is nondegenerate.
 In particular, 
 $\measuredangle\hinge yxz
@@ -611,6 +604,16 @@ $\measuredangle\hinge yxz
 \measuredangle\hinge zyx
 <\pi$, or, equivalently, for the \textit{nonclosed} polygonal line $xyzx$ we have $\tc{xyzx}\z>\pi$.
 It remains to apply \ref{prop:inscribed-total-curvature}.
+
+\begin{wrapfigure}{r}{23 mm}
+\vskip-3mm
+\centering
+\includegraphics{mppics/pic-290}
+\vskip-0mm
+\end{wrapfigure}
+
+\parit{\ref{SHORT.ex:sef-intersection:<2pi}.}
+See the diagram. 
 
 \parbf{\ref{ex:quadrisecant}.}
 Consider the closed polygonal line $acbd$.
@@ -701,6 +704,8 @@ $|\gamma_1'|=|\tan-\tor\cdot \norm|\ge 1$ and use it.
 Observe that $\tfrac{\gamma'\times\gamma''}{|\gamma'\times\gamma''|}$ is a unit vector perpendicular to the plane spanned by $\gamma'$ and $\gamma''$, so, up to sign, it has to be equal to $\bi$.
 It remains to check that the sign is right.
 
+\parbf{\ref{ex:moment-curve}.} Apply \ref{ex:curvature-formulas:b} and \ref{ex:frenet}.
+
 \parbf{\ref{ex:torsion-indicatrix}.} Assume that the tangent indicatrix has no self-intersection.
 Show that it lies in an open hemisphere and argue as in Fenchel's theorem.
 
@@ -721,7 +726,7 @@ Suppose $\alpha$ is an evolvent of $\gamma$, and $\vec w$ is a fixed vector.
 Show that $\langle \vec w,\alpha\rangle$ is constant if $\gamma$ makes a constant angle with $\vec w$.
 
 \parbf{\ref{ex:spherical-frenet}}.
-Part \ref{SHORT.ex:spherical-frenet:tau} follows from the fact that $(  \tan,\norm,\bi)$ is an orthonormal basis.
+Part \ref{SHORT.ex:spherical-frenet:tau} follows since $(\tan,\norm,\bi)$ is an orthonormal basis.
 For \ref{SHORT.ex:spherical-frenet:nu}, take the first and second derivatives of the identity $\langle\gamma,\gamma\rangle=1$ and simplify them using the Frenet formulas.
 Part \ref{SHORT.ex:spherical-frenet:beta} follows from \ref{SHORT.ex:spherical-frenet:nu} and the Frenet formulas.
 By \ref{SHORT.ex:spherical-frenet:beta}, $\int\tfrac\tor\kur=0$, hence \ref{SHORT.ex:spherical-frenet:beta+} follows.
@@ -853,7 +858,7 @@ L(0)+\ell\cdot\tgc\gamma.
 Consider the unit circle $\gamma(t)=(\cos t,\sin t)$ for $t\in[0,2\cdot\pi]$ and $\gamma_\ell$ for $\ell=2$.
 
 \parbf{\ref{ex:inverse}.}
-Use the definition of osculating circle via order of contact, plus use the fact that inversions send circles to circlines. 
+Use the definition of osculating circle via order of contact, and that inversions send circles to circlines. 
 
 \parbf{\ref{ex:evolute}.}
 We assume that $\gamma$ is unit-speed.
@@ -861,7 +866,7 @@ Show that $\omega'=\tfrac{\skur'}{\skur^2}\cdot \norm$.
 Conclude that $\omega$ has Frenet frame either $(\norm,-\tan)$ or $(-\norm,\tan)$, and its curvature is $|\tfrac{\kur^3}{\kur'}|$.
 
 \begin{wrapfigure}{r}{19 mm}
-\vskip-5mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-296}
 \vskip-0mm
@@ -936,7 +941,7 @@ It exists by \ref{thm:fund-curves-2D}.
 Choose $s\approx 0$.
 Consider the curve $\alpha_s\:t\z\mapsto \gamma_t(s)$.
 Show that $\alpha_s$ moves almost vertically up.
-Use the fact that $\gamma_t$ moves almost horizontally to show that in a small neighborhood of $p$, the curve $\gamma_1$ lies above $\gamma_0$,
+Use that $\gamma_t$ moves almost horizontally to show that in a small neighborhood of $p$, the curve $\gamma_1$ lies above $\gamma_0$,
 whence the statement follows.
 
 \parbf{\ref{ex:in-circle}.}
