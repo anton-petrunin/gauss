@@ -97,7 +97,9 @@ Then any connected component $\Sigma$ of the level set  $f(x,y,z)=0$ is a smooth
 \parit{Proof.}
 Fix $p\in\Sigma$.
 Since $\nabla_p f\ne 0$ we have 
-\[f_x(p)\ne 0,\quad f_y(p)\ne 0,\quad \text{or}\quad f_z(p)\ne 0.\]
+$f_x(p)\ne 0$,
+$f_y(p)\ne 0$,
+$f_z(p)\ne 0$.
 We may assume that $f_z(p)\ne 0$;
 otherwise, permute the coordinates $x,y,z$.
 
@@ -108,9 +110,7 @@ It remains to apply the definition of smooth surface (Section~\ref{sec:def-smoot
 \begin{thm}{Exercise}\label{ex:hyperboloids}
 For which constants $\ell$ 
 the level set
-\begin{align*}
-x^2+y^2-z^2&=\ell
-\end{align*}
+$x^2+y^2-z^2=\ell$
 is a smooth surface?
 \end{thm}
 
@@ -126,9 +126,8 @@ equivalently $s_u\times s_v\ne 0$, where $\times$ denotes the vector product.
 If $s\:U\to \mathbb{R}^3$ is a smooth regular embedding of an open connected set $U\subset \mathbb{R}^2$, then its image $\Sigma=s(U)$ is a smooth surface.
 \end{thm}
 
-\parit{Proof.}
-Set 
-\[s(u,v)=(x(u,v),y(u,v),z(u,v)).\]
+\parit{Proof of \ref{prop:graph-chart}.}
+Let $s(u,v)=(x(u,v),y(u,v),z(u,v))$.
 Since $s$ is regular, its Jacobian matrix
 \[\Jac s=
 \renewcommand\arraystretch{1.3}
@@ -142,23 +141,22 @@ has rank two at any point $(u,v)\in U$.
 
 Choose a point $p\in \Sigma$; by shifting the $(x,y,z)$ and $(u,v)$ coordinate systems, we may assume that $p = (0,0, 0) =s(0,0)$.
 Permuting the coordinates $x,y,z$ if necessary, we may assume that 
-the matrix 
-\[
-\renewcommand\arraystretch{1.3}
-\begin{pmatrix}
+the matrix $\left(\begin{smallmatrix}
 x_u&x_v\\
 y_u&y_v
-\end{pmatrix},
-\] 
+\end{smallmatrix}\right)$
 is invertible at the origin.
-Note that this is the Jacobian matrix of the map
-\[(u,v)\mapsto (x(u,v),y(u,v)).\]
+Note that this is the Jacobian matrix of the map $(u,v)\mapsto (x(u,v),y(u,v))$.
 
 The inverse function theorem (\ref{thm:inverse}) implies that there is a smooth regular map
 $w\:(x,y)\mapsto (u,v)$ defined on an open set $W\ni 0$ in the $(x,y)$-plane
-such that $w(0,0)=(0,0)$ and  $s\circ w(x,y)=(x,y,f(x,y))$ for some smooth function~$f$.
-That is, the graph $z=f(x,y)$ for $(x,y)\z\in W$ is a subset in~$\Sigma$.
-By the inverse function theorem, this graph is open in~$\Sigma$.
+such that $w(0,0)=(0,0)$ and  $s\circ w(x,y)=(x,y,f(x,y))$ where $f=z\circ w$.
+That is, the subset $s\circ w(W)\subset \Sigma$ is 
+the graph of $f$.
+
+By the inverse function theorem, $w(W)$ is an open subset of $U$.
+Since $s$ is an embedding, our graph is open in~$\Sigma$;
+that is, there is an open set $V\subset \mathbb{R}^3$ such that $s\circ w(W)=V\cap \Sigma$ is a graph of smooth function.
 
 Since $p$ is arbitrary, we get that $\Sigma$ is a surface.
 \qeds
@@ -167,7 +165,7 @@ If we have $s$ and $\Sigma$ as in the proposition, then we say that $s$ is a \in
 
 Not all smooth surfaces can be described by such a parametrization;
 for example, the sphere $\mathbb{S}^2$ cannot.
-However, any smooth surface $\Sigma$ admits a local parametrization; that is, any point $p\in\Sigma$ admits an open neighborhood $W\subset \Sigma$ with a smooth regular parametrization~$s$.
+However, we will show that \textit{any smooth surface $\Sigma$ admits a local parametrization at any point $p\in\Sigma$}; that is,  $p$ admits an open neighborhood $W\subset \Sigma$ with a smooth regular parametrization~$s$.
 In this case, any point in $W$ can be described by two parameters, usually denoted by $u$ and $v$, 
 which are called \index{local!coordinates}\emph{local coordinates} at~$p$.
 The map $s$ is called a \index{chart}\emph{chart} of~$\Sigma$.
@@ -181,10 +179,18 @@ $s_u=(1,0,h_u)$, and $s_v=(0,1,h_v)$.
 Whence the partial derivatives $s_u$ and $s_v$ are linearly independent;
 that is, $s$ is a regular map.
 
-Note that from \ref{prop:graph-chart}, we obtain the following corollary.
-
 \begin{thm}{Corollary}\label{cor:reg-parmeterization}
 A connected set $\Sigma\subset \mathbb{R}^3$ is a smooth surface if and only if a neighborhood of any point in $\Sigma$ can be covered by a chart.
+\end{thm}
+
+A function $g\: \Sigma \to \mathbb{R}$ defined on a smooth surface $\Sigma$ is said to be \index{smooth function}\emph{smooth} if for any chart $s \: U\to \Sigma$,
+the composition $g\circ s$ is smooth; that is, all partial derivatives $\frac{\partial^{m+n}}{\partial u^m\partial v^n}(g\circ s)$ are defined and continuous in the domain of definition.
+
+\begin{thm}{Exercise}\label{ex:smooth-fun(surf)}
+Let $\Sigma\subset \mathbb{R}^3$ be a smooth surface.
+Show that a function $g\:\Sigma\to\mathbb{R}$ is smooth if and only if for any point $p\in \Sigma$ there is a smooth function $h\:N\to\mathbb{R}$ defined in a neighborhood $N\subset \mathbb{R}^3$ of $p$ such that the equality $g(q)=h(q)$ holds for $q\in \Sigma\cap N$.
+
+Construct a smooth surface $\Sigma$ and a smooth function $g\:\Sigma\to\mathbb{R}$ that cannot be extended to a smooth function $h\:\mathbb{R}^3\to\mathbb{R}$.
 \end{thm}
 
 
@@ -194,7 +200,7 @@ Consider the following map
 Show that $s$ is a chart of the unit sphere centered at $(0,0,1)$; describe the image of~$s$.
 \end{thm}
 
-\begin{wrapfigure}{o}{31 mm}
+\begin{wrapfigure}{i}{31 mm}
 \vskip-6mm
 \centering
 \includegraphics{mppics/pic-750}
@@ -207,7 +213,7 @@ which is called \index{stereographic projection}\emph{stereographic projection} 
 Note that the point $(u,v,1)$ and its image lie on the same half-line emerging from the origin. 
 
 \begin{wrapfigure}{o}{31 mm}
-\vskip0mm
+\vskip-3mm
 \centering
 \includegraphics{asy/torus}
 \vskip0mm
@@ -247,14 +253,16 @@ It remains to observe that $\Theta$ is connected.
 Note that $\Theta$ can be defined as the image of the map $ \mathbb{S}^2\to\mathbb{R}^3$, defined as the restriction of the following map to the unit sphere $\mathbb{S}^2$:
 \[(x,y,z)\z\mapsto (a\cdot x, b\cdot y,c\cdot z).\]
 
-For a surface $\Sigma$ and $k \in \mathbb{N}$, a map $f\: \Sigma \to \mathbb{R}^k$ is said to be \emph{smooth} if for any chart $s \: U\to \Sigma$,
-the composition $f\circ s$ is smooth; that is, all partial derivatives $\frac{\partial^{m+n}}{\partial u^m\partial v^n}(f\circ s)$ are defined and continuous in the domain of definition. Further, a smooth map $f \: \Sigma \to \mathbb{R}^3$ is called a 
+
+A map $f\:\Sigma \to \mathbb{R}^3$ (or $f\:\Sigma \to \mathbb{R}^2$) is smooth if each of its coordinate functions is smooth.
+Further, a smooth map $f \: \Sigma \to \mathbb{R}^3$ is called a 
 \emph{smooth parametrized surface} if it is an embedding, and for any chart $s \:U\to \Sigma$,
 the composition $f\circ s$ is regular;
 that is,  the two vectors 
 $\frac{\partial}{\partial u}(f\circ s)$ and $\frac{\partial}{\partial v}(f\circ s)$ are linearly independent.
 Note that in this case, the image $\Sigma^{*}=f(\Sigma)$ is a smooth surface.
 The latter follows since for any chart $s\:U\to \Sigma$ the composition $f\circ s\:U\to \Sigma^{*}$ is a chart of $\Sigma^{*}$. 
+
 The map $f$ is called a \index{diffeomorphism}\emph{diffeomorphism} from $\Sigma$ to $\Sigma^{*}$;
 the surfaces $\Sigma$ and $\Sigma^{*}$ are said to be {}\emph{diffeomorphic} if there is a diffeomorphism $f\:\Sigma\to\Sigma^{*}$.
 

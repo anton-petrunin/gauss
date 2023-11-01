@@ -1109,6 +1109,22 @@ The case $\ell=0$ has to be done by hand --- it does not satisfy the sufficient 
 Show that any neighborhood of origin in $\Sigma_0$ cannot be described by a graph in any coordinate system;
 so by the definition (Section~\ref{sec:def-smooth-surface}) $\Sigma_0$ is not a smooth surface.
 
+\parbf{\ref{ex:smooth-fun(surf)}.}
+To prove the if part, use that the composition of smooth functions is smooth.
+
+Now, choose a graph representation $z\z=f(x,y)$ of a neighborhood of $p$ in $\Sigma$.
+Note that $g$ is smooth in the neighborhood if and only if the function $\hat g\:(x,y)\mapsto g(x,y,f(x,y))$ is smooth in its domain of definition.
+Define $f(x,y,z)\z\df \hat g(x,y)$; observe that it solves the only-if part.
+
+For the last part, consider function $g\:(x,y)\mapsto\tfrac1{x^2+y^2}$ defined on the $(x,y)$-plane with removed origin.
+Observe that $g$ cannot be extended to a continuous function on $\mathbb{R}^3$.
+
+\parit{Remark.} Suppose $\Sigma$ is a smooth proper surface.
+Then \textit{any smooth function $g\:\Sigma\to\mathbb{R}$ can be extended to a smooth function on $\mathbb{R}^3$}.
+A proof uses the so-called \emph{partition of unity};
+read about it and try to prove this statement.
+
+
 \parbf{\ref{ex:inversion-chart}.} 
 First, check that the image of $s$ lies in the unit sphere centered at $(0,0,1)$;
 that is, show that 
@@ -2372,13 +2388,6 @@ that is,
 \tfrac12\cdot&\dist{\gamma_1(1)}{\gamma_2(1)}{}.
 \end{align*}
 
-\begin{Figure}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-1650}
-\vskip1mm
-\end{Figure}
-
 Let $\delta$ be the geodesic path from $\gamma_2(0)$ to $\gamma_1(1)$.
 From \ref{ex:midpoints}, we have
 \begin{align*}
@@ -2391,6 +2400,13 @@ From \ref{ex:midpoints}, we have
 \tfrac12\cdot\dist{\delta(1)}{\gamma_2(1)}{},
 \end{align*}
 Sum it up, and apply the triangle inequality.
+
+\begin{Figure}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-1650}
+\vskip1mm
+\end{Figure}
 
 \parit{Remark.} Note that modulo the comparison theorem, 
 the case of the Euclidean plane is just as hard.
