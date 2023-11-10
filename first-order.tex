@@ -86,7 +86,7 @@ and is denoted by
 --- we may omit $p$ and $\Sigma$ if it is clear from the context.
 
 Moreover, if $(u,v)\mapsto s(u,v)$ is a local chart at $p$, then 
-\[D_{\vec{w}}f=a\cdot f_u+b\cdot f_v,\]
+\[D_{\vec{w}}f=a\cdot (f\circ s)_u+b\cdot (f\circ s)_v,\]
 where $\vec{w}=a\cdot s_u +b\cdot s_v$. 
 \end{thm}
 
@@ -113,7 +113,7 @@ Since $\vec{w}=\gamma'(0)$ and the vectors $s_u$, $s_v$ are linearly independent
 
 Applying the chain rule again, we get that
 \[
-(f\circ\gamma)'(0)=a\cdot f_u+b\cdot f_v.
+(f\circ\gamma)'(0)=a\cdot (f\circ s)_u+b\cdot (f\circ s)_v.
 \eqlbl{eq:f-gamma}
 \]
 at $(0,0)$.
