@@ -107,17 +107,18 @@ coincides with the parallel translation along $\gamma$ in $\Sigma_2$.
 
 In this section, we give two interpretations of parallel transport;
 they might help to build the right intuition, but will not help in writing rigorous proofs.
-The first is a thaut experiment with a bike wheel suggested by Mark Levi \cite{levi}.
+The first is an experiment with a bike wheel suggested by Mark Levi \cite{levi}.
 The second one uses orthogonal projections of tangent planes.
 
 Suppose $\gamma\:[a,b]\to\Sigma$ is a smooth arc in a smooth surface $\Sigma$.
 Think of walking along $\gamma$ and carrying a perfectly balanced \textit{horizontal} bike wheel.
 More precisely, you keep the wheel's axis normal to $\Sigma$ and touch only the tips of the axis.
-By Newton's first law of motion, if the wheel is not spinning at the starting point $p$, then it will not be spinning after stopping at~$q$.
+Note that if the wheel is not spinning at the starting point $p$, then it will not be spinning after stopping at~$q$.
 (Indeed, by pushing the axis one cannot produce torque to spin the wheel.)
 The map that sends the initial position of the wheel to the final position is the parallel transport~$\iota_\gamma$.
 
-Observation \ref{obs:parallel=} essentially states that \textit{moving the axis of the wheel without changing its direction does not change the direction of the wheel's spokes.}
+Physical intuition should tell you that \textit{moving the axis of the wheel without changing its direction does not change the direction of the wheel's spokes};
+this is essentially the statement of Observation~\ref{obs:parallel=}.
 
 On a more formal level, one can choose a partition $a=t_0<\dots\z<t_n=b$ of $[a,b]$
 and consider the sequence of orthogonal projections $\phi_i\:\T_{\gamma(t_{i-1})}\to\T_{\gamma(t_i)}$.
@@ -126,7 +127,8 @@ For a fine partition, the composition
 gives an approximation of $\iota_\gamma$.
 
 Note that each $\phi_i$ does not increase the magnitude of a vector and neither the composition.
-It is straightforward to see that if the partition is sufficiently fine, then the above composition is almost an isometry; in particular, it almost preserves the magnitudes of tangent vectors.
+It is straightforward to see that if the partition is sufficiently fine, then the above composition is almost an isometry.
+Therefore, the limit $\iota_\gamma$ is an isometry $\T_p\z\to\T_q$.
 
 \begin{thm}{Exercise}\label{ex:holonomy=not0}
 Construct a loop $\gamma$ in $\mathbb{S}^2$ such that the parallel transport $\iota_\gamma$ is not the identity map.

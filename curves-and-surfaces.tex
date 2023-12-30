@@ -1,10 +1,11 @@
 \documentclass[twoside]{book}
 \usepackage{lectures}
-\geometry{top=0.9in, bottom=0.9in,inner=0.9in, outer=0.7in, paperwidth=6in, paperheight=9in}
-\makeindex
 
-\newcommand{\arxiv}[2]{#1} %for arxiv
-%\newcommand{\arxiv}[2]{#2} %for print
+%\newcommand{\arxiv}[2]{#1} %for arxiv
+\newcommand{\arxiv}[2]{#2} %for print
+
+\arxiv{\geometry{top=0.9in, bottom=0.9in,inner=0.9in, outer=0.7in, paperwidth=6in, paperheight=9in}}{\geometry{top=1.025in, bottom=1.025in,inner=0.9in, outer=0.825in, paperwidth=6.125in, paperheight=9.25in}}
+\makeindex
 
 %\overfullrule=100mm
 
@@ -46,7 +47,7 @@
 
 \backmatter
 
-\newgeometry{top=0.87in, bottom=0.87in,inner=0.5in, outer=0.5in}
+\newgeometry{top=0.85in, bottom=0.85in,inner=0.52in, outer=0.52in}
 
 \chapter{Semisolutions}
 
@@ -63,7 +64,7 @@
 
 \input{afterword.tex}
 
-\newgeometry{top=0.85in, bottom=0.85in,inner=0.5in, outer=0.5in}
+\newgeometry{top=0.85in, bottom=0.85in,inner=0.52in, outer=0.52in}
 
 {
 \newpage

@@ -204,12 +204,13 @@ The following four identities are the key to the proof:
 \eqlbl{eq:uu-vv}
 \]
 
-Suppose the identities in \ref{eq:uu-vv} are proved already.
-Then the proposition can be proved via the following calculations:
+The proposition follows from \ref{eq:uu-vv}.
+Indeed 
 \begin{align*}
 b\cdot K&=b\cdot (\ell\cdot n-m^2)=
 \\
 &=\langle\vec u_u,\vec v_v\rangle-\langle\vec u_v,\vec v_u\rangle=
+\tag{by \ref{eq:uu-vv}}
 \\
 &= 
 \left(
@@ -226,6 +227,7 @@ b\cdot K&=b\cdot (\ell\cdot n-m^2)=
 \right)=
 \\
 &=0-b_{uu}.
+\tag{by \ref{eq:uu-vv}}
 \end{align*}
 It remains to prove the four identities in \ref{eq:uu-vv}.
 
