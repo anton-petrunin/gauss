@@ -214,12 +214,12 @@ Let $\Sigma$ be a smooth surface and $p\in \Sigma$.
 Given a tangent vector ${\vec v}\in \T_p$, consider a geodesic $\gamma_{\vec v}$ in $\Sigma$ that starts at $p$ with initial velocity~$\vec v$; 
 that is, $\gamma(0)=p$ and $\gamma'(0)={\vec v}$.
 
-The map 
-\[\exp_p\:\vec v\mapsto \gamma_{\vec v}(1)\]
-is called \index{exponential map}\emph{exponential}.%
-\footnote{There is a good reason to call this map \textit{exponential}, but it is far from the subject.}
-By \ref{prop:geod-existence}, the map $\exp_p\:\T_p\to \Sigma$ is smooth, and it is defined in a neighborhood of zero in the tangent plane $\T_p$.
-Moreover, by \ref{prop:geod-existence} if $\Sigma$ is proper, 
+Let us define the \index{exponential map}\emph{exponential map}%
+\footnote{Explaining the reason for this term, would take us far away from the subject.}
+at $p$ by
+\[\exp_p\:\vec v\mapsto \gamma_{\vec v}(1).\]
+By \ref{prop:geod-existence}, this map is smooth, and it is defined in a neighborhood of zero in the tangent plane $\T_p$;
+moreover, if $\Sigma$ is proper, 
 then $\exp_p$ is defined on the entire plane $\T_p$.
 
 The exponential map
@@ -258,7 +258,7 @@ the exponential map $\exp_p$ is defined on the open ball $B_p\df B(0,r_p)_{\T_p}
 and the restriction $\exp_p|_{B_p}$ is a smooth regular parametrization of a neighborhood of $p$ in~$\Sigma$.
 
 Moreover, we have {}\emph{local control} on $r_p$;
-that is, for any $q\in \Sigma$ there is $\epsilon>0$ such that if $\dist{p}{q}\Sigma<\epsilon$, then $r_p\ge\epsilon$.
+that is, there is $\epsilon>0$ such that if $\dist{p}{q}\Sigma<\epsilon$ for some $q\in \Sigma$ , then $r_q\ge\epsilon$.
 \end{thm}
 
 The proof of the proposition uses \ref{obs:d(exp)=1} and the inverse function theorem (\ref{thm:inverse}).
@@ -267,22 +267,31 @@ The proof of the proposition uses \ref{obs:d(exp)=1} and the inverse function th
 Let $z=f(x,y)$ be a local graph representation of $\Sigma$ in tangent-normal coordinates at~$p$.
 In this case, the $(x,y)$-plane coincides with the tangent plane $\T_p$.
 
-Denote by $s$ the composition of the exponential map $\exp_p$ with the orthogonal projection $(x,y,z)\mapsto (x,y)$.
-By \ref{obs:d(exp)=1}, the differential $d_0s$ is the identity;
+Denote by $h$ the composition of the exponential map $\exp_p$ with the orthogonal projection $(x,y,z)\mapsto (x,y)$.
+By \ref{obs:d(exp)=1}, the differential $d_0h$ is the identity;
 in other words, the Jacobian matrix of this map at $0$ is the identity.
 Applying the inverse function theorem (\ref{thm:inverse}) we get the first part of the proposition.
 
-The second part of the inverse function theorem (\ref{thm:inverse}) 
- guarantees that for a given point $q\in \Sigma$, the radii of the balls $B_p$
- for all points $p$ sufficiently close to $q$
- can be taken uniformly 
- bounded below by a positive number $\epsilon_q >0$.
+The proof of second part is similar, but more technical.
+
+Denote by $h_q$ the composition of the exponential map $\exp_q$ with the orthogonal projection $(x,y,z)\mapsto (x,y)$.
+Consider the chart $s\:(u,v)\z\mapsto (u,v,f(u,v))$.
+Let
+\[m\:(u,v,a,b)\mapsto h_q(\vec v),\]
+where $q=s(u,v)$ and $\vec v=a\cdot s_u+b\cdot s_v$.
+By \ref{prop:geod-existence}, $m$ is a smooth map defined in a neighborhood of $0$.
+Passing to a smaller neighborhood of $0$, we can assume that first and second partial derivatives of $m$ are bounded.
+Form above, the Jacobian matrix of $(a,b)\z\mapsto m(0,0,a,b)$ at $0$ is the identity.
+It follows that for small fixed $u$ and $v$
+the Jacobian matrix of $(a,b)\z\mapsto m(u,v,a,b)$ at $0$ is close to identity.
+In particular, we can apply the second part of the inverse function theorem (\ref{thm:inverse}) to
+the map $(a,b)\z\mapsto m(u,v,a,b)$  for small fixed $u$ and $v$, hence the result.
 \qeds
 
 Given $p\in \Sigma$, the least upper bound on $r_p$ that satisfies \ref{prop:exp} is called the \index{injectivity radius}\emph{injectivity radius} of $\Sigma$ at $p$;
 it is denoted by $\inj(p)$.
 The proposition states that the \textit{injectivity radius is positive and locally bounded away from zero}.
-In fact, the function \textit{$\inj\:\Sigma\to (0,\infty]$ is continuous};
+In fact, \textit{the function $\inj\:\Sigma\to (0,\infty]$ is continuous};
 the latter was proved by Wilhelm Klingenberg \cite[5.4]{gromoll-klingenberg-meyer}. 
 
 The proof of the following statement will be indicated in \ref{ex:inj-rad}.
@@ -375,7 +384,7 @@ In other words, if you travel along $\alpha$, then you change sides of $\Pi$ at 
 {
 
 \begin{wrapfigure}{r}{40 mm}
-\vskip-10mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-250}
 \vskip-0mm
@@ -534,14 +543,14 @@ Assume $B(0,\epsilon)\subset K\subset B(0,1)$.
 Then the total curvatures of any shortest path in $\Sigma$ can be bounded in terms of~$\epsilon$. 
 \end{thm}
 
-The following exercise will guide you thru the proof of the theorem. 
-
 \begin{wrapfigure}{r}{48 mm}
 \vskip-2mm
 \centering
 \includegraphics{mppics/pic-83}
 \vskip-0mm
 \end{wrapfigure}
+
+The following exercise will guide you thru the proof of the theorem. 
 
 \begin{thm}{Exercise}\label{ex:bound-tc}
 Let $\Sigma$ be as in the theorem, and $\gamma$ be a unit-speed shortest path in~$\Sigma$.

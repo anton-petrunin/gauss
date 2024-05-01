@@ -3926,7 +3926,7 @@ endfig;
 
 beginfig(1595) 
 save u,n;
-u:=.6cm;
+u:=.4cm;
 
 z.shift=(6,0)*u;
 z0=origin;
@@ -3948,7 +3948,7 @@ endfig;
 
 beginfig(1600) 
 save u,n,a;
-u:=.5cm;
+u:=.3cm;
 a:=20;
 path p[];
 
@@ -3976,7 +3976,7 @@ endfig;
 
 beginfig(1605) 
 save u,n;
-u:=.6cm;
+u:=.4cm;
 path p[];
 
 z.a=(-3,0)*u;
@@ -4004,7 +4004,7 @@ endfig;
 
 beginfig(1610) 
 save u,n;
-u:=.4cm;
+u:=.3cm;
 n:=1;
 
 z.shift=(6,0)*u;
@@ -4039,6 +4039,39 @@ endfor
 ;
 
 endfig;
+
+beginfig(1620) 
+save u,n;
+u:=1.4cm;
+
+path p[];
+
+z.sh=(0,1)*u;
+z.ssh=(0,.1)*u;
+z.x=(.7,0)*u;
+
+p1=ellipse_canonical(2*u, .4*u);
+p2=p1 shifted z.sh;
+
+p3=z.sh-z.ssh-z.x{4,-1}..{4,1}z.sh-z.ssh+z.x;
+p4=z.ssh-z.x{4,1}..{4,-1}z.ssh+z.x;
+
+p5=z.sh-z.ssh-z.x{4,-1}..{-4,-1}z.ssh-z.x;
+p6=z.sh-z.ssh+z.x{-4,-1}..{4,-1}z.ssh+z.x;
+
+draw p1 cutafter p6;
+draw p1 cutbefore p5;
+draw p1 cutbefore p6 cutafter p5 dashed evenly;
+draw p2;
+draw p3;
+draw p4 dashed evenly;
+draw p5 cutafter p2 dashed evenly;
+draw p5 cutbefore p2;
+draw p6 cutafter p2 dashed evenly;
+draw p6 cutbefore p2;
+
+endfig;
+
 
 beginfig(1700) 
 save u,p;
