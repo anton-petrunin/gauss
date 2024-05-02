@@ -261,8 +261,11 @@ Then the comparison \ref{eq:key-lem:globalization}
 holds for any hinge $\hinge x y z$ with $\dist{x}{y}\Sigma+\dist{x}{z}\Sigma<\ell$.
 \end{thm}
 
+{
+
 \begin{wrapfigure}{r}{35mm}
 \centering
+\vskip-3mm
 \includegraphics{mppics/pic-2308}
 \end{wrapfigure}
 
@@ -272,6 +275,8 @@ Let us denote by $\side \hinge x p q$ the third side of this triangle;
 it will be called the \index{model!side}\emph{model side} of the hinge.
 
 The next computational exercise plays a role in the following proof.
+
+}
 
 \begin{thm}{Exercise}\label{ex:s-r}
 Suppose hinges $\hinge xpq$ and $\hinge xpy$ have a common side $[x,p]$ and $[x,y]\subset [x,q]$.
@@ -524,16 +529,17 @@ Any geodesic triangle in $\Sigma$ is thin.
 
 In the proof, we will use the following translation of the Alexandrov lemma to the language of comparison triangles and angles.
 
+\begin{thm}{Reformulation of Alexandrov lemma}\label{lem:alex-reformulation}
+Let $[pxz]$ be a triangle in a surface $\Sigma$
+and $y$ a point on the side $[x,z]$.
+Consider its model triangle $[\tilde p\tilde x\tilde z]\z=\tilde\triangle pxz$, and let $\tilde y$ be the corresponding point on the side $[\tilde x,\tilde z]$.
+
 \begin{wrapfigure}{r}{25mm}
-\vskip-0mm
+\vskip-2mm
 \centering
 \includegraphics{mppics/pic-2305}
 \end{wrapfigure}
 
-\begin{thm}{Reformulation of Alexandrov lemma}\label{lem:alex-reformulation}\\
-Let $[pxz]$ be a triangle in a surface $\Sigma$
-and $y$ a point on the side $[x,z]$.
-Consider its model triangle $[\tilde p\tilde x\tilde z]\z=\tilde\triangle pxz$, and let $\tilde y$ be the corresponding point on the side $[\tilde x,\tilde z]$.
 Then the following expressions have the same signs:
 \begin{enumerate}[(i)]
  \item $\dist{p}{y}\Sigma-\dist{\tilde p}{\tilde y}{\mathbb{R}^2}$;

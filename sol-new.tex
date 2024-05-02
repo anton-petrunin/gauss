@@ -632,7 +632,7 @@ we need to construct a polygonal line $\beta$ inscribed in $\gamma$ such that
 
 Suppose $\vec u_i=\tan(s_i)$.
 Choose an inscribed polygonal line $\beta=p_0\dots p_{2\cdot k+1}$ such that $p_{2\cdot i}$ and $p_{2\cdot i+1}$ lie sufficiency close to $\gamma(s_i)$; so we can assume that the direction of $p_{2\cdot i+1}-p_{2\cdot i}$ is sufficiency close to $\vec u_i$ for each~$i$.
-Show that \ref{eq:tc=<tc} holds true for the constructed polygonal line $\beta$.
+Show that \ref{eq:tc=<tc} holds true for the constructed polygonal line~$\beta$.
 
 \parbf{\ref{ex:tc-rectifiable}.}
 Show that for any polygonal line $\beta$ in a ball of radius $R$, we have
@@ -1133,15 +1133,14 @@ read about it and try to prove this statement.
 
 
 \parbf{\ref{ex:inversion-chart}.} 
-First, check that the image of $s$ lies in the unit sphere centered at $(0,0,1)$;
+Check that the image of $s$ lies in the unit sphere centered at $(0,0,1)$;
 that is, show that 
-\begin{align*}
-\left(\tfrac{2\cdot u}{1+u^2+v^2}\right)^2
-&+
-\left(\tfrac{2\cdot v}{1+u^2+v^2}\right)^2+
-\\
-&+\left(\tfrac{2}{1+u^2+v^2}-1\right)^2=1.
-\end{align*}
+$\left(\tfrac{2\cdot u}{1+u^2+v^2}\right)^2
+\z+
+\left(\tfrac{2\cdot v}{1+u^2+v^2}\right)^2
+\z+
+\left(\tfrac{2}{1+u^2+v^2}-1\right)^2=1.
+$
 for any $u$ and~$v$.
 
 Show that the map 
@@ -2022,6 +2021,12 @@ By Jordan's theorem (\ref{thm:jordan}) the curve $\gamma$ divides $\Sigma$ into 
 Let us denote by $\Delta$ the disc that lies on the left from~$\gamma$.
 
 Observe that $\tgc\gamma=\length\gamma$, and apply the Gauss--Bonnet formula (\ref{thm:gb}) for $\Delta$.
+
+\parbf{\ref{ex:GB-hat}.}
+Show that $\skur=\cos\alpha\cdot\skur_0$,
+where $\skur$ is the geodesic curvature of $\partial \Delta$ in $\Delta$
+and $\skur$ is the geodesic curvature of $\partial \Delta$ in the $(x,y)$-plane.
+Apply \ref{prop:total-signed-curvature} and the Gauss--Bonnet formula (\ref{thm:gb}).
 
 \parbf{\ref{ex:geodesic-half}.}
 Apply \ref{cor:intK}, \ref{ex:intK:4pi}, and the Gauss--Bonnet formula (\ref{thm:gb}).
