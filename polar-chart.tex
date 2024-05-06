@@ -655,16 +655,19 @@ if $K\le 0$, then $r\mapsto b(r,\theta)$ is convex for any fixed $\theta$.
 Note that $b(0,\theta)=0$, and $b_r(0,\theta)=1$ for any $\theta$.
 Indeed, we may assume that $\theta=0$.
 Choose the standard basis $\vec v,\vec w$ in $\T_p$; so $\vec v$ points in the direction of curve $t\mapsto s(t,0)$.
-Note that 
+Note that%
+\footnote{Recall that $(D_{\vec w}\exp_p)(r\cdot \vec v)\df h'(0)$, where $h(t)=\exp_p(r\cdot \vec v+t\cdot \vec w)$; see Section~\ref{sec:dirder}.}
 \[b(r,0)=r\cdot |(D_{\vec w}\exp_p)(r\cdot \vec v)|.\]
 In particular, $b(0,0)=0$.
-Further, by \ref{obs:d(exp)=1}, $|(D_{\vec w}\exp_p)(0)|=1$.
-Therefore $b_r(0,0)=1$.
+By \ref{obs:d(exp)=1}, $|(D_{\vec w}\exp_p)(0)|=1$.
+In particular, $|(D_{\vec w}\exp_p)(r\cdot \vec v)|\z\ne 0$ for any small $r$.
+Therefore, the function $r\mapsto|(D_{\vec w}\exp_p)(r\cdot \vec v)|$ is differentiable at $r=0$.
+Taking the partial derivative of the expression for $b(r,0)$, we get $b_r(0,0)=1$.
 
 Therefore, 
 \[
 \begin{aligned}
-b(r,\theta)\le r\quad\text{if}\quad K&\ge 0 \quad\text{and}
+b(r,\theta)\le r\quad\text{if}\quad K&\ge 0;
 \\
 b(r,\theta)\ge r\quad\text{if}\quad K&\le 0.
 \end{aligned}
