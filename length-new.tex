@@ -20,11 +20,11 @@ The \index{length of curve}\emph{length} of $\gamma$ is defined as
 \end{align*}
 where the least upper bound is taken over all partitions $t_0,\dots,t_k$ of $[a,b]$.
 
-The length of $\gamma$ is a nonnegative real number or infinity;
-the curve $\gamma$ is called \index{rectifiable curve}\emph{rectifiable} if its length is finite. 
-
 The length of a closed curve is defined as the length of the corresponding loop.
 If a curve is parametrized by an open or semi-open interval, then its length is defined as the least upper bound of the lengths of all its restrictions to closed intervals.
+
+The length of $\gamma$ is a nonnegative real number or infinity;
+the curve $\gamma$ is called \index{rectifiable curve}\emph{rectifiable} if its length is finite. 
 \end{thm}
 
 
@@ -46,7 +46,7 @@ For a partition $a=t_0 < t_1 < \z\cdots < t_k=b$, set $p_i=\gamma(t_i)$.
 Then the polygonal line $p_0\dots p_k$ is said to be \index{inscribed polygonal line}\emph{inscribed} in~$\gamma$.
 If $\gamma$ is closed, then $p_0=p_k$, so the inscribed polygonal line is also closed.
 
-Note that the length of a space curve $\gamma$ can be defined as the least upper bound of the lengths of polygonal lines $p_0\dots p_k$ inscribed in~$\gamma$.
+Note that the length of a space curve can be defined as the least upper bound of the lengths of its inscribed polygonal lines.
 
 \begin{thm}{Exercise}\label{ex:length-chain}
 Let $\gamma\:[0,1]\to\mathbb{R}^3$ be a path.
@@ -104,7 +104,7 @@ Conclude that
 
 \begin{subthm}{adex:integral-length:b}
 Construct a non-constant curve $\gamma\:[a,b]\to\mathbb{R}^3$ such that $\gamma'(t)=0$ almost everywhere.
-(In this case, the formula \ref{eq:length} does not hold for~$\gamma$ despite that both sides are defined.).
+(In this case, the formula \ref{eq:length} does not hold for~$\gamma$ despite that both sides are defined.)
 \end{subthm}
 
 \end{thm}
@@ -124,7 +124,7 @@ Start with an equilateral triangle.
 For each side, divide it into three segments of equal length, and then add an equilateral triangle with the middle segment as its base.
 Repeat this construction recursively with the obtained polygons.
 The Koch snowflake is the boundary of the union of all the polygons.
-Three iterations and the resulting Koch snowflake are shown on the diagram.
+Two iterations and the resulting Koch snowflake are shown on the diagram.
 
 
 
@@ -146,10 +146,8 @@ It is defined as the lowest partial limit; that is, the lowest possible limit of
 The lower limit is defined for any sequence of real numbers, and it lies in the {}\emph{extended real line} $[-\infty,\infty]$
 
 
-\begin{thm}{Theorem}\label{thm:length-semicont}
-Length is lower semicontinuous with respect to the pointwise convergence of curves. 
-
-More precisely, assume a sequence
+\begin{thm}{Theorem}
+Assume a sequence
 of curves $\gamma_n\:[a,b]\to \spc{X}$ in a metric space $\spc{X}$ converges pointwise 
 to a curve $\gamma_\infty\:[a,b]\to \spc{X}$;
 that is, for any fixed $t \in [a,b]$, we have $\gamma_n(t)\z\to\gamma_\infty(t)$ as $n\to\infty$. 
@@ -157,7 +155,9 @@ Then
 $$\liminf_{n\to\infty} \length\gamma_n \ge \length\gamma_\infty.\eqlbl{eq:semicont-length}$$
 \end{thm}
 
-
+\begin{thm}{Corollary}\label{thm:length-semicont}
+Length is lower semicontinuous with respect to the pointwise convergence of curves. 
+\end{thm}
 
 \parit{Proof.}
 Fix a partition $a=t_0<t_1<\dots<t_k=b$.
@@ -166,7 +166,7 @@ Set
 &\df
 \dist{\gamma_n(t_0)}{\gamma_n(t_1)}{}
 +\dots+
-\dist{\gamma_n(t_{k-1})}{\gamma_n(t_k)}{}.
+\dist{\gamma_n(t_{k-1})}{\gamma_n(t_k)}{},
 \\
 \Sigma_\infty
 &\df
@@ -180,16 +180,16 @@ Note that for each $i$ we have
 \to
 \dist{\gamma_\infty(t_{i-1})}{\gamma_\infty(t_i)}{},\]
 and therefore
-\[\Sigma_n\to \Sigma_\infty\] 
+$\Sigma_n\to \Sigma_\infty$
 as $n\to\infty$.
 Note that 
-\[\Sigma_n\le\length\gamma_n\]
+$\Sigma_n\le\length\gamma_n$
 for each~$n$.
 Hence,
 $$\liminf_{n\to\infty} \length\gamma_n \ge \Sigma_\infty.$$
 
   
-Since the partition was arbitrary, by the definition of length, the inequality  \ref{eq:semicont-length} is obtained.
+Since the partition was arbitrary, the definition of length implies inequality \ref{eq:semicont-length}.
 \qeds
 
 
@@ -203,11 +203,16 @@ Since the partition was arbitrary, by the definition of length, the inequality  
 The inequality \ref{eq:semicont-length} might be strict.
 For example, the diagonal $\gamma_\infty$ of the unit square 
 can be approximated by stairs-like polygonal lines $\gamma_n$
-with sides parallel to the sides of the square ($\gamma_6$ is in the picture).
+with sides parallel to the sides of the square ($\gamma_6$ and $\gamma_\infty$ are in the picture).
 In this case,
-\[\length\gamma_\infty=\sqrt{2}\quad
-\text{and}\quad \length\gamma_n=2\]
-for any~$n$.
+\[\length\gamma_\infty=\sqrt{2}
+\quad
+\text{and}\quad
+\length\gamma_n=2
+\quad
+\text{for any}\quad
+n.\]
+
   
 \section{Arc-length parametrization}
 
@@ -228,7 +233,7 @@ Conclude that $\gamma$ admits an arc-length parametrization.
 Note that a smooth space curve $\gamma(t)=(x(t),y(t),z(t))$ is an arc-length parametrization if and only if it has unit velocity vector at all times;
 that is, 
 \[|\gamma'(t)|=\sqrt{x'(t)^2+y'(t)^2+z'(t)^2}=1\]
-for all $t$; by that reason smooth curves equipped with an arc-length parametrization are also called \index{unit-speed curve}\emph{unit-speed curves}.
+for all $t$; by that reason smooth curves equipped with an arc-length parametrization are also called \index{unit-speed curve}\emph{unit-speed} curves.
 Observe that smooth unit-speed parametrizations are automatically regular (see Section~\ref{sec:Smooth curves}).
 
 \begin{thm}{Proposition}\label{prop:arc-length-smooth}
@@ -259,11 +264,11 @@ by its arc-length.
 We will be interested in the properties of curves that are invariant under reparametrizations.
 Therefore, we can always assume that any given smooth curve comes with an arc-length parametrization.
 A nice property of arc-length parametrizations is that they are almost canonical --- these parametrizations differ only by a sign and an additive constant.
-For that reason, it is easier to define parametrization-independent quantities.
+For that reason, they make it easier to define parametrization-independent quantities.
 This observation will be used in the definitions of curvature and torsion.
 
-On the other hand, it is usually impossible to find an explicit arc-length parametrization, which makes it hard to perform calculations;
-therefore it is often convenient to use the original parametrization.
+On the other hand, it is usually impossible to find an explicit arc-length parametrization.
+Therefore, when it comes to calculations, it is often more convenient to use the original parametrization.
 
 \section{Convex curves}
 
@@ -319,14 +324,15 @@ Any convex closed plane curve is rectifiable.
 Any closed curve is bounded.
 Indeed, the curve can be described as an image of a loop $\alpha\:[0,1]\to\mathbb{R}^2$, $\alpha(t)=(x(t),y(t))$.
 The coordinate functions $t\mapsto x(t)$ and $t\mapsto y(t)$ are continuous functions defined on $[0,1]$.
-This implies that the absolute values of both functions are bounded by some constant~$C$.
+This implies that both coordinate functions are bounded by some constant~$C$.
 Therefore, $\alpha$ lies in the square defined by the inequalities $|x|\le C$ and $|y|\le C$.
 
 
 By Proposition~\ref{prop:convex-curve}, the length of the curve cannot exceed the perimeter of the square; hence the result.
 \qeds
 
-Recall that the convex hull of a set $X$ is the smallest convex set that contains $X$; equivalently, the convex hull of $X$ is the intersection of all convex sets containing~$X$.
+Recall that the \index{convex hull}\emph{convex hull} of a set $X$ is the smallest convex set that contains $X$;
+equivalently, the convex hull of $X$ is the intersection of all convex sets containing~$X$.
 
 \begin{thm}{Exercise}\label{ex:convex-hull}
 Let $\alpha$ be a simple closed plane curve.
@@ -360,7 +366,7 @@ where $\gamma_{\vec u}$ is the curve defined by $\gamma_{\vec u}(t) \df (\gamma 
 Note that the magnitude of any plane vector ${\vec w}$ is proportional to the average magnitude of its projections; that is,
 \[|{\vec w}|=k\cdot \overline{|{\vec w}_{\vec u}|}\]
 for some $k \in \mathbb{R}$.
-The exact value of $k$ can be found by integration\footnote{It is the average value of $|\cos|$.}, but we will find it differently. 
+(The exact value of $k$ can be found by integration\footnote{It is the average value of $|\cos x|$.}, but we will find it differently.)
 Note that for a smooth plane curve $\gamma\:[a,b]\to\mathbb{R}^2$,
 \[\gamma_{\vec u}'(t)=(\gamma'(t))_{\vec u}
 \quad\text{and}\quad
@@ -424,14 +430,14 @@ of a function $f$ defined on $\mathbb{S}^2$.
 Show that the length of a space curve is proportional to 
 \begin{subthm}{}
 the average length of its projections to all lines; that is,
-\[\length\gamma=k\cdot\overline{\length\gamma_{\vec u}}\]
-for some $k \in \mathbb{R}$.
+\[\length\gamma=k_1\cdot\overline{\length\gamma_{\vec u}}\]
+for some $k_1 \in \mathbb{R}$.
 \end{subthm}
 \begin{subthm}{}the average length of its projections to all planes; that is,
-\[\length\gamma=k\cdot\overline{\length\gamma_{\vec u}^\bot}\]
-for some $k \in \mathbb{R}$.
+\[\length\gamma=k_2\cdot\overline{\length\gamma_{\vec u}^\bot}\]
+for some $k_2 \in \mathbb{R}$.
 \end{subthm}
-Find the value of $k$ in each case.
+Find the values $k_1$ and $k_2$.
 \end{thm}
 
 \section{Length metric}\label{sec:Length metric}
@@ -467,11 +473,11 @@ Let us denote by $\mathbb{S}^2$ the unit sphere in the space; that is,
 A space curve $\gamma$ is called \index{spherical!curve}\emph{spherical} if it runs in the unit sphere;
 that is, $|\gamma(t)|=1$, or equivalently, $\gamma(t)\in\mathbb{S}^2$  for any~$t$.
 
-Recall that $\measuredangle(u,v)$ denotes the angle between two vectors $u$ and~$v$.
+Recall that $\measuredangle(u,v)$ denotes the angle between vectors $u$ and~$v$.
 
 \begin{thm}{Observation}\label{obs:S2-length}
 For any $u,v\in \mathbb{S}^2$, we have
-\[\dist{u}{v}{\mathbb{S}^2}=\measuredangle(u,v)\]
+\[\dist{u}{v}{\mathbb{S}^2}=\measuredangle(u,v).\]
 
 \end{thm}
 
@@ -506,8 +512,9 @@ Any closed spherical curve of length less than $2\cdot \pi$ lies in an open hemi
 \end{thm}
 
 This lemma will play a key role in the proof of Fenchel's theorem (\ref{thm:fenchel}).
-The following proof is due to Stephanie Alexander.
-It is not as simple as one may think --- try to prove it  before reading further.
+The following proof is due to Stephanie Alexander;
+it is not as simple as one may think.
+Try to prove the lemma before reading further.
 
 \parit{Proof.}
 Let $\gamma$ be a closed curve in $\mathbb{S}^2$ of length $2\cdot\ell$.
@@ -521,8 +528,8 @@ Suppose $\ell<\pi$.
 \end{wrapfigure}
 
 Let us subdivide $\gamma$ into two arcs $\gamma_1$ and $\gamma_2$ of length $\ell$;
-denote their endpoints by $p$ and~$q$. 
-Note that 
+denote their common endpoints by $p$ and~$q$. 
+By \ref{obs:S2-length},
 \begin{align*}
 \measuredangle(p,q)&\le \length \gamma_1=
 \\
@@ -534,14 +541,14 @@ Note that
 Denote by $z$ be the midpoint between $p$ and $q$ in $\mathbb{S}^2$;
 that is, $z$ is the midpoint of the short arc of a great circle from $p$ to $q$ in $\mathbb{S}^2$. 
 We claim that $\gamma$ lies in the open northern hemisphere with the north pole at~$z$.
-If not, $\gamma$ intersects the equator in a point~$r$.
+If not, $\gamma$ intersects the equator at some point~$r$.
 Without loss of generality, we may assume that $r$ lies on~$\gamma_1$. 
 
 Rotate the arc $\gamma_1$ by the angle $\pi$ around the line thru $z$ and the center of the sphere.
 The obtained arc $\gamma_1^{*}$ together with $\gamma_1$ forms a closed curve of length $2\cdot \ell$ passing thru $r$ and its antipodal point $r^{*}$.
-Therefore,
-\[\tfrac12\cdot\length \gamma=\ell\ge \measuredangle(r,r^{*})=\pi,\] 
-a contradiction.
+Applying \ref{obs:S2-length} again, we get
+\[\tfrac12\cdot\length \gamma=\ell\ge \measuredangle(r,r^{*})=\pi\] 
+--- a contradiction.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:antipodal}
@@ -580,7 +587,7 @@ whence \ref{eq:|pq|=<2} follows.
 
 \begin{thm}{Advanced exercises} \label{adex:crofton}
 Given unit vectors ${\vec u},{\vec w}\in\mathbb{S}^2$, denote by ${\vec w}^*_{\vec u}$ the closest point to ${\vec w}$ on the equator with the pole at ${\vec u}$;
-in other words, if ${\vec w}^\perp_{\vec u}$ is the projection of ${\vec w}$ to the plane perpendicular to ${\vec u}$, then ${\vec w}^*_{\vec u}$ is the unit vector in the direction of ${\vec w}^\perp$.
+in other words, if ${\vec w}^\perp_{\vec u}$ is the projection of ${\vec w}$ to the plane perpendicular to ${\vec u}$, then ${\vec w}^*_{\vec u}$ is the unit vector in the direction of ${\vec w}^\perp_{\vec u}$.
 The vector ${\vec w}^*_{\vec u}$ is defined if ${\vec w}\ne\pm {\vec u}$.
 
 \begin{subthm}{adex:crofton:crofton}

@@ -44,7 +44,7 @@ One may skip this chapter and use it as a quick reference while reading the book
 \section{Simple curves}
 
 In the following definition, we use the notion of metric space  discussed in Section~\ref{sec:metric-spcaes}.
-The Euclidean plane and space are the main examples of metric spaces  one should keep in mind.
+The Euclidean plane $\mathbb{R}^2$ and space $\mathbb{R}^3$ are the main examples of metric spaces one should keep in mind.
 
 Recall that a \index{real interval}\emph{real interval} is a connected subset of the real numbers.
 A bijective continuous map $f\:X\to Y$ between subsets of some metric spaces is called a {}\emph{homeomorphism} if its inverse $f^{-1}\:Y\z\to X$ is continuous.  
@@ -60,13 +60,7 @@ where $\GG$ is a real interval (open, closed, or semi-open) or the circle
 \[\mathbb{S}^1=\set{(x,y)\in\mathbb{R}^2}{x^2+y^2=1}.\] 
 A complete proof of the latter statement is given by David Gale \cite{gale}.
 The proof is not hard, but it would take us away from the main subject.
-A~finicky reader may add this property in the definition of curves.
-
-If $\GG$ is an open interval or a circle, we say that $\gamma$ is a {}\emph{curve without endpoints}; otherwise, it is 
-called a {}\emph{curve with endpoints}.
-In the case when $\GG$ is a circle, we say that the curve is \index{closed!curve}\emph{closed}. 
-When $\GG$ is a closed interval, $\gamma$ is called a {}\emph{simple arc}.
-
+%A~finicky reader may add this property in the definition of curves.
 
 A parametrization $\GG\to\gamma$ describes a curve completely.
 We will denote a curve and its parametrization by the same letter;
@@ -89,7 +83,15 @@ Find a continuous injective map $\gamma\:(0,1)\to\mathbb{R}^2$ such that its ima
 \section{Parametrized curves}\label{sec:Parametrized curves}
 
 A \index{parametrized curve}\emph{parametrized curve} is defined as a continuous map $\gamma\:\GG\to\spc{X}$ from a circle or a real interval (open, closed, or semi-open) $\GG$ to a metric space $\spc{X}$. 
-For a parametrized curve, we do not assume that $\gamma$ is injective; in other words, a parametrized curve might have {}\emph{self-intersections}.
+For a parametrized curve, we do \textit{not} assume that $\gamma$ is injective; in other words, a parametrized curve might have {}\emph{self-intersections}.
+
+If we use the term \index{curve}\emph{curve}, then it means that we do not want to specify whether it is a parametrized curve or a simple curve.
+
+If $\GG$ is an open interval or a circle, we say that $\gamma$ is a {}\emph{curve without endpoints};
+otherwise, it is called a {}\emph{curve with endpoints}.
+In the case when $\GG$ is a circle, we say that the curve is \index{closed!curve}\emph{closed}. 
+If the domain $\GG$ is a closed interval $[a,b]$, then the curve is called an \index{arc}\emph{arc}.
+Further, if it is the unit interval $[0,1]$, then it is also called a \index{path}\emph{path}.
 
 \begin{wrapfigure}{o}{15 mm}
 \vskip-0mm
@@ -97,14 +99,9 @@ For a parametrized curve, we do not assume that $\gamma$ is injective; in other 
 \includegraphics{mppics/pic-130}
 \end{wrapfigure}
 
-If we use the term \index{curve}\emph{curve}, then it means that we do not want to specify whether it is a parametrized curve or a simple curve.
-
-If the domain of a parametrized curve is a closed interval $[a,b]$, then the curve is called an \index{arc}\emph{arc}.
-Further, if it is the unit interval $[0,1]$, then it is also called a \index{path}\emph{path}.
-
 %%loops are not necesarily parametrized by the interval [0,1].
 
-If an arc $\gamma : [a,b] \to \spc{X}$ satisfies $p=\gamma (a)=\gamma (b)$, then $\gamma$ is called a \index{loop}\emph{loop};
+If an arc $\gamma \: [a,b] \to \spc{X}$ satisfies $p=\gamma (a)=\gamma (b)$, then $\gamma$ is called a \index{loop}\emph{loop};
 in this case, the point $p$ is called the \index{base of loop}\emph{base} of the loop.
 
 Suppose $\GG_1$ and $\GG_2$ are either real intervals or circles.
@@ -129,6 +126,12 @@ Suppose two distinct points $p,q\in X$ can be connected by a path in~$X$.
 Show that there is a simple arc in~$X$ connecting $p$ to~$q$.
 \end{thm}
 
+Any loop and any simple closed curve can be described by a {}\emph{periodic} parametrized curve $\gamma\: \mathbb{R}\to \spc{X}$;
+that is, a curve such that $\gamma(t+\ell)=\gamma(t)$ for a fixed period $\ell>0$ and all~$t$.
+For example, the unit circle in the plane can be described by the $2{\cdot}\pi$-periodic parametrization $\gamma(t)=(\cos t,\sin t)$.
+
+In the reverse direction, any curve with periodic parametrization yields a loop that can be also considered as a closed curve. 
+
 \section{Smooth curves}\label{sec:Smooth curves}
 
 Curves in the Euclidean space or plane are called \index{space curve}\emph{space curves} or, respectively, \index{plane curve}\emph{plane curves}.
@@ -146,11 +149,22 @@ If the \index{velocity vector}\emph{velocity vector}
 does not vanish at any point, then the parametrization $\gamma$ is called \index{regular!parametrization}\emph{regular}.
 
 A parametrized curve is called {}\emph{smooth} if its parametrization is smooth and regular.
-A simple space curve is called \index{smooth!curve}\emph{smooth} if it admits a regular smooth parametrization.
+A simple space curve is called \index{smooth!curve}\emph{smooth} if it admits a regular smooth parametrization;
+for closed curves the parametrization is assumed to be periodic.
 Pedantically, smooth curves could be called {}\emph{regular smooth curves}. 
 Such curves are among the main objects in differential geometry.
 
-The following exercise shows that curves with smooth parametrizations might have corners, so they do not look smooth.
+
+\begin{wrapfigure}{o}{17 mm}
+\vskip-2mm
+\centering
+\includegraphics{mppics/pic-51}
+\end{wrapfigure}
+
+Notice that the closed curve described by a smooth loop might fail to be smooth at its base; an example is shown on the diagram.
+
+
+The following exercise shows that curves with smooth parametrizations might have corners and might fail to be smooth curves.
 
 \begin{wrapfigure}{o}{15 mm}
 \vskip-0mm
@@ -205,27 +219,6 @@ simple.
 Find a parametrization of the cubic parabola $y=x^3$ in the $(x,y)$-plane that is smooth, but \textit{not} regular.
 \end{thm}
 
-
-\section{Periodic parametrizations}
-
-%% A "smooth closed curve" hasn't been defined
-
-Any loop and any simple closed curve can be described by a {}\emph{periodic} parametrized curve $\gamma\: \mathbb{R}\to \spc{X}$;
-that is, a curve such that $\gamma(t+\ell)=\gamma(t)$ for a fixed period $\ell>0$ and all~$t$.
-For example, the unit circle in the plane can be described by the $2{\cdot}\pi$-periodic parametrization $\gamma(t)=(\cos t,\sin t)$. A curve equipped with a periodic parametrization is called a \emph{closed} curve.
-
-{
-
-\begin{wrapfigure}{o}{17 mm}
-\vskip-4mm
-\centering
-\includegraphics{mppics/pic-51}
-\end{wrapfigure}
-
-In the reverse direction, any periodic parametrized curve yields a loop. 
-Notice however, that the closed curve described by a smooth loop might fail to be smooth at its base; an example is shown on the diagram.
-
-}
 
 \section{Implicitly defined curves}\label{sec:implicit-curves}
 
@@ -312,7 +305,7 @@ Show that a simple space curve is proper if and only if it is a closed set.
 
 \end{thm}
 
-A proper simple plane curve is called \index{open!curve}\emph{open} if it is not closed and has no endpoints.
+A proper simple curve is called \index{open!curve}\emph{open} if it is not closed and has no endpoints.
 So any simple proper curve without endpoints is either closed or open.
 The terms \textit{open curve} and \textit{closed curve} have nothing to do with open and closed sets.
 
