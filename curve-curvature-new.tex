@@ -11,9 +11,9 @@ For curves, the curvature is a pointwise quantitative measure of how much the cu
 
 Recall that any smooth curve can be reparametrized by its arc-length (\ref{prop:arc-length-smooth}).
 The obtained parametrized curve, say $\gamma$, remains to be smooth, and it has unit speed; 
-that is, $|\gamma'(s)|=1$ for all~$s$.
+that is, $|\gamma'|=1$.
 The following proposition states that in this case
-the acceleration vector stays perpendicular to the velocity vector.
+the acceleration vector $\gamma''$ stays perpendicular to the velocity vector $\gamma'$.
 
 \begin{thm}{Proposition}\label{prop:a'-pertp-a''}
 Assume $\gamma$ is a smooth unit-speed space curve.
@@ -38,8 +38,6 @@ For a unit-speed smooth space curve $\gamma$, the magnitude of its acceleration 
 If $\gamma$ is simple, then we can say that $|\gamma''(s)|$ is the curvature at the point $p=\gamma(s)$ without ambiguity.
 The curvature is usually denoted by $\kur(s)$ or $\kur(s)_\gamma$, and, in the case of simple curves, it might be also denoted by $\kur(p)$ or $\kur(p)_\gamma$.
 
-
-
 \begin{thm}{Exercise}\label{ex:zero-curvature-curve}
 Show that a smooth simple space curve has zero curvature at each point if and only if it is a segment of a straight line.
 \end{thm}
@@ -54,7 +52,7 @@ for any $p \in \gamma$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:curvature-of-spherical-curve}
-Show that any smooth unit-speed spherical curve has curvature at least 1 at each time.
+Show that any smooth unit-speed spherical curve has curvature at least 1.
 \end{thm}
 
 \section{Tangent indicatrix}\label{sec:Tangent indicatrix}
@@ -122,8 +120,8 @@ Let $\gamma$ be a smooth space curve and $\tan$ its tangent indicatrix.
 The line thru $\gamma(t)$ in the direction of $\tan(t)$ is called the \index{tangent!line}\emph{tangent line} to $\gamma$  at~$t$.
 Any vector proportional to $\tan(t)$ is called the \index{tangent!vector}\emph{tangent} to $\gamma$ at~$t$.
 
-The tangent line could be also defined as a unique line that has \index{order of contact}\emph{first-order contact} with $\gamma$ at $s$;
-that is, $\rho(\ell)=o(\ell)$, where $\rho(\ell)$ denotes the distance from $\gamma(s+\ell)$ to the line.
+The tangent line could be also defined as a unique line that has \index{order of contact}\emph{first-order contact} with $\gamma$ at $t$;
+that is, $\rho(\ell)=o(\ell)$, where $\rho(\ell)$ denotes the distance from $\gamma(t+\ell)$ to the line.
 
 \begin{thm}{Advanced exercise}\label{ex:no-parallel-tangents}
 Construct a smooth closed space curve without parallel tangent lines.
@@ -179,7 +177,7 @@ Assume the contrary; without loss of generality, we can assume that it lies in t
 In other words, if $\gamma(t)=(x(t), y(t), z(t))$, then $z'(t)>0$ for any~$t$.
 Therefore,
 \[z(b)-z(a)=\int_a^b z'(s)\cdot ds>0.\]
-In particular, $\gamma(a)\ne \gamma(b)$, a contradiction.
+In particular, $\gamma(a)\ne \gamma(b)$ --- a contradiction.
 
 Applying the observation (\ref{obs:tantrix}) and the hemisphere lemma (\ref{lem:hemisphere}), we get  
 \[\tc\gamma=\length \tan\ge2\cdot\pi.\]
@@ -275,7 +273,7 @@ in other words, $\tan$ is a parametrization of the unit circle.
 \end{subthm}
 
 \begin{subthm}{prop:convex-monotone:open}
-If $\gamma$ is open, then its tangent indicatrix $\tan$ defines a monotone map to an interval in a unit semicircle;
+If $\gamma$ is open, then its tangent indicatrix $\tan$ defines a monotone map to an interval in a closed semicircle;
 in other words, $\tan$ is a parametrization of an interval in a unit semicircle.
 \end{subthm}
 
@@ -335,7 +333,7 @@ The same argument in \ref{SHORT.prop:convex-monotone:closed} shows that $\tan$ i
 Evidently, the image is a connected set in $\mathbb{S}^1$.
 It remains to show that the image lies in a semicircle;
 in other words, there is a unit vector $\vec w$ such that 
-\[\measuredangle(\vec w,\tan(s))>\tfrac\pi2
+\[\measuredangle(\vec w,\tan(s))\ge\tfrac\pi2
 \quad\text{for any}\quad
 s.
 \eqlbl{eq:<(w,tan).pi/2}
@@ -357,13 +355,13 @@ Denote by $\vec v_n$ the unit vector in the direction of $q_n$; that is $\vec v_
 Since the unit circle is compact, we can pass to a subsequence of $q_n$ such that $\vec v_n$ converges to a unit vector, say $\vec v$.
 Since $F$ is closed, the half-line $h$ from the origin in the direction of $\vec v$ lies in $F$.
 
-Denote by $\vec w$ the counterclockwise rotation of $\vec v$ by angle $\tfrac\pi 2$.
-Suppose $\vec u=\tan (s)$ for some $s$;
-choose $(x,y)$-coordinates so that $x$-axis points in the direction of $\vec u$.
-The same argument as in \ref{SHORT.prop:convex-monotone:closed} shows that 
-$p=\gamma(s)$ is a minimum point in $F$ of the $y$-coordinate.
-It follows that $h$ and therefore $\vec v$ point in the closed upper half-plane of the $(x,y)$-plane.
-The latter is equivalent to \ref{eq:<(w,tan).pi/2}.
+Let $\vec w$ be the counterclockwise rotation of $\vec v$ by an angle $\tfrac\pi 2$, let
+$\ell$ be the tangent line to $\gamma$ at the point $p=\gamma(s)$,
+and let $H$ be the closed left half-plane bounded by $\ell$;
+that is, $H$ lies to the left from $\ell$ in the direction of $\tan(s)$.
+The same reasoning as in \ref{SHORT.prop:convex-monotone:closed} shows that $F$, and therefore $h$,
+lie in $H$.
+In particular, $\vec v$ points from $p$ into $H$, which is equivalent to~\ref{eq:<(w,tan).pi/2}.
 \qeds
 
 \section{Bow lemma}
@@ -548,7 +546,7 @@ Show that
 
 \begin{thm}{Exercise}\label{ex:bow-upper}
 Let $\kur$ be a smooth nonnegative function defined on $[0,\ell]$.
-Show that there is a smooth unit-speed curve $\gamma\:[0,\ell]\to\mathbb{R}^3$ with curvature function $\kur$ such that the distance $|\gamma(\ell)-\gamma(0)|$ is arbitrarily close to $\ell$.
+Show that there is a smooth unit-speed curve $\gamma\:[0,\ell]\to\mathbb{R}^3$ with curvature function $\kur(s)$ for any $s$ such that the distance $|\gamma(\ell)-\gamma(0)|$ is arbitrarily close to $\ell$.
 \end{thm}
 
 \begin{thm}{Advanced exercise}\label{ex:gromov-twist}

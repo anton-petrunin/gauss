@@ -4600,7 +4600,7 @@ z.p4=z.p+(-.2,0)*u;
 
 p0=z.p{1,0}..z.p1..z.p2..z.p3..{1,0}z.p4--cycle;
 
-draw z.p+(-1,0)*u--z.p+(1.5,0)*u penhair withcolor .5;
+draw z.p+(-1,0)*u--z.p+(1.5,0)*u dashed evenly;
 hatchfill p0  withcolor (53, 1.5mm, -.5bp);
 drawarrow subpath (0,1.6) of p0 pensemibold;
 draw subpath (1.6,5) of p0 pensemibold;
@@ -4609,7 +4609,7 @@ drawarrow z.p--z.p+(0,1)*u;
 dOt z.p;
 
 label.bot(btex $p$ etex, z.p);
-label.rt(btex $\ell$ etex, z.p+(1.5,0)*u) withcolor .5;
+label.rt(btex $\ell$ etex, z.p+(1.5,0)*u);
 label.rt(btex $\gamma$ etex, point 1.6 of p0);
 label.bot(btex $\vec u$ etex, z.p+(1,0)*u);
 whitelabel.lft(btex $\vec v$ etex, z.p+(0,1)*u);
@@ -4641,6 +4641,7 @@ draw z.a1--(x.a0,-y.a1);
 draw z.a1--z.xn;
 drawarrow z.a1--(z.a1+(1,0)*u);
 drawarrow z.a1--(z.a1+(0,1)*u);
+draw (z.x1 -2*unitvector(direction 1.2 of p0)*u)--(z.x1+2*unitvector(direction 1.2 of p0)*u) dashed evenly;
 drawarrow z.x1--(z.x1+unitvector(direction 1.2 of p0)*u);
 drawarrow z.a1--z.vn;
 
@@ -4648,15 +4649,15 @@ dOt z.a1, z.xn, z.x1;
 
 label.lft(btex $o$ etex, z.a1);
 label.bot(btex $q_n$ etex, z.xn);
-label.bot(btex $p$ etex, z.x1);
+label.llft(btex $\gamma(s)=p$ etex, z.x1);
 label.top(btex $\gamma$ etex, z.Sigma);
 whitelabel.bot(btex $F$ etex, z.Sigma+(0,-5));
 whitelabel.bot(btex $h$ etex, (x.Sigma,y.a1));
 whitelabel.top(btex $\vec v$ etex,z.a1+(1,0)*u);
 label.lft(btex $\vec w$ etex,z.a1+(0,1)*u);
 whitelabel.bot(btex $\vec v_n$ etex,z.vn);
-label.bot(btex $\vec u$ etex,(z.x1+unitvector(direction 1.2 of p0)*u));
-%label.bot(btex $\dots$ etex rotated angle(direction 1.6 of p0), z.dots);
+label.llft(btex $\tan(s)$ etex,(z.x1+unitvector(direction 1.2 of p0)*u));
+label.top(btex $\ell$ etex,(z.x1-1.6*unitvector(direction 1.2 of p0)*u));
 endfig;
 
 beginfig(3510) 
