@@ -18,7 +18,7 @@ Note that these two curves can be combined into one $\gamma\:[a,c]\z\to \mathbb{
 \begin{cases}
 \alpha(t)&\text{if}\quad t\le b,
 \\
-\beta(t)&\text{if}\quad t\ge b.
+\beta(t)&\text{if}\quad t> b.
 \end{cases}
 \]
 The obtained curve $\gamma$ is called the 
@@ -28,8 +28,8 @@ The obtained curve $\gamma$ is called the
 The same definition of concatenation can be applied if $\alpha$ and/or $\beta$ are defined on semiopen intervals 
 $(a,b]$ and/or $[b,c)$.
 
-The assumption that the intervals of definition of $\alpha$ and $\beta$ fit together is not essential --- one can concatenate any of the curves as long as the endpoint of $\alpha$ coincides with the starting point of~$\beta$.
-If this is the case, then the time intervals of both curves can be shifted so that they fit together. 
+The assumption that the time intervals of $\alpha$ and $\beta$ fit together is not essential --- one can concatenate if the endpoint of $\alpha$ coincides with the starting point of~$\beta$.
+To do this, the time intervals of the curves should be shifted so that they fit together. 
 
 If in addition $\beta(c)=\alpha(a)$, then we can do cyclic concatenation of these curves;
 this way we obtain a closed curve.
@@ -72,7 +72,7 @@ Then
 \end{thm}
 
 \parit{Proof.}
-Suppose $\gamma$ is a cyclic concatenation of $n$ smooth arcs $\gamma_1,\dots,\gamma_n$.
+Suppose $\gamma$ is a cyclic concatenation of smooth arcs $\gamma_1,\dots,\gamma_n$.
 Denote by $\theta_1,\dots,\theta_n$ its external angles.
 We need to show that \index{10phi@$\tc{\gamma}$ (total curvature)}
 \[\tc{\gamma_1}+\dots+\tc{\gamma_n}+\theta_1+\dots+\theta_n\ge2\cdot\pi.\eqlbl{eq:gen-fenchel}\]
@@ -80,7 +80,7 @@ We need to show that \index{10phi@$\tc{\gamma}$ (total curvature)}
 Consider the tangent indicatrix $\tan_i$ for each arc $\gamma_i$;
 these are smooth spherical arcs.
 
-The same argument as in the proof of Fenchel's theorem shows that the curves $\tan_1,\dots,\tan_n$ cannot lie in an open hemisphere.
+The same argument as in the proof of Fenchel's theorem (\ref{thm:fenchel}) shows that the curves $\tan_1,\dots,\tan_n$ cannot lie in an open hemisphere.
 
 Note that the spherical distance from the endpoint of $\tan_i$ to the starting point of $\tan_{i+1}$ is equal to the external angle $\theta_i$ (we enumerate the arcs modulo $n$, so $\gamma_{n+1}=\gamma_1$).
 Let us connect the endpoint of $\tan_i$ to the starting point of $\tan_{i+1}$ by a short arc of a great circle in the sphere.
@@ -163,20 +163,26 @@ Moreover, if $\gamma$ is closed, we allow the inscribed polygonal line $p_0\dots
 \end{wrapfigure}
 
 \parit{Proof.}
-Assume $p_i=\gamma(t_i)$.
+Assume that $\gamma$ is closed.
 Set 
 \begin{align*}
-\vec w_i&=p_{i+1}-p_i,& \vec v_i&=\gamma'(t_i),
+p_i&=\gamma(t_i),
+&
+\alpha_i&=\measuredangle(\vec w_i,\vec v_i),
 \\
-\alpha_i&=\measuredangle(\vec w_i,\vec v_i),&\beta_i&=\measuredangle(\vec w_{i-1},\vec v_i),
+\vec w_i&=p_{i+1}-p_i,
+& 
+\beta_i&=\measuredangle(\vec w_{i-1},\vec v_i),
 \\
+\vec v_i&=\gamma'(t_i),
+&
 \theta_i&=\measuredangle(\vec w_{i-1},\vec w_i).
 \end{align*}
-In the case of a closed curve, we use indexes modulo $n$;
-so in this case, we have $p_{n+1}\z=p_1$.
+Let us use indexes modulo $n$;
+so $p_{n+1}\z=p_1$.
 
 Since the curvature of line segments vanishes, 
-the total curvature of the polygonal line is the sum of external angles $\theta_i$.
+the total curvature of the polygonal line $p_0\dots p_n$ is the sum of external angles $\theta_i$.
 
 By triangle inequality for angles \ref{thm:spherical-triangle-inq}, we get that
 \[\theta_i\le \alpha_i+\beta_i.\]
@@ -192,7 +198,7 @@ Therefore, if $\gamma$ is a closed curve, we have
 \\
 &\le \tc\gamma.
 \end{align*}
-If $\gamma$ is an arc, the argument is analogous:
+If $\gamma$ is not closed, the calculations are analogous:
 \begin{align*}
 \tc{p_0\dots p_n}&=\theta_1+\dots+\theta_{n-1}\le 
 \\
@@ -238,7 +244,7 @@ Show that
 
 Lines crossing a curve at four points as in the exercise are called \index{alternating quadrisecants}\emph{alternating quadrisecants}.
 It turns out that any {}\emph{nontrivial knot} admits an alternating quadrisecant \cite{denne};
-according to the exercise, the latter implies the so-called {}\emph{F\'ary--Milnor theorem} --- the total curvature of any knot exceeds~$4\cdot \pi$; see \cite{petrunin-stadler} and the references therein.
+according to the exercise, the latter implies the so-called {}\emph{F\'ary--Milnor theorem} --- \textit{the total curvature of any knot exceeds~$4\cdot \pi$}; see \cite{petrunin-stadler} and the references therein.
 
 The following exercise states that the inequality in \ref{prop:inscribed-total-curvature} is optimal.
 
@@ -287,7 +293,7 @@ By the definition of total curvature, we have that
 \end{align*}
 
 
-By \ref{thm:spherical-triangle-inq},
+By the triangle inequality for angles (\ref{thm:spherical-triangle-inq}),
 \[
 \measuredangle\hinge bac
 \le
@@ -336,8 +342,8 @@ we get that $\gamma$ is convex as well.
 
 \section{Generalized DNA theorem}\label{sec:DNA-poly}
 
-Recall that DNA theorem (\ref{thm:DNA}) states that \textit{total curvature of closed smooth curve in a unit ball cannot be smaller than its length}.
-In this section, we prove the following polygonal analog of DNA theorem.
+In this section, we prove a polygonal analog of the DNA theorem (\ref{thm:DNA}).
+Recall that it states that \textit{total curvature of closed smooth curve in a unit ball cannot be smaller than its length}.
 
 \begin{thm}{Theorem}\label{thm:DNA-poly}
 Let $p_1\dots p_n$ be a closed polygonal line in a unit ball.
@@ -369,7 +375,7 @@ Note that
 Therefore 
 \[|s_0-s_1|+\dots+|s_{n-1}-s_n|\ge \length (p_1\dots p_n).\]
 
-Note that 
+Furthermore,
 \[|q_i-s_{i-1}|=|q_i-s_i|=|p_i-o|\le 1\]
 and
 \[\theta_i\ge\measuredangle \hinge{q_i}{s_{i-1}}{s_i}\]

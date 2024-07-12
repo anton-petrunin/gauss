@@ -52,8 +52,8 @@ that is, $\rho(\ell)=o(\ell^2)$, where $\rho(\ell)$ denotes the distance from $\
 
 \section{Torsion}
 
-Let $\gamma$ be a smooth unit-speed space curve
-and $\tan(s),\norm(s),\bi(s)$ be its Frenet frame.
+Let $\gamma$ be a smooth unit-speed space curve,
+and let $\tan,\norm,\bi$ be its Frenet frame.
 The value \index{10tau@$\tor$ (torsion)}
 \[\tor(s)=\langle \norm'(s),\bi(s)\rangle\]
 is called the \index{torsion}\emph{torsion} of $\gamma$ at~$s$.
@@ -202,7 +202,9 @@ Suppose $\kur(s)>0$ for all~$s$.
 Then $\gamma$ has a constant slope if and only if the ratio $\tfrac\tor\kur$ is constant.
 \end{thm}
 
-The following exercise will guide you thru the proof of the theorem. 
+The following exercise will guide you thru the proof of the theorem;
+the only-if part of the theorem follows from \ref{SHORT.ex:lancret:a}
+and the if part from \ref{SHORT.ex:lancret:b}
 
 \begin{thm}{Exercise}\label{ex:lancret}
 Let $\gamma$ be a smooth space curve with nonvanishing curvature, $\tan,\norm,\bi$ 
@@ -214,12 +216,11 @@ Assume $\langle \vec w,\tan\rangle$ is constant for a fixed nonzero vector $\vec
 Show that $\langle \vec w, \norm\rangle =0$.
 Conclude that $\langle \vec w,\bi\rangle$ is constant.
 Show that \[\tor\cdot\langle \vec w,\bi\rangle -\kur\cdot\langle \vec w,\tan\rangle =0.\]
-Conclude that $\tfrac\tor\kur$ is constant;
-this proves the only-if part of the theorem.
+Conclude that $\tfrac\tor\kur$ is constant.
 \end{subthm}
 
 \begin{subthm}{ex:lancret:b} Assume $\tfrac\tor\kur$ is constant, show that the vector $\vec w=\tfrac\tor\kur\cdot \tan+\bi$ is constant.
-Conclude that $\gamma$ has a constant slope; this proves the if part of the theorem.
+Conclude that $\gamma$ has a constant slope.
 \end{subthm}
 
 \end{thm}
@@ -294,7 +295,7 @@ that is, $\rho(\ell)=o(\ell^3)$, where $\rho(\ell)$ denotes the distance from $\
 Let $s\mapsto \kur(s)$ and $s\mapsto \tor(s)$ be two smooth real-valued functions defined on a real interval $\mathbb{I}$.
 Suppose $\kur(s)>0$ for all~$s$.
 Then there is a smooth unit-speed curve $\gamma\:\mathbb{I}\to\mathbb{R}^3$ with curvature $\kur(s)$ and torsion $\tor(s)$ for every~$s\in \mathbb{I}$.
-Moreover, $\gamma$ is uniquely defined up to a rigid motion of the space.
+Moreover, $\gamma$ is uniquely defined up to an orientation-preserving rigid motion of the space.
 \end{thm}
 
 The proof is an application of the theorem on the existence and uniqueness of solutions of ordinary differential equations (\ref{thm:ODE}).
@@ -314,7 +315,7 @@ Consider the following system of differential equations
 \end{cases}
 \eqlbl{eq:gamma'tan'norm'bi'}
 \]
-with the initial condition formed by $\gamma(s_0)$ and an oriented orthonormal frame $\tan(s_0)$, $\norm(s_0)$, $\bi(s_0)$.
+with the initial condition formed by $\gamma(s_0)$, $\tan(s_0)$, $\norm(s_0)$, $\bi(s_0)$.
 (The system of equations has four vector equations, so it can be rewritten as a system of 12 scalar equations.)
 
 By \ref{thm:ODE}, this system has a unique solution which is defined in a maximal subinterval $\mathbb{J}\subset \mathbb{I}$ containing $s_0$.
@@ -396,7 +397,7 @@ By Theorem~\ref{thm:ODE}, at least one of the values $\gamma(s)$, $\tan(s)$, $\n
 escapes to infinity as $s\to b$.
 But this is impossible --- the vectors $\tan(s)$, $\norm(s)$, $\bi(s)$ remain unit, and $|\gamma'(s)|=|\tan(s)|=1$;
 so $\gamma$ travels only a finite distance as $s\to b$ --- a contradiction.
-Hence, $\mathbb{J}= \mathbb{I}$.
+Hence, $\mathbb{J}= \mathbb{I}$, and the first statement follows.
 
 Now assume there are two curves $\gamma_1$ and $\gamma_2$ with the given curvature and torsion functions.
 Applying a motion of the space, we can assume that $\gamma_1(s_0)=\gamma_2(s_0)$, and the Frenet frames of the curves coincide at $s_0$.
