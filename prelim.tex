@@ -85,6 +85,28 @@ $B(p,\tfrac32)\subsetneq B(q,1)$ holds.
 
 
 
+\section{Isometries and motions} 
+
+Let $\spc{X}$ and $\spc{Y}$ be two metric spaces. 
+A~map $f\:\spc{X} \z\to \spc{Y}$
+is
+called \index{distance-preserving map}\emph{distance-preserving} if 
+$$\dist{f(x)}{f(y)}{\spc{Y}}
+ = \dist{x}{y}{\spc{X}}$$
+for any $x,y\in {\spc{X}}$.
+
+A bijective distance-preserving map is called an \index{isometry}\emph{isometry}. 
+
+Two metric spaces are called \index{isometric spaces}\emph{isometric} if there exists an isometry between them.
+
+An isometry from a metric space to itself is also referred a \index{motion}\emph{motion}.
+
+\begin{thm}{Exercise}\label{ex:dist-preserv=>injective}
+Show that any distance-preserving map is \index{injective map}\emph{injective};
+that is, if $f\:\spc{X}\to\spc{Y}$ is a distance-preserving map, 
+then $f(x)\ne f(y)$ for any pair of distinct points $x, y\in \spc{X}$.
+\end{thm}
+
 \subsection*{Continuity}
 
 \begin{thm}{Definition}
@@ -232,6 +254,8 @@ We use mostly the smooth case of this theorem which is simpler.
 An amusing proof of this case was given by Gregory Chambers and Yevgeny Liokumovich \cite{chambers-liokumovich}.
 
 \section{Elementary geometry}
+
+%%%???orientation is not defined???
 
 \subsection*{Internal angles}
 

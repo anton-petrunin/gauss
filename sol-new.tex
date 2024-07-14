@@ -14,6 +14,12 @@ Make a conclusion.
 \parit{\ref{SHORT.ex:B2inB1:b}.}
 Take $\spc{X}$ to be the half-line $[0,\infty)$ with the standard metric; $p=0$ and $q=\tfrac45$.
 
+\parbf{\ref{ex:dist-preserv=>injective}.}
+If $x\ne y$, then $\dist{x}{y}{\spc{X}}>0$.
+Since $f$ is distance-preserving,
+$$\dist{f(x)}{f(y)}{\spc{Y}}=\dist{x}{y}{\spc{X}}.$$
+Conclude that $\dist{f(x)}{f(y)}{\spc{Y}}>0$, and hence $f(x)\z\ne f(y)$.
+
 \parbf{\ref{ex:shrt=>continuous}.}
 Show that the conditions in \ref{def:continuous} hold for $\delta=\epsilon$.
 
@@ -547,7 +553,7 @@ Suppose the inequality fails at $t=0$.
 We may assume that $\alpha(0)\le\tfrac\pi2$;
 otherwise, revert the parametrization.
 
-In the plane spanned by $\gamma(0)$ and~$\gamma'(0)$, choose a unit-speed circline arc $\sigma$ from $0$ to $\gamma(0)$ that comes to $\gamma(0)$ in the direction opposite to $\gamma'(0)$.
+In the plane spanned by $\gamma(0)$ and~$\gamma'(0)$, choose a unit-speed circle arc (or line segment) $\sigma$ from $0$ to $\gamma(0)$ that comes to $\gamma(0)$ in the direction opposite to $\gamma'(0)$.
 Consider a unit-speed semicircle $\tilde\gamma$ with curvature $2$
 that starts at $\gamma(0)$ in the direction $\gamma'(0)$ so that that the concatenation $\sigma*\tilde\gamma$ is an arc of a convex plane curve; see the figure.
 
@@ -858,7 +864,7 @@ L(0)+\ell\cdot\tgc\gamma.
 Consider the unit circle $\gamma(t)=(\cos t,\sin t)$ for $t\in[0,2\cdot\pi]$ and $\gamma_\ell$ for $\ell=2$.
 
 \parbf{\ref{ex:inverse}.}
-Use the definition of osculating circle via order of contact, and that inversions send circles to circlines. 
+Use the definition of osculating circle via order of contact, and that inversions send circles to circles or lines. 
 
 \parbf{\ref{ex:evolute}.}
 We assume that $\gamma$ is unit-speed.
