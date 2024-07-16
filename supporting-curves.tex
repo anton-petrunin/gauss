@@ -1,8 +1,8 @@
 \chapter{Supporting curves}
 \label{chap:supporting-curves}
 
-When two plane curves are tangent and do not cross, it is possible to control the signed curvature of one of them in terms of the signed curvature of the other.
-In this chapter, we show how to use this idea to control the global behavior of plane curves.
+When two plane curves touch each other without crossing, it is possible to control the signed curvature of one of them in terms of the signed curvature of the other.
+In this chapter, we use this idea to study the global behavior of plane curves.
 
 \section{Cooriented tangent curves}
 
@@ -12,8 +12,7 @@ if $\gamma_1(t_1)=\gamma_2(t_2)$
 and they share the tangent line at these time parameters.
 In this case, the point $p=\gamma_1(t_1)=\gamma_2(t_2)$ is called a \index{point!of tangency}\emph{point of tangency} of the curves.
 
-Note that if $\gamma_1$ and $\gamma_2$ are tangent at the time parameters $t_1$ and $t_2$, 
-then the velocity vectors $\gamma_1'(t_1)$ and $\gamma_2'(t_2)$ are parallel.
+Note that in this case, the velocity vectors $\gamma_1'(t_1)$ and $\gamma_2'(t_2)$ are parallel.
 \begin{figure}[!ht]
 \vskip-0mm
 \centering
@@ -43,7 +42,7 @@ then we say that $\gamma_1$ \index{supporting!curve}\emph{locally supports} $\ga
 If the curves on the diagram are oriented according to the arrows, then $\gamma_1$ supports $\gamma_2$ from the right at $p$ (as well as $\gamma_2$ supports $\gamma_1$ from the left at~$p$).
 
 Suppose $\gamma_1$ is a simple curve that cuts the plane into two closed regions, one lies on the left and the other on the right from~$\gamma_1$.
-Then we say that $\gamma_1$ \index{supporting!curve}\emph{globally supports} $\gamma_2$ at point $p=\gamma_2(t_2)$ 
+We say that $\gamma_1$ \index{supporting!curve}\emph{globally supports} $\gamma_2$ at point $p=\gamma_2(t_2)$ 
 if $\gamma_2$ runs in one of these closed regions, and 
 $p$ lies on~$\gamma_1$.
 
@@ -104,7 +103,7 @@ Note that $f_1''(0)=\skur_1(0)$, and $f_2''(0)=\skur_2(0)$ (see \ref{ex:curvatur
 Clearly, $\gamma_1$ supports $\gamma_2$ from the left (right) if 
 \[f_1(x)\ge f_2(x)\quad(\text{respectively}\quad f_1(x)\le f_2(x))\]
 for all sufficiently small values of~$x$.
-Applying the second derivative test, we get the result.
+Applying the second derivative test the the function $f_1-f_2$, we get the result.
 \qeds
 
 
@@ -133,15 +132,15 @@ Try to prove the same for a smooth plane loop.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:in-triangle}
-Assume a closed smooth plane curve $\gamma$ runs inside a triangle $\triangle$ with inradius~1; that is, the circle tangent to all three sides of $\triangle$ has radius~1. 
-Show that there is a point on $\gamma$ with absolute curvature at least~$1$.
+Assume a closed smooth plane curve $\gamma$ runs inside a triangle $\triangle$ with inradius~1; that is, a unit circle is tangent to all three sides of $\triangle$. 
+Show that $\gamma$ has curvature at least~$1$ at some point.
 \end{thm}
 
-The three exercises above are baby cases of \ref{ex:moon-rad}; try to find a direct solution, without using \ref{thm:moon}.
+Note that the three exercises above are baby cases of \ref{ex:moon-rad}, but try to find a direct solution.
 
 {
 
-\begin{wrapfigure}{o}{32 mm}
+\begin{wrapfigure}{r}{32 mm}
 \vskip-4mm
 \centering
 \includegraphics{mppics/pic-70}
@@ -160,10 +159,10 @@ Show that the absolute curvature of $\gamma$ is at least 1 at some parameter val
 
 \section{Convex curves}
 
-Recall that a plane curve is convex if it bounds a convex region.
+Recall that a plane curve is \index{convex curve}\emph{convex} if it bounds a convex region.
 
 \begin{thm}{Proposition}\label{prop:convex}
-Suppose a simple closed plane curve $\gamma$ bounds a figure~$F$.
+Suppose a simple closed smooth plane curve $\gamma$ bounds a figure~$F$.
 Then $F$ is convex if and only if the signed curvature of $\gamma$ does not change the sign.
 \end{thm}
 
@@ -296,7 +295,7 @@ Assume $\gamma$ is a simple smooth plane loop with absolute curvature bounded by
 Then it surrounds a unit disc.
 \end{thm}
 
-This theorem gives a simple but nontrivial example of the so-called \index{local!to global theorem}\emph{local to global theorems} --- based on some local data (in this case, the curvature of a curve) we conclude a global property (in this case, the existence of a large disc surrounded by the curve).
+This theorem gives a simple but nontrivial example of the so-called \index{local!to global theorem}\emph{local to global theorems} --- based on some local data (in this case, the curvature of a curve) we conclude a global property (in this case, the existence of a unit disc surrounded by the curve).
 
 {
 
@@ -450,10 +449,9 @@ two from the inside and two from the outside.
 \end{wrapfigure}
 
 \parit{Proof of \ref{thm:4-vert} modulo \ref{thm:4-vert-supporting}.}
-First, note that if an osculating circle $\sigma$ at a point $p$ supports $\gamma$ locally, then $p$ is a vertex.
-Indeed, if not, then a small arc around $p$ has monotone curvature.
+It is sufficient to show that if an osculating circle $\sigma$ at a point $p$ supports $\gamma$ locally, then $p$ is a vertex.
 
-
+If not, then a small arc around $p$ has monotone curvature.
 Applying the spiral lemma (\ref{lem:spiral}) we get that the osculating circles at this arc are nested.
 In particular, the curve $\gamma$ crosses $\sigma$ at~$p$. 
 Therefore $\sigma$ does not support $\gamma$ locally at~$p$.

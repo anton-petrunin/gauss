@@ -3365,6 +3365,39 @@ draw subpath (2.5,4) of p4;
 dOt z2,z3;
 endfig;
 
+beginfig(283) 
+save u,p;
+u:=1.4cm;
+path p[];
+
+
+z.o=origin;
+z.x=(.4,.4)*u;
+z.b=z.x+(1,0)*u rotated -90;
+z.a=(-.3,-.1)*u;
+
+p1=z.b{(z.x-z.b) zscaled (0,-1)}..{(z.x-z.b) zscaled (0,1)}z.x..z.a..cycle;
+
+z.y=point 0.2 of p1;
+
+z.ss=2*z.x;
+z.s=z.x+(unitvector(z.x-z.b) zscaled (0,-1))*u;
+
+draw p1 pensemibold;
+draw z.o--(2*z.x) dashed evenly;
+drawarrow z.x--z.s;
+
+draw circle(z.o,1.2*u) dashed evenly;
+
+whitelabelarcsprof(z.ss, z.x, z.s, 8, 12, btex $\alpha(t)$ etex);
+label.ulft(btex $\gamma(t)$ etex, z.x);
+label.top(btex $\gamma'(t)$ etex, z.s);
+
+%fill_angle(z.ss, z.x, z.s, 20);
+
+dOt z.o,z.x;
+endfig;
+
 beginfig(290);
 save u,p;
 path p[];

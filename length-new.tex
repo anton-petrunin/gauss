@@ -22,11 +22,10 @@ where the least upper bound is taken over all partitions $t_0,\dots,t_k$ of $[a,
 
 The length of a closed curve is defined as the length of the corresponding loop.
 If a curve is parametrized by an open or semi-open interval, then its length is defined as the least upper bound of the lengths of all its restrictions to closed intervals.
-
-The length of $\gamma$ is a nonnegative real number or infinity;
-the curve $\gamma$ is called \index{rectifiable curve}\emph{rectifiable} if its length is finite. 
+ 
 \end{thm}
 
+А curve is called \index{rectifiable curve}\emph{rectifiable} if its length is finite.
 
 \begin{thm}{Exercise}\label{ex:integral-length-0}
 Suppose curve $\gamma_1\:[a_1,b_1] \to\mathbb{R}^3$ is a reparametrization of $\gamma_2\:[a_2,b_2] \to\mathbb{R}^3$. 
@@ -130,7 +129,7 @@ Two iterations and the resulting Koch snowflake are shown on the diagram.
 
 \begin{thm}{Exercise}\label{ex:nonrectifiable-curve}
 
-\begin{subthm}{ex:nonrectifiable-curve:a} Show that the Koch snowflake is a simple closed curve; that is, it can be parametrized by a circle.
+\begin{subthm}{ex:nonrectifiable-curve:a} Show that the Koch snowflake is a simple closed curve; in particular, it can be parametrized by a circle.
 \end{subthm}
 
 
@@ -143,7 +142,7 @@ Two iterations and the resulting Koch snowflake are shown on the diagram.
 The lower limit of a sequence of real numbers $x_n$ will be denoted by
 \[\liminf_{n\to\infty} x_n.\] 
 It is defined as the lowest partial limit; that is, the lowest possible limit of a subsequence of $x_n$.
-The lower limit is defined for any sequence of real numbers, and it lies in the {}\emph{extended real line} $[-\infty,\infty]$
+The lower limit is defined for any sequence of real numbers, and it lies in the extended real line $[-\infty,\infty]$.
 
 
 \begin{thm}{Theorem}
@@ -230,7 +229,7 @@ Show that the function $t\mapsto s(t)$ is continuous.
 Conclude that $\gamma$ admits an arc-length parametrization.
 \end{thm}
 
-Note that a smooth space curve $\gamma(t)=(x(t),y(t),z(t))$ is an arc-length parametrization if and only if it has unit velocity vector at all times;
+Note that a smooth curve $\gamma(t)=(x(t),y(t),z(t))$ is an arc-length parametrization if and only if it has unit velocity vector at all times;
 that is, 
 \[|\gamma'(t)|=\sqrt{x'(t)^2+y'(t)^2+z'(t)^2}=1\]
 for all $t$; by that reason smooth curves equipped with an arc-length parametrization are also called \index{unit-speed curve}\emph{unit-speed} curves.
@@ -367,7 +366,8 @@ Note that the magnitude of any plane vector ${\vec w}$ is proportional to the av
 \[|{\vec w}|=k\cdot \overline{|{\vec w}_{\vec u}|}\]
 for some $k \in \mathbb{R}$.
 (The exact value of $k$ can be found by integration\footnote{It is the average value of $|\cos x|$.}, but we will find it differently.)
-Note that for a smooth plane curve $\gamma\:[a,b]\to\mathbb{R}^2$,
+Assume $\gamma\:[a,b]\to\mathbb{R}^2$ is a smooth curve.
+Note that 
 \[\gamma_{\vec u}'(t)=(\gamma'(t))_{\vec u}
 \quad\text{and}\quad
 |\gamma'_{\vec u}(t)|=|\langle\vec u,\gamma'(t)\rangle|\]
@@ -388,9 +388,9 @@ Note that for any unit plane vector ${\vec u}$, the curve $\gamma_{\vec u}$ runs
 Hence $\length\gamma_{\vec u}=4$ for any $\vec u$, and 
 \[\overline{\length\gamma_{\vec u}} =4.\]
 It follows that $2\cdot \pi =k\cdot 4$.
-Therefore, Crofton's formula holds for arbitrary smooth curves.
+Therefore, \ref{crofton-formula} holds for smooth curves.
 
-Applying the same argument together with \ref{adex:integral-length}, we get that Crofton's formula holds for arbitrary Lipschitz curves.
+Applying the same argument together with \ref{adex:integral-length}, we get that \ref{crofton-formula} holds for arbitrary Lipschitz curves.
 Further, since an arc length parametrization of any rectifiable curve is Lipschitz, \ref{ex:cont-length} implies \ref{crofton-formula} for arbitrary rectifiable curves.
 
 It remains to consider the nonrectifiable case;
@@ -482,9 +482,11 @@ For any $u,v\in \mathbb{S}^2$, we have
 \end{thm}
 
 \parit{Proof.}
-The short arc $\gamma$ of a great circle%
+Let $\gamma$ be the short arcof a great circle%
 \footnote{A great circle is the intersection of $\mathbb{S}^2$ with a plane passing thru sphere's center.
-Equivalently, it is a circle of radius 1 contained in $\mathbb{S}^2$.}  from $u$ to $v$ in $\mathbb{S}^2$ has length $\measuredangle(u,v)$.
+Equivalently, it is a circle of radius 1 contained in $\mathbb{S}^2$.}
+from $u$ to $v$ in $\mathbb{S}^2$.
+Note that $\length\gamma=\measuredangle(u,v)$.
 Therefore,
 \[\dist{u}{v}{\mathbb{S}^2}\le\measuredangle(u,v).\]
 
@@ -552,7 +554,7 @@ Applying \ref{obs:S2-length} again, we get
 \qeds
 
 \begin{thm}{Exercise}\label{ex:antipodal}
-Describe a simple closed spherical curve that does not pass thru a pair of antipodal points and does not lie in any open  hemisphere.
+Describe a simple closed spherical curve that does not pass thru a pair of antipodal points and does not lie in any hemisphere.
 \end{thm}
 
 

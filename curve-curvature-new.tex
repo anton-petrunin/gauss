@@ -104,8 +104,8 @@ where $\times$ denotes the \index{vector product}\emph{vector product} (also kno
 \begin{thm}{Exercise}\label{ex:curvature-graph}
 Apply the formulas in the previous exercise to show that if $f$ is a smooth real function,
 then its graph $y=f(x)$  has curvature
-\[\kur(p)=\frac{|f''(x)|}{(1+f'(x)^2)^{\frac32}}\]
-at the point $p=(x,f(x))$.
+\[\kur=\frac{|f''(x)|}{(1+f'(x)^2)^{\frac32}}\]
+at the point $(x,f(x))$.
 \end{thm}
 
 \begin{thm}{Advanced exercise}\label{ex:approximation-const-curvature}
@@ -219,11 +219,11 @@ Then
 
 \end{thm}
 
-The 2-dimensional case of this theorem was proved by Istv\'{a}n F\'{a}ry \cite{fary1950}.
-It was generalized by Don Chakerian \cite{chakerian1962} to higher dimensions.
 This theorem has many interesting and very different proofs;
 a number of them are collected by Serge Tabachnikov~\cite{tabachnikov}.
-The following exercise will guide you thru another proof by Don Chakerian \cite{chakerian1964}.
+The 2-dimensional case of this theorem was proved by Istv\'{a}n F\'{a}ry \cite{fary1950}.
+It was generalized by Don Chakerian \cite{chakerian1962} to higher dimensions.
+The following exercise will guide you thru another proof of him \cite{chakerian1964}.
 Yet another proof is given in Section~\ref{sec:DNA-poly}.
 
 \begin{thm}{Exercise}\label{ex:DNA}
@@ -268,13 +268,13 @@ Recall that a map is monotone if the inverse image of any point in the target sp
 Let $\gamma$ be a smooth convex plane curve.
 
 \begin{subthm}{prop:convex-monotone:closed}
-If $\gamma$ is closed, then its tangent indicatrix $\tan$ defines a monotone map $\mathbb{S}^1\to \mathbb{S}^1$;
-in other words, $\tan$ is a parametrization of the unit circle.
+Suppose $\gamma$ is closed and it is parametrized as $\gamma\:\mathbb{S}^1\to \mathbb{R}^2$.
+Then its tangent indicatrix $\tan\:\mathbb{S}^1\to\mathbb{S}^1$ is a monotone map.
 \end{subthm}
 
 \begin{subthm}{prop:convex-monotone:open}
-If $\gamma$ is open, then its tangent indicatrix $\tan$ defines a monotone map to an interval in a closed semicircle;
-in other words, $\tan$ is a parametrization of an interval in a unit semicircle.
+Suppose $\gamma$ is open, it is parametrized as $\gamma\:\mathbb{R}\to \mathbb{R}^2$.
+Then its tangent indicatrix $\tan\:\mathbb{R}\to \mathbb{S}^1$ defines a monotone map to an interval in a closed semicircle.
 \end{subthm}
 
 \end{thm}
@@ -332,9 +332,10 @@ It follows that $\tan\:\mathbb{S}^1\to \mathbb{S}^1$ is monotone.
 The same argument in \ref{SHORT.prop:convex-monotone:closed} shows that $\tan$ is a monotone map to its image.
 Evidently, the image is a connected set in $\mathbb{S}^1$.
 It remains to show that the image lies in a semicircle;
-in other words, there is a unit vector $\vec w$ such that 
+in other words, 
 \[\measuredangle(\vec w,\tan(s))\ge\tfrac\pi2
-\quad\text{for any}\quad
+\quad\text{for some}\quad \vec w
+\quad\text{and any}\quad
 s.
 \eqlbl{eq:<(w,tan).pi/2}
 \]
@@ -346,8 +347,8 @@ s.
 
 Since $\gamma$ is open, it bounds an unbounded convex closed region $F$.
 As before we assume that $F$ lies on the left from $\gamma$.
-Note that there is a half-line, say $h$, that lies in~$F$.
 
+Note that there is a half-line, say $h$, that lies in~$F$.
 Indeed, we can assume that the origin $o$ lies in~$F$.
 Consider a sequence of points $q_n\in F$ such that $|q_n|\z\to \infty$ as $n\to \infty$.
 Denote by $\vec v_n$ the unit vector in the direction of $q_n$; that is $\vec v_n=\tfrac{q_n}{|q_n|}$.
@@ -548,6 +549,13 @@ Show that
 Let $\kur$ be a smooth nonnegative function defined on $[0,\ell]$.
 Show that there is a smooth unit-speed curve $\gamma\:[0,\ell]\to\mathbb{R}^3$ with curvature function $\kur(s)$ for any $s$ such that the distance $|\gamma(\ell)-\gamma(0)|$ is arbitrarily close to $\ell$.
 \end{thm}
+
+\begin{wrapfigure}{r}{39 mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-283}
+\vskip0mm
+\end{wrapfigure}
 
 \begin{thm}{Advanced exercise}\label{ex:gromov-twist}
 Let $\gamma$ be a closed smooth space curve with curvature at most 2.
