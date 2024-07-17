@@ -240,13 +240,14 @@ Show that the evolvent of a constant slope curve is a plane curve.
 
 \begin{thm}{Theorem}
 Suppose $\gamma$ is a smooth space curve with nonvanishing torsion $\tor$ and (therefore) curvature $\kur$.
-Then $\gamma$ lies in a unit sphere if and only if 
+Then $\gamma$ lies on a unit sphere if and only if 
 the following identity holds true:
 \[\left|\frac{\kur'}{\tor}\right|=\kur\cdot\sqrt{\kur^2-1}.\]
 \end{thm}
 
-The proof is another application of the Frenet formulas;
-we present it in the form of a guided exercise:
+The proof is another application of the Frenet formulas.
+We present it in the form of a guided exercise;
+the only-if part follows from \ref{SHORT.ex:spherical-frenet:kur-tor}, and the if part from \ref{SHORT.ex:spherical-frenet:f}.
 
 \begin{thm}{Exercise}\label{ex:spherical-frenet}
 Suppose $\gamma$ is a smooth unit-speed space curve.
@@ -273,11 +274,9 @@ Use \ref{SHORT.ex:spherical-frenet:beta} to show that if $\gamma$ is closed, the
 \begin{subthm}{ex:spherical-frenet:kur-tor} Assume the torsion of $\gamma$ does not vanish.
 Use \ref{SHORT.ex:spherical-frenet:tau}--\ref{SHORT.ex:spherical-frenet:beta} to show that 
 \[\left|\frac{\kur'}{\tor}\right|=\kur\cdot\sqrt{\kur^2-1}.\]
-(It proves the only-if part of the theorem.)
 \end{subthm}
 Now assume $\gamma$ is a space curve that satisfies the identity in \ref{SHORT.ex:spherical-frenet:kur-tor}.
 \begin{subthm}{ex:spherical-frenet:f} Show that $p=\gamma+\tfrac1\kur\cdot \norm+\tfrac{\kur'}{\kur^2\cdot\tor}\cdot\bi$ is constant; conclude that $\gamma$ lies in the unit sphere centered at~$p$.
-(It proves the if part of the theorem.)
 \end{subthm}
 
 \end{thm}
