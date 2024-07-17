@@ -155,8 +155,10 @@ Moreover, if $\gamma$ is closed, we allow the inscribed polygonal line $p_0\dots
 
 \end{thm}
 
+{
+
 \begin{wrapfigure}[7]{o}{40 mm}
-\vskip-4mm
+\vskip-8mm
 \centering
 \includegraphics{mppics/pic-55}
 \vskip0mm
@@ -180,6 +182,8 @@ p_i&=\gamma(t_i),
 \end{align*}
 Let us use indexes modulo $n$;
 so $p_{n+1}\z=p_1$.
+
+}
 
 Since the curvature of line segments vanishes, 
 the total curvature of the polygonal line $p_0\dots p_n$ is the sum of external angles $\theta_i$.
@@ -221,7 +225,7 @@ Use the above results to give another solution to Exercise \ref{ex:length-dist:s
 %%%%%% Exchanged the statement of this exercise with ex:length-dist as the other one came before.
 
 \begin{subthm}{ex:sef-intersection:<2pi}
-Draw a smooth plane curve $\gamma$ that has a self-intersection and such that $\tc\gamma<2\cdot\pi$.
+Draw a smooth plane curve $\gamma$ with a self-intersection, such that $\tc\gamma<2\cdot\pi$.
 \end{subthm}
 
 \end{thm}
@@ -246,21 +250,7 @@ Lines crossing a curve at four points as in the exercise are called \index{alter
 It turns out that any {}\emph{nontrivial knot} admits an alternating quadrisecant \cite{denne};
 according to the exercise, the latter implies the so-called {}\emph{F\'ary--Milnor theorem} --- \textit{the total curvature of any knot exceeds~$4\cdot \pi$}; see \cite{petrunin-stadler} and the references therein.
 
-The following exercise states that the inequality in \ref{prop:inscribed-total-curvature} is optimal.
 
-\begin{thm}{Exercise}\label{ex:total-curvature=}
-Show that for any smooth space curve $\gamma$ we have 
-\[\tc\gamma=\sup\{\tc\beta\},\]
-where the least upper bound is taken over all polygonal lines~$\beta$ inscribed in $\gamma$
-(if $\gamma$ is closed, then we assume so is $\beta$).
-\end{thm}
-
-This exercise can be used to define the total curvature of an arbitrary curve~$\gamma$.
-Namely, it can be defined as {}\textit{the least upper bound on the total curvatures of nondegenerate polygonal lines inscribed in~$\gamma$.}
-
-It is possible to generalize most of the statements in this chapter to the (nonsmooth) curves of finite total curvature.
-This theory was developed by Alexandr Alexandrov and Yuri Reshetnyak \cite{aleksandrov-reshetnyak};
-a good survey on the subject is written by John Sullivan \cite{sullivan-curves}.
 
 \section[\texorpdfstring{What if $\Phi(\gamma)=2\cdot \pi$?}{What if Φ(γ)=2·π?}]{What if $\bm{\Phi(\gamma)=2\cdot \pi}$?}
 
@@ -308,8 +298,8 @@ By the triangle inequality for angles (\ref{thm:spherical-triangle-inq}),
 \eqlbl{eq:spheric-triangle}
 \]
 
-\begin{wrapfigure}[9]{r}{37 mm}
-\vskip-2mm
+\begin{wrapfigure}{r}{30 mm}
+\vskip-5mm
 \centering
 \includegraphics{mppics/pic-56}
 \vskip0mm
@@ -368,7 +358,7 @@ Denote by $\theta_i$ the external angle at $p_i$.
 Denote by $o$ the center of the ball.
 Consider a sequence of triangles 
 \[\triangle q_0q_1s_0\cong \triangle p_0p_1o,\ \ \triangle q_1q_2s_1\cong \triangle p_1p_2o,\ \dots\]
-such that the points $q_0,q_1\dots$ lie on one line in that order and all the $s_i$'s lie on one side from this line.
+such that the points $q_0,q_1,\dots$ lie on one line in that order and all the $s_i$'s lie on one side from this line.
 
 Note that 
 \[|s_n-s_0|=\length (p_1\dots p_n).\]
@@ -394,14 +384,6 @@ Therefore,
 \end{align*}
 \qedsf
 
-\begin{thm}{Exercise}\label{ex:tc-rectifiable}
-Suppose that a curve $\gamma\:[0,1]\to\mathbb{R}^3$ has bounded total curvature in the generalized sense;
-that is, there is an upper bound on the total curvatures of polygonal lines inscribed in~$\gamma$.
-
-Show that $\gamma$ is rectifiable.
-Construct an example showing that the converse does not hold. 
-\end{thm}
-
 Let us mention the following  generalization of the DNA inequality;
 it was proved by Jeffrey Lagarias and Thomas Richardson \cite{lagarias-richardso}; another proof is given by Alexander Nazarov and Fedor Petrov \cite{nazarov-petrov}.
 Both proofs are annoyingly tricky.
@@ -410,4 +392,31 @@ Both proofs are annoyingly tricky.
 Let $\alpha$ be a closed curve that lies in a convex plane figure bounded by a curve $\gamma$
 Then the average curvature of $\alpha$ is not less than the average curvature of $\gamma$.
 
+\end{thm}
+
+\section{Generalized curvature}
+
+The following exercise states that the inequality in \ref{prop:inscribed-total-curvature} is optimal.
+
+\begin{thm}{Exercise}\label{ex:total-curvature=}
+Show that for any smooth space curve $\gamma$ we have 
+\[\tc\gamma=\sup\{\tc\beta\},\]
+where the least upper bound is taken over all polygonal lines~$\beta$ inscribed in $\gamma$
+(if $\gamma$ is closed, then we assume so is $\beta$).
+\end{thm}
+
+This equality can be used to define the total curvature of an arbitrary curve~$\gamma$.
+Namely, it can be defined as {}\textit{the least upper bound on the total curvatures of nondegenerate polygonal lines inscribed in~$\gamma$.}
+
+This theory was developed by Alexandr Alexandrov and Yuri Reshetnyak \cite{aleksandrov-reshetnyak};
+a good survey on the subject is written by John Sullivan \cite{sullivan-curves}.
+It is possible to generalize most of the statements in this chapter to the curves of finite total curvature in this generalized sense.
+
+
+\begin{thm}{Exercise}\label{ex:tc-rectifiable}
+Suppose that a curve $\gamma\:[0,1]\to\mathbb{R}^3$ has bounded total curvature in the generalized sense;
+that is, there is an upper bound on the total curvatures of polygonal lines inscribed in~$\gamma$.
+
+Show that $\gamma$ is rectifiable.
+Construct an example showing that the converse does not hold. 
 \end{thm}

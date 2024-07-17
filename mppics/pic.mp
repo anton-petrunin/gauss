@@ -2025,7 +2025,7 @@ endfig;
 
 beginfig(56) 
 save u;
-u:=1.4cm;
+u:=1cm;
 
 z.a0=(0,0)*u;
 z.a1=(1,1.2)*u;
