@@ -1,9 +1,9 @@
 \chapter{Curvatures}
 \label{chap:surface-curvature}
 
-In the previous chapter, we learned that the tangent plane $\T_p$ to any surface $\Sigma$ has first-order contact with it at $p$.
-This means that up to first order, all surfaces locally look the same.
-This is not the case for second-order approximations, which are determined by the principal curvatures of the surface.
+In the previous chapter, we learned that the tangent plane to any smooth surface has first-order contact with it.
+This means that up to first order, all surfaces locally look the same at a given point.
+This is not the case for second-order approximations, which are determined by the principal curvatures.
 
 \section{Tangent-normal coordinates} \label{sec:lmn}
 \index{tangent-normal coordinates}
@@ -68,9 +68,9 @@ where $M_p$ is the so-called \index{Hessian matrix}\emph{Hessian matrix} of $f$ 
 Note that tangent-normal coordinates give an almost canonical coordinate system in a neighborhood of $p$;
 it is unique up to a rotation of the $(x,y)$-plane.
 Rotating the $(x,y)$-plane results in rewriting 
-the matrix $M_p$ in the new basis.
+the Hessian matrix $M_p$ in the new basis.
 
-Since the Hessian matrix $M_p$ is symmetric, by the spectral theorem (\ref{thm:spectral}) it is diagonalizable by orthogonal matrices.
+Since $M_p$ is symmetric, by the spectral theorem (\ref{thm:spectral}) it is diagonalizable by orthogonal matrices.
 That is, by rotating the $(x,y)$-plane we can assume that $m=0$ in \ref{eq:hessian}.
 In this case,
 \[M_p=\begin{pmatrix}
@@ -97,7 +97,8 @@ The eigendirections of $M_p$ are called the {}\emph{principal directions} of $\S
 Note that if $k_1(p)\ne k_2(p)$, then $p$ has exactly two principal directions, which are perpendicular to each other;
 if $k_1(p)\z= k_2(p)$, then all tangent directions at $p$ are principal.
 
-Note that if we reverse the orientation of $\Sigma$, then the principal curvatures switch their signs and indexes; that is, $k_1$ becomes $-k_2$ and $k_2$ becomes $-k_1$.
+Note that if we reverse the orientation of $\Sigma$, then the principal curvatures switch their signs and indexes.
+(One may say that $k_1$ becomes $-k_2$ and $k_2$ becomes $-k_1$).
 
 A smooth curve on a surface $\Sigma$ that always runs in the principal directions is called a \index{line of curvature}\emph{line of curvature} of~$\Sigma$.
 If $k_1(p)\ne k_2(p)$, then there is a chart $(u,v)\mapsto s(u,v)$ at $p$ with coordinate lines formed by lines of curvature (it follows from \ref{ex:lin-ind-chart}).
@@ -173,7 +174,19 @@ In the following definitions, we use the notion of directional derivative and di
 
 Let $p$ be a point on a smooth surface $\Sigma$ with orientation defined by the unit normal field $\Norm$.
 Given $\vec w\in \T_p$,
-the \index{shape operator}\emph{shape operator} of $\vec w$ is defined by
+the \index{shape operator}\emph{shape operator}%
+\footnote{
+The following bilinear forms on a tangent plane  
+\begin{align*}
+\mathrm{I}(\vec v,\vec w)&=\langle\vec v,\vec w\rangle,
+&
+\mathrm{II}(\vec v,\vec w)&=\langle\Shape\vec v,\vec w\rangle,
+&
+\mathrm{III}(\vec v,\vec w)&=\langle\Shape\vec v,\Shape\vec w\rangle
+\end{align*}
+are called the \index{fundamental form}\emph{first, second, and third fundamental forms}, respectively.
+These forms were introduced before the shape operator, but we will not touch them.
+} of $\vec w$ is defined by
 \[\Shape_p\vec w=-D_{\vec w}\Norm.\]
 Equivalently, the shape operator can be defined by
 \[\Shape=-d\Norm,\eqlbl{eq:shape=-L}\] 
@@ -186,19 +199,7 @@ Therefore, $\Shape_p$ is indeed a linear operator $\T_p\to \T_p$ (the latter als
 For a point $p\in \Sigma$, the shape operator of a tangent vector $\vec w\in \T_p$ will be denoted by $\Shape\vec w$ if it is clear from the context which base point $p$ and which surface we are working with;
 otherwise, we may use the notations 
 \[\Shape_p(\vec w)\quad\text{or}\quad \Shape_p(\vec w)_\Sigma\]
-as the situation requires.%
-\footnote{
-The following bilinear forms on a tangent plane  
-\begin{align*}
-\mathrm{I}(\vec v,\vec w)&=\langle\vec v,\vec w\rangle,
-&
-\mathrm{II}(\vec v,\vec w)&=\langle\Shape\vec v,\vec w\rangle,
-&
-\mathrm{III}(\vec v,\vec w)&=\langle\Shape\vec v,\Shape\vec w\rangle
-\end{align*}
-are called the \index{fundamental form}\emph{first, second, and third fundamental forms}, respectively.
-These forms were introduced before the shape operator, but we will not touch them.
-}
+as the situation requires.
 
 \begin{thm}{Theorem}\label{thm:shape-chart}
 Suppose $(u,v)\mapsto s(u,v)$ is a smooth map to a smooth surface $\Sigma$ with unit normal field $\Norm$.
@@ -284,14 +285,14 @@ Then
 &
 \Shape\vec j&=m\cdot \vec i+n\cdot\vec j;
 \end{align*}
-that is, the multiplication by the Hessian matrix at $p$ describes its shape operator.
+that is, the multiplication by the Hessian matrix describes its shape operator.
 \end{thm}
 
 
 This corollary illustrates the close relationship between the curvatures of a surface and its shape operator; the principal curvatures of $\Sigma$ at $p$ are the eigenvalues of $\Shape_p$, the principal directions are the eigendirections of $\Shape_p$, the Gaussian curvature is the determinant of $\Shape_p$, and the mean curvature is the trace of $\Shape_p$.
 
 
-Since the Hessian matrix is symmetric, the corollary also implies that $\Shape$ is self-adjoint which gives another way to solve \ref{ex:self-adjoint}.
+Since the Hessian matrix is symmetric, the corollary also implies that $\Shape$ is self-adjoint which gives a way to solve \ref{ex:self-adjoint}.
 
 \parit{Proof.}
 Note that $s\:(u,v)\mapsto (u,v,f(u,v))$ is a chart of $\Sigma$ that covers~$p$.
@@ -320,10 +321,6 @@ Then
 \end{thm}
 
 \parit{Proof.}
-Observe that the tangent planes $\T_p\Sigma=\T_{\Norm(p)}\mathbb{S}^2$ are parallel for any $p\in\Sigma$.
-Indeed, both of these planes are perpendicular to $\Norm(p)$. 
-
-
 Choose an orthonormal basis of $\T_p$ consisting of principal directions,
 so the shape operator can be expressed by the matrix 
 $(\begin{smallmatrix}
@@ -394,7 +391,7 @@ denote by $\Norm(u,v)$ the normal unit vector at $s(u,v)$.
 
 Suppose $\vec u$ and $\vec v$ are principal directions at each point;
 let $0$ and $k\z=k(u,v)$ be their principal curvatures.
-Assume $k$ does not vanish and $|s_u|=1$ on some $u$-coordinate line of $\Sigma$.
+Assume $k$ does not vanish and $|s_u|=1$ on some $u$-coordinate line.
 
 \begin{subthm}{ex:flat-plane:orthonormal}
 Show that $\Norm(u,v)$, $\vec u(u,v)$, and $\vec v(u,v)$ form an orthonormal frame for any $(u,v)$.
@@ -439,10 +436,10 @@ The mentioned theorem was originally proved by Aleksey Pogorelov \cite[II §3 Th
 
 Suppose $\gamma$ is a smooth curve in a smooth oriented surface~$\Sigma$.
 As usual, we denote by $\Norm$ the unit normal field on~$\Sigma$.
-
 Without loss of generality, we may assume that $\gamma$ is unit-speed;
 in this case, $\tan(s)=\gamma'(s)$ is its tangent indicatrix.
 Let us use the shortcut notation $\Norm(s)\z=\Norm(\gamma(s))$.
+
 Note that the unit vectors $\tan(s)$ and $\Norm(s)$ are orthogonal.
 Therefore there is a unique unit vector $\mu(s)$\index{10tmn@$\tan$, $\mu$, $\Norm$ (Darboux frame)} such that 
 $\tan(s),\mu(s),\Norm(s)$ is an oriented orthonormal basis;
@@ -488,9 +485,9 @@ Then
 where $k_n$ denotes the normal curvature of $\gamma$ at $s_0$, and $\Shape_p$ is the shape operator at~$p$.
 \end{thm}
 
-Note that according to the proposition, the normal curvature of a smooth curve in $\Sigma$ is completely determined by the velocity vector $\vec v$ at the point~$p$.
-For that reason, the normal curvature is also denoted by $k_{\vec v}$;\index{10k@$k_{\vec v}$ (normal curvature)}
-according to the proposition,
+Note that according to the proposition, the normal curvature of a smooth curve in $\Sigma$ is completely determined by the velocity vector $\vec v$.
+For that reason, the normal curvature is also denoted by $k_{\vec v}$,\index{10k@$k_{\vec v}$ (normal curvature)}
+and
 \[k_{\vec v}=\langle \Shape_p(\vec v),\vec v\rangle\]
 for any unit vector $\vec v$ in $\T_p$.
 
@@ -531,7 +528,8 @@ Show that the sum of the normal curvatures for any pair of orthogonal directions
 
 \begin{thm}{Exercise}\label{ex:average}
 Let $p$ be a point on a smooth surface.
-Show that $\tfrac38\cdot H(p)^2-\tfrac12\cdot K(p)$ is the average value of $k_{\vec w}^2$ for all unit vectors ${\vec w}\in\T_p$.
+Show that $\tfrac38\cdot H(p)^2-\tfrac12\cdot K(p)$ is the average value squared normal curvatures at $p$;
+that is, the average value of $k_{\vec w}^2$ for all unit vectors ${\vec w}\in\T_p$.
 \end{thm}
 
 
@@ -648,7 +646,7 @@ Show that Question \ref{quest:lagunov} has an affirmative answer if $V$ is a bod
 \end{thm}
 
 Later (see \ref{ex:convex-lagunov})
-we will show that the answer is ``yes'' for convex surfaces.
+we will show that the answer is ``yes'' for convex sets.
 Now we are going to show by an example that the answer is ``no'' in the general case;
 it was constructed by Vladimir Lagunov \cite{lagunov-1961}.
 
@@ -665,10 +663,10 @@ The boundary of $V_1$ has 3 components, each of which is a smooth sphere.
 \end{figure}
 
 We assume that the curves have curvature at most~1.
-Moreover, except for the almost horizontal parts, the curve has absolute curvature close to 1 all the time.
-The only thick part in $V$ is the place where all three boundary components come close together;
-the remaining part of $V$ is assumed to be very thin.
-It could be arranged that the radius $r$ of the maximal ball in $V$ is just a bit above 
+Moreover, except for the almost horizontal parts, the curves have absolute curvature close to 1 all the time.
+The only thick part in $V_1$ is the place where all three boundary components come close together;
+the remaining part of $V_1$ is assumed to be very thin.
+It could be arranged that the radius $r$ of the maximal ball in $V_1$ is just a bit above 
 $r_2=\tfrac2{\sqrt{3}}-1$.
 (The small black disc on the diagram has radius $r_2$,
 assuming that the three big circles are unit.)
@@ -681,18 +679,18 @@ In particular, we may assume that $r<\tfrac16$.
 \vskip0mm
 \end{wrapfigure}
 
-Exercise \ref{ex:principal-revolution} gives formulas for the principal curvatures of the boundary of $V$;
+Exercise \ref{ex:principal-revolution} gives formulas for the principal curvatures of the boundary of $V_1$;
 which imply that both principal curvatures are at most 1 in absolute value. 
 
 It remains to modify $V_1$ to make its boundary connected without increasing the bounds on its principal curvatures and without allowing larger balls inside.
 
 Note that each sphere in the boundary contains two flat discs;
 they come into pairs closely lying to each other. 
-Let us drill thru two of such pairs and reconnect the holes by another body of revolution whose 
+Let us drill thru two of such pairs and reconnect the holes by a body of revolution whose 
 axis is shifted but stays parallel to the axis of $V_1$.
-Denote the obtained body by $V_2$; the cross-section of the obtained body is shown on the diagram. 
+Denote the obtained body by $V_2$; its cross-section is shown on the diagram. 
 
-Then repeat the operation for the other two pairs.
+Let us repeat the operation for the other two pairs of discs.
 Denote the obtained body by $V_3$.
 
 Note that the boundary of $V_3$ is connected.

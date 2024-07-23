@@ -47,7 +47,7 @@ y&=g_\pm(x,z)=\pm \sqrt{1-x^2-z^2},
 x&=h_\pm(y,z)=\pm \sqrt{1-y^2-z^2},
 \end{align*}
 where each function $f_+$, $f_-$, $g_+$, $g_-$, $h_+$, and $h_-$ is defined in an open unit disc.
-Any point $p\in\mathbb{S}^2$ lies in one of these graphs therefore $\mathbb{S}^2$ is a surface.
+Any point $p\in\mathbb{S}^2$ lies in one of these graphs therefore $\mathbb{S}^2$ is a smooth surface.
 
 \section{Surfaces with boundary}
 A connected subset in a surface that is bounded by one or more piecewise
@@ -67,9 +67,9 @@ On the other hand, the open disc
 is not proper; this set is neither open nor closed in $\mathbb{R}^3$.
 
 A compact surface without boundary is called \index{closed!surface}\emph{closed}
-(this term is closely related to the {}\emph{closed curve}, but has nothing to do with {}\emph{closed set}).
+(this term is closely related to the closed curve, but has nothing to do with closed set).
 
-A proper noncompact surface without boundary is called \index{open!surface}\emph{open} (again, the term {}\emph{open curve} is relevant, but {}\emph{open set} is not).
+A proper noncompact surface without boundary is called \index{open!surface}\emph{open} (again, the term open curve is relevant, but open set is not).
 
 For example, the paraboloid $z=x^2+y^2$
 is an open surface; the 
@@ -98,7 +98,7 @@ Then any connected component $\Sigma$ of the level set  $f(x,y,z)=0$ is a smooth
 Fix $p\in\Sigma$.
 Since $\nabla_p f\ne 0$ we have 
 $f_x(p)\ne 0$,
-$f_y(p)\ne 0$,
+$f_y(p)\ne 0$, or
 $f_z(p)\ne 0$.
 We may assume that $f_z(p)\ne 0$;
 otherwise, permute the coordinates $x,y,z$.
@@ -117,7 +117,7 @@ a~smooth surface?
 
 Let $U$ be an open domain in $\mathbb{R}^2$, and $s\:U\to \mathbb{R}^3$ be a smooth map.
 We say that $s$ is \index{regular!parametrization}\emph{regular} if its Jacobian has maximal rank;
-in this case, it means that the vectors $s_u$ and $s_v$ are linearly independent at any $(u,v)\in U$;
+in this case, it means that the derivatives $s_u$ and $s_v$ are linearly independent at any $(u,v)\in U$;
 equivalently $s_u\times s_v\ne 0$, where $\times$ denotes the vector product.
 
 \begin{thm}{Proposition}\label{prop:graph-chart}
@@ -152,11 +152,11 @@ such that $w(0,0)=(0,0)$ and  $s\circ w(x,y)=(x,y,f(x,y))$ where $f=z\circ w$.
 That is, the subset $s\circ w(W)\subset \Sigma$ is 
 the graph of $f$.
 
-By the inverse function theorem, $w(W)$ is an open subset of $U$.
+Again, by the inverse function theorem, $w(W)$ is an open subset of $U$.
 Since $s$ is an embedding, our graph is open in~$\Sigma$;
 that is, there is an open set $V\subset \mathbb{R}^3$ such that $s\circ w(W)=V\cap \Sigma$ is a graph of smooth function.
 
-Since $p$ is arbitrary, we get that $\Sigma$ is a surface.
+Since $p$ is arbitrary, we get that $\Sigma$ is a smooth surface.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:9-surf}

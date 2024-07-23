@@ -47,9 +47,9 @@ if $\gamma_2$ runs in one of these closed regions, and
 $p$ lies on~$\gamma_1$.
 
 Further, suppose $\gamma_2$ is a simple closed plane curve.
-By Jordan's theorem (\ref{thm:jordan}), $\gamma_2$ cuts from the plane two regions, one is bounded and the other is unbounded.
-We say that a point lies {}\emph{inside} (respectively, {}\emph{outside}) $\gamma_2$ if it lies in the bounded region (respectively, unbounded) region.
-In this case, we say that $\gamma_1$ supports $\gamma_2$ \index{supporting!curve}\emph{from the inside} (\index{supporting!curve}\emph{from the outside}) if $\gamma_1$ supports $\gamma_2$ and lies in the region inside $\gamma_2$ (respectively outside $\gamma_2$). 
+By Jordan's theorem (\ref{thm:jordan}), $\gamma_2$ cuts from the plane two closed regions, one is bounded and the other is unbounded.
+We say that a point $p$ lies {}\emph{inside} (respectively, {}\emph{outside}) $\gamma_2$ if $p$ lies in the bounded region (respectively, unbounded) region.
+In this case, we say that $\gamma_1$ supports $\gamma_2$ \index{supporting!curve}\emph{from the inside} (\index{supporting!curve}\emph{from the outside}) if $\gamma_1$ supports $\gamma_2$ and lies inside $\gamma_2$ (respectively outside $\gamma_2$). 
 
 Note that if $\gamma_1$ and $\gamma_2$ share a point $p=\gamma_1(t_1)=\gamma_2(t_2)$ and are not tangent at $t_1$ and $t_2$, then at time $t_2$ the curve $\gamma_2$ crosses $\gamma_1$  moving from one of its sides to the other.
 It follows that $\gamma_1$ cannot locally support $\gamma_2$ at the time parameters $t_1$ and $t_2$.
@@ -88,10 +88,9 @@ where $\skur_1$ and $\skur_2$ denote the signed curvature of $\gamma_1$ and $\ga
 
 A partial converse also holds.
 Namely, if $\gamma_1$ and $\gamma_2$ tangent and cooriented at the time parameters $t_1$ and $t_2$,
-then $\gamma_1$ locally supports $\gamma_2$ from the left (right) at the time parameters $t_1$ and $t_2$
-if 
-\[\skur_1(t_1)> \skur_2(t_2)\quad(\text{respectively}\quad \skur_1(t_1)< \skur_2(t_2)).\]
-
+and 
+\[\skur_1(t_1)> \skur_2(t_2)\quad(\text{respectively}\quad \skur_1(t_1)< \skur_2(t_2)),\]
+then $\gamma_1$ locally supports $\gamma_2$ from the left (right) at the time parameters $t_1$ and $t_2$. 
 \end{thm}
 
 \parit{Proof.} Without loss of generality, we can assume that $t_1=t_2=0$, the shared point $\gamma_1(0)=\gamma_2(0)$ is the origin, and the velocity vectors $\gamma'_1(0)$, $\gamma'_2(0)$ point in the direction of $x$-axis.
@@ -104,6 +103,8 @@ Clearly, $\gamma_1$ supports $\gamma_2$ from the left (right) if
 \[f_1(x)\ge f_2(x)\quad(\text{respectively}\quad f_1(x)\le f_2(x))\]
 for all sufficiently small values of~$x$.
 Applying the second derivative test the the function $f_1-f_2$, we get the result.
+
+The partial converse can be proved along the same lines.
 \qeds
 
 
@@ -245,7 +246,8 @@ Since a line has vanishing curvature, the supporting test (\ref{prop:supporting-
 Denote by $K$ the convex hull of~$F$.
 If $F$ is not convex, then $F$ is a proper subset of~$K$.
 Therefore, the boundary $\partial K$ contains a line segment that is not a part of $\partial F$.
-In other words, there is a line that supports $\gamma$ at two points, say $x$ and $y$, that divide $\gamma$ in two arcs $\gamma_1$ and $\gamma_2$, both distinct from the line segment $[x,y]$.
+In other words, there is a line that supports $\gamma$ at two points, say $x$ and $y$.
+These points divide $\gamma$ in two arcs $\gamma_1$ and $\gamma_2$, both distinct from the line segment $[x,y]$.
 
 Note that one of the arcs $\gamma_1$ or $\gamma_2$ is parametrized from $x$ to $y$ and the other from $y$ to~$x$.
 Passing to a smaller arc if necessary we can ensure that only its endpoints lie on the line. 

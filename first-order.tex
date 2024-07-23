@@ -18,7 +18,7 @@ the tangent plane of $\Sigma$ at $p$ is spanned by vectors $s_u(u_0,v_0)$ and $s
 \end{thm}
 
 The tangent plane to $\Sigma$ at $p$ is usually denoted by $\T_p$ or $\T_p\Sigma$.
-This plane $\T_p$ might be considered as a linear subspace of $\mathbb{R}^3$ or as a parallel plane passing thru $p$;
+This plane might be considered as a linear subspace of $\mathbb{R}^3$ or as a parallel plane passing thru $p$;
 the latter is sometimes called the \index{tangent!plane}\emph{affine tangent plane}.
 The affine tangent plane can be interpreted as the best approximation at~$p$ of the surface $\Sigma$ by a plane.
 More precisely, 
@@ -60,14 +60,13 @@ Show that a neighborhood of $p$ in $\Sigma$ is a graph $z=f(x,y)$ of a smooth fu
 Show that if a smooth surface $\Sigma$ meets a plane $\Pi$ at a single point $p$, then $\Pi$ is tangent to $\Sigma$ at~$p$.
 \end{thm}
 
-
 \section{Directional derivative}\label{sec:dirder}
 
 In this section, we extend the definition of directional derivative to smooth functions defined on smooth surfaces.
-First, let us recall the standard definition.
+First, let us recall the standard definition for the plane.
 
-Suppose $f$ is a function defined at a point $p$ in the space, and $\vec w$ a vector.
-Consider the function
+Given a point $p\in \mathbb{R}^2$, a vector $\vec w\in \mathbb{R}^2$ and a function $f\:\mathbb{R}^2\to\mathbb{R}$, 
+consider the function
 $h(t)=f(p+t\cdot\vec w)$.
 Then the directional derivative of $f$ at $p$ along $\vec w$ is defined as \index{10d@$D_{\vec{w}}f$ (directional derivative)}
 \[D_{\vec w}f(p)\df h'(0).\]
@@ -85,15 +84,14 @@ and is denoted by
 \[D_{\vec{w}}f,\quad D_{\vec{w}}f(p), \quad\text{or}\quad D_{\vec{w}}f(p)_\Sigma\] 
 --- we may omit $p$ and $\Sigma$ if it is clear from the context.
 
-Moreover, if $(u,v)\mapsto s(u,v)$ is a local chart at $p$, then 
-\[D_{\vec{w}}f=a\cdot (f\circ s)_u+b\cdot (f\circ s)_v,\]
-where $\vec{w}=a\cdot s_u +b\cdot s_v$. 
+Moreover, if $(u,v)\mapsto s(u,v)$ is a local chart and $\vec{w}=a\cdot s_u +b\cdot s_v$ at $p$, then 
+\[D_{\vec{w}}f=a\cdot (f\circ s)_u+b\cdot (f\circ s)_v.\]
+
 \end{thm}
 
 Note that our definition agrees with the standard definition of the directional derivative if $\Sigma$ is a plane.
 Indeed, in this case, $\gamma(t)=p+\vec w\cdot t$ is a curve in $\Sigma$ that starts at $p$ with velocity vector $\vec{w}$.
-For a general surface, the point $p+\vec w\cdot t$ might not lie on the surface.
-Therefore the function $f$ might be undefined at this point.
+For a general surface, the point $p+\vec w\cdot t$ might not lie on the surface, and the function $f$ might be undefined at this point.
 In this case, the standard definition does not work.
 
 \parit{Proof.}
@@ -149,7 +147,7 @@ We will not use this approach in the sequel, but it is better to know about it.
 
 A tangent vector $\vec w\in \T_p$ to a smooth surface $\Sigma$ 
 defines a linear functional%
-\footnote{Term {}\emph{functional} is used for functions that take a function as an argument and return a number.} $D_{\vec w}$ that swallows a smooth function $\phi$ defined in a neighborhood of $p$ in $\Sigma$ and spits its directional derivative $D_{\vec w}\phi$.
+\footnote{Term {}\emph{functional} is used for functions that take a function as an argument and return a number.} $D_{\vec w}$ that swallows a smooth function $\phi$ on $\Sigma$ and spits its directional derivative $D_{\vec w}\phi$.
 Note that the functional $D$ obeys the product rule:
 \[D_{\vec w}(\phi\cdot\psi)=(D_{\vec w}\phi)\cdot \psi(p)+\phi(p)\cdot(D_{\vec w}\psi).
 \eqlbl{eq:tangent-functional}\]
@@ -175,22 +173,23 @@ Note that $D_{\vec w} s\in \T_{p_1}\Sigma_1$ for any $\vec w\in \T_{p_0}$.
 Indeed, choose a curve $\gamma_0$ in $\Sigma_0$ such that $\gamma_0(0)=p_0$ and $\gamma_0'(0)=\vec w$.
 Observe that $\gamma_1= s\circ \gamma_0$ is a smooth curve in $\Sigma_1$. 
 By the definition of the directional derivative, we have $D_{\vec w} s=\gamma_1'(0)$.
-It remains to note that $\gamma_1(0)\z= p_1$.
-Therefore its velocity $\gamma_1'(0)$ is in $\T_{ p_1}\Sigma_1$.
+Note that $\gamma_1(0)\z= p_1$.
+Since $\gamma_1$ lies in $\Sigma_1$,
+its velocity $\gamma_1'(0)$ is in $\T_{ p_1}\Sigma_1$.
 
 By \ref{def:directional-derivative},
 $\vec w \mapsto D_{\vec w} s$ defines a linear map $\T_{p_0}\Sigma_0\z\to \T_{ p_1}\Sigma_1$;
 that is,
 \[D_{c\cdot \vec w} s=c\cdot D_{\vec w} s
 \quad\text{and}\quad D_{\vec v+ \vec w} s=D_{\vec v} s+ D_{\vec w} s\]
-for $c\in\mathbb{R}$ and $\vec v, \vec w\in\T_{p_0}$.
+for any $c\in\mathbb{R}$ and $\vec v, \vec w\in\T_{p_0}$.
 The map $d_{p_0} s\:\T_{p_0}\Sigma_0\z\to \T_{ p_1}\Sigma_1$ defined by
 \[d_{p_0} s\:\vec w \mapsto D_{\vec w} s\]
 is called the \index{differential}\emph{differential} of $s$ at~$p_0$.
 
 The differential $d_{p_0} s$ can be described by a $2{\times}2$-matrix $M$ in orthonormal bases of $\T_{p_0}\Sigma_0$ and $\T_{p_1}\Sigma_1$.
 Set $\jac_{p_0} s=|\det M|$; this value  
-does not depend on the choice of orthonormal bases in $\T_{p_0}$ and $\T_{p_1}\Sigma_1$.%
+does not depend on the choice of orthonormal bases in $\T_{p_0}\Sigma_0$ and $\T_{p_1}\Sigma_1$.%
 \label{page:|L|}\index{10d@$d_p f$ (differential)}%
 \footnote{The value $\jac_{p_0} s$ has the following geometric meaning:
 if $R_0$ is a region in $\T_{p_0}$ and $R_1=(d_{p_0} s)(R_0)$, then
@@ -264,7 +263,7 @@ Follows from \ref{eq:jac-composition} and the definition of surface integral.
 Let $\Sigma_1$ and $\Sigma_2$ be two smooth surfaces in the Euclidean space.
 A map $f\:\Sigma_1\to \Sigma_2$ is called \index{length-nonincreasing}\emph{length-nonincreasing} if, for any curve $\gamma$ in $\Sigma$ we have $\length\gamma\ge \length (f\circ\gamma)$. 
 The following theorem provides a more natural definition of area.
-Despite its intuitive statement, the proof is well beyond the scope of this book;
+Despite its intuitive statement, the proof is well beyond the scope of our book;
 it is based on a generalization of the area formula that works for Lipschitz maps \cite[3.2.3]{federer}.
 
 \begin{thm}{Theorem}\label{thm:area-axioms}
@@ -303,7 +302,7 @@ This example and different approaches to the notion of the area are discussed in
 A unit vector that is normal to $\T_p$ is usually denoted by $\Norm(p)$;
 it is uniquely defined up to sign.\index{10nu@$\Norm$ (normal field)}
 
-A surface $\Sigma$ is called \index{oriented surface}\emph{oriented} if it is equipped with a unit normal vector field $\Norm$;
+A surface $\Sigma$ is called \index{oriented surface}\emph{oriented} if it is equipped with a unit normal vector field $\Norm$ or \index{normal!filed}\emph{normal filed};
 that is, a continuous map $p\mapsto \Norm(p)$ such that $\Norm(p)\perp\T_p$ and $|\Norm(p)|=1$ for any~$p$.
 The choice of the field $\Norm$ is called the {}\emph{orientation} of~$\Sigma$.
 A surface $\Sigma$ is called {}\emph{orientable} if it can be oriented.

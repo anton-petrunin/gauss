@@ -101,7 +101,7 @@ For more on the geometry of bicycle tracks, see the survey of Robert Foote, Mark
 \section{Fundamental theorem of plane curves}
 
 \begin{thm}{Theorem}\label{thm:fund-curves-2D}
-Let $\skur(s)$ be a smooth real-valued function defined on a real interval $\mathbb{I}$.
+Let $s\mapsto \skur(s)$ be a smooth real-valued function defined on a real interval $\mathbb{I}$.
 Then there is a smooth unit-speed curve $\gamma\:\mathbb{I}\to\mathbb{R}^2$ with signed curvature $\skur(s)$.
 Moreover, $\gamma$ is uniquely defined up to a orientation-preserving motion of the plane.
 \end{thm}
@@ -341,7 +341,7 @@ Given a real parameter $\ell$, consider
 the curve $\gamma_\ell(t)\z=\gamma(t)\z+\ell\cdot\norm(t)$; it is called a \index{parallel!curve}\emph{parallel curve} of $\gamma$ at signed distance~$\ell$.
 
 \begin{subthm}{ex:length':reg}
-Show that the parametrization $\gamma_\ell$ is a regular if $\ell\cdot \skur(t)\ne 1$ for all $t$, where $\skur(t)$ denotes the signed curvature of~$\gamma$.
+Show that the parametrization $\gamma_\ell$ is a regular if $\ell\cdot \skur(t)_\gamma\ne 1$ for all~$t$.
 \end{subthm}
  
 \begin{subthm}{ex:length':formula}
@@ -352,7 +352,7 @@ for all $\ell$ sufficiently close to $0$.
 \end{subthm}
 
 \begin{subthm}{ex:length':antiformula}
-Describe an example showing that formula \ref{eq:length(parallel-curve)} does not hold for all~$\ell$. 
+Describe an example showing that formula \ref{eq:length(parallel-curve)} may not hold for some values~$\ell$. 
 \end{subthm}
 
 \end{thm}
@@ -472,16 +472,16 @@ Since $\skur(s)$ is decreasing, $r(s)$ is increasing;
 therefore $r'\ge 0$.
 It follows that $|\omega'(s)|= r'(s)$ and $\omega'(s)$ points in the direction of $\norm(s)$.
 
+Since $\norm'(s)=-\skur(s)\cdot\tan(s)$, the direction of $\omega'(s)$ cannot be constant on a nontrivial interval;
+in other words, the curve $s\mapsto \omega(s)$ contains no line segments.
 
-\begin{wrapfigure}[8]{o}{35 mm}
+\begin{wrapfigure}[5]{o}{35 mm}
 \vskip-0mm
 \centering
 \begin{lpic}[t(-0 mm),b(-0 mm),r(0 mm),l(0 mm)]{mppics/pic-84}
 \end{lpic}
 \end{wrapfigure}
 
-Since $\norm'(s)=-\skur(s)\cdot\tan(s)$, the direction of $\omega'(s)$ cannot be constant on a nontrivial interval;
-in other words, the curve $s\mapsto \omega(s)$ contains no line segments.
 In particular, $|\omega(s_1)-\omega(s_0)|\z<\length(\omega|_{[s_0,s_1]})$ for any $s_0<s_1$.
 Therefore, 
 \begin{align*}
@@ -494,8 +494,7 @@ Therefore,
 &=r(s_1)-r(s_0).
 \end{align*}
 In other words, the distance between the centers of $\sigma_{s_1}$ and $\sigma_{s_0}$
-is strictly less than the difference between their radii.
-Therefore, the osculating circle at $s_0$ lies inside the osculating circle at $s_1$ without touching it.
+is strictly less than the difference between their radii, hence the result.
 \qeds
 
 
@@ -508,9 +507,9 @@ in the proof, we showed that $(\tfrac1{\skur})'\cdot\norm$ is its velocity vecto
 
 \begin{thm}{Exercise}\label{ex:evolute}
 Let $\omega$ be the evolute of a smooth plane curve~$\gamma$.
-Suppose $\gamma$ has positive curvature and $\skur ^{\prime} \neq 0$ at all points.
+Suppose $\gamma$ has positive signed curvature $\skur$ and $\skur' \neq 0$ at all points.
 %%%%%%% Vertices haven't been defined yet.
-Find the Frenet frame and curvature of \(\omega\) in terms of Frenet frame $(\tan,\norm)$ and curvature $\kappa$ of $\gamma$.
+Find the Frenet frame and curvature of \(\omega\) in terms of $\skur$ and Frenet frame $(\tan,\norm)$ of $\gamma$.
 \end{thm}
 
 The following theorem states formally that 
