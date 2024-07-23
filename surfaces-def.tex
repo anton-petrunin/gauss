@@ -7,7 +7,7 @@ We will be most interested in smooth surfaces defined in the following section.
 The following general definition will be used only a few times.
 
 A connected subset $\Sigma$ in the Euclidean space $\mathbb{R}^3$
-is called a \index{surface}\index{topological!surface}\emph{topological surface} (more precisely an {}\emph{embedded surface without boundary}) 
+is called a \index{surface}\index{topological!surface}\emph{topological surface} (more precisely an {}\emph{embedded topological surface without boundary}) 
 if any point of $p\in \Sigma$ admits a neighborhood $W$ in $\Sigma$ 
 that can be parametrized by an open subset in the Euclidean plane; 
 that is, there is a homeomorphism $U\to W$ from an open set $U\subset \mathbb{R}^2$; see Section~\ref{sec:topology}.
@@ -53,9 +53,8 @@ Any point $p\in\mathbb{S}^2$ lies in one of these graphs therefore $\mathbb{S}^2
 A connected subset in a surface that is bounded by one or more piecewise
 smooth curves is called a \index{surface!with boundary}\emph{surface with boundary}; such curves form the \index{boundary line}\emph{boundary line} of the surface.
 
-When we say {}\emph{surface} we usually mean a {}\emph{smooth surface without boundary};
-we may use the term {}\emph{surface without boundary} if we need to emphasize it;
-otherwise, we may use the term {}\emph{surface with possibly nonempty boundary}.
+When we say {}\emph{surface} we usually mean a {}\emph{smooth surface without boundary}.
+If needed, one may use the term {}\emph{surface with possibly nonempty boundary}.
 
 \section{Proper, closed, and open surfaces}
 If the surface $\Sigma$ is formed by a closed set, then it is called \index{proper!surface}\emph{proper}.
@@ -78,12 +77,13 @@ sphere $\mathbb{S}^2$ is a closed surface.
 Note that any proper surface without boundary is either closed or open.
 
 The following claim is a three-dimensional analog of the plane separation theorem (\ref{ex:proper-curve}).
-It might look obvious, but the proof is nontrivial; it uses the so-called {}\emph{Alexander's duality} which is a classical technique in algebraic topology \cite[see][]{hatcher}.
-We omit its proof since it would take us far away from the main subject.
+It might look obvious, but the proof is nontrivial; it uses the so-called {}\emph{Alexander's duality} from algebraic topology \cite{hatcher}.
 
 \begin{thm}{Claim}\label{clm:proper-divides}
 The complement of any proper topological surface without boundary (or, equivalently any open or closed topological surface) has exactly two connected components. 
 \end{thm}
+
+We omit the proof; it would take us far away from the main subject.
 
 \section{Implicitly defined surfaces}
 
@@ -116,7 +116,7 @@ a~smooth surface?
 \index{parametrization}
 
 Let $U$ be an open domain in $\mathbb{R}^2$, and $s\:U\to \mathbb{R}^3$ be a smooth map.
-We say that $s$ is \index{regular!parametrization}\emph{regular} if its Jacobian has maximal rank;
+We say that $s$ is \index{regular!parametrization}\emph{regular} if its Jacobian matrix has maximal rank;
 in this case, it means that the derivatives $s_u$ and $s_v$ are linearly independent at any $(u,v)\in U$;
 equivalently $s_u\times s_v\ne 0$, where $\times$ denotes the vector product.
 
@@ -167,7 +167,7 @@ If we have $s$ and $\Sigma$ as in the proposition, then we say that $s$ is a \in
 
 Not all smooth surfaces can be described by such a parametrization;
 for example, the sphere $\mathbb{S}^2$ cannot.
-However, we will show that \textit{any smooth surface $\Sigma$ admits a local parametrization at any point $p\in\Sigma$}; that is,  $p$ admits an open neighborhood $W\subset \Sigma$ with a smooth regular parametrization~$s$.
+However, \textit{any smooth surface $\Sigma$ admits a local parametrization at any point $p\in\Sigma$}; that is,  $p$ admits an open neighborhood $W\subset \Sigma$ with a smooth regular parametrization~$s$.
 In this case, any point in $W$ can be described by two parameters, usually denoted by $u$ and $v$, 
 which are called \index{local!coordinates}\emph{local coordinates} at~$p$.
 The map $s$ is called a \index{chart}\emph{chart} of~$\Sigma$.
@@ -202,18 +202,6 @@ Consider the following map
 Show that $s$ is a chart of the unit sphere centered at $(0,0,1)$; describe the image of~$s$.
 \end{thm}
 
-\begin{wrapfigure}{i}{31 mm}
-\vskip-6mm
-\centering
-\includegraphics{mppics/pic-750}
-\vskip0mm
-\end{wrapfigure}
-
-The map $s$ in the exercise can be visualized using the following map
-\[(u,v,1)\mapsto (\tfrac{2\cdot u}{1+u^2+v^2},\tfrac{2\cdot v}{1+u^2+v^2},\tfrac{2}{1+u^2+v^2})\]
-which is called \index{stereographic projection}\emph{stereographic projection} from the plane $z=1$ to the unit sphere with center at $(0,0,1)$.
-Note that the point $(u,v,1)$ and its image lie on the same half-line emerging from the origin. 
-
 \begin{wrapfigure}{o}{31 mm}
 \vskip-3mm
 \centering
@@ -240,13 +228,13 @@ Show that the surface of revolution around the $x$-axis with generatrix $\gamma$
 \section{Global parametrizations}\label{sec:global-parametrizations}
 \index{parametrization}
 
-A surface can be described by an embedding from a known surface to the space.
+A surface can be described by an embedding from a known surface.
 
 For example, consider the ellipsoid
 \[\Theta=\set{(x,y,z)\in\mathbb{R}^3}{\tfrac{x^2}{a^2}+\tfrac{y^2}{b^2}+\tfrac{z^2}{c^2}=1}\]
 for positive constants $a$, $b$, and~$c$.
 By \ref{prop:implicit-surface}, $\Theta$ is a smooth surface.
-Indeed, set $h(x,y,z)=\tfrac{x^2}{a^2}+\tfrac{y^2}{b^2}+\tfrac{z^2}{c^2}$,
+Indeed, let $h(x,y,z)=\tfrac{x^2}{a^2}+\tfrac{y^2}{b^2}+\tfrac{z^2}{c^2}$,
 then
 \[\nabla h(x,y,z)=(\tfrac{2}{a^2}\cdot x,\tfrac{2}{b^2}\cdot y,\tfrac{2}{c^2}\cdot z).\]
 Therefore, $\nabla h\ne0$ if $h=1$; that is, $1$ is a regular value of~$h$.
