@@ -26,14 +26,14 @@ it has \index{order of contact}\emph{first-order contact} with $\Sigma$ at $p$;
 that is, $\rho(q)\z=o(|p-q|)$, where $q\in \Sigma$, and $\rho(q)$ denotes the distance from $q$ to $\T_p$.
 
 An assignment of a tangent vector $\vec v_p$ to each point $p$ of the surface $\Sigma$ is called a \emph{tangent vector field} if $\vec v_p$ depends smoothly of $p$.
-More precisely, for any chart $s$ of $\Sigma$ we have
+More precisely, for any chart $s$ we have
 \[\vec v_{s(u,v)}=a(u,v)\cdot s_u+b(u,v)\cdot s_v\]
 for smooth functions $a$ and $b$ defined in the domain $s$.
 
 \parit{Proof.}
 Fix a chart $s$ at~$p$.
 Assume $\gamma$ is a smooth curve that starts at~$p$.
-Without loss of generality, we can assume that $\gamma$ is covered by the chart;
+We can assume that $\gamma$ is covered by the chart;
 in particular, there are smooth functions $t\mapsto u(t)$ and $t\mapsto v(t)$ such that 
 \[\gamma(t)=s(u(t),v(t)).\]
 Applying the chain rule, we get
@@ -136,7 +136,7 @@ D_{\vec x} v&=0,
 D_{\vec y} v&>0.
 \end{align*}
 
-Conclude that there is a chart $(u,v)\mapsto s(u,v)$ of $\Sigma$ at $p$ such that $\vec x$ and $\vec y$ are tangent to the coordinate lines.
+Conclude that there is a chart of $\Sigma$ at $p$ such that $\vec x$ and $\vec y$ are tangent to its coordinate lines.
 \end{thm}
 
 
@@ -169,13 +169,14 @@ To take a directional derivative of the map we should take the  directional deri
 
 Assume $s$ maps one smooth surface $\Sigma_0$ to another $\Sigma_1$.
 Let $p_0\in \Sigma_0$ and $p_1=s(p_0)$.
-Note that $D_{\vec w} s\in \T_{p_1}\Sigma_1$ for any $\vec w\in \T_{p_0}$.
-Indeed, choose a curve $\gamma_0$ in $\Sigma_0$ such that $\gamma_0(0)=p_0$ and $\gamma_0'(0)=\vec w$.
+Choose a curve $\gamma_0$ in $\Sigma_0$ such that $\gamma_0(0)=p_0$ and $\gamma_0'(0)=\vec w$.
 Observe that $\gamma_1= s\circ \gamma_0$ is a smooth curve in $\Sigma_1$. 
+Note that $\gamma_1(0)\z= p_1$, curve $\gamma_1$ lies in $\Sigma_1$,
+and hence its velocity vector $\gamma_1'(0)$ is in $\T_{ p_1}\Sigma_1$.
 By the definition of the directional derivative, we have $D_{\vec w} s=\gamma_1'(0)$.
-Note that $\gamma_1(0)\z= p_1$.
-Since $\gamma_1$ lies in $\Sigma_1$,
-its velocity $\gamma_1'(0)$ is in $\T_{ p_1}\Sigma_1$.
+Therefore, $D_{\vec w} s\in \T_{p_1}\Sigma_1$ for any $\vec w\in \T_{p_0}$.
+
+
 
 By \ref{def:directional-derivative},
 $\vec w \mapsto D_{\vec w} s$ defines a linear map $\T_{p_0}\Sigma_0\z\to \T_{ p_1}\Sigma_1$;
@@ -248,11 +249,16 @@ The area of a region $R$ in a smooth surface $\Sigma$ is defined as the surface 
 The following proposition is the substitution rule for surface integral.
 
 \begin{thm}{Area formula}\label{prop:surface-integral}
-Suppose $s\:\Sigma_0\to \Sigma_1$ is a smooth parametrization of a smooth surface $\Sigma_1$ by  a smooth surface $\Sigma_0$.
-Consider a region $R\subset \Sigma_0$ and a smooth function $f\:\Sigma_1\to\mathbb{R}$. Then if either $R$ is compact or $f$ is non-negative, we have
-\[\iint_R (f\circ s)\cdot \jac  s=\int_{s(R)}f.  \]
+Suppose $s\:\Sigma_0\to \Sigma_1$ is a diffeomorphism between a smooth surfaces.
+Consider a region $R\subset \Sigma_0$ and a smooth function $f\:\Sigma_1\to\mathbb{R}$.
+Assume that either $R$ is compact or $f$ is non-negative.
+Then 
+\[\iint_R (f\circ s)\cdot \jac s
+=
+\int_{s(R)}f.
+\]
 In particular, if $f\equiv 1$, we have
-\[\iint_R \jac  s=\area [s(R)].\]
+\[\iint_R \jac s=\area [s(R)].\]
 \end{thm}
 
 
@@ -271,7 +277,7 @@ The area functional satisfies the following properties:
 
 \begin{subthm}{thm:area-axioms:aditivity}
 Sigma-aditivity: 
-Let $R_1,R_2,\dots$ be a sequence of disjoint regions in a smooth surface.
+Let $R_1,R_2,\dots$ be a sequence of disjoint Borel sets in a smooth surface.
 Then 
 \[\area (R_1\cup R_2\cup \dots)=\area R_1+\area R_2+{}\dots\]
 \end{subthm}
@@ -279,7 +285,7 @@ Then
 \begin{subthm}{thm:area-axioms:monotonicity}
 Monotonicity:
 Let $f\:\Sigma_1\to \Sigma_2$ be length-nonincreasing map between two smooth surfaces.
-Suppose that $R_1\subset \Sigma_1$ and $R_2\subset \Sigma_2$ are regions such that $f(R_1)\supset R_2$.
+Suppose that $R_1\subset \Sigma_1$ and $R_2\subset \Sigma_2$ are Borel sets such that $f(R_1)\supset R_2$.
 Then 
 \[\area R_1\ge \area R_2.\]
 \end{subthm}
@@ -288,7 +294,7 @@ Then
 Unit square has unit area. 
 \end{subthm}
 
-Moreover, the area functional is uniquely defined by these properties.
+Moreover, the area functional is uniquely defined by these properties on all Borel sets.
 \end{thm}
 
 \parit{Remark.}
@@ -338,8 +344,8 @@ Show that $\Sigma$ lies in a plane perpendicular to $\nu$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:implicit-orientable}
-Let $h:\mathbb{R}^3\to\mathbb{R}$ be a smooth function with $0$ as a regular value and $\Sigma$ a surface described as a connected component of the level set $h(x,y,z)=0$.
-Show that $\Sigma$ is orientable.
+Let $0$ be a regular value of a smooth function $h:\mathbb{R}^3\to\mathbb{R}$.
+Show that a connected component of the level set $h(x,y,z)=0$ is an oriented surface.
 \end{thm}
 
 Recall that any proper surface $\Sigma$ without boundary in the Euclidean space divides it into two connected components (\ref{clm:proper-divides}).
@@ -355,9 +361,9 @@ In particular, it follows that the Möbius strip does not lie on a proper smooth
 
 \begin{thm}{Lemma}\label{lem:reg-section}
 Let $\Sigma$ be a smooth surface.
-Suppose $f\:\mathbb{R}^3\z\to\mathbb{R}$ is a smooth function.
+Suppose $f\:\Sigma\z\to\mathbb{R}$ is a smooth function.
 Then for any constant $r_0$ there is an arbitrarily close value $r$ such that 
-each connected component of the intersection of $\Sigma$ with the level set $L_r=\set{x\in\mathbb{R}^3}{f(x)=r}$ is a smooth curve.
+each connected component of the level set $L_r=\set{x\in\mathbb{R}^3}{f(x)=r}$ is a smooth curve.
 \end{thm}
 
 \parit{Proof.}
@@ -366,7 +372,7 @@ Note that the composition $f\circ s_i$ is a smooth function for any~$i$.
 By Sard's lemma (\ref{lem:sard}), $r$ is a regular value of each $f\circ s_i$ for almost all $r$.
 
 Fix such a value $r$ sufficiently close to $r_0$, and consider the level set $L_r$ described by the equation $f(x,y,z)=r$.
-Any point in the intersection $\Sigma\cap L_r$ lies in the image of one of the charts.
+Any point on $L_r$ lies in the image of one of the charts.
 From above, it admits a neighborhood which is a smooth curve;
 hence the result.
 \qeds
