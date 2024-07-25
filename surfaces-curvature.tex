@@ -8,7 +8,8 @@ This is not the case for second-order approximations, which are determined by th
 \section{Tangent-normal coordinates} \label{sec:lmn}
 \index{tangent-normal coordinates}
 
-Fix a point $p$ in a smooth oriented surface~$\Sigma$.
+Fix a point $p$ in a smooth oriented surface~$\Sigma$;
+let $\Norm$ be its normal field.
 Consider a coordinate system $(x,y,z)$ with origin at $p$ such that the $(x,y)$-plane coincides with $\T_p$, and the $z$-axis points in the direction of the normal vector $\Norm(p)$. Such coordinates are called \emph{tangent-normal coordinates}. 
 By \ref{ex:vertical-tangent}, we can present $\Sigma$ locally at $p$ as a graph $z=f(x,y)$ of a smooth function. 
 Note that 
@@ -58,6 +59,13 @@ where $M_p$ is the so-called \index{Hessian matrix}\emph{Hessian matrix} of $f$ 
  \\
  m
  &n
+ \end{pmatrix}
+ =\begin{pmatrix}
+ f_{xx}(0,0)
+ &f_{xy}(0,0)
+ \\
+ f_{yx}(0,0)
+ &f_{yy}(0,0)
  \end{pmatrix}.
 \eqlbl{eq:hessian}
 \]
@@ -65,7 +73,7 @@ where $M_p$ is the so-called \index{Hessian matrix}\emph{Hessian matrix} of $f$ 
 
 \section{Principal curvatures}\label{sec:Principal curvatures}
 
-Note that tangent-normal coordinates give an almost canonical coordinate system in a neighborhood of $p$;
+Note that tangent-normal coordinates give an almost canonically depend on the point $p$;
 it is unique up to a rotation of the $(x,y)$-plane.
 Rotating the $(x,y)$-plane results in rewriting 
 the Hessian matrix $M_p$ in the new basis.
@@ -153,11 +161,12 @@ m&n
 \end{smallmatrix}
 )$;
 that is,
-\[H=\ell+n\] 
+\[H=\ell+n.\] 
+Рeversing the orientation of $\Sigma$ changes the sign of the mean curvature.
 
 A surface with vanishing mean curvature is called \index{minimal surface}\emph{minimal}.
 
-Note that reversing the orientation of $\Sigma$ changes the sign of the mean curvature.
+
 
 \begin{thm}{Exercise}\label{ex:re-scale-surface-curvature}
 Let $\Sigma$ be an oriented surface, and let $\Sigma_{\lambda}$ be a scaled copy of $\Sigma$ with factor $\lambda > 0$; that is, $\Sigma_{\lambda}$ consists of the points $\lambda \cdot x$ with $x \in \Sigma$. Show that
@@ -350,8 +359,8 @@ Suppose the principal curvatures of $\Sigma$ are 1 at all points.
 \begin{subthm}{ex:normal-curvature=const:a} Show that $\Shape_p(\vec w)=\vec w$ for any $p\in\Sigma$ and $\vec w\in \T_p\Sigma$.
 \end{subthm}
 
-\begin{subthm}{ex:normal-curvature=const:b}Show that $p+\Norm(p)$ is constant; that is, the point $c=p+\Norm(p)$ does not depend on $p\in\Sigma$.
-Conclude that $\Sigma$ is a subset of the unit sphere centered at~$c$.
+\begin{subthm}{ex:normal-curvature=const:b}Show that $q=p+\Norm(p)$ is constant; that is, the point $q$ does not depend on $p\in\Sigma$.
+Conclude that $\Sigma$ is a subset of the unit sphere centered at~$q$.
 \end{subthm}
 
 \end{thm}
@@ -414,7 +423,7 @@ Show that for any fixed $v_0$ the value $\tfrac1{k(u,v_0)}$ depends linearly on 
 \end{thm}
 
 This exercise is the key part in the proof of the following theorem:
-\textit{Any open surface with vanishing Gauss curvature is \index{cylindrical surface}\emph{cylindrical}};
+\textit{Any open surface with vanishing Gauss curvature is \index{cylindrical surface}\emph{cylindrical}}\,;
 that is, the surface is swept out by a family of parallel lines.
 Exercises \ref{ex:lin-ind-chart} and \ref{ex:line-cylinder} illustrate other parts of this proof.
 The mentioned theorem was originally proved by Aleksey Pogorelov \cite[II §3 Thm 2]{pogorelov1956} in more general settings; it was rediscovered couple of times after that \cite{hartman-nirenberg,massey1962}.
