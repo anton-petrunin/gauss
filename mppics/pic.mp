@@ -3314,6 +3314,38 @@ label.top (btex $p^s$ etex, z.pp);
 endfig;
 
 
+beginfig(251) 
+save u;
+u:=1cm;
+
+z.a0=(0,0)*u;
+z.a2=(2,1)*u;
+z.a3=(3,0)*u;
+
+save p; path p[];
+p0=z.a0{1,1}..z.a2..{1,-2}z.a3;
+z.b0=z.a0+1*direction 0 of p0;
+z.b3=z.a3+.5*direction 3 of p0;
+
+labelarcsprof(z.b0, z.a0, z.a3, 7,8, btex $\alpha_i$ etex);
+whitelabelarcsprof2(z.a0, z.a3, (z.a3+2*(z.a3-z.b3)), 7,8, btex $\beta_i$ etex);
+draw p0 pensemibold;
+%draw (z.a0+.5*(z.a0-z.b0))--z.b0 penhair;
+%draw (z.a3+2*(z.a3-z.b3))--z.b3 penhair;
+%drawarrow subpath (0,.5) of p0;
+drawarrow z.a0--(z.a3+1.4*unitvector(z.a0-z.a3));
+
+dOt z.a0,z.a3;
+
+
+label.top(btex $\gamma_i$ etex, point 1 of p0);
+label.bot(btex $\vec w_i$ etex, .5[z.a0,z.a3]);
+label.lft(btex $\gamma_i(a)$ etex, z.a0+(0,2));
+label.rt(btex $\gamma_i(b)$ etex, z.a3+(0,2));
+%label.lft(btex $\gamma'(a)$ etex, z.b0);
+%label.rt(btex $\gamma'(b)$ etex, z.b3);
+%label.top(btex $\alpha(b)-\alpha(a)$ etex, .5[z.a0,z.a3]);
+endfig;
 
 beginfig(260)
 save u,p;
@@ -3364,6 +3396,7 @@ draw subpath (2.5,4) of p4;
 
 dOt z2,z3;
 endfig;
+
 
 beginfig(283) 
 save u,p;

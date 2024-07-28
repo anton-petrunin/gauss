@@ -522,6 +522,29 @@ Start with the curve $\gamma_1$ shown on the diagram.
 To obtain $\gamma_2$, slightly unbend (that is, decrease the curvature of) the dashed arc of $\gamma_1$.
 
 
+\parbf{\ref{ex:bow'}}; \ref{SHORT.ex:bow'+}.
+We can assume that $\vec u=\tan_1(a)\z=\tan_2(a)$.
+Mimic the first part of the proof of bow lemma to show that 
+\[\measuredangle(\vec u,\tan_1(s))\ge \measuredangle(\vec u,\tan_2(s))\]
+for any $s$.
+Deduce that
+\[\langle \vec u,\vec w_1\rangle \le \langle \vec u,\vec w_2\rangle\]
+and 
+\[|\vec w_1^\perp| \ge |\vec w_2^\perp|,\]
+where $\vec v^\perp$ denotes the projection of $\vec v$ to the plane perpendicular to $\vec u$.
+Make one more step.
+
+\parit{\ref{SHORT.ex:bow'-}.} Look at the diagram and think.
+
+\begin{Figure}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-257}
+\vskip0mm
+\end{Figure}
+
+\parit{Remark.} It is instructive to compare the exercise and the chord lemma (\ref{lem:chord}).
+
 \parbf{\ref{ex:length-dist}}; \ref{SHORT.ex:length-dist:>}.
 Choose a value $s_0\in[a,b]$ that splits the total curvature of $\gamma$ into two equal parts.
 Observe that $\measuredangle(\gamma'(s_0),\gamma'(s))\le \theta$ for any~$s$.
@@ -668,7 +691,7 @@ The latter can be done by straightforward calculations.
 {
 
 \begin{wrapfigure}{r}{25 mm}
-\vskip-6mm
+\vskip-0mm
 \centering
 \begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{asy/helix(1)}
 \lbl[br]{8,24;$\norm$}
@@ -875,16 +898,16 @@ We assume that $\gamma$ is unit-speed.
 Show that $\omega'=\tfrac{\skur'}{\skur^2}\cdot \norm$. 
 Conclude that $\omega$ has Frenet frame either $(\norm,-\tan)$ or $(-\norm,\tan)$, and its curvature is $|\tfrac{\kur^3}{\kur'}|$.
 
-\parbf{\ref{ex:3D-spiral}.}
-Start with a plane spiral curve as shown on the diagram.
-Applying \ref{thm:fund-curves}, increase the torsion of the dashed arc without changing the curvature until a self-intersection appears.
-
 \begin{wrapfigure}{r}{19 mm}
-\vskip-0mm
+\vskip-4mm
 \centering
 \includegraphics{mppics/pic-296}
 \vskip-0mm
 \end{wrapfigure}
+
+\parbf{\ref{ex:3D-spiral}.}
+Start with a plane spiral curve as shown on the diagram.
+Applying \ref{thm:fund-curves}, increase the torsion of the dashed arc without changing the curvature until a self-intersection appears.
 
 You may think that the dashed arc is very short, so the tangent vector $\tan$ is nearly constant on this arc. 
 Note that increasing the torsion can rotate normal vector $\norm$ arbitrary around $\tan$.

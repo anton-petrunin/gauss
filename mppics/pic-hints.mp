@@ -123,6 +123,32 @@ dOt z0,z4;
 label.top (btex $\gamma_1$ etex, z2);
 endfig;
 
+beginfig(257)
+save u,p;
+path p[];
+u:=1cm;
+
+z.a=(0,0)*u;
+z.m=(3,-1)*u;
+z.v=unitvector(0,1);
+z.b=(2,0)*u;
+
+p1=z.a{-2,-.7}...z.m{z.v}...{-2,.7}z.b;
+
+z.bb=z.m+(arclength subpath (1,2) of p1)*z.v;
+
+draw p1 pensemibold;
+draw z.m--z.bb pensemibold;
+draw z.b--z.a--z.bb dashed evenly;
+
+dOt z.a,z.b,z.bb;
+
+label.top(btex $\gamma_2(a)$ etex, z.a);
+label.bot(btex $\gamma_1(a)$ etex, z.a);
+label.bot(btex $\gamma_1(b)$ etex, z.b+(-2,0));
+label.top(btex $\gamma_2(b)$ etex, z.bb);
+endfig;
+
 beginfig(265);
 save u,p;
 path p[];
