@@ -521,6 +521,7 @@ Conclude that it must be $\ell$.
 Start with the curve $\gamma_1$ shown on the diagram.
 To obtain $\gamma_2$, slightly unbend (that is, decrease the curvature of) the dashed arc of $\gamma_1$.
 
+}
 
 \parbf{\ref{ex:bow'}}; \ref{SHORT.ex:bow'+}.
 We can assume that $\vec u=\tan_1(a)\z=\tan_2(a)$.
@@ -554,14 +555,14 @@ Part \ref{SHORT.ex:length-dist:self-intersection:>pi} is straightforward.
 For part \ref{SHORT.ex:length-dist:=} consider the concatenation of two equal line segments with the external angle $2\cdot\theta$ and smooth its joint. 
 
 
-}
-
 \parbf{\ref{ex:schwartz}.}
 Let $\ell=\length\gamma$.
 Suppose $\ell_1<\ell<\ell_2$.
 Let $\gamma_1$ be an arc of the unit circle with length $\ell$.
 
 Show that the distance between the endpoints of $\gamma_1$ is smaller than $|p-q|$, and apply the bow lemma (\ref{lem:bow}).
+
+\parit{Source:} The exercise is generally attributed to Hermann Schwarz \cite{shur}.
 
 
 \parbf{\ref{ex:loop}.}
@@ -653,6 +654,11 @@ Consider the closed polygonal line $acbd$.
 Observe that $\tc{acbd}=4\cdot\pi$.
 It remains to apply \ref{prop:inscribed-total-curvature}.
 
+\parit{Remarks.}
+Lines crossing a curve at four points as in the exercise are called \index{alternating quadrisecants}\emph{alternating quadrisecants}.
+It turns out that any {}\emph{nontrivial knot} admits an alternating quadrisecant \cite{denne};
+according to the exercise, the latter implies the so-called {}\emph{F\'ary--Milnor theorem} --- \textit{the total curvature of any knot exceeds~$4\cdot \pi$}; see \cite{petrunin-stadler} and the references therein.
+
 \parbf{\ref{ex:total-curvature=}.}
 By \ref{prop:inscribed-total-curvature}, $\tc\gamma\ge \tc\beta$;
 it remains to show that
@@ -738,6 +744,25 @@ Observe that $\tfrac{\gamma'\times\gamma''}{|\gamma'\times\gamma''|}$ is a unit 
 It remains to check that the sign is right.
 
 \parbf{\ref{ex:moment-curve}.} Apply \ref{ex:curvature-formulas:b} and \ref{ex:frenet}.
+
+\parbf{\ref{ex:bow-converse}.}
+We can assume that $t_0=0$ and $\gamma_i(0)\z=0$.
+Consider the functions
+\begin{align*}
+\rho_i(t)&\df|\gamma_i(t)|^2=\langle \gamma_i(t),\gamma_i(t)\rangle.
+\end{align*}
+Observe that $\rho_1\ge \rho_2$ and $\rho_i(0)=0$.
+Show that 
+\begin{align*}
+\rho_i'(0)&=0,
+&
+\rho_i''(0)&=2,
+\\
+\rho_i'''(0)&=0,
+&
+\rho_i''''(0)&=-2\cdot\kur(0)^2_{\gamma_i}.
+\end{align*}
+Make a conclusion. (Compare to \ref{ex:const-dist}.)
 
 \parbf{\ref{ex:torsion-indicatrix}.} Assume that the tangent indicatrix has no self-intersection.
 Show that it lies in an open hemisphere and argue as in Fenchel's theorem.
@@ -1352,6 +1377,8 @@ Use that $c'=0$ to show that $\langle\Norm_1,\Norm_2'\rangle=0$.
 Show that $\langle\Norm_2,\Norm_2'\rangle=0$.
 Conclude that $\Norm_2'$ is proportional to $\gamma'$.
 
+\parit{Source:} This is a result by Ferdinand Joachimsthal \cite{joachimsthal} generalized by Ossian Bonnet \cite{bonnet}.
+
 \parbf{\ref{ex:equidistant}};
 \ref{SHORT.ex:equidistant:smooth}.
 Fix~$t$.
@@ -1419,6 +1446,9 @@ Show and use that $\tfrac38$, $\tfrac38$, and $\tfrac18$ are the average values 
 \parbf{\ref{ex:meusnier}.}
 Use Meusnier's theorem (\ref{thm:meusnier}), to find the center and radius of curvature of $\gamma$ in terms of its normal curvature at $p$.
 Make a conclusion.
+
+\parit{Source:}
+This statement, as well as \ref{thm:meusnier} were proved by Jean Baptiste Meusnier \cite{meusnier}.
 
 \parbf{\ref{ex:principal-revolution}.}
 Use \ref{ex:line-of-curvature} and Meusnier's theorem (\ref{thm:meusnier}).
@@ -1637,6 +1667,9 @@ If $\bar\gamma$ is star-shaped with respect to a point $w$, then $w$ cannot cros
 Therefore, the function $t\mapsto h_t(w)$ is monotone on $\mathbb{S}^1$.
 Observe that this function cannot be constant, and arrive at a contradiction.
 
+\parit{Source:}
+This is due to Dmitri Panov \cite{panov-curves}.
+
 \parbf{\ref{ex:crosss}.}
 This problem follows easily from the so-called \index{Morse lemma}\emph{Morse lemma}.
 The following sketch is a slightly stripped version of it.
@@ -1699,7 +1732,9 @@ that is, a point $q\in F_\epsilon$ is mapped to a point $s(q)$ on the sphere tha
 Show that $s$ is a diffeomorphism from $F_\epsilon$ to the southern hemisphere of~$\Sigma$.
 It remains to observe that the unit disc is diffeomorphic to the hemisphere.
 
-\parbf{\ref{ex:saddle-linear}.} Apply \ref{prop:hat}.
+\parbf{\ref{ex:saddle-linear}.} 
+By the fundamental theorem of affine geometry, affine transformation is smooth.
+It remains to apply \ref{prop:hat}.
 
 \parbf{\ref{ex:between-parallels}.}
 Find an example among the surfaces of revolution;
@@ -1737,6 +1772,9 @@ On the other hand, since $\Sigma$ is a graph outside the compact set $K$, we hav
 Cut the lateral surface of the ice-mountain by a line from the cowboy to the tip.
 Unfold it on the plane (see the picture) and try to figure out what is the image of the strained lasso.
 
+\parit{Source:}
+We learned this problem from Joel Fine, who attributed it to Frederic Bourgeois \cite{fine}.
+
 \parbf{\ref{ex:length-dist-conv}.} 
 Note that by \ref{thm:convex-embedded}, $\Sigma$ bounds a strictly convex region.
 Therefore, we can assume that $\Norm(p)\ne\Norm(q)$; otherwise, $p=q$, and the inequality is evident.
@@ -1766,7 +1804,7 @@ Note that
 \[\length\hat\gamma=\length\gamma.\]
 
 
-Denote by $\bar\gamma$ the closest-point projection of $\hat\gamma$ on~$\Sigma$.
+Denote by $\bar\gamma$ the nearest-point projection of $\hat\gamma$ on~$\Sigma$.
 The curve $\bar\gamma$ lies in $\Sigma$, 
 it has the same endpoints as $\gamma$,
 and by \ref{thm:shorts+convex}
@@ -1775,8 +1813,8 @@ This means that $\gamma$ is not length minimizing ---
 a contradiction.
 
 \parbf{\ref{ex:intrinsic-diameter}.} 
-Show that the closest-point projection $\partial B\to\Sigma$ is surjective.
-Apply \ref{lem:closest-point-projection} and \ref{thm:area-axioms:monotonicity}.
+Show that the nearest-point projection $\partial B\to\Sigma$ is surjective.
+Apply \ref{lem:nearest-point-projection} and \ref{thm:area-axioms:monotonicity}.
 
 %\end{multicols}
 %\par\noindent\rule{\textwidth}{0.4pt}
@@ -2015,7 +2053,7 @@ Show and use that $\langle\gamma,\nu\rangle=|\gamma|\cdot\cos\theta$, $|\gamma'|
 \parit{\ref{SHORT.ex:bound-tc:d}.}
 Suppose $x,y$ are the points in the unit sphere that project to the ends of $\gamma$. 
 Connect $x$ to $y$ by a an arc of length $\le \pi$ in the sphere, project it to $\Sigma$.
-Apply \ref{lem:closest-point-projection} and use that $\gamma$ is a shortest path.
+Apply \ref{lem:nearest-point-projection} and use that $\gamma$ is a shortest path.
 
 \parit{\ref{SHORT.ex:bound-tc:e}.}
 Suppose $\gamma\:[0,\ell]\to\Sigma$ is a unit-speed parametrization.
@@ -2503,3 +2541,6 @@ Whence the statement follows.
 \parbf{\ref{ex:moon-}.}
 Mimic the proof of \ref{thm:moon-orginal} using \ref{ex:disc-:kg}.
 For the last statement, apply \ref{ex:disc-:area}.
+
+\parit{Source:}
+Suggested by Dmitri Burago.

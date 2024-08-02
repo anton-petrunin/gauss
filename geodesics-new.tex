@@ -73,34 +73,34 @@ Show that $\gamma$, parametrized by arc-length, is a geodesic on~$\Sigma$.
 
 \section{Existence and uniqueness}
 
-The following proposition says that the position of a particle that travels without friction depends smoothly on its initial position, initial velocity, and time. 
+The following proposition formalizes that the motion on a surface without friction and external forces depends smoothly on its initial data. 
 
 \begin{thm}{Proposition}\label{prop:geod-existence} 
 Let $\Sigma$ be a smooth surface without boundary.
 Given a tangent vector ${\vec v}$ to $\Sigma$ at a point $p$,
 there is a unique geodesic $\gamma\:\mathbb{I}\to \Sigma$ defined on a maximal open interval $\mathbb{I}\ni 0$ that starts at $p$ with velocity vector ${\vec v}$;
 that is, $\gamma(0)=p$ and $\gamma'(0)={\vec v}$.
-
 Moreover,
 \begin{subthm}{prop:geod-existence:smooth} the map $(p,{\vec v},t)\mapsto \gamma(t)$ is smooth in its domain of definition.
 \end{subthm}
 
-\begin{subthm}{prop:geod-existence:whole} if $\Sigma$ is proper, then $\mathbb{I}=\mathbb{R}$; that is, the maximal interval is the entire real line.
+\begin{subthm}{prop:geod-existence:whole}
+if $\Sigma$ is proper, then $\mathbb{I}=\mathbb{R}$; that is, $\gamma$ is defined on the entire real line.
 \end{subthm}
 
 \end{thm}
 
 A surface that satisfies the conclusion of \ref{SHORT.prop:geod-existence:whole} for any tangent vector ${\vec v}$ is said to be \index{geodesically complete}\emph{geodesically complete}.
-So part \ref{SHORT.prop:geod-existence:whole} says that any proper surface is geodesically complete.
-The latter statement is a part of the \index{Hopf--Rinow theorem}\emph{Hopf--Rinow theorem} \cite{hopf-rinow}.
+So part \ref{SHORT.prop:geod-existence:whole} says that \textit{any proper surface without boundary is geodesically complete}.
+This is a part of the \index{Hopf--Rinow theorem}\emph{Hopf--Rinow theorem} \cite{hopf-rinow}.
 
-The proof of this proposition uses the theorem on the existence of solutions for an initial value problem (\ref{thm:ODE}).
-The following lemma shows that the condition of being a geodesic can be stated as a second-order differential equation.
+The proof of this proposition uses the existence of solutions for an initial value problem (\ref{thm:ODE}).
+First, let us show that the definition of geodesic can be rewritten as a differential equation.
 
 \begin{thm}{Lemma}\label{lem:geodesic=2nd-order}
 Let $f$ be a smooth function defined on an open domain in $\mathbb{R}^2$.
 A smooth curve $t\mapsto \gamma(t)=(x(t),y(t),z(t))$ is a geodesic in the graph $z=f(x,y)$ if and only if $z(t)=f(x(t),y(t))$ for any $t$ and the functions $t\mapsto x(t)$ and $t\mapsto y(t)$
-satisfy the following differential equation
+satisfy a system of differential equations
 \[
 \begin{cases}
 x''=g(x,y,x',y'),
@@ -108,12 +108,14 @@ x''=g(x,y,x',y'),
 y''=h(x,y,x',y'),
 \end{cases}
 \]
-where $g$ and $h$ are smooth functions of four variables determined by~$f$.
+where $g$ and $h$ are smooth functions of four variables that uniquely determined by~$f$.
 \end{thm}
 
 The proof of the lemma is done by direct calculations.
 
-\parit{Proof.} In the following calculations, we often omit the arguments;
+\parit{Proof.} The first condition $z(t)=f(x(t),y(t))$ simply means that $\gamma(t)$ lies on the graph $z=f(x,y)$.
+
+In the following calculations, we often omit the arguments;
 in other words, we may use shortcuts $x=x(t)$, $f=f(x,y)=f(x(t),y(t))$, and so on.
 
 First, let us express $z''(t)$ in terms of $f$, $x(t)$, and $y(t)$.
@@ -167,10 +169,10 @@ It remains to plug in \ref{eq:def-geod} for $z''$, combine the similar terms, an
 
 \parit{Proof of \ref{prop:geod-existence}.}
 Let $z=f(x,y)$ be a description of $\Sigma$ in tangent-normal coordinates at~$p$.
-By Lemma \ref{lem:geodesic=2nd-order}, the condition $\gamma''(t)\perp\T_{\gamma(t)}$ can be written as a second-order differential equation.
+By Lemma \ref{lem:geodesic=2nd-order}, the condition $\gamma''(t)\perp\T_{\gamma(t)}$ can be written as a system of second-order differential equations.
 Applying the existence and uniqueness of the initial value problem (\ref{thm:ODE}) we get the existence and uniqueness of a geodesic $\gamma$ in an interval $(-\epsilon,\epsilon)$ for some $\epsilon>0$.
 
-Let us extend $\gamma$ to a maximal open interval $\mathbb{I}$.
+Let us extend the geodesic $\gamma$ to a maximal open interval $\mathbb{I}$.
 Suppose there is another geodesic $\gamma_1$ with the same initial data that is defined on a maximal open interval $\mathbb{I}_1$.
 Suppose $\gamma_1$ splits from $\gamma$ at some $t_0>0$;
 that is, $\gamma_1$ coincides with $\gamma$ on the interval $[0,t_0)$, but they are different on any interval $[0,t_0+\delta)$ with $\delta>0$.
@@ -184,11 +186,11 @@ in particular, $\mathbb{I}_1=\mathbb{I}$.
 Part \ref{SHORT.prop:geod-existence:smooth} follows since the solution of the initial value problem depends smoothly on the initial data (\ref{thm:ODE}).
 
 Assume \ref{SHORT.prop:geod-existence:whole} does not hold;
-that is, the maximal interval $\mathbb{I}$ is a proper subset of the real line $\mathbb{R}$.
+that is, the maximal interval $\mathbb{I}$ is a proper subset of the real line.
 Without loss of generality, we may assume that $b=\sup\mathbb{I}<\infty$.
 (If not, switch the direction of~$\gamma$.)
 
-By \ref{lem:constant-speed} $|\gamma'|$ is constant; in particular, $t\mapsto \gamma(t)$ is a uniformly continuous function.
+By \ref{lem:constant-speed}, $|\gamma'|$ is constant; in particular, $t\mapsto \gamma(t)$ is a uniformly continuous function.
 Therefore, the limit point
 $q=\lim_{t\to b}\gamma(t)$
 is defined.
@@ -257,7 +259,7 @@ Then there is $r_p>0$ such that
 the exponential map $\exp_p$ is defined on the open ball $B_p\df B(0,r_p)_{\T_p}$,
 and the restriction $\exp_p|_{B_p}$ is a smooth regular parametrization of a neighborhood of $p$ in~$\Sigma$.
 
-Moreover, we have {}\emph{local control} on $r_p$;
+Moreover, we have {}\emph{local control} on the function $p\mapsto r_p$;
 that is, there is $\epsilon>0$ such that if $\dist{p}{q}\Sigma<\epsilon$ for some $q\in \Sigma$ , then $r_q\ge\epsilon$.
 \end{thm}
 
@@ -288,7 +290,7 @@ In particular, we can apply the second part of the inverse function theorem (\re
 the map $(a,b)\z\mapsto m(u,v,a,b)$  for small fixed $u$ and $v$, hence the result.
 \qeds
 
-Given $p\in \Sigma$, the least upper bound on $r_p$ that satisfies \ref{prop:exp} is called the \index{injectivity radius}\emph{injectivity radius} of $\Sigma$ at $p$;
+The least upper bound on $r_p$ that satisfies \ref{prop:exp} is called the \index{injectivity radius}\emph{injectivity radius} of $\Sigma$ at $p$;
 it is denoted by $\inj(p)$.
 The proposition states that the \textit{injectivity radius is positive and locally bounded away from zero}.
 In fact, \textit{the function $\inj\:\Sigma\to (0,\infty]$ is continuous};
@@ -360,7 +362,7 @@ Evidently, $B(p,r)_\Sigma\supset\exp_p(B_p)$.
 By \ref{prop:gamma''}, $B(p,r)_\Sigma\subset\exp_p(B_p)$, hence the result.
 \qeds
 
-According to the corollary, the restriction $\exp_p|_{\T_p}$ admits an inverse map called the \index{logarithmic map}\emph{logarithmic map at $p$};
+According to the corollary, the restriction $\exp_p|_{B(0,r)_{\T_p}}$ admits an inverse map called \index{logarithmic map}\emph{logarithmic};
 it is denoted by \[\log_p\:B(p,r)_\Sigma\to B(0,r)_{\T_p}.\]
 
 Note that according to the proposition above, any shortest path parametrized by its arc-length is a smooth curve.
@@ -395,8 +397,7 @@ Let $\Sigma$ be a smooth closed strictly convex surface
 in $\mathbb{R}^3$ 
 and $\gamma\:[0,\ell]\z\to \Sigma$ be a unit-speed minimizing geodesic.
 Set $p\z=\gamma(0)$, $q=\gamma(\ell)$, and 
-$$p^s=\gamma(s)-s\cdot\gamma'(s),$$ 
-where $\gamma'(s)$ denotes the velocity vector of $\gamma$ at~$s$.
+\[p^s=\gamma(s)-s\cdot\gamma'(s).\] 
 
 Show that for any $s\in (0,\ell)$,
 one cannot see $q$ from $p^s$;
@@ -573,7 +574,7 @@ for any~$t$.
 \end{subthm}
 
 \begin{subthm}{ex:bound-tc:d}
- Use the closest-point projection from the unit sphere to $\Sigma$ to show that 
+ Use the nearest-point projection from the unit sphere to $\Sigma$ to show that 
 \[\length \gamma\le \pi.\]
 \end{subthm}
 

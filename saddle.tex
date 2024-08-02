@@ -4,7 +4,7 @@
 \section{Definitions}
 
 
-We say two surfaces $\Sigma_1$ and $\Sigma_2$ are \index{tangent!surfaces}\emph{tangent} at a point $p \in \Sigma_1 \cap \Sigma_2$ if they have a common tangent plane at~$p$.
+We say two smooth surfaces $\Sigma_1$ and $\Sigma_2$ are \index{tangent!surfaces}\emph{tangent} at a point $p \in \Sigma_1 \cap \Sigma_2$ if they share the tangent plane at this point.
 If the surfaces are oriented, we say they are \index{cooriented!surfaces}\emph{cooriented} if they have a common unit normal vector at $p$.
 If their normal vectors at $p$ point in opposite directions, we say the surfaces are \index{counteroriented!surfaces}\emph{counteroriented}.
 
@@ -12,7 +12,7 @@ If there is a neighborhood $U$ of $p$ such that $\Sigma_1\cap U$ lies on one sid
 If this happens, then $\Sigma_1$ and $\Sigma_2$ are tangent at $p$, and after adjusting the orientation of one of them, we can assume they are cooriented.
 
 Now, suppose $\Sigma_1$ and $\Sigma_2$ are cooriented at $p$.
-Let us describe $\Sigma_1$ and $\Sigma_2$ locally at $p$ in tangent-normal coordinates as the graphs of functions $f_1(x,y)$ and $f_2(x,y)$ respectively.
+Let us describe $\Sigma_1$ and $\Sigma_2$ locally at $p$ in tangent-normal coordinates as the graphs of functions $f_1$ and $f_2$ respectively.
 Note that $\Sigma_2$ locally supports $\Sigma_1$ at $p$ if and only if either
 \[   f_1(x,y)\ge f_2(x,y)
 \quad\text{or}\quad
@@ -45,7 +45,7 @@ We can assume that $\Sigma_1$ and $\Sigma_2$ are graphs $z=f_1(x,y)$  and $z=f_2
 \vskip-0mm
 \end{wrapfigure}
 
-Fix a unit vector ${\vec w}\in \T_p\Sigma_1=\T_p\Sigma_2$.
+Choose a common tangent unit vector ${\vec w}\in \T_p\Sigma_1=\T_p\Sigma_2$.
 Consider the plane $\Pi$ passing thru $p$ and spanned by the normal vector $\Norm_p$ and ${\vec w}$.
 Let $\gamma_1$ and $\gamma_2$ be the curves of intersection of $\Sigma_1$ and $\Sigma_2$ with $\Pi$.
 
@@ -98,7 +98,7 @@ k_2(p)_{\Sigma_2}&=k_{\vec w}(p)_{\Sigma_2}\le
 Both times we assume  that  $\vec v\in\T_p$ and $|\vec v|=1$.\qeds
 
 \begin{thm}{Corollary}\label{cor:surf-support}
-Let $\Sigma_1$ and $\Sigma_2$ be oriented surfaces.
+Let $\Sigma_1$ and $\Sigma_2$ be oriented smooth surfaces.
 Assume $\Sigma_1$ locally supports $\Sigma_2$ from the inside at the point~$p$.
 Then:
 
@@ -147,7 +147,7 @@ A surface that bounds a convex region is called \index{convex!surface}\emph{conv
 Show that the Gauss curvature of any convex smooth surface is nonnegative at each point.
 \end{thm}
 
-\begin{thm}{Exercise}\label{ex:convex-lagunov}
+\begin{thm}{Advanced exercise}\label{ex:convex-lagunov}
 Assume $R$ is a convex body in $\mathbb{R}^3$ bounded by a surface with principal curvatures at most~1.
 Show that $R$ contains a unit ball.
 \end{thm}
@@ -193,13 +193,12 @@ Suppose $\Sigma$ is an open or closed smooth surface with positive Gauss curvatu
 Then $\Sigma$ bounds a strictly convex region.
 \end{thm}
 
-Note that in the proof we have to use that the surface is a connected set;
+In the proof we will have to use that the surface is connected by the definition;
 otherwise, a pair of disjoint spheres would give a counterexample.
 It is true that \textit{any closed smooth surface with nonnegative Gauss curvature bounds a convex region}, but the proof requires more work \cite{hadamard,gomes}.
 
-In fact, the theorem holds for surfaces with possible self-intersections.
-This is the so-called {}\emph{Hadamard theorem};
-it was proved by James Stoker \cite{stoker}, but attributed to Jacques Hadamard who proved a closely relevant statement \cite[item 23]{hadamard}.
+The same holds for surfaces with possible self-intersections.
+This was proved by James Stoker \cite{stoker}, but he attributed the result to Jacques Hadamard who proved a closely relevant statement \cite[§ 23]{hadamard}.
 
 From the next proof, one can also extract the following statement: \textit{any closed connected locally convex region in the Euclidean space is convex}.
 
@@ -210,7 +209,7 @@ that is, $\Norm$ points inside $R$ at any point of~$\Sigma$.
 (The region $R$ exists by \ref{clm:proper-divides}.)
 
 Let us show that $R$ is {}\emph{locally strictly convex};
-that is, for any point $p\in R$, the intersection of $R$ with a small ball centered at $p$ is strictly convex.
+that is, for any point $p\in \Sigma$, the intersection of $R$ with a small ball centered at $p$ is strictly convex.
 
 Indeed, suppose $z=f(x,y)$ is a local description of $\Sigma$ in the tangent-normal coordinates at~$p$.
 By \ref{lem:gauss+=>convexity}, $f$ is strictly convex in a neighborhood of the origin.
@@ -348,7 +347,7 @@ that is, the embedding $f$ can be made smooth and regular.
 \begin{thm}{Exercise}\label{ex:circular-cone}
 Show that any open smooth surface $\Sigma$ with positive Gauss curvature
 lies inside an infinite circular cone.
-In other words, there is an $(x,y,z)$-coordinate system in which $\Sigma$ lies in the region $z \z\ge m \cdot\sqrt{x^2 + y^2}$ for a constant $m > 0$.
+In other words, there is an $(x,y,z)$-coordinate system in which $\Sigma$ lies in the region $z \z\ge m \cdot\sqrt{x^2 + y^2}$ for a positive constant $m$.
 \end{thm} 
 
 The following exercise is similar to Corollary~\ref{cor:fenchel=convex}.
@@ -419,8 +418,6 @@ A smooth curve that always runs in an asymptotic direction is called an
 {}\emph{asymptotic line}.\label{page:asymptotic line}
 
 Recall that a set $R$ in the plane is called \index{star-shaped}\emph{star-shaped} if there is a point $p\in R$ such that for any $x\in R$ the line segment $[p,x]$ belongs to~$R$.
-
-The statement in the following exercise is due to Dmitri Panov \cite{panov-curves}.
 
 \begin{thm}{Advanced exercise}\label{ex:panov}
 Let $\gamma$ be a closed smooth asymptotic line
@@ -498,7 +495,7 @@ Show that the statement does not hold without assuming that $\Delta$ is a topolo
 \parit{Remark.}
 In fact, $\area \Delta\ge \pi$;
 that is, the unit plane disc has the minimal possible area.
-The proof of this statement can be obtained by applying the so-called \index{coarea formula}\emph{coarea formula} together with the inequality in the exercise.
+This follows from the exercise by applying the so-called \index{coarea formula}\emph{coarea formula}.
 
 \begin{thm}{Exercise}\label{ex:circular-cone-saddle}
 Show that an open saddle surface
@@ -535,7 +532,7 @@ Note that $(x,y)\mapsto (x,y,f(x,y))$ is a homeomorphism from $F_\epsilon$
 to
 \[\Delta_\epsilon=\set{(x,y,f(x,y))\in \mathbb{R}^3}{f(x,y)\le \epsilon};\]
 so $\Delta_\epsilon$ is a topological disc for any small $\epsilon>0$.
-Note that the boundary line of $\Delta_\epsilon$ lies on the plane $z=\epsilon$, and the entire disc lies below it;
+The boundary line of $\Delta_\epsilon$ lies on the plane $z=\epsilon$, and the entire disc lies below it;
 that is, $\Delta_\epsilon$ is a hat of~$\Sigma$.
 \qeds
 
@@ -551,7 +548,7 @@ $F_\epsilon$ to the unit disc $\Delta\z=\set{(x,y)\in\mathbb{R}^2}{x^2+y^2\le 1}
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:saddle-linear}
-Let $L\:\mathbb{R}^3\to\mathbb{R}^3$ be an affine transformation; that is, $L$ is an invertible map $\mathbb{R}^3\to\mathbb{R}^3$ that sends any plane to a plane.
+Let $L\:\mathbb{R}^3\to\mathbb{R}^3$ be an \index{affine transformation}\emph{affine transformation}; that is, a bijection $\mathbb{R}^3\to\mathbb{R}^3$ that sends any plane to a plane.
 Show that for any saddle surface $\Sigma$ the image $L(\Sigma)$ is also a saddle surface.
 \end{thm}
 

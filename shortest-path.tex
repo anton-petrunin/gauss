@@ -14,7 +14,6 @@ However, the mean curvature of the former vanishes at all points, while the mean
 
 The following exercise should help you get in the right mood;
 it might look like a tedious problem in calculus, but it actually is an easy problem in geometry.
-We learned this problem from Joel Fine, who attributed it to Frederic Bourgeois \cite{fine}.
 
 \begin{wrapfigure}[6]{r}{33 mm}
 \vskip-0mm
@@ -38,7 +37,7 @@ that is, the greatest lower bound of the lengths of paths in $\Sigma$ from $p$ t
 
 
 A path $\gamma$ from $p$ to $q$ in $\Sigma$ that minimizes the length is called a \index{shortest path}\emph{shortest path} from $p$ to~$q$.
-The image of a shortest path between $p$ and $q$ in $\Sigma$ is usually denoted by $[p,q]$ or $[p,q]_\Sigma$.\index{10aac@$[p,q]$, $[p,q]_\Sigma$ (shortest path)}
+The image of such a shortest path will be denoted by $[p,q]$ or $[p,q]_\Sigma$.\index{10aac@$[p,q]$, $[p,q]_\Sigma$ (shortest path)}
 If we write $[p,q]_\Sigma$, we are assuming that such a shortest path exists, and we have chosen one of them.
 In general, there might be no shortest path between two given points, and there might be many of them;
 this is shown in the following two examples.
@@ -95,7 +94,7 @@ that is,
 for any $t_0,t_1\in[0,1]$.
 
 Note that the image of $\gamma_n$ lies in the closed ball $\bar B[p,\ell+1]$ for any~$n$.
-It follows that the coordinate functions of $\gamma_n$ are uniformly equicontinuous and uniformly bounded.
+It follows that the coordinate functions of all $\gamma_n$ are uniformly equicontinuous and uniformly bounded.
 By the Arzel\'{a}--Ascoli theorem (\ref{lem:equicontinuous}),
  there is a convergent subsequence of $\gamma_n$, and its limit, say $\gamma_\infty\:[0,1]\to\mathbb{R}^3$, is continuous;
 that is, $\gamma_\infty$ is a path.
@@ -108,12 +107,12 @@ Since length is semicontinuous (\ref{thm:length-semicont}), we get $\length\gamm
 Therefore, $\length\gamma_\infty\z= \ell$; equivalently, $\gamma_\infty$ is a shortest path from $p$ to~$q$.
 \qeds
 
-\section{Closest-point projection}
+\section{Nearest-point projection}
 
 The following statement belongs to convex geometry;
 we prove it since it plays a significant role in the sequel.
 
-\begin{thm}{Lemma}\label{lem:closest-point-projection}
+\begin{thm}{Lemma}\label{lem:nearest-point-projection}
 Let $R$ be a closed convex set in $\mathbb{R}^3$.
 Then for every point $p\in\mathbb{R}^3$ there is a unique point $\bar p\in R$ that minimizes the distance to $R$;
 that is, $|p-\bar p|\le |p-x|$ for any point $x\in R$.
@@ -124,9 +123,10 @@ that is,
 for any pair of points $p,q\in \mathbb{R}^3$.
 \end{thm}
 
-The map $p\mapsto \bar p$ is called the \label{closest-point projection}\index{closest-point projection}\emph{closest-point projection};
+The map $p\mapsto \bar p$ is called the \label{nearest-point projection}\index{nearest-point projection}\emph{nearest-point projection};
 it maps the Euclidean space onto~$R$.
 Note that if $p\in R$, then $\bar p=p$.
+In particular $\bar{\bar p}=\bar p$ for any point $p$
 
 \parit{Proof.}
 Fix a point $p$, and set 
@@ -174,7 +174,7 @@ the latter is impossible.
 \vskip-0mm
 \end{wrapfigure}
 
-Therefore, $p=\bar p$ or $\measuredangle \hinge{\bar p}{p}{\bar q}\ge \tfrac\pi2$.
+Therefore, $\measuredangle \hinge{\bar p}{p}{\bar q}\ge \tfrac\pi2$ or $p=\bar p$.
 In both cases, the orthogonal projection of $p$ to the line $\bar p\bar q$ lies behind $\bar p$, or coincides with $\bar p$.
 The same way we show that the orthogonal projection of $q$ to the line $\bar p\bar q$ lies behind $\bar q$, or coincides with~$\bar q$.
 This implies that the orthogonal projection of the line segment $[p,q]$ to the line $\bar p\bar q$ contains the line segment $[\bar p,\bar q]$.
@@ -196,7 +196,7 @@ Moreover, if  $\gamma$ does not lie in $\Sigma$, then the inequality is strict.
 \end{thm}
 
 \parit{Proof.}
-Consider the closest-point projection $\bar\gamma$ of~$\gamma$.
+Let $\bar\gamma$ be the nearest-point projection of~$\gamma$ to $R$.
 Note that $\bar\gamma$ lies in $\Sigma$ and connects $p$ to $q$; therefore, 
 \[\length\bar\gamma\ge \dist{p}{q}\Sigma.\]
 
@@ -206,7 +206,7 @@ To prove the first statement, it remains to show that
 Consider a polygonal line $\bar p_0\dots \bar p_n$ inscribed in $\bar\gamma$.
 Let $p_0\dots p_n$ be the corresponding polygonal line inscribed in $\gamma$;
 that is $p_i=\gamma(t_i)$ if $\bar p_i=\bar\gamma(t_i)$.
-By \ref{lem:closest-point-projection} $|p_i-p_{i-1}|\z\ge|\bar p_i-\bar p_{i-1}|$ for any~$i$.
+By \ref{lem:nearest-point-projection}, $|p_i-p_{i-1}|\z\ge|\bar p_i-\bar p_{i-1}|$ for any~$i$.
 Therefore,
 \[\length p_0\dots p_n\ge \length \bar p_0\dots \bar p_n.\]
 Passing to the least upper bound of each side of the inequality for all inscribed polygonal lines $p_0\dots p_n$ in $\gamma$, we get \ref{bar-gamma=<gamma}.\
@@ -221,7 +221,7 @@ Passing to the least upper bound of each side of the inequality for all inscribe
 It remains to prove the second statement.
 Suppose there is a point $w\z=\gamma(t_1)\notin\Sigma$;
 note that $w\notin R$.
-By the separation lemma (\ref{lem:separation}), there is a plane $\Pi$ that cuts $w$ from~$\Sigma$.
+Then there is a plane $\Pi$ that cuts $w$ from~$\Sigma$; see \ref{lem:separation}).
 
 The curve $\gamma$ must intersect $\Pi$ at two points: one point before $t_1$ and one after.
 Let $a=\gamma(t_0)$ and $b=\gamma(t_2)$ be these points.
@@ -234,7 +234,7 @@ From above, we have that
 \[\length\gamma>\length \gamma_1\]
 
 Note that $\gamma_1$ runs in~$W$.
-Therefore, by the first part of the corollary, we have
+From above
 \[\length \gamma_1\ge \dist{p}{q}\Sigma.\]
 Whence the second statement follows.
 \qeds
