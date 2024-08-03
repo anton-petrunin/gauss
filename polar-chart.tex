@@ -77,10 +77,10 @@ It follows that
 \eqlbl{eq:<s',s'>'=0}
 \]
 
-Note that $s(0,\theta)=p$ for any $\theta$.
-Therefore,
-$s_\theta(0,\theta)=0$
-and, in particular,
+Since $s(0,\theta)=p$ for any $\theta$,
+we have
+$s_\theta(0,\theta)=0$;
+in particular,
 $\langle s_\theta, s_r\rangle=0$
 if $r=0$.
 By \ref{eq:<s',s'>'=0}, the value 
@@ -103,7 +103,7 @@ Let $\gamma\:[0,\ell]\to\Sigma$ be a shortest path parametrized by arc-length.
 Suppose $\ell=\length\gamma$ is sufficiently small, so $\gamma$ can be described in the polar coordinates at $p$;
 say as $\gamma(t)=s(r(t),\theta(t))$ for functions $t\mapsto \theta(t)$ and $t\mapsto r(t)$ with $r(0)=0$.
 
-Note that by the chain rule, we have
+By the chain rule, we have
 \[\gamma'= s_\theta\cdot \theta'+ s_r\cdot r'
 \eqlbl{eq:chain(gamma)}\]
 whenever the left-hand side is defined.
@@ -125,7 +125,7 @@ By~\ref{adex:integral-length:a}, we have that
 &=r(\ell).
 \end{align*}
 
-Note that by the definition of polar coordinates, there is a geodesic of length $r(\ell)$ from $p=\gamma(0)$ to $q=\gamma(\ell)$.
+By the construction of polar coordinates, there is a geodesic of length $r(\ell)$ from $p=\gamma(0)$ to $q=\gamma(\ell)$.
 Since $\gamma$ is a shortest path, we get that $r(\ell)=\ell$, and, moreover, $r(t)=t$ for any~$t$.
 This equality holds if and only if we have equality in \ref{eq:|gamma'|=r'} for almost all~$t$.
 The latter implies that $\gamma$ is a geodesic.
@@ -146,10 +146,10 @@ But according to \ref{prop:exp}, the exponential map $\T_p \to \Sigma$ is inject
 Let $s$ be a smooth map from a (possibly unbounded) coordinate rectangle in the $(u,v)$-plane to a smooth surface~$\Sigma$.
 The map $s$ is called \index{semigeodesic}\emph{semigeodesic} if, for any fixed $v$, the map $u\mapsto s(u,v)$ is a unit-speed geodesic and $s_u\perp s_v$ for any $(u,v)$.
 
-Note that according to the Gauss lemma (\ref{lem:palar-perp}), the polar coordinates on $\Sigma$ are described by a semigeodesic map.
+According to the Gauss lemma (\ref{lem:palar-perp}), the polar coordinates on $\Sigma$ are described by a semigeodesic map.
 
-Note that we can choose a unit vector field~$\Norm=\Norm(u,v)$ that is normal to $\Sigma$ at $s(u,v)$.
-For each pair $(u,v)$, consider an orthonormal frame $\Norm$, $\vec u=s_u$, and $\vec v=\Norm\times \vec u$.
+Choose a unit vector field~$\Norm=\Norm(u,v)$ that is normal to $\Sigma$ at $s(u,v)$.
+For each pair $(u,v)$, consider an orthonormal frame $\Norm$, $\vec u\z=s_u$, and $\vec v\z=\Norm\times \vec u$.
 Recall that since the vector $s_v(u,v)$ is tangent to $\Sigma$ at $s(u,v)$, we get $s_v\perp \vec u$ and $s_v\perp \Norm$. 
 Therefore, we have that $s_v=b\cdot\vec v$ for a smooth function $(u,v)\z\mapsto b(u,v)$.
 
@@ -526,7 +526,7 @@ Then}
 \[\iint_D (Q_u- P_v)\cdot du\cdot dv=\int_\alpha (P\cdot du+Q\cdot dv)\df \int_0^1 (P\cdot u'+Q\cdot v')\cdot dt\]
 \textit{for any two smooth functions $P$ and $Q$ defined on $D$.}
 
-Note that the Green and Gauss--Bonnet formulas are similar --- they relate the integral along a disc and its boundary curve.
+The Green and Gauss--Bonnet formulas are similar --- they relate the integral along a disc and its boundary curve.
 So it shouldn't be  surprising that Green helps to prove Gauss--Bonnet.
 
 \parit{Proof.}
@@ -594,7 +594,7 @@ It remains to show that $n=0$.
 Assume $\Delta$ lies in a local graph realization $z = f(x,y)$ of $\Sigma$.
 Consider the one-parameter family $\Sigma_t$ of graphs $z = t \cdot f(x,y)$;
 denote by $\Delta_t$ the corresponding disc in $\Sigma_t$, so $\Delta_1 = \Delta$ and $\Delta_0$ is its projection onto the $(x,y)$-plane.
-Note that the function $h \: t \mapsto \GB (\Delta_t )$ is continuous.
+The function $h \: t \mapsto \GB (\Delta_t )$ is continuous.
 By \ref{eq:gb(n)}, $h(t)$ is an integer multiple of  $2 \cdot \pi$ for any $t$.
 It follows that $h$ is a constant function.
 Therefore, 

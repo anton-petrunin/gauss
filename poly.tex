@@ -13,7 +13,7 @@ it reinterprets the curvature of curves via inscribed polygonal lines.
 \end{wrapfigure}
 
 Assume $\alpha\:[a,b]\to \mathbb{R}^3$ and $\beta\:[b,c]\z\to \mathbb{R}^3$ are two curves such that $\alpha(b)\z=\beta(b)$.
-Note that these two curves can be combined into one $\gamma\:[a,c]\z\to \mathbb{R}^3$ by the rule 
+These two curves can be combined into one $\gamma\:[a,c]\z\to \mathbb{R}^3$ by the rule 
 \[\gamma(t)=
 \begin{cases}
 \alpha(t)&\text{if}\quad t\le b,
@@ -82,7 +82,7 @@ these are smooth spherical arcs.
 
 The same argument as in the proof of Fenchel's theorem (\ref{thm:fenchel}) shows that the curves $\tan_1,\dots,\tan_n$ cannot lie in an open hemisphere.
 
-Note that the spherical distance from the endpoint of $\tan_i$ to the starting point of $\tan_{i+1}$ is equal to the external angle $\theta_i$ (we enumerate the arcs modulo $n$, so $\gamma_{n+1}=\gamma_1$).
+The spherical distance from the endpoint of $\tan_i$ to the starting point of $\tan_{i+1}$ is equal to the external angle $\theta_i$ (we enumerate the arcs modulo $n$, so $\gamma_{n+1}=\gamma_1$).
 Let us connect the endpoint of $\tan_i$ to the starting point of $\tan_{i+1}$ by a short arc of a great circle in the sphere.
 This way we get a closed spherical curve that is $\theta_1+\dots+\theta_n$ longer than the total length of $\tan_1,\dots,\tan_n$.
 
@@ -335,7 +335,7 @@ Then
 \[\tc{p_1\dots p_n}>\length(p_1\dots p_n).\]
 \end{thm}
 
-Note that by Exercise \ref{ex:total-curvature=}, this theorem implies the original DNA theorem (\ref{thm:DNA}).
+Exercise \ref{ex:total-curvature=} and this theorem imply the original DNA theorem (\ref{thm:DNA}).
 Therefore, it is indeed a generalization of DNA theorem.
 
 \parit{Proof.}
@@ -354,8 +354,8 @@ Consider a sequence of triangles
 \[\triangle q_0q_1s_0\cong \triangle p_0p_1o,\ \ \triangle q_1q_2s_1\cong \triangle p_1p_2o,\ \dots\]
 such that the points $q_0,q_1,\dots$ lie on one line in that order and all the $s_i$'s lie on one side from this line.
 
-Note that 
-\[|s_n-s_0|=\length (p_1\dots p_n).\]
+Note that $s_0s_nq_nq_0$ is a parallelogram; hence
+\[|s_n-s_0|=|q_n-q_0|=\length (p_1\dots p_n).\]
 Therefore 
 \[|s_0-s_1|+\dots+|s_{n-1}-s_n|\ge \length (p_1\dots p_n).\]
 

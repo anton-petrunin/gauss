@@ -229,7 +229,7 @@ is defined on the tangent plane (or an open subset of it), which is a smooth sur
 and its target is another smooth surface.
 Observe that one can identify the plane $\T_p$
 with its tangent plane $\T_0\T_p$ so the differential $d_0(\exp_p)\:\vec v\mapsto D_{\vec v}\exp_p$ maps $\T_p$ to itself.
-Furthermore, note that by Lemma \ref{lem:constant-speed}, this differential is the identity map; that is, $d_0\exp_p(\vec v)=
+Furthermore, by Lemma \ref{lem:constant-speed}, this differential is the identity map; that is, $d_0\exp_p(\vec v)=
 \vec v$ for any $\vec v\in \T_p$.
 
 Summarizing, we get the following statement:
@@ -362,10 +362,10 @@ Evidently, $B(p,r)_\Sigma\supset\exp_p(B_p)$.
 By \ref{prop:gamma''}, $B(p,r)_\Sigma\subset\exp_p(B_p)$, hence the result.
 \qeds
 
-According to the corollary, the restriction $\exp_p|_{B(0,r)_{\T_p}}$ admits an inverse map called \index{logarithmic map}\emph{logarithmic};
+By the corollary, the restriction $\exp_p|_{B(0,r)_{\T_p}}$ admits an inverse map called \index{logarithmic map}\emph{logarithmic};
 it is denoted by \[\log_p\:B(p,r)_\Sigma\to B(0,r)_{\T_p}.\]
 
-Note that according to the proposition above, any shortest path parametrized by its arc-length is a smooth curve.
+According to the proposition above, any shortest path parametrized by its arc-length is a smooth curve.
 This observation helps to solve the following two exercises:
 
 \begin{thm}{Exercise}\label{ex:two-min-geod}
@@ -493,7 +493,8 @@ $t\mapsto z(t)$ is convex.
 
 Since the slope of $f$ is at most $\ell$, we have
 \[|z'(t)|\le \frac{\ell}{\sqrt{1+\ell^2}}.\]
-If $\gamma$ is defined on the interval $[a,b]$, then
+We can assume that $\gamma$ is defined on the interval $[a,b]$.
+Then
 \[
 \begin{aligned}
 \int_a^b z''(t) dt&=z'(b)-z'(a)\le 
@@ -504,7 +505,7 @@ If $\gamma$ is defined on the interval $[a,b]$, then
 \]
 
 Also, note that $z''$ is the projection of $\gamma''$ to the $z$-axis.
-Since $f$ is $\ell$-Lipschitz, the tangent plane $\T_{\gamma (t)} \Sigma$ cannot have a slope greater than $\ell$ for any~$t$.
+The slope of the tangent plane $\T_{\gamma (t)} \Sigma$ cannot be greater than $\ell$ for any~$t$.
 Because $\gamma ''$ is perpendicular to that plane, we have that
 \[|\gamma'' (t)| \le z''(t)\cdot\sqrt{1+ \ell ^2}.\]
 
@@ -519,13 +520,14 @@ By \ref{eq:intz''}, we get that
 \qedsf
 
 \begin{thm}{Exercise}\label{ex:usov-exact}
-Note that the graph $z=\ell\cdot\sqrt{x^2+y^2}$ with the origin removed is a smooth surface; denote it by~$\Sigma$.
+Consider the graph $z=\ell\cdot\sqrt{x^2+y^2}$ with the origin removed;
+it is a smooth surface; denote it by~$\Sigma$.
 Show that any both-side-infinite geodesic $\gamma$ in $\Sigma$ has total curvature exactly $2\cdot \ell$.
 \end{thm}
 
 The exercise implies that the estimate in Usov's theorem is optimal.
 To see this, mollify the function $f(x,y)=\ell\cdot\sqrt{x^2+y^2}$ in a small neighborhood of the origin while keeping it convex and $\ell$-Lipschitz. 
-Note that we can assume that the geodesic $\gamma$ does not enter the smoothed part of the graph.
+We can assume that the geodesic $\gamma$ does not enter the smoothed part of the graph.
 
 
 \begin{thm}{Exercise}\label{ex:ruf-bound-mountain}

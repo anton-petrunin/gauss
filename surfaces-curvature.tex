@@ -41,7 +41,7 @@ n&=f_{yy}(0,0).
 The \textit{Taylor series} 
 for $f$ at $(0,0)$ up to the second-order term can be then written as
 \[f(x,y)=\tfrac12(\ell\cdot x^2+2\cdot m\cdot x\cdot y+n\cdot y^2)+o(x^2+y^2).\]
-Note that values $\ell$, $m$, and $n$ are completely determined by this equation.\index{10lmn@$\ell$, $m$, $n$ (Hessian-matrix components)}
+The values $\ell$, $m$, and $n$ are completely determined by this equation.\index{10lmn@$\ell$, $m$, $n$ (Hessian-matrix components)}
 The so-called \index{osculating!paraboloid}\emph{osculating paraboloid}
 \[z=\tfrac12\cdot(\ell\cdot x^2+2\cdot m\cdot x\cdot y+n\cdot y^2)\]
 has \index{order of contact}\emph{second-order contact} with $\Sigma$ at~$p$.
@@ -73,7 +73,7 @@ where $M_p$ is the so-called \index{Hessian matrix}\emph{Hessian matrix} of $f$ 
 
 \section{Principal curvatures}\label{sec:Principal curvatures}
 
-Note that tangent-normal coordinates give an almost canonically depend on the point $p$;
+The tangent-normal coordinates give an almost canonically depend on the point $p$;
 it is unique up to a rotation of the $(x,y)$-plane.
 Rotating the $(x,y)$-plane results in rewriting 
 the Hessian matrix $M_p$ in the new basis.
@@ -97,15 +97,15 @@ We will assume
 unless indicated otherwise.
 
 
-Note that if $z=f(x,y)$ is a local graph representation of $\Sigma$ in these coordinates, then 
+If $z=f(x,y)$ is a local graph representation of $\Sigma$ in these coordinates, then 
 \[f(x,y)=\tfrac12\cdot(k_1\cdot x^2+k_2\cdot y^2)+o(x^2+y^2).\]
 
 The principal curvatures can be also defined as the eigenvalues of the Hessian matrix $M_p$.
 The eigendirections of $M_p$ are called the {}\emph{principal directions} of $\Sigma$ at~$p$.
-Note that if $k_1(p)\ne k_2(p)$, then $p$ has exactly two principal directions, which are perpendicular to each other;
+If $k_1(p)\ne k_2(p)$, then $p$ has exactly two principal directions, which are perpendicular to each other;
 if $k_1(p)\z= k_2(p)$, then all tangent directions at $p$ are principal.
 
-Note that if we reverse the orientation of $\Sigma$, then the principal curvatures switch their signs and indexes.
+If we reverse the orientation of $\Sigma$, then the principal curvatures switch their signs and indexes.
 (One may say that $k_1$ becomes $-k_2$ and $k_2$ becomes $-k_1$).
 
 A smooth curve on a surface $\Sigma$ that always runs in the principal directions is called a \index{line of curvature}\emph{line of curvature} of~$\Sigma$.
@@ -140,7 +140,7 @@ m&n
 )
 $ is the Hessian matrix.
 
-Note that reversing the orientation of $\Sigma$ does not change the Gauss curvature.
+Reversing the orientation of $\Sigma$ does not change the Gauss curvature.
 In particular, the Gauss curvature is well-defined for nonoriented surfaces.
 
 \begin{thm}{Exercise}\label{ex:gauss+orientable}
@@ -304,8 +304,8 @@ This corollary illustrates the close relationship between the curvatures of a su
 Since the Hessian matrix is symmetric, the corollary also implies that $\Shape$ is self-adjoint which gives a way to solve \ref{ex:self-adjoint}.
 
 \parit{Proof.}
-Note that $s\:(u,v)\mapsto (u,v,f(u,v))$ is a chart of $\Sigma$ that covers~$p$.
-Further, note that 
+Note that $s\:(u,v)\mapsto (u,v,f(u,v))$ is a chart of $\Sigma$ at~$p$.
+Furthermore, 
 \begin{align*}
 s_u(0,0)&=\vec i,
 &
@@ -449,7 +449,7 @@ in this case, $\tan(s)=\gamma'(s)$ is its tangent indicatrix.
 
 Further we will use the shortcut notation $\Norm(s)\z=\Norm(\gamma(s))$.
 
-Note that the unit vectors $\tan(s)$ and $\Norm(s)$ are orthogonal.
+The unit vectors $\tan(s)$ and $\Norm(s)$ are orthogonal.
 Therefore there is a unique unit vector $\mu(s)$\index{10tmn@$\tan$, $\mu$, $\Norm$ (Darboux frame)} such that 
 $\tan(s),\mu(s),\Norm(s)$ is an oriented orthonormal basis;
 it is called the \index{Darboux frame}\emph{Darboux frame} of $\gamma$ in~$\Sigma$.
@@ -494,7 +494,7 @@ Then
 where $k_n$ denotes the normal curvature of $\gamma$ at $s_0$, and $\Shape_p$ is the shape operator at~$p$.
 \end{thm}
 
-Note that according to the proposition, the normal curvature of a smooth curve in $\Sigma$ is completely determined by the velocity vector $\vec v$.
+According to the proposition, the normal curvature of a smooth curve in $\Sigma$ is completely determined by the velocity vector $\vec v$.
 For that reason, the normal curvature is also denoted by $k_{\vec v}$,\index{10k@$k_{\vec v}$ (normal curvature)}
 and
 \[k_{\vec v}=\langle \Shape_p(\vec v),\vec v\rangle\]
@@ -691,8 +691,8 @@ which imply that both principal curvatures are at most 1 in absolute value.
 
 It remains to modify $V_1$ to make its boundary connected without increasing the bounds on its principal curvatures and without allowing larger balls inside.
 
-Note that each sphere in the boundary contains two flat discs;
-they come into pairs closely lying to each other. 
+Each sphere in the boundary contains two flat discs;
+they come into three pairs closely lying to each other. 
 Let us drill thru two of such pairs and reconnect the holes by a body of revolution whose 
 axis is shifted but stays parallel to the axis of $V_1$.
 Denote the obtained body by $V_2$; its cross-section is shown on the diagram. 

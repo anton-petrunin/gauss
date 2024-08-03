@@ -13,7 +13,7 @@ In general, the family of tangent planes $\T_{\gamma(t)}\Sigma$ is not parallel.
 Therefore, one cannot expect to have a \textit{truly} parallel family ${\vec v}(t)$ with ${\vec v}'\equiv 0$.
 The condition ${\vec v}'(t)\perp\T_{\gamma(t)}$ means that the family is \textit{as parallel as possible} --- it rotates together with the tangent plane but does not rotate inside the plane.
 
-Note that by the definition of geodesic, the velocity field ${\vec v}(t)\z=\gamma'(t)$ of any geodesic $\gamma$ is parallel on~$\gamma$.
+By the definition of geodesic, the velocity field ${\vec v}(t)\z=\gamma'(t)$ of any geodesic $\gamma$ is parallel on~$\gamma$.
 
 \begin{thm}{Exercise}\label{ex:parallel}
 Let $\Sigma$ be a smooth surface in the Euclidean space, 
@@ -113,8 +113,8 @@ The second one uses orthogonal projections of tangent planes.
 Suppose $\gamma\:[a,b]\to\Sigma$ is a smooth arc in a smooth surface $\Sigma$.
 Think of walking along $\gamma$ and carrying a perfectly balanced \textit{horizontal} bike wheel.
 More precisely, you keep the wheel's axis normal to $\Sigma$ and touch only the tips of the axis.
-Note that if the wheel is not spinning at the starting point $p$, then it will not be spinning after stopping at~$q$.
-(Indeed, by pushing the axis one cannot produce torque to spin the wheel.)
+If the wheel is not spinning at the starting point $p$, then it will not be spinning after stopping at~$q$.
+Indeed, by pushing the axis one cannot produce torque to spin the wheel.
 The map that sends the initial position of the wheel to the final position is the parallel transport~$\iota_\gamma$.
 
 Physical intuition should tell you that \textit{moving the axis of the wheel without changing its direction does not change the direction of the wheel's spokes};
@@ -126,7 +126,7 @@ For a fine partition, the composition
 \[\phi_n\circ\dots\circ\phi_1\:\T_p\z\to\T_q\]
 gives an approximation of $\iota_\gamma$.
 
-Note that each $\phi_i$ does not increase the magnitude of a vector and neither the composition.
+Each $\phi_i$ does not increase the magnitude of a vector and neither the composition.
 It is straightforward to see that if the partition is sufficiently fine, then the above composition is almost an isometry.
 Therefore, the limit $\iota_\gamma$ is an isometry $\T_p\z\to\T_q$.
 
@@ -148,7 +148,7 @@ The total geodesic curvature of $\gamma$ is defined by the integral
 \df
 \int_{\mathbb{I}} k_g(t)\cdot dt.\]
 
-Note that if $\Sigma$ is a plane, then the geodesic curvature of $\gamma$ coincides
+If $\Sigma$ is a plane, then the geodesic curvature of $\gamma$ coincides
 with its signed curvature (see Section~\ref{sec:Total signed curvature}). 
 In particular, its total geodesic curvature is equal to its total signed curvature.
 For that reason, we use the same notation $\tgc\gamma$ as for total signed curvature; if we need to emphasize that we consider $\gamma$ as a curve in $\Sigma$, we write $\tgc\gamma_\Sigma$.\index{10psi@$\tgc\gamma$, $\tgc\gamma_\Sigma$ (total geodesic curvature)}
@@ -207,7 +207,7 @@ Then
 \mu&=\sin\phi\cdot \vec v+\cos\phi\cdot \vec w.
 \end{align*}
 
-Note that $\vec w$ is a parallel vector field along $\gamma$; that is, $\vec v'(t),\vec w'(t)\z\perp\T_{\gamma(t)}$.
+The vector field $\vec w$ is parallel along $\gamma$; that is, $\vec v'(t),\vec w'(t)\z\perp\T_{\gamma(t)}$.
 Therefore, $\langle\vec v',\mu\rangle\z=\langle\vec w',\mu\rangle\z=0$.
 It follows that
 \begin{align*}

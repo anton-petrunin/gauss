@@ -89,7 +89,7 @@ Moreover, if $(u,v)\mapsto s(u,v)$ is a local chart and $\vec{w}=a\cdot s_u +b\c
 
 \end{thm}
 
-Note that our definition agrees with the standard definition of the directional derivative if $\Sigma$ is a plane.
+Our definition agrees with the standard definition of the directional derivative if $\Sigma$ is a plane.
 Indeed, in this case, $\gamma(t)=p+\vec w\cdot t$ is a curve in $\Sigma$ that starts at $p$ with velocity vector $\vec{w}$.
 For a general surface, the point $p+\vec w\cdot t$ might not lie on the surface, and the function $f$ might be undefined at this point.
 In this case, the standard definition does not work.
@@ -148,7 +148,7 @@ We will not use this approach in the sequel, but it is better to know about it.
 A tangent vector $\vec w\in \T_p$ to a smooth surface $\Sigma$ 
 defines a linear functional%
 \footnote{Term {}\emph{functional} is used for functions that take a function as an argument and return a number.} $D_{\vec w}$ that swallows a smooth function $\phi$ on $\Sigma$ and spits its directional derivative $D_{\vec w}\phi$.
-Note that the functional $D$ obeys the product rule:
+The functional $D$ obeys the product rule:
 \[D_{\vec w}(\phi\cdot\psi)=(D_{\vec w}\phi)\cdot \psi(p)+\phi(p)\cdot(D_{\vec w}\psi).
 \eqlbl{eq:tangent-functional}\]
 
@@ -171,8 +171,8 @@ Assume $s$ maps one smooth surface $\Sigma_0$ to another $\Sigma_1$.
 Let $p_0\in \Sigma_0$ and $p_1=s(p_0)$.
 Choose a curve $\gamma_0$ in $\Sigma_0$ such that $\gamma_0(0)=p_0$ and $\gamma_0'(0)=\vec w$.
 Observe that $\gamma_1= s\circ \gamma_0$ is a smooth curve in $\Sigma_1$. 
-Note that $\gamma_1(0)\z= p_1$, curve $\gamma_1$ lies in $\Sigma_1$,
-and hence its velocity vector $\gamma_1'(0)$ is in $\T_{ p_1}\Sigma_1$.
+Curve $\gamma_1$ lies in $\Sigma_1$ and $\gamma_1(0)\z= p_1$;
+hence its velocity vector $\gamma_1'(0)$ is in $\T_{ p_1}\Sigma_1$.
 By the definition of the directional derivative, we have $D_{\vec w} s=\gamma_1'(0)$.
 Therefore, $D_{\vec w} s\in \T_{p_1}\Sigma_1$ for any $\vec w\in \T_{p_0}$.
 
@@ -312,7 +312,7 @@ A surface $\Sigma$ is called \index{oriented surface}\emph{oriented} if it is eq
 that is, a continuous map $p\mapsto \Norm(p)$ such that $\Norm(p)\perp\T_p$ and $|\Norm(p)|=1$ for any~$p$.
 The choice of the field $\Norm$ is called the {}\emph{orientation} of~$\Sigma$.
 A surface $\Sigma$ is called {}\emph{orientable} if it can be oriented.
-Note that each orientable surface admits two orientations: $\Norm$ and $-\Norm$.
+Each orientable surface admits two orientations: $\Norm$ and $-\Norm$.
 
 Let $\Sigma$ be a smooth oriented surface with unit normal field $\Norm$.
 The map $\Norm\:\Sigma\to \mathbb{S}^2$ defined by $p\mapsto \Norm(p)$ is called the \index{spherical!map}\emph{spherical map} or \index{Gauss map}\emph{Gauss map}.
@@ -328,7 +328,7 @@ For surfaces, the spherical map plays essentially the same role as the tangent i
 
 The Möbius strip shown on the diagram gives an example of a nonorientable surface --- there is no choice of a normal vector field that is continuous along the middle of the strip (it changes the sign if you try to go around).
 
-Note that each surface is locally orientable.
+Each surface is locally orientable.
 In fact, each chart $s(u,v)$ admits an orientation 
 \[\Norm=
 \frac{s_u\times s_v}
@@ -368,7 +368,7 @@ each connected component of the level set $L_r=\set{x\in\mathbb{R}^3}{f(x)=r}$ i
 
 \parit{Proof.}
 The surface $\Sigma$ can be covered by a countable set of charts $s_i\:U_i\z\to \Sigma$.
-Note that the composition $f\circ s_i$ is a smooth function for any~$i$.
+The composition $f\circ s_i$ is a smooth function for any~$i$.
 By Sard's lemma (\ref{lem:sard}), $r$ is a regular value of each $f\circ s_i$ for almost all $r$.
 
 Fix such a value $r$ sufficiently close to $r_0$, and consider the level set $L_r$ described by the equation $f(x,y,z)=r$.

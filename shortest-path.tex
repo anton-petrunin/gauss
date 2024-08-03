@@ -93,7 +93,7 @@ that is,
 \[|\gamma(t_0)-\gamma(t_1)|\le (\ell+1)\cdot|t_0-t_1|\]
 for any $t_0,t_1\in[0,1]$.
 
-Note that the image of $\gamma_n$ lies in the closed ball $\bar B[p,\ell+1]$ for any~$n$.
+The image of $\gamma_n$ lies in the closed ball $\bar B[p,\ell+1]$ for any~$n$.
 It follows that the coordinate functions of all $\gamma_n$ are uniformly equicontinuous and uniformly bounded.
 By the Arzel\'{a}--Ascoli theorem (\ref{lem:equicontinuous}),
  there is a convergent subsequence of $\gamma_n$, and its limit, say $\gamma_\infty\:[0,1]\to\mathbb{R}^3$, is continuous;
@@ -125,8 +125,8 @@ for any pair of points $p,q\in \mathbb{R}^3$.
 
 The map $p\mapsto \bar p$ is called the \label{nearest-point projection}\index{nearest-point projection}\emph{nearest-point projection};
 it maps the Euclidean space onto~$R$.
-Note that if $p\in R$, then $\bar p=p$.
-In particular $\bar{\bar p}=\bar p$ for any point $p$
+If $p\in R$, then $\bar p=p$.
+In particular $\bar{\bar p}=\bar p$ for any point $p$.
 
 \parit{Proof.}
 Fix a point $p$, and set 
@@ -153,8 +153,7 @@ Hence, the existence follows.
 
 Assume there are two distinct points $\bar p, \bar p'\in R$ that minimize the distance to~$p$.
 Since $R$ is convex, their midpoint $m=\tfrac12\cdot (\bar p+\bar p')$ lies in~$R$.
-Note that $|p-\bar p|\z=|p-\bar p'|=\ell$;
-that is, the triangle $[p\bar p\bar p']$ is isosceles, and therefore the triangle $[p\bar p m]$ is right with the right angle at~$m$.
+Since $|p-\bar p|\z=|p-\bar p'|=\ell$, the triangle $[p\bar p\bar p']$ is isosceles; therefore the triangle $[p\bar p m]$ has a right angle at~$m$.
 Since a leg of a right triangle is shorter than its hypotenuse, we have $|p-m|<\ell$, a contradiction. 
 
 It remains to prove \ref{eq:short-cpp}.
@@ -162,7 +161,7 @@ We can assume that $\bar p\ne\bar q$; otherwise, there is nothing to prove.
 
 }
 
-Note that if $\measuredangle \hinge{\bar p}{p}{\bar q}< \tfrac\pi2$, then $\dist{p}{x}{}\z<\dist{p}{\bar p}{}$ for a point $x\in [\bar p,\bar q]$ close to $\bar p$.
+If $\measuredangle \hinge{\bar p}{p}{\bar q}< \tfrac\pi2$, then $\dist{p}{x}{}\z<\dist{p}{\bar p}{}$ for a point $x\in [\bar p,\bar q]$ close to $\bar p$.
 Since $[\bar p,\bar q]\subset K$,
 the latter is impossible.
 {
@@ -197,7 +196,7 @@ Moreover, if  $\gamma$ does not lie in $\Sigma$, then the inequality is strict.
 
 \parit{Proof.}
 Let $\bar\gamma$ be the nearest-point projection of~$\gamma$ to $R$.
-Note that $\bar\gamma$ lies in $\Sigma$ and connects $p$ to $q$; therefore, 
+The projection $\bar\gamma$ lies in $\Sigma$ and connects $p$ to $q$; therefore, 
 \[\length\bar\gamma\ge \dist{p}{q}\Sigma.\]
 
 To prove the first statement, it remains to show that 
@@ -225,7 +224,7 @@ Then there is a plane $\Pi$ that cuts $w$ from~$\Sigma$; see \ref{lem:separation
 
 The curve $\gamma$ must intersect $\Pi$ at two points: one point before $t_1$ and one after.
 Let $a=\gamma(t_0)$ and $b=\gamma(t_2)$ be these points.
-Note that the arc of $\gamma$ from $a$ to $b$ is strictly longer that $|a-b|$;
+The arc of $\gamma$ from $a$ to $b$ is strictly longer that $|a-b|$;
 indeed its length is at least $|a-w|+|w-b|$, and $|a-w|+|w-b|>|a-b|$ since $w\notin[a,b]$.
 
 Remove from $\gamma$ the arc from $a$ to $b$, and replace it with the line segment $[a,b]$;
@@ -233,10 +232,9 @@ denote the obtained curve by $\gamma_1$.
 From above, we have that
 \[\length\gamma>\length \gamma_1\]
 
-Note that $\gamma_1$ runs in~$W$.
-From above
+Since $\gamma_1$ runs in~$W$, we get
 \[\length \gamma_1\ge \dist{p}{q}\Sigma.\]
-Whence the second statement follows.
+Hence the second statement follows.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:length-dist-conv}

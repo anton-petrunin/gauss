@@ -13,7 +13,7 @@ If this happens, then $\Sigma_1$ and $\Sigma_2$ are tangent at $p$, and after ad
 
 Now, suppose $\Sigma_1$ and $\Sigma_2$ are cooriented at $p$.
 Let us describe $\Sigma_1$ and $\Sigma_2$ locally at $p$ in tangent-normal coordinates as the graphs of functions $f_1$ and $f_2$ respectively.
-Note that $\Sigma_2$ locally supports $\Sigma_1$ at $p$ if and only if either
+$\Sigma_2$ locally supports $\Sigma_1$ at $p$ if and only if either
 \[   f_1(x,y)\ge f_2(x,y)
 \quad\text{or}\quad
 f_1(x,y)\le f_2(x,y)\]
@@ -51,7 +51,7 @@ Let $\gamma_1$ and $\gamma_2$ be the curves of intersection of $\Sigma_1$ and $\
 
 Let us orient $\Pi$ so that the common normal vector $\Norm_p$ for both surfaces at $p$ points to the left from ${\vec w}$.
 Further, let us parametrize both curves so that they are running in the direction of ${\vec w}$ at $p$ and are therefore cooriented.
-Note that in this case, the curve $\gamma_1$ supports the curve $\gamma_2$ from the right.
+In this case, the curve $\gamma_1$ supports the curve $\gamma_2$ from the right.
 
 
 By \ref{prop:supporting-circline}, we have the following inequality for the normal curvatures of $\Sigma_1$ and $\Sigma_2$ at $p$ in the direction of ${\vec w}$:
@@ -154,9 +154,10 @@ Show that $R$ contains a unit ball.
 
 Recall that a region $R$ in the Euclidean space is called  {}\emph{strictly convex} if, for any two points $x,y\in R$, any point $z$ between $x$ and $y$ lies in the interior of~$R$.
 
-Evidently, a closed convex region is strictly convex if and only if its boundary does not contain a line segment.
-Note that any open convex set is strictly convex.
+For example, any open convex set is strictly convex.
 The cube (as well as any convex polyhedron) gives an example of a non-strictly convex set.
+Evidently, \textit{a closed convex region is strictly convex if and only if its boundary does not contain a line segment}.
+
 
 
 \begin{thm}{Lemma}\label{lem:gauss+=>convexity}
@@ -235,7 +236,7 @@ On the other hand, $z_0$ lies between two points in the intersection $[x,y_0]\ca
 Since $[x,y_0]\subset R$, we arrived to a contradiction.
 
 Therefore, the interior of $R$ is a convex set.
-Note that the region $R$ is the closure of its interior, therefore $R$ is convex as well.
+The region $R$ is the closure of its interior, therefore $R$ is convex as well.
 
 Since $R$ is locally strictly convex, its boundary $\Sigma$ contains no line segments.
 Therefore, $R$ is strictly convex.
@@ -393,7 +394,7 @@ in other words, the principal curvatures at each point have opposite signs or at
 If the Gauss curvature is negative at each point,
 then the surface is said to be {}\emph{strictly saddle};
 equivalently, this means that the principal curvatures have opposite signs at each point.
-Note that in this case, the tangent plane cannot support the surface even locally --- moving along the surface in the principal directions at a given point, one goes above and below the tangent plane.
+In this case, the tangent plane cannot support the surface even locally --- moving along the surface in the principal directions at a given point, one goes above and below the tangent plane.
 
 
 \begin{thm}{Exercise}\label{ex:convex-revolution}
@@ -437,7 +438,7 @@ that is, their velocity vectors at $p$ are linearly independent.
 
 \section{Hats}
 
-Note that a \textit{closed surface cannot be saddle}.
+A \textit{closed surface cannot be saddle}.
 Indeed, suppose $\Sigma$ is a closed surface.
 Consider the smallest sphere that surrounds~$\Sigma$.
 The sphere supports $\Sigma$ at some point, and at this point, the principal curvatures must have the same sign.
@@ -472,7 +473,7 @@ Since $\Sigma$ is compact, it is surrounded by a sphere;
 let $\sigma$ be the circle of intersection of this sphere and $\Pi$.
 Consider the smallest spherical dome $\Sigma_0$ with boundary $\sigma$ that surrounds~$\Sigma'$.
 
-Note that $\Sigma_0$ supports $\Sigma$ at some point~$q$.
+$\Sigma_0$ supports $\Sigma$ at some point~$q$.
 Without loss of generality, we may assume that $\Sigma_0$ and $\Sigma$ are cooriented at $q$, and $\Sigma_0$ has positive principal curvatures.
 In this case, $\Sigma_0$ supports $\Sigma$ from the outside.
 By \ref{cor:surf-support}, we have $K(q)_\Sigma\z\ge K(q)_{\Sigma_0}>0$, a contradiction.
@@ -509,7 +510,7 @@ if its boundary line $\partial\Delta$ lies in a plane $\Pi$ and $\Delta \setminu
 A smooth surface $\Sigma$ is saddle if and only if it has no hats.
 \end{thm}
 
-Note that a saddle surface can contain a closed plane curve.
+A saddle surface can contain a closed plane curve.
 For example, the hyperboloid $x^2+y^2-z^2=1$ contains the unit circle in the $(x,y)$-plane.
 However, according to the proposition (as well as the lemma), a plane curve cannot bound a topological disc (as well as any compact set) in a saddle surface.
 
@@ -528,7 +529,7 @@ By \ref{lem:gauss+=>convexity}, $f$ is convex in a small neighborhood of $(0,0)$
 Therefore, $F_\epsilon$ is convex, for sufficiently small $\epsilon>0$.
 In particular, $F_\epsilon$ is a topological disc.
 
-Note that $(x,y)\mapsto (x,y,f(x,y))$ is a homeomorphism from $F_\epsilon$
+The map $(x,y)\mapsto (x,y,f(x,y))$ defines a homeomorphism from $F_\epsilon$
 to
 \[\Delta_\epsilon=\set{(x,y,f(x,y))\in \mathbb{R}^3}{f(x,y)\le \epsilon};\]
 so $\Delta_\epsilon$ is a topological disc for any small $\epsilon>0$.
@@ -604,7 +605,7 @@ There is no proper strictly saddle smooth surface that has its boundary line in 
 \end{thm}
 
 \parit{Proof.}
-Note that by \ref{ex:saddle-linear}, the statement can be reformulated in the following way:
+By \ref{ex:saddle-linear}, the statement can be reformulated in the following way:
 \textit{There is no proper strictly saddle smooth surface 
 with its boundary line in the $(x,y)$-plane
 and contained in a region of the form:}
@@ -618,7 +619,7 @@ It lies in the upper half-plane and below the line $z=r$.
 Consider the open upper half-plane $H=\set{(x,z)\in \mathbb{R}^2}{z> 0}$.
 Let $\Theta$ be the connected component of the complement $H\setminus \hat \Sigma$ that contains all the points above the line $z=r$.
 
-Note that $\Theta$ is convex.
+The set $\Theta$ is convex.
 If not, then there is a line segment $[p,q]$ for some $p,q\in \Theta$ that cuts from $\hat\Sigma$ a compact piece.
 \begin{figure}[!ht]
 \vskip-0mm
@@ -627,7 +628,7 @@ If not, then there is a line segment $[p,q]$ for some $p,q\in \Theta$ that cuts 
 \vskip0mm
 \end{figure}
 Consider the plane $\Pi$ thru $[p,q]$ that is perpendicular to the $(x,z)$-plane.
-Note that $\Pi$ cuts from $\Sigma$ a compact region $\Delta$.
+$\Pi$ cuts from $\Sigma$ a compact region $\Delta$.
 By a general position argument (see \ref{lem:reg-section}),
 we can assume that $\Delta$ is a compact surface with its boundary line in $\Pi$, and the remaining part of $\Delta$ lies strictly on one side from $\Pi$.
 Since the plane $\Pi$ is convex, this statement contradicts \ref{lem:convex-saddle}.
@@ -653,11 +654,11 @@ By \ref{prop:surf-support}, the latter is impossible --- a contradiction.
 Denote by $\Sigma$ the graph $z=f(x,y)$.
 Assume the contrary; that is, $\Sigma$ lies between two planes $z=\pm C$.
 
-Note that the function $f$ cannot be constant.
+The function $f$ cannot be constant.
 It follows that the tangent plane $\T_p$ at some point $p\in\Sigma$ is not horizontal.
 
 Denote by $\Sigma^+$ the part of $\Sigma$ that lies above $\T_p$.
-Note that it has at least two connected components which are approaching $p$ from both sides 
+Note that $\Sigma^+$ has at least two connected components which are approaching $p$ from both sides 
 in the principal direction with positive principal curvature.
 Indeed, if there was a curve that runs in $\Sigma^+$ and approaches $p$ from both sides, then it would cut a topological disc from $\Sigma$ with the boundary line above $\T_p$ and some points below it;
 the latter would contradict \ref{lem:convex-saddle}.
@@ -685,13 +686,13 @@ Let us move $\T_p$ slightly upward and cut from $\Sigma^+_0$ the piece above the
 By the general position argument (\ref{lem:reg-section}),
 we can assume that $\bar\Sigma^+_0$ is a surface with a smooth boundary line;
 by construction the boundary line lies in the plane.
-Note that the obtained surface $\bar\Sigma^+_0$ still lies at a bounded distance to a line.
+The obtained surface $\bar\Sigma^+_0$ still lies at a bounded distance to a line.
 The latter is impossible by \ref{lem:region}.
 \qeds
 
 \section*{Remarks}
 
-Note that Bernstein's theorem and the lemma in its proof do not hold for nonstrictly saddle surfaces;
+Bernstein's theorem and the lemma in its proof do not hold for nonstrictly saddle surfaces;
 counterexamples can be found among infinite cylinders over smooth curves.
 In fact, it can be shown that these are the only counterexamples;
 a proof is based on the same idea, but it is more technical.
