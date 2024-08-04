@@ -3,14 +3,16 @@
 
 \section{Intrinsic geometry}
 
+Geometry of surfaces is divided into intrinsic and extrinsic.
 We say that something is \index{intrinsic}\emph{intrinsic} if it can be checked or measired within the surface;
 for example, lengths of curves on the surface or angles between them.
-Otherwise, if a definition of something essentially uses the ambient space, then this something is called \index{extrinsic}\emph{extrinsic}.
+Otherwise, if the definition of something essentially uses the ambient space, then this something is called \index{extrinsic}\emph{extrinsic};
+examples include normal curvature.
 
 The mean curvature, as well as the Gauss curvature, are defined via principal curvatures, which are extrinsic.
 Later (\ref{thm:remarkable}) it will be shown that remarkably the Gauss curvature is intrinsic --- it can be calculated via measurements within the surface.
 The mean curvature is not intrinsic; for example, the intrinsic geometry of the $(x,y)$-plane is not distinguishable from the intrinsic geometry of the graph $z\z=(x+y)^2$.
-However, the mean curvature of the former vanishes at all points, while the mean curvature of the latter does not vanish, say at $p=(0,0,0)$.  
+However, the mean curvature of the former vanishes at all points, while the mean curvature of the latter does not vanish, say at the origin.  
 
 The following exercise should help you get in the right mood;
 it might look like a tedious problem in calculus, but it actually is an easy problem in geometry.
@@ -62,7 +64,7 @@ Let us show that \textit{there is no shortest path from $p$ to $q$ in~$\Sigma$.}
 
 Note that $\dist{p}{q}\Sigma=2$. 
 Indeed, given $\epsilon\z>0$, consider the point $s_\epsilon=(0,\epsilon,0)$.
-Observe that the polygonal path $ps_\epsilon q$ lies in $\Sigma$, and its length $2\cdot\sqrt{1+\epsilon^2}$ approaches $2$ as $\epsilon\to0$.
+The polygonal path $ps_\epsilon q$ lies in $\Sigma$, and its length $2\cdot\sqrt{1+\epsilon^2}$ approaches $2$ as $\epsilon\to0$.
 It follows that $\dist{p}{q}\Sigma\le 2$.
 Since $\dist{p}{q}\Sigma\z\ge \dist{p}{q}{\mathbb{R}^3}=2$, we get $\dist{p}{q}\Sigma=2$.
 
@@ -109,8 +111,9 @@ Therefore, $\length\gamma_\infty\z= \ell$; equivalently, $\gamma_\infty$ is a sh
 
 \section{Nearest-point projection}
 
-The following statement belongs to convex geometry;
-we prove it since it plays a significant role in the sequel.
+The following statement does not belong to differential geometry;
+it is from convex geometry,
+but we prove it since it plays a significant role in the sequel.
 
 \begin{thm}{Lemma}\label{lem:nearest-point-projection}
 Let $R$ be a closed convex set in $\mathbb{R}^3$.
@@ -208,7 +211,7 @@ that is $p_i=\gamma(t_i)$ if $\bar p_i=\bar\gamma(t_i)$.
 By \ref{lem:nearest-point-projection}, $|p_i-p_{i-1}|\z\ge|\bar p_i-\bar p_{i-1}|$ for any~$i$.
 Therefore,
 \[\length p_0\dots p_n\ge \length \bar p_0\dots \bar p_n.\]
-Passing to the least upper bound of each side of the inequality for all inscribed polygonal lines $p_0\dots p_n$ in $\gamma$, we get \ref{bar-gamma=<gamma}.\
+Applying the definition of length, we get \ref{bar-gamma=<gamma}.
 
 \begin{wrapfigure}{o}{37 mm}
 \vskip-0mm

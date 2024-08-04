@@ -329,7 +329,7 @@ By the Crofton formula,
 In the case of equality, the curve $\gamma_{\vec u}$ runs exactly back and forth along $\ell_{\vec u}$ without additional zigzags for almost all (and therefore for all) ${\vec u}$.
 
 Let $K$ be a closed set bounded by~$\gamma$.
-Observe that the last statement implies that every line may intersect $K$ only along a closed segment or a single point.
+The last statement implies that every line may intersect $K$ only along a closed segment or a single point.
 It follows that $K$ is convex.
 
 \parbf{\ref{adex:more-croftons}.}
@@ -523,16 +523,17 @@ To obtain $\gamma_2$, slightly unbend (that is, decrease the curvature of) the d
 }
 
 \parbf{\ref{ex:bow'}}; \ref{SHORT.ex:bow'+}.
-We can assume that $\vec u=\tan_1(a)\z=\tan_2(a)$.
-Mimic the first part of the proof of bow lemma to show that 
-\[\measuredangle(\vec u,\tan_1(s))\ge \measuredangle(\vec u,\tan_2(s))\]
-for any $s$.
-Deduce that
-\[\langle \vec u,\vec w_1\rangle \le \langle \vec u,\vec w_2\rangle\]
-and 
-\[|\vec w_1^\perp| \ge |\vec w_2^\perp|,\]
-where $\vec v^\perp$ denotes the projection of $\vec v$ to the plane perpendicular to $\vec u$.
-Make one more step.
+We can assume that $p=\gamma_1(a)\z=\gamma_2(a)$ is the origin, 
+$\vec u=\tan_1(a)\z=\tan_2(a)$ points in the direction of $x$-axis,
+and the $q_1=\gamma_1(b)$ and $q_2=\gamma_2(b)$ lie in the upper half-plane of the $(x,y)$-plane.
+
+Suppose $\alpha_1<\alpha_2$.
+Find a point $x$ such that 
+$\dist{x}{q_1}{}<\dist{x}{q_2}{}$, and
+$\gamma_1$ with the line segments $[p,x]$ and $x,q_1]$ bound a convex region in the $(x,y)$-plane.
+(Here you have to use that $\beta_1\le\tfrac\pi2$.)
+
+Modify the proof of the bow lemma (\ref{lem:bow}) so that it works for concatenations of $[x,p]$ with $\gamma_1$ and $\gamma_2$, and arrive at a contradiction.
 
 \parit{\ref{SHORT.ex:bow'-}.} Look at the diagram and think.
 
@@ -1178,7 +1179,7 @@ To prove the if part, use that the composition of smooth functions is smooth.
 
 Now, choose a graph representation $z\z=f(x,y)$ of a neighborhood of $p$ in $\Sigma$.
 Note that $g$ is smooth in the neighborhood if and only if the function $\hat g\:(x,y)\mapsto g(x,y,f(x,y))$ is smooth in its domain of definition.
-Define $f(x,y,z)\z\df \hat g(x,y)$; observe that it solves the only-if part.
+Define $f(x,y,z)\z\df \hat g(x,y)$; it solves the only-if part.
 
 For the last part, consider function $g\:(x,y)\mapsto\tfrac1{x^2+y^2}$ defined on the $(x,y)$-plane with removed origin.
 Observe that $g$ cannot be extended to a continuous function on $\mathbb{R}^3$.
@@ -1316,7 +1317,7 @@ By \ref{ex:tangent-normal}, $\Norm=\tfrac{\nabla h}{|\nabla h|}$ defines a unit 
 
 \parbf{\ref{ex:plane-section}.}
 Use cutoffs and mollifiers (Section~\ref{sec:analysis}) to construct a smooth nonnegative function $f$ on the $(x,y)$-plane such that $f(x,y)=0$ if and only if $(x,y)\in A$.
-Observe that the graph $z=f(x,y)$ describes the required surface.
+The graph $z=f(x,y)$ describes the required surface.
 
 %\end{multicols}
 %\par\noindent\rule{\textwidth}{0.4pt}
@@ -1369,7 +1370,7 @@ Denote by $\Norm_1(s)$ and $\Norm_2(s)$ the unit normal vectors to $\Sigma_1$ an
 By the assumption, $\langle \Norm_1,\Norm_2\rangle= c$ for some constant $c$.
 We know that
 $\Norm_1'$ is proportional to $\gamma'$ and need to show that $\Norm_2'$ is proportional to $\gamma'$.
-Observe that if $c=\pm1$, then $\Norm_1\equiv\pm \Norm_2$, and the statement trivially holds.
+If $c=\pm1$, then $\Norm_1\equiv\pm \Norm_2$, and the statement trivially holds.
 
 Note that $\langle\Norm_1',\Norm_2\rangle=0$;
 use that $c'=0$ to show that $\langle\Norm_1,\Norm_2'\rangle=0$.
@@ -1525,8 +1526,8 @@ then $\Pi$ intersects $\Sigma$ \index{transversality}\emph{transversally} along 
 that is, $\T_p\Sigma\ne\Pi$ for any point $p \in \gamma$.
 Apply the implicit function theorem to show that $\gamma$ is a smooth curve.
 
-Finally, observe that the curvature of $\gamma$ cannot be smaller than the normal curvature of $\Sigma$ in the same direction.
-Whence $\gamma$ has no points with vanishing curvature.
+Finally, the curvature of $\gamma$ cannot be smaller than the normal curvature of $\Sigma$ in the same direction.
+Hence $\gamma$ has no points with vanishing curvature.
 Therefore its signed curvature has a constant sign.
 
 
@@ -1812,7 +1813,7 @@ This means that $\gamma$ is not length minimizing ---
 a contradiction.
 
 \parbf{\ref{ex:intrinsic-diameter}.} 
-Show that the nearest-point projection $\partial B\to\Sigma$ is surjective.
+Show that the nearest-point projection $\mathbb{S}^2\to\Sigma$ is surjective.
 Apply \ref{lem:nearest-point-projection} and \ref{thm:area-axioms:monotonicity}.
 
 %\end{multicols}

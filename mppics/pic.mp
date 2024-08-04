@@ -3327,8 +3327,8 @@ p0=z.a0{1,1}..z.a2..{1,-2}z.a3;
 z.b0=z.a0+1*direction 0 of p0;
 z.b3=z.a3+.5*direction 3 of p0;
 
-labelarcsprof(z.b0, z.a0, z.a3, 7,8, btex $\alpha_i$ etex);
-whitelabelarcsprof2(z.a0, z.a3, (z.a3+2*(z.a3-z.b3)), 7,8, btex $\beta_i$ etex);
+labelarcsprof(z.b0, z.a0, z.a3, 9,8, btex $\alpha_i$ etex);
+whitelabelarcsprof2(z.a0, z.a3, (z.a3+2*(z.a3-z.b3)), 8,8, btex $\beta_i$ etex);
 draw p0 pensemibold;
 %draw (z.a0+.5*(z.a0-z.b0))--z.b0 penhair;
 %draw (z.a3+2*(z.a3-z.b3))--z.b3 penhair;

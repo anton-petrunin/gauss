@@ -367,15 +367,17 @@ In particular, $\vec v$ points from $p$ into $H$, which is equivalent to~\ref{eq
 
 \section{Bow lemma}
 
+The following lemma proved 
+Erhard Schmidt \cite{schmidt}; it generalizes the result of by Axel Schur \cite{shur}.
+
 \begin{wrapfigure}{r}{39 mm}
-\vskip-4mm
+\vskip-6mm
 \centering
 \includegraphics{mppics/pic-3510}
-\vskip0mm
+\vskip-6mm
 \end{wrapfigure}
 
-The following lemma was proved by Axel Schur \cite{shur};
-it is a differential-geometric analog of the so-called {}\emph{arm lemma} of Augustin-Louis Cauchy.
+This lemma is a differential-geometric analog of the so-called {}\emph{arm lemma} of Augustin-Louis Cauchy.
 The arm lemma says that 
 \textit{if $p_0\dots p_n$ is a convex plane polygon and $q_0\dots q_n$ is a polygonal line in the space such that 
 \begin{align*}
@@ -407,8 +409,6 @@ Construct two simple smooth unit-speed plane curves $\gamma_1,\gamma_2\:[a,b]\to
 \end{thm}
 
 }
-
-The following proof utilizes the idea of Stanisław Zaremba \cite{schoenberg-zaremba}.
 
 \parit{Proof.}
 We can assume that $\gamma_1(a)\ne \gamma_1(b)$;
@@ -509,8 +509,6 @@ Integrating \ref{<gamma',u>}, we get
 \vskip-4mm
 \end{wrapfigure}
 
-PROBLEM???
-
 \begin{thm}{Advanced exercise}\label{ex:bow'}
 Let $\gamma_1$ and $\gamma_2$ be as in the bow lemma (\ref{lem:bow});
 denote by $\tan_1$ and $\tan_2$ their tangent indicatrixes.
@@ -530,9 +528,8 @@ Set
 \end{align*}
 
 \begin{subthm}{ex:bow'+}
-Suppose that 
-\[\int_a^b\kur(s)_{\gamma_1}\cdot ds\le \pi.\]
-Show that $\alpha_1\ge \alpha_2$ and $\beta_1\ge \beta_2$.
+Suppose that $\beta_1\le\tfrac\pi2$.
+Show that $\alpha_1\ge \alpha_2$.
 \end{subthm}
 
 \begin{subthm}{ex:bow'-} Construct an example, showing that the inequality $\alpha_1\ge \alpha_2$ does not hold in general.
