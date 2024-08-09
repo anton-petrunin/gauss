@@ -26,7 +26,7 @@ Before going into the proofs, we suggest solving the following exercises using t
 Assume $\gamma$ is a simple closed curve with constant geodesic curvature $1$ in a smooth closed surface $\Sigma$ with positive Gauss curvature.
 Show that 
  \[\length\gamma< 2\cdot\pi;\]
-that is, $\gamma$ is shorter than the unit circle in the plane.  
+that is, $\gamma$ is shorter than the unit circle.  
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:GB-hat}
@@ -55,8 +55,7 @@ Conclude that any two closed geodesics on $\Sigma$ have a common point.
 
 \begin{thm}{Exercise}\label{ex:self-intersections}
 Let $\Sigma$ be a closed smooth surface with positive Gauss curvature. 
-Suppose $\gamma$ is a closed geodesic in $\Sigma$.
-Show that in a single coordinate chart $\gamma$ cannot look like one of the curves on the following diagrams.
+Show that in a single coordinate chart, a closed geodesic in $\Sigma$ cannot look like one of the curves on the following pictures.
 
 \begin{figure}[h]
 \begin{minipage}{.32\textwidth}
@@ -130,12 +129,14 @@ In particular, $\Sigma$ is diffeomorphic to the plane.
 Let $\Delta$ be a topological disc in a smooth oriented surface $\Sigma$ bounded by a simple piecewise smooth curve $\partial \Delta$.
 As before we suppose $\partial \Delta$ is oriented in such a way that $\Delta$ lies on its left.
 Set \index{10gb@$\GB$ (Gauss--Bonnet formula)}
-\[\GB(\Delta)=\tgc{\partial\Delta}+\iint_\Delta K-2\cdot \pi,
+\[\GB(\Delta)
+\df
+\tgc{\partial\Delta}+\iint_\Delta K-2\cdot \pi,
 \eqlbl{eq:GB}\]
 where $K$ denotes the Gauss curvature of~$\Sigma$.
-Here $\GB$ stands for Gauss--Bonnet;
-our goal is to show that
-\[\GB(\Delta)=0.\]
+The Gauss--Bonnet formula can be written as
+\[\GB(\Delta)=0,\]
+and $\GB$ stands for Gauss--Bonnet.
 
 \begin{thm}{Lemma}\label{lem:GB-sum}
 Suppose the disc $\Delta$ is subdivided into two discs $\Delta_1$ and $\Delta_2$ by a curve $\delta$.
@@ -155,8 +156,8 @@ Then
 Let us subdivide $\partial \Delta$ into two curves $\gamma_1$ and $\gamma_2$ that share endpoints with $\delta$, so that
  $\Delta_i$ is bounded by the arc $\gamma_i$  and~$\delta$ for $i=1,2.$
 
-Denote by $\phi_1$, $\phi_2$, $\psi_1$, and $\psi_2$ the angles between $\delta$ and $\gamma_i$ marked on the diagram.
-Suppose the arcs $\gamma_1$, $\gamma_2$, and $\delta$ are oriented as on the diagram. 
+Denote by $\phi_1$, $\phi_2$, $\psi_1$, and $\psi_2$ the angles between $\delta$ and $\gamma_i$ marked on the picture.
+Suppose the arcs $\gamma_1$, $\gamma_2$, and $\delta$ are oriented as on the picture. 
 Then
 \begin{align*}
 \tgc{\partial \Delta}&= \tgc{\gamma_1}-\tgc{\gamma_2}+(\pi-\phi_1-\phi_2)+(\pi-\psi_1-\psi_2),
@@ -209,12 +210,12 @@ By the additivity lemma (\ref{lem:GB-sum}),
 \[\GB(P)=0\]
 for any spherical polygon~$P$.
 
-The second statement can be proved by approximation. One has to show that
-one could approximate the total geodesic curvature of  
-a piecewise smooth simple closed curve by  
+The second statement can be proved by approximation.
+One has to show that the total geodesic curvature of  
+a piecewise smooth simple curve can be approximated by 
 the total geodesic curvature of inscribed broken geodesics.
-We omit the proof of the latter statement,
-but it goes along the same lines as \ref{ex:total-curvature=}.
+We omit the detailed proof,
+but it close to \ref{ex:total-curvature=}.
 \qeds
 
 
@@ -233,6 +234,7 @@ In this section, we prove a special case of the Gauss--Bonnet formula.
 This case is leading --- the general case can be proved similarly, but one has to use the signed area counted with multiplicity.
 
 \parit{Proof of \ref{thm:gb} for open and closed surfaces with positive Gauss curvature.}
+Let $\Norm\:\Sigma\to\mathbb{S}^2$ be the spherical map.
 By \ref{cor:intK}, we have
 \[\GB(\Delta)=\tgc{\partial\Delta}+\area[\Norm(\Delta)]-2\cdot \pi.
 \eqlbl{eq:gb-area}\]
@@ -269,7 +271,7 @@ The integer $n$ cannot change during the process since the left hand side in \re
 
 \section{Simple geodesic}
 
-The following theorem provides an interesting application of the Gauss--Bonnet formula; it is proved by Stephan Cohn-Vossen \cite[Satz 9 in][]{convossen}.
+The following theorem provides an interesting application of the Gauss--Bonnet formula; it is proved by Stephan Cohn-Vossen \cite[Satz 9]{convossen}.
 
 \begin{thm}{Theorem}\label{thm:cohn-vossen}
 Any open smooth surface with positive Gauss curvature has a simple two-sided infinite geodesic.
@@ -283,11 +285,11 @@ that is, for some closed interval $[a,b]$,
 the restriction $\ell=\gamma|_{[a,b]}$ is a simple loop.
 
 By \ref{ex:convex-proper-plane}, $\Sigma$ is parametrized by an open convex region $\Omega$ in the plane.
-By Jordan's theorem (\ref{thm:jordan}), $\ell$ bounds a disc in $\Sigma$; denote it by~$\Delta$.
+By Jordan's theorem (\ref{thm:jordan}), $\ell$ bounds a topological disc in $\Sigma$; denote it by~$\Delta$.
 If $\phi$ is the internal angle at the base of the loop, then by the Gauss--Bonnet formula,
 \[\iint_\Delta K=\pi+\phi.\] 
 
-Recall that by \ref{ex:intK:2pi}, we have
+Further, by \ref{ex:intK:2pi}, we have
 \[\iint_\Sigma K\le 2\cdot\pi.\eqlbl{intK=<2pi+}\]
 Therefore, $0<\phi<\pi$; that is, $\gamma$ has no concave simple loops.
 
@@ -318,10 +320,10 @@ if and only if the same geodesic traveled backwards
 $t\mapsto \gamma(-t)$
 is counterclockwise.
 
-Let us shoot a unit-speed geodesic in each direction from a given point $p\z=\gamma(0)$.
+Let us shoot a unit-speed geodesic in each direction from a given point $p=\gamma(0)$.
 This gives a one-parameter family of geodesics $\gamma_s$ for $s\in[0,\pi]$ connecting the geodesic $t\mapsto \gamma(t)$ with $t\mapsto \gamma(-t)$; that is, $\gamma_0(t)\z=\gamma(t)$, and $\gamma_\pi(t)=\gamma(-t)$.
 
-The subset of values $s\in [0,\pi]$ such that $\gamma_s$ is right (or left) is open.
+The subset of values $s\in [0,\pi]$ such that $\gamma_s$ is right (or left) is open in $[0,\pi]$.
 That is, if $\gamma_s$ is right, then so is $\gamma_t$ for all $t$ sufficiently close to~$s$.
 Indeed, denote by $\phi_s$ the angle of the simple loop of $\gamma_s$.
 From above, we have $0<\phi_s<\pi$.
@@ -378,7 +380,7 @@ The value $\chi$ does not depend on the choice of the subdivision since the rema
 Formula \ref{eq:g-b++} is deduced from the standard Gauss--Bonnet (\ref{thm:gb}).
 The argument is similar to \ref{lem:GB-sum}, but the combinatorics gets trickier.
 
-Before reading the proof, try to modify the argument in \ref{lem:GB-sum} to derive the formula for the subdivision of the annulus $A$ on the diagram;
+Before reading the proof, try to modify the argument in \ref{lem:GB-sum} to derive the formula for the subdivision of the annulus $A$ on the picture;
 its graph has 4 vertices and 6 edges (one of them is a loop) and it subdivides $A$ into two discs $\Delta_1$ and $\Delta_2$.
 Therefore, we have $\chi(A)=4-6+2=0$ and we should get 
 \[\iint_A K=-\tgc{\gamma_1}-\tgc{\gamma_2}.\]
@@ -406,7 +408,7 @@ If $\sigma$ is not part of some $\gamma_i$,
 then it appears twice in the boundary of the discs, say in  $\partial \Delta_i$ and $ \partial \Delta_j$. 
 In the latter case, we may assume that $\Delta_i$ lies on the left from $\sigma$ and $\Delta_j$ is on its right, so 
  $\sigma$ contributes $\tgc\sigma$ to $\tgc{\partial\Delta_i}$ and $-\tgc\sigma$ to $\tgc{\partial\Delta_j}$; hence $\sigma$ contributes nothing to the left-hand side of \ref{eq:GB-sum}.
-It might happen that $i=j$ (as for one of the edges on the diagram above);
+It might happen that $i=j$ (as for one of the edges on the picture above);
 in this case, we have one disc on both sides of~$\sigma$, but still, it contributes nothing to \ref{eq:GB-sum}.
 If $\sigma$ is part of some $\gamma_i$, then it also appears once in the boundary of some disc, say in $\partial \Delta_j$.
 We may assume that both $\Lambda$ and $\Delta_j$ lie on the left from $\sigma$,
@@ -443,8 +445,7 @@ to the left-hand side of \ref{eq:GB-sum}.
 \end{wrapfigure}
 
 If $p$ lies on the boundary of $\Lambda$, then it is a vertex of $d-1$ internal angles
-$\delta_1,\dots,\delta_{d-1}$.
-Let $\phi_{i}\z=\pi-\delta_{i}$ be the corresponding external angles.
+$\delta_1,\dots,\delta_{d-1}$, and $\phi_{i}\z=\pi-\delta_{i}$ are the corresponding external angles.
 Note that
 \[\delta_1+\dots+\delta_{d-1}\z=\pi-\theta,\]
 where $\theta\in(-\pi,\pi)$ denotes the external angle of $\Lambda$ at $p$.
@@ -459,7 +460,7 @@ Then the total contribution from external angles to the left-hand side of  \ref{
 Since the edges contributed nothing, the left-hand side of  \ref{eq:GB-sum} equals \ref{eq:GB-sum-d}.
 
 It remains to observe that $d_1+\dots+d_v=2\cdot e$.
-Indeed, $d_1+\dots+d_v$ is the total number of ends of $e$ edges in the graph, and each edge has exactly two ends. 
+Indeed, $d_1+\dots+d_v$ is the total number of ends of all edges in the graph, and each of $e$ edges has exactly two ends. 
 This finishes the proof of \ref{eq:GB-sum} and \ref{eq:g-b++}.
 \qeds
 

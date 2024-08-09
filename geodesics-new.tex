@@ -11,7 +11,7 @@ Show that the helix $\gamma(t)\z\df(\cos t,\sin t, t)$ is a geodesic on the cyli
 \end{thm}
 
 
-Physically, geodesics can be understood as the trajectories of particles that slide on $\Sigma$ without friction.
+Geodesics can be understood as the trajectories of particles that slide on $\Sigma$ without friction and external forces.
 Indeed, since there is no friction, the force that keeps the particle on $\Sigma$ must be perpendicular to~$\Sigma$.
 Therefore, by Newton's second law of motion,
 we get that the acceleration $\gamma''$ is perpendicular to $\T_{\gamma(t)}$.
@@ -44,7 +44,7 @@ $\gamma_{\lambda}''(t) =\lambda^2\cdot \gamma''(\lambda t)$.
 
 
 The statement in the following exercise is called \index{Clairaut's relation}\emph{Clairaut's relation};
-it can be obtained from the lemma above and the conservation of angular momentum.
+it can be obtained from the conservation of angular momentum.
 
 \begin{thm}{Exercise}\label{ex:clairaut}
 Let $\gamma$ be a geodesic on a smooth surface of revolution.
@@ -58,7 +58,7 @@ Show that the value $r(t)\cdot \cos\theta(t)$ is constant.
 Recall that an {}\emph{asymptotic line} is a curve in the surface with vanishing normal curvature.
 
 \begin{thm}{Exercise}\label{ex:asymptotic-geodesic}
-Assume a curve $\gamma$ is a geodesic and, at the same time, an asymptotic line of a smooth surface~$\Sigma$.
+Assume a curve $\gamma$ is a geodesic and, at the same time, an asymptotic line of a smooth surface.
 Show that $\gamma$ is a straight-line segment.
 \end{thm}
 
@@ -118,7 +118,7 @@ The proof of the lemma is done by direct calculations.
 In the following calculations, we often omit the arguments;
 in other words, we may use shortcuts $x=x(t)$, $f=f(x,y)=f(x(t),y(t))$, and so on.
 
-First, let us express $z''(t)$ in terms of $f$, $x(t)$, and $y(t)$.
+First, let us express $z''$ in terms of $f$, $x$, and $y$.
 \[
 \begin{aligned}
 z''&=f(x,y)''=
@@ -139,10 +139,10 @@ f_y\cdot y''.
 \]
 
 The condition
-\[\gamma''(t)\perp\T_{\gamma(t)} \eqlbl{eq:def-def-geod} \] 
+\[\gamma''(t)\perp\T_{\gamma(t)}\] 
 means that 
 $\gamma''$ is perpendicular to the two basis vectors in $\T_{\gamma(t)}$.
-Therefore, the vector equation \ref{eq:def-def-geod} can be rewritten as the following system of two real equations
+Therefore, it can be rewritten as the following system of two real equations
 \[
 \begin{cases}
 \langle \gamma'',s_x\rangle=0,
@@ -155,7 +155,7 @@ Observe that
 $s_x=(1,0, f_x)$ 
 and 
 $s_y=(0,1, f_y)$.
-Since $\gamma''\z=(x'',y'',z'')$, we can rewrite the system in the following way:
+Since $\gamma''\z=(x'',y'',z'')$, we can rewrite our system as
 \[
 \begin{cases}
 x''+ f_x\cdot z''=0,
@@ -249,7 +249,7 @@ The differential $d_0(\exp_p)\:\T_p\to \T_p$ is the identity map.
 
 \end{thm}
 
-In fact, it is easy to see that $\Dom(\exp_p)$ --- the domain of definition of $\exp_p$ --- is an open \index{star-shaped}\emph{star-shaped} region of $\T_p$;
+In fact, it is easy to see that $\Dom(\exp_p)$ is \index{star-shaped}\emph{star-shaped} in $\T_p$;
 the latter means that if $\vec v\in \Dom(\exp_p)$, then $\lambda\cdot\vec v\in \Dom(\exp_p)$ for any $0\le \lambda\le 1$.
 
 
@@ -259,8 +259,8 @@ Then there is $r_p>0$ such that
 the exponential map $\exp_p$ is defined on the open ball $B_p\df B(0,r_p)_{\T_p}$,
 and the restriction $\exp_p|_{B_p}$ is a smooth regular parametrization of a neighborhood of $p$ in~$\Sigma$.
 
-Moreover, we have {}\emph{local control} on the function $p\mapsto r_p$;
-that is, there is $\epsilon>0$ such that if $\dist{p}{q}\Sigma<\epsilon$ for some $q\in \Sigma$ , then $r_q\ge\epsilon$.
+Moreover, we can assume that the function $p\mapsto r_p$ is {}\emph{locally bounded away from zero};
+that is, for any $p\in\Sigma$ there is $\epsilon>0$ such that if $\dist{p}{q}\Sigma<\epsilon$ for some $q\in \Sigma$, then $r_q\ge\epsilon$.
 \end{thm}
 
 The proof of the proposition uses \ref{obs:d(exp)=1} and the inverse function theorem (\ref{thm:inverse}).
@@ -316,8 +316,8 @@ A partial converse to the first statement also holds: a sufficiently short arc o
 More precisely, any point $p$ in $\Sigma$ has a neighborhood $U$ such that any geodesic that lies entirely in $U$ is a shortest path.
 \end{thm}
 
-As one can see from the following exercise, geodesics might fail to be shortest.
-A geodesic that is also a shortest path is called a \index{minimizing geodesic}\emph{minimizing geodesic}.
+A geodesic that is also a shortest path is called \index{minimizing geodesic}\emph{minimizing}.
+As one can see from the following exercise, geodesics might fail to be minimizing.
 
 \begin{thm}{Exercise}\label{ex:helix=geodesic}
 Let $\Sigma$ be the cylindrical surface described by the equation $x^2\z+y^2=1$.
@@ -334,8 +334,10 @@ In fact, if one assumes that $\gamma$ is smooth, then it is easy to convert this
 Let us think about a shortest path $\gamma$ as a stable position of a stretched elastic thread that is forced to lie on a frictionless surface.
 Since it is frictionless, the force density $\vec n=\vec n(t)$ that keeps $\gamma$ in the surface must be proportional to the normal vector to the surface at~$\gamma(t)$.
 
-The tension in the thread has to be the same at all points. (Otherwise, the thread would move back or forth, and it would not be stable.)
-Denote the tension by $\tau$.
+Denote the tension by $\tau$ the tension in the thread.
+It has to be the same at all points;
+otherwise, the thread would move back or forth, and it would not be stable.
+
 
 We can assume that $\gamma$ has unit speed;
 in this case, the net force from tension along the arc $\gamma_{[t_0,t_1]}$ is $\tau\cdot(\gamma'(t_1)-\gamma'(t_0))$.
@@ -345,9 +347,8 @@ Hence, the density of the net force from tension at $t_0$ is
 \\
 &=\tau\cdot\gamma''(t_0).
 \end{align*}
-According to Newton's second law of motion, we have 
-$\vec f+\vec n=0$.
-The latter implies that $\gamma''(t)\perp\T_{\gamma(t)}\Sigma$.
+By Newton's second law of motion,  
+$\vec f+\vec n=0$; hence $\gamma''(t)\perp\T_{\gamma(t)}\Sigma$.
 \qeds
 
 \begin{thm}{Corollary}
@@ -433,7 +434,7 @@ that is, $\Norm$ has a positive $z$-coordinate at each point.
 Let us use the shortcut $\Norm(t)$ for $\Norm(\gamma(t))$.
 
 Since $\gamma$ is a geodesic, we have $\gamma''(t)\perp\T_{\gamma(t)}$,
-or equivalently $\gamma''(t)$ is proportional to $\Norm(t)$ for any~$t$.
+or equivalently the acceleration $\gamma''(t)$ is proportional to $\Norm(t)$ for any~$t$.
 Furthermore,
 \[\gamma''=k\cdot\Norm,\]
 where $k=k(t)$ is the normal curvature of the graph at $\gamma(t)$ in the direction of $\gamma'(t)$.
@@ -468,7 +469,8 @@ Show that $\rho''(t)\le 2$ for any~$t$.
 
 \section{Total curvature of geodesics}
 
-Recall that $\tc\gamma$ denotes the total curvature of the curve~$\gamma$.
+Recall that $\tc\gamma$ denotes the total curvature of the curve~$\gamma$;
+see~\ref{sec:Total curvature}.
 
 \begin{thm}{Exercise}\label{ex:tc-spherical-image}
 Let $\gamma$ be a geodesic on an oriented smooth surface $\Sigma$
@@ -492,7 +494,8 @@ According to Liberman's lemma (\ref{lem:liberman}), the function
 $t\mapsto z(t)$ is convex.
 
 Since the slope of $f$ is at most $\ell$, we have
-\[|z'(t)|\le \frac{\ell}{\sqrt{1+\ell^2}}.\]
+\[|z'(t)|\le \frac{\ell}{\sqrt{1+\ell^2}}\]
+for any $t$.
 We can assume that $\gamma$ is defined on the interval $[a,b]$.
 Then
 \[
@@ -526,9 +529,6 @@ Show that any both-side-infinite geodesic $\gamma$ in $\Sigma$ has total curvatu
 \end{thm}
 
 The exercise implies that the estimate in Usov's theorem is optimal.
-To see this, mollify the function $f(x,y)=\ell\cdot\sqrt{x^2+y^2}$ in a small neighborhood of the origin while keeping it convex and $\ell$-Lipschitz. 
-We can assume that the geodesic $\gamma$ does not enter the smoothed part of the graph.
-
 
 \begin{thm}{Exercise}\label{ex:ruf-bound-mountain}
 Assume $f$ is a smooth convex $\tfrac32$-Lipschitz function defined on the $(x,y)$-plane.
@@ -541,7 +541,7 @@ with a nonsimple geodesic $\gamma$ in its graph $z=f(x,y)$.
 
 
 \begin{thm}{Theorem}\label{thm:tc-of-mingeod}
-Suppose a smooth surface $\Sigma$ bounds a convex set $K$ in the Euclidean space.
+Suppose a smooth surface $\Sigma$ bounds a convex set $K$.
 Assume $B(0,\epsilon)\subset K\subset B(0,1)$.
 Then the total curvatures of any shortest path in $\Sigma$ can be bounded in terms of~$\epsilon$. 
 \end{thm}
