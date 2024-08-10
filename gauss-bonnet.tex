@@ -45,7 +45,7 @@ Conclude that $\length \alpha\ge 2\cdot\pi.$
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:closed-geodesic}
-Let $\gamma$ be a closed geodesic with self-intersections on a smooth closed surface $\Sigma$ with positive Gauss curvature.
+Let $\gamma$ be a closed geodesic possibly with self-intersections on a smooth closed surface $\Sigma$ with positive Gauss curvature.
 Suppose $R$ is one of the regions that $\gamma$ cuts from~$\Sigma$.
 Show that 
 \[\iint_R K\le 2\cdot\pi.\]
@@ -94,8 +94,7 @@ Show that in a single coordinate chart, a closed geodesic in $\Sigma$ cannot loo
 \end{thm}
 
 
-The following exercise gives the optimal bound on the Lipschitz constant of a convex function that guarantees that its geodesics have no self-intersections;
-compare to \ref{ex:ruf-bound-mountain}.
+The following exercise optimizes \ref{ex:ruf-bound-mountain}.
 
 \begin{thm}{Exercise}\label{ex:sqrt(3)}
 Suppose $f\:\mathbb{R}^2\to\mathbb{R}$ is a $\sqrt{3}$-Lipschitz smooth convex function.
@@ -138,6 +137,14 @@ The Gauss--Bonnet formula can be written as
 \[\GB(\Delta)=0,\]
 and $\GB$ stands for Gauss--Bonnet.
 
+{
+
+\begin{wrapfigure}{r}{40 mm}
+\vskip0mm
+\centering
+\includegraphics{mppics/pic-1750}
+\end{wrapfigure}
+
 \begin{thm}{Lemma}\label{lem:GB-sum}
 Suppose the disc $\Delta$ is subdivided into two discs $\Delta_1$ and $\Delta_2$ by a curve $\delta$.
 Then
@@ -146,15 +153,10 @@ Then
 \]
 \end{thm}
 
-\begin{wrapfigure}[8]{r}{40 mm}
-\vskip-6mm
-\centering
-\includegraphics{mppics/pic-1750}
-\end{wrapfigure}
-
 \parit{Proof.}
-Let us subdivide $\partial \Delta$ into two curves $\gamma_1$ and $\gamma_2$ that share endpoints with $\delta$, so that
- $\Delta_i$ is bounded by the arc $\gamma_i$  and~$\delta$ for $i=1,2.$
+Let us subdivide $\partial \Delta$ into two curves $\gamma_1$ and $\gamma_2$ that share endpoints with $\delta$, so that $\Delta_i$ is bounded by the arc $\gamma_i$  and~$\delta$ for $i=1,2$.
+
+}
 
 Denote by $\phi_1$, $\phi_2$, $\psi_1$, and $\psi_2$ the angles between $\delta$ and $\gamma_i$ marked on the picture.
 Suppose the arcs $\gamma_1$, $\gamma_2$, and $\delta$ are oriented as on the picture. 
@@ -177,7 +179,7 @@ If $\Sigma$ is a plane, then its Gauss curvature vanishes;
 therefore the Gauss--Bonnet formula \ref{eq:g-b} can be written as 
 \[\tgc{\partial\Delta}=2\cdot \pi,\]
 and it follows from \ref{prop:total-signed-curvature}.
-In other words, $\GB(\Delta)=0$ for any disc~$\Delta$ in the plane.
+In other words, $\GB(\Delta)=0$ for any plane disc~$\Delta$ with piecewise smooth boundary.
 
 If $\Sigma$ is the unit sphere, then $K\equiv1$;
 in this case, Theorem~\ref{thm:gb} can be formulated in the following way:
@@ -191,7 +193,7 @@ Then
 Moreover, the same formula holds for any spherical region bounded by a piecewise smooth simple closed curve.
 \end{thm}
 
-This proposition will be used in the informal proof given below.
+This proposition will be used in the next section.
 
 \parit{Sketch of proof.}
 Suppose a spherical triangle $\Delta$ has angles 
@@ -205,7 +207,7 @@ Therefore,
 \[\tgc{\partial\Delta}=3\cdot\pi-\alpha-\beta-\gamma.\]
 It follows that $\tgc{\partial\Delta}+\area \Delta=2\cdot\pi$ or, equivalently, $\GB(\Delta)=0$.
  
-We can subdivide a given spherical polygon $P$ into triangles by dividing a polygon in two on each step.
+We can subdivide a given spherical polygon $P$ into triangles by cutting a polygon in two along a broken geodesic on each step.
 By the additivity lemma (\ref{lem:GB-sum}), 
 \[\GB(P)=0\]
 for any spherical polygon~$P$.
@@ -231,7 +233,7 @@ Show that the parallel transport $\iota_\gamma\:\T_p\mathbb{S}^2\to\T_p\mathbb{S
 \section{Intuitive proof}\label{sec:gb-intuitive-proof}
 
 In this section, we prove a special case of the Gauss--Bonnet formula.
-This case is leading --- the general case can be proved similarly, but one has to use the signed area counted with multiplicity.
+This case is leading --- the general case can be proved similarly, using the signed area counted with multiplicity, but will do something else \ref{sec:gauss--bonnet:formal}.
 
 \parit{Proof of \ref{thm:gb} for open and closed surfaces with positive Gauss curvature.}
 Let $\Norm\:\Sigma\to\mathbb{S}^2$ be the spherical map.
@@ -246,7 +248,7 @@ According to \ref{prop:pt+tgc}, $\iota_\alpha$ is the clockwise rotation by angl
 Set $\beta=\Norm\circ\alpha$.
 By \ref{obs:parallel=}, we have $\iota_\alpha=\iota_\beta$, where $\beta$ is considered as a curve in the unit sphere.
 
-Note that $\iota_\beta$ is a clockwise rotation by angle $\tgc{\beta}_{\mathbb{S}^2}$.
+Further, $\iota_\beta$ is a clockwise rotation by angle $\tgc{\beta}_{\mathbb{S}^2}$.
 By \ref{prop:area-of-spher-polygon} 
 \[\GB(\Norm(\Delta))=\tgc{\beta}_{\mathbb{S}^2}+\area[\Norm(\Delta)]-2\cdot \pi=0.\]
 Therefore, 
@@ -289,8 +291,10 @@ By Jordan's theorem (\ref{thm:jordan}), $\ell$ bounds a topological disc in $\Si
 If $\phi$ is the internal angle at the base of the loop, then by the Gauss--Bonnet formula,
 \[\iint_\Delta K=\pi+\phi.\] 
 
-Further, by \ref{ex:intK:2pi}, we have
-\[\iint_\Sigma K\le 2\cdot\pi.\eqlbl{intK=<2pi+}\]
+Recall that
+\[\iint_\Sigma K\le 2\cdot\pi;
+\eqlbl{intK=<2pi+}\]
+see \ref{ex:intK:2pi}.
 Therefore, $0<\phi<\pi$; that is, $\gamma$ has no concave simple loops.
 
 Assume $\gamma$ has two simple loops, say $\ell_1$ and $\ell_2$ that bound discs $\Delta_1$ and $\Delta_2$, respectively.
@@ -366,7 +370,7 @@ Then
 \[\iint_\Lambda K=2\cdot \pi\cdot \chi-\tgc{\gamma_1}-\dots-\tgc{\gamma_n}\eqlbl{eq:g-b++}\]
 for an integer $\chi=\chi(\Lambda)$.
 
-Moreover, if $\Lambda$ can be subdivided into $f$ discs ($f$ stands for faces) by an embedded graph with $v$ vertices and $e$ edges, then $\chi=v-e+f$.
+Moreover, if a graph with $v$ vertices and $e$ edges embedded in $\Lambda$ subdivides it into $f$ discs and contains all $\gamma_i$, then $\chi=v-e+f$.
 \end{thm}
 
 \begin{wrapfigure}{o}{38 mm}
