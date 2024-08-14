@@ -3,8 +3,6 @@
 
 The comparison theorems provide a powerful means of applying Euclidean intuition in differential geometry.
 
-This chapter is based on the introductory material in the book by Stephanie Alexander, Vitali Kapovitch, and the first author~\cite{alexander-kapovitch-petrunin2027}.
-
 \section{Triangles and hinges}
 
 Recall that a shortest path between points $x$ and $y$ in a surface $\Sigma$ is denoted by $[x,y]$ or $[x,y]_\Sigma$, and
@@ -76,11 +74,11 @@ Recall that a surface $\Sigma$ is called \index{simply-connected surface}\emph{s
 \begin{subthm}{thm:comp:cat}
 If $\Sigma$ is an open simply-connected  smooth surface with nonpositive Gauss curvature, then 
 \[\measuredangle\hinge {x}{y}{z}\le\modangle xyz\]
-for any geodesic triangle $[xyz]$.
+for any geodesic triangle $[xyz]$ in $\Sigma$.
 \end{subthm}
 
 \begin{subthm}{thm:comp:toponogov}
-If $\Sigma$ is a closed (or open) simply-connected smooth surface with nonnegative Gauss curvature, then 
+If $\Sigma$ is a closed (or open) smooth surface with nonnegative Gauss curvature, then 
  \[\measuredangle\hinge {x}{y}{z}\ge\modangle xyz\]
 for any geodesic triangle $[xyz]$.
 \end{subthm}
@@ -95,7 +93,7 @@ Show that the conclusion in \ref{thm:comp:cat} does not hold the hyperboloid
 In particular, \ref{thm:comp:cat} does not hold without assuming that $\Sigma$ is simply-connected.
 \end{thm}
 
-Let us discuss the relationship between the Gauss--Bonnet formula and the comparison theorems.
+Let us compare the Gauss--Bonnet formula with the comparison theorems.
 Suppose a disc $\Delta$ is bounded by a geodesic triangle $[xyz]$ with internal angles $\alpha$, $\beta$, and~$\gamma$.
 Then the Gauss--Bonnet implies that 
 \[\alpha+\beta+\gamma-\pi=\iint_\Delta K;\]
@@ -191,17 +189,15 @@ z&=\exp_x\vec w,
 \\
 |\vec v|_{\T_x}&=\dist{x}{y}\Sigma,&
 |\vec w|_{\T_x}&=\dist{x}{z}\Sigma,
-\\
-&\text{and}
 &\measuredangle\hinge 0{\vec v}{\vec w}_{\T_x}&=\measuredangle\hinge xyz_\Sigma;
 \end{align*}
 in particular, $|\vec v|, |\vec w|< \tfrac r2$.
 
 \parit{\ref{SHORT.thm:loc-comp:cba}.}
-Consider a minimizing geodesic $\gamma$ joining $y$ to $z$ in~$\Sigma$.
+Consider a minimizing geodesic $\gamma$ joining $y$ to $z$.
 Since $\dist{x}{y}{\Sigma},\dist{x}{z}{\Sigma}\z<\tfrac r2$, the triangle inequality implies that $\gamma$ lies in the $r$-neighborhood of~$x$.
 In particular, $\log_x\circ\gamma$ is defined, and the curve
-$\tilde \gamma=\log_x\circ\gamma$ lies in an $r$-neighborhood of zero in $\T_x$.
+$\tilde \gamma\df\log_x\circ\gamma$ lies in an $r$-neighborhood of zero in $\T_x$.
 Note that $\tilde\gamma$ connects $\vec v$ to $\vec w$ in $\T_x$.
 
 By Rauch comparison (\ref{prop:rauch:K=<0}), we have
@@ -209,18 +205,18 @@ By Rauch comparison (\ref{prop:rauch:K=<0}), we have
 Since $\dist{\vec v}{\vec w}{\T_x}\le\length\tilde \gamma$ and $\length\gamma=\dist{y}{z}{\Sigma}$, we get 
 \[\dist{\vec v}{\vec w}{\T_x}\le \dist{y}{z}\Sigma.\]
 By angle monotonicity (\ref{lem:angle-monotonicity}), we get
-\[\measuredangle\hinge 0{\vec v}{\vec w}_{\T_x}\le \modangle xzy.\]
-whence the result.
+\[\measuredangle\hinge 0{\vec v}{\vec w}_{\T_x}\le \modangle xzy,\]
+hence the result.
 
 \parit{\ref{SHORT.thm:loc-comp:cbb}.}
-Consider the line segment $\tilde \gamma$ joining $\vec v$ to $\vec w$ in the tangent plane $\T_x$, and set $\gamma=\exp_x\circ\tilde \gamma$.
+Consider the line segment $\tilde \gamma$ joining $\vec v$ to $\vec w$ in the tangent plane $\T_x$, and set $\gamma\df\exp_x\circ\tilde \gamma$.
 By Rauch comparison (\ref{prop:rauch:K>=0}), we have
 \[\length \tilde \gamma\ge\length\gamma.\]
 Since $\dist{\vec v}{\vec w}{\T_x}=\length\tilde \gamma$ and $\length\gamma\ge\dist{y}{z}\Sigma$, we get 
 \[\dist{\vec v}{\vec w}{\T_x}\ge \dist{y}{z}\Sigma.\]
 By the angle monotonicity (\ref{lem:angle-monotonicity}), we obtain
 \[\measuredangle\hinge 0{\vec v}{\vec w}_{\T_x}\ge\modangle xzy,\]
-whence the result.
+hence the result.
 \qeds
 
 \section{Nonpositive curvature}\label{sec:nonpos-comp}
@@ -295,7 +291,7 @@ Therefore, it is sufficient to prove that
 \ge\dist{p}{q}\Sigma.\eqlbl{eq:thm:=def-loc}\]
 for a given hinge $\hinge x p q$ with $\dist{x}{p}\Sigma+\dist{x}{q}\Sigma<\ell$.
 
-Let us describe a construction that produces a new hinge $\hinge{x'}p q$ for a given hinge $\hinge x p q$ such that 
+Let us produce a new hinge $\hinge{x'}p q$ for a given hinge $\hinge x p q$ such that 
 \[\tfrac{2}{3}\cdot\ell \le\dist{p}{x}\Sigma\z+\dist{x}{q}\Sigma< \ell.\]
 
 \begin{wrapfigure}{r}{32mm}
@@ -431,8 +427,8 @@ for any $q\in B(p,100\cdot R_p)_\Sigma$.
 \end{subthm}
 
 \begin{subthm}{ex:open-comparison:proof}
-Use \ref{SHORT.ex:open-comparison:almost-min} to extend the proof of \ref{thm:comp:toponogov} (page \pageref{proof(thm:comp:toponogov)}) to open surfaces. 
-(Show that $R_p=\infty$ for any $p\in\Sigma$.) 
+Explain how to use \ref{SHORT.ex:open-comparison:almost-min} to extend the proof of \ref{thm:comp:toponogov} (page \pageref{proof(thm:comp:toponogov)}) to open surfaces. 
+(That is, to show that $R_p=\infty$ for any $p\in\Sigma$.) 
 \end{subthm}
 
 \end{thm}

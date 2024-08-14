@@ -1,25 +1,26 @@
 \chapter{Semigeodesic charts}
 \label{chap:semigeodesic}
 
-This chapter contains computational proofs of several statements discussed above, including 
-Proposition~\ref{prop:inj-rad} --- an alternative definition of \textit{injectivity radius},
-Proposition~\ref{prop:gamma''} --- \textit{shortest paths are geodesics}, and
-The Gauss--Bonnet formula (\ref{thm:gb}).
-In addition, we discuss intrinsic isometries between surfaces and prove so-called Gauss' remarkable theorem, stating that \textit{Gauss curvature is an intrinsic invariant}.
+This chapter contains computational proofs of several statements discussed above.
+They include 
+the alternative definition of injectivity radius (\ref{prop:inj-rad}),
+that shortest paths are geodesics (\ref{prop:gamma''}),
+and the Gauss--Bonnet formula (\ref{thm:gb}).
+In addition, we discuss intrinsic isometries between surfaces and prove Gauss' remarkable theorem, stating that \textit{Gauss curvature is an intrinsic invariant}.
 
-\section{Polar coordinates}
+\section{Polar coordinates}\label{sec:Polar coordinates}
 
-The property of the exponential map in \ref{prop:exp} can be used to define \index{polar coordinates}\emph{polar coordinates} in a smooth surface $\Sigma$ with respect to a point $p\in \Sigma$.
+The property of the exponential map in \ref{prop:exp} can be used to define \index{polar coordinates}\emph{polar coordinates} in a smooth surface.
 
-Namely, fix polar coordinates $(r,\theta) \in \mathbb{R}_{\ge0} \times \mathbb{S}^1  $ on the tangent plane $\T_p$.
+Namely, let $p$ be a point on a smooth surface $\Sigma$ and
+let $(r,\theta) \in \mathbb{R}_{\ge0} \times \mathbb{S}^1$ be polar coordinates  on the tangent plane $\T_p$.
 If $\vec v\in \T_p$ has coordinates $(r,\theta)$,
 then we say that $s(r,\theta)\z=\exp_p\vec v$ is the point in $\Sigma$ with  polar coordinates $(r,\theta)$.
 
-
-Since there might be many geodesics from $p$ to a given point $x$,
-the point $x$ might be expressed in polar coordinates in multiple ways.
-However, for small values of~$r$,
-polar coordinates behave in the usual way.
+There might be many geodesics from $p$ to a given point $x$;
+so, the point $x$ might be expressed in polar coordinates in multiple ways.
+However, we will always assume that $r$ is small.
+In this case, the polar coordinates behave in the usual way.
 The latter follows from Proposition~\ref{prop:exp}.
 More precisely, the following statement holds.
 
@@ -31,7 +32,7 @@ Moreover, if $0\le r_1,r_2<r_0$, then $s(r_1,\theta_1) \z= s(r_2,\theta_2)$ if a
 $r_1=r_2=0$ or $r_1=r_2$ and $\theta_1\z=\theta_2+2\cdot n\cdot\pi$ for an integer~$n$.
 \end{thm}
 
-The following statement will play a key role in the formal proof that shortest paths are geodesics; see Section~\ref{sec:proof-of-gamma''}.
+The following statement will play an important role in the formal proof that shortest paths are geodesics; see Section~\ref{sec:proof-of-gamma''}.
 
 \begin{thm}{Gauss lemma}\label{lem:palar-perp}
 Let $(r,\theta)\mapsto s(r,\theta)$ be polar coordinates with respect to a point $p$ in a smooth surface.
@@ -134,7 +135,8 @@ It remains to prove the partial converse.
 Fix a point $p\in\Sigma$.
 Let $\epsilon>0$ be as in \ref{prop:exp}.
 Assume a geodesic $\gamma$ of length less than $\epsilon$ from $p$ to $q$ does not minimize the length between its endpoints.
-Then there is a shortest path from $p$ to $q$, which becomes a geodesic when it is parametrized by its arc-length.
+Then there is a shortest path from $p$ to $q$, which is distinct from $\gamma$,
+and becomes a geodesic when it is parametrized by its arc-length.
 That is, there are two geodesics from $p$ to $q$ of length smaller than $\epsilon$.
 In other words, there are two vectors ${\vec v},\vec w\in\T_p$ such that $|{\vec v}|<\epsilon$, $|\vec w|<\epsilon$, and 
 $q=\exp_p\vec v\z=\exp_p\vec w$.
@@ -147,7 +149,7 @@ The map $s$ is called \index{semigeodesic}\emph{semigeodesic} if, for any fixed 
 
 According to the Gauss lemma (\ref{lem:palar-perp}), the polar coordinates on $\Sigma$ are described by a semigeodesic map.
 
-Choose a unit vector field~$\Norm=\Norm(u,v)$ that is normal to $\Sigma$ at $s(u,v)$.
+Let $\Norm=\Norm(u,v)$ be the unit vector normal to $\Sigma$ at $s(u,v)$.
 For each pair $(u,v)$, consider an orthonormal frame $\Norm$, $\vec u\z=s_u$, and $\vec v\z=\Norm\times \vec u$.
 Recall that since the vector $s_v(u,v)$ is tangent to $\Sigma$ at $s(u,v)$, we get $s_v\perp \vec u$ and $s_v\perp \Norm$. 
 Therefore, we have that $s_v=b\cdot\vec v$ for a smooth function $(u,v)\z\mapsto b(u,v)$.%
@@ -305,11 +307,10 @@ Finally,
 \parit{Derivation of $\vec v_u=m\cdot \Norm$ and $\vec v_v=-b_u\cdot \vec u+b\cdot n\cdot\Norm$.}
 Recall that $\vec v=\Norm\times \vec u$.
 Therefore,
-\[\begin{aligned}
-\vec v_u&=\Norm_u\times \vec u+\Norm\times \vec u_u,
-&
-\vec v_v&=\Norm_v\times \vec u+\Norm\times \vec u_v.
-\end{aligned}
+\[
+\vec v_u=\Norm_u\times \vec u+\Norm\times \vec u_u,
+\qquad\qquad
+\vec v_v=\Norm_v\times \vec u+\Norm\times \vec u_v.
 \eqlbl{eq:uu-vv:3+4}
 \]
 The expressions for $\vec u_u$ and $\vec u_v$ in \ref{eq:uu-vv} are proved already.
@@ -330,7 +331,7 @@ Further,
 It remains to plug into \ref{eq:uu-vv:3+4} the expressions for $\vec u_u$, $\vec u_v$, $\Norm_u$, and~$\Norm_v$. 
 \qeds
 
-A chart $(u,v)\mapsto s(u,v)$ is called \index{semigeodesic}\emph{semigeodesic} if the map $(u,v)\z\mapsto s(u,v)$ is semigeodesic.
+A chart $(u,v)\mapsto s(u,v)$, as well as the corrsponding local coordinates, will be called \index{semigeodesic}\emph{semigeodesic} if the map $(u,v)\z\mapsto s(u,v)$ is semigeodesic.
 Note that the function $b=b(u,v)$ for a semigeodesic chart $s$ has a constant sign.
 Therefore, by changing the sign of $\Norm$, we can (and always will) assume that $b>0$;
 in other words, $b=|s_v|$.
@@ -427,7 +428,6 @@ Show that
 \end{subthm}
 \end{thm}
 
-
 \begin{thm}{Exercise}\label{ex:conformal}
 Suppose $(u,v)\mapsto s(u,v)$ is a \index{conformal}\emph{conformal chart};
 that is, there is a function $(u,v)\mapsto b(u,v)$ such that $b=|s_u|=|s_v|$ and $s_u\perp s_v$ for any $(u,v)$.
@@ -439,19 +439,21 @@ where $\triangle$ denotes the \index{Laplacian}\emph{Laplacian}; that is, $\tria
  $K=K(u,v)$ is the Gauss curvature of $\Sigma$ at $s(u,v)$.
 \end{thm}
 
+It is useful to know that \textit{any point on a smooth surface can be covered by a conformal chart}; the corresponding coordinates are usually referred to as \index{isothermal}\emph{isothermal}.
+
 \section{Rotation of a vector field}
 
-Let $\Sigma$ be a smooth oriented surface and $\gamma$ a simple closed path in~$\Sigma$.
+Let $\gamma\:[0,1]\to\Sigma$ be a simple loop on a smooth oriented surface~$\Sigma$.
 Suppose $\vec u$ is a field of unit tangent vectors on $\Sigma$ defined in a neighborhood of~$\gamma$.
-Denote by $\vec v$ the field obtained from $\vec u$ by a counterclockwise rotation by $\tfrac{\pi}2$ of the tangent plane at each point; it could also be defined by $\vec v\df\Norm\times\vec u$.
+Denote by $\vec v$ the field obtained from $\vec u$ by a counterclockwise rotation by $\tfrac{\pi}2$ of the tangent plane at each point; it could also be defined by $\vec v\df\Norm\times\vec u$, where $\Norm$ is the normal field on $\Sigma$.
 Then the \index{rotation}\emph{rotation} of $\vec u$ around $\gamma$ is defined as the integral
 \[\rot_\gamma\vec u
 \df
 \int_0^1\langle\vec u'(t),\vec v(t)\rangle\cdot dt.\]
 
 \begin{thm}{Lemma}\label{lem:rotation-parallel}
-Suppose $\gamma$ is a loop with the base at a point $p$ in a smooth oriented surface $\Sigma$, and $\vec u$ is a field of tangent unit vectors to $\Sigma$ defined in a neighborhood of~$\gamma$.
-Then the parallel transport $\iota_\gamma\:\T_p\to\T_p$ is a {}\emph{clockwise} rotation by the angle $\rot_\gamma\vec u$.
+Suppose $\gamma\:[0,1]\to\Sigma$ is a simple loop with the base at a point $p$ in a smooth oriented surface $\Sigma$, and $\vec u$ is a field of tangent unit vectors to $\Sigma$ defined in a neighborhood of~$\gamma$.
+Then the parallel transport $\iota_\gamma\:\T_p\to\T_p$ is a clockwise rotation by the angle $\rot_\gamma\vec u$.
 
 In particular, rotations of different vector fields around $\gamma$ may only differ by a multiple of $2\cdot\pi$.
 \end{thm}
@@ -460,14 +462,12 @@ In particular, rotations of different vector fields around $\gamma$ may only dif
 As above, set $\vec v=\Norm\times\vec u$. 
 Denote by $\vec u(t)$ and $\vec v(t)$ the vectors at $\gamma(t)$ of the fields $\vec u$ and $\vec v$, respectively.
 
-Let $t\mapsto \vec x(t)\in \T_{\gamma(t)}$ be the parallel vector field along $\gamma$ with  $\vec x(0)\z=\vec u(0)$.
-Set $\vec y=\Norm\times\vec x$.
+Let $t\mapsto \vec x(t)\in \T_{\gamma(t)}$ be the parallel vector field along $\gamma$ with  $\vec x(0)\z=\vec u(0)$, and $\vec y\df\Norm\times\vec x$.
 
 Note that there is a continuous function $t\mapsto \phi(t)$ such that 
 $\vec u(t)$ is a counterclockwise rotation of $\vec x(0)$ by angle $\phi(t)$.
 Since $\vec x(0)=\vec u(0)$, we can and will assume that $\phi(0)=0$.
-
-Note that
+Then
 \begin{align*}
 \vec u&=\cos\phi\cdot \vec x+\sin\phi\cdot \vec y
 \\
@@ -514,7 +514,7 @@ Then
 where $\vec u=s_u$, and $K$ denotes the Gauss curvature of~$\Sigma$.
 \end{thm}
 
-The proof is done by a calculation using the so-called \index{Green formula}\emph{Green formula} which can be formulated the following way.
+The calculations below use the so-called \index{Green formula}\emph{Green formula}, which can be formulated the following way.
 
 \textit{Let $D$ be a compact region in the $(u,v)$-coordinate plane that is bounded by a piecewise smooth simple closed path $\alpha\:t\mapsto (u(t),v(t))$.
 Suppose $\alpha$ is oriented in such a way that $D$ lies on its left.
@@ -523,7 +523,7 @@ Then}
 \textit{for any two smooth functions $P$ and $Q$ defined on $D$.}
 
 The Green and Gauss--Bonnet formulas are similar --- they relate the integral along a disc and its boundary curve.
-So it shouldn't be  surprising that Green helps to prove Gauss--Bonnet.
+So it shouldn't be  surprising that one helps to prove another.
 
 \parit{Proof.}
 Let $\vec u$, $\vec v$, and $b$ be as in Section~\ref{sec:jacobi-formula}.
@@ -553,9 +553,11 @@ Then
 
 Recall that the Gauss--Bonnet formula can be written as $\GB(\Delta)=0$,
 where 
-\[\GB(\Delta)=\tgc{\partial\Delta}+\iint_\Delta K-2\cdot \pi,\]
+\[\GB(\Delta)
+\df
+\tgc{\partial\Delta}+\iint_\Delta K-2\cdot \pi,\]
 $\Delta$ is a topological disc in a smooth oriented surface,
-and $\partial \Delta$ is oriented in such a way that $\Delta$ lies on its left.
+bounded by a piecewise smooth curve $\partial \Delta$ that is oriented in such a way that $\Delta$ lies on its left.
 
 \parit{Proof of the Gauss--Bonnet formula (\ref{thm:gb}).}
 Assume $\Delta$ is covered by a semigeodesic chart.
@@ -569,7 +571,7 @@ and \ref{lem:rotation-semigeoesic} we get
 where $n=n(\Delta)$ is an integer.
 
 By \ref{ex:semigeodesc-chart}, any point can be covered by a semigeodesic chart.
-Therefore, applying \ref{lem:GB-sum} finite number of times, we get 
+Therefore, applying the additivity of $\GB$ (\ref{lem:GB-sum}) finite number of times, we get 
 \ref{eq:gb(n)} for any disc $\Delta$ in~$\Sigma$.
 More precisely, we can cut $\Delta$ by a smooth curve that runs from boundary to boundary
 and repeat such subdivision recursively for the obtained discs;
@@ -621,13 +623,6 @@ Given a curve $\tilde\gamma$ in the $r$-neighborhood of $0$ in $\T_p$, set
 ;\]
 note that $\gamma$ is a curve in~$\Sigma$.
 
-\begin{subthm}{prop:rauch:K>=0}
-If $\Sigma$ has nonnegative Gauss curvature, then the exponential map $\exp_p$ is length nonexpanding in the $r$-neighborhood of $0$ in $\T_p$;
-that is, 
-\[\length \gamma\le \length \tilde\gamma\]
-for any curve $\tilde\gamma$ in the open ball $B(0,r)_{\T_p}$.
-\end{subthm}
-
 \begin{subthm}{prop:rauch:K=<0}
 If $\Sigma$ has nonpositive Gauss curvature, then the logarithmic map $\log_p$ is length nonexpanding in the $r$-neighborhood of $p$ in $\Sigma$;
 that is, 
@@ -635,21 +630,21 @@ that is,
 for any curve $\gamma$ in the open ball $B(p,r)_{\Sigma}$.
 \end{subthm}
 
+\begin{subthm}{prop:rauch:K>=0}
+If $\Sigma$ has nonnegative Gauss curvature, then the exponential map $\exp_p$ is length nonexpanding in the $r$-neighborhood of $0$ in $\T_p$;
+that is, 
+\[\length \gamma\le \length \tilde\gamma\]
+for any curve $\tilde\gamma$ in the open ball $B(0,r)_{\T_p}$.
+\end{subthm}
+
 \end{thm}
 
 \parit{Proof.}
-Suppose $(r(t),\theta(t))$ are the polar coordinates of $\tilde\gamma(t)$.
+Suppose $(r(t),\theta(t))$ are the polar coordinates of $\tilde\gamma(t)$ and $s$ as in \ref{sec:Polar coordinates}.
 Note that $\gamma(t)\z=s(r(t),\theta(t))$; that is, $(r(t),\theta(t))$ are the polar coordinates of $\gamma(t)$ with respect to $p$ on~$\Sigma$.
 
-Set $b(r,\theta)\df|s_\theta|$.
-By \ref{prop:jaccobi}
-\[b_{rr}=-K\cdot b.\]
-If $K\ge 0$, then $r\mapsto b(r,\theta)$ is concave
-and
-if $K\le 0$, then $r\mapsto b(r,\theta)$ is convex for any fixed $\theta$.
-
-Note that $b(0,\theta)=0$, and $b_r(0,\theta)=1$ for any $\theta$.
-Indeed, we may assume that $\theta=0$.
+Let us show that $b(0,\theta)=0$, and $b_r(0,\theta)=1$ for any $\theta$.
+We may assume that $\theta=0$.
 Choose the standard basis $\vec v,\vec w$ in $\T_p$; so $\vec v$ points in the direction of curve $t\mapsto s(t,0)$.
 Note that%
 \footnote{Recall that $(D_{\vec w}\exp_p)(r\cdot \vec v)\df h'(0)$, where $h(t)=\exp_p(r\cdot \vec v+t\cdot \vec w)$; see Section~\ref{sec:dirder}.}
@@ -660,12 +655,18 @@ In particular, $|(D_{\vec w}\exp_p)(r\cdot \vec v)|\z\ne 0$ for any small $r$.
 Therefore, the function $r\mapsto|(D_{\vec w}\exp_p)(r\cdot \vec v)|$ is differentiable at $r=0$.
 Taking the partial derivative of the expression for $b(r,0)$, we get $b_r(0,0)=1$.
 
-Therefore, 
+Set $b(r,\theta)\df|s_\theta|$.
+By \ref{prop:jaccobi}
+\[b_{rr}=-K\cdot b.\]
+If $K\ge 0$, then $r\mapsto b(r,\theta)$ is concave
+and
+if $K\le 0$, then $r\mapsto b(r,\theta)$ is convex for any fixed $\theta$.
+Since $b(0,\theta)=0$, and $b_r(0,\theta)=1$,
 \[
 \begin{aligned}
-b(r,\theta)\le r\quad\text{if}\quad K&\ge 0;
+b(r,\theta)\ge r\quad\text{if}\quad K&\le 0;
 \\
-b(r,\theta)\ge r\quad\text{if}\quad K&\le 0.
+b(r,\theta)\le r\quad\text{if}\quad K&\ge 0.
 \end{aligned}
 \eqlbl{eq:b-K}
 \]
@@ -678,7 +679,7 @@ Note that
 \shortintertext{Applying \ref{lem:palar-perp}, we get}
 \length\gamma&=\int_a^b\sqrt{r'(t)^2+b(r(t),\theta(t))^2\cdot\theta'(t)^2}\cdot dt.
 \end{align*}
-Now, both statements \ref{SHORT.prop:rauch:K>=0} and \ref{SHORT.prop:rauch:K=<0} follow from \ref{eq:b-K}.
+Now, both statements \ref{SHORT.prop:rauch:K=<0} and \ref{SHORT.prop:rauch:K>=0} follow from \ref{eq:b-K}.
 \qeds
 
 \section{Intrinsic isometries}
@@ -750,11 +751,11 @@ Then
 that is, the Gauss curvature of $\Sigma$ at $p$ is the same as the Gauss curvature of $\Sigma^{*}$ at $p^{*}$.
 \end{thm}
 
-This theorem was proved by Carl Friedrich Gauss \cite{gauss} who justifiably called it {}\emph{remarkable} ({}\emph{Theorema Egregium}).
-The theorem is indeed remarkable because the Gauss curvature is defined as a product of principal curvatures which might be different at the points $p$ and $p^*$; however, according to the theorem, their products are the same.
+Recall that the Gauss curvature is defined as a product of principal curvatures which might be different at the points $p$ and $p^*$; however, according to the theorem, their products are the same.
 In other words, the Gaussian curvature is an \textit{intrinsic invariant}.
+This theorem was proved by Carl Friedrich Gauss \cite{gauss} who justifiably called it {}\emph{remarkable} ({}\emph{Theorema Egregium}).
 
-In fact, the Gauss curvature of the surface at the given point can be found \textit{intrinsically},
+In fact, the Gauss curvature can be found \textit{intrinsically},
 by measuring the lengths of curves in the surface.
 For example, the Gauss curvature $K(p)$ appears in the following formula for the circumference $c(r)$ of a geodesic circle centered at $p$ in a surface: 
 \[c(r)=2\cdot\pi\cdot r-\tfrac\pi3\cdot K(p)\cdot r^3+o(r^3).\]
@@ -762,7 +763,7 @@ For example, the Gauss curvature $K(p)$ appears in the following formula for the
 The theorem implies, for example, that there is no smooth length-preserving map that sends an open region in the unit sphere to the plane.%
 \footnote{Smoothness is essential --- there are plenty of non-smooth length-preserving maps from the sphere to the plane; see \cite{petrunin-yashinski} and the references therein.}
 This follows since the Gauss curvature of the plane is zero and the unit sphere has Gauss curvature~1. 
-In other words, it is impossible to produce a geographic map of any region on Earth without distortion.
+In particular, any geographic map has to have distortions.
 
 \parit{Proof.}
 Choose a chart $(u,v)\mapsto s(u,v)$ on $\Sigma$, and set
@@ -785,6 +786,6 @@ at any $(u,v)$.
 Indeed, since $f$ preserves the lengths of the coordinate lines $\gamma\:t\mapsto s(t,v)$ and  $\gamma\:t\z\mapsto s(u,t)$, we get the first and the third identities.
 Now, since $f$ preserves the lengths of the curves $\gamma\:t\z\mapsto s(t,c-t)$ for any constant~$c$, the first and the third identities imply the second one.
 
-Therefore, if $s$ is a semigeodesic chart, then so is $s^{*}$.
+By \ref{prop:gamma''}, if $s$ is a semigeodesic chart, then so is $s^{*}$.
 It remains to apply \ref{prop:jaccobi} and \ref{ex:semigeodesc-chart}.
 \qeds
