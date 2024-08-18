@@ -99,7 +99,7 @@ For \ref{SHORT.ex:cycloid:simple} you need to check that $\gamma_\ell(t_0)\z=\ga
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-270}
-\vskip0mm
+\vskip-6mm
 \end{wrapfigure}
 
 \parbf{\ref{ex:nonregular}.}
@@ -114,8 +114,8 @@ Try to argue similarly to \ref{ex:L-shape}.
 
 \parbf{\ref{ex:viviani}.}
 For $\ell=0$ the system describes a pair of points $(0,0,\pm1)$, so we can assume that $\ell\ne 0$.
-The first equation describes the unit sphere centered at the origin, and the second equation describes a cylinder over the circle in the $(x,y)$-plane with center at $(-\tfrac\ell2,0)$ and radius~$|\tfrac\ell2|$.
 
+The first equation describes the unit sphere centered at the origin, and the second equation describes a cylinder over the circle in the $(x,y)$-plane with center at $(-\tfrac\ell2,0)$ and radius~$|\tfrac\ell2|$.
 
 \begin{Figure}
 \centering
@@ -150,8 +150,8 @@ The case $\ell=1$ is shown on the picture.
 
 \parit{Remark.}
 In the case $\ell=\pm1$, the curve is called \index{Viviani's curve}\emph{Viviani's curve}.
-It admits the following smooth regular parametrization with a self-intersection:
-$t\mapsto(\pm(\cos t)^2,\cos t\cdot\sin t,\sin t)$.
+It admits the following smooth regular parametrization with a self-intersection at $(\pm1,0,0)$
+\[t\mapsto(\pm(\cos t)^2,\cos t\cdot\sin t,\sin t).\]
 
 \parbf{\ref{ex:open-curve}.}
 Assume the contrary, then there is a sequence of real numbers $t_n\to \pm \infty$ such that $\gamma(t_n)$ converges;
@@ -228,15 +228,16 @@ The inequality might be strict.
 It happens if $\beta$ runs back and forth along $\gamma$.
 In this case the partition $(\tau_i)$ above is \textit{not} arbitrary.
 
-If one assumes only that $\beta([0,1])\supset\gamma([0,1])$, then the problem becomes harder.
-It follows from the following useful fact \cite[2.6.1+2.6.2]{burago-burago-ivanov}:
-\textit{Denote by $h$ the 1-dimensional Hausdorff measure of the image $\gamma([0,1])$.
-Then $h\le \length\gamma$;
-moreover the equality holds if $\gamma$ is simple.}
+If one assumes only $\beta([0,1])\supset\gamma([0,1])$, then the problem becomes harder.
+It follows from the following inequality \cite[2.6.1+2.6.2]{burago-burago-ivanov}:
+\[h\le \length\gamma.\]
+where $h$ denotes the 1-dimensional Hausdorff measure of the image $\gamma([0,1])$.
+Moreover the equality holds if and only if $\gamma$ is simple.
 
-\parbf{\ref{ex:integral-length}.}
-For \ref{SHORT.ex:integral-length>}, apply the fundamental theorem of calculus for each segment in a given partition.
-For \ref{SHORT.ex:integral-length<} consider a partition such that the velocity vector $\alpha'(t)$ is nearly constant on each of its segments.
+\parbf{\ref{ex:integral-length}}; \ref{SHORT.ex:integral-length>}.
+Apply the fundamental theorem of calculus for each segment in a given partition.
+
+\parit{\ref{SHORT.ex:integral-length<}.} Consider a partition such that the velocity vector $\alpha'(t)$ is nearly constant on each of its segments.
 
 \parbf{\ref{adex:integral-length}.}
 Use the theorems of Rademacher and Lusin (\ref{thm:rademacher} and \ref{thm:lusin}).
@@ -355,10 +356,6 @@ Show that there is $\delta>0$ such that any path of length at most $\dist{x}{y}{
 It follows that $\dist{x}{y}A\ge \dist{x}{y}{\mathbb{R}^3}+\delta$; 
 in particular, $\dist{x}{y}A\ne \dist{x}{y}{\mathbb{R}^3}$.
 
-\parbf{\ref{ex:antipodal}.}
-The spherical curve shown on the picture does not have antipodal pairs of points.
-However, it has three points $x,y,z$ on one of its sides and their antipodal points $-x,-y,-z$ on the other.
-
 \begin{wrapfigure}[6]{r}{23 mm}
 \vskip-6mm
 \centering
@@ -366,10 +363,14 @@ However, it has three points $x,y,z$ on one of its sides and their antipodal poi
 \vskip0mm
 \end{wrapfigure}
 
-Show that this property is sufficient to conclude that the curve does not lie in any hemisphere.
+\parbf{\ref{ex:antipodal}.}
+The spherical curve shown on the picture does not have antipodal pairs of points.
+However, there are three points $x,y,z$ on an equator that lie on one of its sides and their antipodal points $-x,-y,-z$ on the other.
+
+Show that such a curve cannot lie in a hemisphere.
 
 \parbf{\ref{ex:bisection-of-S2}.}
-Assume the contrary, then by the hemisphere lemma (\ref{lem:hemisphere}) $\gamma$ lies in an open hemisphere.
+Assume the contrary, then $\gamma$ lies in an open hemisphere (\ref{lem:hemisphere}).
 In particular, it cannot divide $\mathbb{S}^2$ into two regions of equal area --- a contradiction.
 
 \parbf{\ref{ex:flaw}.}
@@ -383,8 +384,8 @@ That is, (1) choose two points $p$ and $q$ on $\gamma$ that divide it into two a
 and (3) show that $\gamma$ lies in the unit disc centered at~$z$.
 
 
-\parbf{\ref{adex:crofton}.}
-For \ref{SHORT.adex:crofton:crofton}, modify the proof of the original Crofton formula
+\parbf{\ref{adex:crofton}}; \ref{SHORT.adex:crofton:crofton}.
+Modify the proof of the original Crofton formula
 (Section~\ref{sec:crofton}).
 
 \parit{\ref{SHORT.adex:crofton:hemisphere}.}
@@ -406,8 +407,8 @@ Therefore $\gamma$ lies in a hemisphere with $h$ as a diameter.
 
 
 \parbf{\ref{ex:zero-curvature-curve}.}
-For a unit-speed parametrization $\gamma$, we have $\gamma''\equiv 0$.
-Therefore, the velocity $\vec v=\gamma'$ is constant.
+Let $\gamma$ be a unit-speed curve with vanishing curvature.
+Then $\gamma''\equiv 0$; therefore, the velocity $\vec v=\gamma'$ is constant.
 Hence, $\gamma(t)=p+(t-t_0)\cdot \vec v$, where $p=\gamma(t_0)$.
 
 
