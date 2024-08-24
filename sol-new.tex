@@ -443,7 +443,8 @@ Show that the following sequence of curves solves the problem:
 \parbf{\ref{ex:no-parallel-tangents}.}
 Reuse the construction in \ref{ex:antipodal} to get a closed smooth simple spherical curve $\tan\:\mathbb{S}^1\z\to\mathbb{S}^2$ that contains no pair of antipodal points and has zero average.
 Then construct a curve with tangent indicatrix $\tan$.
-(It was constructed by Beniamino Segre \cite{segre}.)
+
+\parit{Source:} This curve was constructed by Beniamino Segre \cite{segre}.)
 
 \parbf{\ref{ex:helix-curvature}.}
 Show that $\gamma_{a,b}''\perp \gamma'_{a,b}$, and apply \ref{ex:curvature-formulas:a}.
@@ -519,7 +520,7 @@ Conclude that it must be $\ell$.
 
 \parbf{\ref{ex:anti-bow}.}
 Start with the curve $\gamma_1$ shown on the picture.
-To obtain $\gamma_2$, slightly unbend (that is, decrease the curvature of) the dashed arc of $\gamma_1$.
+To obtain $\gamma_2$, slightly unbend (that is, decrease the curvature of) the dashed arc.
 
 }
 
@@ -531,7 +532,7 @@ and the $q_1=\gamma_1(b)$ and $q_2=\gamma_2(b)$ lie in the upper half-plane of t
 Suppose $\alpha_1<\alpha_2$.
 Find a point $x$ such that 
 $\dist{x}{q_1}{}<\dist{x}{q_2}{}$, and
-$\gamma_1$ with the line segments $[p,x]$ and $x,q_1]$ bound a convex region in the $(x,y)$-plane.
+$\gamma_1$ with the line segments $[p,x]$ and $[x,q_1]$ bound a convex region in the $(x,y)$-plane.
 (Here you have to use that $\beta_1\le\tfrac\pi2$.)
 
 Modify the proof of the bow lemma (\ref{lem:bow}) so that it works for concatenations of $[x,p]$ with $\gamma_1$ and $\gamma_2$, and arrive at a contradiction.
@@ -550,16 +551,17 @@ Modify the proof of the bow lemma (\ref{lem:bow}) so that it works for concatena
 \parbf{\ref{ex:length-dist}}; \ref{SHORT.ex:length-dist:>}.
 Choose a value $s_0\in[a,b]$ that splits the total curvature of $\gamma$ into two equal parts.
 Observe that $\measuredangle(\gamma'(s_0),\gamma'(s))\le \theta$ for any~$s$.
-Use this inequality in the same way as in the proof of the bow lemma.
+Use this inequality as in the bow lemma.
 
-Part \ref{SHORT.ex:length-dist:self-intersection:>pi} is straightforward.
-For part \ref{SHORT.ex:length-dist:=} consider the concatenation of two equal line segments with the external angle $2\cdot\theta$ and smooth its joint. 
+\parit{\ref{SHORT.ex:length-dist:self-intersection:>pi}.} Apply \ref{SHORT.ex:length-dist:>}.
+
+\parit{\ref{SHORT.ex:length-dist:=}.} Start with a polygonal line made from two equal segments with the external angle $2\cdot\theta$ and smooth its joint. 
 
 
 \parbf{\ref{ex:schwartz}.}
 Let $\ell=\length\gamma$.
 Suppose $\ell_1<\ell<\ell_2$.
-Let $\gamma_1$ be an arc of the unit circle with length $\ell$.
+Let $\gamma_1$ be an arc of the unit circle with length~$\ell$.
 
 Show that the distance between the endpoints of $\gamma_1$ is smaller than $|p-q|$, and apply the bow lemma (\ref{lem:bow}).
 
@@ -607,9 +609,15 @@ Apply the bow lemma for $\sigma*\gamma$ and $\sigma*\tilde\gamma$, to get $|\gam
 %\begin{multicols}{2}
 
 \parbf{\ref{ex:chord-lemma-optimal}.} 
-Set $\alpha=\measuredangle(\vec w,\vec u)$ 
-and $\beta=\measuredangle(\vec v,\vec u)$.
+Set $\alpha=\measuredangle(\vec u,\vec w)$ 
+and $\beta=\measuredangle(\vec v,\vec w)$.
 Try to guess the example from the picture.
+
+The shown curve is divided into three arcs: I, II, and III. 
+Arc I turns from $\vec u$ to $\vec w$;
+it has total curvature $\alpha$.
+Similarly, arc III turns from $\vec w$ to $\vec v$ and has total curvature $\beta$. 
+Arc II goes very close and almost parallel to the chord $pq$, and its total curvature can be made arbitrarily small.
 
 \begin{Figure}
 \vskip-1mm
@@ -617,12 +625,6 @@ Try to guess the example from the picture.
 \includegraphics{mppics/pic-285}
 \vskip-1mm
 \end{Figure}
-
-The shown curve is divided into three arcs: I, II, and III. 
-Arc I turns from $\vec v$ to $\vec u$;
-it has total curvature $\alpha$.
-Similarly, arc III turns from $\vec u$ to $\vec w$ and has total curvature $\beta$. 
-Arc II goes very close and almost parallel to the chord $pq$, and its total curvature can be made arbitrarily small.
 
 
 \parbf{\ref{ex:monotonic-tc}.}
@@ -656,8 +658,8 @@ Observe that $\tc{acbd}=4\cdot\pi$.
 It remains to apply \ref{prop:inscribed-total-curvature}.
 
 \parit{Remarks.}
-Lines crossing a curve at four points as in the exercise are called \index{alternating quadrisecants}\emph{alternating quadrisecants}.
-It turns out that any {}\emph{nontrivial knot} admits an alternating quadrisecant \cite{denne};
+Lines crossing a curve as in the exercise are called \index{alternating quadrisecants}\emph{alternating quadrisecants}.
+It is known that any {}\emph{nontrivial knot} admits an alternating quadrisecant \cite{denne};
 according to the exercise, the latter implies the so-called {}\emph{F\'ary--Milnor theorem} --- \textit{the total curvature of any knot exceeds~$4\cdot \pi$}; see \cite{petrunin-stadler} and the references therein.
 
 \parbf{\ref{ex:total-curvature=}.}
@@ -698,7 +700,7 @@ The latter can be done by straightforward calculations.
 {
 
 \begin{wrapfigure}{r}{25 mm}
-\vskip-0mm
+\vskip-3mm
 \centering
 \begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{asy/helix(1)}
 \lbl[br]{8,24;$\norm$}
@@ -778,11 +780,11 @@ To prove the last identity, apply the Frenet formula for~$\norm'$.
 \parit{\ref{SHORT.ex:lancret:b}.}
 Show that $\vec w'=0$;
 it implies that $\langle \vec w,\tan\rangle\z=\tfrac\tor\kur$.
-In particular, the velocity vector of $\gamma$ makes a constant angle with $\vec w$; that is, $\gamma$ has a constant slope.
+In particular, the velocity vector makes a constant angle with $\vec w$; that is, $\gamma$ has a constant slope.
 
 \parbf{\ref{ex:evolvent-constant-slope}.}
 Suppose $\alpha$ is an evolvent of $\gamma$, and $\vec w$ is a fixed vector.
-Show that $\langle \vec w,\alpha\rangle$ is constant if $\gamma$ makes a constant angle with $\vec w$.
+Show and use that $\langle \vec w,\alpha\rangle$ is constant if $\gamma$ makes a constant angle with $\vec w$.
 
 \parbf{\ref{ex:spherical-frenet}}.
 Part \ref{SHORT.ex:spherical-frenet:tau} follows since $(\tan,\norm,\bi)$ is an orthonormal basis.
@@ -793,8 +795,9 @@ Part \ref{SHORT.ex:spherical-frenet:kur-tor} is proved by algebraic manipulation
 For \ref{SHORT.ex:spherical-frenet:f},
 use the Frenet formulas to show that $(\gamma+\tfrac1\kur\cdot \norm+\tfrac{\kur'}{\kur^2\cdot\tor}\cdot\bi)'=0$.
 
-(Part \ref{SHORT.ex:spherical-frenet:beta} implies that \textit{$\int\tfrac\tor\kur=0$ for any closed smooth spherical curve}.
-In fact this property characterizes spheres and planes; the latter was proved by Beniamino Segre \cite{segre}.)
+\parit{Remark.}
+Part \ref{SHORT.ex:spherical-frenet:beta} implies that \textit{$\int\tfrac\tor\kur=0$ for any closed smooth spherical curve}.
+It is known that this property characterizes spheres and planes; this was proved by Beniamino Segre \cite{segre}.
 
 \parbf{\ref{ex:cur+tor=helix}.} Use the second statement in \ref{ex:helix-torsion}.
 
@@ -842,18 +845,18 @@ Observe that
 that is, $\gamma'_a$ runs clockwise along a circle with center at $(1,0)$ and radius $\vert a \vert$.
 
 \parit{Case $|a|>1$.} Note that $\tan_a(t)=\gamma'_a/|\gamma'_a|$ runs clockwise and makes a full turn in time $2\cdot\pi$.
-Therefore, $\tgc{\gamma_a}=-2\cdot\pi$ and $\tc\gamma_a\z=|\tgc{\gamma_a}|=2\cdot\pi$.
+Therefore, $\tgc{\gamma_a}=-2\cdot\pi$ and $\tc{\gamma_a}\z=|\tgc{\gamma_a}|=2\cdot\pi$.
 
 \parit{Case $|a|<1$.}
 Set $\theta_a=\arcsin a$.
 Show that $\tan_a(t)=\gamma'_a/|\gamma'_a|$ starts with the horizontal direction $\tan_a(0)=(1,0)$, turns monotonically to angle $\theta_a$, then monotonically to $-\theta_a$ and then monotonically back to $\tan_a(2\cdot\pi)=(1,0)$.
-It follows that if $|a|>1$, then
+It follows that 
 $\tgc{\gamma_a}=0$ and $\tc{\gamma_a}=4\cdot\theta_a$.
 
 \parit{Case $a=-1$.}
 The velocity $\gamma'_{-1}(t)$ vanishes at $t=0$ and $2\cdot\pi$.
 Nevertheless, the curve admits a smooth regular parametrization --- find it.
-The answer is $\tc{\gamma_{-1}}=-\tgc{\gamma_{-1}}=\pi$.
+You should get $\tc{\gamma_{-1}}=-\tgc{\gamma_{-1}}=\pi$.
 
 \parit{Case $a=1$.}
 The velocity $\gamma'_1(t)$ vanishes at $t=\pi$.
@@ -995,7 +998,7 @@ Consider the coordinate system with the origin at $p$ and the common tangent lin
 We may assume that $\gamma_1$ and $\gamma_2$ are defined in $(-\epsilon,\epsilon)$ for small $\epsilon>0$,
 and they run almost horizontally.
 
-Given $t\in[0,1]$ consider the curve $\gamma_t$ that is tangent and cooriented to the $x$-axis at $\gamma_t(0)$ and has signed curvature defined by $\skur_t(s)\z\df(1\z-t)\cdot\skur_0(s)+t\cdot\skur_1(s)$.
+Given $t\in[0,1]$ consider the curve $\gamma_t$ that is tangent and cooriented to the $x$-axis at $\gamma_t(0)\z=p$ and has signed curvature defined by $\skur_t(s)\z\df(1\z-t)\cdot\skur_0(s)+t\cdot\skur_1(s)$.
 It exists by \ref{thm:fund-curves-2D}.
 
 Choose $s\approx 0$.
@@ -1081,13 +1084,11 @@ Show that $\gamma$ contains a simple loop $\gamma_1$.
 Apply \ref{thm:moon-orginal} to $\gamma_1$.
 
 \parbf{\ref{ex:2-squares}.}
-We may assume that $\gamma$ is oriented so that the smaller square on its left.
+We may assume that the smaller square on its left of $\gamma$.
 Use \ref{thm:4-vert-supporting} to show that there are two points on $\gamma$ with signed curvature $\ge 1$ and $\le 1$, respectively.
 Apply the intermediate value theorem for signed curvature to show that there is a point with curvature $1$.
 
-\medskip
-
-More challenging question: \textit{What is the minimal number of such points?}
+\parit{More challenging question:} What is the minimal number of such points?
 
 \parbf{\ref{ex:moon-area}.} 
 Applying rescaling, we may assume that $a=\pi$; that is, $\gamma$ bounds area of the unit disc.
@@ -1139,7 +1140,7 @@ make a conclusion.
 
 In the remaining case $r_p\ge 1$ and $r_q<1$, combine both arguments.
 
-\parit{Source:} The problem is due Berk Ceylan.
+\parit{Source:} The problem is due to Berk Ceylan \cite{ceylan}.
 It is unknown whether \textit{any simple closed plane curve with curvature at most 1 and length at least $4\cdot\pi$ surrounds two disjoint unit discs.}
 
 \parbf{\ref{ex:4x0-torsion}.}
@@ -1293,10 +1294,10 @@ and apply the inverse function theorem to the map $(u,v)\z\mapsto(x(u,v),y(u,v))
 
 \parbf{\ref{ex:tangent-single-point}.}
 Choose $(x,y,z)$-coordinates so that $\Pi$ is the $(x,y)$-plane and $p$ is the origin.
-Let $(u,v)\mapsto s(u,v)$ be a small chart of $\Sigma$ such that $p=s(0,0)$.
+Let $(u,v)\mapsto s(u,v)$ be a chart of $\Sigma$ such that $p=s(0,0)$.
 Denote by $\vec k$ the unit vector in the direction of the $z$-axis.
 
-Show that we can assume that $\langle s(u,v),\vec k\rangle$ has a constant sign in a punctured neighborhood of $0$.
+Show that we can assume that $\langle s(u,v),\vec k\rangle>0$ in a punctured neighborhood of $0$.
 Conclude that $s_u\perp \vec k$ and $s_v\perp \vec k$ at
 $0$, hence the result.
 
@@ -1362,6 +1363,16 @@ Show that
 \tfrac{\partial }{\partial v}(s+\Norm)
 =
 0.\]
+Make a conclusion.
+
+\parbf{\ref{ex:normal-curvature=0}.} 
+The problem might seem trivial until one realizes that a connected set can be quite peculiar.
+For example, it may contain no nontrivial curves.
+
+\medskip
+
+Apply Sard's lemma (\ref{lem:sard}) to show that $\Norm$ is constant on $Z$, denote its value $\Norm_0$.
+Apply Sard's lemma to show that $x\mapsto \langle \Norm_0,x\rangle$ is constant.
 Make a conclusion.
 
 \parbf{\ref{ex:shape-curvature-line}.} 
@@ -1534,8 +1545,8 @@ Therefore its signed curvature has a constant sign.
 
 \parbf{\ref{ex:surrounds-disc}.}
 Assume the contrary, then by \ref{thm:convex-embedded} the surface is convex.
-Show that there is a supporting spherical dome with the unit circle as the boundary.
-Make a conclusion.
+Show that the surface has a supporting spherical dome with the unit circle as the boundary.
+Arrive at a contradiction with~\ref{cor:surf-support}.
 
 \parbf{\ref{ex:small-gauss}.}
 We can assume that the Gauss curvature of the surface is positive; otherwise, the statement is evident.
@@ -1561,9 +1572,11 @@ This theorem was proved by Heinz Hopf and Willi Rinow \cite{hopf-rinow} and
 named after Sumner Myers who generalized it \cite{myers}.
 
 
-\parbf{\ref{ex:convex-proper-sphere}.}
-To prove \ref{SHORT.ex:convex-proper-sphere:single} use the convexity of~$R$.
-To prove \ref{SHORT.ex:convex-proper-sphere:smooth}, observe that the map $\Sigma\to\mathbb{S}^2$ is smooth and regular, then apply the inverse function theorem to show that its inverse is smooth as well.
+\parbf{\ref{ex:convex-proper-sphere}}; \ref{SHORT.ex:convex-proper-sphere:single}.
+Use the convexity of~$R$.
+
+\parit{\ref{SHORT.ex:convex-proper-sphere:smooth}.}
+Observe that the map $\Sigma\to\mathbb{S}^2$ is smooth and regular, then applying the inverse function theorem, show that its inverse is smooth as well.
 
 \begin{wrapfigure}{r}{29 mm}
 \vskip-4mm
@@ -1609,13 +1622,12 @@ It remains to show that $\Omega$ can parametrize the whole plane.
 
 We may assume that the origin of the plane lies in $\Omega$.
 Show that in this case, the boundary of $\Omega$ can be written in polar coordinates as $(\theta,f(\theta))$ where $f\:\mathbb{S}^1\to\mathbb{R}$ is a positive continuous function.
-Then homeomorphism to the plane can be described in polar coordinates by changing only the radial coordinate;
+Then a homeomorphism from $\Omega$ to the plane can be described in polar coordinates by changing only the radial coordinate;
 for example, as 
 $(\theta,r)\z\mapsto (\theta,
 \tfrac{r}{1-r/f(\theta)})$.
 
-To do the second part, one may apply \ref{ex:star-shaped-disc:nonsmooth}.
-
+In the second part, one may apply \ref{ex:star-shaped-disc:nonsmooth}.
 
 \parbf{\ref{ex:circular-cone}.}
 Choose a coordinate system so that the $(x,y)$-plane supports $\Sigma$ at the origin, so $\Sigma$ lies in the upper half-space. 
@@ -1643,7 +1655,7 @@ Applying \ref{cor:intK}, we get that the integral is $4\cdot\pi=\area\mathbb{S}^
 Observe that for any $p$ the normal vector $\Norm(p)$ forms an obtuse angle with the $z$-axis.
 It follows that the image $\Norm(\Sigma)$ lies in the southern hemisphere.
 
-Applying \ref{cor:intK}, we get that the integral is $2\cdot\pi=\tfrac12\cdot\area\mathbb{S}^2$.
+Applying \ref{cor:intK}, we get that the integral does not exceed $2\cdot\pi=\tfrac12\cdot\area\mathbb{S}^2$.
 
 \parbf{\ref{ex:convex-revolution}.}
 Apply \ref{ex:principal-revolution}.
@@ -1678,7 +1690,7 @@ A more conceptual proof \cite{palais} can be built on the Moser trick; see the s
 
 \medskip
 
-Choose tangent-normal coordinates at $p$ so that the coordinate axes point in the principal directions of $\Sigma$ at $p$;
+Choose tangent-normal coordinates at $p$ so that the coordinate axes point in the principal directions;
 let $z=f(x,y)$ be the local graph representation of~$\Sigma$.
 We need to show that the solution of $f(x,y)=0$ is a union of two smooth curves that intersect transversely at~$p$.
 
@@ -1686,7 +1698,7 @@ Prove the following claim:
 \textit{Suppose $x\z\mapsto h(x)$ is a smooth function defined in an open interval $\mathbb{I}\ni0$ such that $h(0)=h'(0)=0$ and $h''(0)>0$.
 Then, for a smaller interval $\mathbb{J}\ni0$ there is a unique smooth function $a\:\mathbb{J}\to\mathbb{R}$ such that $h=a^2$, $a(0)=0$ and $a'(0)> 0$.}
 
-Note that passing to a small rectangular domain $|x|,|y|<\epsilon$, we can assume that $f_{xx}\z>\epsilon$ and $f_{yy}<-\epsilon$. 
+Note that passing to a small square domain $|x|,|y|<\epsilon$, we can assume that $f_{xx}\z>\epsilon$ and $f_{yy}<-\epsilon$. 
 Show that if $\epsilon$ is small, then for every $x$ there is unique $y(x)$ such that $f_x(x,y(x))=0$; 
 moreover, the function $x\z\mapsto y(x)$ is smooth.
 
@@ -1715,7 +1727,8 @@ see Section~\ref{sec:implicit-curves}.
 
 \parbf{\ref{ex:length-of-bry}.}
 Use \ref{lem:convex-saddle} and the hemisphere lemma (\ref{lem:hemisphere}).
-For the second part, consider a thin cylindrical tube bounded by two closed spherical curves.
+
+For the second part, consider a thin tube bounded by two closed spherical curves.
 
 \parbf{\ref{ex:circular-cone-saddle}.}
 Assume $\Sigma$ is an open saddle surface that lies in a cone~$K$.

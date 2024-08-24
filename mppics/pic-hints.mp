@@ -408,10 +408,10 @@ dOt z.p,z.q,z.pp,z.qq;
 
 label.lft (btex $p$ etex, z.p);
 label.rt (btex $q$ etex, z.q);
-label.urt (btex $\vec v$ etex, z.p+z.v);
-label.lrt (btex $\vec w$ etex, z.q+z.w);
-label.top (btex $\vec u$ etex, z.pp+z.u);
-label.bot (btex $\vec u$ etex, z.qq+z.u);
+label.urt (btex $\vec u$ etex, z.p+z.v);
+label.lrt (btex $\vec v$ etex, z.q+z.w);
+label.top (btex $\vec w$ etex, z.pp+z.u);
+label.bot (btex $\vec w$ etex, z.qq+z.u);
 
 label.top (btex I etex, point .7 of p1);
 label.bot (btex II etex, point 1.55 of p1);
