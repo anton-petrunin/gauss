@@ -1312,7 +1312,7 @@ The same way one can construct $v$.
 It remains to apply \ref{thm:inverse} again.
 
 \parbf{\ref{ex:const-normal}.}
-Show and use that for any smooth curve $\gamma$ in $\Sigma$ the function $t\mapsto \langle\nu,\gamma(t)\rangle$ is constant.
+Show and use that for any smooth curve $\gamma$ in $\Sigma$ the function $t\mapsto \langle\nu_0,\gamma(t)\rangle$ is constant.
 
 \parbf{\ref{ex:implicit-orientable}.}
 By \ref{ex:tangent-normal}, $\Norm=\tfrac{\nabla h}{|\nabla h|}$ defines a unit normal field on~$\Sigma$.
@@ -1372,8 +1372,10 @@ For example, it may contain no nontrivial curves.
 \medskip
 
 Apply Sard's lemma (\ref{lem:sard}) to show that $\Norm$ is constant on $Z$, denote its value $\Norm_0$.
-Apply Sard's lemma to show that $x\mapsto \langle \Norm_0,x\rangle$ is constant.
+Apply Sard's lemma again to show that $x\mapsto \langle \Norm_0,x\rangle$ is constant on $Z$.
 Make a conclusion.
+
+\parit{Source.} It is a result of Richard Sacksteder \cite[Lemma 6]{sacksteder}.
 
 \parbf{\ref{ex:shape-curvature-line}.} 
 We can assume that $\gamma$ is parametrized by arc-length.
@@ -1872,7 +1874,7 @@ that is, $\gamma''(s)\equiv 0$, therefore $\gamma'$ is constant and hence $\gamm
 \parbf{\ref{ex:reflection-geodesic}.}
 Denote by $\mu$ a unit vector perpendicular to $\Pi$.
 Since $\gamma$ lies in $\Pi$, we have that $\gamma''$ is parallel to $\Pi$, or equivalently $\gamma''\perp \mu$.
-Since $\gamma$ is unit speed, \ref{prop:a'-pertp-a''} implies that $\gamma''\perp\gamma'$.
+Since $\gamma$ is , \ref{prop:a'-pertp-a''} implies that $\gamma''\perp\gamma'$.
 
 Since $\Sigma$ is mirror-symmetric with respect to the plane $\Pi$,
 the tangent plane $\T_{\gamma(t)}\Sigma$ is also mirror-symmetric with respect to $\Pi$.
@@ -1894,9 +1896,10 @@ Therefore, the longitude of $\gamma$ is monotone.
 Whence again $\gamma$ is non-contractible.
 
 \parbf{\ref{ex:helix=geodesic}.}
-Show that $\Norm(\gamma(t))=(\cos t,\sin t, 0)$.
+Check that $\Norm(\gamma(t))=(\cos t,\sin t, 0)$.
 Calculate $\gamma''(t)$, and show that it is proportional to $\Norm(\gamma(t))$.
 The latter is equivalent to $\gamma''(t)\perp\T_{\gamma(t)}$. 
+
 Note that the line segment from $\gamma (0) $ to $\gamma (2{\cdot}\pi) $ is contained in~$\Sigma$.
 
 \parbf{\ref{ex:two-min-geod}.}
@@ -1917,7 +1920,7 @@ By \ref{prop:gamma''}, $\hat\alpha$ is a geodesic.
 \end{Figure}
 
 Suppose $\alpha_1$ is a proper subarc of $\alpha$;
-that is, $\alpha_1\ne\alpha$, or equivalently, either $p$ or $q$ is not an endpoint of $\alpha$.
+that is, $\alpha_1\ne\alpha$, or equivalently, $p$ or $q$ is not an endpoint of $\alpha$.
 Then $\alpha$ and $\hat\alpha$ share one point and velocity vector at this point.
 By \ref{prop:geod-existence}, $\alpha$ coincides with $\hat\alpha$ --- a contradiction.
 
@@ -1930,7 +1933,8 @@ in the cylinder $x^2 + y^2 =1$.
 
 \parbf{\ref{ex:min-geod+plane}.}
 Assume a shortest path $\alpha$ crosses $\Pi$ at least twice.
-In this case, there is a subarc $\alpha_1$ of $\alpha$ that lies strictly on one side on $\Pi$ (only its endpoints are on $\Pi$), and these endpoints are distinct from the endpoints of $\alpha$.
+In this case, there is a subarc $\alpha_1$ of $\alpha$ that lies strictly on one side on $\Pi$;
+only its endpoints are on $\Pi$, and these endpoints are distinct from the endpoints of $\alpha$.
  
 \begin{Figure}
 \vskip-1mm
@@ -1942,7 +1946,7 @@ In this case, there is a subarc $\alpha_1$ of $\alpha$ that lies strictly on one
 Let us remove the arc $\alpha_1$ from $\alpha$ and replace it with the reflection of $\alpha_1$ across $\Pi$.
 Note that the obtained curve, say $\beta$, lies on the surface;
 it has the same length as $\alpha$, and it connects the same pair of points, say $p$ and~$q$.
-Therefore, $\beta$ is another shortest path from $p$ to $q$ in $\Sigma$ that is distinct from~$\alpha$.
+Therefore, $\beta$ is a shortest path from $p$ to $q$ in $\Sigma$ that is distinct from~$\alpha$.
 
 We may assume that both $\alpha$ and $\beta$ have arc-length parametrization.
 By \ref{prop:gamma''}, $\alpha$ and $\beta$ are geodesics.
@@ -2004,24 +2008,24 @@ Applying the above estimates, we get
 
 \parbf{\ref{ex:tc-spherical-image}.}
 We can assume $\gamma$ is unit-speed.
-Set $\nu (t) = \nu ( \gamma (t)) $. 
-Then $\langle \gamma'(t) , \nu (t) \rangle \equiv 0$. Also, since $\gamma$ is a geodesic, we have that $\gamma''(t) \parallel \nu (t)$.
+Set $\Norm (t) = \Norm ( \gamma (t)) $. 
+Then $\langle \gamma'(t) , \Norm (t) \rangle \equiv 0$. Also, since $\gamma$ is a geodesic, we have that $\gamma''(t) \parallel \Norm (t)$.
 Therefore,
 \[
 \begin{aligned}
 |\gamma''(t)|
-&=|\langle\gamma''(t),\nu(t)\rangle|=
+&=|\langle\gamma''(t),\Norm(t)\rangle|=
 \\
-&=|\langle\gamma'(t),\nu(t)\rangle'-\langle\gamma'(t),\nu'(t)\rangle|=
+&=|\langle\gamma'(t),\Norm(t)\rangle'-\langle\gamma'(t),\Norm'(t)\rangle|=
 \\
-&=|\langle\gamma'(t),\nu'(t)\rangle|\le
+&=|\langle\gamma'(t),\Norm'(t)\rangle|\le
 \\
-&\le|\gamma'(t)|\cdot|\nu'(t)|=|\nu'(t)|.
+&\le|\gamma'(t)|\cdot|\Norm'(t)|=|\Norm'(t)|.
 \end{aligned}
 \]
 
-Integrating both sides with respect to $t$, we get 
-\[\length(\Norm\circ\gamma)\ge \tc\gamma.\]
+Integrating with respect to $t$, we get 
+\[\tc\gamma\le\length(\Norm\circ\gamma).\]
 
 \parbf{\ref{ex:usov-exact}.} 
 Suppose $\gamma(t)=(x(t),y(t),z(t))$. 
@@ -2054,14 +2058,14 @@ It is the same slope as in the problem about the cowboy and the lasso (\ref{ex:l
 
 \parbf{\ref{ex:bound-tc}}; \ref{SHORT.ex:bound-tc:a}.
 Show and use that $|\gamma|\le 1$, and
-\[\langle\nu,\epsilon\cdot \nu-\gamma\rangle\le0.\]
+\[\langle\Norm,\epsilon\cdot \Norm-\gamma\rangle\le0.\]
 
 \parit{\ref{SHORT.ex:bound-tc:b}.}
 Show and use that $|\gamma|\le 1$, $|\gamma'|= 1$, and
 \[\rho'=2\cdot \langle\gamma,\gamma'\rangle.\]
 
 \parit{\ref{SHORT.ex:bound-tc:c}.}
-Show and use that $\langle\gamma,\nu\rangle=|\gamma|\cdot\cos\theta$, $|\gamma'|= 1$, $\gamma''=-k\cdot \nu$, and
+Show and use that $\langle\gamma,\Norm\rangle=|\gamma|\cdot\cos\theta$, $|\gamma'|= 1$, $\gamma''=-k\cdot \Norm$, and
 \[\rho''=2\cdot \langle\gamma',\gamma'\rangle+2\cdot \langle\gamma,\gamma''\rangle.\]
 
 \parit{\ref{SHORT.ex:bound-tc:d}.}
