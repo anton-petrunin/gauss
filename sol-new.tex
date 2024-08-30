@@ -47,8 +47,7 @@ therefore $Q$ is not closed.
 \parit{\ref{SHORT.ex:9:9}.} The image of $\gamma$ might have the shape of the digit $8$ or $9$.
 
 \parbf{\ref{ex:mono}.}
-Do not forget that a monotone map has to be onto.
-%Consider the map $f$ such that $f(x)=0$ if $x<\epsilon$, $f(x)=1$ if $x>1-\epsilon$ and $f(x)=\tfrac{x-\varepsilon}{1-2\cdot\epsilon}$ otherwise.
+Push neighborhoods of the ends to the ends.
 
 \parbf{\ref{aex:simple-curve}.}
 Let $\alpha$ be a path, connecting $p$ to~$q$.
@@ -154,13 +153,15 @@ It admits the following smooth regular parametrization with a self-intersection 
 \[t\mapsto(\pm(\cos t)^2,\cos t\cdot\sin t,\sin t).\]
 
 \parbf{\ref{ex:open-curve}.}
-Assume the contrary, then there is a sequence of real numbers $t_n\to \pm \infty$ such that $\gamma(t_n)$ converges;
-denote its limit by~$p$.
-Let $K$ be a closed ball centered at~$p$.
-Observe that $\gamma^{-1}(K)$ is not compact.
+Assume that $|\gamma(t)|\z\to\infty$ as $t\to\pm\infty$.
+Choose a compact set $K\subset \mathbb{R}^3$.
+Show that $\gamma^{-1}(K)$ is a bounded closed set in $\mathbb{R}$,
+and apply the Heine--Borel lemma (\ref{thm:Heine--Borel}).
+Conclude that $\gamma$ is proper.
+
+Now assume that $\gamma(t_n)$ converges for some sequence $t_n\to \pm \infty$; let $p$ be its limit and $K$ be a closed ball centered at~$p$.
+Note that $\gamma^{-1}(K)$ is not compact.
 Conclude that $\gamma$ is not proper.
-
-
 
 \parbf{\ref{ex:proper-closed}.}
 Show and use that a set $C\subset \mathbb{R}^3$ is closed if and only if the intersection $K\cap C$ is compact for any compact $K\subset \mathbb{R}^3$.
@@ -639,7 +640,7 @@ In particular,
 $\measuredangle\hinge yxz
 \z+
 \measuredangle\hinge zyx
-<\pi$, or, equivalently, for the \textit{nonclosed} polygonal line $xyzx$ we have $\tc{xyzx}\z>\pi$.
+\z<\pi$, or, equivalently, for the \textit{nonclosed} polygonal line $xyzx$ we have $\tc{xyzx}\z>\pi$.
 It remains to apply \ref{prop:inscribed-total-curvature}.
 
 \begin{wrapfigure}{r}{23 mm}
@@ -1371,11 +1372,16 @@ For example, it may contain no nontrivial curves.
 
 \medskip
 
-Apply Sard's lemma (\ref{lem:sard}) to show that $\Norm$ is constant on $Z$, denote its value $\Norm_0$.
-Apply Sard's lemma again to show that $x\mapsto \langle \Norm_0,x\rangle$ is constant on $Z$.
+Apply Sard's lemma (\ref{lem:sard}) to show that $\Norm$ is constant on $Z_0$, denote its value $\Norm_0$.
+Apply Sard's lemma again to show that $x\mapsto \langle \Norm_0,x\rangle$ is constant on $Z_0$.
 Make a conclusion.
 
-\parit{Source.} It is a result of Richard Sacksteder \cite[Lemma 6]{sacksteder}.
+\parit{Remark.} This result was used by Richard Sacksteder \cite[Lemma 6]{sacksteder}.
+Try to solve the following slightly more challenging problem:
+\textit{Let $\Sigma$ be a smooth surface with orientation defined by a unit normal field $\Norm$,
+and let $Z_1\subset \Sigma$ be a connected set with unit shape operator.
+Show that $Z_1$ lies in a unit sphere.}
+
 
 \parbf{\ref{ex:shape-curvature-line}.} 
 We can assume that $\gamma$ is parametrized by arc-length.
@@ -2095,7 +2101,7 @@ Show and use that $\langle\vec v(t),\vec v'(t)\rangle=0$.
 
 \parit{\ref{SHORT.ex:parallel:b}}
 Show that $|\vec v(t)|$, $|\vec w(t)|$, and
-$\langle\vec v(t),\vec w(t)\rangle\z=0$,
+$\langle\vec v(t),\vec w(t)\rangle$,
 are constants; it can be done the same way as \ref{SHORT.ex:parallel:a}.
 Then use that 
 $\langle\vec v(t),\vec w(t)\rangle\z=|\vec v(t)|\cdot|\vec w(t)|\cdot\cos\theta$.
@@ -2132,6 +2138,7 @@ Apply \ref{prop:total-signed-curvature} and the Gauss--Bonnet formula (\ref{thm:
 
 \parbf{\ref{ex:geodesic-half}.}
 Apply \ref{cor:intK}, \ref{ex:intK:4pi}, and the Gauss--Bonnet formula (\ref{thm:gb}).
+
 For the last part, apply \ref{ex:bisection-of-S2}.
 
 \parbf{\ref{ex:closed-geodesic}.} For the first part apply the Gauss--Bonnet formula (\ref{thm:gb}).
@@ -2163,7 +2170,7 @@ A solution based on \ref{thm:comp:toponogov} is given in \cite{petrunin2021}.
 
 \parbf{\ref{ex:sqrt(3)}.}
 It is sufficient to show that the surface has no geodesic loops.
-Estimate the integrals of the Gauss curvature over the entire surface and a disc surrounded by a geodesic loop.
+Assume that there is a loop, estimate the integrals of the Gauss curvature over the entire surface and a disc surrounded by a geodesic loop.
 
 \parbf{\ref{ex:unique-geod}}; \ref{SHORT.ex:unique-geod:unique}.
 By \ref{prop:shortest-paths-exist} and \ref{prop:gamma''}, any two points in $\Sigma$ can be connected by a geodesic.
@@ -2179,14 +2186,14 @@ Use part \ref{SHORT.ex:unique-geod:unique} and \ref{prop:inj-rad}.
 Apply \ref{prop:pt+tgc} and \ref{prop:area-of-spher-polygon}.
 
 \parbf{\ref{ex:cohn-vossen}.}
-Repeat the end of the proof of \ref{thm:cohn-vossen} for a one-parameter family of geodesics $\gamma_\tau$ defined by $\gamma_\tau(0)=\alpha(\tau)$ and $\gamma'(0)=\alpha'(\tau)$. 
+Repeat the end of the proof of \ref{thm:cohn-vossen} for a one-parameter family of geodesics $\gamma_\tau$ defined by $\gamma_\tau(0)=\alpha(\tau)$ and $\gamma'_\tau(0)=\alpha'(\tau)$. 
 
 \parbf{\ref{ex:g-b-chi}.}
 Subdivide each surface into discs,
 count number of edges vertices and discs in the subdivision.
-Calculate the Euler characteristic and apply the theorem.
+Calculate the Euler characteristic and apply \ref{thm:GB-generalized}.
 For the Möbius band and pair of pans, use that the boundary has vanishing geodesic curvature.
-For the cylinder, use that each component of the boundary is a simple plane curve. 
+For the cylinder, use that each component of the boundary is a simple plane curve and apply \ref{prop:total-signed-curvature}. 
 
 %\end{multicols}
 %\par\noindent\rule{\textwidth}{0.4pt}
@@ -2299,7 +2306,7 @@ we get
 \end{align*}
 Hence, we get two more identities in \ref{eq:key-orthogonal/2}.
 
-Since $\vec u, \vec v$ is an orthonormal frame, by \ref{thm:shape-chart} we have
+Since $\vec u$ and $\vec v$ are orthonormal, \ref{thm:shape-chart} implies
 \[
 \begin{aligned}
 \tfrac1{a^2}
@@ -2398,9 +2405,9 @@ Note and use that by \ref{prop:rauch}, $\exp_p$ is length-preserving.
 \parbf{\ref{ex:deformation}.}
 To find $x(t)$, one may solve the differential equation
 $x'(t)=\sqrt{1-|y'(t)|^2}$.
-Its solution is defined on any interval where $|y'(t)|\z=|a\cdot \sin t|<1$ holds.
+Its solution is defined while $y(t)>0$ and $|y'(t)|\z=|a\cdot \sin t|<1$.
 
-Apply \ref{ex:principal-revolution:formula} to calculate Gauss curvature of $\Sigma_a$.
+Apply \ref{ex:principal-revolution:formula} to calculate Gauss curvature of~$\Sigma_a$.
 
 By \ref{ex:K=1}, small discs $\Delta_a$ in $\Sigma_a$ admit intrinsic isometry to a disc in a unit sphere.
 To show that $\Delta_a$ is not congruent to a spherical disc $\Delta_1$ for $a\ne 1$, show that its principal curvature is not 1 at some point. 
@@ -2473,7 +2480,7 @@ f(\dist{x}{q}{})&=\dist{x}{p}{}+\dist{x}{q}{}-\side\hinge xpq.
 Show and use that $f$ is concave.
 
 \parbf{\ref{ex:open-comparison}}; \ref{SHORT.ex:open-comparison:positive}.
-Apply Rauch comparison \ref{prop:rauch} and properties of the exponential map in \ref{prop:exp}.
+Apply the Rauch comparison (\ref{prop:rauch}) and the properties of the exponential map in \ref{prop:exp}.
 
 \parit{\ref{SHORT.ex:open-comparison:almost-min}.} Argue by contradiction.
 If the statement does not hold, then for any $p\in\Sigma$ there is a point $q=q(p)\in \Sigma$ such that 
@@ -2517,7 +2524,7 @@ From \ref{ex:midpoints}, we have
 \\
 \dist{\delta(\tfrac12)}{\gamma_2(\tfrac12)}{}
 &\le
-\tfrac12\cdot\dist{\delta(1)}{\gamma_2(1)}{},
+\tfrac12\cdot\dist{\delta(1)}{\gamma_2(1)}{}.
 \end{align*}
 Sum it up, and apply the triangle inequality.
 
