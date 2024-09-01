@@ -4653,6 +4653,35 @@ label(btex $\dots$ etex rotated angle(z.p-z.x), z.x[0][3]+(-3,3));
 label(btex $\dots$ etex rotated angle(z.y-z.p), z.x[n][3]+(3,3));
 endfig;
 
+beginfig(3400) 
+save u,p;
+path p[];
+u:=1cm;
+
+z.p=origin;
+z.q=(.5,2)*u;
+z.r=z.q zscaled (1.2,-.7);
+z.l=z.q zscaled (-.6,-.2);
+
+p1=z.l..z.p{z.q}..z.r;
+
+draw ddline(-.3*z.q,z.q)(.2,.2);
+draw p1;
+
+z.rr=point 1.8 of p1;
+z.s=altitude(z.p,z.rr,z.q);
+
+mark_rt_angle(z.rr, z.s, z.p);
+
+draw z.s--z.rr;
+
+dOt z.p,z.rr;
+
+label.rt(btex $p=\gamma(t)$ etex, z.p);
+label.lrt(btex $\gamma(t+\ell)$ etex, z.rr);
+label.top(btex $\rho(\ell)$ etex, .6[z.s,z.rr]);
+endfig;
+
 beginfig(3500) 
 save u,p;
 path p[];

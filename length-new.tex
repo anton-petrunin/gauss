@@ -339,7 +339,7 @@ Denote by $K$ the convex hull of $\alpha$; let $\beta$ be the boundary curve of~
 Show that 
 \[\length \alpha\ge \length \beta.\]
 
-Try to show that the statement holds for arbitrarily closed plane curves $\alpha$, assuming only that $K$ has a nonempty interior.
+Try to show that the statement holds for arbitrarily closed plane curves, assuming only that $K$ has a nonempty interior.
 \end{thm}
 
 
@@ -347,7 +347,9 @@ Try to show that the statement holds for arbitrarily closed plane curves $\alpha
 \label{sec:crofton}
 \index{Crofton's formula}
 
-For a function $f\: \mathbb{S}^1 \to \mathbb{R}$, we will denote its average value as $\overline{f(\vec u)}$.
+For a function $f\: \mathbb{S}^1 \to \mathbb{R}$, we will denote its average value as $\overline{f(\vec u)}$;
+that is,
+\[\overline{f(\vec u)}=\frac1{2\cdot \pi}\cdot\int_{\vec u \in\mathbb{S}^1} f(\vec u).\]
 For a vector $\vec w$ and a unit vector $\vec u$, we will denote by $\vec w_{\vec u}$ the orthogonal projection of $\vec w$ to the line in the direction of  $\vec u$;
 that is,
 \[\vec w_{\vec u}=\langle\vec u,\vec w\rangle\cdot\vec u.\] 
@@ -470,8 +472,8 @@ for any $x,y\in A$
 
 Let us denote by $\mathbb{S}^2$ the unit sphere in the space; that is,
 \[\mathbb{S}^2=\set{(x,y,z)\in\mathbb{R}^3}{x^2+y^2+z^2=1}.\]
-A space curve $\gamma$ is called \index{spherical!curve}\emph{spherical} if it runs in the unit sphere;
-that is, $|\gamma(t)|=1$, or equivalently, $\gamma(t)\in\mathbb{S}^2$  for any~$t$.
+A space curve $\gamma$ is called \index{spherical!curve}\emph{spherical} if it runs in $\mathbb{S}^2$;
+that is, $|\gamma(t)|=1$ for any~$t$.
 
 Recall that $\measuredangle(u,v)$ denotes the angle between vectors $u$ and~$v$.
 
@@ -483,8 +485,7 @@ For any $u,v\in \mathbb{S}^2$, we have
 
 \parit{Proof.}
 Let $\gamma$ be the short arcof a great circle%
-\footnote{A great circle is the intersection of $\mathbb{S}^2$ with a plane passing thru sphere's center.
-Equivalently, it is a circle of radius 1 contained in $\mathbb{S}^2$.}
+\footnote{A great circle is the intersection of the sphere with a plane passing thru its center.}
 from $u$ to $v$ in $\mathbb{S}^2$.
 Note that $\length\gamma=\measuredangle(u,v)$.
 Therefore,
@@ -542,7 +543,7 @@ By \ref{obs:S2-length},
 
 Denote by $z$ be the midpoint between $p$ and $q$ in $\mathbb{S}^2$;
 that is, $z$ is the midpoint of the short arc of a great circle from $p$ to $q$ in $\mathbb{S}^2$. 
-We claim that $\gamma$ lies in the open northern hemisphere with the north pole at~$z$.
+We claim that $\gamma$ lies in the open hemisphere with the pole at~$z$.
 If not, $\gamma$ intersects the equator at some point~$r$.
 Without loss of generality, we may assume that $r$ lies on~$\gamma_1$. 
 

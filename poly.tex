@@ -1,8 +1,8 @@
 \chapter{Polygonal lines}
 \label{chap:poly}
 
-This chapter should help to build a firm geometric intuition about curvature;
-it reinterprets the curvature of curves via inscribed polygonal lines.
+This chapter reinterprets the curvature of curves via angles of inscribed polygonal lines;
+it should help to build a firm geometric intuition about curvature.
 
 \section{Piecewise smooth curves}
 
@@ -78,7 +78,7 @@ We need to show that \index{10phi@$\tc{\gamma}$ (total curvature)}
 \[\tc{\gamma_1}+\dots+\tc{\gamma_n}+\theta_1+\dots+\theta_n\ge2\cdot\pi.\eqlbl{eq:gen-fenchel}\]
 
 Consider the tangent indicatrix $\tan_i$ for each arc $\gamma_i$;
-these are smooth spherical arcs.
+these are spherical arcs.
 
 The same argument as in the proof of Fenchel's theorem (\ref{thm:fenchel}) shows that the curves $\tan_1,\dots,\tan_n$ cannot lie in an open hemisphere.
 
@@ -125,9 +125,9 @@ hence \ref{tc>a+b} follows.
 \begin{thm}{Exercise}\label{ex:chord-lemma-optimal}
 Show that the estimate in the chord lemma is optimal.
 
-More precisely, given two points $p, q$ and two unit vectors $\vec u,\vec v$ in $\mathbb{R}^3$,
+More precisely, given two distinct points $p, q$ and two unit vectors $\vec u,\vec v$ in $\mathbb{R}^3$,
 construct a smooth curve $\gamma$ that starts at $p$ in the direction $\vec u$ and ends at $q$ in the direction $\vec v$ such that 
-$\tc\gamma$ is arbitrarily close to $\measuredangle(\vec w,\vec u)+\measuredangle(\vec w,\vec v)$, where $\vec w$ is a vector in the direction of $q-p$.
+$\tc\gamma$ is arbitrarily close to $\measuredangle(\vec w,\vec u)+\measuredangle(\vec w,\vec v)$, where vector $\vec w$ points from $p$ to $q$.
 
 \end{thm}
 
@@ -191,7 +191,6 @@ the total curvature of the polygonal line $p_0\dots p_n$ is the sum of external 
 By triangle inequality for angles \ref{thm:spherical-triangle-inq}, we get that
 \[\theta_i\le \alpha_i+\beta_i.\]
 By the chord lemma, the total curvature of the arc of $\gamma$ from $p_i$ to $p_{i+1}$ is at least $\alpha_i+\beta_{i+1}$. 
-
 Therefore, if $\gamma$ is a closed curve, we have
 \begin{align*}
 \tc{p_0\dots p_n}&=\theta_1+\dots+\theta_n\le 
@@ -202,6 +201,7 @@ Therefore, if $\gamma$ is a closed curve, we have
 \\
 &\le \tc\gamma.
 \end{align*}
+
 If $\gamma$ is not closed, the calculations are analogous:
 \begin{align*}
 \tc{p_0\dots p_n}&=\theta_1+\dots+\theta_{n-1}\le 
@@ -214,24 +214,12 @@ If $\gamma$ is not closed, the calculations are analogous:
 \end{align*}
 \qedsf
 
-\pagebreak%???
-
-\begin{thm}{Exercise}\label{ex:sef-intersection}
-
-
-\begin{subthm}{ex:sef-intersection:>pi}  
+\begin{thm}{Exercise}\label{ex:sef-intersection}\label{ex:sef-intersection:>pi}  
 Use the above results to give another solution to Exercise \ref{ex:length-dist:self-intersection:>pi}. 
-\end{subthm}
-%%%%%% Exchanged the statement of this exercise with ex:length-dist as the other one came before.
-
-\begin{subthm}{ex:sef-intersection:<2pi}
-Draw a smooth plane curve $\gamma$ with a self-intersection, such that $\tc\gamma<2\cdot\pi$.
-\end{subthm}
-
 \end{thm}
 
 \begin{wrapfigure}{r}{30 mm}
-\vskip-2mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-20}
 \vskip0mm
@@ -316,7 +304,7 @@ By \ref{prop:inscribed-total-curvature},
 Therefore, we have equalities in \ref{eq:spheric-triangle}.
 It means that point $d$ lies in the angle $abc$ 
 and point $b$ lies in the angle $cda$.
-The latter means that $abcd$ is a convex plane quadrangle.
+The latter implies that $abcd$ is a convex plane quadrangle.
 
 It follows that any quadrangle inscribed in $\gamma$ is a convex plane quadrangle.
 Therefore, all points of $\gamma$ lie in one plane defined by three points on~$\gamma$.
@@ -326,9 +314,6 @@ we get that $\gamma$ is convex as well.
 
 \section{Generalized DNA theorem}\label{sec:DNA-poly}
 
-In this section, we prove a polygonal analog of the DNA theorem (\ref{thm:DNA}).
-Recall that it states that \textit{total curvature of closed smooth curve in a unit ball cannot be smaller than its length}.
-
 \begin{thm}{Theorem}\label{thm:DNA-poly}
 Let $p_1\dots p_n$ be a closed polygonal line in a unit ball.
 Then 
@@ -336,7 +321,7 @@ Then
 \end{thm}
 
 Exercise \ref{ex:total-curvature=} and this theorem imply the original DNA theorem (\ref{thm:DNA}).
-Therefore, it is indeed a generalization of DNA theorem.
+Therefore, \ref{thm:DNA-poly} generalizes \ref{thm:DNA}.
 
 \parit{Proof.}
 We assume that $p_n=p_0$, $p_{n+1}=p_1$, and so on.

@@ -24,7 +24,8 @@ According to \ref{prop:a'-pertp-a''}, $\norm(s)\perp \tan(s)$.
 Therefore, the vector product 
 \[\bi(s)=\tan(s)\times \norm(s)\]
 is a unit vector.
-Moreover, the triple $\tan(s),\norm(s),\bi(s)$ an oriented orthonormal basis in $\mathbb{R}^3$.
+Moreover, the triple $\tan(s),\norm(s),\bi(s)$ an oriented orthonormal basis in $\mathbb{R}^3$;
+it is called the \index{Frenet frame}\emph{Frenet frame} of $\gamma$ at~$s$.
 In particular, we have that
 \[\begin{aligned}
 \langle\tan,\tan\rangle&=1,
@@ -41,8 +42,7 @@ In particular, we have that
 \end{aligned}
 \eqlbl{eq:orthornomal}
 \]
-
-The orthonormal basis $\tan(s),\norm(s),\bi(s)$ is called the \index{Frenet frame}\emph{Frenet frame} at~$s$; the vectors in the frame are called \index{tangent}\emph{tangent}, \index{normal}\emph{normal}, and \index{binormal}\emph{binormal}, respectively.
+$\tan(s)$, $\norm(s)$, and $\bi(s)$ are called \index{tangent}\emph{tangent}, \index{normal}\emph{normal}, and \index{binormal}\emph{binormal} vectors of the Frenet frame, respectively.
 The frame $\tan(s),\norm(s),\bi(s)$ is defined only if $\kur(s)\z\ne 0$.
 
 The plane $\Pi_s$ thru $\gamma(s)$ spanned by vectors $\tan(s)$ and $\norm(s)$ is called the \index{osculating!plane}\emph{osculating plane} at $s$;
@@ -402,9 +402,10 @@ Moreover, since we choose $\tan(s_0)$, $\norm(s_0)$, $\bi(s_0)$ to be an oriente
 
 Assume $\mathbb{J} \varsubsetneq \mathbb{I}$.
 Then an end of $\mathbb{J}$, say $b$, lies in the interior of $\mathbb{I}$.
-By Theorem~\ref{thm:ODE}, at least one of the values $\gamma(s)$, $\tan(s)$, $\norm(s)$, $\bi(s)$
+The Theorem~\ref{thm:ODE} is applicable for $\Omega=\mathbb{R}^{12}\times\mathbb{I}$;
+therefore, at least one of the values $\gamma(s)$, $\tan(s)$, $\norm(s)$, $\bi(s)$
 escapes to infinity as $s\to b$.
-But this is impossible --- the vectors $\tan(s)$, $\norm(s)$, $\bi(s)$ remain unit, and $|\gamma'(s)|=|\tan(s)|=1$;
+But this is impossible --- the vectors $\tan(s)$, $\norm(s)$, $\bi(s)$ remain unit, and $|\gamma'(s)|\z=|\tan(s)|=1$;
 so $\gamma$ travels only a finite distance as $s\to b$ --- a contradiction.
 Hence, $\mathbb{J}= \mathbb{I}$, and the first statement follows.
 

@@ -1,7 +1,7 @@
 \chapter{Curvature}
 \label{chap:curve-curvature}
 
-In mathematics, the term curvature is used for anything that measures how much a geometric object deviates from being \textit{straight}.
+Тhe term curvature is used for anything that measures how much a geometric object deviates from being \textit{straight}, whatever that may mean.
 For curves, the curvature is a pointwise quantitative measure of how much the curve differs from a straight line.
 
 
@@ -12,8 +12,10 @@ For curves, the curvature is a pointwise quantitative measure of how much the cu
 Recall that any smooth curve can be reparametrized by its arc-length (\ref{prop:arc-length-smooth}).
 The obtained parametrized curve, say $\gamma$, remains to be smooth, and it has unit speed; 
 that is, $|\gamma'|=1$.
-The following proposition states that in this case
-the acceleration vector $\gamma''$ stays perpendicular to the velocity vector $\gamma'$.
+From mechanics, you might know that acceleration and velocity are perpendicular if the speed is constant,
+let us restate it.
+
+
 
 \begin{thm}{Proposition}\label{prop:a'-pertp-a''}
 Assume $\gamma$ is a smooth unit-speed space curve.
@@ -52,7 +54,7 @@ for any $p \in \gamma$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:curvature-of-spherical-curve}
-Show that any smooth unit-speed spherical curve has curvature at least 1.
+Show that any smooth spherical curve has curvature at least 1.
 \end{thm}
 
 \section{Tangent indicatrix}\label{sec:Tangent indicatrix}
@@ -90,7 +92,7 @@ for any smooth space curve $\gamma$ we have the following expressions for its cu
 
 \begin{subthm}{ex:curvature-formulas:a} 
 \[\kur=\frac{|\vec w|}{|\gamma'|^2},\]
-where $\vec w=\vec w(t)$ denotes the projection of $\gamma''(t)$ to the plane normal to $\gamma'(t)$;
+where $\vec w$ is the projection of $\gamma''(t)$ to the plane normal to $\gamma'(t)$;
 \end{subthm}
 
 \begin{subthm}{ex:curvature-formulas:b}
@@ -116,18 +118,31 @@ In other words, construct a sequence $\gamma_n\:\mathbb{I}\to\mathbb{R}^3$ of sm
 
 \section{Tangents}
 
-Let $\gamma$ be a smooth space curve and $\tan$ its tangent indicatrix.
+%???+PIC
+
+{
+
+\begin{wrapfigure}{r}{32 mm}
+\vskip-10mm
+\centering
+\includegraphics{mppics/pic-3400}
+\vskip0mm
+\end{wrapfigure}
+
+Let $\gamma$ be a smooth space curve, and let $\tan$ be its tangent indicatrix.
 The line thru $\gamma(t)$ in the direction of $\tan(t)$ is called the \index{tangent!line}\emph{tangent line} to $\gamma$  at~$t$.
 Any vector proportional to $\tan(t)$ is called the \index{tangent!vector}\emph{tangent} to $\gamma$ at~$t$.
 
 The tangent line could be also defined as a unique line that has \index{order of contact}\emph{first-order contact} with $\gamma$ at $t$;
 that is, $\rho(\ell)=o(\ell)$, where $\rho(\ell)$ denotes the distance from $\gamma(t+\ell)$ to the line.
 
+}
+
 \begin{thm}{Advanced exercise}\label{ex:no-parallel-tangents}
 Construct a smooth closed space curve without parallel tangent lines.
 \end{thm}
 
-We say that a smooth curve $\gamma_1$ at $s_1$ is \index{tangent!curves}\emph{tangent} to a smooth curve $\gamma_2$ at $s_2$
+We say that smooth curves $\gamma_1$ and $\gamma_2$ are \index{tangent!curves}\emph{tangent} at $s_1$ and $s_2$
 if $\gamma_1(s_1)=\gamma_2(s_2)$ and the tangent line of $\gamma_1$ at $s_1$ coincides with the tangent line of $\gamma_2$ at $s_2$;
 if both curves are simple we can also say that they are tangent at the point $p=\gamma_1(s_1)\z=\gamma_2(s_2)$ without ambiguity.
 
@@ -152,7 +167,7 @@ its tangent indicatrix, and the total curvature of its arc $\gamma_{a,b}|_{[0,2\
 
 Note that for a unit-speed smooth curve,
 the speed of its tangent indicatrix equals its curvature.
-Therefore, \ref{ex:integral-length} implies the following.
+Therefore, we get the following.
 
 \begin{thm}{Observation}\label{obs:tantrix}
 The total curvature of a smooth curve is the length of its tangent indicatrix.
@@ -173,7 +188,7 @@ Consider its tangent indicatrix $\tan=\gamma'$.
 Recall that $|\tan(s)|=1$ for any $s$; that is, $\tan$ is a closed spherical curve.
 
 Let us show that $\tan$ cannot lie in a hemisphere.
-Assume the contrary; without loss of generality, we can assume that it lies in the northern hemisphere defined by the inequality $z>0$ in $(x,y,z)$-coordinates.
+Arguing by contradiction, we can assume that it lies in the hemisphere defined by the inequality $z>0$ in $(x,y,z)$-coordinates.
 In other words, if $\gamma(t)=(x(t), y(t), z(t))$, then $z'(t)>0$ for any~$t$.
 Therefore,
 \[z(b)-z(a)=\int_a^b z'(s)\cdot ds>0.\]
@@ -219,8 +234,7 @@ Then
 
 \end{thm}
 
-This theorem has many interesting and very different proofs;
-a number of them are collected by Serge Tabachnikov~\cite{tabachnikov}.
+Several proofs of this theorem are collected by Serge Tabachnikov~\cite{tabachnikov}.
 The 2-dimensional case of this theorem was proved by Istv\'{a}n F\'{a}ry \cite{fary1950}.
 It was generalized by Don Chakerian \cite{chakerian1962} to higher dimensions.
 The following exercise guides you thru another proof of him \cite{chakerian1964}.
@@ -354,7 +368,10 @@ Consider a sequence of points $q_n\in F$ such that $|q_n|\z\to \infty$ as $n\to 
 Denote by $\vec v_n$ the unit vector in the direction of $q_n$; that is $\vec v_n=\tfrac{q_n}{|q_n|}$.
 
 Since the unit circle is compact, we can pass to a subsequence of $q_n$ such that $\vec v_n$ converges to a unit vector, say $\vec v$.
-Since $F$ is closed, the half-line $h$ from the origin in the direction of $\vec v$ lies in $F$.
+Let us draw a half-line $h$ from $o$ in the direction of $\vec{v}$.
+Any point on $h$ can be approximated by points from the segments $[o, q_n]$ as $n \to \infty$.
+Since the set $F$ is closed, the half-line $h$ lies in $F$
+
 
 Let $\vec w$ be the counterclockwise rotation of $\vec v$ by an angle $\tfrac\pi 2$, let
 $\ell$ be the tangent line to $\gamma$ at the point $p=\gamma(s)$,
@@ -491,41 +508,51 @@ Integrating \ref{<gamma',u>}, we get
 \\
 &=
 \int_a^b\langle \vec u_1,\gamma'_1(s)\rangle\cdot ds \le 
-\\
-&\le\int_a^b\langle \vec u_2,\gamma'_2(s)\rangle\cdot ds 
+\int_a^b\langle \vec u_2,\gamma'_2(s)\rangle\cdot ds 
 =
 \\
 &=\langle \vec u_2,\gamma_2(b)-\gamma_2(a)\rangle
-\le
-\\
-&\le |\gamma_2(b)-\gamma_2(a)|.
+\le |\gamma_2(b)-\gamma_2(a)|.
 \end{align*}
 \qedsf
-
-\begin{wrapfigure}{r}{50 mm}
-\vskip-4mm
-\centering
-\includegraphics{mppics/pic-251}
-\vskip-4mm
-\end{wrapfigure}
 
 \begin{thm}{Advanced exercise}\label{ex:bow'}
 Let $\gamma_1$ and $\gamma_2$ be as in the bow lemma (\ref{lem:bow});
 denote by $\tan_1$ and $\tan_2$ their tangent indicatrixes.
+
+{
+
+\begin{wrapfigure}{r}{50 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-251}
+\vskip-0mm
+\end{wrapfigure}
+
 Set
+%\[\vec w_i=\gamma_i(b)-\gamma_i(a),\quad \alpha_i=\measuredangle(\tan_i(a),\vec w_i)\quad\text{и}\quad\beta_i&=\measuredangle(\tan_i(b),\vec w_i).\]
 \begin{align*}
-\vec w_1&=\gamma_1(b)-\gamma_1(a),
-&
-\vec w_2&=\gamma_2(b)-\gamma_2(a),
+\vec w_i&=\gamma_i(b)-\gamma_i(a),
 \\
-\alpha_1&=\measuredangle(\tan_1(a),\vec w_1),
-&
-\alpha_2&=\measuredangle(\tan_2(a),\vec w_2),
+\alpha_i&=\measuredangle(\tan_i(a),\vec w_i),
 \\
-\beta_1&=\measuredangle(\tan_1(b),\vec w_1),
-&
-\beta_2&=\measuredangle(\tan_2(b),\vec w_2).
+\beta_i&=\measuredangle(\tan_i(b),\vec w_i).
 \end{align*}
+%\begin{align*}
+%\vec w_1&=\gamma_1(b)-\gamma_1(a),
+%&
+%\vec w_2&=\gamma_2(b)-\gamma_2(a),
+%\\
+%\alpha_1&=\measuredangle(\tan_1(a),\vec w_1),
+%&
+%\alpha_2&=\measuredangle(\tan_2(a),\vec w_2),
+%\\
+%\beta_1&=\measuredangle(\tan_1(b),\vec w_1),
+%&
+%\beta_2&=\measuredangle(\tan_2(b),\vec w_2).
+%\end{align*}
+
+}
 
 \begin{subthm}{ex:bow'+}
 Suppose that $\beta_1\le\tfrac\pi2$.
@@ -548,6 +575,7 @@ Assume
 
 \begin{subthm}{ex:length-dist:self-intersection:>pi}
 Show that if a smooth curve $\gamma\:[a,b]\to\mathbb{R}^3$ has a self-intersection, then $\tc\gamma>\pi$.
+Draw a smooth plane curve $\gamma$ with a self-intersection, such that $\tc\gamma<2\cdot\pi$.
 \end{subthm}
 
 
