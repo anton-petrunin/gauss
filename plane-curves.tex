@@ -106,8 +106,7 @@ Then there is a smooth unit-speed curve $\gamma\:\mathbb{I}\to\mathbb{R}^2$ with
 Moreover, $\gamma$ is uniquely defined up to a orientation-preserving motion of the plane.
 \end{thm}
 
-This is the fundamental theorem of differential geometry of plane curves.
-It follows from \ref{thm:fund-curves}, but we present a slightly simpler proof.
+This theorem is a partial case of its 3-dimensional analog (\ref{thm:fund-curves}), but we present a direct proof.
 
 \parit{Proof.} 
 Fix $s_0\in\mathbb{I}$.
@@ -141,7 +140,7 @@ This proves the existence;
 it remains to prove the uniqueness.
 
 Assume $\gamma_1$ and $\gamma_2$ are two curves that satisfy the assumptions of the theorem.
-Applying a rigid motion, we can assume that $\gamma_1(s_0)\z=\gamma_2(s_0)\z=0$, and the Frenet frame of both curves at $s_0$ is formed by the coordinate frame $(1,0),(0,1)$.
+Applying a rigid motion, we can assume that $\gamma_1(s_0)\z=\gamma_2(s_0)$, and both curves have the same Frenet frame at $s_0$.
 Let us denote by $\tan_1,\norm_1$ and $\tan_2,\norm_2$ the Frenet frames of $\gamma_1$ and $\gamma_2$, respectively.
 Both triples $\gamma_i,\tan_i,\norm_i$ satisfy the following system of ordinary differential equations 
 \[
@@ -186,7 +185,7 @@ If $\mathbb{I}=[a,b]$, then
 \[\tgc\gamma=\theta(b)-\theta(a),\eqlbl{eq:tsc-theta}\]
 where $\theta$ is a continuous argument of $\gamma$ (see \ref{cor:2D-angle}).
 
-If $\gamma$ is a piecewise smooth plane curve, then we define its total signed curvature as the sum of the total signed curvatures of its arcs plus the sum of the {}\emph{signed} external angles at its joints;
+If $\gamma$ is a piecewise smooth plane curve, then we define its total signed curvature as the sum of the total signed curvatures of its arcs plus the sum of the \textit{signed} external angles at its joints;
 they are positive where $\gamma$ turns left, negative where $\gamma$ turns right, and 0 where $\gamma$ goes straight.
 It is undefined if $\gamma$ turns exactly backwards;
 that is, if it has a cusp.
@@ -246,8 +245,8 @@ We can assume that the arcs between the vertices are sufficiently small
 so that the polygonal line is simple, and each arc $\gamma_i$ from $p_i$ to $p_{i+1}$ has small total absolute curvature, say  $\tc{\gamma_i}<\pi$ for each~$i$.
 
 
-As usual, we use indexes modulo $n$; in particular, $p_{n+1}\z=p_1$.
 Assume $p_i=\gamma(t_i)$.
+As usual, we use indexes modulo $n$; in particular, $p_{n+1}\z=p_1$.
 Set 
 \begin{align*}
 \vec w_i&=p_{i+1}-p_i,& \vec v_i&=\gamma'(t_i),
@@ -431,22 +430,22 @@ Show that the osculating circle of $\hat\gamma$ at $s$ is the inversion of the o
 The following lemma was proved by Peter Tait \cite{tait}
 and later rediscovered by Adolf Kneser \cite{kneser}.
 
-{
-
-\begin{wrapfigure}{r}{31 mm}
-\vskip-4mm
-\begin{lpic}[t(-0 mm),b(-2 mm),r(0 mm),l(0 mm)]{mppics/pic-61}
-\end{lpic}
-\end{wrapfigure}
-
 \begin{thm}{Lemma}\label{lem:spiral}
 Assume $\gamma$ is a smooth plane curve with strictly decreasing positive signed curvature. Then the osculating circles of $\gamma$ are nested; that is, if $\sigma_s$ denotes the osculating circle of $\gamma$ at $s$,
 then $\sigma_{s_0}$ lies in the open disc bounded by $\sigma_{s_1}$ for any $s_0<s_1$. \index{10sigma@$\sigma_s$ (osculating circle)}
 \end{thm}
 
+{
+
+\begin{wrapfigure}{r}{31 mm}
+\vskip-6mm
+\includegraphics{mppics/pic-61}
+\end{wrapfigure}
+
+
 The picture shows a curve $\gamma$ as in the theorem and its osculating circles.
 They form a peculiar foliation of the annulus; it meets the following property:
-if a smooth function is constant on each osculating circle, then it must be constant in the annulus \cite[see][Lecture 10]{fuchs-tabachnikov}.
+if a smooth function is constant on each osculating circle, then it must be constant in the annulus \cite[Lecture 10]{fuchs-tabachnikov}.
 Also, the curve $\gamma$ is tangent to a circle of the foliation at each of its points.
 However, it does not run along any of those circles.
 
@@ -478,8 +477,7 @@ in other words, the curve $s\mapsto \omega(s)$ contains no line segments.
 \begin{wrapfigure}[5]{o}{35 mm}
 \vskip-0mm
 \centering
-\begin{lpic}[t(-0 mm),b(-0 mm),r(0 mm),l(0 mm)]{mppics/pic-84}
-\end{lpic}
+\includegraphics{mppics/pic-84}
 \end{wrapfigure}
 
 In particular, $|\omega(s_1)-\omega(s_0)|\z<\length(\omega|_{[s_0,s_1]})$ for any $s_0<s_1$.

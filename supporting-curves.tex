@@ -2,7 +2,7 @@
 \label{chap:supporting-curves}
 
 When two plane curves touch each other without crossing, it is possible to control the signed curvature of one of them in terms of the signed curvature of the other.
-In this chapter, we use this idea to study the global behavior of plane curves.
+This will be proved and used to study the global behavior of plane curves.
 
 \section{Cooriented tangent curves}
 
@@ -26,12 +26,6 @@ If we reverse the parametrization of one of the curves, then cooriented curves b
 
 \section{Supporting curves}
 
-Let $\gamma_1$ and $\gamma_2$ be two smooth plane curves that share a point 
-\[p=\gamma_1(t_1)=\gamma_2(t_2);\] 
-we assume that $p$ is not an endpoint for $\gamma_1$ nor $\gamma_2$.
-Suppose that there is $\epsilon>0$ such that the arc $\gamma_2|_{[t_2-\epsilon, t_2+\epsilon]}$ lies in a closed plane region $R$ with the arc $\gamma_1|_{[t_1-\epsilon, t_1+\epsilon]}$ in its boundary,
-then we say that $\gamma_1$ \index{supporting!curve}\emph{locally supports} $\gamma_2$ at the time parameters $t_1$ and $t_2$.
-
 \begin{wrapfigure}[8]{o}{43 mm}
 \vskip-4mm
 \centering
@@ -39,7 +33,12 @@ then we say that $\gamma_1$ \index{supporting!curve}\emph{locally supports} $\ga
 \vskip0mm
 \end{wrapfigure}
 
-If the curves on the picture are oriented according to the arrows, then $\gamma_1$ supports $\gamma_2$ from the right at $p$ (as well as $\gamma_2$ supports $\gamma_1$ from the left at~$p$).
+Let $\gamma_1$ and $\gamma_2$ be two smooth plane curves that share a point 
+\[p=\gamma_1(t_1)=\gamma_2(t_2);\] 
+we assume that $p$ is not an endpoint for $\gamma_1$ nor $\gamma_2$.
+Suppose that there is $\epsilon>0$ such that the arc $\gamma_2|_{[t_2-\epsilon, t_2+\epsilon]}$ lies in a closed plane region $R$ with the arc $\gamma_1|_{[t_1-\epsilon, t_1+\epsilon]}$ in its boundary,
+then we say that $\gamma_1$ \index{supporting!curve}\emph{locally supports} $\gamma_2$ at the time parameters $t_1$ and $t_2$.
+Furthermore, if the curves on the picture are oriented according to the arrows, then $\gamma_1$ supports $\gamma_2$ from the right at $p$ (as well as $\gamma_2$ supports $\gamma_1$ from the left at~$p$).
 
 Suppose $\gamma_1$ is a simple curve that cuts the plane into two closed regions, one lies on the left and the other on the right from~$\gamma_1$.
 We say that $\gamma_1$ \index{supporting!curve}\emph{globally supports} $\gamma_2$ at point $p=\gamma_2(t_2)$ 
@@ -94,8 +93,7 @@ then $\gamma_1$ locally supports $\gamma_2$ from the left (right) at the time pa
 \end{thm}
 
 \parit{Proof.} Without loss of generality, we can assume that $t_1=t_2=0$, the shared point $\gamma_1(0)=\gamma_2(0)$ is the origin, and the velocity vectors $\gamma'_1(0)$, $\gamma'_2(0)$ point in the direction of $x$-axis.
-
-Small arcs $\gamma_1|_{[-\epsilon,+\epsilon]}$ and $\gamma_2|_{[-\epsilon,+\epsilon]}$ can be described as a graph 
+Then small arcs $\gamma_1|_{[-\epsilon,+\epsilon]}$ and $\gamma_2|_{[-\epsilon,+\epsilon]}$ can be described as a graph 
 $y=f_1(x)$ and $y=f_2(x)$ for smooth functions $f_1$ and $f_2$ such that $f_i(0)=0$ and $f_i'(0)=0$.
 Note that $f_1''(0)=\skur_1(0)$, and $f_2''(0)=\skur_2(0)$ (see \ref{ex:curvature-graph})
 
@@ -315,7 +313,7 @@ However, as one may see from the spinner-like example on the picture it does not
 
 \begin{thm}{Key lemma}\label{thm:moon}
 Assume $\gamma$ is a simple smooth plane loop.
-Then at one point of $\gamma$ (distinct from its base), its osculating circle $\sigma$ globally supports $\gamma$ from the inside.
+Then at one point of $\gamma$ (distinct from its base), its osculating circle globally supports $\gamma$ from the inside.
 \end{thm}
 
 First, let us show that the theorem follows from the lemma.
@@ -339,10 +337,9 @@ assume that the osculating circle at each point $p\in \gamma$ does not lie in~$F
 \vskip-2mm
 \end{figure}
 
-Given a point $p\in\gamma$ let us consider the maximal circle $\sigma$ that lies completely in $F$ and tangent to $\gamma$ at~$p$.
-The circle $\sigma$ will be called the {}\emph{incircle} of $F$ at~$p$.
-
-The curvature $\skur_\sigma$ of the incircle $\sigma$ has to be larger than $\skur(p)_\gamma$.
+Given a point $p\in\gamma$ let us consider the maximal circle that lies completely in $F$ and tangent to $\gamma$ at~$p$.
+This circle, say $\sigma$, will be called the {}\emph{incircle} of $F$ at~$p$;
+its curvature $\skur_\sigma$ has to be larger than $\skur(p)_\gamma$.
 Indeed, since $\sigma$ supports $\gamma$ from the left, by \ref{prop:supporting-circline} we have $\skur_\sigma\ge \skur(p)_\gamma$; in the case of equality, $\sigma$ is the osculating circle at~$p$.
 The latter is impossible by our assumption.
 
@@ -419,7 +416,7 @@ Recall that a vertex of a smooth curve is defined as a critical point of its sig
 in particular, any local minimum (or maximum) of the signed curvature is a vertex.
 For example, every point of a circle is a vertex.
 
-\begin{thm}{Four-vertex theorem}\label{thm:4-vert}
+\begin{thm}{Тheorem}\label{thm:4-vert}
 Any smooth simple closed plane curve has at least four vertices.
 \end{thm}
 
@@ -431,27 +428,28 @@ the first curve has one self-intersection and exactly two vertices;
 the second curve has exactly four vertices and no self-intersections.
 
 The four-vertex theorem was first proved by Syamadas Mukhopadhyaya \cite{mukhopadhyaya} for convex curves.
-Many proofs and generalizations are known.
 One of our favorite proofs was given by Robert Osserman \cite{osserman}.
 Our proof of the following stronger statement is based on the key lemma in the previous section.
 For more on the subject, see \cite{petrunin-zamora:moon} and the references therein.
+
+{
+
+\begin{wrapfigure}[8]{r}{33 mm}
+\vskip-8mm
+\centering
+\includegraphics{mppics/pic-63}
+\vskip0mm
+\end{wrapfigure}
 
 \begin{thm}{Theorem}\label{thm:4-vert-supporting}
 Any smooth simple closed plane curve is globally supported by its osculating circle at least at 4 distinct points;
 two from the inside and two from the outside.
 \end{thm}
 
-{
-
-\begin{wrapfigure}[8]{r}{33 mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-63}
-\vskip0mm
-\end{wrapfigure}
-
 \parit{Proof of \ref{thm:4-vert} modulo \ref{thm:4-vert-supporting}.}
 It is sufficient to show that if an osculating circle $\sigma$ at a point $p$ supports $\gamma$ locally, then $p$ is a vertex.
+
+}
 
 If not, then a small arc around $p$ has monotone curvature.
 Applying the spiral lemma (\ref{lem:spiral}) we get that the osculating circles at this arc are nested.
@@ -460,7 +458,7 @@ Therefore $\sigma$ does not support $\gamma$ locally at~$p$.
 \qeds
 
 
-}
+
 
 
 \parit{Proof of \ref{thm:4-vert-supporting}.}
@@ -468,16 +466,18 @@ According to the key lemma (\ref{thm:moon}), there is a point $p\in\gamma$ such 
 The curve $\gamma$ can be considered as a loop with the base at~$p$.
 Therefore, the key lemma implies the existence of another point $q\in\gamma$ with the same property.
 
-It shows the existence of two osculating circles that support $\gamma$ from the inside;
-it remains to show the existence of two osculating circles that support $\gamma$ from the outside.
+It shows gives a pair osculating circles that support $\gamma$ from the inside;
+it remains to find another pair.
 
-In order to get the osculating circles supporting $\gamma$ from the outside, one can repeat the proof of the key lemma taking instead of incircle the circle (or line) of maximal signed curvature that supports the curve from the outside, assuming that $\gamma$ is oriented so that the region on the left from it is bounded.
+In order to get the osculating circles supporting $\gamma$ from the outside, one can repeat the proof of the key lemma taking instead of incircle the circle (or line) of maximal signed curvature that supports the curve from the outside, assuming that $\gamma$ is oriented so that the region on the left from it is bounded.\qeds
 
-(Alternatively, if one applies to $\gamma$ an inversion with respect to a circle whose center lies inside~$\gamma$, then the obtained curve $\gamma_1$ also has  two osculating circles that support $\gamma_1$ from the inside.
+\parit{Alternative end of proof.}
+If one applies to $\gamma$ an inversion with respect to a circle whose center lies inside~$\gamma$, then the obtained curve $\gamma_1$ also has  two osculating circles that support $\gamma_1$ from the inside.
 According to \ref{ex:inverse}, these osculating circles are inverses of the osculating circles of~$\gamma$.
 Note that the region lying inside $\gamma$ is mapped to the region outside $\gamma_1$, and the other way around.
-Therefore, these two circles (or lines) correspond to the osculating circles supporting $\gamma$ from the outside.)
-\qeds
+Therefore, these two circles (or lines) correspond to the osculating circles supporting $\gamma$ from the outside.\qeds
+
+
 
 {
 
@@ -496,8 +496,8 @@ Show that \(\gamma\) contains a point with curvature~1.
 }
 
 \begin{thm}{Exercise}\label{ex:moon-area}
-Suppose a smooth simple plane loop $\gamma$ bounds a region of area $a$.
-Show that $\gamma$ has curvature $\sqrt{\pi/a}$ at some point.
+Suppose a smooth simple plane loop bounds a region of area $a$.
+Show that it has curvature $\sqrt{\pi/a}$ at some point.
 \end{thm}
 
 \begin{wrapfigure}[5]{r}{25 mm}
