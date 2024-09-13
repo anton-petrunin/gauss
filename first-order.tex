@@ -8,7 +8,7 @@ A vector $\vec w$ is \index{tangent!vector}\emph{tangent} to $\Sigma$ at $p$ if 
 that is, $p=\gamma(t)$ and $\vec w=\gamma'(t)$ for some~$t$.
 \end{thm}
 
-\begin{thm}{Proposition-Definition}\label{def:tangent-plane}
+\begin{thm}{Proposition and definition}\label{def:tangent-plane}
 Let $\Sigma$ be a smooth surface and $p\in \Sigma$.
 Then the set of tangent vectors of $\Sigma$ at $p$ forms a plane;
 this plane is called the \index{tangent!plane}\emph{tangent plane} of $\Sigma$ at~$p$.
@@ -30,7 +30,7 @@ More precisely, for any chart $s$ we have
 \[\vec v_{s(u,v)}=a(u,v)\cdot s_u+b(u,v)\cdot s_v\]
 for smooth functions $a$ and $b$ defined in the domain $s$.
 
-\parit{Proof.}
+\parbf{Proof.}
 Fix a chart $s$ at~$p$.
 Assume $\gamma$ is a smooth curve that starts at~$p$.
 We can assume that $\gamma$ is covered by the chart;
@@ -71,7 +71,7 @@ $h(t)=f(p+t\cdot\vec w)$.
 Then the directional derivative of $f$ at $p$ along $\vec w$ is defined as \index{10d@$D_{\vec{w}}f$ (directional derivative)}
 \[D_{\vec w}f(p)\df h'(0).\]
 
-Recall that a function $f: \Sigma \to \mathbb{R}$ is said to be smooth if for any chart $s : U \to \Sigma$, the composition $f \circ s$ is smooth.
+Recall that a function $f\: \Sigma \to \mathbb{R}$ is said to be smooth if for any chart $s\: U \to \Sigma$, the composition $f \circ s$ is smooth.
 
 \begin{thm}{Proposition-Definition}\label{def:directional-derivative}
 Let $f$ be a smooth function defined on a smooth surface $\Sigma$.
@@ -91,10 +91,10 @@ Moreover, if $(u,v)\mapsto s(u,v)$ is a local chart and $\vec{w}=a\cdot s_u +b\c
 
 Our definition agrees with the standard definition of the directional derivative if $\Sigma$ is a plane.
 Indeed, in this case, $\gamma(t)=p+\vec w\cdot t$ is a curve in $\Sigma$ that starts at $p$ with velocity vector $\vec{w}$.
-For a general surface, the point $p+\vec w\cdot t$ might not lie on the surface, and the function $f$ might be undefined at this point.
+For a general surface, the point $p+\vec w\cdot t$ might not lie on the surface, and the value $f(p+\vec w\cdot t)$ might be undefined.
 In this case, the standard definition does not work.
 
-\parit{Proof.}
+\parbf{Proof.}
 Without loss of generality, we may assume that $p=s(0,0)$ and the curve $\gamma$ is covered by the chart $s$;
 if not we can chop~$\gamma$.
 In this case, 
@@ -193,7 +193,7 @@ Set $\jac_{p_0} s=|\det M|$; this value
 does not depend on the choice of orthonormal bases in $\T_{p_0}\Sigma_0$ and $\T_{p_1}\Sigma_1$.%
 \label{page:|L|}\index{10d@$d_p f$ (differential)}%
 \footnote{The value $\jac_{p_0} s$ has the following geometric meaning:
-if $R_0$ is a region in $\T_{p_0}$ and $R_1=(d_{p_0} s)(R_0)$, then
+if $R_0$ is a region in $\T_{p_0}$, and $R_1=(d_{p_0} s)(R_0)$ is its image, then
 \[\area R_1=\jac_{p_0} s \cdot \area R_0.\]
 This identity will play a key role in the definition of surface area.}
 
@@ -221,9 +221,8 @@ where $\Jac s$ denotes the Jacobian matrix of $s$; see Section~\ref{sec:Multivar
 \section{Surface integral and area}
 
 Let $\Sigma$ be a smooth surface, and $h\:\Sigma\to\mathbb{R}$ be a smooth function.
-Let us define the integral of $h$ along a region $R\subset \Sigma$.
-The {}\emph{region} is defined as any Borel set $R\subset\Sigma$,
-but most of the time our regions will be surfaces with boundary.
+Let us define the integral of $h$ along a Borel set $R\subset \Sigma$;
+most of the time we will apply this definition to surfaces with boundary.
 
 Recall that $\jac_ps$ is defined in the previous section.
 Assume there is a chart $(u,v)\mapsto s(u,v)$ of $\Sigma$ defined on an open set $U\subset\mathbb{R}^2$ such that $R\subset s(U)$.
@@ -262,7 +261,7 @@ In particular, if $f\equiv 1$, we have
 \end{thm}
 
 
-\parit{Proof.}
+\parbf{Proof.}
 Follows from \ref{eq:jac-composition} and the definition of surface integral.
 \qeds
 
@@ -355,7 +354,7 @@ Therefore, we can choose the unit normal field on $\Sigma$ that points into one 
 Any smooth proper surface without boundary in the Euclidean space is orientable.
 \end{thm}
 
-In particular, it follows that the Möbius strip does not lie on a proper smooth surface without boundary.
+In particular, the Möbius strip does not lie on a proper smooth surface without boundary.
 
 \section{Sections}
 
@@ -366,7 +365,7 @@ Then for any constant $r_0$ there is an arbitrarily close value $r$ such that
 each connected component of the level set $L_r=\set{x\in\mathbb{R}^3}{f(x)=r}$ is a smooth curve.
 \end{thm}
 
-\parit{Proof.}
+\parbf{Proof.}
 The surface $\Sigma$ can be covered by a countable set of charts $s_i\:U_i\z\to \Sigma$.
 The composition $f\circ s_i$ is a smooth function for any~$i$.
 By Sard's lemma (\ref{lem:sard}), $r$ is a regular value of each $f\circ s_i$ for almost all $r$.

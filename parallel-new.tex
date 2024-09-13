@@ -10,7 +10,7 @@ the vector ${\vec v}(t)$ lies in the tangent plane $\T_{\gamma(t)}\Sigma$ for ea
 A tangent field $\vec v$ on $\gamma$ is called \index{parallel!field}\emph{parallel} if ${\vec v}'(t)\perp\T_{\gamma(t)}$ for any~$t$.
 
 In general, the family of tangent planes $\T_{\gamma(t)}\Sigma$ is not parallel.
-Therefore, one cannot expect to have a \textit{truly} parallel field with ${\vec v}'\equiv 0$.
+Therefore, one cannot expect to have a \textit{truly} parallel field with ${\vec v}'(t)\equiv 0$.
 The condition ${\vec v}'(t)\perp\T_{\gamma(t)}$ means that the family is \textit{as parallel as possible} --- it rotates together with the tangent plane but does not rotate inside the plane.
 
 By the definition of geodesic, the velocity field ${\vec v}(t)\z=\gamma'(t)$ of any geodesic $\gamma$ is parallel on~$\gamma$.
@@ -46,7 +46,7 @@ so we can write $\vec w(b)=\iota_\gamma({\vec w}(a))$ or $\vec w(b)=\iota_\gamma
 From Exercise~\ref{ex:parallel}, it follows that parallel transport $\iota_\gamma\:\T_p\z\to\T_q$ is an isometry.
 In general, the parallel transport $\iota_\gamma\:\T_p\z\to\T_q$ depends on the choice of $\gamma$; that is, for another curve $\gamma_1$ connecting $p$ to $q$ in $\Sigma$, the parallel transports $\iota_{\gamma_1}$ and $\iota_{\gamma}$ might be different.
 
-\parit{Sketch of proof.}
+\parbf{Sketch of proof.}
 Assume $\gamma$ is smooth and lies in a local chart $(u,v)\mapsto s(u,v)$ of $\Sigma$;
 so $\gamma(t)\z=s(u(t),v(t))$ for smooth functions $t\mapsto u(t)$ and $t\mapsto v(t)$.
 Set 
@@ -71,7 +71,7 @@ The conditions $\vec w(t)\in \T_{\gamma(t)}$ and $\vec w'(t)\perp \T_{\gamma(t)}
 \end{cases}
 \]
 Rewriting this system in components of $\vec u$, $\vec v$, $\vec w$, and $\Norm$ produces a system of ordinary differential equations on the components of $\vec w$.
-Applying \ref{thm:ODE}, we get a solution $\vec w$.
+Applying \ref{thm:ODE}, we get a solution $\vec w(t)$.
 By \ref{ex:parallel}, $|\vec w|$ is constant;
 therefore \ref{thm:ODE} implies that $\vec w$ is defined on the whole interval $[a,b]$.
 
@@ -124,7 +124,7 @@ Then the map that sends the initial position of the wheel to the final position 
 \includegraphics[scale=.3]{pics/parallel_transport}
 \end{figure}
 
-Physical intuition should tell you that \textit{moving the axis of the wheel without changing its direction does not change the direction of the wheel's spokes};
+By the way, physical intuition should tell you that \textit{moving the axis of the wheel without changing its direction does not change the direction of the wheel's spokes};
 this is essentially the statement of Observation~\ref{obs:parallel=}.
 
 On a more formal level, one can choose a partition $a=t_0<\dots\z<t_n=b$ of $[a,b]$
@@ -143,9 +143,8 @@ Construct a loop $\gamma$ in $\mathbb{S}^2$ such that the parallel transport $\i
 
 \section{Total geodesic curvature}
 
-Recall that geodesic curvature is denoted by $k_g$;
-it is defined in Section~\ref{sec:Darboux}.
-Geodesic curvature measures how much a curve $\gamma$ on an oriented surface diverges from being a geodesic;
+Recall that geodesic curvature is defined in Section~\ref{sec:Darboux}.
+It is denoted by $k_g$, and it measures how much a curve $\gamma$ on an oriented surface diverges from being a geodesic;
 it is positive where $\gamma$ turns left and negative where $\gamma$ turns right.
 In particular, geodesics have vanishing geodesic curvature.
 
@@ -185,7 +184,7 @@ Then the parallel transport $\iota_\gamma\:\T_p\to\T_p$ is a clockwise rotation 
 Moreover, the same statement holds true for smooth closed curves and piecewise smooth curves.
 \end{thm}
 
-\parit{Proof.}
+\parbf{Proof.}
 Assume $\gamma$ is a cyclic concatenation of geodesics $\gamma_1,\dots,\gamma_n$.
 Fix a tangent vector ${\vec v}$ at $p$, and extend it to a parallel vector field along~$\gamma$.
 Since $\tan_i(t)=\gamma_i'(t)$ is parallel along $\gamma_i$, the oriented angle $\phi_i$ from $\tan_i$ to ${\vec v}$ stays constant along each~$\gamma_i$.
@@ -194,7 +193,7 @@ Since $\tan_i(t)=\gamma_i'(t)$ is parallel along $\gamma_i$, the oriented angle 
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-48}
-\vskip-0mm
+\vskip4mm
 \end{wrapfigure}
 
 Suppose $\theta_i$ denotes the external angle at the joint between $\gamma_{i}$ and $\gamma_{i+1}$.

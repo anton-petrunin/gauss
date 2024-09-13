@@ -17,5 +17,5 @@ sin(z.y)*exp(-z.x)
 );
 }
 
-draw(surface(f,(0,0),(4*pi,2*pi), nu=48,nv=24,Spline),
+draw(surface(f,(0,0),(2*pi,2*pi), nu=24,nv=24,Spline),
      white,meshpen=black+thick(),nolight);

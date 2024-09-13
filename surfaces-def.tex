@@ -25,7 +25,7 @@ the intersection $W=U\cap \Sigma$ is a graph $z=f(x,y)$ of a smooth function $f$
 
 \parbf{Examples.}
 The simplest example of a smooth surface is the $(x,y)$-plane 
-\[\Pi=\set{(x,y,z)\in\mathbb{R}^3}{z=0}.\]
+$\Pi=\set{(x,y,z)\in\mathbb{R}^3}{z=0}$.
 The plane $\Pi$ is a surface since
 it can be described as the graph of the function $f(x,y)=0$.
 
@@ -57,13 +57,13 @@ When we say {}\emph{surface} we usually mean a {}\emph{smooth surface without bo
 If needed, one may use the term {}\emph{surface with possibly nonempty boundary}.
 
 \section{Proper, closed, and open surfaces}
-If the surface $\Sigma$ is formed by a closed set, then it is called \index{proper!surface}\emph{proper}.
+If the surface $\Sigma$ is formed by a closed set in $\mathbb{R}^3$, then it is called \index{proper!surface}\emph{proper}.
 For example, for any smooth function $f$ defined on the whole plane, its graph $z=f(x,y)$ is a proper surface.
 The sphere $\mathbb{S}^2$ gives another example of a proper surface.
 
 On the other hand, the open disc 
 \[\set{(x,y,z)\in\mathbb{R}^3}{x^2+y^2<1,\  z=0}\]
-is not proper; this set is neither open nor closed in $\mathbb{R}^3$.
+is not a proper surface; this set is neither open nor closed in $\mathbb{R}^3$.
 
 A compact surface without boundary is called \index{closed!surface}\emph{closed}
 (this term is closely related to the closed curve, but has nothing to do with closed set).
@@ -73,17 +73,17 @@ A proper noncompact surface without boundary is called \index{open!surface}\emph
 For example, the paraboloid $z=x^2+y^2$
 is an open surface; the 
 sphere $\mathbb{S}^2$ is a closed surface.
-
 Note that \textit{any proper surface without boundary is either closed or open}.
 
 The following claim is a three-dimensional analog of the plane separation theorem (\ref{ex:proper-curve}).
-It might look obvious, but the proof is nontrivial; it uses the so-called {}\emph{Alexander's duality} from algebraic topology \cite{hatcher}.
+It might look obvious, but the proof is nontrivial; it uses the so-called {}\emph{Alexander's duality} \cite{hatcher}.
+We omit its proof; it would take us far away from the main subject.
 
 \begin{thm}{Claim}\label{clm:proper-divides}
 The complement of any proper topological surface without boundary (or, equivalently any open or closed topological surface) has exactly two connected components. 
 \end{thm}
 
-We omit the proof; it would take us far away from the main subject.
+
 
 \section{Implicitly defined surfaces}
 
@@ -94,7 +94,7 @@ that is, $\nabla_p f\ne 0$ at any point $p$ such that $f(p)=0$.
 Then any connected component $\Sigma$ of the level set  $f(x,y,z)=0$ is a smooth surface.
 \end{thm}
 
-\parit{Proof.}
+\parbf{Proof.}
 Fix $p\in\Sigma$.
 Since $\nabla_p f\ne 0$ we have 
 $f_x(p)\ne 0$,
@@ -124,7 +124,7 @@ equivalently $s_u\times s_v\ne 0$, where $\times$ denotes the vector product.
 If $s\:U\to \mathbb{R}^3$ is a smooth regular embedding of an open connected set $U\subset \mathbb{R}^2$, then its image $\Sigma=s(U)$ is a smooth surface.
 \end{thm}
 
-\parit{Proof of \ref{prop:graph-chart}.}
+\parbf{Proof of \ref{prop:graph-chart}.}
 Let $s(u,v)=(x(u,v),y(u,v),z(u,v))$.
 Since $s$ is regular, its Jacobian matrix
 \[\Jac s=
@@ -160,7 +160,7 @@ Since $p$ is arbitrary, we get that $\Sigma$ is a smooth surface.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:9-surf}
-Find a smooth regular injective map $s\:\mathbb{R}^2\to\mathbb{R}^3$ such that its image is \textit{not} a smooth surface.
+Construct a smooth regular injective map $s\:\mathbb{R}^2\to\mathbb{R}^3$ such that its image is \textit{not} a surface.
 \end{thm}
 
 If we have $s$ and $\Sigma$ as in the proposition, then we say that $s$ is a \index{smooth!parametrization}\emph{smooth parametrization} of the surface~$\Sigma$. 

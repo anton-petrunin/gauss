@@ -11,11 +11,11 @@ examples include normal curvature.
 
 The mean curvature, as well as the Gauss curvature, are defined via principal curvatures, which are extrinsic.
 Later (\ref{thm:remarkable}) it will be shown that remarkably the Gauss curvature is intrinsic --- it can be calculated via measurements within the surface.
-The mean curvature is not intrinsic; for example, the intrinsic geometry of the $(x,y)$-plane is not distinguishable from the intrinsic geometry of the graph $z\z=(x+y)^2$.
+The mean curvature is not intrinsic; for example, the intrinsic geometry of the plane is not distinguishable from the intrinsic geometry of the graph $z\z=(x+y)^2$.
 However, the mean curvature of the former vanishes at all points, while the mean curvature of the latter does not vanish, say at the origin.  
 
 The following exercise should help you get in the right mood;
-it might look like a tedious problem in calculus, but it actually is an easy problem in geometry.
+it might look like a tedious problem in calculus, but it actually is an amusing problem in geometry.
 
 \begin{wrapfigure}[6]{r}{33 mm}
 \vskip-0mm
@@ -75,10 +75,10 @@ Since the origin does not lie in $\Sigma$, there is no shortest path from $p$ to
 
 
 \begin{thm}{Proposition}\label{prop:shortest-paths-exist}
-Any two points in a proper smooth surface (possibly nonempty boundary) can be joined by a shortest path. 
+Any two points in a proper smooth surface (possibly with boundary) can be joined by a shortest path. 
 \end{thm}
 
-\parit{Proof.}
+\parbf{Proof.}
 Choose two points $p$ and $q$ in a proper smooth surface~$\Sigma$.
 Set $\ell=\dist{p}{q}\Sigma$.
 
@@ -111,9 +111,8 @@ Therefore, $\length\gamma_\infty\z= \ell$; equivalently, $\gamma_\infty$ is a sh
 
 \section{Nearest-point projection}
 
-The following statement does not belong to differential geometry;
-it is from convex geometry,
-but we prove it since it plays a significant role in the sequel.
+The following statement belongs to convex geometry,
+but we present its proof since it plays a significant role in the sequel.
 
 \begin{thm}{Lemma}\label{lem:nearest-point-projection}
 Let $R$ be a closed convex set in $\mathbb{R}^3$.
@@ -131,7 +130,7 @@ it maps the Euclidean space onto~$R$.
 If $p\in R$, then $\bar p=p$.
 In particular $\bar{\bar p}=\bar p$ for any point $p$.
 
-\parit{Proof.}
+\parbf{Proof.}
 Fix a point $p$, and set 
 \[\ell=\inf\set{|p-x|}{x\in R}.\]
 Choose a sequence $x_n\in R$ such that $|p-x_n|\to \ell$ as $n\to\infty$.
@@ -170,7 +169,7 @@ the latter is impossible.
 {
 
 \begin{wrapfigure}{r}{37 mm}
-\vskip-4mm
+\vskip-6mm
 \centering
 \includegraphics{mppics/pic-41}
 \vskip-0mm
@@ -179,7 +178,7 @@ the latter is impossible.
 Therefore, $\measuredangle \hinge{\bar p}{p}{\bar q}\ge \tfrac\pi2$ or $p=\bar p$.
 In both cases, the orthogonal projection of $p$ to the line $\bar p\bar q$ lies behind $\bar p$, or coincides with $\bar p$.
 The same way we show that the orthogonal projection of $q$ to the line $\bar p\bar q$ lies behind $\bar q$, or coincides with~$\bar q$.
-This implies that the orthogonal projection of the line segment $[p,q]$ to the line $\bar p\bar q$ contains the line segment $[\bar p,\bar q]$.
+This implies that the orthogonal projection of the line segment $[p,q]$ contains $[\bar p,\bar q]$.
 Whence \ref{eq:short-cpp} follows.
 \qeds
 
@@ -197,7 +196,7 @@ for any path $\gamma$ in $W$ from $p$ to~$q$.
 Moreover, if  $\gamma$ does not lie in $\Sigma$, then the inequality is strict.
 \end{thm}
 
-\parit{Proof.}
+\parbf{Proof.}
 Let $\bar\gamma$ be the nearest-point projection of~$\gamma$ to $R$.
 The projection $\bar\gamma$ lies in $\Sigma$ and connects $p$ to $q$; therefore, 
 \[\length\bar\gamma\ge \dist{p}{q}\Sigma.\]
@@ -230,10 +229,9 @@ Let $a=\gamma(t_0)$ and $b=\gamma(t_2)$ be these points.
 The arc of $\gamma$ from $a$ to $b$ is strictly longer that $|a-b|$;
 indeed its length is at least $|a-w|+|w-b|$, and $|a-w|+|w-b|>|a-b|$ since $w\notin[a,b]$.
 
-Remove from $\gamma$ the arc from $a$ to $b$, and replace it with the line segment $[a,b]$;
-denote the obtained curve by $\gamma_1$. 
-From above, we have that
-\[\length\gamma>\length \gamma_1\]
+Remove from $\gamma$ the arc from $a$ to $b$, and replace it with the line segment $[a,b]$.
+Denote the obtained curve by $\gamma_1$, then
+\[\length\gamma>\length \gamma_1.\]
 
 Since $\gamma_1$ runs in~$W$, we get
 \[\length \gamma_1\ge \dist{p}{q}\Sigma.\]

@@ -3,7 +3,7 @@
 
 In the previous chapter, we learned that the tangent plane to any smooth surface has first-order contact with it.
 This means that up to first order, all surfaces locally look the same at a given point.
-This is not the case for second-order approximations, which are determined by the principal curvatures.
+This is not the case for second-order approximations, and this is the subject of this chapter.
 
 \section{Tangent-normal coordinates} \label{sec:lmn}
 \index{tangent-normal coordinates}
@@ -42,9 +42,10 @@ The \textit{Taylor series}
 for $f$ at $(0,0)$ up to the second-order term can be then written as
 \[f(x,y)=\tfrac12(\ell\cdot x^2+2\cdot m\cdot x\cdot y+n\cdot y^2)+o(x^2+y^2).\]
 The values $\ell$, $m$, and $n$ are completely determined by this equation.\index{10lmn@$\ell$, $m$, $n$ (Hessian-matrix components)}
-The so-called \index{osculating!paraboloid}\emph{osculating paraboloid}
+The graph of Taylor polynomial
 \[z=\tfrac12\cdot(\ell\cdot x^2+2\cdot m\cdot x\cdot y+n\cdot y^2)\]
-has \index{order of contact}\emph{second-order contact} with $\Sigma$ at~$p$.
+is called \index{osculating!paraboloid}\emph{osculating paraboloid}.
+It has \index{order of contact}\emph{second-order contact} with $\Sigma$ at~$p$.
 
 Note that 
 \[\ell\cdot x^2+2\cdot m\cdot x\cdot y+n\cdot y^2=\langle M_p\cdot (\begin{smallmatrix}
@@ -52,7 +53,7 @@ x\\y
 \end{smallmatrix}), (\begin{smallmatrix}
 x\\y
 \end{smallmatrix})\rangle,\]
-where $M_p$ is the so-called \index{Hessian matrix}\emph{Hessian matrix} of $f$ at $(0,0)$,\index{10m@$M_p$ (Hessian matrix)}
+where 
 \[M_p=\begin{pmatrix}
  \ell
  &m
@@ -69,7 +70,7 @@ where $M_p$ is the so-called \index{Hessian matrix}\emph{Hessian matrix} of $f$ 
  \end{pmatrix}.
 \eqlbl{eq:hessian}
 \]
-
+is the so-called \index{Hessian matrix}\emph{Hessian matrix} of $f$ at $(0,0)$.\index{10m@$M_p$ (Hessian matrix)}
 
 \section{Principal curvatures}\label{sec:Principal curvatures}
 
@@ -78,8 +79,14 @@ it is unique up to a rotation of the $(x,y)$-plane.
 Rotating the $(x,y)$-plane results in rewriting 
 the Hessian matrix $M_p$ in the new basis.
 
-Since $M_p$ is symmetric, by the spectral theorem (\ref{thm:spectral}) it is diagonalizable by orthogonal matrices.
-That is, by rotating the $(x,y)$-plane we can assume that $m=0$ in \ref{eq:hessian}.
+Since the matrix $M_p=\left(\begin{smallmatrix}
+ \ell
+ &m
+ \\
+ m
+ &n
+ \end{smallmatrix}\right)$ is symmetric, by the spectral theorem (\ref{thm:spectral}) it is diagonalizable by orthogonal matrices.
+That is, by rotating the $(x,y)$-plane we can assume that $m=0$.
 In this case,
 \[M_p=\begin{pmatrix}
  k_1
@@ -105,8 +112,7 @@ The eigendirections of $M_p$ are called the {}\emph{principal directions} of $\S
 If $k_1(p)\ne k_2(p)$, then $p$ has exactly two principal directions, which are perpendicular to each other;
 if $k_1(p)\z= k_2(p)$, then all tangent directions at $p$ are principal.
 
-If we reverse the orientation of $\Sigma$, then the principal curvatures switch their signs and indexes.
-(One may say that $k_1$ becomes $-k_2$ and $k_2$ becomes $-k_1$).
+If we reverse the orientation of $\Sigma$, then the principal curvatures switch their signs and indexes: $k_1$ converts into $-k_2$ and $k_2$ into $-k_1$.
 
 A smooth curve on a surface $\Sigma$ that always runs in the principal directions is called a \index{line of curvature}\emph{line of curvature} of~$\Sigma$.
 If $k_1(p)\ne k_2(p)$, then there is a chart $(u,v)\mapsto s(u,v)$ at $p$ with coordinate lines formed by lines of curvature (it follows from \ref{ex:lin-ind-chart}).
@@ -126,7 +132,7 @@ Recall that $k_1(p)$ and $k_2(p)$ denote the principal curvatures at~$p$.
 The product 
 \[K(p)=k_1(p)\cdot k_2(p)\]
 is called the \index{10k@$K$ (Gauss curvature)}\index{Gauss curvature}\emph{Gauss curvature} at~$p$.
-We may denote it by $K$, $K(p)$, or $K(p)_\Sigma$ if we need to specify the point $p$ and the surface~$\Sigma$.
+We may denote it by $K$, $K(p)$, or $K(p)_\Sigma$ if we need to specify the point and the surface.
 
 Since the determinant is equal to the product of the eigenvalues, we get
 \[K=\ell\cdot n-m^2,\]
@@ -177,7 +183,7 @@ H(\lambda \cdot p)_{\Sigma_{\lambda}} = \tfrac1\lambda\cdot H(p)_{\Sigma}\]
 for any $p\in \Sigma$.  
 \end{thm}
 
-\section{Shape operator}
+\section{Shape operator}\label{sec:shape}
 
 In the following definitions, we use the notion of directional derivative and differential defined in \ref{sec:dirder} and \ref{sec:differential}.
 
@@ -194,7 +200,7 @@ The following bilinear forms on a tangent plane
 \mathrm{III}(\vec v,\vec w)&=\langle\Shape\vec v,\Shape\vec w\rangle
 \end{align*}
 are called the \index{fundamental form}\emph{first, second, and third fundamental forms}, respectively.
-These forms were introduced before the shape operator, but we will not touch them.
+Historically, these forms were introduced before the shape operator, but we will not touch them.
 } of $\vec w$ is defined by
 \[\Shape_p\vec w=-D_{\vec w}\Norm.\]
 Equivalently, the shape operator can be defined by
@@ -236,7 +242,7 @@ for any $(u,v)$.
 
 \end{thm}
 
-\parit{Proof.}
+\parbf{Proof.}
 We will use the shortcut $\Norm=\Norm(u,v)$ for $\Norm(s(u,v))$,
 so 
 \[
@@ -292,9 +298,10 @@ Then
 \begin{align*}
 \Shape\vec i&=\ell\cdot \vec i+m\cdot \vec j,
 &
-\Shape\vec j&=m\cdot \vec i+n\cdot\vec j;
+\Shape\vec j&=m\cdot \vec i+n\cdot\vec j,
 \end{align*}
-that is, the multiplication by the Hessian matrix describes its shape operator.
+for the standard basis $\vec i,\vec j,\vec k$.
+That is, the multiplication by the Hessian matrix describes its shape operator.
 \end{thm}
 
 
@@ -303,7 +310,7 @@ This corollary illustrates the close relationship between the curvatures of a su
 
 Since the Hessian matrix is symmetric, the corollary also implies that $\Shape$ is self-adjoint which gives a way to solve \ref{ex:self-adjoint}.
 
-\parit{Proof.}
+\parbf{Proof.}
 Note that $s\:(u,v)\mapsto (u,v,f(u,v))$ is a chart of $\Sigma$ at~$p$.
 Furthermore, 
 \begin{align*}
@@ -329,7 +336,7 @@ Then
 \[\iint_\Sigma|K|=\area[\Norm(\Sigma)].\]
 \end{thm}
 
-\parit{Proof.}
+\parbf{Proof.}
 Choose an orthonormal basis of $\T_p$ consisting of principal directions,
 so the shape operator can be expressed by the matrix 
 $(\begin{smallmatrix}
@@ -453,7 +460,6 @@ Suppose $\gamma$ is a smooth curve in a smooth oriented surface~$\Sigma$.
 As usual, we denote by $\Norm$ the unit normal field on~$\Sigma$.
 Without loss of generality, we may assume that $\gamma$ is unit-speed;
 in this case, $\tan(s)=\gamma'(s)$ is its tangent indicatrix.
-
 Further we will use the shortcut notation $\Norm(s)\z=\Norm(\gamma(s))$.
 
 The unit vectors $\tan(s)$ and $\Norm(s)$ are orthogonal.
@@ -562,11 +568,11 @@ here $\kur(t_0)$ and $k_n(t_0)$ are the curvature and the normal curvature of $\
 \end{thm}
 
 
-\parit{Proof.} Since $\gamma''=\tan'=\kur\cdot \norm$, we get that
+\parbf{Proof.} Since $\gamma''=\tan'=\kur\cdot \norm$, we get that
 \begin{align*}
-k_{n}(t_0)&=\langle\gamma'',\Norm\rangle=
+k_{n}(t_0)&=\langle\gamma''(t_0),\Norm(p)\rangle=
 \\
-&=\kur(t_0)\cdot\langle\norm,\Norm\rangle=
+&=\kur(t_0)\cdot\langle\norm(t_0),\Norm(p)\rangle=
 \\
 &=\kur(t_0)\cdot\cos\alpha.
 \end{align*}
@@ -574,7 +580,7 @@ k_{n}(t_0)&=\langle\gamma'',\Norm\rangle=
 
 \begin{thm}{Exercise}\label{ex:meusnier}
 Let $\Sigma$ be a smooth surface, $p\in\Sigma$, and ${\vec v}\in \T_p\Sigma$ a unit vector.
-Assume $k_{\vec v}(p)\ne 0$; that is, the normal curvature of $\Sigma$ at $p$ in the direction of ${\vec v}$ does not vanish.
+Assume that the normal curvature $k_{\vec v}(p)$ does not vanish.
 
 Show that the osculating circles at $p$ of smooth curves in $\Sigma$ that run in the direction ${\vec v}$ sweep out a sphere $S$ with center at $p+\tfrac1{k_{\vec v}}\cdot\Norm$ and radius $r=\tfrac1{|k_{\vec v}|}$.
 \end{thm}
@@ -601,23 +607,27 @@ are the principal curvatures of $\Sigma$ at $(x(s),y(s),0)$ in the direction of 
 
 \begin{subthm}{ex:principal-revolution:pseudosphere}
 Show that $\Sigma$ has Gauss curvature $-1$ at all points if and only if $y$ satisfies the differential equation $y''=y$. 
-The case $y=e^{-s}$ is shown; this is the so-called \index{pseudosphere}\emph{pseudosphere}.
 \end{subthm}
 
 \end{thm}
 
-\begin{figure}[ht!]
+{
+
+\begin{wrapfigure}{r}{31 mm}
 \vskip-0mm
-\hskip30mm
 \includegraphics{asy/pseudosphere}
 \vskip-3mm
-\end{figure}
+\end{wrapfigure}
+
+The case $y=e^{-s}$ in \ref{SHORT.ex:principal-revolution:pseudosphere} is shown; this is the so-called \index{pseudosphere}\emph{pseudosphere}.
 
 \begin{thm}{Exercise}\label{ex:catenoid-is-minimal}
 Show that the \index{catenoid}\emph{catenoid} defined implicitly by the equation
 \[(\cosh z)^2=x^2+y^2\]
 is a minimal surface.
 \end{thm}
+
+}
 
 \begin{thm}{Exercise}\label{ex:helicoid-is-minimal}
 Show that the \index{helicoid}\emph{helicoid} defined by the following parametrization
@@ -664,7 +674,7 @@ we will show that the answer is ``yes'' for convex sets.
 Now we are going to show by an example that the answer is ``no'' in the general case;
 it was constructed by Vladimir Lagunov \cite{lagunov-1961}.
 
-\parit{Construction.}
+\parbf{Construction.}
 Let us start with a body of revolution $V_1$ whose cross-section is shown on the next picture.
 The boundary curve of the cross-section consists of 6 long horizontal line segments included in 3 simple closed smooth curves.
 (To make the curves smooth, one has to use cutoffs and mollifiers from Section~\ref{sec:analysis}.)
