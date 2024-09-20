@@ -1573,7 +1573,7 @@ endfig;
 
 beginfig(46) 
 save u;
-u:=1cm;
+u:=.7cm;
 x.s=.5*u;
 
 draw (0,0)*u..(-x.s,-x.s)..(0,0)*u..(0,1)*u..(-x.s,u+x.s)..(0,1)*u..(1,1)*u..(u+x.s,u+x.s)..(1,1)*u..(1,0)*u..(u+x.s,-x.s)..(1,0)*u..cycle;
@@ -1587,7 +1587,7 @@ endfig;
 
 beginfig(47) 
 save u;
-u:=.7cm;
+u:=.5cm;
 
 z.a=(0,1)*u;
 z.b=z.a rotated 120;
@@ -1620,7 +1620,7 @@ endfig;
 
 beginfig(471) 
 save u;
-u:=.7cm;
+u:=.5cm;
 
 z.a=(0,1)*u;
 z.b=z.a rotated 120;
@@ -3633,31 +3633,6 @@ draw p1 pensemibold;
 
 endfig;
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-beginfig(750);
-save u,p;
-path p[];
-u:=.8cm;
-
-z.o=(0,-1)*u;
-p0=ddline((-1,0)*u,(1,0)*u)(.2,.5);
-p1=circle(origin,1*u);
-z.p=point .4 of p1;
-z.q=whatever[z.o,z.p]=(whatever,0);
-
-draw p1 pensemibold;
-draw p0 pensemibold;
-drawarrow p0 shifted z.o;
-drawarrow ddline((0,-1)*u,(0,1)*u)(.2,.2);
-
-draw ddline(z.o,z.p)(.2,.2);
-dOt z.p,z.q, z.o;
-
-label.lrt (btex $0$ etex, z.o);
-whitelabel.lrt (btex $(u,v,1)$ etex, z.q);
-label.rt (btex $s(u,v)$ etex, z.p);
-endfig;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -3813,43 +3788,7 @@ whitelabel.rt(btex $\ell$ etex, (x.a1,y.Sigma/2));
 whitelabel.rt(btex $m$ etex, (x.q,y.Sigma/2));
 endfig;
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-beginfig(1182);
-save u;
-u:=1cm;
-
-z.a0=(-1,6)*u;
-z.a1=(0,0)*u;
-z.a2=(1,6)*u;
-
-save p; path p[];
-p0=z.a0{down}...z.a1{1,-.1}...z.a2{up};
-z.x1=point 1.3 of p0;
-z.xn=point 1.9 of p0;
-z.dots=point 1.6 of p0;
-z.q=point .8 of p0;
-z.Sigma=point .3 of p0;
-
-draw p0 pensemibold;
-
-draw z.a1--(x.a1,y.a0) dashed evenly;
-draw z.a1--z.x1;
-draw z.a1--z.xn;
-draw z.q--(x.q,y.a0) dashed evenly;
-drawarrow z.a1--(z.a1+(0,1)*u);
-
-dOt z.a1, z.xn, z.q, z.x1;
-
-label.bot(btex $p$ etex, z.a1);
-label.llft(btex $q$ etex, z.q);
-label.rt(btex $x_n$ etex, z.xn);
-label.rt(btex $x_1$ etex, z.x1);
-label.lft(btex $\Sigma$ etex, z.Sigma);
-label.rt(btex $R$ etex, (x.a1,y.Sigma));
-label.lft(btex $\vec u$ etex,z.a1+(0,1)*u);
-label.rt(btex $\dots$ etex rotated angle(direction 1.6 of p0), z.dots);
-endfig;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

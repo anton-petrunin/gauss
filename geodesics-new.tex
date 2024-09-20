@@ -4,7 +4,7 @@
 
 \section{Definition}
 
-A smooth curve $\gamma$ in a smooth surface $\Sigma$ is called a \index{geodesic}\emph{geodesic} if, for any~$t$, the acceleration $\gamma''(t)$ is perpendicular to the tangent plane $\T_{\gamma(t)}$.
+A smooth curve $\gamma$ in a smooth surface is called a \index{geodesic}\emph{geodesic} if, for any~$t$, the acceleration $\gamma''(t)$ is perpendicular to the tangent plane $\T_{\gamma(t)}$.
 
 \begin{thm}{Exercise}\label{ex:helix-geodesic}
 Show that the helix $\gamma(t)\z\df(\cos t,\sin t, t)$ is a geodesic on the cylindrical surface $x^2+y^2=1$.
@@ -70,7 +70,7 @@ Show that $\gamma$, parametrized by arc-length, is a geodesic on~$\Sigma$.
 
 \section{Existence and uniqueness}
 
-The following proposition formalizes that the motion without friction and external forces depends smoothly on its initial data. 
+The following proposition says that the motion without friction and external forces depends smoothly on its initial data. 
 
 \begin{thm}{Proposition}\label{prop:geod-existence} 
 Let $\Sigma$ be a smooth surface without boundary.
@@ -466,18 +466,16 @@ see~\ref{sec:Total curvature}.
 \begin{thm}{Exercise}\label{ex:tc-spherical-image}
 Let $\gamma$ be a geodesic on an oriented smooth surface $\Sigma$
 with unit normal field $\Norm$.
-Show that 
-\[\length(\Norm\circ\gamma)\ge \tc\gamma.\]
+Show that $\length(\Norm\circ\gamma)\ge \tc\gamma$.
 \end{thm}
 
 
 \begin{thm}{Theorem}\label{thm:usov}
-Assume $\Sigma$ is the graph $z=f(x,y)$ of a convex $\ell$-Lipschitz function $f$ defined on an open set in the $(x,y)$-plane.
+Assume $\Sigma$ is the graph of a convex $\ell$-Lipschitz function $f$ defined on an open set in the $(x,y)$-plane.
 Then the total curvature of any geodesic in $\Sigma$ is at most $2\cdot \ell$.
 \end{thm}
 
-This theorem was first proved by Vladimir Usov \cite{usov};
-an amusing generalization was found by David Berg \cite{berg}.
+This theorem was first proved by Vladimir Usov \cite{usov}.
 
 \parbf{Proof.}
 Let $t\mapsto\gamma(t)=(x(t),y(t),z(t))$ be a unit-speed geodesic on~$\Sigma$.
@@ -492,8 +490,7 @@ Then
 \[
 \begin{aligned}
 \int_a^b z''(t) dt&=z'(b)-z'(a)\le 
-\\
-&\le 2\cdot \frac{\ell}{\sqrt{1+\ell^2}}.
+ 2\cdot \frac{\ell}{\sqrt{1+\ell^2}}.
 \end{aligned}
 \eqlbl{eq:intz''}
 \]
@@ -537,7 +534,7 @@ Then the total curvatures of any shortest path in $\Sigma$ can be bounded in ter
 \end{thm}
 
 \begin{wrapfigure}{r}{47 mm}
-\vskip-6mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-83}
 \vskip-0mm
@@ -575,15 +572,9 @@ Conclude that $\tc\gamma\le 100/\epsilon^2$.
 \end{thm}
 
 \parit{Remark.}
-The obtained bound of the total curvature goes to infinity as $\epsilon\to 0$,
-but there is a bound that is independent of $\epsilon$;
-it is a result of Nina Lebedeva and the first author \cite{lebedeva-petrunin}.
-According to Exercise~\ref{ex:tc-spherical-image}, this statement would also follow if the length of the spherical image of $\gamma$ could be bounded above; 
-that is, if $\length(\Norm\circ\gamma)\le C$ for a universal constant~$C$.
-The latter was conjectured by Aleksei Pogorelov \cite{pogorelov};
-counterexamples to the different forms of this conjecture were found 
-by Viktor Zalgaller \cite{zalgaller},
-Anatoliy Milka \cite{milka},
-and Vladimir Usov \cite{usov};
-these results were partly rediscovered later 
-by J\'{a}nos Pach \cite{pach}.
+The obtained estimate tends to infinity as $\epsilon \to 0$,
+but there is also an estimate that does not depend on $\epsilon$;
+this is a result by Nina Lebedeva and the first author \cite{lebedeva-petrunin}.
+Aleksei Pogorelov proposed the hypothesis that there exists a bound on the length of the spherical image of a shortest path \cite{pogorelov}.
+According to \ref{ex:tc-spherical-image}, this hypothesis is stronger,
+but counterexamples have been found for all of its possible variations \cite{zalgaller,milka,usov,pach}.

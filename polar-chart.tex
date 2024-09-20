@@ -19,10 +19,7 @@ then we say that $s(r,\theta)\z=\exp_p\vec v$ is the point in $\Sigma$ with  pol
 
 There might be many or no geodesics from $p$ to a given point $x$;
 so, the point $x$ might be expressed in polar coordinates in multiple ways or it might have no polar coordinates.
-However, we will always assume that $r$ is small.
-In this case, the polar coordinates behave in the usual way.
-The latter follows from Proposition~\ref{prop:exp}.
-More precisely, the following statement holds.
+However, from Proposition~\ref{prop:exp}, we get the following.
 
 \begin{thm}{Observation}\label{obs:polar}
 Let $(r,\theta)\mapsto s(r,\theta)$ describe polar coordinates with respect to a point $p$ in a  smooth surface~$\Sigma$.
@@ -31,6 +28,9 @@ Then there is $r_0>0$ such that $s$ is  regular at any pair $(r,\theta)$ with $0
 Moreover, if $0\le r_1,r_2<r_0$, then $s(r_1,\theta_1) \z= s(r_2,\theta_2)$ if and only if
 $r_1=r_2=0$ or $r_1=r_2$ and $\theta_1\z=\theta_2+2\cdot n\cdot\pi$ for an integer~$n$.
 \end{thm}
+
+Further we will always assume that polar coordinates on surface are defined for $r<r_0$;
+therefore, they behave in the usual way.
 
 The following statement will play an important role in the formal proof that shortest paths are geodesics; see Section~\ref{sec:proof-of-gamma''}.
 
@@ -46,7 +46,7 @@ for any $r$ and~$\theta$.
 Fix $\theta \in \mathbb{S}^1$.
 By the definition of the exponential map, the curve $\gamma(t)\z=s(t,\theta)$ is a unit-speed geodesic that starts at $p$.
 \begin{enumerate}[(i)]
-\item Since the geodesic $\gamma$ has unit speed, we have $|s_r|=|\gamma'|=1$.
+\item Since $\gamma$ has unit speed, we have $|s_r|=|\gamma'|=1$.
 In particular,
  \[
  \tfrac{\partial}{\partial \theta}
@@ -106,11 +106,11 @@ say as $\gamma(t)=s(r(t),\theta(t))$ for functions $t\mapsto \theta(t)$ and $t\m
 By the chain rule, we have
 \[\gamma'= s_\theta\cdot \theta'+ s_r\cdot r'
 \eqlbl{eq:chain(gamma)}\]
-whenever the left-hand side is defined.
+whenever the left-hand side is defined and $t>0$.
 By the Gauss lemma \ref{lem:palar-perp}, $s_\theta\perp s_r$, and by definition of polar coordinates, $|s_r|=1$.
 Therefore, \ref{eq:chain(gamma)} implies
 \[|\gamma'(t)|\ge r'(t).\eqlbl{eq:|gamma'|=r'}\]
-for any $t$ where $\gamma'(t)$ is defined.
+for any $t>0$ where $\gamma'(t)$ is defined.
 
 Since $\gamma$ parametrized by arc-length, we have 
 \[|\gamma(t_2)-\gamma(t_1)|\le |t_2-t_1|.\]
@@ -273,7 +273,6 @@ This vector identity can be rewritten as the following three scalar identities:
 Since $\langle\vec u,\vec u\rangle=1$, we get 
 $0=\tfrac{\partial}{\partial v}\langle\vec u,\vec u\rangle=2\cdot\langle\vec u_v,\vec u\rangle$; 
 hence the first identity in \ref{eq:uu-vv:2} follows.
-
 Further, 
 \begin{align*}
 \langle\vec u_v,\vec v\rangle&=\langle s_{vu},\vec v\rangle=
@@ -288,7 +287,6 @@ Further,
 \tag*{$0=\tfrac{\partial}{\partial u}\langle \vec v,\vec v\rangle=2\cdot\langle \vec v_u,\vec v\rangle$)}
 \end{align*}
 hence the second identity in \ref{eq:uu-vv:2} follows.
-
 Finally, 
 \begin{align*}
 \langle\vec u_v,\Norm\rangle
@@ -364,7 +362,7 @@ Apply \ref{SHORT.ex:inj-rad:sign} and \ref{SHORT.ex:inj-rad:0} to prove \ref{pro
 
 
 A chart $(u,v)\mapsto s(u,v)$ is called \index{orthogonal chart}\emph{orthogonal} if $s_u\perp s_v$ for any $(u,v)$.
-Note that any semigeodesic chart is orthogonal.
+For example, any semigeodesic chart is orthogonal.
 
 A solution of the following exercise is similar to \ref{prop:jaccobi}.
 
@@ -431,7 +429,7 @@ Show that
 \begin{thm}{Exercise}\label{ex:conformal}
 Suppose $(u,v)\mapsto s(u,v)$ is a \index{conformal}\emph{conformal chart};
 that is, there is a function $(u,v)\mapsto b(u,v)$ such that $b=|s_u|=|s_v|$ and $s_u\perp s_v$ for any $(u,v)$.
-(The function $b$ is called a {}\emph{conformal factor} of~$s$.)
+(The function $b$ is called a {}\emph{conformal factor} of the chart.)
 
 Use \ref{lem:K(orthogonal)} to show that  
 \[K=-\frac{\triangle (\ln b)}{b^2},\]
@@ -504,7 +502,7 @@ It follows that $\vec x(1)$ is a \textit{clockwise} rotation of $\vec x(0)$ by a
 The last statement follows from \ref{prop:pt+tgc}.
 \qeds
 
-The following lemma will play a key role in the proof of the Gauss--Bonnet formula given in the next section.
+The following lemma will play a key role in the proof of the Gauss--Bonnet formula.
 
 \begin{thm}{Lemma}\label{lem:rotation-semigeoesic}
 Let $(u,v)\mapsto s(u,v)$ be a semigeodesic chart on a smooth surface~$\Sigma$.
@@ -731,7 +729,7 @@ it can be obtained as a corollary of two deep results of Alexandr Alexandrov: th
 \end{thm}
 
 The following exercise illustrates the final step in the proof that \textit{any open surface with vanishing Gauss curvature a cylindrical surface}.
-See the discussion right before \ref{ex:flat-plane}.
+See the discussion after \ref{ex:flat-plane}.
 
 \begin{thm}{Advanced exercise}\label{ex:line-cylinder} 
 Suppose $(u,v)\mapsto f(u,v)$ describes an intrinsic isometry from the plane with standard $(u,v)$-coordinates to a surface $\Sigma$ in $\mathbb{R}^3$.

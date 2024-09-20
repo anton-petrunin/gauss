@@ -9,23 +9,21 @@ generalized the statement for arbitrary curves.
 \index{Gauss--Bonnet formula}
 
 \begin{thm}{Theorem}\label{thm:gb}
-Let $\Delta$ be a topological disc in a smooth oriented surface $\Sigma$ bounded by a simple piecewise smooth curve $\partial\Delta$.
+Let $\Delta$ be a topological disc in a smooth oriented surface $\Sigma$ bounded by a piecewise smooth curve $\partial\Delta$.
 Suppose $\partial \Delta$ is oriented so that $\Delta$ lies on its left.
 Then 
 \[\tgc{\partial\Delta}+\iint_\Delta K=2\cdot \pi,\eqlbl{eq:g-b}\]
-where $K$ denotes the Gauss curvature of~$\Sigma$.
+where $K$ denotes the Gauss curvature.
 \end{thm}
 
 In this chapter,
 we give an informal proof of this formula in a leading special case.
 A formal computational proof will be given in Section~\ref{sec:gauss--bonnet:formal}.
-
 Before going into the proofs, we suggest solving the following exercises using the Gauss--Bonnet formula.
 
 \begin{thm}{Exercise}\label{ex:1=geodesic-curvature}
 Assume $\gamma$ is a simple closed curve with constant geodesic curvature $1$ in a smooth closed surface $\Sigma$ with positive Gauss curvature.
-Show that 
- \[\length\gamma< 2\cdot\pi;\]
+Show that $\length\gamma< 2\cdot\pi$;
 that is, $\gamma$ is shorter than the unit circle.  
 \end{thm}
 
@@ -41,14 +39,14 @@ Show that $\iint_\Delta K=2\cdot\pi\cdot(1-\cos\alpha)$.
 Let $\gamma$ be a simple closed geodesic on a smooth closed surface $\Sigma$ with positive Gauss curvature.
 Denote by $\Norm$ the spherical map on $\Sigma$.
 Show that the curve $\alpha=\Norm\circ\gamma$ divides the sphere into two regions of equal area.
+
 Conclude that $\length \alpha\ge 2\cdot\pi.$
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:closed-geodesic}
 Let $\gamma$ be a closed geodesic possibly with self-intersections on a smooth closed surface $\Sigma$ with positive Gauss curvature.
 Suppose $R$ is one of the regions that $\gamma$ cuts from~$\Sigma$.
-Show that 
-\[\iint_R K\le 2\cdot\pi.\]
+Show that $\iint_R K\le 2\cdot\pi$.
 
 Conclude that any two closed geodesics on $\Sigma$ have a common point.
 \end{thm}
@@ -89,6 +87,7 @@ Show that in a single coordinate chart, a closed geodesic in $\Sigma$ cannot loo
 \centering
 \caption*{\textit{(hopeless)}}
 \end{minipage}
+\vskip-5mm
 \end{figure}
 
 \end{thm}
@@ -102,7 +101,7 @@ Show that any geodesic in the graph $z=f(x,y)$ has no self-intersections.
 \end{thm}
 
 A surface $\Sigma$ is called \index{simply-connected surface}\emph{simply-connected} if any simple closed curve in $\Sigma$ bounds a disc.
-Equivalently, any closed curve in $\Sigma$ can be continuously deformed into a \index{trivial curve}\emph{trivial curve}; that is, a curve that stands at one point all the time.
+Equivalently, any closed curve in $\Sigma$ can be deformed into a \index{trivial curve}\emph{trivial curve}; that is, a curve that stands at one point all the time.
 
 Planes and spheres are examples of simply-connected surfaces;
 tori and the cylinders are not simply-connected.
@@ -132,7 +131,7 @@ Set \index{10gb@$\GB$ (Gauss--Bonnet formula)}
 \df
 \tgc{\partial\Delta}+\iint_\Delta K-2\cdot \pi,
 \eqlbl{eq:GB}\]
-where $K$ denotes the Gauss curvature of~$\Sigma$.
+where $K$ denotes the Gauss curvature.
 The Gauss--Bonnet formula can be written as
 \[\GB(\Delta)=0,\]
 and $\GB$ stands for Gauss--Bonnet.
@@ -140,7 +139,7 @@ and $\GB$ stands for Gauss--Bonnet.
 {
 
 \begin{wrapfigure}{r}{40 mm}
-\vskip0mm
+\vskip-16mm
 \centering
 \includegraphics{mppics/pic-1750}
 \end{wrapfigure}
@@ -316,25 +315,20 @@ It follows that $\gamma$ contains only one simple loop.
 This loop cuts a disc from $\Sigma$ 
 and goes around it either clockwise or counterclockwise.
 This way we divide all the self-intersecting geodesics on $\Sigma$
-into two sets which we call {}\emph{clockwise} and {}\emph{counterclockwise}.
+into two types which we call {}\emph{clockwise} and {}\emph{counterclockwise}.
 
 The geodesic $t\mapsto \gamma(t)$ is clockwise 
 if and only if the same geodesic traveled backwards
 $t\mapsto \gamma(-t)$
 is counterclockwise.
-
 Let us shoot a unit-speed geodesic in each direction from a given point $p=\gamma(0)$.
 This gives a one-parameter family of geodesics $\gamma_s$ for $s\in[0,\pi]$ connecting the geodesic $t\mapsto \gamma(t)$ with $t\mapsto \gamma(-t)$; that is, $\gamma_0(t)\z=\gamma(t)$, and $\gamma_\pi(t)=\gamma(-t)$.
 
 The subset of values $s\in [0,\pi]$ such that $\gamma_s$ is right (or left) is open in $[0,\pi]$.
-That is, if $\gamma_s$ is right, then so is $\gamma_t$ for all $t$ sufficiently close to~$s$.
-Indeed, denote by $\phi_s$ the angle of the simple loop of $\gamma_s$.
-From above, we have $0<\phi_s<\pi$.
-Therefore, the self-intersection at the base of the loop of $\gamma_s$ is transverse.
-Since geodesic depends smoothly on the initial data 
-(\ref{prop:geod-existence}), the self-intersection survives in $\gamma_t$ for all $t$ sufficiently close to~$s$.
+That is, if $\gamma_s$ is right, then so is $\gamma_t$ for all $t$ sufficiently close to~$s$.%
+\footnote{Informally speaking, this means that self-intersection cannot suddenly disappear. Try to convince yourself of this.}
 
-Since $[0,\pi]$ is connected, it cannot be subdivided into two nonempty open sets.
+Since $[0,\pi]$ is connected, it cannot be subdivided into two open sets.
 It follows that for some $s$, the geodesic $\gamma_s$ is neither  clockwise nor counterclockwise;
 that is, $\gamma_s$ has no self-intersections.
 \qeds
@@ -350,7 +344,7 @@ that is, $\gamma_s$ has no self-intersections.
 \begin{thm}{Exercise}\label{ex:cohn-vossen}
 Let $\Sigma$ be an open smooth surface with positive Gauss curvature.
 Suppose $\alpha\:[0,1]\z\to \Sigma$ is a smooth loop such that $\alpha'(0)+\alpha'(1)=0$.
-Show that there is a simple two-sided infinite geodesic $\gamma$ that is tangent to $\alpha$ at some point.
+Show that there is a simple two-sided infinite geodesic $\gamma$ that is tangent to $\alpha$.
 \end{thm}
 
 }
@@ -362,7 +356,7 @@ The following generalization of the Gauss--Bonnet formula is due to Walther von 
 
 \begin{thm}{Theorem}\label{thm:GB-generalized}
 Let $\Lambda$ be a compact domain on a smooth surface.
-Assume $\Lambda$ is bounded by a finite (possibly empty) collection of simple closed piecewise smooth curves $\gamma_1,\dots,\gamma_n$.
+Assume $\Lambda$ is bounded by a finite (possibly empty) collection of closed piecewise smooth curves $\gamma_1,\dots,\gamma_n$.
 Suppose that each $\gamma_i$ 
 is oriented in such a way that $\Lambda$ lies on its left.
 Then
@@ -372,20 +366,20 @@ for an integer $\chi=\chi(\Lambda)$.
 Moreover, if a graph with $v$ vertices and $e$ edges embedded in $\Lambda$ subdivides it into $f$ discs and contains all $\gamma_i$, then $\chi=v-e+f$.
 \end{thm}
 
+The number $\chi=\chi(\Lambda)$ is called the \index{Euler characteristic}\emph{Euler characteristic} of $\Lambda$. 
+The value $\chi$ does not depend on the choice of the subdivision since the remaining terms in \ref{eq:g-b++} do not.
+Formula \ref{eq:g-b++} is deduced from the standard Gauss--Bonnet (\ref{thm:gb}).
+The argument is similar to \ref{lem:GB-sum}, but the combinatorics gets trickier.
+
 \begin{wrapfigure}{o}{38 mm}
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-1580}
 \end{wrapfigure}
 
-The number $\chi=\chi(\Lambda)$ is called the \index{Euler characteristic}\emph{Euler characteristic} of $\Lambda$. 
-The value $\chi$ does not depend on the choice of the subdivision since the remaining terms in \ref{eq:g-b++} do not.
-Formula \ref{eq:g-b++} is deduced from the standard Gauss--Bonnet (\ref{thm:gb}).
-The argument is similar to \ref{lem:GB-sum}, but the combinatorics gets trickier.
-
 Before reading the proof, try to modify the argument in \ref{lem:GB-sum} to derive the formula for the subdivision of the annulus $A$ on the picture;
 its graph has 4 vertices and 6 edges (one of them is a loop) and it subdivides $A$ into two discs $\Delta_1$ and $\Delta_2$.
-Therefore, we have $\chi(A)=4-6+2=0$ and we should get 
+Therefore, $\chi(A)=4-6+2=0$ and  
 \[\iint_A K=-\tgc{\gamma_1}-\tgc{\gamma_2}.\]
 
 
@@ -395,8 +389,7 @@ Lets us apply the Gauss--Bonnet formula for each disc, and sum up the results:
 \[
 \begin{aligned}
 \iint_\Lambda K&=\iint_{\Delta_1} K+\dots+\iint_{\Delta_f} K=
-\\
-&=2\cdot f\cdot \pi-\tgc{\partial\Delta_1}-\dots-\tgc{\partial\Delta_f}.
+2\cdot f\cdot \pi-\tgc{\partial\Delta_1}-\dots-\tgc{\partial\Delta_f}.
 \end{aligned}
 \]
 It remains to show that  
@@ -426,7 +419,7 @@ Denote by $d$ the \index{degree of vertex}\emph{degree} of~$p$;
 that is, the number of edges that end at~$p$.
 
 \begin{wrapfigure}{r}{23 mm}
-\vskip-0mm
+\vskip-6mm
 \centering
 \includegraphics{mppics/pic-1585}
 \end{wrapfigure}

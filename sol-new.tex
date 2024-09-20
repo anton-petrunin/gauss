@@ -1,10 +1,11 @@
 \stepcounter{chapter}
 \setcounter{eqtn}{0}
 
-\raggedcolumns\setlength{\multicolsep}{-0mm}
+\raggedcolumns\setlength{\multicolsep}{-3mm}
 \begin{multicols}{2}
 
-\parbf{\ref{ex:ell-infty}.} Check all the conditions in the definition of metric, page \pageref{page:def:metric}.
+\parbf{\ref{ex:ell-infty}.}
+Check all the conditions in the definition of metric, page \pageref{page:def:metric}.
 
 \parbf{\ref{ex:B2inB1}}; \ref{SHORT.ex:B2inB1:a}.
 Observe that $\dist{p}{q}{\spc{X}}\le 1$. 
@@ -94,17 +95,16 @@ Apply the definitions.
 For \ref{SHORT.ex:cycloid:regular} you need to check that $\gamma'_\ell\ne 0$.
 For \ref{SHORT.ex:cycloid:simple} you need to check that $\gamma_\ell(t_0)\z=\gamma(t_1)$ only if $t_0=t_1$.
 
-\begin{wrapfigure}{r}{20 mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-270}
-\vskip-6mm
-\end{wrapfigure}
-
 \parbf{\ref{ex:nonregular}.}
 Note that the parametrization $t\mapsto (t,t^3)$ is smooth and regular.
 Modify it so it has zero speed at a point.
 
+\begin{wrapfigure}{r}{20 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-270}
+\vskip-3mm
+\end{wrapfigure}
 
 \parbf{\ref{ex:y^2=x^3}.}
 This is the so-called \index{semicubical parabola}\emph{semicubical parabola}; it is shown on the picture.
@@ -148,7 +148,7 @@ In this case, a neighborhood of $(\pm1,0,0)$ does not admit a smooth regular par
 The case $\ell=1$ is shown on the picture.
 
 \parit{Remark.}
-In the case $\ell=\pm1$, the curve is called \index{Viviani's curve}\emph{Viviani's curve}.
+In the case $\ell=\pm1$, the curve is called {}\emph{Viviani's curve}.
 It admits the following smooth regular parametrization with a self-intersection at $(\pm1,0,0)$
 \[t\mapsto(\pm(\cos t)^2,\cos t\cdot\sin t,\sin t).\]
 
@@ -160,7 +160,7 @@ and apply the Heine--Borel lemma (\ref{thm:Heine--Borel}).
 Conclude that $\gamma$ is proper.
 
 Now assume that $\gamma(t_n)$ converges for some sequence $t_n\to \pm \infty$; let $p$ be its limit and $K$ be a closed ball centered at~$p$.
-Note that $\gamma^{-1}(K)$ is not compact.
+Show that the inverse image $\gamma^{-1}(K)$ is not compact.
 Conclude that $\gamma$ is not proper.
 
 \parbf{\ref{ex:proper-closed}.}
@@ -353,7 +353,7 @@ that is, there are points $x,y\in A$ and a point $z\notin A$ that lies between $
 Since $A$ is closed, its complement is open.
 That is, the ball $B(z,\epsilon)$ does not intersect $A$ for some $\epsilon>0$.
 
-Show that there is $\delta>0$ such that any path of length at most $\dist{x}{y}{\mathbb{R}^3}+\delta$ passes thru $B(z,\epsilon)$.
+Show that there is $\delta>0$ such that any path from $x$ to $y$ of length at most $\dist{x}{y}{\mathbb{R}^3}+\delta$ passes thru $B(z,\epsilon)$.
 It follows that $\dist{x}{y}A\ge \dist{x}{y}{\mathbb{R}^3}+\delta$; 
 in particular, $\dist{x}{y}A\ne \dist{x}{y}{\mathbb{R}^3}$.
 
@@ -367,6 +367,8 @@ in particular, $\dist{x}{y}A\ne \dist{x}{y}{\mathbb{R}^3}$.
 \parbf{\ref{ex:antipodal}.}
 The spherical curve shown on the picture does not have antipodal pairs of points.
 However, there are three points $x,y,z$ on an equator that lie on one of its sides and their antipodal points $-x,-y,-z$ on the other.
+(We assume that the points $x, -y, z, -x, y, -z$ lie in the same order on the equator.)
+
 
 Show that such a curve cannot lie in a hemisphere.
 
@@ -485,11 +487,12 @@ for all~$s$.
 \parit{\ref{SHORT.ex:DNA:int>=length-tc}.}
 Since $\gamma$ is unit-speed, we have $\ell=\length\gamma$ and $\langle\gamma',\gamma'\rangle\equiv1$.
 Therefore,
-\[\int_0^\ell\langle\gamma(s),\gamma'(s)\rangle'\cdot ds
-=\]
-\[=\int_0^\ell\langle\gamma'(s),\gamma'(s)\rangle\cdot ds+\int_0^\ell\langle\gamma(s),\gamma''(s)\rangle\cdot ds\ge\]
-\[\ge \length\gamma-\tc\gamma.\]
-
+\begin{align*}
+\int_0^\ell\langle\gamma(s),\gamma'(s)\rangle'\cdot ds&=\\
+=\int_0^\ell\langle\gamma'(s),\gamma'(s)\rangle\cdot ds&+\int_0^\ell\langle\gamma(s),\gamma''(s)\rangle\cdot ds\ge
+\\
+&\ge \length\gamma-\tc\gamma.
+\end{align*}
 
 \parit{\ref{SHORT.ex:DNA:end}.}
 By the fundamental theorem of calculus, we have
@@ -499,7 +502,7 @@ By the fundamental theorem of calculus, we have
 \end{align*}
 Since $\gamma(0)=\gamma(\ell)$ and $\gamma'(0)=\gamma'(\ell)$, the right-hand side vanishes.
 
-Without loss of generality, we can assume the curve in \ref{thm:DNA} is described by a loop $\gamma\:[0,\ell]\to\mathbb{R}^3$ parametrized by arc-length.
+We can assume the curve in \ref{thm:DNA} is described by a loop $\gamma\:[0,\ell]\to\mathbb{R}^3$ parametrized by arc-length.
 We can also assume that the origin is the center of the ball; that is $|\gamma|\le 1$.
 Since $\gamma$ is a smooth closed curve, we have 
 $\gamma'(0)=\gamma'(\ell)$ and $\gamma(0)=\gamma(\ell)$.
@@ -508,7 +511,7 @@ Therefore, \ref{SHORT.ex:DNA:int>=length-tc} and \ref{SHORT.ex:DNA:end} imply \r
 \parbf{\ref{ex:tangent-support}.}
 Show that no line distinct from $\ell$ can support $F$ at $p$. 
 Apply \ref{lem:separation} to show that there is a line supporting $F$ at $p$.
-Conclude that it must be $\ell$.
+Make a conclusion.
 
 {
 
@@ -549,21 +552,21 @@ Modify the proof of the bow lemma (\ref{lem:bow}) so that it works for concatena
 
 \parit{Remark.} It is instructive to compare the exercise and the chord lemma (\ref{lem:chord}).
 
-\parbf{\ref{ex:length-dist}}; \ref{SHORT.ex:length-dist:>}.
-Choose a value $s_0\in[a,b]$ that splits the total curvature of $\gamma$ into two equal parts.
-Observe that $\measuredangle(\gamma'(s_0),\gamma'(s))\le \theta$ for any~$s$.
-Use this inequality as in the bow lemma.
-
-\begin{wrapfigure}[4]{r}{23 mm}
+\begin{wrapfigure}{r}{23 mm}
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-290}
 \vskip-0mm
 \end{wrapfigure}
 
+\parbf{\ref{ex:length-dist}}; \ref{SHORT.ex:length-dist:>}.
+Choose a value $s_0\in[a,b]$ that splits the total curvature of $\gamma$ in half.
+Observe that $\measuredangle(\gamma'(s_0),\gamma'(s))\le \theta$ for any~$s$.
+Use this inequality as in the bow lemma.
+
 \parit{\ref{SHORT.ex:length-dist:self-intersection:>pi}.} Apply \ref{SHORT.ex:length-dist:>}, and see the picture.
 
-\parit{\ref{SHORT.ex:length-dist:=}.} Start with a polygonal line made from two equal segments with the external angle $2\cdot\theta$ and smooth its joint. 
+\parit{\ref{SHORT.ex:length-dist:=}.} Start with a polygonal line made from two equal segments with the external angle $2\cdot\theta$ and smooth its joint, using cutoffs and mollifiers (\ref{sec:analysis}). 
 
 
 \parbf{\ref{ex:schwartz}.}
@@ -571,7 +574,7 @@ Let $\ell=\length\gamma$.
 Suppose $\ell_1<\ell<\ell_2$.
 Let $\gamma_1$ be an arc of the unit circle with length~$\ell$.
 
-Show that the distance between the endpoints of $\gamma_1$ is smaller than $|p-q|$, and apply the bow lemma (\ref{lem:bow}).
+Show that the distance between the endpoints of $\gamma_1$ is larger than $|p-q|$, and apply the bow lemma (\ref{lem:bow}).
 
 \parit{Source:} The exercise is generally attributed to Hermann Schwarz \cite{shur}.
 
@@ -592,6 +595,10 @@ Suppose the inequality fails at $t=0$.
 We may assume that $\alpha(0)\le\tfrac\pi2$;
 otherwise, revert the parametrization.
 
+In the plane spanned by $\gamma(0)$ and~$\gamma'(0)$, choose a unit-speed circle arc (or line segment) $\sigma$ from $0$ to $\gamma(0)$ that comes to $\gamma(0)$ in the direction opposite to $\gamma'(0)$.
+Consider a unit-speed semicircle $\tilde\gamma$ with curvature $2$
+that starts at $\gamma(0)$ in the direction $\gamma'(0)$ so that that the concatenation $\sigma*\tilde\gamma$ is an arc of a convex plane curve; see the figure.
+
 \begin{Figure}
 \vskip-1mm
 \centering
@@ -599,16 +606,12 @@ otherwise, revert the parametrization.
 \vskip-1mm
 \end{Figure}
 
-In the plane spanned by $\gamma(0)$ and~$\gamma'(0)$, choose a unit-speed circle arc (or line segment) $\sigma$ from $0$ to $\gamma(0)$ that comes to $\gamma(0)$ in the direction opposite to $\gamma'(0)$.
-Consider a unit-speed semicircle $\tilde\gamma$ with curvature $2$
-that starts at $\gamma(0)$ in the direction $\gamma'(0)$ so that that the concatenation $\sigma*\tilde\gamma$ is an arc of a convex plane curve; see the figure.
-
 Show that if $|\gamma(0)|> \sin[\alpha(0)]$, then $\tilde\gamma$ leaves the unit ball; that is, $|\tilde\gamma(t_0)|>1$ for some~$t_0$.
 
 The concatenations $\sigma*\gamma$ and $\sigma*\tilde\gamma$ fail to be smooth at the joint, but it is differentiable at this point.
 Check that the proof of the bow lemma works in this more general case.
 
-Apply the bow lemma for $\sigma*\gamma$ and $\sigma*\tilde\gamma$, to get $|\gamma(t_0)|\ge |\tilde\gamma(t_0)|$, and arrive at a contradiction.
+Apply this bow lemma to $\sigma*\gamma$ and $\sigma*\tilde\gamma$, to get $|\gamma(t_0)|\ge |\tilde\gamma(t_0)|$, and arrive at a contradiction.
 
 \parit{Source:} This statement was used by the first author \cite{petrunin2023}.
 
@@ -641,12 +644,12 @@ For the second part apply induction on the number of vertices.
 
 
 \parbf{\ref{ex:sef-intersection}.} Assume $x$ is a point of self-intersection.
-Show that we may choose two points $y$ and $z$ on $\gamma$ so that the triangle $xyz$ is nondegenerate.
+Show that we may choose two points $y$ and $z$ between the self-intersections on $\gamma$ so that the triangle $xyz$ is nondegenerate.
 In particular, 
 $\measuredangle\hinge yxz
 \z+
 \measuredangle\hinge zyx
-\z<\pi$, or, equivalently, for the \textit{nonclosed} polygonal line $xyzx$ we have $\tc{xyzx}\z>\pi$.
+\z<\pi$, or, equivalently, for the \textit{nonclosed} inscribed polygonal line $xyzx$ we have $\tc{xyzx}\z>\pi$.
 It remains to apply \ref{prop:inscribed-total-curvature}.
 
 \parbf{\ref{ex:quadrisecant}.}
@@ -691,8 +694,7 @@ An example for the second question can be found among logarithmic spirals.
 
 \parbf{\ref{ex:helix-torsion}.} 
 The arc-length parameter $s$ is already found in   \ref{ex:arc-length-helix}.
-It remains to find the Frenet frame and calculate curvature and torsion.
-The latter can be done by straightforward calculations.
+It remains to calculate the Frenet frame, curvature, and torsion.
 
 {
 
@@ -707,7 +709,7 @@ The latter can be done by straightforward calculations.
 \vskip-0mm
 \end{wrapfigure}
 
-The answers are 
+One should get 
 \begin{align*}
 \tan(t)&=\tfrac{(-a\cdot\sin t, a\cdot\cos t,b)}{\sqrt{a^2+b^2}},
 \\
@@ -894,7 +896,7 @@ By regularity of $\gamma$, $\gamma'\ne0$.
 So if $\gamma_\ell'(t)=0$, then $\ell\cdot \skur(t)= 1$.
 
 \parit{\ref{SHORT.ex:length':formula}.} We can assume that $\gamma$ is parametrized by its arc-length, so $\gamma'(t)=\tan(t)$.
-Suppose $|\ell|<\frac{1}{\kur(t)}$ for any~$t$.
+Suppose $|\ell|<\frac{1}{\kur(t)}=\frac{1}{|\skur(t)|}$ for any~$t$.
 Then 
 \[
 |\gamma_\ell'(t)|=(1-\ell\cdot\skur(t)).
@@ -1261,9 +1263,9 @@ for example, $\sigma_1(R-|x|)$, where $R$ is large and $\sigma_1$ is defined on 
 It remains to apply the Moser trick to the constructed vector field. 
 
 \parit{\ref{SHORT.ex:star-shaped-disc:smooth}--\ref{SHORT.ex:star-shaped-disc:star-shaped}.}
-Without loss of generality, we can assume that the origin belongs to both sets.
+In \ref{SHORT.ex:star-shaped-disc:smooth}--\ref{SHORT.ex:star-shaped-disc:nonsmooth}, we can assume that the origin belongs to both sets, and in \ref{SHORT.ex:star-shaped-disc:star-shaped} that the sets are star-shaped with respect to the origin. 
 
-In each case show that there is a vector field $\vec v$ defined on $\mathbb{R}^2\setminus\{0\}$ that flows one surface to an other.
+In each case show that there is a vector field $\vec v$ defined on $\mathbb{R}^2$ that flows one surface to an other.
 In fact, one can choose radial fields of that type,
 but be careful with the cases \ref{SHORT.ex:star-shaped-disc:nonsmooth} and \ref{SHORT.ex:star-shaped-disc:star-shaped} --- they are not as easy as one might think.
 
@@ -1693,7 +1695,8 @@ This is due to Dmitri Panov \cite{panov-curves}.
 \parbf{\ref{ex:crosss}.}
 This problem follows easily from the so-called \index{Morse lemma}\emph{Morse lemma}.
 The following sketch is a slightly stripped version of it.
-A more conceptual proof \cite{palais} can be built on the Moser trick; see the solution of \ref{ex:star-shaped-disc}.
+A more conceptual proof \cite{palais} %??? better ref???
+can be built on the Moser trick; see the solution of \ref{ex:star-shaped-disc}.
 
 \medskip
 
@@ -2001,8 +2004,7 @@ Since $p$ is inside $\Sigma$, we have that $\langle\gamma(t),\Norm(\gamma(t))\ra
 It follows that 
 \[\langle\gamma''(t),\gamma(t)\rangle=k(t)\cdot \langle\gamma(t),\Norm(\gamma(t))\rangle\le 0\]
 for any~$t$.
-
-Applying the above estimates, we get 
+Conclude that
 \begin{align*}
 &\rho''(t)
 =\langle\gamma(t),\gamma(t)\rangle''=
@@ -2189,7 +2191,7 @@ Repeat the end of the proof of \ref{thm:cohn-vossen} for a one-parameter family 
 
 \parbf{\ref{ex:g-b-chi}.}
 Subdivide each surface into discs,
-count number of edges vertices and discs in the subdivision.
+count number of edges, vertices, and discs in the subdivision.
 Calculate the Euler characteristic and apply \ref{thm:GB-generalized}.
 For the Möbius band and pair of pans, use that the boundary has vanishing geodesic curvature.
 For the cylinder, use that each component of the boundary is a simple plane curve and apply \ref{prop:total-signed-curvature}. 
@@ -2559,8 +2561,8 @@ Apply the Gauss--Bonnet formula to show that $\tgc\sigma>\pi-\alpha-\beta$.
 Pass to a limit as $\ell\to0$, and make a conclusion.
 
 \parit{\ref{SHORT.ex:disc-:area}.}
-By \ref{mang<angk}, the $\exp_p\:\T_p\to\Sigma$ is distance-nonexpanding.
-Observe that it maps the $R$-ball in $\T_p$ centered at the origin onto $\Delta$.
+By \ref{mang<angk}, the map $\exp_p\:\T_p\to\Sigma$ is distance-noncontracting.
+By \ref{prop:gamma''}, it maps the $R$-ball in $\T_p$ centered at the origin onto $\Delta$.
 Whence the statement follows.
 
 \parbf{\ref{ex:moon-}.}

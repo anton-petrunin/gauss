@@ -93,7 +93,7 @@ for any $x,y\in {\spc{X}}$.
 
 A bijective distance-preserving map is called an \index{isometry}\emph{isometry}. 
 An isometry from a metric space to itself is also referred a \index{motion}\emph{motion}.
-Two metric spaces are called \index{isometric spaces}\emph{isometric} if there exists an isometry between them.
+Two metric spaces are called {}\emph{isometric} if there exists an isometry between them.
 
 \begin{thm}{Exercise}\label{ex:dist-preserv=>injective}
 Show that any distance-preserving map $f\:\spc{X}\to\spc{Y}$ is \index{injective map}\emph{injective};
@@ -751,7 +751,8 @@ Then for any initial data $\bm{x}(t_0)=\bm{u}$ such that $(\bm{u},t)\in\Omega$ t
 has a unique solution $t\mapsto \bm{x}(t)$ defined at a maximal interval $\mathbb{J}$ that contains $t_0$.
 Moreover,
 \begin{enumerate}[(a)]
-\item  if $\mathbb{J}\ne \mathbb{R}$ (that is, if an end $b$ of $\mathbb{J}$ is finite), then $\bm{x}(t)$ does not have a limit point in $\Omega$ as $t\to b$;
+\item  if $\mathbb{J}\ne \mathbb{R}$ (that is, if an end $b$ of $\mathbb{J}$ is finite), then $\bm{x}(t)$ does not have a limit point in $\Omega$ as $t\to b$;%
+\footnote{In other words, if $\bm{x}(t_n)$ converges for a sequence $t_n\to b$, then its limit does not lie in $\Omega$.}
 \item  the function $(\bm{u},t_0,t)\mapsto \bm{x}(t)$ has an open domain of definition in $\Omega\times \mathbb{R}$, and it is smooth in this domain.
 \end{enumerate}
 

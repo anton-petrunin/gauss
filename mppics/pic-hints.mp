@@ -567,6 +567,33 @@ dOt z0,z1,z2,z3,z4,z5,z6,z7,z8;
 label.rt (btex $v$ etex, z.a);
 endfig;
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+beginfig(750);
+save u,p;
+path p[];
+u:=.8cm;
+
+z.o=(0,-1)*u;
+p0=ddline((-1,0)*u,(1,0)*u)(.2,.5);
+p1=circle(origin,1*u);
+z.p=point .4 of p1;
+z.q=whatever[z.o,z.p]=(whatever,0);
+
+draw p1 pensemibold;
+draw p0 pensemibold;
+drawarrow p0 shifted z.o;
+drawarrow ddline((0,-1)*u,(0,1)*u)(.2,.2);
+
+draw ddline(z.o,z.p)(.2,.2);
+dOt z.p,z.q, z.o;
+
+label.lrt (btex $0$ etex, z.o);
+whitelabel.lrt (btex $(u,v,1)$ etex, z.q);
+label.rt (btex $s(u,v)$ etex, z.p);
+endfig;
+
+
 beginfig(1050)
 save u,p;
 path p[];
@@ -590,6 +617,44 @@ dOt z.o,z.p,z.q;
 whitelabel.lft (btex $S$ etex, z.o+(-4,0));
 label.urt (btex $p$ etex, z.p);
 label.lrt (btex $q$ etex, z.q);
+endfig;
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+beginfig(1182);
+save u;
+u:=1cm;
+
+z.a0=(-1,6)*u;
+z.a1=(0,0)*u;
+z.a2=(1,6)*u;
+
+save p; path p[];
+p0=z.a0{down}...z.a1{1,-.1}...z.a2{up};
+z.x1=point 1.3 of p0;
+z.xn=point 1.9 of p0;
+z.dots=point 1.6 of p0;
+z.q=point .8 of p0;
+z.Sigma=point .3 of p0;
+
+draw p0 pensemibold;
+
+draw z.a1--(x.a1,y.a0) dashed evenly;
+draw z.a1--z.x1;
+draw z.a1--z.xn;
+draw z.q--(x.q,y.a0) dashed evenly;
+drawarrow z.a1--(z.a1+(0,1)*u);
+
+dOt z.a1, z.xn, z.q, z.x1;
+
+label.bot(btex $p$ etex, z.a1);
+label.llft(btex $q$ etex, z.q);
+label.rt(btex $x_n$ etex, z.xn);
+label.rt(btex $x_1$ etex, z.x1);
+label.lft(btex $\Sigma$ etex, z.Sigma);
+label.rt(btex $R$ etex, (x.a1,y.Sigma));
+label.lft(btex $\vec u$ etex,z.a1+(0,1)*u);
+label.rt(btex $\dots$ etex rotated angle(direction 1.6 of p0), z.dots);
 endfig;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -639,9 +704,9 @@ draw z.p1--z.q1 penhair;
 dOt z.p0,z.p1,z.q0,z.q1,z.a,z.b,z.c;
 
 label.lft(btex $\gamma_1(0)$ etex, z.p0);
-label.rt(btex {\small $\gamma_1(1)=\delta(1)$} etex, z.p1);
+label.rt(btex $\gamma_1(1)=\delta(1)$ etex, z.p1);
 label.lrt(btex $\gamma_2(1)$ etex, z.q1);
-label.llft(btex {\small $\gamma_2(0)=\delta(0)$} etex, z.q0);
+label.llft(btex $\gamma_2(0)=\delta(0)$ etex, z.q0);
 label.top(btex $\gamma_1(\tfrac12)$ etex, z.a);
 label.rt(btex $\delta(\tfrac12)$ etex, z.b);
 label.bot(btex $\gamma_2(\tfrac12)$ etex, z.c);
