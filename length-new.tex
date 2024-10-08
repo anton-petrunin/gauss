@@ -229,7 +229,7 @@ Show that the function $t\mapsto s(t)$ is continuous.
 Conclude that $\gamma$ admits an arc-length parametrization.
 \end{thm}
 
-Note that a smooth curve $\gamma(t)=(x(t),y(t),z(t))$ is an arc-length parametrization if and only if it has unit velocity vector at all times;
+By Exercise~\ref{ex:integral-length}, a smooth curve $\gamma(t)=(x(t),y(t),z(t))$ is an arc-length parametrization if and only if it has unit velocity vector at all times;
 that is, 
 \[|\gamma'(t)|=\sqrt{x'(t)^2+y'(t)^2+z'(t)^2}=1\]
 for all $t$; by that reason smooth curves equipped with an arc-length parametrization are also called \index{unit-speed curve}\emph{unit-speed} curves.
@@ -453,6 +453,11 @@ in this case, $\ell$ is called the \index{induced length-metric}\emph{induced le
 
 Evidently, $\ell(x,y)\ge \dist{x}{y}{}$ for any pair of points $x,y\in \spc{X}$.
 If the equality holds for all pairs, then the metric $\dist{{*}}{{*}}{}$ is said to be a \index{length-metric}\emph{length-metric}, and the corresponding metric space is called a \index{}\emph{length-metric space}.
+
+\begin{thm}{Exercise}\label{ex:induced-is-length}
+Let $\spc{X}$ be a metric space with a well-defined induced length-metric $(x,y)\mapsto \ell(x,y)$.
+Show that $\ell$ is a length-metric.
+\end{thm}
 
 Most of the time we consider length-metric spaces.
 In particular, the Euclidean space is a length-metric space.

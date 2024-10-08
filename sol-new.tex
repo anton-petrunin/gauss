@@ -345,6 +345,21 @@ The latter can be done by integration:
 \end{align*}
 The answers are $k_1=2$ and $k_2=\tfrac4\pi$.
 
+\parbf{\ref{ex:induced-is-length}.}
+Let $d$ be the original metric on $\spc{X}$.
+Suppose that $\gamma\:[a,b]\to (\spc{X},\ell)$ is continuous.
+Show that so is $\gamma\:[a,b]\to (\spc{X},d)$.
+
+Choose a curve $\gamma$ in $(\spc{X},\ell)$.
+Denote by $r$ and $s$ its $d$-length and $\ell$-length, respectively.
+Show that $s\ge r\ge s-\epsilon$ for any $\epsilon>0$.
+Deduce that any curve in $(\spc{X},\ell)$ has equal $d$-length and $\ell$-length.
+Make a conclusion.
+
+\parit{Remark.} The converse to the first statement does not hold in general.
+Consider for example, the following metric on the upper half-plane 
+\[d(x,y)=\min\{|x|+|y|,\bigl||x|-|y|\bigr|+\sqrt{\measuredangle(x,y)}\}.\]  
+
 \parbf{\ref{ex:intrinsic-convex}.}
 The only-if part is trivial.
 To show the if part, assume $A$ is not convex;
@@ -487,12 +502,15 @@ for all~$s$.
 \parit{\ref{SHORT.ex:DNA:int>=length-tc}.}
 Since $\gamma$ is unit-speed, we have $\ell=\length\gamma$ and $\langle\gamma',\gamma'\rangle\equiv1$.
 Therefore,
+\begingroup
+\allowdisplaybreaks
 \begin{align*}
 \int_0^\ell\langle\gamma(s),\gamma'(s)\rangle'\cdot ds&=\\
 =\int_0^\ell\langle\gamma'(s),\gamma'(s)\rangle\cdot ds&+\int_0^\ell\langle\gamma(s),\gamma''(s)\rangle\cdot ds\ge
 \\
 &\ge \length\gamma-\tc\gamma.
 \end{align*}
+\endgroup
 
 \parit{\ref{SHORT.ex:DNA:end}.}
 By the fundamental theorem of calculus, we have
@@ -541,8 +559,6 @@ $\gamma_1$ with the line segments $[p,x]$ and $[x,q_1]$ bound a convex region in
 
 Modify the proof of the bow lemma (\ref{lem:bow}) so that it works for concatenations of $[x,p]$ with $\gamma_1$ and $\gamma_2$, and arrive at a contradiction.
 
-\parit{\ref{SHORT.ex:bow'-}.} Look at the picture and think.
-
 \begin{Figure}
 \vskip-0mm
 \centering
@@ -550,7 +566,14 @@ Modify the proof of the bow lemma (\ref{lem:bow}) so that it works for concatena
 \vskip0mm
 \end{Figure}
 
+\parit{\ref{SHORT.ex:bow'-}.} Look at the picture and think.
+
 \parit{Remark.} It is instructive to compare the exercise and the chord lemma (\ref{lem:chord}).
+
+\parbf{\ref{ex:length-dist}}; \ref{SHORT.ex:length-dist:>}.
+Choose a value $s_0\in[a,b]$ that splits the total curvature of $\gamma$ in half.
+Observe that $\measuredangle(\gamma'(s_0),\gamma'(s))\le \theta$ for any~$s$.
+Use this inequality as in the bow lemma.
 
 \begin{wrapfigure}{r}{23 mm}
 \vskip-0mm
@@ -558,11 +581,6 @@ Modify the proof of the bow lemma (\ref{lem:bow}) so that it works for concatena
 \includegraphics{mppics/pic-290}
 \vskip-0mm
 \end{wrapfigure}
-
-\parbf{\ref{ex:length-dist}}; \ref{SHORT.ex:length-dist:>}.
-Choose a value $s_0\in[a,b]$ that splits the total curvature of $\gamma$ in half.
-Observe that $\measuredangle(\gamma'(s_0),\gamma'(s))\le \theta$ for any~$s$.
-Use this inequality as in the bow lemma.
 
 \parit{\ref{SHORT.ex:length-dist:self-intersection:>pi}.} Apply \ref{SHORT.ex:length-dist:>}, and see the picture.
 
@@ -1578,6 +1596,13 @@ The latter means that any two points in $\Sigma$ can be connected by a path in $
 This theorem was proved by Heinz Hopf and Willi Rinow \cite{hopf-rinow} and 
 named after Sumner Myers who generalized it \cite{myers}.
 
+\begin{wrapfigure}{r}{29 mm}
+\vskip-6mm
+\centering
+\includegraphics{mppics/pic-1182}
+\vskip-3mm
+\end{wrapfigure}
+
 
 \parbf{\ref{ex:convex-proper-sphere}}; \ref{SHORT.ex:convex-proper-sphere:single}.
 Use the convexity of~$R$.
@@ -1585,12 +1610,6 @@ Use the convexity of~$R$.
 \parit{\ref{SHORT.ex:convex-proper-sphere:smooth}.}
 Observe that the map $\Sigma\to\mathbb{S}^2$ is smooth and regular, then applying the inverse function theorem, show that its inverse is smooth as well.
 
-\begin{wrapfigure}{r}{29 mm}
-\vskip-4mm
-\centering
-\includegraphics{mppics/pic-1182}
-\vskip-3mm
-\end{wrapfigure}
 
 \parbf{\ref{ex:convex-proper-plane}}; \ref{SHORT.ex:convex-proper-plane:a}
 (The argument is similar to \ref{prop:convex-monotone:open}.)
