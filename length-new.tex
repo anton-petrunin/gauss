@@ -244,9 +244,12 @@ Moreover, the arc-length parameter $s$ of $\gamma$ can be written as an integral
 
 Most of the time we will use $s$ for an arc-length parameter of a curve.
 
-\parbf{Proof.} The function $t\mapsto s(t)$ defined by \ref{s(t)} is a smooth increasing function.
-Furthermore, by the fundamental theorem of calculus, $s'(t)=|\gamma'(t)|$.
-Since $\gamma$ is smooth, $s'(t)\ne0$ for any parameter value~$t$.
+\parbf{Proof.}
+Since $\gamma$ is smooth, $|\gamma'(t)|>0$ for any~$t$.
+Therefore, the function $t\mapsto|\gamma'(t)|$ is smooth.
+
+By the fundamental theorem of calculus, $s'(t)=|\gamma'(t)|$.
+Therefore, $t\mapsto s(t)$ is a smooth increasing function with positive derivative.
 
 By the inverse function theorem (\ref{thm:inverse}), the inverse function $s^{-1}(t)$ is also smooth
 and $|(\gamma\circ s^{-1})'|\equiv1$.
