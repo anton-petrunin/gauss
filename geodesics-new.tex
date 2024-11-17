@@ -246,17 +246,20 @@ The differential $d_0(\exp_p)\:\T_p\to \T_p$ is the identity map.
 It is easy to check that $\Dom(\exp_p)$ is \index{star-shaped}\emph{star-shaped} in $\T_p$;
 the latter means that if $\vec v\in \Dom(\exp_p)$, then $\lambda\cdot\vec v\in \Dom(\exp_p)$ for any $0\le \lambda\le 1$.
 
+\section{Injectivity radius}
 
-\begin{thm}{Proposition}\label{prop:exp}
-Let $p$ be a point on a smooth surface $\Sigma$ (without boundary).
-Then the exponential map $\exp_p$ is defined on the open ball $B_p\df B(0,r_p)_{\T_p}$,
+The \index{injectivity radius}\emph{injectivity radius} of $\Sigma$ at $p$ (briefly $\inj(p)$) is defined as least upper bound on radii $r_p\ge0$ such that the exponential map $\exp_p$ is defined on the open ball $B_p\df B(0,r_p)_{\T_p}$,
 and the restriction $\exp_p|_{B_p}$ is a smooth regular parametrization of a neighborhood of $p$ in~$\Sigma$.
 
-Moreover, we can assume that the function $p\mapsto r_p$ is {}\emph{locally bounded away from zero};
-that is, for any $p\in\Sigma$ there is $\epsilon>0$ such that if $\dist{p}{q}\Sigma<\epsilon$ for some $q\in \Sigma$, then $r_q\ge\epsilon$.
+
+\begin{thm}{Proposition}\label{prop:exp}
+Injectivity radius is positive at any point on a smooth surface $\Sigma$ (without boundary).
+Moreover, it is {}\emph{locally bounded away from zero};
+that is, for any $p\in\Sigma$ there is $\epsilon>0$ such that if $\dist{p}{q}\Sigma<\epsilon$ for some $q\in \Sigma$, then $\inj(q)\ge\epsilon$.
 \end{thm}
 
-The proof uses \ref{obs:d(exp)=1} and the inverse function theorem (\ref{thm:inverse}).
+In fact, it is true that \textit{the function $\inj\:\Sigma\to (0,\infty]$ is continuous} \cite[5.4]{gromoll-klingenberg-meyer}.
+The proof of the proposition uses \ref{obs:d(exp)=1} and the inverse function theorem (\ref{thm:inverse}).
 
 \parbf{Proof.}
 Let $z=f(x,y)$ be a local graph representation of $\Sigma$ in tangent-normal coordinates at~$p$.
@@ -282,11 +285,6 @@ the Jacobian matrix of $(a,b)\z\mapsto m(u,v,a,b)$ at $0$ is close to identity.
 In particular, we can apply the second part of the inverse function theorem (\ref{thm:inverse}) to
 the map $(a,b)\z\mapsto m(u,v,a,b)$  for small fixed $u$ and $v$, hence the result.
 \qeds
-
-The least upper bound on $r_p$ that satisfies \ref{prop:exp} is called the \index{injectivity radius}\emph{injectivity radius} of $\Sigma$ at $p$;
-it is denoted by $\inj(p)$.
-The proposition states that the \textit{injectivity radius is positive and locally bounded away from zero}.
-In fact, \textit{the function $\inj\:\Sigma\to (0,\infty]$ is continuous} \cite[5.4]{gromoll-klingenberg-meyer}. 
 
 The proof of the following statement will be indicated in \ref{ex:inj-rad}.
 
