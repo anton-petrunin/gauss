@@ -71,18 +71,27 @@ Show that $\gamma$, parametrized by arc-length, is a geodesic on~$\Sigma$.
 \section{Existence and uniqueness}
 
 The following proposition says that the motion without friction and external forces depends smoothly on its initial data. 
+The formulation uses the smoothness of the map $w$, which spits a point in $\mathbb{R}^3$ for a point $p$ on the surface $\Sigma$, a tangent vector $\vec{v}$ at $p$, and a real parameter $t$.
+In a chart $s$ on $\Sigma$, the point $p$ is described by a pair of coordinates $(u,v)$, and the vector $\vec{v}$ can be expressed as the sum $a\cdot s_u+b\cdot s_v$.
+Therefore, in local coordinates, $w$ is defined by the mapping $(u,v,a,b,t)\mapsto w(p,\vec v,t)$ from a subset of $\mathbb{R}^5$ to $\mathbb{R}^3$, to which the usual definition of smoothness applies.
+Now, the map $(p,\vec v, t)\z\mapsto w(p,\vec v, t)$ is considered to be \index{smooth map}\emph{smooth} if it is described by a smooth mapping $(u,v,a,b,t)\mapsto w(p,\vec v,t)$ in any local coordinates on $\Sigma$.
+
 
 \begin{thm}{Proposition}\label{prop:geod-existence} 
 Let $\Sigma$ be a smooth surface without boundary.
 Given a tangent vector ${\vec v}$ to $\Sigma$ at a point $p$,
 there is a unique geodesic $\gamma\:\mathbb{I}\to \Sigma$ defined on a maximal open interval $\mathbb{I}\ni 0$ that starts at $p$ with velocity vector ${\vec v}$;
 that is, $\gamma(0)=p$ and $\gamma'(0)={\vec v}$.
-Moreover,
-\begin{subthm}{prop:geod-existence:smooth} the map $(p,{\vec v},t)\mapsto \gamma(t)$ is smooth in its domain of definition.
+Moreover, we have the following.
+\begin{subthm}{prop:geod-existence:smooth}
+The map $w\:(p,{\vec v},t)\mapsto \gamma(t)$ is smooth, and it has an open domain of definition%
+\footnote{That is, if $w$ is defined for a triple $p\in \Sigma$, ${\vec v}\in \T_p$, and $t\in \mathbb{R}$,
+then it is also defined for any triple $q\in \Sigma$, $\vec u\in \T_p$, and $s\in \mathbb{R}$, where $q$, $\vec u$, and $s$ are sufficiently close to $p$, ${\vec v}$, and $t$, respectively.}%
+.
 \end{subthm}
 
 \begin{subthm}{prop:geod-existence:whole}
-if $\Sigma$ is proper, then $\mathbb{I}=\mathbb{R}$; that is, $\gamma$ is defined on the entire real line.
+If $\Sigma$ is proper, then $\mathbb{I}=\mathbb{R}$; that is, $\gamma$ is defined on the entire real line.
 \end{subthm}
 
 \end{thm}
@@ -91,8 +100,7 @@ A surface that satisfies the conclusion of \ref{SHORT.prop:geod-existence:whole}
 So part \ref{SHORT.prop:geod-existence:whole} says that \textit{any proper surface without boundary is geodesically complete}.
 This is a part of the \index{Hopf--Rinow theorem}\emph{Hopf--Rinow theorem} \cite{hopf-rinow}.
 
-The proof of this proposition uses the existence of solutions for an initial value problem (\ref{thm:ODE}).
-First, let us show that the definition of geodesic can be rewritten as a differential equation.
+In the proof, we will rewrite the definition of a geodesic using a differential equation and then apply Theorems \ref{thm:ODE-nth-order} and \ref{thm:ODE}.
 
 \begin{thm}{Lemma}\label{lem:geodesic=2nd-order}
 Let $f$ be a smooth function defined on an open domain in $\mathbb{R}^2$.
@@ -164,20 +172,35 @@ It remains to plug in \ref{eq:def-geod} for $z''$, combine the similar terms, an
 \parbf{Proof of \ref{prop:geod-existence}.}
 Let $z=f(x,y)$ be a description of $\Sigma$ in tangent-normal coordinates at~$p$.
 By Lemma \ref{lem:geodesic=2nd-order}, the condition $\gamma''(t)\perp\T_{\gamma(t)}$ can be written as a system of second-order differential equations.
-From \ref{thm:ODE} we get the existence and uniqueness of a geodesic $\gamma$ in an interval $(-\epsilon,\epsilon)$ for some $\epsilon>0$.
+From \ref{thm:ODE-nth-order} and \ref{thm:ODE} we get the existence and uniqueness of a geodesic $\gamma$ in an interval $(-\epsilon,\epsilon)$ for some $\epsilon>0$.
 
 Let us extend the geodesic $\gamma$ to a maximal open interval $\mathbb{I}$.
 Suppose there is another geodesic $\gamma_1$ with the same initial data that is defined on a maximal open interval $\mathbb{I}_1$.
 Suppose $\gamma_1$ splits from $\gamma$ at some $t_0>0$;
-that is, $\gamma_1$ coincides with $\gamma$ on the interval $[0,t_0)$, but they are different on any interval $[0,t_0+\delta)$ with $\delta>0$.
-By continuity, $\gamma_1(t_0)=\gamma(t_0)$, and $\gamma'(t_0)=\gamma'(t_0)$.
-Applying \ref{thm:ODE} again, we get that $\gamma_1$ coincides with $\gamma$ in a small neighborhood of $t_0$ --- a contradiction.
+that is, $\gamma_1$ and $\gamma$ coincides on the interval $[0,t_0)$, but they are different on any interval $[0,t_0+\delta)$ with $\delta>0$.
+By continuity, $\gamma_1(t_0)=\gamma(t_0)$, and $\gamma_1'(t_0)=\gamma'(t_0)$.
+Applying \ref{thm:ODE-nth-order} and \ref{thm:ODE} again, we get that $\gamma_1$ coincides with $\gamma$ in a small neighborhood of $t_0$ --- a contradiction.
 
 The same argument shows that $\gamma_1$ cannot split from $\gamma$ at $t_0<0$.
 It follows that $\gamma_1=\gamma$;
 in particular, $\mathbb{I}_1=\mathbb{I}$.
 
-Part \ref{SHORT.prop:geod-existence:smooth} follows since the solution of the initial value problem depends smoothly on the initial data (\ref{thm:ODE}).
+If $\Sigma$ is the graph of a smooth function, then part \ref{SHORT.prop:geod-existence:smooth} follows from \ref{thm:ODE-nth-order}, \ref{thm:ODE}, and the lemma.
+In this case, the mapping
+\[\vec{w}(p,\vec v,t)\df\tfrac{\partial}{\partial t}w(p,\vec v,t)\]
+is also smooth.
+Note that $\vec{w}(p,\vec v,t_0) \in \T_{\gamma(t_0)}$ is the velocity vector of the geodesic $\gamma\:t\mapsto w(p,\vec v,t)$ at time $t_0$.
+
+In the general case, suppose $w(p,{\vec v},b)$ is defined for $b\ge0$; that is, the geodesic $\gamma\:t\mapsto w(p,{\vec v},t)$ is defined on the interval $[0,b]$.
+Then there exists a partition $0=t_0<t_1<\dots<t_n=b$ of the interval $[0,b]$ such that each geodesic segment $\gamma|_{[t_{i-1},t_i]}$ is covered by a chart defined by some tangent-normal coordinates.
+Set $p_i=\gamma(t_i)$ and $\vec v_i=\gamma'(t_i)$, so $p_0=p$ and $\vec v_0=\vec v$.
+Since $\gamma|_{[t_{i-1},t_i]}$ lies in a graph, by the previous reasoning, we conclude that for each $i$, the mappings
+$w$ and $\vec w$ are defined and smooth in a neighborhood of the triples $(p_{i-1},\vec v_{i-1}, t_i-t_{i-1})$.
+Note that $p_i=w(p_{i-1},\vec v_{i-1},t_i-t_{i-1})$ and $\vec v_i=\vec w(p_{i-1},\vec v_{i-1},t_i-t_{i-1})$ for each $i$.
+Since the composition of smooth mappings is smooth, the mapping $w$ is smoothly defined in a neighborhood of the triple $(p,\vec v, b)$.
+
+The case $b\le 0$ is similar; so, we have obtained the general case in \ref{SHORT.prop:geod-existence:smooth}.
+
 
 Assume \ref{SHORT.prop:geod-existence:whole} does not hold;
 that is, the maximal interval $\mathbb{I}$ is a proper subset of $\mathbb{R}$.

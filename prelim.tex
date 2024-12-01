@@ -745,15 +745,16 @@ Therefore, the system can be rewritten as one vector equation
 \[\bm{x}'=\bm{f}(\bm{x}, t).\] 
 
 \begin{thm}{Theorem}\label{thm:ODE}
+
 Suppose $\bm{f}\:\Omega\to \mathbb{R}^n$ is a smooth function defined on an open subset $\Omega\subset \mathbb{R}^n\times \mathbb{R}$.
-Then for any initial data $\bm{x}(t_0)=\bm{u}$ such that $(\bm{u},t)\in\Omega$ the differential equation 
+Then for any initial data $\bm{x}(t_0)=\bm{u}$ such that $(\bm{u},t_0)\in\Omega$ the differential equation
 \[\bm{x}'=\bm{f}(\bm{x},t)\]
 has a unique solution $t\mapsto \bm{x}(t)$ defined at a maximal interval $\mathbb{J}$ that contains $t_0$.
 Moreover,
 \begin{enumerate}[(a)]
 \item  if $\mathbb{J}\ne \mathbb{R}$ (that is, if an end $b$ of $\mathbb{J}$ is finite), then $\bm{x}(t)$ does not have a limit point in $\Omega$ as $t\to b$;%
 \footnote{In other words, if $\bm{x}(t_n)$ converges for a sequence $t_n\to b$, then its limit does not lie in $\Omega$.}
-\item  the function $(\bm{u},t_0,t)\mapsto \bm{x}(t)$ has an open domain of definition in $\Omega\times \mathbb{R}$, and it is smooth in this domain.
+\item  the function $w\:(\bm{u},t_0,t)\mapsto \bm{x}(t)$ has an open domain of definition in $\Omega\times \mathbb{R}$ that contains all points $(\bm{u},t_0,t_0)$ for $(\bm{u},t_0)\in \Omega$, and $w$ is smooth in this domain.
 \end{enumerate}
 
 \end{thm}
@@ -761,7 +762,7 @@ Moreover,
 \subsection*{Higher order}
 
 Consider an ordinary differential equation of order $k$
-\[\bm{x}^{(k)}=\bm{f}(\bm{x},\dots,\bm{x}^{(k-1)},t),\]
+\[\bm{x}^{(k)}=\bm{f}(\bm{x},\bm{x}',\dots,\bm{x}^{(k-1)},t),\eqlbl{eq:nth-order}\]
 where $t\mapsto\bm{x}=\bm{x}(t)$ is a function from a real interval to $\mathbb{R}^n$.
 
 This equation can be rewritten as $k$ first-order equations  with $k-1$ new vector variables 
@@ -779,7 +780,15 @@ $\bm{y}_2=\bm{x}'',\dots,\bm{y}_{k-1}=\bm{x}^{(k-1)}$:
 \\
 \bm{y}_{k-1}'(t)&=\bm{f}(\bm{x},\bm{y}_{1},\dots,\bm{y}_{k-1},t).
 \end{cases}
+\eqlbl{eq:nth-order-new}
 \]
+
+Thus, we have derived the following.
+
+\begin{thm}{Theorem}\label{thm:ODE-nth-order}
+The $k$-th order equation \ref{eq:nth-order} is equivalent to the system \ref{eq:nth-order-new} consisting of $k$ first-order equations.
+\end{thm}
+
 
 This trick reduces a higher-order ordinary differential equation to a first-order equation. 
 In particular, we get local existence and uniqueness for solutions of higher-order equations as in Theorem \ref{thm:ODE};
