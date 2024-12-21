@@ -549,7 +549,7 @@ To obtain $\gamma_2$, slightly unbend (that is, decrease the curvature of) the d
 \parbf{\ref{ex:bow'}}; \ref{SHORT.ex:bow'+}.
 We can assume that $p=\gamma_1(a)\z=\gamma_2(a)$ is the origin, 
 $\vec u=\tan_1(a)\z=\tan_2(a)$ points in the direction of $x$-axis,
-and the $q_1=\gamma_1(b)$ and $q_2=\gamma_2(b)$ lie in the upper half-plane of the $(x,y)$-plane.
+and the points $q_1=\gamma_1(b)$ and $q_2=\gamma_2(b)$ lie in the upper half-plane of the $(x,y)$-plane.
 
 Suppose $\alpha_1<\alpha_2$.
 Find a point $x$ such that 
@@ -1709,7 +1709,7 @@ Therefore, the function $t\mapsto h_t(w)$ is monotone on $\mathbb{S}^1$.
 Observe that this function cannot be constant, and arrive at a contradiction.
 
 \parit{Source:}
-This is due to Dmitri Panov \cite{panov-curves}.
+The statement follows from the theorem of Galina Kovaleva \cite{kovaleva}, which was rediscovered by Dmitri Panov \cite{panov-curves}.
 
 \parbf{\ref{ex:crosss}.}
 This problem follows easily from the so-called \index{Morse lemma}\emph{Morse lemma}.
@@ -1832,7 +1832,7 @@ Show that $\measuredangle\hinge xpq\ge \pi-2\cdot\alpha$.
 Conclude that 
 \[|p-x|+|x-q|\le \tfrac{|p-q|}{\cos\alpha}.\]
 Apply \ref{thm:shorts+convex} to show that
-$\dist{p}{q}\Sigma\le |p-x|+|x-q|$.
+$\dist{p}{q}\Sigma\le |p-x|\z+|x-q|$.
 
 
 \parbf{\ref{ex:hat-convex}.}
@@ -2432,6 +2432,19 @@ Apply \ref{ex:principal-revolution:formula} to calculate Gauss curvature of~$\Si
 
 By \ref{ex:K=1}, small discs $\Delta_a$ in $\Sigma_a$ admit intrinsic isometry to a disc in a unit sphere.
 To show that $\Delta_a$ is not congruent to a spherical disc $\Delta_1$ for $a\ne 1$, show that its principal curvature is not 1 at some point. 
+
+\parbf{\ref{ex:pogorelov}.}
+Applying a motion of the space,
+we can assume that $p=f(p)$ is the origin,
+the tangent planes to $\Sigma$ and $\Sigma^*$ at $p$ coincide with the $(x,y)$--plane,
+the differential $d_pf$ is the identity map,
+and both surfaces lie in the half-space $z\ge0$.
+
+Using the bow lemma (\ref{lem:bow}), prove that $f$ maps any section of $\Sigma$ by a vertical plane through $p$ identically.
+Deduce from this that $f$ is the identity map.
+
+\parit{Source:} \cite[III § 6]{pogorelov}.
+
 
 
 \parbf{\ref{ex:line-cylinder}.}
