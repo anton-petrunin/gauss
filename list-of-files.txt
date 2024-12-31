@@ -62,6 +62,7 @@ mppics/pic-16.mps
 mppics/pic-1600.mps
 mppics/pic-1605.mps
 mppics/pic-1610.mps
+mppics/pic-1620.mps
 mppics/pic-1650.mps
 mppics/pic-1680.mps
 mppics/pic-1700.mps
@@ -84,7 +85,9 @@ mppics/pic-24.mps
 mppics/pic-240.mps
 mppics/pic-25.mps
 mppics/pic-250.mps
+mppics/pic-251.mps
 mppics/pic-255.mps
+mppics/pic-257.mps
 mppics/pic-26.mps
 mppics/pic-260.mps
 mppics/pic-261.mps
@@ -98,6 +101,7 @@ mppics/pic-270.mps
 mppics/pic-275.mps
 mppics/pic-280.mps
 mppics/pic-282.mps
+mppics/pic-283.mps
 mppics/pic-285.mps
 mppics/pic-29.mps
 mppics/pic-290.mps
@@ -112,6 +116,7 @@ mppics/pic-325.mps
 mppics/pic-326.mps
 mppics/pic-33.mps
 mppics/pic-34.mps
+mppics/pic-3400.mps
 mppics/pic-354.mps
 mppics/pic-3540.mps
 mppics/pic-3542.mps
@@ -170,3 +175,4 @@ pics/by-sa.eps
 pics/Curves.eps
 pics/Surfaces.eps
 pics/Geodesics.eps
+pics/parallel_transport.eps
