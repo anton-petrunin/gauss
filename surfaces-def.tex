@@ -10,7 +10,7 @@ A connected subset $\Sigma$ in the Euclidean space $\mathbb{R}^3$
 is called a \index{surface}\index{topological!surface}\emph{topological surface} (more precisely an {}\emph{embedded topological surface without boundary}) 
 if any point of $p\in \Sigma$ admits a neighborhood $W$ in $\Sigma$ 
 that can be parametrized by an open subset in the Euclidean plane; 
-that is, there is a homeomorphism $U\to W$ from an open set $U\subset \mathbb{R}^2$; see Section~\ref{sec:topology}.
+that is, there is a homeomorphism $V\to W$ from an open set $V\subset \mathbb{R}^2$; see Section~\ref{sec:topology}.
 
 
 \section{Smooth surfaces}\label{sec:def-smooth-surface}
@@ -21,7 +21,10 @@ A connected set $\Sigma \subset \mathbb{R}^3$ is called a \index{surface}\index{
 \footnote{We use it as a shortcut for the more precise term {}\emph{smooth regular embedded surface}.} if it can be described locally as a graph of a smooth function in an appropriate coordinate system.
 
 More precisely, for any point $p\in \Sigma$ one can choose a coordinate system $(x,y,z)$ and a neighborhood $U\ni p$ such that
-the intersection $W=U\cap \Sigma$ is a graph $z=f(x,y)$ of a smooth function $f$ defined in an open domain of the $(x,y)$-plane.
+the intersection $W=U\cap \Sigma$ is a graph $z=f(x,y)$ of a smooth function $f$ defined in an open domain $V$ of the $(x,y)$-plane.
+
+Note that $(x,y)\mapsto (x,y,f(x,y))$ defines a homeomorphism $V\to W$.
+Therefore, а smooth surface is an example of а topological surface.
 
 \parbf{Examples.}
 The simplest example of a smooth surface is the $(x,y)$-plane 
@@ -76,7 +79,7 @@ sphere $\mathbb{S}^2$ is a closed surface.
 Note that \textit{any proper surface without boundary is either closed or open}.
 
 The following claim is a three-dimensional analog of the plane separation theorem (\ref{ex:proper-curve}).
-It might look obvious, but the proof is nontrivial; it uses the so-called {}\emph{Alexander's duality} \cite{hatcher}.
+It follows from the so-called {}\emph{Alexander's duality} \cite{hatcher}.
 We omit its proof; it would take us far away from the main subject.
 
 \begin{thm}{Claim}\label{clm:proper-divides}
