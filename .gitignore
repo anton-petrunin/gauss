@@ -3,6 +3,7 @@ lib/*
 *.log
 *.aux
 *.dvi
+*.fls
 *.gz
 *.idx
 *.ind

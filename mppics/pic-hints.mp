@@ -58,6 +58,51 @@ whitelabel.bot(btex $p_{11}$ etex, z.a11);
 dOt z.a1,z.a2,z.a3,z.a4,z.a5,z.a6,z.a7,z.a8,z.a9,z.a10,z.a11;
 endfig;
 
+beginfig(43)
+save u;
+u:=.7cm;
+
+z.a=(1,0)*u;
+
+save p; path p[];
+
+p0=circle(origin, z.a);
+draw p0;
+
+z.x1=(.3,.4)*u;
+z.y1=z.a rotated (90+angle z.x1);
+
+p1=(-z.y1)..(z.x1-z.y1)/sqrt(2)..z.x1..(z.x1+z.y1)/sqrt(2)..z.y1..(-z.x1+z.y1)/sqrt(2)..(-z.x1)..(-z.x1-z.y1)/sqrt(2)..cycle;
+draw subpath (0,4) of p1;
+draw subpath (4,8) of p1 dashed evenly;
+
+z.x2=(-.3,.3)*u;
+z.y2=z.a rotated (90+angle z.x2);
+
+p2=(-z.y2)..(z.x2-z.y2)/sqrt(2)..z.x2..(z.x2+z.y2)/sqrt(2)..z.y2..(-z.x2+z.y2)/sqrt(2)..(-z.x2)..(-z.x2-z.y2)/sqrt(2)..cycle;
+draw subpath (0,4) of p2;
+draw subpath (4,8) of p2 dashed evenly;
+
+z.x3=(.05,-.3)*u;
+z.y3=z.a rotated (90+angle z.x3);
+
+p3=(-z.y3)..(z.x3-z.y3)/sqrt(2)..z.x3..(z.x3+z.y3)/sqrt(2)..z.y3..(-z.x3+z.y3)/sqrt(2)..(-z.x3)..(-z.x3-z.y3)/sqrt(2)..cycle;
+draw subpath (0,4) of p3;
+draw subpath (4,8) of p3 dashed evenly;
+
+hatchfill
+((subpath (0,4) of p1) cutbefore (subpath (0,4) of p3) cutafter (subpath (0,4) of p2))
+--
+((subpath (0,4) of p2) cutbefore (subpath (0,4) of p1) cutafter (subpath (0,4) of p3))
+--
+((subpath (0,4) of p3) cutbefore (subpath (0,4) of p2) cutafter (subpath (0,4) of p1))
+--cycle
+ withcolor (57, 1.5mm, -.5bp);
+
+whitelabel(btex $\Delta$ etex, origin);
+endfig;
+
+
 beginfig(226);
 save u,a,n;
 u:=1.8cm;
@@ -530,6 +575,71 @@ label.bot (btex $\beta$ etex, point 1.5 of p1 yscaled -1);
 label.top (btex $\Pi$ etex, 1.3[z1,z2]);
 endfig;
 
+beginfig(320);
+save u,p,r;
+path p[];
+u:=.7cm;
+r:=3;
+
+draw (-r,0)*u--(0,0)*u--(r,r)*u
+penbold;
+
+drawarrow (-r,0)*u--(r,0)*u;
+drawarrow (0,-.5)*u--(0,r)*u;
+
+label.bot (btex $y=h(x)$ etex, (.4*r,r)*u);
+endfig;
+
+beginfig(321);
+save u,p,r;
+path p[];
+u:=.7cm;
+r:=3;
+
+draw (-r,0)*u--(0,0)*u
+for i=.1 step .1 until r:
+..(i,i/(2**(1/i)))*u
+endfor
+penbold;
+
+drawarrow (-r,0)*u--(r,0)*u;
+drawarrow (0,-.5)*u--(0,r)*u;
+
+label.bot (btex $y=f(x)$ etex, (.4*r,r)*u);
+endfig;
+
+beginfig(325);
+save u,p,r,eps;
+path p[];
+u:=.7cm;
+r:=3;
+eps:=.5;
+
+p0=(-r,0)*u--(-eps,0)*u{right}..tension 3..(0,5*eps)*u{right}..tension 3..(eps,0)*u{right}--(r,0)*u;
+draw p0 penbold;
+
+drawarrow (-r,0)*u--(r,0)*u;
+drawarrow (0,-.5)*u--(0,r)*u;
+
+label.urt (btex $y=b_\epsilon(x)$ etex, point 2.4 of p0);
+endfig;
+
+beginfig(326);
+save u,p,r,eps;
+path p[];
+u:=.7cm;
+r:=3;
+eps:=.5;
+
+p0=(-r,0)*u--(-eps,0)*u{right}..tension 1.4..(eps,1)*u{right}--(r,1)*u;
+draw p0 penbold;
+
+drawarrow (-r,0)*u--(r,0)*u;
+drawarrow (0,-.5)*u--(0,r)*u;
+
+label.top (btex $y=\sigma_\epsilon(x)$ etex, point 2.4 of p0);
+endfig;
+
 beginfig(474) 
 save u,p,k;
 path p[];
@@ -597,7 +707,7 @@ endfig;
 beginfig(1050)
 save u,p;
 path p[];
-u:=.5cm;
+u:=.7cm;
 
 z.o=origin;
 z.r=(1,0)*u;
@@ -773,5 +883,54 @@ label.lft(btex $\tilde\delta$ etex,(-.8)[z.qq,z.yy]);
 
 endfig;
 
+beginfig(3540)
+save u,p;
+path p[];
+u:=1cm;
+
+z.p0=(1.5,.5)*u;
+z.p1=(3.5,1.7)*u;
+z.p2=(1.3,3)*u;
+z.p3=(.3,1.2)*u;
+z.p4=z.p+(-.2,0)*u;
+
+z.p=z.p1+(1.5,0)*u;
+
+p0=z.p0{1,0}..z.p1--z.p1..z.p2..z.p3..cycle;
+
+hatchfill p0  withcolor (53, 1.5mm, -.5bp);
+draw  p0 pensemibold;
+draw ((x.p1+2*x.p)/3,y.p0)--((x.p1+2*x.p)/3,y.p2);
+dOt z.p;
+
+label.rt(btex $p$ etex, z.p);
+label(btex separating plane etex rotated 90, ((x.p1+2*x.p)/3,(y.p0+y.p2)/2)+(-7,0));
+whitelabel(btex $K$ etex, .5[z.p1,z.p3]);
+
+endfig;
+
+beginfig(3542)
+save u,p;
+path p[];
+u:=1cm;
+
+z.p0=(1.5,.5)*u;
+z.p1=(3.5,1.7)*u;
+z.p2=(1.3,3)*u;
+z.p3=(.3,1.2)*u;
+z.p4=z.p+(-.2,0)*u;
+
+p0=z.p0{1,0}..z.p1--z.p1..z.p2..z.p3..cycle;
+
+hatchfill p0  withcolor (53, 1.5mm, -.5bp);
+draw  p0 pensemibold;
+draw (x.p1,y.p0)--(x.p1,y.p2);
+dOt z.p1;
+
+whitelabel.lft(btex $p$ etex, z.p1);
+whitelabel(btex $K$ etex, .5[z.p1,z.p3]);
+label(btex supporting plane etex rotated 90, (x.p1,(y.p0+y.p2)/2)+(7,0));
+
+endfig;
 
 end
