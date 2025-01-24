@@ -4,37 +4,7 @@
 \raggedcolumns\setlength{\multicolsep}{-3mm}
 \begin{multicols}{2}
 
-\parbf{\ref{ex:ell-infty}.}
-Check all the conditions in the definition of metric, page \pageref{page:def:metric}.
 
-\parbf{\ref{ex:B2inB1}}; \ref{SHORT.ex:B2inB1:a}.
-Observe that $\dist{p}{q}{\spc{X}}\le 1$. 
-Apply the triangle inequality to show that $\dist{p}{x}{\spc{X}}\le 2$ for any $x\in B[q,1]$.
-Make a conclusion.
-
-\parit{\ref{SHORT.ex:B2inB1:b}.}
-Take $\spc{X}$ to be the half-line $[0,\infty)$ with the standard metric; $p=0$ and $q=\tfrac45$.
-
-\parbf{\ref{ex:dist-preserv=>injective}.}
-If $x\ne y$, then $\dist{x}{y}{\spc{X}}>0$.
-Since $f$ is distance-preserving,
-$$\dist{f(x)}{f(y)}{\spc{Y}}=\dist{x}{y}{\spc{X}}.$$
-Conclude that $\dist{f(x)}{f(y)}{\spc{Y}}>0$, and hence $f(x)\z\ne f(y)$.
-
-\parbf{\ref{ex:shrt=>continuous}.}
-Show that the conditions in \ref{def:continuous} hold for $\delta=\epsilon$.
-
-\parbf{\ref{ex:close-open}.}
-Suppose the complement $\Omega=\spc{X}\setminus Q$ is open.
-Then for each point $p\in \Omega$ there is $\epsilon>0$ such that $\dist{p}{q}{\spc{X}}>\epsilon$ for any $q\in Q$.
-It follows that $p$ is \textit{not} a limit point of any sequence $q_n\in Q$.
-That is, any limit of a sequence in $Q$ lies in $Q$;
-by the definition, $Q$ is closed.
-
-Now suppose $\Omega=\spc{X}\setminus Q$ is not open.
-Show that there is a point $p\in \Omega$ and a sequence $q_n\in Q$ such that $\dist{p}{q_n}{\spc{X}}\z<\tfrac 1n$ for any~$n$.
-Conclude that $q_n\to p$ as $n\to \infty$;
-therefore $Q$ is not closed.
 
 %\end{multicols}
 %\par\noindent\rule{\textwidth}{0.4pt}
@@ -100,7 +70,7 @@ Note that the parametrization $t\mapsto (t,t^3)$ is smooth and regular.
 Modify it so it has zero speed at a point.
 
 \begin{wrapfigure}{r}{20 mm}
-\vskip-0mm
+\vskip-6mm
 \centering
 \includegraphics{mppics/pic-270}
 \vskip-3mm
@@ -115,16 +85,6 @@ Try to argue similarly to \ref{ex:L-shape}.
 For $\ell=0$ the system describes a pair of points $(0,0,\pm1)$, so we can assume that $\ell\ne 0$.
 
 The first equation describes the unit sphere centered at the origin, and the second equation describes a cylinder over the circle in the $(x,y)$-plane with center at $(-\tfrac\ell2,0)$ and radius~$|\tfrac\ell2|$.
-
-\begin{Figure}
-\centering
-\vskip-0mm
-\begin{lpic}[t(2mm),b(0mm),r(0mm),l(0mm)]{asy/viviani(1)}
-\lbl[r]{-.5,18;$x$}
-\lbl[l]{41,22;$y$}
-\lbl[r]{18,54;$z$}
-\end{lpic}
-\end{Figure}
 
 Find the gradients $\nabla f$ and $\nabla h$ for the functions
 \begin{align*}
@@ -146,6 +106,16 @@ The linear independence of the gradients provides only a sufficient condition.
 Therefore, the case $\ell=\pm1$ has to be checked by hand.
 In this case, a neighborhood of $(\pm1,0,0)$ does not admit a smooth regular parametrization --- try to prove it. 
 The case $\ell=1$ is shown on the picture.
+
+\begin{Figure}
+\centering
+\vskip-0mm
+\begin{lpic}[t(2mm),b(0mm),r(0mm),l(0mm)]{asy/viviani(1)}
+\lbl[r]{-.5,18;$x$}
+\lbl[l]{41,22;$y$}
+\lbl[r]{18,54;$z$}
+\end{lpic}
+\end{Figure}
 
 \parit{Remark.}
 In the case $\ell=\pm1$, the curve is called {}\emph{Viviani's curve}.
@@ -1532,24 +1502,23 @@ Apply the same reasoning as in \ref{ex:between-parallels-1}--\ref{ex:lens}, but 
 Show that any tangent plane $\T_p$ supports $\Sigma$ at~$p$.
 Apply \ref{prop:surf-support}.
 
-{
 
-\begin{wrapfigure}{r}{16 mm}
+\parbf{\ref{ex:convex-lagunov}.}
+Assume a maximal ball in $R$ has radius $r$, and it touches the boundary of $R$ at the points $p$ and~$q$.
+
+\begin{Figure}
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-1050}
 \vskip-0mm
-\end{wrapfigure}
-
-\parbf{\ref{ex:convex-lagunov}.}
-Assume a maximal ball in $R$ has radius $r$, and it touches the boundary of $R$ at the points $p$ and~$q$.
+\end{Figure}
 
 Consider the projection $S$ of $R$ to a plane thru $p$, $q$ and the center of the ball.
 Show that $S$ is bounded by a smooth closed convex curve with curvature at most $1$.
 Argue as in \ref{ex:between-parallels-1} to
 show that $r\ge 1$.
 
-}
+
 
 \parbf{\ref{ex:section-of-convex}.}
 Choose a plane $\Pi$.
@@ -2591,3 +2560,42 @@ For the last statement, apply \ref{ex:disc-:area}.
 
 \parit{Source:}
 Suggested by Dmitri Burago.
+
+%\end{multicols}
+%\par\noindent\rule{\textwidth}{0.4pt}
+%\begin{multicols}{2}
+
+\stepcounter{chapter}
+\setcounter{eqtn}{0}
+
+\parbf{\ref{ex:ell-infty}.}
+Check all the conditions in the definition of metric, page \pageref{page:def:metric}.
+
+\parbf{\ref{ex:B2inB1}}; \ref{SHORT.ex:B2inB1:a}.
+Observe that $\dist{p}{q}{\spc{X}}\le 1$.
+Apply the triangle inequality to show that $\dist{p}{x}{\spc{X}}\le 2$ for any $x\in B[q,1]$.
+Make a conclusion.
+
+\parit{\ref{SHORT.ex:B2inB1:b}.}
+Take $\spc{X}$ to be the half-line $[0,\infty)$ with the standard metric; $p=0$ and $q=\tfrac45$.
+
+\parbf{\ref{ex:dist-preserv=>injective}.}
+If $x\ne y$, then $\dist{x}{y}{\spc{X}}>0$.
+Since $f$ is distance-preserving,
+$$\dist{f(x)}{f(y)}{\spc{Y}}=\dist{x}{y}{\spc{X}}.$$
+Conclude that $\dist{f(x)}{f(y)}{\spc{Y}}>0$, and hence $f(x)\z\ne f(y)$.
+
+\parbf{\ref{ex:shrt=>continuous}.}
+Show that the conditions in \ref{def:continuous} hold for $\delta=\epsilon$.
+
+\parbf{\ref{ex:close-open}.}
+Suppose the complement $\Omega=\spc{X}\setminus Q$ is open.
+Then for each point $p\in \Omega$ there is $\epsilon>0$ such that $\dist{p}{q}{\spc{X}}>\epsilon$ for any $q\in Q$.
+It follows that $p$ is \textit{not} a limit point of any sequence $q_n\in Q$.
+That is, any limit of a sequence in $Q$ lies in $Q$;
+by the definition, $Q$ is closed.
+
+Now suppose $\Omega=\spc{X}\setminus Q$ is not open.
+Show that there is a point $p\in \Omega$ and a sequence $q_n\in Q$ such that $\dist{p}{q_n}{\spc{X}}\z<\tfrac 1n$ for any~$n$.
+Conclude that $q_n\to p$ as $n\to \infty$;
+therefore $Q$ is not closed.

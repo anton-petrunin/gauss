@@ -1,8 +1,11 @@
-\chapter*{Preliminaries}
-\addcontentsline{toc}{chapter}{Preliminaries}
+\chapter[Appendix]{}
+\chaptermark{}
+%\addcontentsline{toc}{chapter}{Preliminaries}
 
-The first section in this chapter about metric spaces should be read before going further.
-The rest of the chapter should be used as a quick reference while reading the rest of the book;
+\begin{multicols}{2}
+{\footnotesize
+
+This appendix should be used as a quick reference while reading the rest of the book;
 it contains statements of necessary results and references to complete proofs.
 
 \section{Metric spaces}\label{sec:metric-spcaes}
@@ -61,10 +64,18 @@ Given a point $p$ in a metric space $\spc{X}$ and a real number $R\ge 0$, the se
 The open ball is denoted as $B(p,R)$ or $B(p,R)_{\spc{X}}$;
 the second notation is used if we need to emphasize that the ball is from $\spc{X}$.
 Formally speaking
-\[B(p,R)=B(p,R)_{\spc{X}}=\set{x\in \spc{X}}{\dist{x}{p}{\spc{X}}< R}.\]
+\begin{align*}
+B(p,R)&=B(p,R)_{\spc{X}}=
+\\
+&=\set{x\in \spc{X}}{\dist{x}{p}{\spc{X}}< R}.
+\end{align*}
 \index{10b@$B(p,R)_{\spc{X}}$, $\bar B[p,R]_{\spc{X}}$ (ball)}
 Analogously, the closed ball is denoted as $\bar B[p,R]$ or $\bar B[p,R]_{\spc{X}}$ and
-\[\bar B[p,R]=\bar B[p,R]_{\spc{X}}=\set{x\in \spc{X}}{\dist{x}{p}{\spc{X}}\le R}.\]
+\begin{align*}
+\bar B[p,R]&=\bar B[p,R]_{\spc{X}}=
+\\
+&=\set{x\in \spc{X}}{\dist{x}{p}{\spc{X}}\le R}.
+\end{align*}
 
 \begin{thm}{Exercise}\label{ex:B2inB1}
 
@@ -126,7 +137,7 @@ we have $f(x_n) \to f(x_\infty)$ in $\spc{Y}$.
 
 Equivalently, $f\:\spc{X}\to \spc{Y}$ is continuous if, for any $x\in {\spc{X}}$ and any $\epsilon>0$,
 there is $\delta>0$ such that 
-$$\dist{x}{y}{\spc{X}}<\delta\quad \text{ implies that }\quad \dist{f(x)}{f(y)}{\spc{Y}}<\epsilon.$$
+$$\dist{x}{y}{\spc{X}}<\delta\quad \Longrightarrow\quad \dist{f(x)}{f(y)}{\spc{Y}}<\epsilon.$$
 
 \end{thm}
 
@@ -177,12 +188,12 @@ A subset of Euclidean space is compact if and only if it is closed and bounded.
 \end{thm}
 
 
-\subsection*{Homeomorphisms and embedding}
+\subsection*{Homeomorphisms\\ and embeddings}
 
 A bijection $f\:\spc{X}\to\spc{Y}$ between metric spaces is called \index{homeomorphism}\emph{homeomorphism} if $f$ and its inverse $f^{-1}$ are continuous.
 A homeomorphism to its image is called an \index{embedding}\emph{embedding}.
 
-If there exists a homeomorphism $f\:\spc{X}\to \spc{Y}$,
+If there exists a homeomorphism $f\:\spc{X}\z\to \spc{Y}$,
 we say that ${\spc{X}}$ is {}\emph{homeomorphic} to $\spc{Y}$,
 or $\spc{X}$ and $\spc{Y}$ are {}\emph{homeomorphic}.
 
@@ -246,7 +257,7 @@ among elementary proofs, one of our favorites is the proof given by Aleksei Fili
 We use mostly the smooth case of this theorem which is simpler.
 An amusing proof of this case was given by Gregory Chambers and Yevgeny Liokumovich \cite{chambers-liokumovich}.
 
-\section{Elementary geometry}
+\section{Classic geometry}
 
 %%%???orientation is not defined???
 
@@ -285,7 +296,7 @@ Then
 \[\measuredangle\hinge yxz
 \ge
 \measuredangle\hinge {y^{*}}{x^{*}}{z^{*}}
-\quad\Longleftrightarrow\quad
+\ \Longleftrightarrow\
 |x-z|\ge |x^{*}-z^{*}|.\]
 \end{thm}
 
@@ -346,8 +357,11 @@ Extending the sides of $\Delta$ we get 6 slices: two $S_\alpha$, two $S_\beta$, 
 They cover most of the sphere once,
 but the triangle $\Delta$ and its centrally symmetric copy $\Delta^{*}$ are covered 3 times.
 It follows that
-\[2\cdot \area S_\alpha+2\cdot \area S_\beta+2\cdot \area S_\gamma
-=\area\mathbb{S}^2+4\cdot\area\Delta.\]
+\begin{align*}
+2\cdot \area S_\alpha &+2\cdot \area S_\beta+2\cdot \area S_\gamma=
+\\
+&=\area\mathbb{S}^2+4\cdot\area\Delta.
+\end{align*}
 It remains to apply \ref{eq:area(S2)} and \ref{eq:area(Sa)}.
 \qeds
 
@@ -355,7 +369,7 @@ It remains to apply \ref{eq:area(S2)} and \ref{eq:area(Sa)}.
 
 
 
-\section{Convex geometry}
+\section{Convexity}
 
 A set $X$ in the Euclidean space is called \index{convex!set}\emph{convex} if, for any two points $x,y\in X$, any point $z$ between $x$ and $y$ lies in~$X$.
 It is called  {}\emph{strictly convex} if, for any two points $x,y\in X$, any point $z$ between $x$ and $y$ lies in the interior of~$X$.
@@ -366,6 +380,17 @@ it is the minimal convex set containing the set~$X$.
 
 These definitions and the following statements should appear on the first pages of any introductory text in convex geometry;
 see for example the book by Roger Webster \cite{webster}.
+
+\begin{figure*}[t!]
+\begin{minipage}{.48\textwidth}
+\centering
+\includegraphics{mppics/pic-3540}
+\end{minipage}\hfill
+\begin{minipage}{.48\textwidth}
+\centering
+\includegraphics{mppics/pic-3542}
+\end{minipage}
+\end{figure*}
 
 \subsection*{Separating and supporting planes}
 
@@ -380,16 +405,6 @@ Moreover, for any boundary point $p\in\partial K$, there is a plane $\Pi$ \index
 that is, $\Pi\ni p$ and $K$ lies in a closed half-space bounded by $\Pi$
 \end{thm}
 
-\begin{figure}[ht!]
-\begin{minipage}{.48\textwidth}
-\centering
-\includegraphics{mppics/pic-3540}
-\end{minipage}\hfill
-\begin{minipage}{.48\textwidth}
-\centering
-\includegraphics{mppics/pic-3542}
-\end{minipage}
-\end{figure}
 
 \section{Linear algebra}
 
@@ -403,7 +418,8 @@ Any symmetric matrix is diagonalizable  by an orthogonal matrix.
 We will use this theorem only for $2{\times}2$ matrices.
 In this case, it can be restated as follows:
 Consider a function 
-\[f(x,y)=
+\begin{align*}
+f(x,y)&=
 \begin{pmatrix}
 x&y
 \end{pmatrix}
@@ -416,12 +432,15 @@ m&n
 \cdot
 \begin{pmatrix}
 x\\y
-\end{pmatrix}
-=\ell\cdot x^2+2\cdot m\cdot x\cdot y+n\cdot y^2,\]
+\end{pmatrix}=
+\\
+&=\ell\cdot x^2+2\cdot m\cdot x\cdot y+n\cdot y^2,
+\end{align*}
 that is defined on a $(x,y)$-coordinate plane.
 Then after proper rotation of the coordinates, 
 the expression for $f$ in the new $(x,y)$-coordinates will be
-\[\bar f(x,y)=
+\begin{align*}
+\bar f(x,y)&=
 \begin{pmatrix}
 x&y
 \end{pmatrix}
@@ -434,8 +453,10 @@ k_1&0
 \cdot
 \begin{pmatrix}
 x\\y
-\end{pmatrix}
-=k_1\cdot x^2+k_2\cdot y^2.\]
+\end{pmatrix}=
+\\
+&=k_1\cdot x^2+k_2\cdot y^2.
+\end{align*}
 
 \section{Analysis}\label{sec:analysis}
 
@@ -471,7 +492,27 @@ Moreover, it satisfies the fundamental theorem of calculus; that is, the followi
 holds if the integral is understood in the sense of Lebesgue.
 \end{thm}
 
+\begin{figure*}[t!]
+\begin{minipage}{.48\textwidth}
+\centering
+\includegraphics{mppics/pic-320}
+\end{minipage}\hfill
+\begin{minipage}{.48\textwidth}
+\centering
+\includegraphics{mppics/pic-321}
+\end{minipage}
+\end{figure*}
 
+\begin{figure*}[b!]
+\begin{minipage}{.48\textwidth}
+\centering
+\includegraphics{mppics/pic-325}
+\end{minipage}\hfill
+\begin{minipage}{.48\textwidth}
+\centering
+\includegraphics{mppics/pic-326}
+\end{minipage}
+\end{figure*}
 
 \subsection*{Uniform continuity and convergence}
 
@@ -493,7 +534,7 @@ then the sequence $f_n$ is called \index{uniformly continuous}\emph{uniformly eq
 More precisely, 
 a sequence of functions $f_n:{\spc{X}}\to \spc{Y}$ is called {}\emph{uniformly equicontinuous} if 
 for any $\epsilon>0$ there is $\delta>0$ such that 
-\[\dist{x_1}{x_2}{\spc{X}}<\delta\quad\Longrightarrow\quad \dist{f_n(x_1)}{f_n(x_2)}{\spc{Y}}<\epsilon\]
+\[\dist{x_1}{x_2}{\spc{X}}<\delta\ \Longrightarrow\ \dist{f_n(x_1)}{f_n(x_2)}{\spc{Y}}<\epsilon\]
 for any~$n$.
 
 
@@ -503,10 +544,12 @@ for all $x  \in {\spc{X}}$.
 
 \begin{thm}{Arzel\'{a}--Ascoli theorem}\label{lem:equicontinuous}
 Suppose $\spc{X}$ and $\spc{Y}$ are compact metric spaces. 
-Then any uniformly equicontinuous sequence of function $f_n\:\spc{X}\z\to \spc{Y}$ has a subsequence that converges uniformly to a continuous function $f_\infty\:\spc{X}\to \spc{Y}$. 
+Then any uniformly equicontinuous sequence of function $f_n\:\spc{X}\z\to \spc{Y}$ has a subsequence that converges uniformly to a continuous function $f_\infty\:\spc{X}\z\to \spc{Y}$.
 \end{thm}
 
+
 \subsection*{Cutoffs and mollifiers}
+
 
 Here we explain how to construct smooth functions that mimic the behavior of certain model functions.
 These functions are used to smooth model geometric objects keeping their shape nearly unchanged.
@@ -517,9 +560,9 @@ h(t)&\df
 \begin{cases}
 0&\text{if}\ t\le 0,
 \\
-t&\text{if}\ t> 0.
+t&\text{if}\ t> 0;
 \end{cases}
-&
+\\
 f(t)&\df
 \begin{cases}
 0&\text{if}\ t\le 0,
@@ -527,16 +570,6 @@ f(t)&\df
 \frac{t}{e^{1\!/\!t}}&\text{if}\ t> 0.
 \end{cases}
 \end{align*}
-\begin{figure}[ht!]
-\begin{minipage}{.48\textwidth}
-\centering
-\includegraphics{mppics/pic-320}
-\end{minipage}\hfill
-\begin{minipage}{.48\textwidth}
-\centering
-\includegraphics{mppics/pic-321}
-\end{minipage}
-\end{figure}
 The functions $h$ and $f$ behave alike ---
 both vanish at $t\le 0$ and grow to infinity for positive~$t$.
 The function $h$ is not smooth --- its derivative at $0$ is undefined.
@@ -548,16 +581,6 @@ Such functions can be obtained from the function $f$ constructed above, say
 \[b_\epsilon(t)\df c\cdot f(\epsilon^2-t^2);\]
 typically one chooses the constant $c$ so that $\int b_\epsilon=1$.
 
-\begin{figure}[ht!]
-\begin{minipage}{.48\textwidth}
-\centering
-\includegraphics{mppics/pic-325}
-\end{minipage}\hfill
-\begin{minipage}{.48\textwidth}
-\centering
-\includegraphics{mppics/pic-326}
-\end{minipage}
-\end{figure}
 
 Another useful example is a \index{sigmoid}\emph{sigmoid} --- nondecreasing function that vanishes for $t\le -\epsilon$ and takes value $1$ for any $t\ge \epsilon$.
 It mimics the step function and can be defined the following way: \label{page:sigma-function}
@@ -565,7 +588,7 @@ It mimics the step function and can be defined the following way: \label{page:si
 \df 
 \int_{-\infty}^t b_\epsilon(x)\cdot dx.\]
 
-\section{Multivariable calculus}\label{sec:Multivariable calculus}
+\section{Vector calculus}\label{sec:Multivariable calculus}
 
 The following material is discussed in any course of multivariable calculus;
 for example, in the already mentioned book by Walter Rudin \cite{rudin}.
@@ -617,7 +640,7 @@ Both theorems reduce the existence of a map satisfying a certain equation to a q
 We use these two theorems only for $n\le 3$.
 
 \begin{thm}{Inverse function theorem}\label{thm:inverse}
-Let $\bm{f}=(f_1,\dots,f_n)\:\Omega\to\mathbb{R}^n$ be a smooth map
+Let $\bm{f}\z=(f_1,\dots,f_n)\:\Omega\to\mathbb{R}^n$ be a smooth map
 defined on an open set $\Omega\subset \mathbb{R}^n$.
 Assume the Jacobian matrix
 $\Jac_{\bm{x}}\bm{f}$
@@ -632,7 +655,7 @@ and the first and second partial derivatives $\tfrac{\partial f_i}{\partial x_j}
 \end{thm}
 
 \begin{thm}{Implicit function theorem}\label{thm:imlicit}
-Let $\bm{f}=(f_1,\dots,f_n)\:\Omega\to\mathbb{R}^n$ be a smooth map, defined on an open subset $\Omega\subset\mathbb{R}^{n+m}$, where
+Let $\bm{f}\z=(f_1,\dots,f_n)\:\Omega\to\mathbb{R}^n$ be a smooth map, defined on an open subset $\Omega\subset\mathbb{R}^{n+m}$, where
 $m,n\z\ge 1$.
 Let us consider $\mathbb{R}^{n+m}$ as a product space $\mathbb{R}^n\times \mathbb{R}^m$ with coordinates 
 $x_1,\dots,x_n,y_1,\dots,y_m$.
@@ -643,7 +666,7 @@ M=\begin{pmatrix}
 \vdots & \ddots & \vdots\\
 \dfrac{\partial f_n}{\partial x_1} & \cdots & \dfrac{\partial f_n}{\partial x_n} \end{pmatrix}\]
 formed by the first $n$ columns of the Jacobian matrix.
-Assume $M$ is invertible at $\bm{x}=(x_1,\dots,x_n,y_1,\dots y_m)\in \Omega$, and $\bm{f}(\bm{x})=0$.
+Assume $M$ is invertible at $\bm{x}\z=(x_1,\dots,x_n,y_1,\dots y_m)\in \Omega$, and $\bm{f}(\bm{x})\z=0$.
 Then there is a neighborhood $\Psi\ni \bm{x}$
 and a smooth function $\bm{h}\:\mathbb{R}^m\to\mathbb{R}^n$ defined in a neighborhood $\Phi\ni 0$ such that
 for any $(x_1,\dots,x_n,y_1,\dots y_m)\z\in \Psi$, the equality
@@ -691,7 +714,7 @@ Then the \index{directional derivative}\emph{directional derivative} $(D_{\vec w
 its epigraph $z\ge f(\bm{x})$ is a (strictly) convex set in $\mathbb{R}^n\times \mathbb{R}$.
 
 \begin{thm}{Theorem}\label{thm:Jensen}
-A smooth function $f\:K\to \mathbb{R}$ defined on a convex subset $K\subset\mathbb{R}^n$ is convex if and only if one of the following equivalent conditions holds:
+A smooth function $f\:K\z\to \mathbb{R}$ defined on a convex subset $K\subset\mathbb{R}^n$ is convex if and only if one of the following equivalent conditions holds:
 
 \begin{subthm}{}
 The second directional derivative of $f$ at any point in the direction of any vector is nonnegative; that is,
@@ -701,7 +724,11 @@ for any $p\in K$ and $\vec w\in\mathbb{R}^n$.
 
 \begin{subthm}{}
 The so-called \index{Jensen's inequality}\emph{Jensen's inequality}
-\[f \left ((1-t)\cdot x_0 + t\cdot x_1 \right ) \le (1-t)\cdot f(x_0)+ t\cdot f(x_1)\]
+\begin{align*}
+f ((1-t)\cdot x_0 &+ t\cdot x_1 ) \le
+\\
+&\le (1-t)\cdot f(x_0)+ t\cdot f(x_1)
+\end{align*}
 holds for any $x_0,x_1\in K$ and $t\in[0,1]$.
 
 \end{subthm}
@@ -753,7 +780,7 @@ Moreover,
 \begin{enumerate}[(a)]
 \item  if $\mathbb{J}\ne \mathbb{R}$ (that is, if an end $b$ of $\mathbb{J}$ is finite), then $\bm{x}(t)$ does not have a limit point in $\Omega$ as $t\to b$;%
 \footnote{In other words, if $\bm{x}(t_n)$ converges for a sequence $t_n\to b$, then its limit does not lie in $\Omega$.}
-\item  the function $w\:(\bm{u},t_0,t)\mapsto \bm{x}(t)$ has an open domain of definition in $\Omega\times \mathbb{R}$ that contains all points $(\bm{u},t_0,t_0)$ for $(\bm{u},t_0)\in \Omega$, and $w$ is smooth in this domain.
+\item  the function $w\:(\bm{u},t_0,t)\mapsto \bm{x}(t)$ has an open domain of definition in $\Omega\times \mathbb{R}$ that contains all points $(\bm{u},t_0,t_0)$ for $(\bm{u},t_0)\z\in \Omega$, and $w$ is smooth in this domain.
 \end{enumerate}
 
 \end{thm}
@@ -793,3 +820,5 @@ This trick reduces a higher-order ordinary differential equation to a first-orde
 In particular, we get local existence and uniqueness for solutions of higher-order equations as in Theorem \ref{thm:ODE};
 one only has to assume that
 $\Omega\z\subset \mathbb{R}^{n\cdot k}\times \mathbb{R}$, and the initial data consists of $\bm{x}(t_0)$, $\bm{x}'(t_0),\dots,\bm{x}^{(k-1)}(t_0)$.
+}
+\end{multicols}
