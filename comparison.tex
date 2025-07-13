@@ -188,9 +188,10 @@ z&=\exp_x\vec w,
 \\
 |\vec v|_{\T_x}&=\dist{x}{y}\Sigma,&
 |\vec w|_{\T_x}&=\dist{x}{z}\Sigma,
-&\measuredangle\hinge 0{\vec v}{\vec w}_{\T_x}&=\measuredangle\hinge xyz_\Sigma;
+&\measuredangle\hinge 0{\vec v}{\vec w}_{\T_x}&=\measuredangle\hinge xyz_\Sigma,
 \end{align*}
-in particular, $|\vec v|, |\vec w|< \tfrac r2$.
+where $0$ is the origin in the tangent plane $\T_x$.
+Note that $|\vec v|, |\vec w|< \tfrac r2$.
 
 \parit{\ref{SHORT.thm:loc-comp:cba}.}
 Consider a minimizing geodesic $\gamma$ joining $y$ to $z$.
@@ -199,13 +200,19 @@ In particular, $\log_x\circ\gamma$ is defined, and the curve
 $\tilde \gamma\df\log_x\circ\gamma$ lies in an $r$-neighborhood of zero in $\T_x$.
 Note that $\tilde\gamma$ connects $\vec v$ to $\vec w$ in $\T_x$.
 
-By Rauch comparison (\ref{prop:rauch:K=<0}), we have
-\[\length \tilde \gamma\le \length\gamma.\]
-Since $\dist{\vec v}{\vec w}{\T_x}\le\length\tilde \gamma$ and $\length\gamma=\dist{y}{z}{\Sigma}$, we get 
-\[\dist{\vec v}{\vec w}{\T_x}\le \dist{y}{z}\Sigma.\]
-By angle monotonicity (\ref{lem:angle-monotonicity}), we get
-\[\measuredangle\hinge 0{\vec v}{\vec w}_{\T_x}\le \modangle xzy,\]
-hence the result.
+By the Rauch comparison (\ref{prop:rauch:K=<0}), we have
+\[
+\length \tilde \gamma \le \length \gamma.
+\]
+Since $\dist{\vec v}{\vec w}{\T_x} \le \length \tilde \gamma$ and $\length \gamma = \dist{y}{z}{\Sigma}$, it follows that
+\[
+\dist{\vec v}{\vec w}{\T_x} \le \dist{y}{z}{\Sigma}.
+\]
+By angle monotonicity (\ref{lem:angle-monotonicity}), we obtain
+\[
+\measuredangle \hinge{0}{\vec v}{\vec w}_{\T_x} \le \modangle xzy
+\]
+--- hence the result.
 
 \parit{\ref{SHORT.thm:loc-comp:cbb}.}
 Consider the line segment $\tilde \gamma$ joining $\vec v$ to $\vec w$ in the tangent plane $\T_x$, and set $\gamma\df\exp_x\circ\tilde \gamma$.
@@ -214,8 +221,8 @@ By Rauch comparison (\ref{prop:rauch:K>=0}), we have
 Since $\dist{\vec v}{\vec w}{\T_x}=\length\tilde \gamma$ and $\length\gamma\ge\dist{y}{z}\Sigma$, we get 
 \[\dist{\vec v}{\vec w}{\T_x}\ge \dist{y}{z}\Sigma.\]
 By the angle monotonicity (\ref{lem:angle-monotonicity}), we obtain
-\[\measuredangle\hinge 0{\vec v}{\vec w}_{\T_x}\ge\modangle xzy,\]
-hence the result.
+\[\measuredangle\hinge 0{\vec v}{\vec w}_{\T_x}\ge\modangle xzy\]
+--- hence the result.
 \qeds
 
 \section{Nonpositive curvature}\label{sec:nonpos-comp}
