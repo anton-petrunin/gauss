@@ -5,7 +5,8 @@ This chapter provides mostly practice in computations.
 Except for the definitions in Section~\ref{sec:frenet-frame},
 it will not be used in the sequel.
 
-Just like curvature measures how much a curve fails to be a straight line, the torsion measures how much a space curve fails to be a plane curve (see \ref{ex:lancret}).
+Torsion is a close realtive of curvature.
+The curvature measures how much a curve fails to be a straight line, and the torsion measures how much a space curve fails to be a plane curve (see \ref{ex:lancret}).
 
 \section{Frenet frame}\label{sec:frenet-frame}
 
@@ -278,7 +279,7 @@ Use \ref{SHORT.ex:spherical-frenet:tau}--\ref{SHORT.ex:spherical-frenet:beta} to
 \[\left|\frac{\kur'}{\tor}\right|=\kur\cdot\sqrt{\kur^2-1}.\]
 \end{subthm}
 Now assume $\gamma$ is a space curve that satisfies the identity in \ref{SHORT.ex:spherical-frenet:kur-tor}.
-\begin{subthm}{ex:spherical-frenet:f} Show that $p=\gamma+\tfrac1\kur\cdot \norm+\tfrac{\kur'}{\kur^2\cdot\tor}\cdot\bi$ is constant; conclude that $\gamma$ lies in the unit sphere centered at~$p$.
+\begin{subthm}{ex:spherical-frenet:f} Show that $\gamma+\tfrac1\kur\cdot \norm+\tfrac{\kur'}{\kur^2\cdot\tor}\cdot\bi$ is a constant point; conclude that $\gamma$ lies in the unit sphere centered at this point.
 \end{subthm}
 
 \end{thm}
@@ -317,7 +318,7 @@ Consider the following system of differential equations
 \eqlbl{eq:gamma'tan'norm'bi'}
 \]
 with the initial condition formed by $\gamma(s_0)$, $\tan(s_0)$, $\norm(s_0)$, $\bi(s_0)$.
-(The system of equations has four vector equations, so it can be rewritten as a system of 12 scalar equations.)
+(The system of equations has four vector equations, so it can be rewritten as a system of $12$ scalar equations.)
 
 By \ref{thm:ODE}, this system has a unique solution which is defined in a maximal subinterval $\mathbb{J}\subset \mathbb{I}$ containing $s_0$.
 Let us show that actually $\mathbb{J}=\mathbb{I}$.

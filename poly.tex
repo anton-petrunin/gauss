@@ -148,10 +148,10 @@ Use this statement to show that any closed polygonal line has curvature at least
 
 
 \begin{thm}{Proposition}\label{prop:inscribed-total-curvature}
-Assume a polygonal line $p_0\dots p_n$ is inscribed in a smooth curve~$\gamma$.
+Assume a polygonal line $p_1\dots p_n$ is inscribed in a smooth curve~$\gamma$.
 Then 
-\[\tc\gamma\ge \tc{p_0\dots p_n}.\]
-Moreover, if $\gamma$ is closed, we allow the inscribed polygonal line $p_0\dots p_n$ to be closed.
+\[\tc\gamma\ge \tc{p_1\dots p_n}.\]
+Moreover, if $\gamma$ is closed, we allow the inscribed polygonal line $p_1\dots p_n$ to be closed.
 
 \end{thm}
 
@@ -186,14 +186,14 @@ so $p_{n+1}\z=p_1$.
 }
 
 Since the curvature of line segments vanishes, 
-the total curvature of the polygonal line $p_0\dots p_n$ is the sum of external angles $\theta_i$.
+the total curvature of the polygonal line $p_1\dots p_n$ is the sum of external angles $\theta_i$.
 
 By triangle inequality for angles \ref{thm:spherical-triangle-inq}, we get that
 \[\theta_i\le \alpha_i+\beta_i.\]
-By the chord lemma, the total curvature of the arc of $\gamma$ from $p_i$ to $p_{i+1}$ is at least $\alpha_i+\beta_{i+1}$. 
+By the chord lemma (\ref{lem:chord}), the total curvature of the arc of $\gamma$ from $p_i$ to $p_{i+1}$ is at least $\alpha_i+\beta_{i+1}$.
 Therefore, if $\gamma$ is a closed curve, we have
 \begin{align*}
-\tc{p_0\dots p_n}&=\theta_1+\dots+\theta_n\le 
+\tc{p_1\dots p_n}&=\theta_1+\dots+\theta_n\le
 \\
 &\le\beta_1+\alpha_1+\dots+\beta_n+\alpha_n = 
 \\
@@ -204,11 +204,11 @@ Therefore, if $\gamma$ is a closed curve, we have
 
 If $\gamma$ is not closed, the calculations are analogous:
 \begin{align*}
-\tc{p_0\dots p_n}&=\theta_1+\dots+\theta_{n-1}\le 
+\tc{p_1\dots p_n}&=\theta_2+\dots+\theta_{n-1}\le
 \\
-&\le\beta_1+\alpha_1+\dots+\beta_{n-1}+\alpha_{n-1} \le
+&\le\beta_2+\alpha_2+\dots+\beta_{n-1}+\alpha_{n-1} \le
 \\
-&\le (\alpha_0+\beta_1)+\dots+(\alpha_{n-1}+\beta_n) \le 
+&\le (\alpha_1+\beta_2)+\dots+(\alpha_{n-1}+\beta_n) \le
 \\
 &\le \tc\gamma.
 \end{align*}

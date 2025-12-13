@@ -63,7 +63,7 @@ so $L$ does not admit a smooth \textit{regular} parametrization.
 \parbf{\ref{ex:cycloid}.}
 Apply the definitions.
 For \ref{SHORT.ex:cycloid:regular} you need to check that $\gamma'_\ell\ne 0$.
-For \ref{SHORT.ex:cycloid:simple} you need to check that $\gamma_\ell(t_0)\z=\gamma(t_1)$ only if $t_0=t_1$.
+For \ref{SHORT.ex:cycloid:simple} you need to check that $\gamma_\ell(t_0)\z=\gamma_\ell(t_1)$ only if $t_0=t_1$.
 
 \parbf{\ref{ex:nonregular}.}
 Note that the parametrization $t\mapsto (t,t^3)$ is smooth and regular.
@@ -408,7 +408,7 @@ Apply the chain rule twice.
 \parbf{\ref{ex:curvature-of-spherical-curve}.} Differentiate the identity $\langle\gamma(s),\gamma(s)\rangle=1$ a couple of times.
 
 \parbf{\ref{ex:curvature-formulas}.} 
-Set $\tan=\tfrac{\gamma'}{|\gamma|}$.
+Let $\tan=\tfrac{\gamma'}{|\gamma'|}$.
 Prove and use the following identities: 
 \begin{align*}
 \gamma''-(\gamma'')^\perp&=\tan\cdot\langle\gamma'',\tan\rangle,
@@ -882,7 +882,7 @@ Show that
 \gamma_\ell'(t)=(1-\ell\cdot\skur(t))\cdot \gamma'(t).
 \]
 By regularity of $\gamma$, $\gamma'\ne0$.
-So if $\gamma_\ell'(t)=0$, then $\ell\cdot \skur(t)= 1$.
+So if $\gamma_\ell'(t)=0$, then $\ell\cdot \skur(t)=1$.
 
 \parit{\ref{SHORT.ex:length':formula}.} We can assume that $\gamma$ is parametrized by its arc-length, so $\gamma'(t)=\tan(t)$.
 Suppose $|\ell|<\frac{1}{\kur(t)}=\frac{1}{|\skur(t)|}$ for any~$t$.
@@ -896,10 +896,10 @@ L(\ell)
 &=
 \int_a^b(1-\ell\cdot\skur(t))\cdot dt=
 \\&=
-\int_a^b 1\cdot dt-\ell\cdot \int_a^b\skur(t)\cdot dt=
+\int_a^b1\cdot dt-\ell\cdot \int_a^b\skur(t)\cdot dt=
 \\
 &=
-L(0)+\ell\cdot\tgc\gamma.
+L(0)-\ell\cdot\tgc\gamma.
 \end{align*}
 
 
@@ -1091,7 +1091,7 @@ Argue as at the end of the proof of \ref{thm:4-vert-supporting}, showing that th
 \end{wrapfigure}
 
 
-Apply the intermediate value theorem to show that curvature is  1 at some point.
+Apply the intermediate value theorem to show that curvature is $1$ at some point.
 
 \parbf{\ref{ex:curve-crosses-circle}.}
 Repeat the proof of the \ref{thm:moon} for each cyclic concatenation of an arc of $\gamma$ from $p_i$ to $p_{i+3}$ the arc of the circle with points $p_{i+4},\z\dots,p_{i-1}$ on it.
@@ -1119,7 +1119,7 @@ Denote by $\sigma_p$, $\sigma_q$, $r_p$, $r_q$ the incircles and inradii at $p$ 
 Suppose $r_p\ge 1$ and $r_q\ge1$.
 Show that two unit discs tangent to $\gamma$ from inside at $p$ and $q$ solve the problem.
 
-Suppose $r_p< 1$ and $r_q<1$.
+Suppose $r_p<1$ and $r_q<1$.
 Observe that $\sigma_p$ and $\sigma_q$ do not intersect.
 Note that we can choose two nonoverlapping arcs $\gamma_p$ and $\gamma_q$ of $\gamma$ with ends on  $\sigma_p$ and $\sigma_q$ respectively.
 Start with these two arcs and argue as in \ref{thm:moon}.
@@ -1136,7 +1136,7 @@ Observe that the tangent indicatrix $\tan$ of $\gamma$ is a smooth simple closed
 Show that each point of $\gamma$ with vanishing torsion corresponds to an {}\emph{inflection point} of $\tan$;
 that is, a point with vanishing geodesic curvature (see Section~\ref{sec:Darboux}).
 
-Try to prove that if $\tan$ has less than 4 inflection points, then it lies in an open hemisphere,
+Try to prove that if $\tan$ has less than $4$ inflection points, then it lies in an open hemisphere,
 or extract this statement from the proof of the tennis ball theorem \cite[§ 20]{arnold1994}.
 After that argue as in \ref{thm:fenchel}.
 
@@ -1438,8 +1438,9 @@ Conclude that $s_v$ depends linearly on $u$.
 Use this together with the equations
 \[\Norm_v=-k\cdot s_v,\quad \Norm_{uv}=0.\]
 
-\parit{Source.}
+\parit{Remarks.}
 This exercise is based on the proof given by Sergei Ivanov \cite[3$^\text{d}$ Sem. Lect. 13]{ivanov}.
+Another proof can be built on the Peterson--Codazzi formulas.
 
 \parbf{\ref{ex:mean-curvature}.}
 Apply \ref{obs:k1-k2} and the definition of mean curvature.
@@ -1894,7 +1895,7 @@ Therefore, the longitude of $\gamma$ is monotone.
 Whence again $\gamma$ is non-contractible.
 
 \parbf{\ref{ex:helix=geodesic}.}
-Check that $\Norm(\gamma(t))=(\cos t,\sin t, 0)$.
+Check that $\Norm(\gamma(t))=(\cos t,\sin t,0)$.
 Calculate $\gamma''(t)$, and show that it is proportional to $\Norm(\gamma(t))$.
 The latter is equivalent to $\gamma''(t)\perp\T_{\gamma(t)}$. 
 
@@ -2107,11 +2108,11 @@ Show and use that $|\gamma|\le 1$, and
 \[\langle\Norm,\epsilon\cdot \Norm-\gamma\rangle\le0.\]
 
 \parit{\ref{SHORT.ex:bound-tc:b}.}
-Show and use that $|\gamma|\le 1$, $|\gamma'|= 1$, and
+Show and use that $|\gamma|\le1$, $|\gamma'|=1$, and
 \[\rho'=2\cdot \langle\gamma,\gamma'\rangle.\]
 
 \parit{\ref{SHORT.ex:bound-tc:c}.}
-Show and use that $\langle\gamma,\Norm\rangle=|\gamma|\cdot\cos\theta$, $|\gamma'|= 1$, $\gamma''=-k\cdot \Norm$, and
+Show and use that $\langle\gamma,\Norm\rangle=|\gamma|\cdot\cos\theta$, $|\gamma'|=1$, $\gamma''=-k\cdot \Norm$, and
 \[\rho''=2\cdot \langle\gamma',\gamma'\rangle+2\cdot \langle\gamma,\gamma''\rangle.\]
 
 \parit{\ref{SHORT.ex:bound-tc:d}.}
@@ -2493,7 +2494,7 @@ to show that $\cos\tilde\theta_n\to -1$ as $n\to\infty$;
 conclude that $\theta_n\to \pi$.
 
 \parbf{\ref{ex:thm:comp:cat:nsc}.}
-Consider the triangle on the hyperboloid with vertices $(1,0,0)$, $(-\tfrac{1}2, \tfrac{\sqrt{3} }2, 0)$, and $(-\tfrac{1}2, -\tfrac{\sqrt{3} }2, 0)$.
+Consider the triangle on the hyperboloid with vertices $(1,0,0)$, $(-\tfrac{1}2, \tfrac{\sqrt{3}}2,0)$, and $(-\tfrac{1}2,-\tfrac{\sqrt{3}}2,0)$.
 Note that all its angles are $\pi$, but all model angles are $\tfrac{\pi}3$.
 
 \parbf{\ref{ex:diam-angle}.}
@@ -2525,7 +2526,7 @@ Apply the Rauch comparison (\ref{prop:rauch}) and the properties of the exponent
 
 \parit{\ref{SHORT.ex:open-comparison:almost-min}.} Argue by contradiction.
 If the statement does not hold, then for any $p\in\Sigma$ there is a point $q=q(p)\in \Sigma$ such that 
-$\dist{q}{p}\Sigma< 100\cdot R_p$
+$\dist{q}{p}\Sigma<100\cdot R_p$
 and
 $R_q<(1-\tfrac1{100})\cdot R_p$.
 
