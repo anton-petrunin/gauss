@@ -28,7 +28,7 @@ If a curve is parametrized by an open or semi-open interval, then its length is 
 A curve is called \index{rectifiable curve}\emph{rectifiable} if its length is finite.
 
 \begin{thm}{Exercise}\label{ex:integral-length-0}
-Suppose curve $\gamma_1\:[a_1,b_1] \to\mathbb{R}^3$ is a reparametrization of $\gamma_2\:[a_2,b_2] \to\mathbb{R}^3$. 
+Suppose a curve $\gamma_1\:[a_1,b_1] \to\mathbb{R}^3$ is a reparametrization of $\gamma_2\:[a_2,b_2] \to\mathbb{R}^3$.
 Show that
 \[\length \gamma_1 = \length \gamma_2.\]
 
@@ -65,7 +65,7 @@ Suppose that a path $\beta\:[0,1]\to\mathbb{R}^3$ has the same image as $\gamma$
 that is, $\beta([0,1])=\gamma([0,1])$.
 Show that 
 \[\length \beta\ge \length \gamma.\]
-Try to prove the same assuming that only that $\beta([0,1])\supset\gamma([0,1])$.
+Try to prove the same assuming only that $\beta([0,1])\supset\gamma([0,1])$.
 \end{thm}
 
 
@@ -76,7 +76,7 @@ Show that
 \begin{minipage}{.49\textwidth}
 \begin{subthm}{ex:integral-length>}
 $\length \gamma
-\ge
+\le
 \int_a^b|\gamma'(t)|\cdot dt$;
 \end{subthm}
 \end{minipage}
@@ -84,7 +84,7 @@ $\length \gamma
 \begin{minipage}{.49\textwidth}
 \begin{subthm}{ex:integral-length<}
 $\length \gamma
-\le
+\ge
 \int_a^b|\gamma'(t)|\cdot dt$.
 \end{subthm}
 \end{minipage}
@@ -342,7 +342,7 @@ Denote by $K$ the convex hull of $\alpha$; let $\beta$ be the boundary curve of~
 Show that 
 \[\length \alpha\ge \length \beta.\]
 
-Try to show that the statement holds for arbitrarily closed plane curves, assuming only that $K$ has a nonempty interior.
+Try to show that the statement holds for arbitrary closed plane curves, assuming only that $K$ has a nonempty interior.
 \end{thm}
 
 
@@ -492,7 +492,7 @@ For any $u,v\in \mathbb{S}^2$, we have
 \end{thm}
 
 \parbf{Proof.}
-Let $\gamma$ be the short arcof a great circle%
+Let $\gamma$ be the short arc of a great circle%
 \footnote{A great circle is the intersection of the sphere with a plane passing thru its center.}
 from $u$ to $v$ in $\mathbb{S}^2$.
 Note that $\length\gamma=\measuredangle(u,v)$.
@@ -549,7 +549,7 @@ By \ref{obs:S2-length},
 &<\pi.
 \end{align*}
 
-Denote by $z$ be the midpoint between $p$ and $q$ in $\mathbb{S}^2$;
+Denote by $z$ the midpoint between $p$ and $q$ in $\mathbb{S}^2$;
 that is, $z$ is the midpoint of the short arc of a great circle from $p$ to $q$ in $\mathbb{S}^2$. 
 We claim that $\gamma$ lies in the open hemisphere with the pole at~$z$.
 If not, $\gamma$ intersects the equator at some point~$r$.

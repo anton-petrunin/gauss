@@ -1,21 +1,16 @@
 \chapter{Curvature}
 \label{chap:curve-curvature}
 
-Тhe term curvature is used for anything that measures how much a geometric object deviates from being \textit{straight}, whatever that may mean.
+The term curvature is used for anything that measures how much a geometric object deviates from being \textit{straight}, whatever that may mean.
 For curves, the curvature is a pointwise quantitative measure of how much the curve differs from a straight line.
-
-
-
 
 \section{Acceleration of a unit-speed curve}
 
 Recall that any smooth curve can be reparametrized by its arc-length (\ref{prop:arc-length-smooth}).
-The obtained parametrized curve, say $\gamma$, remains to be smooth, and it has unit speed; 
+The obtained parametrized curve, say $\gamma$, remains smooth, and it has unit speed;
 that is, $|\gamma'|=1$.
 From mechanics, you might know that acceleration and velocity are perpendicular if the speed is constant.
 Let us restate it.
-
-
 
 \begin{thm}{Proposition}\label{prop:a'-pertp-a''}
 Assume $\gamma$ is a smooth unit-speed space curve.
@@ -82,7 +77,7 @@ Therefore,
 \left|\frac{d\tan}{ dt}\right|/\left|\frac{ds}{ dt}\right|=
 \frac{|\tan'|}{|\gamma'|}.
 \end{align*}
-It follows that \textit{the tangent indicatrix of a smooth curve $\gamma$ is smooth if the curvature of $\gamma$ does not vanish}.
+It follows that \textit{if the curvature of a smooth curve $\gamma$ does not vanish, then its tangent indicatrix is a smooth curve}; see \ref{sec:Smooth curves}.
 
 \begin{thm}{Exercise}\label{ex:curvature-formulas}
 Use the formulas \ref{eq:tantrix} and \ref{eq:curvature} to show that 
@@ -235,7 +230,7 @@ Then
 Several proofs of this theorem are collected by Serge Tabachnikov~\cite{tabachnikov}.
 The 2-dimensional case of this theorem was proved by Istv\'{a}n F\'{a}ry \cite{fary1950}.
 It was generalized by Don Chakerian \cite{chakerian1962} to higher dimensions.
-The following exercise guides you thru another proof of him \cite{chakerian1964}.
+The following exercise guides you thru another proof by him \cite{chakerian1964}.
 Yet another proof is given in Section~\ref{sec:DNA-poly}.
 
 \begin{thm}{Exercise}\label{ex:DNA}
@@ -292,7 +287,7 @@ Then its tangent indicatrix $\tan\:\mathbb{R}\to \mathbb{S}^1$ defines a monoton
 \end{thm}
 
 The following corollary says that \textit{for convex curves we have equality in Fenchel's theorem} (\ref{thm:fenchel}).
-Later we, in \ref{prop:fenchel=}, we will show that equality holds \textit{only} for convex curves.
+Later, in \ref{prop:fenchel=}, we will show that equality holds \textit{only} for convex curves.
 
 \begin{thm}{Corollary}\label{cor:fenchel=convex}
 Let $\gamma$ be a convex plane curve.
@@ -336,8 +331,8 @@ and, by the exercise, it supports $F$.
 Since $F$ lies on the left from $\gamma$, we get that the $y$-coordinate on $F$ has a minimum at $p$.
 
 Since $F$ is compact, there is a minimum point $p=\gamma(s)$ for the $y$-coordinate.
-The point $p$ might be unique, in this case, $\tan^{-1}\{\vec u\}=s$,
-or $f$ might have a line segment of minimal points in $\gamma$, in this case, $\tan^{-1}\{\vec u\}$ is an arc of $\mathbb{S}^1$.
+The point $p$ might be unique, in this case, $\tan^{-1}\{\vec u\}=\{s\}$,
+or $F$ might have a line segment of minimal points in $\gamma$, in this case, $\tan^{-1}\{\vec u\}$ is an arc of $\mathbb{S}^1$.
 It follows that $\tan\:\mathbb{S}^1\to \mathbb{S}^1$ is monotone.
 
 \parit{\ref{SHORT.prop:convex-monotone:open}} 
@@ -382,7 +377,7 @@ In particular, $\vec v$ points from $p$ into $H$, which is equivalent to~\ref{eq
 
 \section{Bow lemma}
 
-The following lemma proved by Erhard Schmidt \cite{schmidt}; it generalizes the result of by Axel Schur \cite{shur}.
+The following lemma proved by Erhard Schmidt \cite{schmidt}; it generalizes a result by Axel Schur \cite{shur}.
 
 \begin{wrapfigure}{r}{39 mm}
 \vskip-6mm
@@ -440,7 +435,7 @@ Consider two unit vectors
 \vec u_2=\tan_2(s_0)=\gamma_2'(s_0).\]
 Note that $\gamma_1(b)$ lies in the direction of $\vec u_1$ from $\gamma_1(a)$.
 
-Lets us show that 
+Let us show that
 \[\measuredangle(\gamma'_1(s),\vec u_1)\ge \measuredangle(\gamma'_2(s),\vec u_2)
 \eqlbl{<gamma',u}
 \]

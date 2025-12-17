@@ -2721,8 +2721,8 @@ dOt z.p;
 label.bot(btex $p$ etex, z.p);
 label.rt(btex $\vec w$ etex, z.w);
 label.top(btex $\Norm_p$ etex, z.nu);
-label.rt(btex {\color{darkgray} $\gamma_1$} etex, z.a2);
-label.rt(btex $\gamma_2$ etex, z.b2);
+label.rt(btex {\color{darkgray} $\gamma_2$} etex, z.a2);
+label.rt(btex $\gamma_1$ etex, z.b2);
 label(btex $\Pi$ etex, .5[z.b0,z.nu]);
 endfig;
 
@@ -3726,6 +3726,26 @@ draw p0;
 dOt origin;
 
 label.rt(btex $\alpha$ etex, (1,1)*u);
+endfig;
+
+beginfig(1577)
+save u,p;
+path p[];
+u:=.5cm;
+
+z.a=(-1,1)*u;
+z.b=(0,-1)*u;
+z.bb=(0,-.3)*u;
+z.bbb=(0,.3)*u;
+z.c=(1,1)*u;
+z.d1=(.7,1)*u;
+z.d2=(.7,-.5)*u;
+z.d3=(-.7,.5)*u;
+z.d4=(-.7,-1)*u;
+
+draw z.a{1,0}...z.b{-1,.6}..z.bb{1,0}..z.b{-1,-.6}...{1,0}z.c;
+draw (z.a{0,-1}...z.b{1,-.6}..z.bbb{-1,0}..z.b{1,.6}...{0,1}z.c) shifted ((2.5,0)*u);
+draw (z.d1{.2,-1}..z.d2{-1,-1}..tension 1.3..z.d3{1,0}..z.d2{1,0}..tension 1.3..z.d3{-1,-1}..{.2,-1}z.d4) shifted ((5.3,0)*u);
 endfig;
 
 beginfig(1580) 

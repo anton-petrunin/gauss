@@ -103,7 +103,7 @@ For more on the geometry of bicycle tracks, see the survey of Robert Foote, Mark
 \begin{thm}{Theorem}\label{thm:fund-curves-2D}
 Let $s\mapsto \skur(s)$ be a smooth real-valued function defined on a real interval $\mathbb{I}$.
 Then there is a smooth unit-speed curve $\gamma\:\mathbb{I}\to\mathbb{R}^2$ with signed curvature $\skur(s)$.
-Moreover, $\gamma$ is uniquely defined up to a orientation-preserving motion of the plane.
+Moreover, $\gamma$ is uniquely defined up to an orientation-preserving isometry of the plane.
 \end{thm}
 
 This theorem is a partial case of its $3$-dimensional analog (\ref{thm:fund-curves}), but we present a direct proof.
@@ -140,7 +140,7 @@ This proves the existence;
 it remains to prove the uniqueness.
 
 Assume $\gamma_1$ and $\gamma_2$ are two curves that satisfy the assumptions of the theorem.
-Applying a rigid motion, we can assume that $\gamma_1(s_0)\z=\gamma_2(s_0)$, and both curves have the same Frenet frame at $s_0$.
+Applying an isometry, we can assume that $\gamma_1(s_0)\z=\gamma_2(s_0)$, and both curves have the same Frenet frame at $s_0$.
 Let us denote by $\tan_1,\norm_1$ and $\tan_2,\norm_2$ the Frenet frames of $\gamma_1$ and $\gamma_2$, respectively.
 Both triples $\gamma_i,\tan_i,\norm_i$ satisfy the following system of ordinary differential equations 
 \[
@@ -165,7 +165,7 @@ The proof of the theorem implies the following.
 
 
 \begin{thm}{Corollary}\label{cor:2D-angle}
-For any smooth curve unit-speed curve $\gamma\:\mathbb{I}\to\mathbb{R}^2$ there is a continuous argument $\theta\:\mathbb{I}\to\mathbb{R}$.
+For any smooth unit-speed curve $\gamma\:\mathbb{I}\to\mathbb{R}^2$ there is a continuous argument $\theta\:\mathbb{I}\to\mathbb{R}$.
 Moreover 
 \[\theta'(s)=\skur(s),\]
 where $\skur$ denotes the signed curvature of~$\gamma$.
@@ -340,7 +340,7 @@ Given a real parameter $\ell$, consider
 the curve $\gamma_\ell(t)\z=\gamma(t)\z+\ell\cdot\norm(t)$; it is called a \index{parallel!curve}\emph{parallel curve} of $\gamma$ at signed distance~$\ell$.
 
 \begin{subthm}{ex:length':reg}
-Show that the parametrization $\gamma_\ell$ is a regular if $\ell\cdot \skur(t)_\gamma\ne 1$ for all~$t$.
+Show that the parametrization $\gamma_\ell$ is regular if $\ell\cdot \skur(t)_\gamma\ne 1$ for all~$t$.
 \end{subthm}
  
 \begin{subthm}{ex:length':formula}
@@ -375,7 +375,7 @@ Therefore, $\norm$ points in the direction of the $y$-axis.
 Then
 \begin{align*}\theta(s)&=\int_{0}^s\skur\cdot dt=\skur\cdot s
 \end{align*}
-is a continuous argument of $\gamma$, see \ref{cor:2D-angle}.
+is a continuous argument of $\sigma$, see \ref{cor:2D-angle}.
 Therefore,
 \[\sigma'(s)=(\,\cos(\skur\cdot s),\,\sin(\skur\cdot s)\,).\]
 It remains to integrate the last identity.

@@ -74,8 +74,7 @@ is the so-called \index{Hessian matrix}\emph{Hessian matrix} of $f$ at $(0,0)$.\
 
 \section{Principal curvatures}\label{sec:Principal curvatures}
 
-The tangent-normal coordinates give an almost canonically depend on the point $p$;
-it is unique up to a rotation of the $(x,y)$-plane.
+The tangent-normal coordinates are almost canonical; they depend on the point $p$ and are unique up to a rotation of the $(x,y)$-plane.
 Rotating the $(x,y)$-plane results in rewriting 
 the Hessian matrix $M_p$ in the new basis.
 
@@ -159,7 +158,7 @@ is called the \index{curvature}\index{mean curvature}\emph{mean curvature}%
 \footnote{Some authors define it as $\tfrac12\cdot(k_1(p)+ k_2(p))$ --- the mean value of the principal curvatures. It suits the name better, but it is not as convenient when it comes to computations.}
 at~$p$.
 We may also denote it by $H(p)_\Sigma$.
-The mean curvature can be also interpreted as the trace of the Hessian matrix $M_p\z=
+The mean curvature can also be interpreted as the trace of the Hessian matrix $M_p\z=
 (\begin{smallmatrix}
 \ell&m
 \\
@@ -211,10 +210,10 @@ Recall that $d_p\Norm$ is a linear map $\T_p\Sigma\to \T_{\Norm(p)}\mathbb{S}^2$
 Note that $\T_p\Sigma$ coincides with $\T_{\Norm(p)}\mathbb{S}^2$ --- both of them are normal subspaces to $\Norm(p)$.
 Therefore, $\Shape_p$ is indeed a linear operator $\T_p\Sigma\to \T_p\Sigma$ (the latter also will follow from \ref{thm:shape-chart}).
 
-For a point $p\in \Sigma$, the shape operator of a tangent vector $\vec w\in \T_p$ will be denoted by $\Shape\vec w$ if it is clear from the context which base point $p$ and which surface we are working with;
+The value of the shape operator on a tangent vector $\vec w\in \T_p\Sigma$ can be denoted by $\Shape\vec w$
+if it is clear from the context which base point $p$ and which surface $\Sigma$ we are working with;
 otherwise, we may use the notations 
-\[\Shape_p(\vec w)\quad\text{or}\quad \Shape_p(\vec w)_\Sigma\]
-as the situation requires.
+\[\Shape_p(\vec w)\quad\text{or}\quad \Shape_p(\vec w)_\Sigma.\]
 
 \begin{thm}{Theorem}\label{thm:shape-chart}
 Suppose $(u,v)\mapsto s(u,v)$ is a smooth map to a smooth surface $\Sigma$ with unit normal field $\Norm$.
@@ -286,7 +285,6 @@ Show that the shape operator is \index{self-adjoint operator}\emph{self-adjoint}
 for any $\vec u,\vec v\in\T_p$.
 \end{thm}
 
-Let us denote by $\vec i$, $\vec j$ and $\vec k$ the standard basis in the $\mathbb{R}^3$.\index{10i@$\vec i$, $\vec j$, $\vec k$ (standard basis)}
 Recall that the components $\ell$, $m$, and $n$ of the Hessian matrix are defined in Section~\ref{sec:lmn}.
 
 \begin{thm}{Corollary}\label{cor:Shape(ij)}
@@ -300,7 +298,7 @@ Then
 &
 \Shape\vec j&=m\cdot \vec i+n\cdot\vec j,
 \end{align*}
-for the standard basis $\vec i,\vec j,\vec k$.
+where $\vec i,\vec j,\vec k$\index{10i@$\vec i$, $\vec j$, $\vec k$ (standard basis)} is the standard basis in $\mathbb{R}^3$.
 That is, the multiplication by the Hessian matrix describes its shape operator.
 \end{thm}
 
@@ -330,15 +328,15 @@ It remains to apply \ref{thm:shape-chart}.
 \qeds
 
 \begin{thm}{Corollary}\label{cor:intK}
-Let $\Sigma$ be a smooth surface with orientation defined by a unit normal field $\Norm$.
-Suppose the spherical map $\Norm\:\Sigma\to\mathbb{S}^2$ is injective.
-Then 
-\[\iint_\Sigma|K|=\area(\Norm(\Sigma)).\]
+Let $\Sigma$ be a smooth surface whose Gaussian curvature never vanishes.
+Assume that its spherical map $\Norm\:\Sigma\to\mathbb{S}^2$ is injective.
+Then
+\[\iint_\Sigma |K| = \area(\Norm(\Sigma)).\]
 \end{thm}
 
 \parbf{Proof.}
 Choose an orthonormal basis of $\T_p$ consisting of principal directions,
-so the shape operator can be expressed by the matrix 
+so the shape operator can be expressed by the matrix
 $(\begin{smallmatrix}
  k_1
  &0
@@ -347,17 +345,21 @@ $(\begin{smallmatrix}
  &k_2
  \end{smallmatrix})$.
 
-Since $\Shape_p=-d_p\Norm$, \ref{cor:Shape(ij)} implies that
-\[\jac_p\Norm=|\det(\begin{smallmatrix}
- k_1
- &0
- \\
- 0
- &k_2
- \end{smallmatrix})|=|K(p)|.\]
-By the area formula (\ref{prop:surface-integral}), the statement follows.
+Since $\Shape_p=-d_p\Norm$, it follows from \ref{cor:Shape(ij)} that
+\[
+\jac_p\Norm
+=
+\left|\det\bigl(\begin{smallmatrix}
+k_1 & 0\\
+0   & k_2
+\end{smallmatrix}\bigr)\right|
+= |K(p)| \ne 0
+\]
+for every point $p\in\Sigma$.
+In particular, the map $\Norm$ is regular and, since it is injective,
+it defines a diffeomorphism $\Sigma\to\Norm(\Sigma)$.
+It remains to apply the area formula (\ref{prop:surface-integral}).
 \qeds
-
 
 \begin{thm}{Exercise}\label{ex:normal-curvature=const}
 Let $\Sigma$ be a smooth surface with orientation defined by a unit normal field $\Norm$.
@@ -366,7 +368,8 @@ Suppose the principal curvatures of $\Sigma$ are 1 at all points.
 \begin{subthm}{ex:normal-curvature=const:a} Show that $\Shape_p(\vec w)=\vec w$ for any $p\in\Sigma$ and $\vec w\in \T_p\Sigma$.
 \end{subthm}
 
-\begin{subthm}{ex:normal-curvature=const:b}Show that $q=p+\Norm(p)$ is constant; that is, the point $q$ does not depend on $p\in\Sigma$.
+\begin{subthm}{ex:normal-curvature=const:b}
+Show that the point $q=p+\Norm(p)$ does not depend on $p\in\Sigma$.
 Conclude that $\Sigma$ is a subset of the unit sphere centered at~$q$.
 \end{subthm}
 
@@ -473,10 +476,10 @@ This vector can also be defined as the vector product $\mu(s)\z\df\Norm(s)\times
 
 Since $\gamma$ is unit-speed, we have that $\gamma''\perp \gamma'$ (see \ref{prop:a'-pertp-a''}).
 Therefore, the acceleration of $\gamma$ can be written as a linear combination of $\mu$ and $\Norm$;
-that is, \index{10k@$k_g$ geodesic curvature}\index{10k@$k_n$ (normal curvature)}
+that is, \index{10k@$k_g$ (geodesic curvature)}\index{10k@$k_n$ (normal curvature)}
 \[\gamma''(s)=k_g(s)\cdot \mu(s)+k_n(s)\cdot\Norm(s).\]
 The values $k_g(s)$ and $k_n(s)$ are called \index{curvature}\index{geodesic!curvature}\emph{geodesic} and \index{normal!curvature}\emph{normal curvatures} of $\gamma$ at $s$, respectively.
-Since the frame $\tan(s),\mu(s),\Norm(s)$ is orthonormal, these curvatures can be also written as the following scalar products:
+Since the frame $\tan(s),\mu(s),\Norm(s)$ is orthonormal, these curvatures can also be written as the following scalar products:
 \begin{align*}
 k_g(s)&=\langle \gamma''(s),\mu(s)\rangle= 
 &
@@ -680,7 +683,7 @@ it was constructed by Vladimir Lagunov \cite{lagunov-1961}.
 \parbf{Construction.}
 Let us start with a body of revolution $V_1$ whose cross-section is shown on the next picture.
 The boundary curve of the cross-section consists of $6$ long horizontal line segments included in $3$ simple closed smooth curves.
-(To make the curves smooth, one has to use cutoffs and mollifiers from Section~\ref{sec:analysis}.)
+(To make the curves smooth, one has to use cutoffs and mollifiers from Appendix~\ref{sec:analysis}.)
 The boundary of $V_1$ has $3$ components, each of which is a smooth sphere.
 
 \begin{figure}[ht!]
@@ -730,7 +733,7 @@ Assuming that the holes are large, its boundary can be made so that its principa
 
 
 The bound $r_2=\tfrac2{\sqrt{3}}-1$ is optimal;
-this and more was proved by Vladimir Lagunov and Abram Fet \cite{lagunov-1960, lagunov-fet-1963, lagunov-fet-1965}.
+this and more was proved by Vladimir Lagunov and Abram Fet \cite{lagunov-1960, lagunov-1961, lagunov-fet-1963, lagunov-fet-1965}.
 
 The surface of $V_3$ in Lagunov's fishbowl has genus $2$;
 that is, it can be parametrized by a sphere with two handles.
@@ -755,6 +758,8 @@ This way we get a sphere with two handles.
 
 \begin{thm}{Exercise}\label{ex:lagunov-genus4}
 Modify Lagunov's construction to make the boundary surface a sphere with $4$ handles.
+
+Try to make the boundary surface a sphere with $3$ handles.
 \end{thm}
 
 %Recall that Lagunov's fishbowl contains a ball of radius $r_2=\tfrac2{\sqrt{3}}-1$.

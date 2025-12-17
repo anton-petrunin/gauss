@@ -25,10 +25,10 @@ More precisely,
 it has \index{order of contact}\emph{first-order contact} with $\Sigma$ at $p$;
 that is, $\rho(q)\z=o(|p-q|)$, where $q\in \Sigma$, and $\rho(q)$ denotes the distance from $q$ to $\T_p$.
 
-An assignment of a tangent vector $\vec v_p$ to each point $p$ of the surface $\Sigma$ is called a \emph{tangent vector field} if $\vec v_p$ depends smoothly of $p$.
+An assignment of a tangent vector $\vec v_p$ to each point $p$ of the surface $\Sigma$ is called a \emph{tangent vector field} if $\vec v_p$ depends smoothly on $p$.
 More precisely, for any chart $s$ we have
 \[\vec v_{s(u,v)}=a(u,v)\cdot s_u+b(u,v)\cdot s_v\]
-for smooth functions $a$ and $b$ defined in the domain $s$.
+for smooth functions $a$ and $b$ defined in the domain of $s$.
 
 \parbf{Proof.}
 Fix a chart $s$ at~$p$.
@@ -147,8 +147,8 @@ We will not use this approach in the sequel, but it is better to know about it.
 
 A tangent vector $\vec w\in \T_p$ to a smooth surface $\Sigma$ 
 defines a linear functional%
-\footnote{Term {}\emph{functional} is used for functions that take a function as an argument and return a number.} $D_{\vec w}$ that swallows a smooth function $\phi$ on $\Sigma$ and spits its directional derivative $D_{\vec w}\phi$.
-The functional $D$ obeys the product rule:
+\footnote{The term {}\emph{functional} is used for functions that take a function as an argument and return a number.} $D_{\vec w}$ that swallows a smooth function $\phi$ on $\Sigma$ and spits its directional derivative $D_{\vec w}\phi$.
+The functional $D_{\vec w}$ obeys the product rule:
 \[D_{\vec w}(\phi\cdot\psi)=(D_{\vec w}\phi)\cdot \psi(p)+\phi(p)\cdot(D_{\vec w}\psi).
 \eqlbl{eq:tangent-functional}\]
 
@@ -221,7 +221,7 @@ Then, the value $\jac_{p_0} s$ can be found using the following formulas:
 \\
 &=\sqrt{\det[(\Jac s)^\top\cdot \Jac s ]},
 \end{align*}
-where $\Jac s$ denotes the Jacobian matrix of $s$; see Section~\ref{sec:Multivariable calculus}.
+where $\Jac s$ denotes the Jacobian matrix of $s$; see Appendix~\ref{sec:Multivariable calculus}.
 
 \section{Surface integral and area}
 
@@ -253,7 +253,7 @@ The area of a region $R$ in a smooth surface $\Sigma$ is defined as the surface 
 The following proposition is the substitution rule for surface integral.
 
 \begin{thm}{Area formula}\label{prop:surface-integral}
-Suppose $s\:\Sigma_0\to \Sigma_1$ is a diffeomorphism between a smooth surfaces.
+Suppose $s\:\Sigma_0\to \Sigma_1$ is a diffeomorphism between smooth surfaces.
 Consider a region $R\subset \Sigma_0$ and a smooth function $f\:\Sigma_1\to\mathbb{R}$.
 Assume that either $R$ is compact or $f$ is non-negative.
 Then 
@@ -271,7 +271,7 @@ Follows from \ref{eq:jac-composition} and the definition of surface integral.
 \qeds
 
 Let $\Sigma_1$ and $\Sigma_2$ be two smooth surfaces.
-A map $f\:\Sigma_1\to \Sigma_2$ is called \index{length-nonincreasing}\emph{length-nonincreasing} if, for any curve $\gamma$ in $\Sigma$ we have $\length\gamma\z\ge \length (f\circ\gamma)$. 
+A map $f\:\Sigma_1\to \Sigma_2$ is called \index{length-nonincreasing}\emph{length-nonincreasing} if, for any curve $\gamma$ in $\Sigma_1$ we have $\length\gamma\z\ge \length (f\circ\gamma)$.
 The following theorem provides a more natural definition of area.
 Despite its intuitive statement, the proof is well beyond the scope of our book;
 it is based on a generalization of the area formula that works for Lipschitz maps \cite[3.2.3]{federer}.
@@ -280,7 +280,7 @@ it is based on a generalization of the area formula that works for Lipschitz map
 The area functional satisfies the following properties:
 
 \begin{subthm}{thm:area-axioms:aditivity}
-Sigma-aditivity: 
+Sigma-additivity:
 Let $R_1,R_2,\dots$ be a sequence of disjoint Borel sets in a smooth surface.
 Then 
 \[\area (R_1\cup R_2\cup \dots)=\area R_1+\area R_2+{}\dots\]
@@ -311,7 +311,7 @@ This example and different approaches to the notion of the area are discussed in
 \section{Normal vector and orientation}
 
 A surface $\Sigma$ is called \index{oriented surface}\emph{oriented} if it is equipped with a unit normal vector field $\Norm$ or \index{10nu@$\Norm$ (normal field)}
-\index{normal!filed}\emph{normal filed};
+\index{normal!field}\emph{normal field};
 that is, a continuous map $p\mapsto \Norm(p)$ such that $\Norm(p)\perp\T_p$ and $|\Norm(p)|=1$ for any~$p$.
 The choice of the field $\Norm$ is called the {}\emph{orientation} of~$\Sigma$.
 A surface $\Sigma$ is called {}\emph{orientable} if it can be oriented.
@@ -366,7 +366,7 @@ In particular, the Möbius strip does not lie on a proper smooth surface without
 Let $\Sigma$ be a smooth surface.
 Suppose $f\:\Sigma\z\to\mathbb{R}$ is a smooth function.
 Then for any constant $r_0$ there is an arbitrarily close value $r$ such that 
-each connected component of the level set $L_r=\set{x\in\mathbb{R}^3}{f(x)=r}$ is a smooth curve.
+each connected component of the level set $L_r=\set{x\in\Sigma}{f(x)=r}$ is a smooth curve.
 \end{thm}
 
 \parbf{Proof.}

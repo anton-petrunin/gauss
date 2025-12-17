@@ -2,7 +2,7 @@
 \chaptermark{}
 %\addcontentsline{toc}{chapter}{Preliminaries}
 
-\vskip-0mm
+\vskip0mm
 
 {\footnotesize
 
@@ -16,7 +16,8 @@ Euclidean space.
 In this section, we briefly discuss its generalization and fix notations that will be used further.
 All these topics are discussed in detail in the introductory part of the book by Dmitri Burago, Yuri Burago, and Sergei Ivanov \cite{burago-burago-ivanov}.
 
-\begin{multicols}{2}
+\setlength{\multicolsep}{20pt}
+\spell{\begin{multicols}{2}}{}
 
 \subsection*{Definitions}
 
@@ -94,7 +95,7 @@ $B(p,\tfrac32)\subsetneq B(q,1)$ holds.
 
 \end{thm}
 
-\subsection*{Isometries and motions} 
+\subsection*{Isometries}
 
 Let $\spc{X}$ and $\spc{Y}$ be two metric spaces. 
 A~map $f\:\spc{X} \z\to \spc{Y}$
@@ -105,7 +106,6 @@ $$\dist{f(x)}{f(y)}{\spc{Y}}
 for any $x,y\in {\spc{X}}$.
 
 A bijective distance-preserving map is called an \index{isometry}\emph{isometry}. 
-An isometry from a metric space to itself is also referred a \index{motion}\emph{motion}.
 Two metric spaces are called {}\emph{isometric} if there exists an isometry between them.
 
 \begin{thm}{Exercise}\label{ex:dist-preserv=>injective}
@@ -150,14 +150,14 @@ Let $f\:\spc{X}\to \spc{Y}$ be a {}\emph{distance non-expanding} map between met
 for any $x,y\in \spc{X}$.
 Show that $f$ is continuous.
 \end{thm}
-\end{multicols}
+\spell{\end{multicols}}{}
 
 \section{Topology}\label{sec:topology}
 
 The following material is covered in any introductory text to topology; 
 one of our favorites is a textbook by Czes Kosniowski \cite{kosniowski}.
 
-\begin{multicols}{2}
+\spell{\begin{multicols}{2}}{}
 
 \subsection*{Closed and open sets}
 
@@ -204,7 +204,7 @@ we say that ${\spc{X}}$ is {}\emph{homeomorphic} to $\spc{Y}$,
 or $\spc{X}$ and $\spc{Y}$ are {}\emph{homeomorphic}.
 
 If a metric space $\spc{X}$ is homeomorphic to a known space, for example, plane, sphere, disc, circle, and so on,
-then we may also say that $\spc{X}$ is a \index{topological}\emph{topological} plane, sphere, disc, circle, and so on.
+then we may also say that $\spc{X}$ is a \index{topological surface}\emph{topological} plane, sphere, disc, circle, and so on.
 
 The following theorem characterizes homeomorphisms between compact spaces:
 
@@ -263,12 +263,12 @@ among elementary proofs, one of our favorites is the proof given by Aleksei Fili
 We use mostly the smooth case of this theorem which is simpler.
 An amusing proof of this case was given by Gregory Chambers and Yevgeny Liokumovich \cite{chambers-liokumovich}.
 
-\end{multicols}
+\spell{\end{multicols}}{}
 
 \section{Elementary geometry}
 
 %%%???orientation is not defined???
-\begin{multicols}{2}
+\spell{\begin{multicols}{2}}{}
 \subsection*{Internal angles}
 
 Polygon is defined as a compact set bounded by a closed polygonal line. 
@@ -279,7 +279,7 @@ is defined as the angular measure of the intersection of $P$ with a small circle
 The sum of all the internal angles of an $n$-gon is $(n\z-2)\cdot\pi$. 
 \end{thm}
 
-A clean proof of this theorem can be found, for example, in the paper of Gary Meisters \cite{meisters}.
+A clean proof of this theorem can be found, for example, in \cite{meisters}.
 It uses induction on $n$ and is based on the following nontrivial statement:
 
 \begin{thm}{Claim}
@@ -294,9 +294,9 @@ Then a diagonal of $P$ lies completely in~$P$.
 The {}\emph{measure} of angle with sides $[p,x]$ and $[p,y]$ will be denoted by $\measuredangle\hinge pxy$\index{10aab@$\measuredangle\hinge yxz$ (angle measure)};
 it takes a value in the interval $[0,\pi]$.
 
-The following lemma is simple and useful.
+The following corollary of the cosine rule is simple and useful.
 It says that the angle of a triangle monotonically depends on the opposite side, assuming we keep the other two sides fixed.
-It follows directly from the cosine rule.
+
 
 \begin{thm}{Monotonicity lemma}\label{lem:angle-monotonicity}
 Let $x$, $y$, $z$, $x^{*}$, $y^{*}$, and $z^{*}$ be 6 points such that $\dist{x}{y}{}\z=|x^{*}-y^{*}|>0$ and $|y-z|=|y^{*}-z^{*}|>0$.
@@ -373,11 +373,11 @@ It follows that
 It remains to apply \ref{eq:area(S2)} and \ref{eq:area(Sa)}.
 \qeds
 
-\end{multicols}
+\spell{\end{multicols}}{}
 
 \section{Convex geometry}
 
-\begin{multicols}{2}
+\spell{\begin{multicols}{2}}{}
 A set $X$ in the Euclidean space is called \index{convex!set}\emph{convex} if, for any two points $x,y\in X$, any point $z$ between $x$ and $y$ lies in~$X$.
 It is called  {}\emph{strictly convex} if, for any two points $x,y\in X$, any point $z$ between $x$ and $y$ lies in the interior of~$X$.
 
@@ -402,7 +402,7 @@ Moreover, for any boundary point $p\in\partial K$, there is a plane $\Pi$ \index
 that is, $\Pi\ni p$ and $K$ lies in a closed half-space bounded by $\Pi$
 \end{thm}
 
-\end{multicols}
+\spell{\end{multicols}}{}
 
 \begin{figure*}[h!]
 \begin{minipage}{.48\textwidth}
@@ -417,7 +417,7 @@ that is, $\Pi\ni p$ and $K$ lies in a closed half-space bounded by $\Pi$
 
 \section{Linear algebra}
 
-\begin{multicols}{2}
+\spell{\begin{multicols}{2}}{}
 
 The following theorem can be found in any textbook in linear algebra;
 the book by Sergei Treil \cite{treil} will do.
@@ -469,13 +469,13 @@ x\\y
 &=k_1\cdot x^2+k_2\cdot y^2.
 \end{align*}
 
-\end{multicols}
+\spell{\end{multicols}}{}
 
 \section{Analysis}\label{sec:analysis}
 
 The following material is discussed in any course of real analysis, the classical book by Walter Rudin \cite{rudin} is one of our favorites.
 
-\begin{multicols}{2}
+\spell{\begin{multicols}{2}}{}
 
 \subsection*{Measurable functions}
 
@@ -497,7 +497,7 @@ Recall that a function $f$ between metric spaces is called \index{Lipschitz func
 for all values $x$ and $y$ in the domain of definition of~$f$.
 
 The following theorem makes it possible to extend many of results about smooth functions to Lipschitz functions.
-Recall that {}\emph{almost all} means all values, with exceptions in a set of zero {}\emph{Lebesgue measure}.
+Recall that {}\emph{almost all} means all values, with exceptions in a set of zero Lebesgue measure.
 
 \begin{thm}{Rademacher's theorem}\label{thm:rademacher}
 Let $f\:[a,b]\to\mathbb{R}$ be a Lipschitz function.
@@ -603,14 +603,14 @@ It mimics the step function and can be defined the following way: \label{page:si
 \df 
 \int_{-\infty}^t b_\epsilon(x)\cdot dx.\]
 
-\end{multicols}
+\spell{\end{multicols}}{}
 
 \section{Multivariable  calculus}\label{sec:Multivariable calculus}
 
 The following material is discussed in any course of multivariable calculus;
 for example, in the already mentioned book by Walter Rudin \cite{rudin}.
 
-\begin{multicols}{2}
+\spell{\begin{multicols}{2}}{}
 
 \subsection*{Regular values}
 
@@ -639,7 +639,7 @@ The following lemma states that \textit{most} values of a smooth map are regular
 Given a smooth map $\bm{f}\colon \Omega \z\to \mathbb{R}^n$ defined on an open set $\Omega\subset \mathbb{R}^m$, almost all values in $\mathbb{R}^n$ are regular.
 \end{thm}
 
-The words \index{almost all}\emph{almost all} mean all values, with the possible exceptions belonging to a set with vanishing {}\emph{Lebesgue measure}.
+The words \index{almost all}\emph{almost all} mean all values, with the possible exceptions belonging to a set with vanishing Lebesgue measure.
 In particular, if one chooses a random value equidistributed in an arbitrarily small ball $B\z\subset \mathbb{R}^n$, then it is a regular value of $\bm{f}$ with probability~$1$.
 
 Note that if $m<n$, then any point $\bm{y}=\bm{f}(\bm{x})$ is \emph{not} a regular value of $\bm{f}$.
@@ -650,7 +650,7 @@ In this case, the theorem states that almost all points in $\mathbb{R}^n$, do \t
 \subsection*{Inverse function theorem}
 
 The \index{inverse function theorem}\emph{inverse function theorem} gives an if condition for a map $\bm{f}$ to be invertible in a neighborhood of a given point $\bm{x}$.
-The condition is formulated in terms of the Jacobian matrix of $\bm{f}$ at $\bm{x}$.
+The condition is formulated in terms of $\Jac_{\bm{x}}\bm{f}$ --- the Jacobian matrix of $\bm{f}$ at $\bm{x}$.
 
 The \index{implicit function theorem}\emph{implicit function theorem} is its close relative and a corollary.
 It is used when we need to pass from parametric to implicit descriptions of curves and surfaces.
@@ -661,8 +661,7 @@ We use these two theorems only for $n\le 3$.
 \begin{thm}{Inverse function theorem}\label{thm:inverse}
 Let $\bm{f}\z=(f_1,\dots,f_n)\:\Omega\to\mathbb{R}^n$ be a smooth map
 defined on an open set $\Omega\subset \mathbb{R}^n$.
-Assume the Jacobian matrix
-$\Jac_{\bm{x}}\bm{f}$
+Assume that $\Jac_{\bm{x}}\bm{f}$
 is invertible at $\bm{x}\in \Omega$.
 Then there is a smooth map $\bm{h}\:\Phi\to\mathbb{R}^n$ defined in an open neighborhood $\Phi$ of ${\bm{y}}\z=\bm{f}(\bm{x})$ that is a {}\emph{local inverse of $\bm{f}$ at $\bm{x}$};
 that is, there is a neighborhood $\Psi\ni \bm{x}$ such that
@@ -674,24 +673,25 @@ and the first and second partial derivatives $\tfrac{\partial f_i}{\partial x_j}
 \end{thm}
 
 \begin{thm}{Implicit function theorem}\label{thm:imlicit}
-Let $\bm{f}\z=(f_1,\dots,f_n)\:\Omega\to\mathbb{R}^n$ be a smooth map, defined on an open subset $\Omega\subset\mathbb{R}^{n+m}$, where
+Let $\bm{f}\z=(f_1,\dots,f_n)\:\Omega\to\mathbb{R}^n$ be a smooth map defined on an open subset $\Omega\subset\mathbb{R}^{n+m}$, where
 $m,n\z\ge 1$.
-Let us consider $\mathbb{R}^{n+m}$ as a product space $\mathbb{R}^n\times \mathbb{R}^m$ with coordinates 
-$x_1,\dots,x_n,y_1,\dots,y_m$.
+Regard $\mathbb{R}^{n+m}$ as a product space $\mathbb{R}^n\times \mathbb{R}^m$ with coordinates
+$(\bm{x},\bm{y})\z=(x_1,\dots,x_n,y_1,\dots,y_m)$.
 Consider the following matrix 
 \[
 M=\begin{pmatrix}
 \dfrac{\partial f_1}{\partial x_1} & \cdots & \dfrac{\partial f_1}{\partial x_n}\\
 \vdots & \ddots & \vdots\\
 \dfrac{\partial f_n}{\partial x_1} & \cdots & \dfrac{\partial f_n}{\partial x_n} \end{pmatrix}\]
-formed by the first $n$ columns of the Jacobian matrix.
-Assume $M$ is invertible at $\bm{x}\z=(x_1,\dots,x_n,y_1,\dots y_m)\in \Omega$, and $\bm{f}(\bm{x})\z=0$.
-Then there is a neighborhood $\Psi\ni \bm{x}$
-and a smooth function $\bm{h}\:\mathbb{R}^m\to\mathbb{R}^n$ defined in a neighborhood $\Phi\ni 0$ such that
-for any $(x_1,\dots,x_n,y_1,\dots y_m)\z\in \Psi$, the equality
-\[\bm{f}(x_1,\dots,x_n,y_1,\dots y_m)=0\]
+formed by the first $n$ columns of $\Jac_{(\bm{x},\bm{y})}\bm{f}$.
+Assume $M$ is invertible at $(\bm{x},\bm{y})\z\in \Omega$ and $\bm{f}(\bm{x},\bm{y})\z=0$.
+Then there is a smooth function $\bm{h}\:\Phi\z\to\mathbb{R}^n$ defined on a neighborhood $\Phi\ni \bm{y}$ in $\mathbb{R}^{m}$
+and a neighborhood $\Psi\ni (\bm{x},\bm{y})$ in $\mathbb{R}^n\times \mathbb{R}^m$
+such that
+for any $(x_1,\dots,x_n,y_1,\dots, y_m)\z\in \Psi$, the equality
+\[\bm{f}(x_1,\dots,x_n,y_1,\dots, y_m)=\bm{0}\]
 holds if and only if 
-\[(x_1,\dots x_n)=\bm{h}(y_1,\dots y_m).\]
+\[(x_1,\dots,x_n)=\bm{h}(y_1,\dots, y_m).\]
 
 \end{thm}
 
@@ -721,16 +721,16 @@ Then
 
 \subsection*{Convex functions}
 
-The following statements will be used only for $n\le 3$.
+The following statements will be used only in dimensions $\le 3$.
+
+A function $f\:\mathbb{R}^n\to \mathbb{R}$ is called \index{convex!function}\emph{(strictly) convex} (respectively, \emph{concave}) if
+its epigraph $z\ge f(\bm{x})$ (respectively, its subgraph $z\le f(\bm{x})$) is a (strictly) convex set in $\mathbb{R}^n\times \mathbb{R}$.
 
 Let $f\:\mathbb{R}^n\to \mathbb{R}$ be a smooth function (maybe partially defined).
 Choose a vector $\vec w\in \mathbb{R}^n$.
 Given a point $p\in\mathbb{R}^n$ consider the function $\phi(t)=f(p+t\cdot \vec w)$.
 Then the \index{directional derivative}\emph{directional derivative} $(D_{\vec w}f)(p)$ of $f$ at $p$ with respect to vector $\vec w$ is defined by
 \[(D_{\vec w}f)(p)=\phi'(0).\]
-
-А function $f$ is called \index{convex!function}\emph{(strictly) convex} if 
-its epigraph $z\ge f(\bm{x})$ is a (strictly) convex set in $\mathbb{R}^n\times \mathbb{R}$.
 
 \begin{thm}{Theorem}\label{thm:Jensen}
 A smooth function $f\:K\z\to \mathbb{R}$ defined on a convex subset $K\subset\mathbb{R}^n$ is convex if and only if one of the following equivalent conditions holds:
@@ -760,13 +760,13 @@ For any $x_0,x_1\in K$, we have
 \end{thm}
 
 
-\end{multicols}
+\spell{\end{multicols}}{}
 
 \section{Ordinary differential equations}
 
 The following material is discussed at the beginning of any course of ordinary differential equations; the classical book by Vladimir Arnold \cite{arnold} is one of our favorites.
 
-\begin{multicols}{2}
+\spell{\begin{multicols}{2}}{}
 
 \subsection*{First-order equations}
 
@@ -840,5 +840,5 @@ In particular, we get local existence and uniqueness for solutions of higher-ord
 one only has to assume that
 $\Omega\z\subset \mathbb{R}^{n\cdot k}\times \mathbb{R}$, and the initial data consists of $\bm{x}(t_0)$, $\bm{x}'(t_0),\dots,\bm{x}^{(k-1)}(t_0)$.
 
-\end{multicols}
+\spell{\end{multicols}}{}
 }

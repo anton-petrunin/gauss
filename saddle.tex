@@ -3,22 +3,30 @@
 
 \section{Definitions}
 
-
-We say two smooth surfaces $\Sigma_1$ and $\Sigma_2$ are \index{tangent!surfaces}\emph{tangent} at a point $p \in \Sigma_1 \cap \Sigma_2$ if they share the tangent plane at this point.
+Two smooth surfaces $\Sigma_1$ and $\Sigma_2$ are \index{tangent!surfaces}\emph{tangent} at a point $p \z\in \Sigma_1 \cap \Sigma_2$ if they share the tangent plane at $p$.
+In this case their normals at $p$ either coincide or are opposite.
 If the surfaces are oriented, we say they are \index{cooriented and counteroriented!surfaces}\emph{cooriented} if they have a common unit normal vector at $p$.
 If their normal vectors at $p$ point in opposite directions, we say the surfaces are \index{}\emph{counteroriented}.
 
-If there is a neighborhood $U$ of $p$ such that $\Sigma_1\cap U$ lies on one side from $\Sigma_2$ in $U$, then we say that $\Sigma_2$ \index{local support}\emph{locally supports} $\Sigma_1$ at~$p$.
-If this happens, then $\Sigma_1$ and $\Sigma_2$ have to be tangent at $p$, and after adjusting the orientation of one of them, we can assume they are cooriented.
+A surface $\Sigma_1$ \index{local support}\emph{locally supports} a surface $\Sigma_2$ at a point $p$ if
+$p$ is a common point of the two surfaces and there is a neighborhood $U$ of $p$ such that
+$\Sigma_2\cap U$ lies entirely on one side of $\Sigma_1$ in $U$.
+According to the next exercise, such surfaces must be tangent at $p$; after choosing their orientations,
+we may assume that they are cooriented at $p$.
+
+\begin{thm}{Exercise}\label{ex:supp>tan}
+Let a smooth surface $\Sigma_1$ locally support a smooth surface $\Sigma_2$ at a point~$p$.
+Prove that $\Sigma_1$ is tangent to $\Sigma_2$ at $p$.
+\end{thm}
 
 Now, suppose $\Sigma_1$ and $\Sigma_2$ are cooriented at $p$.
 Let us describe $\Sigma_1$ and $\Sigma_2$ locally at $p$ in tangent-normal coordinates as the graphs of functions $f_1$ and $f_2$ respectively.
 $\Sigma_2$ locally supports $\Sigma_1$ at $p$ if and only if either
 \[   f_1(x,y)\ge f_2(x,y)
-\quad\text{or}\quad
-f_1(x,y)\le f_2(x,y)\]
-holds for all $(x,y)$ sufficiently close to the origin.
-In the former case, we say  $\Sigma_2$ locally supports $\Sigma_1$ \index{supporting!surface}\emph{from the outside}, and in the latter we say $\Sigma_2$ locally supports $\Sigma_1$ \emph{from the inside}.
+\quad\text{(\,or}\quad
+f_1(x,y)\le f_2(x,y)\,)\]
+holds for all $(x,y)$ sufficiently close to the origin;
+in this case, we say $\Sigma_2$ locally supports $\Sigma_1$ \index{supporting!surface}\emph{from the outside} (respectively, \emph{from the inside}).
 
 
 
@@ -45,7 +53,7 @@ Let $\gamma_1$ and $\gamma_2$ be the curves of intersection of $\Sigma_1$ and $\
 
 Let us orient $\Pi$ so that the common normal vector $\Norm_p$ for both surfaces at $p$ points to the left from ${\vec w}$.
 Further, let us parametrize both curves so that they are running in the direction of ${\vec w}$ at $p$ and are therefore cooriented.
-In this case, the curve $\gamma_1$ supports the curve $\gamma_2$ from the right.
+In this case, the curve $\gamma_1$ supports the curve $\gamma_2$ from the left.
 
 \begin{wrapfigure}{o}{40 mm}
 \vskip-4mm
@@ -281,7 +289,7 @@ Conclude that $\xi\z\mapsto \rho(\xi)\cdot \xi$ is a smooth regular parametrizat
 }
 
 \begin{thm}{Theorem}\label{thm:convex-open}
-Suppose $\Sigma$ is an open smooth surface bounds a strictly convex closed region.
+Suppose $\Sigma$ is an open smooth surface that bounds a strictly convex closed region.
 Then there is a coordinate system in which $\Sigma$ is the graph $z\z=f(x,y)$ of a convex function $f$ defined on a convex open region $\Omega$ of the $(x,y)$-plane.
 Moreover, $f(x_n,y_n)\to\infty$ as $(x_n,y_n)\to(x_\infty,y_\infty)\z\in \partial\Omega$.
 
@@ -328,7 +336,7 @@ Prove the last statement in \ref{thm:convex-open}.
 
 \begin{thm}{Exercise}\label{ex:open+convex=plane}
 Show that any open surface $\Sigma$ with positive Gauss curvature is a topological plane;
-that is, there is an embedding $\mathbb{R}^2\to\mathbb{R}^3$ with image~$\Sigma$.
+that is, there is an embedding $\mathbb{R}^2\hookrightarrow\mathbb{R}^3$ with image~$\Sigma$.
 
 Try to show that $\Sigma$ is a smooth plane;
 that is, the embedding $f$ can be made smooth and regular.
@@ -533,8 +541,7 @@ namely in the definition of hats one can assume that the disc is smooth.
 \begin{thm}{Exercise}\label{ex:disc-hat}
 Let $f\:\mathbb{R}^2\to\mathbb{R}$ be a smooth strictly convex function with a minimum at the origin.
 Show that the set $F_\epsilon$ in the graph $z=f(x,y)$ defined by the inequality $f(x,y)\le \epsilon$ is a smooth disc for any $\epsilon>0$;
-that is, there is a diffeomorphism 
-$F_\epsilon$ to the unit disc $\Delta\z=\set{(x,y)\in\mathbb{R}^2}{x^2+y^2\le 1}$.
+that is, there is a diffeomorphism from $F_\epsilon$ to the unit disc $\Delta\z=\set{(x,y)\in\mathbb{R}^2}{x^2+y^2\le 1}$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:saddle-linear}
@@ -620,7 +627,7 @@ we can assume that $\Delta$ is a compact surface with its boundary line in $\Pi$
 Since the plane $\Pi$ is convex, this statement contradicts \ref{lem:convex-saddle}.
 
 Summarizing, $\Theta$ is an open convex set of $H$ that contains all points above $z=r$.
-By convexity, together with any point $w$, the set $\Theta$ contains all points on the half-lines that start as $w$ and \textit{point up}; that is, in directions with positive $z$-coordinate.
+By convexity, together with any point $w$, the set $\Theta$ contains all points on the half-lines that start at $w$ and \textit{point up}; that is, in directions with positive $z$-coordinate.
 In other words, with any point $w$,
 the set $\Theta$ contains all points with larger $z$-coordinates.
 \begin{figure}[!ht]
@@ -686,5 +693,5 @@ a proof is based on the same idea, but it is more technical.
 
 By \ref{prop:hat}, saddle surfaces can be defined as smooth surfaces without hats.
 This definition can be used for arbitrary surfaces, not necessarily smooth.
-Some results, for example, Bernstein's characterization of saddle graphs, can be extended to these generalized saddle surfaces.
+Some results, for example, the characterization of saddle graphs, can be extended to these generalized saddle surfaces.
 However, this class of surfaces is far from being understood; see \cite[Chapter 4]{alexander-kapovitch-petrunin2019} and the references therein.

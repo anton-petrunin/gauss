@@ -43,7 +43,8 @@ One may skip this chapter and use it as a quick reference while reading the book
 
 \section{Simple curves}
 
-The Euclidean plane $\mathbb{R}^2$ and space $\mathbb{R}^3$ are the main examples of metric spaces (see Section~\ref{sec:metric-spcaes}) one should keep in mind.
+We assume that the reader is familiar with metric spaces (see Appendix~\ref{sec:metric-spcaes});
+their main examples will be the Euclidean plane $\mathbb{R}^2$ and the Euclidean space $\mathbb{R}^3$.
 
 Recall that a \index{real interval}\emph{real interval} is a connected subset of the real line.
 A bijective continuous map $f\:X\to Y$ between subsets of some metric spaces is called a {}\emph{homeomorphism} if its inverse $f^{-1}\:Y\z\to X$ is continuous.  
@@ -117,7 +118,7 @@ Construct a monotone (and, in particular, onto) map $(0,1)\to [0,1]$.
 
 Suppose $\gamma_1\:\GG_1\to \spc{X}$ and $\gamma_2\:\GG_2\to \spc{X}$ are two parametrized curves such that 
 $\gamma_1=\gamma_2\circ\tau$ for a monotone map $\tau\:\GG_1\to\GG_2$.
-Then we say that $\gamma_2$ is \index{reparametrization}\emph{reparametrization}%
+Then we say that $\gamma_2$ is a \index{reparametrization}\emph{reparametrization}%
 \footnote{In general, $\gamma_1$ is \textit{not} a reparametrization of $\gamma_2$.
 In other words, according to our definition, the described relation \textit{being a reparametrization} is not symmetric;
 in particular, it is not an equivalence relation.
@@ -174,7 +175,7 @@ Notice that the closed curve described by a smooth loop might fail to be smooth 
 The following exercise shows that curves with smooth parametrizations might have corners and might fail to be smooth curves.
 
 \begin{thm}{Exercise}\label{ex:L-shape}
-From Section~\ref{sec:analysis}, we know that the following function is smooth:
+From Appendix~\ref{sec:analysis}, we know that the following function is smooth:
 \[f(t)=
 \begin{cases}
 0&\text{if}\ t\le 0,
@@ -184,7 +185,7 @@ From Section~\ref{sec:analysis}, we know that the following function is smooth:
 \]
 
 Show that $\alpha(t)=(f(t),f(-t))$ gives a smooth parametrization of the curve shown on the picture;
-it is a simple curve formed by the union of two half-axis in the plane.
+it is a simple curve formed by the union of two half-axes in the plane.
 
 Show that any smooth parametrization of this curve has a vanishing velocity vector at the origin.
 Conclude that this curve is not smooth;
@@ -194,7 +195,7 @@ that is, it does not admit a regular smooth parametrization.
 
 \begin{thm}{Exercise}\label{ex:cycloid}
 Describe the set of real numbers $\ell$
-such that the the parametrization $\gamma_\ell (t)= (t+\ell \cdot \sin t,\ell \cdot \cos t)$, $t\in\mathbb{R}$ is
+such that the parametrization $\gamma_\ell (t)= (t+\ell \cdot \sin t,\ell \cdot \cos t)$, $t\in\mathbb{R}$ is
 
 \begin{minipage}{.30\textwidth}
 \begin{subthm}{ex:cycloid:smooth}
@@ -235,7 +236,7 @@ $\tfrac{\partial f}{\partial x}$.\index{10f@$f_x$ (partial derivative)}}
 If $\gamma$ is connected, then by the implicit function theorem (\ref{thm:imlicit}), it is a smooth simple curve. 
 
 The described condition is sufficient but \textit{not necessary}.
-For example, zero is \textit{not} a regular value the function $f(x,y)=y^2$, but the equation $f(x,y)=0$ describes a smooth curve --- the $x$-axis.
+For example, zero is \textit{not} a regular value of the function $f(x,y)=y^2$, but the equation $f(x,y)=0$ describes a smooth curve --- the $x$-axis.
 
 Similarly, assume $(f,h)$ is a pair of smooth functions defined in $\mathbb{R}^3$.
 Again, the implicit function theorem (\ref{thm:imlicit}) implies that the system of equations
@@ -294,8 +295,8 @@ Show that  $|\gamma(t)|\z\to\infty$ as $t\to\pm\infty$.
 \end{thm}
 
 
-Recall that a closed bounded intervals are compact (\ref{thm:Heine--Borel}) and closed subsets of a compact set are compact;
-see Section~\ref{sec:topology}.
+Recall that closed bounded intervals are compact (\ref{thm:Heine--Borel}) and closed subsets of a compact set are compact;
+see Appendix~\ref{sec:topology}.
 Since circles and closed intervals are compact,
 it follows that closed curves and arcs are proper.
 

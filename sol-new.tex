@@ -1,10 +1,10 @@
 \stepcounter{chapter}
 \setcounter{eqtn}{0}
 
-\raggedcolumns\setlength{\multicolsep}{-3mm}
-\begin{multicols}{2}
+%\raggedcolumns\setlength{\multicolsep}{-3mm}
+\spell{\begin{multicols}{2}}{}
 
-
+\chapter[Semisolutions]{\vspace*{-23mm} Semisolutions\vspace*{-12mm}}
 
 %\end{multicols}
 %\par\noindent\rule{\textwidth}{0.4pt}
@@ -41,7 +41,7 @@ $\tau(t_1)\z=\tau(t_2)$ if and only if there is a connected component $(a,b)\sub
 The required function $\tau$ can be constructed similarly to the so-called {}\emph{devil's staircase} --- learn this construction and modify it.
 
 \parbf{\ref{ex:L-shape}.}
-Denote the union of two half-axis by~$L$.
+Denote the union of two half-axes by~$L$.
 
 Observe that $f(t)\to\infty$ as $t\to \infty$.
 Since $f(0)=0$, the intermediate value theorem implies that $f(t)$ takes all nonnegative values for $t\ge 0$.
@@ -432,7 +432,7 @@ Show that the following sequence of curves solves the problem:
 Reuse the construction in \ref{ex:antipodal} to get a closed smooth simple spherical curve $\tan\:\mathbb{S}^1\z\to\mathbb{S}^2$ that contains no pair of antipodal points and has zero average.
 Then construct a curve with tangent indicatrix $\tan$.
 
-\parit{Source:} This curve was constructed by Beniamino Segre \cite{segre}.)
+\parit{Source:} This curve was constructed by Beniamino Segre \cite{segre}.
 
 \parbf{\ref{ex:helix-curvature}.}
 Show that $\gamma_{a,b}''\perp \gamma'_{a,b}$, and apply \ref{ex:curvature-formulas:a}.
@@ -585,7 +585,7 @@ otherwise, revert the parametrization.
 
 In the plane spanned by $\gamma(0)$ and~$\gamma'(0)$, choose a unit-speed circle arc (or line segment) $\sigma$ from $0$ to $\gamma(0)$ that comes to $\gamma(0)$ in the direction opposite to $\gamma'(0)$.
 Consider a unit-speed semicircle $\tilde\gamma$ with curvature $2$
-that starts at $\gamma(0)$ in the direction $\gamma'(0)$ so that that the concatenation $\sigma*\tilde\gamma$ is an arc of a convex plane curve; see the figure.
+that starts at $\gamma(0)$ in the direction $\gamma'(0)$ so that the concatenation $\sigma*\tilde\gamma$ is an arc of a convex plane curve; see the figure.
 
 \begin{Figure}
 \vskip-1mm
@@ -661,7 +661,7 @@ we need to construct a polygonal line $\beta$ inscribed in $\gamma$ such that
 \eqlbl{eq:tc=<tc}\]
 
 Suppose $\vec u_i=\tan(s_i)$.
-Choose an inscribed polygonal line $\beta=p_0\dots p_{2\cdot k+1}$ such that $p_{2\cdot i}$ and $p_{2\cdot i+1}$ lie sufficiency close to $\gamma(s_i)$; so we can assume that the direction of $p_{2\cdot i+1}-p_{2\cdot i}$ is sufficiency close to $\vec u_i$ for each~$i$.
+Choose an inscribed polygonal line $\beta=p_0\dots p_{2\cdot k+1}$ such that $p_{2\cdot i}$ and $p_{2\cdot i+1}$ lie sufficiently close to $\gamma(s_i)$; so we can assume that the direction of $p_{2\cdot i+1}-p_{2\cdot i}$ is sufficiency close to $\vec u_i$ for each~$i$.
 Show that \ref{eq:tc=<tc} holds true for the constructed polygonal line~$\beta$.
 
 \parbf{\ref{ex:tc-rectifiable}.}
@@ -1059,7 +1059,7 @@ For the last part of the problem, consider the smallest circle $\sigma$ that sur
 \parit{Remark.}
 If self-intersections are allowed, then diameter of the curve can be arbitrarily large.
 An example can be guessed from the following picture.
-In fact the diameter can be made arbitrarily close to the length of curve.
+In fact the diameter can be made arbitrarily close to the length of the curve.
 \begin{Figure}
 \vskip-0mm
 \centering
@@ -1072,7 +1072,7 @@ Show that $\gamma$ contains a simple loop $\gamma_1$.
 Apply \ref{thm:moon-orginal} to $\gamma_1$.
 
 \parbf{\ref{ex:2-squares}.}
-We may assume that the smaller square on its left of $\gamma$.
+We may assume that the smaller square is on the left of $\gamma$.
 Use \ref{thm:4-vert-supporting} to show that there are two points on $\gamma$ with signed curvature $\ge 1$ and $\le 1$, respectively.
 Apply the intermediate value theorem for signed curvature to show that there is a point with curvature $1$.
 
@@ -1083,18 +1083,17 @@ Applying rescaling, we may assume that $a=\pi$; that is, our loop bounds area of
 Then apply \ref{thm:moon} to show that the curvature is at least 1 at some point.
 Argue as at the end of the proof of \ref{thm:4-vert-supporting}, showing that the curvature is at most 1 at some point.
 
+Apply the intermediate value theorem to show that curvature is $1$ at some point.
+
+\parbf{\ref{ex:curve-crosses-circle}.}
+Repeat the proof of \ref{thm:moon} for each cyclic concatenation of an arc of $\gamma$ from $p_i$ to $p_{i+3}$ and the arc of the circle with points $p_{i+4},\z\dots,p_{i-1}$ on it.
+
 \begin{wrapfigure}{r}{20 mm}
-\vskip-6mm
+\vskip-2mm
 \centering
 \includegraphics{mppics/pic-305}
 \vskip-2mm
 \end{wrapfigure}
-
-
-Apply the intermediate value theorem to show that curvature is $1$ at some point.
-
-\parbf{\ref{ex:curve-crosses-circle}.}
-Repeat the proof of the \ref{thm:moon} for each cyclic concatenation of an arc of $\gamma$ from $p_i$ to $p_{i+3}$ the arc of the circle with points $p_{i+4},\z\dots,p_{i-1}$ on it.
 
 An example for the second part can be guessed from the picture.
 
@@ -1157,9 +1156,9 @@ Use \ref{prop:implicit-surface} to conclude that if $\ell\ne 0$, then $\Sigma_\e
 Show that $\Sigma_\ell$ is connected if and only if $\ell\ge 0$.
 It follows that if $\ell>0$, then $\Sigma_\ell$ is a smooth surface, and if $\ell<0$ --- it is not.
 
-The case $\ell=0$ has to be done by hand --- it does not satisfy the sufficient condition in \ref{prop:implicit-surface}, but that does not solely imply that $\Sigma_0$ is not a smooth surface.
+The case $\ell=0$ has to be done by hand --- it does not satisfy the sufficient condition in \ref{prop:implicit-surface}, but that does not by itself imply that $\Sigma_0$ is not a smooth surface.
 
-Show that any neighborhood of origin in $\Sigma_0$ cannot be described by a graph in any coordinate system;
+Show that any neighborhood of the origin in $\Sigma_0$ cannot be described by a graph in any coordinate system;
 so by the definition (Section~\ref{sec:def-smooth-surface}) $\Sigma_0$ is not a smooth surface.
 
 \parbf{\ref{ex:9-surf}.} Modify the solution of \ref{ex:9:9}.
@@ -1169,7 +1168,7 @@ To prove the if part, use that the composition of smooth functions is smooth.
 
 Now, choose a graph representation $z\z=f(x,y)$ of a neighborhood of $p$ in $\Sigma$.
 Note that $g$ is smooth in the neighborhood if and only if the function $\hat g\:(x,y)\mapsto g(x,y,f(x,y))$ is smooth in its domain of definition.
-Define $f(x,y,z)\z\df \hat g(x,y)$; it solves the only-if part.
+Define $h(x,y,z)\z\df \hat g(x,y)$; it solves the only-if part.
 
 For the last part, consider function $g\:(x,y)\mapsto\tfrac1{x^2+y^2}$ defined on the $(x,y)$-plane with removed origin.
 Observe that $g$ cannot be extended to a continuous function on $\mathbb{R}^3$.
@@ -1306,7 +1305,7 @@ Show and use that for any smooth curve $\gamma$ in $\Sigma$ the function $t\maps
 By \ref{ex:tangent-normal}, $\Norm=\tfrac{\nabla h}{|\nabla h|}$ defines a unit normal field on~$\Sigma$.
 
 \parbf{\ref{ex:plane-section}.}
-Use cutoffs and mollifiers (Section~\ref{sec:analysis}) to construct a smooth nonnegative function $f$ on the $(x,y)$-plane such that $f(x,y)=0$ if and only if $(x,y)\in A$.
+Use cutoffs and mollifiers (Appendix~\ref{sec:analysis}) to construct a smooth nonnegative function $f$ on the $(x,y)$-plane such that $f(x,y)=0$ if and only if $(x,y)\in A$.
 The graph $z=f(x,y)$ describes the required surface.
 
 %\end{multicols}
@@ -1483,7 +1482,13 @@ Make a conclusion.
 \parbf{\ref{ex:moon-revolution}.}
 Use \ref{ex:line-of-curvature} and \ref{thm:moon-orginal}.
 
-\parbf{\ref{ex:lagunov-genus4}.} Drill an extra hole or combine two examples together.
+\parbf{\ref{ex:lagunov-genus4}.}
+Drill an extra hole or combine two examples together.
+For the second part, combine $V_2$ with $V_3$.
+
+\parit{Comment.}
+It is possible to create such an example bounded by a torus, which is a very advanced exercise.
+A body bounded by a sphere must include a ball of radius a bit larger than $r_3=\sqrt{3/2}-1>r_2$; see \cite{lagunov-1960, lagunov-1961, lagunov-fet-1963, lagunov-fet-1965}.
 
 %\end{multicols}
 %\par\noindent\rule{\textwidth}{0.4pt}
@@ -1492,6 +1497,15 @@ Use \ref{ex:line-of-curvature} and \ref{thm:moon-orginal}.
 
 \stepcounter{chapter}
 \setcounter{eqtn}{0}
+
+\parbf{\ref{ex:supp>tan}.}
+We may assume that $\Sigma_1$ is given implicitly by a smooth function $f$ in a small neighborhood $U$ of $p$.
+Since $\Sigma_1$ locally supports $\Sigma_2$ at $p$, we may assume that $f(x)\ge 0$ for all $x\in \Sigma_2\cap U$
+and that $f(p)=0$.
+
+Show that $(f\circ\gamma_2)'(0)=0$ for any smooth curve $\gamma_2\:(-\varepsilon,\varepsilon)\to\Sigma_2$ such that $\gamma_2(0)=p$.
+Deduce from this that the velocity vector $\gamma_2'(0)$ is tangent to $\Sigma_1$ at $p$ and make the last step.
+
 
 \parbf{\ref{ex:surf-support}.}
 Choose curvatures such that 
@@ -1509,12 +1523,14 @@ Apply \ref{prop:surf-support}.
 \parbf{\ref{ex:convex-lagunov}.}
 Assume a maximal ball in $R$ has radius $r$, and it touches the boundary of $R$ at the points $p$ and~$q$.
 
-\begin{Figure}
+\columnbreak
+
+\begin{wrapfigure}{r}{18 mm}
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-1050}
 \vskip-0mm
-\end{Figure}
+\end{wrapfigure}
 
 Consider the projection $S$ of $R$ to a plane thru $p$, $q$ and the center of the ball.
 Show that $S$ is bounded by a smooth closed convex curve with curvature at most $1$.
@@ -1568,20 +1584,18 @@ The latter means that any two points in $\Sigma$ can be connected by a path in $
 This theorem was proved by Heinz Hopf and Willi Rinow \cite{hopf-rinow} and 
 named after Sumner Myers who generalized it \cite{myers}.
 
-\begin{wrapfigure}{r}{29 mm}
-\vskip-6mm
-\centering
-\includegraphics{mppics/pic-1182}
-\vskip-3mm
-\end{wrapfigure}
-
-
 \parbf{\ref{ex:convex-proper-sphere}}; \ref{SHORT.ex:convex-proper-sphere:single}.
 Use the convexity of~$R$.
 
 \parit{\ref{SHORT.ex:convex-proper-sphere:smooth}.}
 Observe that the map $\Sigma\to\mathbb{S}^2$ is smooth and regular, then applying the inverse function theorem, show that its inverse is smooth as well.
 
+\begin{wrapfigure}{r}{29 mm}
+\vskip-3mm
+\centering
+\includegraphics{mppics/pic-1182}
+\vskip-3mm
+\end{wrapfigure}
 
 \parbf{\ref{ex:convex-proper-plane}}; \ref{SHORT.ex:convex-proper-plane:a}
 (The argument is similar to \ref{prop:convex-monotone:open}.)
@@ -2009,7 +2023,7 @@ Let $x=\rho(p)$ and $y=\rho(q)$.
 Arguing by contradiction, suppose that
 \[\dist{\tfrac x2}{y}{}\z<|\tfrac x2|.\]
 Note that $\Norm\:\Sigma\to \mathbb{S}^2$ is length-nonincreasing.
-Use all this and \ref{SHORT.ex:rad=2:b} to deduce the the following
+Use all this and \ref{SHORT.ex:rad=2:b} to deduce the following
 \begin{align*}
 \measuredangle(\Norm(x),\Norm(y))&= \measuredangle(x,y-\tfrac x2)>
 \\
@@ -2177,6 +2191,9 @@ where $\skur$ is the geodesic curvature of $\partial \Delta$ in $\Delta$
 and $\skur$ is the geodesic curvature of $\partial \Delta$ in the $(x,y)$-plane.
 Apply \ref{prop:total-signed-curvature} and the Gauss--Bonnet formula (\ref{thm:gb}).
 
+\parit{Remark.}
+By \ref{ex:shape-curvature-line}, $\partial\Delta$ is a line of curvature on the graph.
+
 \parbf{\ref{ex:geodesic-half}.}
 Apply \ref{cor:intK}, \ref{ex:intK:4pi}, and the Gauss--Bonnet formula (\ref{thm:gb}).
 
@@ -2227,7 +2244,11 @@ Use part \ref{SHORT.ex:unique-geod:unique} and \ref{prop:inj-rad}.
 Apply \ref{prop:pt+tgc} and \ref{prop:area-of-spher-polygon}.
 
 \parbf{\ref{ex:cohn-vossen}.}
-Repeat the end of the proof of \ref{thm:cohn-vossen} for a one-parameter family of geodesics $\gamma_\tau$ defined by $\gamma_\tau(0)=\alpha(\tau)$ and $\gamma'_\tau(0)=\alpha'(\tau)$. 
+Repeat the end of the proof of \ref{thm:cohn-vossen} for a one-parameter family of geodesics $\gamma_\tau$ defined by $\gamma_\tau(0)=\alpha(\tau)$ and $\gamma'_\tau(0)=\alpha'(\tau)$.
+
+\parbf{\ref{ex:3-curves}.}
+The first curve corresponds to a geodesic on a smoothed cone.
+Check that the second and third are ruled out by the argument in the proof of the theorem.
 
 \parbf{\ref{ex:g-b-chi}.}
 Subdivide each surface into discs,
@@ -2651,3 +2672,5 @@ Now suppose $\Omega=\spc{X}\setminus Q$ is not open.
 Show that there is a point $p\in \Omega$ and a sequence $q_n\in Q$ such that $\dist{p}{q_n}{\spc{X}}\z<\tfrac 1n$ for any~$n$.
 Conclude that $q_n\to p$ as $n\to \infty$;
 therefore $Q$ is not closed.
+
+\spell{\end{multicols}}{}

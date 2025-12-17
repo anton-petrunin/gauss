@@ -5,7 +5,7 @@ This chapter provides mostly practice in computations.
 Except for the definitions in Section~\ref{sec:frenet-frame},
 it will not be used in the sequel.
 
-Torsion is a close realtive of curvature.
+Torsion is a close relative of curvature.
 The curvature measures how much a curve fails to be a straight line, and the torsion measures how much a space curve fails to be a plane curve (see \ref{ex:lancret}).
 
 \section{Frenet frame}\label{sec:frenet-frame}
@@ -25,7 +25,7 @@ According to \ref{prop:a'-pertp-a''}, $\norm(s)\perp \tan(s)$.
 Therefore, the vector product 
 \[\bi(s)=\tan(s)\times \norm(s)\]
 is a unit vector.
-Moreover, the triple $\tan(s),\norm(s),\bi(s)$ an oriented orthonormal basis in $\mathbb{R}^3$;
+Moreover, the triple $\tan(s),\norm(s),\bi(s)$ is an oriented orthonormal basis in $\mathbb{R}^3$;
 it is called the \index{Frenet frame}\emph{Frenet frame} of $\gamma$ at~$s$.
 In particular, we have that
 \[\begin{aligned}
@@ -112,7 +112,7 @@ Taking further derivatives of the other identities with $\bi$ in \ref{eq:orthorn
 \begin{align*}
 \langle\bi',\tan\rangle&=-\langle\bi,\tan'\rangle=-\kur\cdot\langle\bi,\norm\rangle=0,
 \\
-\langle\bi',\norm\rangle&=-\langle\bi,\norm'\rangle=\tor.
+\langle\bi,\norm'\rangle&=-\langle\bi',\norm\rangle=\tor.
 \end{align*}
 Since the frame $\tan,\norm,\bi$ is orthonormal, it follows that
 \[\bi'=-\tor\cdot\norm.\eqlbl{eq:frenet-beta}\]
@@ -297,7 +297,7 @@ that is, $\rho(\ell)=o(\ell^3)$, where $\rho(\ell)$ denotes the distance from $\
 Let $s\mapsto \kur(s)$ and $s\mapsto \tor(s)$ be two smooth real-valued functions defined on a real interval $\mathbb{I}$.
 Suppose $\kur(s)>0$ for all~$s$.
 Then there is a smooth unit-speed curve $\gamma\:\mathbb{I}\to\mathbb{R}^3$ with curvature $\kur(s)$ and torsion $\tor(s)$ for every~$s\in \mathbb{I}$.
-Moreover, $\gamma$ is uniquely defined up to an orientation-preserving rigid motion of the space.
+Moreover, $\gamma$ is uniquely defined up to an orientation-preserving isometry of the space.
 \end{thm}
 
 The proof is an application of the theorem on the existence and uniqueness of solutions of ordinary differential equations (\ref{thm:ODE}).
@@ -403,7 +403,7 @@ so $\gamma$ travels only a finite distance as $s\to b$ --- a contradiction.
 Hence, $\mathbb{J}= \mathbb{I}$, and the first statement follows.
 
 Now assume there are two curves $\gamma_1$ and $\gamma_2$ with the given curvature and torsion functions.
-Applying a motion of the space, we can assume that $\gamma_1(s_0)=\gamma_2(s_0)$, and the Frenet frames of the curves coincide at $s_0$.
+Applying an isometry of the space, we can assume that $\gamma_1(s_0)=\gamma_2(s_0)$, and the Frenet frames of the curves coincide at $s_0$.
 Then $\gamma_1=\gamma_2$ by the uniqueness of  solutions to the system (\ref{thm:ODE}).
 Hence, the last statement follows.
 \qeds
