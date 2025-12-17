@@ -86,7 +86,7 @@ Moreover, we have the following.
 \begin{subthm}{prop:geod-existence:smooth}
 The map $w\:(p,{\vec v},t)\mapsto \gamma(t)$ is smooth, and it has an open domain of definition%
 \footnote{That is, if $w$ is defined for a triple $p\in \Sigma$, ${\vec v}\in \T_p$, and $t\in \mathbb{R}$,
-then it is also defined for any triple $q\in \Sigma$, $\vec u\in \T_p$, and $s\in \mathbb{R}$, where $q$, $\vec u$, and $s$ are sufficiently close to $p$, ${\vec v}$, and $t$, respectively.}%
+then it is also defined for any triple $q\in \Sigma$, $\vec u\in \T_q$, and $s\in \mathbb{R}$, where $q$, $\vec u$, and $s$ are sufficiently close to $p$, ${\vec v}$, and $t$, respectively.}%
 .
 \end{subthm}
 
@@ -302,7 +302,7 @@ Let
 where $q=s(u,v)$ and $\vec v=a\cdot s_u+b\cdot s_v$.
 By \ref{prop:geod-existence}, $m$ is a smooth map defined in a neighborhood of $0$.
 Passing to a smaller neighborhood of $0$, we can assume that first and second partial derivatives of $m$ are bounded.
-Form above, the Jacobian matrix of $(a,b)\z\mapsto m(0,0,a,b)$ at $0$ is the identity.
+From above, the Jacobian matrix of $(a,b)\z\mapsto m(0,0,a,b)$ at $0$ is the identity.
 It follows that for small fixed $u$ and $v$
 the Jacobian matrix of $(a,b)\z\mapsto m(u,v,a,b)$ at $0$ is close to identity.
 In particular, we can apply the second part of the inverse function theorem (\ref{thm:inverse}) to
@@ -323,7 +323,7 @@ In other words, $\inj(p)$ is the least upper bound on $r$ such that $\exp_p$ is 
 
 \begin{thm}{Proposition}\label{prop:gamma''}
 Let $\Sigma$ be a smooth surface.
-Then any shortest path $\gamma$ in $\Sigma$ parametrized proportional to its arc-length is a geodesic in~$\Sigma$.
+Then any shortest path $\gamma$ in $\Sigma$ parametrized proportionally  to its arc-length is a geodesic in~$\Sigma$.
 In particular, $\gamma$ is a smooth curve.
 
 A local converse also holds: any point $p$ in $\Sigma$ has a neighborhood $U$ such that any geodesic that lies entirely in $U$ is a shortest path.
@@ -347,7 +347,7 @@ In fact, if one assumes that $\gamma$ is smooth, then it is easy to convert this
 Let us think about a shortest path $\gamma$ as a stable position of a stretched elastic thread that is forced to lie on a frictionless surface.
 Since it is frictionless, the force density $\vec n=\vec n(t)$ that keeps $\gamma$ in the surface must be proportional to the normal vector to the surface at~$\gamma(t)$.
 
-Denote the tension by $\tau$ the tension in the thread.
+Denote the tension in the thread by $\tau$.
 It has to be the same at all points;
 otherwise, the thread would move back or forth, and it would not be stable.
 
@@ -428,13 +428,13 @@ Show that $\Sigma$ is a round sphere.
 \end{thm}
 
 \begin{thm}{Very advanced exercise}\label{ex:rad=2}
-Let \(\Theta\) be a sphere sphere of radius $2$ centered at $0\in\mathbb{R}^3$
+Let \(\Theta\) be a sphere of radius $2$ centered at $0\in\mathbb{R}^3$
 and let $\Sigma$ be a smooth closed surface in the open ball bounded by \(\Theta\).
 Assume that all normal curvatures of \(\Sigma\) do not exceed~$1$ by absolute value.
 
 \begin{subthm}{ex:rad=2:a}
 Show that there is a diffeomorphism \(\rho\:\Theta \to \Sigma \) (let us call it \emph{radial projection}) that sends a point \( p \in \Theta \) to a unique intersection point in \( \Sigma \cap [0,p]_{\mathbb{R}^3}\).
-In particuler, $\Sigma$ bounds a strar-shaped region.
+In particular, $\Sigma$ bounds a star-shaped region.
 \end{subthm}
 
 \begin{subthm}{ex:rad=2:b}

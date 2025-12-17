@@ -661,7 +661,7 @@ we need to construct a polygonal line $\beta$ inscribed in $\gamma$ such that
 \eqlbl{eq:tc=<tc}\]
 
 Suppose $\vec u_i=\tan(s_i)$.
-Choose an inscribed polygonal line $\beta=p_0\dots p_{2\cdot k+1}$ such that $p_{2\cdot i}$ and $p_{2\cdot i+1}$ lie sufficiently close to $\gamma(s_i)$; so we can assume that the direction of $p_{2\cdot i+1}-p_{2\cdot i}$ is sufficiency close to $\vec u_i$ for each~$i$.
+Choose an inscribed polygonal line $\beta=p_0\dots p_{2\cdot k+1}$ such that $p_{2\cdot i}$ and $p_{2\cdot i+1}$ lie sufficiently close to $\gamma(s_i)$; so we can assume that the direction of $p_{2\cdot i+1}-p_{2\cdot i}$ is sufficiently close to $\vec u_i$ for each~$i$.
 Show that \ref{eq:tc=<tc} holds true for the constructed polygonal line~$\beta$.
 
 \parbf{\ref{ex:tc-rectifiable}.}
@@ -1790,16 +1790,16 @@ On the other hand, since $\Sigma$ is a graph outside the compact set $K$, we hav
 \stepcounter{chapter}
 \setcounter{eqtn}{0}
 
+\parbf{\ref{ex:lasso}.}
+Cut the lateral surface of the ice-mountain by a line from the cowboy to the tip.
+Unfold it on the plane (see the picture) and try to figure out what is the image of the strained lasso.
+
 \begin{wrapfigure}{r}{24 mm}
 \vskip-6mm
 \centering
 \includegraphics{mppics/pic-1250}
 \vskip-0mm
 \end{wrapfigure}
-
-\parbf{\ref{ex:lasso}.}
-Cut the lateral surface of the ice-mountain by a line from the cowboy to the tip.
-Unfold it on the plane (see the picture) and try to figure out what is the image of the strained lasso.
 
 \parit{Source:}
 We learned this problem from Joel Fine, who attributed it to Frederic Bourgeois \cite{fine}; see also \cite[Problem 12]{khesin-tabachnikov}
@@ -1887,7 +1887,7 @@ that is, $\gamma''(s)\equiv 0$, therefore $\gamma'$ is constant and hence $\gamm
 \parbf{\ref{ex:reflection-geodesic}.}
 Denote by $\mu$ a unit vector perpendicular to $\Pi$.
 Since $\gamma$ lies in $\Pi$, we have that $\gamma''$ is parallel to $\Pi$, or equivalently $\gamma''\perp \mu$.
-Since $\gamma$ is , \ref{prop:a'-pertp-a''} implies that $\gamma''\perp\gamma'$.
+Since $\gamma$ is parametrized by arc-length, \ref{prop:a'-pertp-a''} implies that $\gamma''\perp\gamma'$.
 
 Since $\Sigma$ is mirror-symmetric with respect to the plane $\Pi$,
 the tangent plane $\T_{\gamma(t)}\Sigma$ is also mirror-symmetric with respect to $\Pi$.
@@ -1946,7 +1946,7 @@ in the cylinder $x^2 + y^2 =1$.
 
 \parbf{\ref{ex:min-geod+plane}.}
 Assume a shortest path $\alpha$ crosses $\Pi$ at least twice.
-In this case, there is a subarc $\alpha_1$ of $\alpha$ that lies strictly on one side on $\Pi$;
+In this case, there is a subarc $\alpha_1$ of $\alpha$ that lies strictly on one side of $\Pi$;
 only its endpoints are on $\Pi$, and these endpoints are distinct from the endpoints of $\alpha$.
  
 \begin{Figure}
@@ -2003,8 +2003,8 @@ Conclude that we can choose a unit normal field $\Norm$ on $\Sigma$ such that
 \[\epsilon<|x|<2\cdot\cos(\measuredangle(\Norm(x),x)) \eqlbl{eq:|gamma(t)|}\]
 for any point $x\in\Sigma$.
 
-Use \ref{eq:|gamma(t)|} to show that the map $\Sigma\to \Theta$ defined by $x\mapsto 2\cdot\tfrac x{|x|}$ is locally invertable.
-Conclude that it is invertbale.
+Use \ref{eq:|gamma(t)|} to show that the map $\Sigma\to \Theta$ defined by $x\mapsto 2\cdot\tfrac x{|x|}$ is locally invertible.
+Conclude that it is invertible.
 Its inverse is the radial projection $\rho\:\Theta\to\Sigma$.
 
 \parit{\ref{SHORT.ex:rad=2:b}.}
@@ -2037,8 +2037,8 @@ Use all this and \ref{SHORT.ex:rad=2:b} to deduce the following
 \end{align*}
 which is a contradiction.
 
-Finally, we can move $\Sigma$ so that so that $x$ gets arbitrary close to $\Theta$.
-Applying the above argument, we get that $\Sigma$ surronds a unit ball that touches $\Sigma$ at $x$.
+Finally, we can move $\Sigma$ so that $x$ gets arbitrarily close to $\Theta$.
+Applying the above argument, we get that $\Sigma$ surrounds a unit ball that touches $\Sigma$ at $x$.
 
 \parit{Source:} Problem taken from the paper by Hongda Qiu \cite{qiu2025}.
 
@@ -2131,7 +2131,7 @@ Show and use that $\langle\gamma,\Norm\rangle=|\gamma|\cdot\cos\theta$, $|\gamma
 
 \parit{\ref{SHORT.ex:bound-tc:d}.}
 Suppose $x,y$ are the points in the unit sphere that project to the ends of $\gamma$. 
-Connect $x$ to $y$ by a an arc of length $\le \pi$ in the sphere, project it to $\Sigma$.
+Connect $x$ to $y$ by an arc of length $\le \pi$ in the sphere, project it to $\Sigma$.
 Apply \ref{lem:nearest-point-projection} and use that $\gamma$ is a shortest path.
 
 \parit{\ref{SHORT.ex:bound-tc:e}.}
@@ -2188,7 +2188,7 @@ Observe that $\tgc\gamma=\length\gamma$, and apply the Gauss--Bonnet formula (\r
 \parbf{\ref{ex:GB-hat}.}
 Show that $\skur=\cos\alpha\cdot\skur_0$,
 where $\skur$ is the geodesic curvature of $\partial \Delta$ in $\Delta$
-and $\skur$ is the geodesic curvature of $\partial \Delta$ in the $(x,y)$-plane.
+and $\skur_0$ is the geodesic curvature of $\partial \Delta$ in the $(x,y)$-plane.
 Apply \ref{prop:total-signed-curvature} and the Gauss--Bonnet formula (\ref{thm:gb}).
 
 \parit{Remark.}
@@ -2254,7 +2254,7 @@ Check that the second and third are ruled out by the argument in the proof of th
 Subdivide each surface into discs,
 count number of edges, vertices, and discs in the subdivision.
 Calculate the Euler characteristic and apply \ref{thm:GB-generalized}.
-For the Möbius band and pair of pans, use that the boundary has vanishing geodesic curvature.
+For the Möbius band and pair of pants, use that the boundary has vanishing geodesic curvature.
 For the cylinder, use that each component of the boundary is a simple plane curve and apply \ref{prop:total-signed-curvature}. 
 
 %\end{multicols}
@@ -2274,7 +2274,7 @@ Show that we can choose an orientation on $\Sigma$ so that $b_r(0,\theta)\z=1$ f
 Conclude that we can assume that $b(r,\theta)>0$ for all small $r>0$.
 
 Suppose $b(r_1,\theta_1)<0$ at a pair $(r_1,\theta_1)$ such that $0<r_1<r_0$.
-Observe that if $\theta_2$ is sufficiency close to $\theta_1$, then the radial curves $r\mapsto b(r,\theta_1)$ and $r\mapsto b(r,\theta_2)$ defined on the interval $(0,r_1)$ intersect.
+Observe that if $\theta_2$ is sufficiently close to $\theta_1$, then the radial curves $r\mapsto b(r,\theta_1)$ and $r\mapsto b(r,\theta_2)$ defined on the interval $(0,r_1)$ intersect.
 Therefore, $\exp_p$ is not injective in $B$ --- a contradiction.
 
 \parit{\ref{SHORT.ex:inj-rad:0}.}
@@ -2512,7 +2512,7 @@ as $n\to\infty$.
 Use the last statement together with the cosine rule
 \[a_n^2+b_n^2-2\cdot a_n\cdot b_n\cdot\cos\tilde\theta_n -c_n^2=0\]
 to show that $\cos\tilde\theta_n\to -1$ as $n\to\infty$;
-conclude that $\theta_n\to \pi$.
+conclude that $\tilde\theta_n\to \pi$.
 
 \parbf{\ref{ex:thm:comp:cat:nsc}.}
 Consider the triangle on the hyperboloid with vertices $(1,0,0)$, $(-\tfrac{1}2, \tfrac{\sqrt{3}}2,0)$, and $(-\tfrac{1}2,-\tfrac{\sqrt{3}}2,0)$.
@@ -2602,8 +2602,8 @@ Sum it up, and apply the triangle inequality.
 the case of the Euclidean plane is just as hard.
 
 \parbf{\ref{ex:disc+}.} Consider a ball $B=\bar B[p,R]_\Sigma$.
-Given a point $x\in B$ choose a geodesic $[p,x]$ and denote by $\tilde x$ the point in $\T_p$ that lies on the distance $|p-x|_\Sigma$ from $p$ in the direction of $[p,x]$.
-The map $x\mapsto \tilde x$ send $B$ into the $R$-ball in $\T_p$;
+Given a point $x\in B$ choose a geodesic $[p,x]$ and denote by $\tilde x$ the point in $\T_p$ that lies at the distance $|p-x|_\Sigma$ from $p$ in the direction of $[p,x]$.
+The map $x\mapsto \tilde x$ sends $B$ into the $R$-ball in $\T_p$;
 by \mbox{\ref{mang>angk}}, this map is distance-noncontracting.
 Whence the statement follows.
 

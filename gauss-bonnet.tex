@@ -30,7 +30,7 @@ that is, $\gamma$ is shorter than the unit circle.
 \begin{thm}{Exercise}\label{ex:GB-hat}
 Suppose that a disc $\Delta$ lies in a graph $z=f(x,y)$ of a smooth function,
 the boundary of $\Delta$ lies in the $(x,y)$-plane 
-and $\Delta$ meets this plane at fix angle $\alpha$.
+and $\Delta$ meets this plane at a fixed angle $\alpha$.
 Show that $\iint_\Delta K=2\cdot\pi\cdot(1-\cos\alpha)$.
 \end{thm}
 
@@ -217,12 +217,12 @@ One has to show that the total geodesic curvature of
 a piecewise smooth simple curve can be approximated by 
 the total geodesic curvature of inscribed broken geodesics.
 We omit the detailed proof,
-but it close to \ref{ex:total-curvature=}.
+but it is close to \ref{ex:total-curvature=}.
 \qeds
 
 
 \begin{thm}{Exercise}\label{ex:half-sphere-total-curvature}
-Let $\gamma$ be a simple piecewise smooth loop on on the unit sphere $\mathbb{S}^2$.
+Let $\gamma$ be a simple piecewise smooth loop on the unit sphere $\mathbb{S}^2$.
 Assume $\gamma$ divides $\mathbb{S}^2$ in two regions of equal area.
 Denote by $p$ the base point of~$\gamma$.
 Show that the parallel transport $\iota_\gamma\:\T_p\mathbb{S}^2\to\T_p\mathbb{S}^2$ is the identity map.
@@ -233,7 +233,7 @@ Show that the parallel transport $\iota_\gamma\:\T_p\mathbb{S}^2\to\T_p\mathbb{S
 \section{Intuitive proof}\label{sec:gb-intuitive-proof}
 
 In this section, we prove a special case of the Gauss--Bonnet formula.
-This case is leading --- the general case can be proved similarly, using the signed area counted with multiplicity, but will do something else \ref{sec:gauss--bonnet:formal}.
+This case is leading --- the general case can be proved similarly, using the signed area counted with multiplicity, but will do something else in \ref{sec:gauss--bonnet:formal}.
 
 \parbf{Proof of \ref{thm:gb} for open and closed surfaces with positive Gauss curvature.}
 Let $\Norm\:\Sigma\to\mathbb{S}^2$ be the spherical map.
@@ -242,7 +242,7 @@ By \ref{cor:intK}, we have
 \eqlbl{eq:gb-area}\]
 
 Choose a loop $\alpha$ that runs along $\partial\Delta$ so that $\Delta$ lies on the left from it; suppose that $p\in \partial\Delta$ is its base.
-Consider the parallel translation $\iota_\alpha\:\T_p\to\T_p$ along $\alpha$.
+Consider the parallel transport $\iota_\alpha\:\T_p\to\T_p$ along $\alpha$.
 According to \ref{prop:pt+tgc}, $\iota_\alpha$ is the clockwise rotation by angle $\tgc{\alpha}_\Sigma$.
 
 Set $\beta=\Norm\circ\alpha$.
@@ -325,9 +325,10 @@ is counterclockwise.
 Let us shoot a unit-speed geodesic in each direction from a given point $p=\gamma(0)$.
 This gives a one-parameter family of geodesics $\gamma_s$ for $s\in[0,\pi]$ connecting the geodesic $t\mapsto \gamma(t)$ with $t\mapsto \gamma(-t)$; that is, $\gamma_0(t)\z=\gamma(t)$, and $\gamma_\pi(t)=\gamma(-t)$.
 
-The subset of values $s\in [0,\pi]$ such that $\gamma_s$ is right (or left) is open in $[0,\pi]$.
-That is, if $\gamma_s$ is right, then so is $\gamma_t$ for all $t$ sufficiently close to~$s$.%
-\footnote{Informally speaking, this means that self-intersection cannot suddenly disappear. Try to convince yourself of this.}
+The subset of values $s\in [0,\pi]$ such that $\gamma_s$ is clockwise (or counterclockwise) is open in $[0,\pi]$.
+That is, if $\gamma_s$ is clockwise, then so is $\gamma_t$ for all $t$ sufficiently close to~$s$.%
+\footnote{Informally speaking, this means that self-intersection cannot suddenly disappear.
+Try to convince yourself of this.}
 
 Since $[0,\pi]$ is connected, it cannot be subdivided into two open sets.
 It follows that for some $s$, the geodesic $\gamma_s$ is neither  clockwise nor counterclockwise;
@@ -367,7 +368,7 @@ Which of the curves in the figure can occur as geodesics in charts of open smoot
 \section{General domains}
 \index{Gauss--Bonnet formula}
 
-The following generalization of the Gauss--Bonnet formula is due to Walther von Dyck \cite{dyck}.
+The following generalization of the Gauss--Bonnet formula was obtained by Walther von Dyck \cite{dyck}.
 
 \begin{thm}{Theorem}\label{thm:GB-generalized}
 Let $\Lambda$ be a compact domain on a smooth surface.
@@ -400,7 +401,7 @@ Therefore, $\chi(A)=4-6+2=0$ and
 
 \parbf{Proof.}
 Suppose that a graph with $v$ vertices and $e$ edges subdivides $\Lambda$ into $f$ discs $\Delta_1,\dots,\Delta_f$.
-Lets us apply the Gauss--Bonnet formula for each disc, and sum up the results:
+Let us apply the Gauss--Bonnet formula for each disc, and sum up the results:
 \[
 \begin{aligned}
 \iint_\Lambda K&=\iint_{\Delta_1} K+\dots+\iint_{\Delta_f} K=
@@ -525,7 +526,7 @@ A sphere with two handles.
 \end{multicols}
 
 \begin{subthm}{ex:g-b-chi:cylinder}
-A cylider such that its boundary curves have flat neighborhoods. 
+A cylinder such that its boundary curves have flat neighborhoods.
 \begin{Figure}
 \vskip-0mm
 \centering

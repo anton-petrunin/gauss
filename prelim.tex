@@ -64,7 +64,7 @@ the obtained metric space is called a {}\emph{subspace}.
 In particular, all subsets of the Euclidean space are metric spaces.
 
 \subsection*{Balls}
-Given a point $p$ in a metric space $\spc{X}$ and a real number $R\ge 0$, the set of points $x$ on the distance less than $R$ (at most $R$) from $p$ is called the \index{open!ball}\emph{open} (respectively \index{closed!ball}\emph{closed}) {}\emph{ball} of radius $R$ with center~$p$.
+Given a point $p$ in a metric space $\spc{X}$ and a real number $R\ge 0$, the set of points $x$ at the distance less than $R$ (at most $R$) from $p$ is called the \index{open!ball}\emph{open} (respectively \index{closed!ball}\emph{closed}) {}\emph{ball} of radius $R$ with center~$p$.
 The open ball is denoted as $B(p,R)$ or $B(p,R)_{\spc{X}}$;
 the second notation is used if we need to emphasize that the ball is from $\spc{X}$.
 Formally speaking
@@ -84,7 +84,7 @@ Analogously, the closed ball is denoted as $\bar B[p,R]$ or $\bar B[p,R]_{\spc{X
 \begin{thm}{Exercise}\label{ex:B2inB1}
 
 \begin{subthm}{ex:B2inB1:a}
-Let $p$ and $q$ be points in $\spc{X}$ be a metric space.
+Let $p$ and $q$ be points in a metric space $\spc{X}$.
 Show that if $\bar B[p,2]\z\subset \bar B[q,1]$, then $\bar B[p,2]\z=\bar B[q,1]$.
 \end{subthm}
 
@@ -196,7 +196,7 @@ A subset of Euclidean space is compact if and only if it is closed and bounded.
 
 \subsection*{Homeomorphisms\\ and embeddings}
 
-A bijection $f\:\spc{X}\to\spc{Y}$ between metric spaces is called \index{homeomorphism}\emph{homeomorphism} if $f$ and its inverse $f^{-1}$ are continuous.
+A bijection $f\:\spc{X}\to\spc{Y}$ between metric spaces is called a \index{homeomorphism}\emph{homeomorphism} if $f$ and its inverse $f^{-1}$ are continuous.
 A homeomorphism to its image is called an \index{embedding}\emph{embedding}.
 
 If there exists a homeomorphism $f\:\spc{X}\z\to \spc{Y}$,
@@ -218,7 +218,7 @@ is a homeomorphism.
 \end{subthm}
 
 \begin{subthm}{}
-Any continuous injection from compact metric spaces to another metric space
+Any continuous injection from a compact metric spaces to another metric space
 is an embedding.
 \end{subthm}
 
@@ -234,7 +234,7 @@ A nonempty set $X$ in the Euclidean space is called \index{path-connected set}\e
 
 A nonempty set $X$ in the Euclidean space is called \index{connected}\emph{connected} if one cannot cover $X$ with two disjoint open sets $V$ and $W$ such that both intersections $X\cap V$ and $X\cap W$ are nonempty.
 
-Notice that path-connected and connected set are nonempty by the definition.
+Notice that path-connected and connected sets are nonempty by the definition.
 
 \begin{thm}{Proposition}
 Any path-connected set is connected.
@@ -496,7 +496,7 @@ Recall that a function $f$ between metric spaces is called \index{Lipschitz func
 \[\dist{f(x)}{f(y)}{}\le L\cdot\dist{x}{y}{}\]
 for all values $x$ and $y$ in the domain of definition of~$f$.
 
-The following theorem makes it possible to extend many of results about smooth functions to Lipschitz functions.
+The following theorem makes it possible to extend many results about smooth functions to Lipschitz functions.
 Recall that {}\emph{almost all} means all values, with exceptions in a set of zero Lebesgue measure.
 
 \begin{thm}{Rademacher's theorem}\label{thm:rademacher}
@@ -559,7 +559,7 @@ for all $x  \in {\spc{X}}$.
 
 \begin{thm}{Arzel\'{a}--Ascoli theorem}\label{lem:equicontinuous}
 Suppose $\spc{X}$ and $\spc{Y}$ are compact metric spaces. 
-Then any uniformly equicontinuous sequence of function $f_n\:\spc{X}\z\to \spc{Y}$ has a subsequence that converges uniformly to a continuous function $f_\infty\:\spc{X}\z\to \spc{Y}$.
+Then any uniformly equicontinuous sequence of functions $f_n\:\spc{X}\z\to \spc{Y}$ has a subsequence that converges uniformly to a continuous function $f_\infty\:\spc{X}\z\to \spc{Y}$.
 \end{thm}
 
 
@@ -644,7 +644,7 @@ In particular, if one chooses a random value equidistributed in an arbitrarily s
 
 Note that if $m<n$, then any point $\bm{y}=\bm{f}(\bm{x})$ is \emph{not} a regular value of $\bm{f}$.
 Therefore, the only regular values of $\bm{f}$ are the points in the complement of the image $\Im \bm{f}$.
-In this case, the theorem states that almost all points in $\mathbb{R}^n$, do \textit{not} belong to $\Im \bm{f}$.
+In this case, the theorem states that almost all points in $\mathbb{R}^n$ do \textit{not} belong to $\Im \bm{f}$.
 
 
 \subsection*{Inverse function theorem}
@@ -697,7 +697,7 @@ holds if and only if
 
 \subsection*{Multiple integral}
 
-Let $\bm{f}\:\mathbb{R}^n\to\mathbb{R}^n$ is a smooth map (maybe partially defined).
+Let $\bm{f}\:\mathbb{R}^n\to\mathbb{R}^n$ be a smooth map (maybe partially defined).
 Set
 \[\jac_{\bm{x}}\bm{f}\df|\det[\Jac_{\bm{x}}\bm{f}]|;
 \index{10j@$\jac$ (Jacobian determinant)}\]
