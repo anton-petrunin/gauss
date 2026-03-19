@@ -54,6 +54,7 @@ mppics/pic-130.mps
 mppics/pic-140.mps
 mppics/pic-1550.mps
 mppics/pic-1575.mps
+mppics/pic-1577.mps
 mppics/pic-1580.mps
 mppics/pic-1585.mps
 mppics/pic-1590.mps
