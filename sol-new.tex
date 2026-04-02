@@ -682,11 +682,6 @@ An example for the second question can be found among logarithmic spirals.
 \setcounter{eqtn}{0}
 
 
-
-\parbf{\ref{ex:helix-torsion}.} 
-The arc-length parameter $s$ is already found in   \ref{ex:arc-length-helix}.
-It remains to calculate the Frenet frame, curvature, and torsion.
-
 {
 
 \begin{wrapfigure}{r}{25 mm}
@@ -699,6 +694,11 @@ It remains to calculate the Frenet frame, curvature, and torsion.
 \end{lpic}
 \vskip-0mm
 \end{wrapfigure}
+
+\parbf{\ref{ex:helix-torsion}.} 
+The arc-length parameter $s$ is already found in   \ref{ex:arc-length-helix}.
+It remains to calculate the Frenet frame, curvature, and torsion.
+
 
 One should get 
 \begin{align*}
@@ -713,9 +713,11 @@ One should get
 \tor &\equiv \tfrac{b}{a^2+b^2}.
 \end{align*}
 
+}
+
 It remains to show that the map $(a,b) \z\mapsto (\frac{a}{a^2+b^2}, \frac{b}{a^2+b^2})$ sends bijectively the half plane $a>0$ onto itself.
 
-}
+
 
 \parbf{\ref{ex:beta-from-tau+nu}.} By the product rule, we get
 \begin{align*}
@@ -1525,8 +1527,6 @@ Apply \ref{prop:surf-support}.
 \parbf{\ref{ex:convex-lagunov}.}
 Assume a maximal ball in $R$ has radius $r$, and it touches the boundary of $R$ at the points $p$ and~$q$.
 
-\columnbreak
-
 \begin{wrapfigure}{r}{18 mm}
 \vskip-0mm
 \centering
@@ -1556,6 +1556,7 @@ Apply the implicit function theorem to show that $\gamma$ is a smooth curve.
 Finally, the curvature of $\gamma$ cannot be smaller than the normal curvature of $\Sigma$ in the same direction.
 Hence $\gamma$ has no points with vanishing curvature.
 Therefore its signed curvature has a constant sign.
+
 
 
 \parbf{\ref{ex:surrounds-disc}.}
@@ -1794,7 +1795,8 @@ On the other hand, since $\Sigma$ is a graph outside the compact set $K$, we hav
 
 \parbf{\ref{ex:lasso}.}
 Cut the lateral surface of the ice-mountain by a line from the cowboy to the tip.
-Unfold it on the plane (see the picture) and try to figure out what is the image of the strained lasso.
+Unfold the resulting sector on the plane and try to figure out what is the image of the tightly stretched lasso.
+
 
 \begin{wrapfigure}{r}{24 mm}
 \vskip-6mm
@@ -1802,6 +1804,11 @@ Unfold it on the plane (see the picture) and try to figure out what is the image
 \includegraphics{mppics/pic-1250}
 \vskip-0mm
 \end{wrapfigure}
+
+First imagine that the cowboy has thrown a rope over the tip and is holding both ends.
+For him to climb, the angle of the sector must be strictly less than $\pi$; this should be clear from the picture.
+This would give the answer $\theta=\tfrac\pi3$.
+However, for a lasso the answer is noticeably greater.
 
 \parit{Source:}
 We learned this problem from Joel Fine, who attributed it to Frederic Bourgeois \cite{fine}; see also \cite[Problem 12]{khesin-tabachnikov}
